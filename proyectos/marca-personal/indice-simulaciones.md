@@ -43,6 +43,8 @@ kanban
 
 <details>
 <summary>Ver qué existe hoy y qué falta integrar</summary>
+> Subpagina de detalle: [pagina-web-progreso.md](pagina-web-progreso.md) — kanban, timeline y flowchart de decision por seccion.
+
 
 **Lo ya construido:** `Hero.tsx` (sección hero de la landing) y `PlaceholderDashboard.tsx` — este último es explícitamente un **mockup provisional**: el propio código lo marca así ("PROVISIONAL: mockup de producto genérico, NO es una captura real del producto todavía"). Es una animación de red de agentes (nodos que aparecen, se conectan con líneas curvas, pulsan) — flota directo sobre el contenedor, sin dashboard falso ni números inventados. Bien pensado para no mentir visualmente mientras no hay producto real que capturar.
 
@@ -108,6 +110,8 @@ kanban
 
 <details>
 <summary>Ver los dos motores y las plantillas</summary>
+> Subpagina de detalle: [linkedin-networking.md](linkedin-networking.md) — metodo completo, 13 empresas reales con vacante, y tracker de 15 personas.
+
 
 **ICP:** dueños/gerentes financieros de PYMEs de manufactura LatAm + founders/empresas tech que buscan automatización financiera y de marketing con agentes de IA.
 
