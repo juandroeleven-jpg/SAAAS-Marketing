@@ -1,122 +1,299 @@
-# Simulaciones de ejecución — Pipeline EDGE
+# Índice de simulaciones — Pipeline EDGE
 
 **Qué es este documento:** un registro de pasos "ejecutados en papel" — se construye el artefacto real (prompt, política, taxonomía) y se analiza su efecto esperado usando la investigación ya validada, SIN llamar a la API real todavía. Esto no reemplaza la ejecución real: reduce el riesgo de que la primera ejecución real falle por un diseño evitable.
 
-**Regla de esta documento:** toda entrada lleva la marca 🧪 **SIMULACIÓN — no ejecutado contra la API/dato real**. Cuando una simulación se valide con ejecución real, se marca ✅ **VALIDADO** y se traslada como hallazgo real a `pipeline-edge-6-meses.md`.
+**Regla de este documento:** toda simulación lleva la marca 🧪 **SIMULACIÓN — no ejecutado contra la API/dato real**. Cuando una simulación se valide con ejecución real, se marca ✅ **VALIDADO** y se traslada como hallazgo real a `pipeline-edge-6-meses.md`.
+
+**Estructura de cada simulación:** cada una es una página autocontenida, dividida en pasos, con su propia línea de tiempo (Mermaid), su propio kanban de progreso (Mermaid, con checklist de respaldo), y su propio análisis según la lógica de Tomás de Aquino (causa final, actus humanus/hominis, acto/potencia). Todo colapsable.
 
 ---
 
-## Simulación 3 — Política de mezcla IA/físico en catálogo (Etapa 2)
+<details><summary>Simulación 1 — Prompt de render Nano Banana Pro (Etapa 1)</summary>
 
-### 0. Punto de partida
+Esta simulación diseña el prompt de 5 secciones que convierte un boceto de casco EDGE sobre molde en un render fotorrealista vía Nano Banana Pro (OpenRouter), como Etapa 1 del pipeline de render del proyecto EDGE.
 
-No existe un benchmark publicado de "% máximo de catálogo generado por IA" para ninguna categoría de alta implicación (seguridad, automotriz, electrodomésticos, salud). Esto ya se investigó a fondo — es un vacío real de la industria, no un fallo de búsqueda. Por tanto, esta política no cita un estándar externo que no existe; construye una regla propia a partir de tres piezas de evidencia que sí son sólidas: (a) el patrón de mezcla real usado por marcas automotrices premium, (b) el dato cuantitativo de Clutch sobre caída de intención de compra, y (c) la corrección sobre el mecanismo utilitario vs. hedónico que determina cuándo ese rechazo se activa con más o menos fuerza.
+<details><summary>Pasos de la simulación</summary>
 
-### 1. Regla de asignación por tipo de toma
+**Paso 1 — Definir la silueta maestra no negociable**
+Contenido: 3 ángulos de referencia obligatorios — perfil 90°, 3/4 45°, superior — con proporciones exactas fijadas entre sí, de modo que el modelo no pueda "reinterpretar" la forma general del casco en ninguno de los tres.
+Riesgo: sin la silueta con los 3 ángulos simultáneos, el render es inconsistente entre ángulos (el casco "cambia de forma" según desde dónde se ve).
 
-**DEBE ser foto real/física — sin excepción:**
+**Paso 2 — Especificar elementos de trade-dress no negociables**
+Contenido:
+- Spoiler trasero: 4cm de alto, posicionado a 15% de la línea de corona, ángulo de 12°.
+- Apertura de visor: 220mm ancho x 85mm alto, radio de esquina 8mm.
+- Línea de ventilación: EXACTAMENTE 3 vents de 18x6mm, espaciados 12mm, con el conteo repetido dos veces en el texto del prompt para anclar el detalle.
+- Mentonera: 70mm de profundidad, sin línea de partición visible.
 
-- **Hero shot de cada SKU** (la imagen principal de ficha de producto / portada de PDP y primer frame de listado en marketplace). Esta es la imagen que ancla la percepción de veracidad de todo el resto de la galería.
-- Cualquier toma que sirva como **prueba de seguridad o cumplimiento normativo** (ej. foto de la etiqueta de homologación, certificación ECE/DOT visible, foto de la carcasa interior/EPS si se usa como evidencia de construcción).
-- Foto usada en **anuncios pagados de conversión directa** (retargeting, catálogo dinámico de Meta/Google Shopping) — el feed de shopping ads es donde el usuario tiene menor tolerancia a descubrir después que la imagen no era real.
+Riesgos:
+- Sin coordenadas exactas del spoiler, cada variante genera una forma distinta.
+- Sin el radio de esquina del visor, el modelo redondea de más o produce una forma angular.
+- Sin el conteo exacto de vents, el modelo funde los vents entre sí o cambia el número.
 
-**PUEDE ser 100% IA generativa:**
+**Paso 3 — Definir elementos variables por colorway**
+Contenido: color, gráficos y tinte de visor quedan como parámetros abiertos que cambian entre variantes, en contraste con las secciones 1 y 2 que son fijas.
 
-- Variantes de color del mismo modelo, una vez que el hero shot de al menos un color de la línea está capturado físicamente y sirve de referencia.
-- Ángulos secundarios de apoyo en la galería (3/4 trasero, detalle de ventilación, vista cerrada de visera) siempre que el ángulo hero ya esté cubierto por foto real.
-- Imágenes de contexto/lifestyle no técnico donde no se están comunicando afirmaciones de seguridad ni detalle constructivo verificable.
-- Miniaturas de selector de color en el listado (swatches), dado que su función es de navegación, no de prueba de producto.
+**Paso 4 — Especificar fidelidad de material**
+Contenido:
+- 4a: shell en policarbonato semi-mate, sheen 20-30%, con micro-textura orange-peel.
+- 4b: visor con material distinto al shell, reflectividad direccional 15-20% (ni espejo ni mate opaco).
+- 4c: iluminación de estudio de 3 puntos, fondo neutro.
 
-**Regla operativa de umbral:** por cada SKU, el hero shot y cualquier imagen con función de prueba normativa son físicas por defecto (0% IA en esas posiciones); el resto de la galería puede ser hasta 100% IA. En una galería típica de 6–8 imágenes por SKU, esto se traduce en aproximadamente 1–2 fotos físicas obligatorias por SKU — no es un % fijo de "todo el catálogo", es un % por posición dentro de cada ficha.
+Riesgo: sin especificar el material del visor de forma distinta al shell, sale con reflejos inconsistentes entre variantes.
 
-### 2. Razonamiento explícito
+**Paso 5 — Definir restricciones de output**
+Contenido: sin props, sin logos nuevos, vista 3/4 centrada.
 
-**(a) Precedente automotriz.** Mercedes, Tesla, BMW y Audi reservan la foto real para el hero shot y usan CGI/render 3D para variantes de color y ángulos secundarios. La política de EDGE calca esta arquitectura sustituyendo CGI por IA generativa, tecnología disponible y de coste marginal cero para EDGE.
+**Paso 6 — Simular y predecir efectos de calidad (sin ejecución real todavía)**
+Efectos esperados:
+1. Reflejos del visor probablemente inconsistentes entre variantes — mitigación: la subsección 4b ya se agregó a una v2 del prompt.
+2. Fusión o pérdida de conteo en la línea de ventilación — mitigación: redundancia del conteo en el texto + validación con LPIPS local sobre el recorte de esa zona específica (no LPIPS global, porque el benchmark DiffSpot ya demostró que ningún modelo de visión detecta bien diferencias finas entre 2 imágenes).
+3. Textura de policarbonato probablemente se "lava" hacia un acabado genérico de render 3D — hipótesis abierta de un pipeline de 2 pasos: Nano Banana Pro fija forma, FLUX.2 Pro refina solo textura con LPIPS objetivo 0.05-0.10.
 
-**(b) Dato Clutch (n=401).** Cuando una imagen se percibe como IA, la intención de compra "muy probable" cae a 14%. Esto justifica proteger el hero shot — la imagen que más pesa en la decisión y la que el comprador examina con más atención.
+</details>
 
-**(c) Corrección utilitario vs. hedónico.** La cita que originalmente se usaba (Belanche/Ibáñez-Sánchez) es de hostelería, no de cascos; su mecanismo real es que el rechazo a IA se intensifica en alta implicación + hedónico. Un casco es alta implicación pero utilitario — el rechazo se atenúa frente a un producto hedónico. Esto justifica que el resto de la galería sí pueda abrirse a IA sin el mismo riesgo.
+<details><summary>Línea de tiempo interna (Mermaid)</summary>
 
-**Síntesis:** el precedente automotriz da la arquitectura de la mezcla, Clutch da la razón cuantitativa de proteger el hero shot, y la corrección utilitario/hedónico justifica abrir el resto de la galería a IA sin el mismo riesgo que en una categoría hedónica.
+```mermaid
+timeline
+    title Simulación 1 — Avance interno
+    Diseño de estructura del prompt : Paso 1 - Silueta maestra (diseñado) : Paso 2 - Trade-dress no negociable (diseñado)
+    Definición de variabilidad y material : Paso 3 - Elementos variables por colorway (diseñado) : Paso 4 - Fidelidad de material (diseñado)
+    Cierre del prompt : Paso 5 - Restricciones de output (diseñado)
+    Análisis de riesgo : Paso 6 - Predicción de efectos de calidad (simulado/analizado)
+    Siguiente hito real : Ejecutar el prompt contra la API real de Nano Banana Pro (OpenRouter) con bocetos/fotos reales de EDGE
+```
 
-### 3. Mecanismo de disclosure
+</details>
 
-Etiqueta discreta y consistente ("Render generado digitalmente") en toda imagen 100% IA, por principio de precaución — sin cifra propia verificada para EDGE, pero más seguro divulgar sistemáticamente que arriesgar percepción de engaño. El hero shot, al ser siempre foto real, no lleva etiqueta — su ausencia es en sí misma parte de la señal de máxima fiabilidad.
+<details><summary>Kanban de progreso (Mermaid)</summary>
+
+```mermaid
+kanban
+  Diseñado
+    Paso5[Paso 5 - Restricciones de output]
+  Simulado_Analizado
+    Paso1[Paso 1 - Silueta maestra]
+    Paso2[Paso 2 - Trade-dress no negociable]
+    Paso3[Paso 3 - Elementos variables por colorway]
+    Paso4[Paso 4 - Fidelidad de material]
+    Paso6[Paso 6 - Predicción de efectos de calidad]
+  Ejecutado_Real
+```
+
+Nota: si el tipo `kanban` de Mermaid no renderiza bien en algunos visores (es una función más nueva), esta es la checklist de respaldo:
+
+- [x] Paso 1 — Silueta maestra (simulado/analizado)
+- [x] Paso 2 — Trade-dress no negociable (simulado/analizado)
+- [x] Paso 3 — Elementos variables por colorway (simulado/analizado)
+- [x] Paso 4 — Fidelidad de material (simulado/analizado)
+- [x] Paso 5 — Restricciones de output (diseñado)
+- [x] Paso 6 — Predicción de efectos de calidad (simulado/analizado)
+- [ ] Ejecución real contra la API de Nano Banana Pro (pendiente — falta boceto/foto real de EDGE)
+
+</details>
+
+<details><summary>Análisis según Tomás de Aquino</summary>
+
+**(a) Causa final:** la causa final de esta simulación es reducir a cero la ambigüedad geométrica y material del prompt de Etapa 1 *antes* de gastar una sola llamada real a la API de Nano Banana Pro. Esto sirve directamente al fin último del pipeline EDGE — producir renders de colorway consistentes y vendibles como parte del negocio que debe justificar $5,000/mes — porque cada re-ejecución fallida por un prompt mal especificado (spoiler mal ubicado, vents fundidos, visor con reflejo inconsistente) es costo directo (tiempo, cuota de API, iteración humana) que reduce el margen de ese objetivo.
+
+**(b) Actus humanus vs. actus hominis:** esto es *actus humanus*, no *actus hominis*. No es actividad mental difusa: es una acción deliberada que fija un artefacto reusable y concreto — un prompt de 5 secciones con coordenadas exactas (4cm, 15%, 12°, 220x85mm, radio 8mm, 3 vents de 18x6mm espaciados 12mm, 70mm de mentonera, sheen 20-30%, reflectividad 15-20%) que puede reejecutarse igual en cada colorway futuro. La deliberación se ve en las decisiones explícitas de mitigación (repetir el conteo de vents, separar 4b del shell, proponer LPIPS local en vez de global) — eso es voluntad ordenada a un fin, no mera actividad.
+
+**(c) Acto y potencia:** el PROMPT en sí está en acto — existe como texto fijado, completo en sus 5 secciones, reusable sin cambios adicionales de diseño. Pero su VALIDACIÓN contra la realidad permanece en pura potencia: nada de esto se ha corrido contra la API real de Nano Banana Pro, y ni siquiera existe todavía el boceto/foto real de EDGE que serviría de input. Es decir, el prompt tiene la forma completa de su causa (acto de diseño) pero le falta la materia final que active su causa eficiente (ejecución real). Los tres "efectos esperados" del Paso 6 son, en términos tomistas, predicciones de lo que la potencia *podría* actualizar — no conocimiento actual de lo que el render *hará*.
+
+</details>
+
+🧪 **SIMULACIÓN — prompt no ejecutado contra la API real. Debe validarse con imágenes reales de EDGE antes de usarse en producción.**
+
+</details>
+
+---
+
+<details><summary>Simulación 2 — Taxonomía de fallos de fidelidad de producto (Etapa 4)</summary>
+
+Esta simulación construye, por analogía razonada, una taxonomía de 10 modos de fallo de fidelidad de producto para renders de casco EDGE, como insumo para el ciclo de feedback humano de la Etapa 4 del pipeline (Recraft → Meshy → Higgsfield).
+
+<details><summary>Pasos de la simulación</summary>
+
+**Paso 1 — Identificar las 4 causas raíz genéricas de fallo de generación de imagen**
+
+1. Default del modelo (el modelo revierte a su prior aprendido en vez de respetar el anchor/referencia).
+2. Estructura del prompt (ambigüedad, orden o ausencia de restricciones en el prompt permite variación no deseada).
+3. Distribución de entrenamiento (el modelo nunca vio suficientes ejemplos de la geometría/patrón específico y "alucina" una versión genérica).
+4. Detección de plataforma (el pipeline de generación agrega elementos propios de la plataforma no solicitados por el usuario).
+
+**Paso 2 — Mapear por analogía cada causa raíz a un elemento físico específico del casco**
+
+Cada causa raíz genérica se proyecta sobre elementos físicos concretos del casco EDGE: carcasa (curvatura/silueta), ventilación (líneas/patrón), spoiler trasero (proporción), colorway/gráficos (logos y drift cromático), policarbonato (textura/reflejo), visor (apertura geométrica), mentonera (oclusión/deformación), framing/composición (recorte), y texto/instrucciones filtradas (prompt-leakage).
+
+**Paso 3 — Definir los 10 modos de fallo con su señal de chequeo**
+
+| # | Modo de fallo | Causa raíz | Señal de chequeo | Detección |
+|---|---|---|---|---|
+| 1 | Aplanamiento/pérdida de curvatura de carcasa en ángulos 3/4 | Default del modelo | Comparación de contorno/silueta contra anchor | Requiere revisión humana (diff fino que LPIPS agregado diluye) |
+| 2 | Deformación de línea/patrón de ventilación | Distribución de entrenamiento | LPIPS local + conteo/posición contra anchor | Mixta — el conteo exacto requiere revisión humana |
+| 3 | Alteración de proporción del spoiler trasero | Estructura del prompt | Bounding-box del spoiler vs anchor | Alta — candidato a chequeo automático de primera línea |
+| 4 | Elementos gráficos/logos no solicitados | Detección de plataforma/default | Chequeo de whitelist de colorway | Automatizable, pero riesgo legal de marca requiere revisión humana obligatoria |
+| 5 | Textura de policarbonato demasiado brillante/plástica | Default del modelo | Histograma de reflejos especulares vs referencia | Requiere revisión humana (LPIPS agregado puede pasar por alto la "sensación de material") |
+| 6 | Deformación de apertura del visor | Distribución de entrenamiento | Medición geométrica vs anchor | Parcial — desviaciones grandes sí, asimetrías finas no |
+| 7 | Pérdida/alteración de la mentonera | Estructura del prompt | Chequeo geométrico condicionado al ángulo | Requiere revisión humana casi siempre (oclusión válida vs deformación) |
+| 8 | Recorte fuera del frame / composición inconsistente | Estructura del prompt | Bounding-box del casco completo en el canvas | Alta confiabilidad automática |
+| 9 | Prompt-leakage (texto/instrucciones como gráficos) | Estructura del prompt/plataforma | OCR automático | Alta confiabilidad automática |
+| 10 | Drift cromático del colorway | Default del modelo | Delta-E en LAB vs anchor | Alta confiabilidad automática (numérico y objetivo) |
+
+**Paso 4 — Clasificar cada modo por confiabilidad de detección (automática vs. revisión humana)**
+
+- **Gate de máquina viable** (automatizables con buena confiabilidad): #3, #4, #6 (primera línea de desviaciones grandes), #8, #9, #10.
+- **Revisión humana obligatoria** (diff fino que un chequeo agregado no captura): #1, #5, #7, y los matices finos de #2 y #6.
+
+**Paso 5 — Conectar con la limitación de DiffSpot**
+
+Los fallos que caen en "revisión humana obligatoria" (#1, #5, #7, y los matices de #2/#6) son exactamente el tipo de "diff fino" que el benchmark DiffSpot (arXiv 2605.29615) ya confirmó que ningún modelo de visión detecta bien. Esto fija el límite actual de lo que puede automatizarse en el gate de calidad de la Etapa 4: los chequeos numéricos/geométricos gruesos pueden delegarse a máquina, pero la fidelidad de detalle sigue dependiendo de un humano hasta que exista evidencia de lo contrario.
+
+</details>
+
+<details><summary>Línea de tiempo interna (Mermaid)</summary>
+
+```mermaid
+timeline
+    title Simulación 2 — Avance interno
+    Paso 1 : Identificar 4 causas raíz genéricas (completo)
+    Paso 2 : Mapear causas raíz a elementos físicos del casco (completo)
+    Paso 3 : Definir los 10 modos de fallo y sus señales (completo)
+    Paso 4 : Clasificar automatizable vs revisión humana (completo)
+    Paso 5 : Conectar con limitación de DiffSpot (completo)
+    Próximo hito : Validar taxonomía contra 20-30 fallos reales observados en renders de EDGE
+```
+
+</details>
+
+<details><summary>Kanban de progreso (Mermaid)</summary>
+
+```mermaid
+kanban
+  Diseñado
+  Simulado_Analizado
+    p1[Paso 1 - 4 causas raíz genéricas]
+    p2[Paso 2 - Mapeo por analogía a elementos del casco]
+    p3[Paso 3 - Definición de los 10 modos de fallo]
+    p4[Paso 4 - Clasificación automático vs humano]
+    p5[Paso 5 - Conexión con DiffSpot]
+  Validado_con_datos_reales
+```
+
+Checklist de respaldo (por si el tipo `kanban` no renderiza en tu visor):
+
+- [x] Paso 1 — Identificar las 4 causas raíz genéricas (Simulado/Analizado)
+- [x] Paso 2 — Mapear por analogía a elementos físicos del casco (Simulado/Analizado)
+- [x] Paso 3 — Definir los 10 modos de fallo con señal de chequeo (Simulado/Analizado)
+- [x] Paso 4 — Clasificar automático vs. revisión humana (Simulado/Analizado)
+- [x] Paso 5 — Conectar con la limitación de DiffSpot (Simulado/Analizado)
+- [ ] Validación contra 20-30 fallos reales observados en renders de EDGE (pendiente)
+
+</details>
+
+<details><summary>Análisis según Tomás de Aquino</summary>
+
+**(a) Causa final:** la causa final de esta simulación específica no es "clasificar fallos" en abstracto, sino habilitar que el gate de calidad de la Etapa 4 pueda automatizarse parcialmente sin depender de revisión humana exhaustiva en cada render — condición necesaria para que el pipeline de cascos EDGE sea operable a un costo que justifique los $5,000/mes del proyecto. Cada uno de los 10 modos de fallo existe, dentro de esta simulación, en función de esa causa final: no se clasifican por curiosidad taxonómica, sino para decidir qué porción del control de calidad puede delegarse a máquina y qué porción debe seguir consumiendo tiempo humano.
+
+**(b) Actus humanus o actus hominis:** este es un *actus humanus*. La construcción de la taxonomía procede de un acto deliberado de la razón (analogía razonada desde 4 causas raíz genéricas) ordenado libremente a un fin conocido y querido (viabilizar el gate de calidad automatizado). No es un *actus hominis* porque cada paso implica juicio: elegir qué causa raíz corresponde a qué elemento físico, y decidir el umbral de confiabilidad que separa "automatizable" de "requiere humano" es una elección deliberada, no una consecuencia automática de los datos (que, de hecho, todavía no existen).
+
+**(c) Acto y potencia:** la taxonomía *como estructura lógica* — las 10 categorías, sus causas raíz asignadas, sus señales de chequeo, su clasificación de confiabilidad — está plenamente **en acto**: existe, está completa, es coherente y utilizable tal como está escrita. Pero la *validez de esa taxonomía frente a la realidad de EDGE* permanece **en potencia**: fue derivada por analogía razonada desde causas genéricas de fallo de generación de imagen, no observada en un solo render real del casco EDGE. La taxonomía tiene la forma completa de lo que busca ser, pero le falta la actualización empírica — los 20-30 fallos reales — que la mueva de "estructura lógicamente acabada" a "estructura verificada". Es acto de forma, potencia de verdad aplicada.
+
+</details>
+
+🧪 **SIMULACIÓN — taxonomía derivada por analogía razonada, no de fallos reales observados en renders de EDGE. Debe corregirse/expandirse con los primeros 20-30 fallos reales una vez existan.**
+
+</details>
+
+---
+
+<details><summary>Simulación 3 — Política de mezcla IA/físico en catálogo (Etapa 2)</summary>
+
+Esta simulación diseña la política de qué porcentaje del catálogo fotográfico de cascos EDGE debe ser 100% IA vs. foto física real, para la Etapa 2 del pipeline (turntable/fotografía de producto), ante la ausencia de un benchmark publicado de referencia para categorías de alta implicación.
+
+<details><summary>Pasos de la simulación</summary>
+
+**Paso 1 — Confirmar el vacío de benchmark publicado**
+No existe un benchmark publicado de referencia para categorías de alta implicación (como cascos) que indique qué porcentaje de un catálogo fotográfico puede ser 100% IA sin dañar conversión. La política se construye a partir de precedentes de industrias adyacentes y datos generales de consumidor, no de un estándar sectorial ya validado.
+
+**Paso 2 — Definir qué tomas DEBEN ser físicas siempre**
+- El hero shot de cada SKU (imagen principal de ficha).
+- Cualquier toma de prueba de seguridad/cumplimiento normativo (etiqueta de homologación, certificación ECE/DOT visible).
+- Fotos usadas en anuncios pagados de conversión directa (shopping ads).
+
+**Paso 3 — Definir qué tomas PUEDEN ser IA**
+- Variantes de color del mismo modelo (una vez que el hero shot de al menos un color esté capturado físicamente).
+- Ángulos secundarios de apoyo en la galería.
+- Imágenes de contexto/lifestyle no técnico.
+- Miniaturas de selector de color.
+
+**Paso 4 — Fijar la regla operativa de proporción por SKU**
+En una galería típica de 6-8 imágenes por SKU, esto se traduce en 1-2 fotos físicas obligatorias por SKU, y el resto abierto a IA.
+
+**Paso 5 — Fundamentar con las 3 piezas de evidencia**
+(a) *Precedente automotriz real*: Mercedes, Tesla, BMW y Audi reservan foto real para el hero shot y usan CGI/render 3D para variantes — la política de EDGE calca esta arquitectura sustituyendo CGI por IA generativa.
+(b) *Dato Clutch (encuesta real, n=401)*: cuando una imagen se percibe como IA, la intención de compra "muy probable" cae a 14% — esto justifica proteger específicamente el hero shot.
+(c) *Corrección sobre una cita académica*: el estudio Belanche/Ibáñez-Sánchez que se usaba para decir "los cascos son alta implicación penalizados por IA" es en realidad sobre hostelería, no cascos. Su mecanismo real es que el rechazo a IA se intensifica en la combinación alta implicación + hedónico. Un casco es alta implicación pero UTILITARIO — el rechazo se atenúa, lo cual justifica que el resto de la galería sí pueda abrirse a IA.
+
+**Paso 6 — Definir el mecanismo de disclosure**
+Etiqueta discreta ("Render generado digitalmente") en toda imagen 100% IA, por principio de precaución. El hero shot, al ser siempre foto real, no lleva etiqueta.
+
+</details>
+
+<details><summary>Línea de tiempo interna (Mermaid)</summary>
+
+```mermaid
+timeline
+    title Simulación 3 — Avance interno
+    Paso 1 : Confirmar vacío de benchmark publicado (completo)
+    Paso 2 : Definir tomas obligatoriamente físicas (completo)
+    Paso 3 : Definir tomas abiertas a IA (completo)
+    Paso 4 : Fijar regla operativa 1-2 fotos físicas por SKU (completo)
+    Paso 5 : Fundamentar con evidencia automotriz, Clutch y corrección utilitario/hedónico (completo)
+    Paso 6 : Definir mecanismo de disclosure (completo)
+    Siguiente hito real : Medir conversión real por tipo de foto una vez el catálogo esté en producción
+```
+
+</details>
+
+<details><summary>Kanban de progreso (Mermaid)</summary>
+
+```mermaid
+kanban
+  Diseñado
+  Simulado_Analizado
+    p1[Paso 1 - Confirmar vacío de benchmark publicado]
+    p2[Paso 2 - Tomas obligatoriamente físicas]
+    p3[Paso 3 - Tomas abiertas a IA]
+    p4[Paso 4 - Regla operativa 1-2 fotos por SKU]
+    p5[Paso 5 - Fundamentación con 3 evidencias]
+    p6[Paso 6 - Mecanismo de disclosure]
+  Validado_con_datos_reales
+```
+
+Nota: si el tipo `kanban` de Mermaid no renderiza bien en algunos visores, checklist de respaldo:
+
+- [x] Paso 1 — Confirmar el vacío de benchmark publicado
+- [x] Paso 2 — Definir qué tomas DEBEN ser físicas siempre
+- [x] Paso 3 — Definir qué tomas PUEDEN ser IA
+- [x] Paso 4 — Fijar la regla operativa de proporción por SKU
+- [x] Paso 5 — Fundamentar con las 3 piezas de evidencia
+- [x] Paso 6 — Definir el mecanismo de disclosure
+- [ ] Validar con test A/B propio y datos reales de conversión de EDGE en producción
+
+</details>
+
+<details><summary>Análisis según Tomás de Aquino</summary>
+
+**Causa final**: la causa final de esta simulación no es "decidir cuántas fotos serán IA" como fin en sí mismo, sino proteger la conversión del catálogo de cascos EDGE sin sacrificar la totalidad del presupuesto fotográfico ni a favor de IA (que arriesga conversión en el hero shot, dato Clutch) ni a favor de foto física (que dispararía el costo de producción por SKU y variante de color). Esta protección de conversión-sin-sobrecosto es medio ordenado al fin último del proyecto: justificar los $5,000/mes de la operación EDGE.
+
+**Actus humanus vs. actus hominis**: esta es una decisión deliberada con razón y voluntad — se sopesó evidencia (precedente automotriz, dato Clutch, corrección de la cita académica) antes de fijar la regla de 1-2 fotos físicas por SKU. Es, por tanto, *actus humanus*, no *actus hominis*: no es un acto reflejo o mecánico, sino un juicio prudencial sobre dónde el riesgo de rechazo a la IA es intolerable (hero shot, cumplimiento normativo, ads pagados) y dónde es tolerable (variantes de color, contexto, miniaturas).
+
+**Acto y potencia**: la política, en cuanto regla escrita y adoptada, está plenamente **en acto** — es una decisión tomada, no una posibilidad abierta. Sin embargo, su *validez frente al comportamiento real de los compradores de EDGE* permanece **en potencia**: la política se apoya en precedentes de otra industria (automotriz) y en datos generales de consumidor (encuesta Clutch, n=401, no específica de cascos ni de EDGE), no en un test A/B propio con clientes reales de EDGE. La potencia se actualiza solo cuando, en producción, se mida la conversión real por tipo de foto.
+
+</details>
 
 🧪 **SIMULACIÓN** — política derivada de precedentes de otras industrias y datos generales de consumidor, no de test A/B propio con clientes reales de EDGE. Debe validarse midiendo conversión real por tipo de foto una vez el catálogo esté en producción.
 
----
-
-## Simulación 2 — Taxonomía de fallos de fidelidad de producto (Etapa 4)
-
-Borrador derivado por analogía razonada de las 4 causas raíz genéricas (default del modelo, estructura del prompt, distribución de entrenamiento, detección de plataforma), aplicadas a un objeto rígido de producto (casco) en vez de rostros/personas.
-
-| # | Modo de fallo | Causa raíz | Señal de chequeo | Confiabilidad de detección |
-|---|---|---|---|---|
-| 1 | Aplanamiento/pérdida de curvatura de carcasa en ángulos 3/4 | Default del modelo | Comparación de contorno/silueta contra anchor | Requiere revisión humana (diff fino que LPIPS agregado diluye) |
-| 2 | Deformación de línea/patrón de ventilación | Distribución de entrenamiento | LPIPS local + conteo/posición contra anchor | Mixta — conteo exacto requiere revisión humana |
-| 3 | Alteración de proporción del spoiler trasero | Estructura del prompt | Bounding-box del spoiler vs. anchor | Alta — candidato a chequeo automático de primera línea |
-| 4 | Elementos gráficos/logos no solicitados | Detección de plataforma / default | Chequeo de whitelist de colorway | Automatizable, pero riesgo legal de marca requiere revisión humana obligatoria |
-| 5 | Textura de policarbonato demasiado brillante/plástica | Default del modelo | Histograma de reflejos especulares vs. referencia | Requiere revisión humana (LPIPS agregado puede pasar por alto la "sensación de material") |
-| 6 | Deformación de apertura del visor | Distribución de entrenamiento | Medición geométrica vs. anchor | Parcial — desviaciones grandes sí, asimetrías finas no |
-| 7 | Pérdida/alteración de la mentonera | Estructura del prompt | Chequeo geométrico condicionado al ángulo | Requiere revisión humana casi siempre (oclusión válida vs. deformación) |
-| 8 | Recorte fuera del frame / composición inconsistente | Estructura del prompt | Bounding-box del casco completo en el canvas | Alta confiabilidad automática (determinístico) |
-| 9 | Prompt-leakage (texto/instrucciones como gráficos) | Estructura del prompt / plataforma | OCR automático | Alta confiabilidad automática (OCR determinístico) |
-| 10 | Drift cromático del colorway | Default del modelo | Delta-E en LAB vs. anchor | Alta confiabilidad automática (numérico y objetivo) |
-
-**Lectura clave:** los fallos automatizables con buena confiabilidad (#3, #4, #6 primera línea, #8, #9, #10) pueden ser gate de máquina; los que requieren revisión humana específica (#1, #5, #7, y matices de #2/#6) son exactamente el tipo de "diff fino" que el benchmark DiffSpot ya confirmó que ningún modelo de visión detecta bien — consistente con todo lo investigado hasta ahora.
-
-🧪 **SIMULACIÓN** — taxonomía derivada por analogía razonada, no de fallos reales observados en renders de EDGE. Debe corregirse/expandirse con los primeros 20-30 fallos reales una vez existan.
-
----
-
-## Simulación 1 — Prompt de render Nano Banana Pro (Etapa 1)
-
-🧪 Todo lo que sigue es simulación de razonamiento — no se ejecutó ninguna llamada real. Los valores geométricos son **placeholders inventados solo para este ejercicio**, deben reemplazarse por medidas reales de EDGE antes de producción.
-
-### Request body (listo para usar de base, verificar el slug del modelo antes de correr real)
-
-```json
-{
-  "model": "google/gemini-3-pro-image-preview",
-  "prompt": "(ver texto completo abajo)",
-  "n": 4,
-  "input_references": [
-    { "image_url": ".../EDGE-M1_profile_90deg.jpg", "label": "silhouette_side_90" },
-    { "image_url": ".../EDGE-M1_profile_45deg.jpg", "label": "silhouette_34_45" },
-    { "image_url": ".../EDGE-M1_top_down.jpg", "label": "silhouette_top" },
-    { "image_url": ".../EDGE-M1_sketch_on_mold.jpg", "label": "source_sketch_on_mold" }
-  ],
-  "aspect_ratio": "1:1",
-  "quality": "high",
-  "output_format": "png"
-}
-```
-
-**Notas técnicas a verificar antes de correr real:** el slug exacto del modelo debe confirmarse contra `GET /api/v1/models` (no asumir el nombre). `output_format: png` es deliberado — JPEG introduce artefactos de compresión que contaminan el LPIPS con "desviación" que no viene del modelo. `n:4` genera variantes del mismo prompt (no batch real, ya confirmado). El límite de `input_references` por request no está confirmado — verificar antes de asumir que acepta 4.
-
-### Prompt completo (5 secciones, mapeadas a la plantilla de Anchor Visual ya diseñada)
-
-El prompt codifica: (1) silueta maestra con 3 ángulos de referencia simultáneos, (2) 4 elementos no negociables con coordenadas numéricas exactas (spoiler: altura/posición %/ángulo; visor: ancho/alto/radio de esquina; ventilación: conteo/spacing exacto; mentonera: profundidad sin línea de partición visible), (3) elementos variables explícitos (color, gráficos, tinte), (4) instrucción de fidelidad de material (policarbonato semi-mate, 20-30% sheen, micro-textura, NO alto brillo tipo showroom), (5) restricciones de output (sin logos nuevos, sin props, fondo neutro).
-
-### Riesgo que mitiga cada sección (resumen)
-
-| Sección | Sin esta instrucción... |
-|---|---|
-| Silueta con 3 ángulos simultáneos | El render se ve bien desde un ángulo pero falla desde otros — inconsistencia detectable de inmediato |
-| Spoiler con coordenadas exactas | Las 4 variantes tendrían spoilers de formas distintas — ninguna sería el trade-dress real |
-| Visor con radio de esquina explícito | El modelo redondea de más o hace la forma angular tipo casco de carreras — desviación que empuja el LPIPS sobre 0.35 |
-| Ventilación con conteo exacto | El modelo funde vents o cambia el conteo — defecto fácil de detectar mentalmente, pero costoso en reintentos ($12/M tokens de output) |
-| Mentonera sin línea de partición | Se renderiza como pieza separada, artefacto típico de render 3D genérico que no coincide con el molde real |
-| Material semi-mate explícito | El modelo cae a su default de "casco genérico" de alto brillo — justo el fallo que hunde la intención de compra al 14% cuando se percibe como IA |
-
-### 3 efectos esperados de calidad (simulados, no observados)
-
-1. **Reflejos del visor probablemente inconsistentes entre variantes** — el prompt detalla el material del shell pero no del visor (policarbonato distinto, más reflectante). Mitigación: añadir subsección de material específica para el visor.
-2. **Fusión o pérdida de conteo en la línea de ventilación** — detalle geométrico fino y repetitivo, el punto débil documentado de estos modelos. Y aquí aplica directo el hallazgo de DiffSpot: **no se puede confiar en que un modelo de IA "revise" el conteo** — la validación necesita LPIPS local sobre el crop de esa zona específica, no LPIPS global (que diluiría el error).
-3. **Textura de policarbonato probablemente "se lava" hacia un acabado genérico** — no hay benchmark que confirme que Nano Banana Pro (elegido por identidad, no por material) resuelva esto solo con texto. Hipótesis abierta a validar: pipeline de 2 pasos (Nano Banana Pro fija forma → FLUX.2 Pro refina solo textura con LPIPS objetivo 0.05-0.10).
-
-🧪 **SIMULACIÓN** — prompt no ejecutado contra la API real. Debe validarse con imágenes reales de EDGE antes de usarse en producción.
-
----
-
+</details>
