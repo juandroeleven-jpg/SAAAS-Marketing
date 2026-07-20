@@ -15,7 +15,7 @@ Puntos débiles concretos, sin suavizar:
 
 - **Calidad de output con fallas confirmadas, no solo pendientes de decisión:** Simulación 6d (Stellar) tiene errores de texto reales ("APOL•GIZE", ">OUR MY FAMILY") y visera mal coloreada — si esto se mostrara a un cliente hoy, fallaría. Simulación 6c (Top Gun) tiene un logo marcado "malo" sin causa identificada todavía.
 - **Cotizador y ficha de catálogo:** 100% diseño, 0% ejecución real. El cotizador tiene precios ficticios; nunca se generó una ficha real de punta a punta.
-- **LinkedIn:** de 13 a 15 leads reales (mejora real de la otra sesión), con comentarios ya redactados — pero las 15 filas del tracker siguen en cero envíos reales y 15/15 sin la segunda publicación de respaldo.
+- **LinkedIn:** primer acto real ya ocurrió — comentario publicado a Fernando Herrera el 20/07/2026 (1/15). Es la primera fila de todo el repo que pasó de potencia a acto. Quedan 14/15 sin ejecutar y 15/15 sin la segunda publicación de respaldo.
 - **Marca personal:** landing con esqueleto visual pero sin las 2 secciones que prueban el trabajo real — no publicada.
 - **Seguridad:** token de Notion expuesto sigue sin rotar, marcado urgente desde hace varias sesiones.
 - **Cronograma:** hasta este documento, el único "cronograma" era ordinal (fases en orden), sin fechas — imposible saber si vas atrasado o a tiempo.
@@ -88,7 +88,7 @@ gantt
 
 ## 4. Prompts de investigación/simulación — uno por cada pendiente
 
-Ningún pendiente queda como pregunta abierta sin más: para cada grupo de abajo hay algo investigable o simulable ahora, aunque la firma final sea tuya. Los prompts que necesitan archivos físicos o el repo de código apuntan a tu sesión de Claude Code local (VS Code) — son de continuación, no tutoriales desde cero. Los que son de investigación de mercado (precios, benchmarks) los puedo correr yo mismo ahora si me das el "ok".
+Corrección de rol: hasta la versión anterior, estos bloques eran instrucciones de trabajador (el "cómo" paso a paso). Un CEO no ejecuta el paso a paso — delega el "qué" y define el criterio con el que va a aceptar o rechazar el resultado sin tener que re-revisar el trabajo línea por línea. Por eso cada prompt de abajo ahora trae, además del encargo, una **📊 Métrica de aceptación**: el criterio objetivo con el que vos (o cualquiera) puede juzgar en 10 segundos si lo que volvió sirve o hay que devolverlo.
 
 <details>
 <summary><strong>Ítem 1 — Rotar el token de Notion (armar el paso a paso, no dejarlo abierto)</strong></summary>
@@ -96,7 +96,7 @@ Ningún pendiente queda como pregunta abierta sin más: para cada grupo de abajo
 ```
 Investigá el procedimiento exacto para rotar/regenerar un token de integración en Notion (Settings → My integrations → la integración expuesta → Regenerate/Show). Armá un checklist de máximo 5 pasos con el nombre exacto de cada botón, y confirmá en qué archivo(s)/variable(s) de entorno del proyecto hay que reemplazar el token viejo por el nuevo para que nada se rompa al rotarlo.
 ```
-Esto no reemplaza el clic final (que solo el dueño de la cuenta puede dar), pero elimina la ambigüedad de "cómo" — deja de ser una tarea abierta.
+📊 **Métrica de aceptación:** checklist de ≤5 pasos, 0 pasos ambiguos ("andá a configuración" no cuenta, tiene que decir el botón exacto) · rotación ejecutada sin que ninguna llamada a la API de Notion falle después del cambio (0 errores en el primer uso post-rotación).
 
 </details>
 
@@ -108,6 +108,7 @@ Retomá simulacion-4-meshy-3d.md. Confirmá la fecha exacta del próximo cobro d
 
 Para la base/soporte del modelo 3D: abrí el GLB en Blender, medí qué porcentaje de la malla ocupa la base respecto al casco, y generá una captura antes/después de recortarla, para decidir con evidencia visual en vez de a ciegas.
 ```
+📊 **Métrica de aceptación:** decisión de cancelar/mantener con el ahorro neto en dólares y el número exacto de días hasta el próximo cobro citados (no "creo que ahorra algo") · para el recorte, % de la malla que ocupa la base (número concreto) + captura antes/después donde la silueta del casco no cambie.
 
 </details>
 
@@ -119,6 +120,8 @@ Investigá 3-5 competidores directos de EDGE en LatAm (cascos de moto gama media
 ```
 Puedo correr esta investigación yo mismo ahora mismo si me das el "ok" — no depende de archivos locales.
 
+📊 **Métrica de aceptación:** cobertura 5/5 (precio base, recargo colorway, umbral de descuento, tabla de talles, criterio de envío — ninguno queda sin número propuesto) · cada número trae al menos 1 competidor citado como fuente del benchmark, no un número inventado sin referencia.
+
 </details>
 
 <details>
@@ -129,6 +132,7 @@ Retomá simulacion-6a-bob-esponja.md, simulacion-6b-padrino.md y simulacion-6c-t
 
 Instalá poppler-utils si falta, renderizá los 3 PDF (BOB ESPONJA - HERO.pdf, GODFATHER - HERO.ai.pdf, TOP GUN - EVOLUTION.pdf) y cerrá los 3 puntos abiertos: cuál trasera de Bob Esponja es la buena, cuál intento 3/4 de Padrino es el definitivo, y qué está mal exactamente en maver-mal-logo.jpg. Agregá la respuesta en cada archivo (sección "## Auditoría contra PDF original") y cerrá esos checkboxes.
 ```
+📊 **Métrica de aceptación:** por cada uno de los 3 casos, puntaje de fidelidad 0-10 contra el PDF (10 = texto+color+posición coinciden, restar 2 puntos por cada discrepancia encontrada y nombrarla) · los 3 tienen que terminar con una decisión tomada (cuál imagen es la buena / qué falla exactamente), no con "sigue sin estar claro".
 
 </details>
 
@@ -138,6 +142,7 @@ Instalá poppler-utils si falta, renderizá los 3 PDF (BOB ESPONJA - HERO.pdf, G
 ```
 Buscá en el resto del repo (pipeline-edge-6-meses.md, mis-pruebas-claude-code.md, fotos ya usadas en Simulación 4) alguna imagen de casco EDGE físico real en negro o azul con el logo EDGE visible, y compará contra molde-lateral-azul.jpg/molde-lateral-negro.png de Top Gun. Si no hay coincidencia clara, documentá qué se comparó y por qué no alcanza para confirmar, en vez de dejarlo como pregunta sin evidencia.
 ```
+📊 **Métrica de aceptación:** nivel de confianza declarado (alto/medio/bajo) con al menos 1 evidencia concreta citada — "no se pudo confirmar" sin ninguna comparación hecha no es una respuesta válida.
 
 </details>
 
@@ -149,6 +154,7 @@ Buscá "Boston" en todo el repo (grep) para ver en qué otro documento aparece e
 
 Además, volvé a correr la generación de Nano Banana para el caso Stellar corrigiendo explícitamente los 2 errores de texto ya identificados ("APOL•GIZE" → "APOLOGIZE", ">OUR MY FAMILY" → "OF MY FAMILY") y la visera transparente en vez del degradé plateado. Esto es 100% ejecutable ya — no hace falta esperar a que se resuelva lo de Stellar/Boston para intentarlo.
 ```
+📊 **Métrica de aceptación:** hipótesis Stellar/Boston con nivel de confianza + cita de dónde aparece "Boston" en el repo · regeneración aceptada solo si 0 de los 2 errores de texto persisten Y la visera queda transparente (no "mejoró" — tiene que estar resuelto, si no, hay que volver a intentar).
 
 </details>
 
@@ -160,6 +166,7 @@ Mientras se consigue un caso real de Canva vs. full-IA, simulá uno hipotético:
 
 Para el modelo de la primera ficha real: usá por defecto el mismo modelo ya validado en Simulación 4 (tiene fotos reales y geometría confirmada, es el que menos fricción tiene para arrancar) y generá la ficha de punta a punta con ese.
 ```
+📊 **Métrica de aceptación:** estimación de tiempo en minutos para ambos flujos (full-IA vs. Canva) con la diferencia en % explícita · ficha real generada de punta a punta con las 3 capas confirmadas presentes (posicionar / componer / estilizar) — "está casi lista" no cuenta como generada.
 
 </details>
 
@@ -171,6 +178,7 @@ Confirmá con un comando simple (blender --version, o buscar la carpeta/ícono d
 
 Para Substance 3D Painter/RizomUV vs. Blender nativo: armá un cuadro comparativo de precio, curva de aprendizaje, y si de verdad hace falta para el nivel de detalle ya logrado en las Simulaciones 4 y 6 — proponé "quedarse con Blender nativo hasta que aparezca una limitación concreta" como default, no como pregunta abierta.
 ```
+📊 **Métrica de aceptación:** confirmación binaria (instalado: sí/no) con el comando/evidencia usado · cuadro comparativo con al menos 3 criterios puntuados 1-5 cada uno (precio, curva de aprendizaje, necesidad real) y una recomendación final explícita, no solo los datos crudos.
 
 </details>
 
@@ -182,6 +190,7 @@ Estos dos no tienen más investigación pendiente — el método, las plantillas
 ```
 Con las 15 personas ya identificadas en linkedin-networking.md, armá un calendario escalonado de envío (ej. 3-4 conexiones por día en vez de las 15 de golpe) para el Motor 1, y confirmá cuántas del Motor 2 (contacto directo a empresas) se pueden mandar el mismo día sin activar el límite de restricción de LinkedIn que ya se documentó como riesgo aceptado.
 ```
+📊 **Métrica de aceptación:** calendario con un tope diario numérico explícito (no "unos pocos por día") · las 15 personas cubiertas dentro de la primera semana sin superar ese tope ningún día.
 
 </details>
 
@@ -191,6 +200,7 @@ Con las 15 personas ya identificadas en linkedin-networking.md, armá un calenda
 ```
 Retomá pagina-web-progreso.md (proyectos/marca-personal/documentos/). Ya quedó redactado el contenido de las secciones Logros y CV — falta integrarlas al código real de codeflow-landing, en el orden Hero → Dashboard → Logros → CV, sin tocar Hero.tsx ni el rótulo de PlaceholderDashboard.tsx. Cuando esté, actualizá el kanban del documento y decime si ya queda lista para publicar o si falta algo más.
 ```
+📊 **Métrica de aceptación:** 2/2 secciones integradas y visibles · diff de Hero.tsx = 0 cambios · PlaceholderDashboard.tsx conserva el rótulo "vista conceptual" visible.
 
 </details>
 
