@@ -2,6 +2,8 @@
 
 **Qué es esto:** el punto de entrada único a los 3 frentes de trabajo activos. No repite contenido — enlaza a cada proyecto y da el estado real de hoy. Se actualiza a mano cada vez que algo cambia de fase.
 
+📋 **[Gestión del proyecto — Tablero de PM](proyectos/gestion-pm.md)** — cronograma real con fechas, checklist maestro de todos los pendientes (🟠 tuyos / 🔵 delegables), y prompts listos para delegar a un agente. Esto es ejecución, no contenido — ábrelo para saber qué toca hoy.
+
 ---
 
 ## 1. EDGE Helmet — automatización de marketing/producto
