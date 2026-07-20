@@ -1,4 +1,4 @@
-# Simulación 6c — Adaptación 2D "Stellar" con Nano Banana (Etapa 1 — Ilustración)
+# Simulación 6d — Adaptación 2D "Stellar" con Nano Banana (Etapa 1 — Ilustración)
 
 [← Volver al índice de mis pruebas](../mis-pruebas-claude-code.md) · [← Volver a Simulación 6 (God Father)](simulacion-6-NANO%20BANANA.md)
 
@@ -63,7 +63,7 @@ No se pudo determinar si `download.jpg` es el intento final/vigente o un intento
 
 ```mermaid
 timeline
-    title Simulación 6c — Avance interno
+    title Simulación 6d — Avance interno
     Inventario real : Paso 1 - Clasificación de las 4 imágenes + PDF (completo)
     Auditoría de geometría : Paso 2 - Molde vs resultado, match confirmado en visor/ventilaciones/mentonera (completo)
     Auditoría de diseño : Paso 3 - Comparación resultado vs referencia, errores de texto y visera identificados (completo)
