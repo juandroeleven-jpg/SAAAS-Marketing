@@ -1,6 +1,6 @@
 # Simulación 6a — Adaptación 2D "Bob Esponja" con Nano Banana (Etapa 1 — Ilustración)
 
-[← Volver al índice de mis pruebas](../mis-pruebas-claude-code.md) · [← Volver a Simulación 6 (God Father)](simulacion-6-god-father.md)
+[← Volver al índice de mis pruebas](../mis-pruebas-claude-code.md) · [← Volver a Simulación 6](simulacion-6-NANO BANANA.md)
 
 Caso concreto dentro del proyecto de adaptación 2D: casco EDGE (mismo molde abierto/jet usado en varios casos) con diseño tipo grafiti "Bob Esponja" (Krabby Patty, ojos inyectados, cerebro expuesto) aplicado por capas sobre la geometría real del casco.
 

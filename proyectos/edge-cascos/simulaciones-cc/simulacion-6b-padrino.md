@@ -1,6 +1,6 @@
 # Simulación 6b — Adaptación 2D "The Godfather / El Padrino" con Nano Banana (Etapa 1 — Ilustración)
 
-[← Volver al índice de mis pruebas](../mis-pruebas-claude-code.md) · [← Volver a Simulación 6 (God Father)](simulacion-6-god-father.md)
+[← Volver al índice de mis pruebas](../mis-pruebas-claude-code.md) · [← Volver a Simulación 6](simulacion-6-NANO BANANA.md)
 
 Caso concreto: mismo molde de casco EDGE (abierto/jet) con diseño tipo poster de "The Godfather" (silueta de Vito Corleone en escala de grises/dorado, tipografía "The Godfather", frases icónicas de la película) aplicado por capas sobre la geometría real.
 
