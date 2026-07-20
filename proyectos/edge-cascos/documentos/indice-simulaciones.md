@@ -52,7 +52,7 @@ kanban
 
 ```json
 {
-  "model": "google/gemini-3-pro-image-preview",
+  "model": "google/gemini-3-pro-image",
   "prompt": "(ver texto completo abajo)",
   "n": 4,
   "input_references": [
@@ -68,6 +68,8 @@ kanban
 ```
 
 **Notas técnicas a verificar antes de correr real:** el slug exacto del modelo debe confirmarse contra `GET /api/v1/models` (no asumir el nombre). `output_format: png` es deliberado — JPEG introduce artefactos de compresión que contaminan el LPIPS con "desviación" que no viene del modelo. `n:4` genera variantes del mismo prompt (no batch real, ya confirmado). El límite de `input_references` por request no está confirmado — verificar antes de asumir que acepta 4.
+> ✅ **ACTUALIZADO (20 jul 2026):** el slug original `gemini-3-pro-image-preview` fue retirado por Google el 25/06/2026 al pasar a GA. Se corrigio a `google/gemini-3-pro-image`. Precio aprox. $2/1M tokens input, $12/1M tokens output — estimado real ~$0.13-0.15 por imagen a 2K. Correr 4-8 variantes de prueba cuesta aprox. $0.50-$1.20 total. Verificado en openrouter.ai/google/gemini-3-pro-image.
+
 
 **Prompt completo (5 secciones, mapeadas a la plantilla de Anchor Visual ya diseñada):** el prompt codifica (1) silueta maestra con 3 ángulos de referencia simultáneos, (2) 4 elementos no negociables con coordenadas numéricas exactas (spoiler: altura/posición %/ángulo; visor: ancho/alto/radio de esquina; ventilación: conteo/spacing exacto; mentonera: profundidad sin línea de partición visible), (3) elementos variables explícitos (color, gráficos, tinte), (4) instrucción de fidelidad de material (policarbonato semi-mate, 20-30% sheen, micro-textura, NO alto brillo tipo showroom), (5) restricciones de output (sin logos nuevos, sin props, fondo neutro).
 
