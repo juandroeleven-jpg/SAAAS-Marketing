@@ -9,9 +9,9 @@
 Pipeline de 8 etapas (Intake → Ilustración → Turntable → Catálogo → Feedback → Marca → Infraestructura → Sistema operativo), rumbo al sistema de $5,000/mes.
 
 - [Índice del proyecto EDGE](proyectos/edge-cascos/indice-proyecto-edge.md) — timeline y estado por etapa
-- [Pipeline completo — 8 etapas, 40 hallazgos](proyectos/edge-cascos/pipeline-edge-6-meses.md)
-- [Simulaciones de ejecución (original)](proyectos/edge-cascos/simulaciones-ejecucion.md) — Simulaciones 1-3
-- [Mis pruebas — Claude Code](proyectos/edge-cascos/mis-pruebas-claude-code.md) — Simulación 4 (Meshy 3D) y 5 (cotizador, campos ficticios)
+- [Pipeline completo — 8 etapas, 40 hallazgos](proyectos/edge-cascos/documentos/pipeline-edge-6-meses.md)
+- [Simulaciones de ejecución (original)](proyectos/edge-cascos/documentos/simulaciones-ejecucion.md) — Simulaciones 1-3
+- [Mis pruebas — Claude Code](proyectos/edge-cascos/documentos/mis-pruebas-claude-code.md) — Simulación 4 (Meshy 3D) y 5 (cotizador, campos ficticios)
 
 **Sub-frentes activos dentro de EDGE:**
 - **Cotizador/carrito** — decisión tomada: ruta low-cost con Meshy AI (GLB) + Three.js, evaluado contra Zakeke/Threekit. Ver Simulación 5.
@@ -21,8 +21,8 @@ Pipeline de 8 etapas (Intake → Ilustración → Turntable → Catálogo → Fe
 ## 2. Marca personal
 
 - [Índice de simulaciones — marca personal](proyectos/marca-personal/indice-simulaciones.md)
-- [LinkedIn / Networking](proyectos/marca-personal/linkedin-networking.md)
-- [Página web — progreso](proyectos/marca-personal/pagina-web-progreso.md)
+- [LinkedIn / Networking](proyectos/marca-personal/documentos/linkedin-networking.md)
+- [Página web — progreso](proyectos/marca-personal/documentos/pagina-web-progreso.md)
 
 ## 3. Sistema GitHub + Agentes (HITL / orquestación)
 
