@@ -49,7 +49,20 @@ gantt
     Integrar secciones CV y Logros a la landing            :c1, 2026-07-20, 4d
     Publicar codeflow-landing                              :c2, after c1, 1d
     Primer día real de envíos LinkedIn                     :c3, 2026-07-21, 1d
+
+    click d1 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/indice-proyecto-edge.md" "Ver bloqueo de Etapa 6 — Infraestructura"
+    click a1 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/documentos/simulaciones-cc/simulacion-6-NANO%20BANANA.md" "Ver índice de casos 6a-6d"
+    click a2 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/documentos/simulaciones-cc/simulacion-6d-stellar.md" "Ver Simulación 6d — Stellar"
+    click a3 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/documentos/simulaciones-cc/simulacion-4-meshy-3d.md" "Ver Simulación 4 — Meshy 3D"
+    click b1 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/documentos/simulaciones-cc/simulacion-5-cotizador.md" "Ver Simulación 5 — Cotizador"
+    click b2 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/documentos/simulaciones-cc/simulacion-7-catalogo.md" "Ver Simulación 7 — Catálogo"
+    click b3 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/documentos/simulaciones-cc/simulacion-8-meshy-blender.md" "Ver Simulación 8 — Meshy+Blender"
+    click c1 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/marca-personal/documentos/pagina-web-progreso.md" "Ver progreso de la landing"
+    click c2 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/marca-personal/documentos/pagina-web-progreso.md" "Ver progreso de la landing"
+    click c3 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/marca-personal/documentos/linkedin-networking.md" "Ver tracker de LinkedIn"
 ```
+
+Cada barra del Gantt es clickeable y lleva directo al documento fuente de esa tarea (el mismo documento donde se armó y se dejó el trabajo en curso) — no a otro chat.
 
 ---
 
@@ -93,45 +106,31 @@ gantt
 
 ## 4. Prompts listos para delegar
 
-No tengo un link real para "el chat correcto" — no invento URLs. Los dos prompts de abajo apuntan a **tu sesión de Claude Code local en VS Code** (la misma que ya leyó las carpetas físicas `Adaptacion bob sponja`, `Adaptacion God Father`, `Catalogo paramount/adpatacio stelealr`, y que ya tiene acceso al proyecto `codeflow-landing`) — es la única sesión con acceso a esos archivos locales, así que es el destino correcto por eliminación, no por un link que yo pueda darte.
+Corrección sobre la versión anterior: estos prompts no son tutoriales genéricos para un chat nuevo sin contexto — son prompts de **continuación**, para pegar en la misma sesión de Claude Code local (VS Code) que ya armó cada documento y ya tiene todo el contexto (las carpetas físicas, las fotos, el repo). Por eso son cortos: solo señalan qué archivo retomar y qué punto concreto falta cerrar, sin repetirle a esa sesión lo que ya sabe.
 
 <details>
-<summary><strong>Prompt 1 — Renderizar y auditar los 3 PDF de referencia contra los resultados generados</strong></summary>
+<summary><strong>Prompt 1 — Continuar la auditoría de PDF en Simulaciones 6a/6b/6c</strong></summary>
 
 ```
-Objetivo: renderizar 3 PDF de referencia que el entorno remoto no pudo abrir (falta poppler-utils/pdftoppm) y auditar cada resultado generado contra su arte original.
+Retomá simulacion-6a-bob-esponja.md, simulacion-6b-padrino.md y simulacion-6c-top-gun.md (proyectos/edge-cascos/documentos/simulaciones-cc/). En los 3 quedó pendiente el mismo bloqueo: el PDF de referencia no se pudo renderizar por falta de pdftoppm/poppler-utils en ese entorno remoto. Vos sí tenés acceso a los archivos físicos originales.
 
-Archivos a ubicar y renderizar (usar pdftoppm -png archivo.pdf salida, instalando poppler-utils si falta):
-1. BOB ESPONJA - HERO.pdf (carpeta Adaptacion bob sponja)
-2. GODFATHER - HERO.ai.pdf (carpeta Adaptacion God Father)
-3. TOP GUN - EVOLUTION.pdf (carpeta Catalogo paramount o equivalente)
+Instalá poppler-utils si falta, renderizá los 3 PDF (BOB ESPONJA - HERO.pdf, GODFATHER - HERO.ai.pdf, TOP GUN - EVOLUTION.pdf) y cerrá los 3 puntos que cada documento dejó abiertos:
+- 6a: ¿cuál trasera es la buena, intento-perfecto o fallida?
+- 6b: ¿cuál de los 2 intentos 3/4 es el definitivo?
+- 6c: ¿qué está mal exactamente en maver-mal-logo.jpg?
 
-Para cada uno, comparar el render del PDF contra la imagen de resultado ya generada, elemento por elemento (texto, logo, colores, ubicación), y responder puntualmente:
-- Bob Esponja: ¿cuál trasera (intento-perfecto vs. fallida) es más fiel al PDF original? ¿por qué?
-- Padrino: ¿cuál de los 2 intentos 3/4 es más fiel al PDF original?
-- Top Gun: ¿qué está específicamente mal en el logo de maver-mal-logo.jpg comparado contra el PDF?
-
-Al terminar, agregar los hallazgos en una nueva sección "## Auditoría contra PDF original (ejecutada)" dentro de cada archivo simulacion-6a/6b/6c-*.md correspondiente en el repo SAAAS-Marketing (proyectos/edge-cascos/documentos/simulaciones-cc/), y marcar en el checklist de cada uno qué pasó de pendiente a resuelto.
+Agregá la respuesta directo en cada archivo (sección nueva "## Auditoría contra PDF original") y cerrá esos 3 checkboxes en el checklist de cada uno.
 ```
 
 </details>
 
 <details>
-<summary><strong>Prompt 2 — Integrar secciones CV y Logros en la landing personal</strong></summary>
+<summary><strong>Prompt 2 — Continuar la integración de la landing (codeflow-landing)</strong></summary>
 
 ```
-Objetivo: integrar 2 secciones nuevas de contenido en la landing personal (proyecto codeflow-landing), usando el contenido ya redactado y aprobado en proyectos/marca-personal/documentos/pagina-web-progreso.md del repo SAAAS-Marketing.
+Retomá pagina-web-progreso.md (proyectos/marca-personal/documentos/). Ya quedó redactado el contenido de las secciones Logros y CV — falta integrarlas al código real de codeflow-landing, en el orden Hero → Dashboard → Logros → CV, sin tocar Hero.tsx ni el rótulo de PlaceholderDashboard.tsx.
 
-Secciones a integrar, en este orden después de Hero y Dashboard:
-1. Sección Logros — 15 sistemas de Copper Group/1HVAC ya entregados (orquestador multi-agente, forecasting, pricing dinámico, data warehouse multi-país, IA on-premise, SaaS vertical B2B, digital twin, entre otros) + evidencia real de EDGE Helmet (95-98% de precisión, 5-10 minutos por pieza, aprobación de Jimmy Benzaquen y Jim Garzon).
-2. Sección CV — NóminaPro (automatización multi-país, 97% de ahorro de tiempo), dashboard Power BI, sistema de cuentas por cobrar (20% de cartera optimizada).
-
-Restricciones:
-- No tocar Hero.tsx.
-- Mantener PlaceholderDashboard.tsx tal cual (es mockup provisional etiquetado a propósito) — si no tiene ya un rótulo visible "vista conceptual", agregarlo.
-- Estructura final: Hero → Dashboard → Logros → CV.
-
-Al terminar: actualizar el kanban dentro de pagina-web-progreso.md moviendo estas 2 tareas al estado que corresponda, y confirmar si falta solo publicar o si queda algo más pendiente.
+Cuando esté, actualizá el kanban del documento y decime si ya queda lista para publicar o si falta algo más.
 ```
 
 </details>
