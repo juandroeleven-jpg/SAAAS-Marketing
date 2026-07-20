@@ -4,6 +4,14 @@
 
 Prueba de factibilidad de reconstrucción 3D fotorrealista de un casco EDGE físico real, usando Meshy AI (Image-to-3D, modo multi-vista) como candidato para la capa visual del futuro cotizador tipo carrito.
 
+### 🔴 Pendiente de tu parte
+
+```mermaid
+flowchart TD
+    T1["💳 Cancelar suscripción Meshy Pro<br/>antes del próximo cobro ($20.80)"]
+    T2["🧊 Decidir si vale la pena recortar<br/>la base/soporte que quedó en el modelo 3D"]
+```
+
 <details><summary>Pasos de la simulación</summary>
 
 **Paso 1 — Conseguir fotos de referencia del casco físico**

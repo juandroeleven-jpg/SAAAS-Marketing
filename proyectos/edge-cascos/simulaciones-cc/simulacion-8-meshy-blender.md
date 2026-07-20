@@ -6,6 +6,15 @@ Proyecto que conecta directo con lo aprendido en la [Simulación 4](simulacion-4
 
 **Insumo del usuario:** cuenta Claude Code Pro de $100/mes, a conectar a este repositorio para poder darle instrucciones concretas de qué hacer en Blender (UV unwrap, texture paint) — todavía no conectada desde esta sesión.
 
+### 🔴 Pendiente de tu parte
+
+```mermaid
+flowchart TD
+    T1["🔗 Conectar tu cuenta Claude Code Pro<br/>($100/mes) a este repositorio"]
+    T2["🖥️ Confirmar si Blender ya está<br/>instalado en la máquina que va a usar esa cuenta"]
+    T3["🎨 Decidir si evaluamos Substance 3D<br/>Painter/RizomUV o solo Blender nativo"]
+```
+
 <details><summary>Pasos de la simulación</summary>
 
 **Paso 1 — Confirmar el objetivo del pipeline combinado**

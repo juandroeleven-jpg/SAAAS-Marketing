@@ -10,6 +10,14 @@ Conecta directo con **Etapa 3 — Catálogo/ficha** del pipeline principal (ya t
 3. Se pasa una capa de Nano Banana encima para editar y estilizar los elementos ya posicionados (tipografía, color, terminado visual).
 4. Opcional: Canva como atajo para agilizar cuando full-IA es más lento que armarlo a mano en esa herramienta puntual.
 
+### 🔴 Pendiente de tu parte
+
+```mermaid
+flowchart TD
+    T1["🧭 Contarme un caso real donde Canva<br/>o full-IA fallaron/tardaron de más"]
+    T2["🪖 Elegir 1 modelo EDGE para generar<br/>la primera ficha real de punta a punta"]
+```
+
 <details><summary>Pasos de la simulación</summary>
 
 **Paso 1 — Confirmar el método de 3 capas**

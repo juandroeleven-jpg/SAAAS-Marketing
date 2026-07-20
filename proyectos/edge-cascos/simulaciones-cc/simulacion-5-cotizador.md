@@ -6,6 +6,17 @@ Diseño del flujo y los campos del cotizador donde el cliente arma su pedido de 
 
 **Nota explícita:** el usuario confirmó que el precio SÍ varía por colorway/talle en la realidad, pero para esta etapa de diseño se usan campos ficticios — ningún precio de esta simulación es un precio real de EDGE, son placeholders para probar la lógica del flujo.
 
+### 🔴 Pendiente de tu parte
+
+```mermaid
+flowchart TD
+    T1["💲 Pasar precio_base_modelo real<br/>por cada modelo EDGE"]
+    T2["🎨 Confirmar qué colorways son<br/>premium/edición limitada (recargo)"]
+    T3["📦 Definir umbrales reales de<br/>descuento por cantidad mayorista"]
+    T4["📏 Pasar tabla real de talles<br/>disponibles por modelo"]
+    T5["🚚 Definir si el envío se cotiza<br/>en el mismo flujo o después"]
+```
+
 <details><summary>Pasos de la simulación</summary>
 
 **Paso 1 — Definir los campos de selección del cliente**

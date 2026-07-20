@@ -6,6 +6,14 @@ Proyecto nuevo: adaptar varios cascos ya existentes (carpeta local `Adaptacion G
 
 **Nota explícita:** el usuario confirmó que ya tiene un proceso y prompts que probaron funcionar en casos anteriores (mismo patrón de trasplante de máscara ya usado en EDGE Boston) — esta simulación no reinventa la técnica, la aplica al caso "God Father".
 
+### 🔴 Pendiente de tu parte
+
+```mermaid
+flowchart TD
+    T1["📁 Pasar la ruta local completa de<br/>la carpeta Adaptacion God Father"]
+    T2["🏷️ Confirmar cuáles de las 9 imágenes<br/>son molde real vs. intentos ya generados"]
+```
+
 <details><summary>Pasos de la simulación</summary>
 
 **Paso 1 — Confirmar la lógica de diseño aditivo**
