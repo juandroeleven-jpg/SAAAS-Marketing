@@ -49,88 +49,147 @@ gantt
     Integrar secciones CV y Logros a la landing            :c1, 2026-07-20, 4d
     Publicar codeflow-landing                              :c2, after c1, 1d
     Primer día real de envíos LinkedIn                     :c3, 2026-07-21, 1d
-
-    click d1 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/indice-proyecto-edge.md" "Ver bloqueo de Etapa 6 — Infraestructura"
-    click a1 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/documentos/simulaciones-cc/simulacion-6-NANO%20BANANA.md" "Ver índice de casos 6a-6d"
-    click a2 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/documentos/simulaciones-cc/simulacion-6d-stellar.md" "Ver Simulación 6d — Stellar"
-    click a3 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/documentos/simulaciones-cc/simulacion-4-meshy-3d.md" "Ver Simulación 4 — Meshy 3D"
-    click b1 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/documentos/simulaciones-cc/simulacion-5-cotizador.md" "Ver Simulación 5 — Cotizador"
-    click b2 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/documentos/simulaciones-cc/simulacion-7-catalogo.md" "Ver Simulación 7 — Catálogo"
-    click b3 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/documentos/simulaciones-cc/simulacion-8-meshy-blender.md" "Ver Simulación 8 — Meshy+Blender"
-    click c1 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/marca-personal/documentos/pagina-web-progreso.md" "Ver progreso de la landing"
-    click c2 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/marca-personal/documentos/pagina-web-progreso.md" "Ver progreso de la landing"
-    click c3 href "https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/marca-personal/documentos/linkedin-networking.md" "Ver tracker de LinkedIn"
 ```
 
-Cada barra del Gantt es clickeable y lleva directo al documento fuente de esa tarea (el mismo documento donde se armó y se dejó el trabajo en curso) — no a otro chat.
+*Corrección: la versión anterior tenía `click` dentro del bloque `gantt` — Mermaid no soporta esa sintaxis ahí de forma confiable y rompió el render en GitHub. Los links reales a cada documento fuente están en la columna "Fuente" de la tabla de la sección 3, donde sí funcionan siempre.*
 
 ---
 
 ## 3. Checklist maestro de pendientes
 
-### 🟠 Depende de tu decisión/acción — nadie más lo resuelve
+### 🟠 Depende de tu decisión final — pero todos tienen un prompt de investigación/simulación abajo, ninguno se deja sin avanzar
 
 | # | Pendiente | Fuente |
 |---|---|---|
-| 1 | Rotar el token de Notion expuesto (urgente) | seguridad, arrastrado desde hace varias sesiones |
-| 2 | Cancelar suscripción Meshy Pro antes del próximo cobro ($20.80) o decidir seguir | Simulación 4 |
-| 3 | Decidir si vale la pena recortar la base/soporte del modelo 3D | Simulación 4 |
-| 4 | Pasar precio_base_modelo real por cada modelo EDGE | Simulación 5 |
-| 5 | Confirmar qué colorways son premium/edición limitada (recargo) | Simulación 5 |
-| 6 | Definir umbrales reales de descuento por cantidad mayorista | Simulación 5 |
-| 7 | Pasar tabla real de talles disponibles por modelo | Simulación 5 |
-| 8 | Definir si el envío se cotiza en el mismo flujo o después | Simulación 5 |
-| 9 | Confirmar cuál trasera de Bob Esponja es la buena (intento-perfecto vs. fallida) | Simulación 6a |
-| 10 | Confirmar cuál intento 3/4 de Padrino es el definitivo | Simulación 6b |
-| 11 | Confirmar qué está mal en el logo de Top Gun (`maver-mal-logo.jpg`) | Simulación 6c |
-| 12 | Confirmar si las fotos negra/azul de Top Gun son molde físico real de EDGE o referencia de proveedor | Simulación 6c |
-| 13 | Resolver si "Stellar" y "Boston" son el mismo molde o dos distintos | Simulación 6d |
-| 14 | Confirmar si `download.jpg` (con errores de texto) es el intento vigente o hay que regenerar | Simulación 6d |
-| 15 | Contar un caso real donde Canva o full-IA fallaron/tardaron de más | Simulación 7 |
-| 16 | Elegir 1 modelo EDGE para generar la primera ficha real | Simulación 7 |
-| 17 | Conectar tu cuenta Claude Code Pro ($100/mes) al repositorio | Simulación 8 |
-| 18 | Confirmar si Blender está instalado en la máquina que usará esa cuenta | Simulación 8 |
-| 19 | Decidir entre Substance 3D Painter/RizomUV o solo Blender nativo | Simulación 8 |
-| 20 | Aprobar la corrección de la cita Belanche/Ibáñez-Sánchez (Etapa 2, Hallazgo 4) | pipeline-edge-6-meses.md, pendiente desde antes |
-| 21 | Primer día real de envíos LinkedIn (Motor 1 y 2) — nadie más puede enviarlos por ti | linkedin-networking.md |
-| 22 | Publicar la landing una vez integradas las secciones CV/Logros | pagina-web-progreso.md |
-
-### 🔵 Delegable a un agente — no necesita que decidas vos primero
-
-| # | Pendiente | Fuente |
-|---|---|---|
-| 1 | Abrir y renderizar los 3 PDF de referencia no legibles en este entorno (falta `pdftoppm`) y comparar contra los resultados generados | Simulaciones 6a, 6b, 6c |
-| 2 | Integrar el código de las secciones CV y Logros en la landing, con el contenido ya redactado | pagina-web-progreso.md |
+| 1 | Rotar el token de Notion expuesto (urgente) | seguridad |
+| 2 | Cancelar suscripción Meshy Pro antes del próximo cobro ($20.80) o decidir seguir | [Simulación 4](edge-cascos/documentos/simulaciones-cc/simulacion-4-meshy-3d.md) |
+| 3 | Decidir si vale la pena recortar la base/soporte del modelo 3D | [Simulación 4](edge-cascos/documentos/simulaciones-cc/simulacion-4-meshy-3d.md) |
+| 4 | Pasar precio_base_modelo real por cada modelo EDGE | [Simulación 5](edge-cascos/documentos/simulaciones-cc/simulacion-5-cotizador.md) |
+| 5 | Confirmar qué colorways son premium/edición limitada (recargo) | [Simulación 5](edge-cascos/documentos/simulaciones-cc/simulacion-5-cotizador.md) |
+| 6 | Definir umbrales reales de descuento por cantidad mayorista | [Simulación 5](edge-cascos/documentos/simulaciones-cc/simulacion-5-cotizador.md) |
+| 7 | Pasar tabla real de talles disponibles por modelo | [Simulación 5](edge-cascos/documentos/simulaciones-cc/simulacion-5-cotizador.md) |
+| 8 | Definir si el envío se cotiza en el mismo flujo o después | [Simulación 5](edge-cascos/documentos/simulaciones-cc/simulacion-5-cotizador.md) |
+| 9 | Confirmar cuál trasera de Bob Esponja es la buena | [Simulación 6a](edge-cascos/documentos/simulaciones-cc/simulacion-6a-bob-esponja.md) |
+| 10 | Confirmar cuál intento 3/4 de Padrino es el definitivo | [Simulación 6b](edge-cascos/documentos/simulaciones-cc/simulacion-6b-padrino.md) |
+| 11 | Confirmar qué está mal en el logo de Top Gun | [Simulación 6c](edge-cascos/documentos/simulaciones-cc/simulacion-6c-top-gun.md) |
+| 12 | Confirmar si las fotos negra/azul de Top Gun son molde real de EDGE o referencia de proveedor | [Simulación 6c](edge-cascos/documentos/simulaciones-cc/simulacion-6c-top-gun.md) |
+| 13 | Resolver si "Stellar" y "Boston" son el mismo molde o dos distintos | [Simulación 6d](edge-cascos/documentos/simulaciones-cc/simulacion-6d-stellar.md) |
+| 14 | Confirmar si `download.jpg` es el intento vigente o hay que regenerar | [Simulación 6d](edge-cascos/documentos/simulaciones-cc/simulacion-6d-stellar.md) |
+| 15 | Contar un caso real donde Canva o full-IA fallaron/tardaron de más | [Simulación 7](edge-cascos/documentos/simulaciones-cc/simulacion-7-catalogo.md) |
+| 16 | Elegir 1 modelo EDGE para generar la primera ficha real | [Simulación 7](edge-cascos/documentos/simulaciones-cc/simulacion-7-catalogo.md) |
+| 17 | Conectar tu cuenta Claude Code Pro ($100/mes) al repositorio | [Simulación 8](edge-cascos/documentos/simulaciones-cc/simulacion-8-meshy-blender.md) |
+| 18 | Confirmar si Blender está instalado en la máquina que usará esa cuenta | [Simulación 8](edge-cascos/documentos/simulaciones-cc/simulacion-8-meshy-blender.md) |
+| 19 | Decidir entre Substance 3D Painter/RizomUV o solo Blender nativo | [Simulación 8](edge-cascos/documentos/simulaciones-cc/simulacion-8-meshy-blender.md) |
+| 20 | Aprobar la corrección de la cita Belanche/Ibáñez-Sánchez (Etapa 2, Hallazgo 4) | [pipeline-edge-6-meses.md](edge-cascos/documentos/pipeline-edge-6-meses.md), ya investigado, solo falta tu "sí" |
+| 21 | Primer día real de envíos LinkedIn (Motor 1 y 2) | [linkedin-networking.md](marca-personal/documentos/linkedin-networking.md) |
+| 22 | Publicar la landing una vez integradas las secciones CV/Logros | [pagina-web-progreso.md](marca-personal/documentos/pagina-web-progreso.md) |
 
 ---
 
-## 4. Prompts listos para delegar
+## 4. Prompts de investigación/simulación — uno por cada pendiente
 
-Corrección sobre la versión anterior: estos prompts no son tutoriales genéricos para un chat nuevo sin contexto — son prompts de **continuación**, para pegar en la misma sesión de Claude Code local (VS Code) que ya armó cada documento y ya tiene todo el contexto (las carpetas físicas, las fotos, el repo). Por eso son cortos: solo señalan qué archivo retomar y qué punto concreto falta cerrar, sin repetirle a esa sesión lo que ya sabe.
+Ningún pendiente queda como pregunta abierta sin más: para cada grupo de abajo hay algo investigable o simulable ahora, aunque la firma final sea tuya. Los prompts que necesitan archivos físicos o el repo de código apuntan a tu sesión de Claude Code local (VS Code) — son de continuación, no tutoriales desde cero. Los que son de investigación de mercado (precios, benchmarks) los puedo correr yo mismo ahora si me das el "ok".
 
 <details>
-<summary><strong>Prompt 1 — Continuar la auditoría de PDF en Simulaciones 6a/6b/6c</strong></summary>
+<summary><strong>Ítem 1 — Rotar el token de Notion (armar el paso a paso, no dejarlo abierto)</strong></summary>
 
 ```
-Retomá simulacion-6a-bob-esponja.md, simulacion-6b-padrino.md y simulacion-6c-top-gun.md (proyectos/edge-cascos/documentos/simulaciones-cc/). En los 3 quedó pendiente el mismo bloqueo: el PDF de referencia no se pudo renderizar por falta de pdftoppm/poppler-utils en ese entorno remoto. Vos sí tenés acceso a los archivos físicos originales.
+Investigá el procedimiento exacto para rotar/regenerar un token de integración en Notion (Settings → My integrations → la integración expuesta → Regenerate/Show). Armá un checklist de máximo 5 pasos con el nombre exacto de cada botón, y confirmá en qué archivo(s)/variable(s) de entorno del proyecto hay que reemplazar el token viejo por el nuevo para que nada se rompa al rotarlo.
+```
+Esto no reemplaza el clic final (que solo el dueño de la cuenta puede dar), pero elimina la ambigüedad de "cómo" — deja de ser una tarea abierta.
 
-Instalá poppler-utils si falta, renderizá los 3 PDF (BOB ESPONJA - HERO.pdf, GODFATHER - HERO.ai.pdf, TOP GUN - EVOLUTION.pdf) y cerrá los 3 puntos que cada documento dejó abiertos:
-- 6a: ¿cuál trasera es la buena, intento-perfecto o fallida?
-- 6b: ¿cuál de los 2 intentos 3/4 es el definitivo?
-- 6c: ¿qué está mal exactamente en maver-mal-logo.jpg?
+</details>
 
-Agregá la respuesta directo en cada archivo (sección nueva "## Auditoría contra PDF original") y cerrá esos 3 checkboxes en el checklist de cada uno.
+<details>
+<summary><strong>Ítems 2-3 — Simulación 4 (Meshy): cancelar suscripción y recortar la base 3D</strong></summary>
+
+```
+Retomá simulacion-4-meshy-3d.md. Confirmá la fecha exacta del próximo cobro de Meshy Pro (email de confirmación o dashboard de billing) y calculá si cancelar ahora hace perder generaciones ya pagadas de este ciclo — dejá la recomendación con el número exacto de días de por medio.
+
+Para la base/soporte del modelo 3D: abrí el GLB en Blender, medí qué porcentaje de la malla ocupa la base respecto al casco, y generá una captura antes/después de recortarla, para decidir con evidencia visual en vez de a ciegas.
 ```
 
 </details>
 
 <details>
-<summary><strong>Prompt 2 — Continuar la integración de la landing (codeflow-landing)</strong></summary>
+<summary><strong>Ítems 4-8 — Simulación 5 (Cotizador): precios, colorways, descuentos, talles, envío</strong></summary>
 
 ```
-Retomá pagina-web-progreso.md (proyectos/marca-personal/documentos/). Ya quedó redactado el contenido de las secciones Logros y CV — falta integrarlas al código real de codeflow-landing, en el orden Hero → Dashboard → Logros → CV, sin tocar Hero.tsx ni el rótulo de PlaceholderDashboard.tsx.
+Investigá 3-5 competidores directos de EDGE en LatAm (cascos de moto gama media) y armá una tabla comparativa de: precio base por modelo, recargo típico por colorway/edición limitada (%), y umbrales de descuento por volumen usados en el sector (ej. 10+/25+/50+ unidades). Con esos benchmarks, proponé una tabla de precios INICIAL simulada para EDGE — marcada explícitamente como propuesta a confirmar, no como precio real — y una tabla estándar de talles (S-XXL) para no partir de cero. Para el envío: investigá 2-3 couriers B2C de la región y proponé si conviene cotizarlo en el mismo paso o después, con el trade-off de conversión de cada opción.
+```
+Puedo correr esta investigación yo mismo ahora mismo si me das el "ok" — no depende de archivos locales.
 
-Cuando esté, actualizá el kanban del documento y decime si ya queda lista para publicar o si falta algo más.
+</details>
+
+<details>
+<summary><strong>Ítems 9-11 — Simulaciones 6a/6b/6c: auditoría contra el PDF original</strong></summary>
+
+```
+Retomá simulacion-6a-bob-esponja.md, simulacion-6b-padrino.md y simulacion-6c-top-gun.md (proyectos/edge-cascos/documentos/simulaciones-cc/). En los 3 quedó el mismo bloqueo: el PDF de referencia no se pudo renderizar por falta de pdftoppm/poppler-utils en el entorno remoto. Vos sí tenés acceso a los archivos físicos.
+
+Instalá poppler-utils si falta, renderizá los 3 PDF (BOB ESPONJA - HERO.pdf, GODFATHER - HERO.ai.pdf, TOP GUN - EVOLUTION.pdf) y cerrá los 3 puntos abiertos: cuál trasera de Bob Esponja es la buena, cuál intento 3/4 de Padrino es el definitivo, y qué está mal exactamente en maver-mal-logo.jpg. Agregá la respuesta en cada archivo (sección "## Auditoría contra PDF original") y cerrá esos checkboxes.
+```
+
+</details>
+
+<details>
+<summary><strong>Ítem 12 — Simulación 6c: ¿el molde negro/azul es real de EDGE?</strong></summary>
+
+```
+Buscá en el resto del repo (pipeline-edge-6-meses.md, mis-pruebas-claude-code.md, fotos ya usadas en Simulación 4) alguna imagen de casco EDGE físico real en negro o azul con el logo EDGE visible, y compará contra molde-lateral-azul.jpg/molde-lateral-negro.png de Top Gun. Si no hay coincidencia clara, documentá qué se comparó y por qué no alcanza para confirmar, en vez de dejarlo como pregunta sin evidencia.
+```
+
+</details>
+
+<details>
+<summary><strong>Ítems 13-14 — Simulación 6d: Stellar vs. Boston, y regenerar el resultado con errores</strong></summary>
+
+```
+Buscá "Boston" en todo el repo (grep) para ver en qué otro documento aparece ese nombre de molde y compará la carcasa que describe contra calota stellar.png — proponé una hipótesis fundamentada de si son el mismo molde o dos distintos.
+
+Además, volvé a correr la generación de Nano Banana para el caso Stellar corrigiendo explícitamente los 2 errores de texto ya identificados ("APOL•GIZE" → "APOLOGIZE", ">OUR MY FAMILY" → "OF MY FAMILY") y la visera transparente en vez del degradé plateado. Esto es 100% ejecutable ya — no hace falta esperar a que se resuelva lo de Stellar/Boston para intentarlo.
+```
+
+</details>
+
+<details>
+<summary><strong>Ítems 15-16 — Simulación 7: caso Canva vs. IA, y elegir modelo para la primera ficha</strong></summary>
+
+```
+Mientras se consigue un caso real de Canva vs. full-IA, simulá uno hipotético: con los tiempos ya conocidos de las Simulaciones 4 y 6, estimá cuánto tarda armar 1 ficha técnica completa por el flujo full-IA vs. a mano en Canva, y proponé un criterio tipo "usar Canva solo si full-IA tarda más de X minutos".
+
+Para el modelo de la primera ficha real: usá por defecto el mismo modelo ya validado en Simulación 4 (tiene fotos reales y geometría confirmada, es el que menos fricción tiene para arrancar) y generá la ficha de punta a punta con ese.
+```
+
+</details>
+
+<details>
+<summary><strong>Ítems 17-19 — Simulación 8: Blender instalado, y Substance/RizomUV vs. nativo</strong></summary>
+
+```
+Confirmá con un comando simple (blender --version, o buscar la carpeta/ícono de instalación) si Blender ya está en la máquina que va a conectar la cuenta Claude Code Pro; si no está, es una instalación de un paso desde blender.org (gratis).
+
+Para Substance 3D Painter/RizomUV vs. Blender nativo: armá un cuadro comparativo de precio, curva de aprendizaje, y si de verdad hace falta para el nivel de detalle ya logrado en las Simulaciones 4 y 6 — proponé "quedarse con Blender nativo hasta que aparezca una limitación concreta" como default, no como pregunta abierta.
+```
+
+</details>
+
+<details>
+<summary><strong>Ítems 21-22 — LinkedIn y publicar la landing: la única excepción honesta</strong></summary>
+
+Estos dos no tienen más investigación pendiente — el método, las plantillas y el contenido ya están 100% listos, y agregar más análisis encima sería la misma trampa que ya identificamos antes (potencia que nunca se convierte en acto). Lo único que se puede simular es CÓMO ejecutar el primer envío sin disparar el riesgo de restricción de LinkedIn:
+
+```
+Con las 15 personas ya identificadas en linkedin-networking.md, armá un calendario escalonado de envío (ej. 3-4 conexiones por día en vez de las 15 de golpe) para el Motor 1, y confirmá cuántas del Motor 2 (contacto directo a empresas) se pueden mandar el mismo día sin activar el límite de restricción de LinkedIn que ya se documentó como riesgo aceptado.
+```
+
+</details>
+
+<details>
+<summary><strong>Ítem 2 (integrar landing) — sí queda delegable, sigue igual que antes</strong></summary>
+
+```
+Retomá pagina-web-progreso.md (proyectos/marca-personal/documentos/). Ya quedó redactado el contenido de las secciones Logros y CV — falta integrarlas al código real de codeflow-landing, en el orden Hero → Dashboard → Logros → CV, sin tocar Hero.tsx ni el rótulo de PlaceholderDashboard.tsx. Cuando esté, actualizá el kanban del documento y decime si ya queda lista para publicar o si falta algo más.
 ```
 
 </details>
