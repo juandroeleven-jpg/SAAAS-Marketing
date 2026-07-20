@@ -136,22 +136,127 @@ flowchart TD
   G -- No --> H
 ```
 
-### Tracker (15 filas)
+### Tracker (15 personas) — con comentario y link listos para cada publicación
 
-| Nombre | Empresa/rol | 1er comentario | 2do comentario | Conexión enviada | Aceptó |
-|---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
+Cada bloque es una persona. Completá Nombre, Empresa/rol y los 2 links de publicación cuando la encuentres con el método de arriba — el comentario ya viene redactado, solo ajustá el `[detalle concreto]` con algo real de esa publicación específica antes de pegarlo.
+
+**Persona 1**
+- **Nombre:** _____________  **Empresa/rol:** _____________
+- **Publicación 1 — Link:** _____________
+  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+- **Publicación 2 — Link:** _____________
+  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
+- **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
+
+**Persona 2**
+- **Nombre:** _____________  **Empresa/rol:** _____________
+- **Publicación 1 — Link:** _____________
+  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+- **Publicación 2 — Link:** _____________
+  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
+- **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
+
+**Persona 3**
+- **Nombre:** _____________  **Empresa/rol:** _____________
+- **Publicación 1 — Link:** _____________
+  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+- **Publicación 2 — Link:** _____________
+  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
+- **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
+
+**Persona 4**
+- **Nombre:** _____________  **Empresa/rol:** _____________
+- **Publicación 1 — Link:** _____________
+  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+- **Publicación 2 — Link:** _____________
+  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
+- **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
+
+**Persona 5**
+- **Nombre:** _____________  **Empresa/rol:** _____________
+- **Publicación 1 — Link:** _____________
+  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+- **Publicación 2 — Link:** _____________
+  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
+- **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
+
+**Persona 6**
+- **Nombre:** _____________  **Empresa/rol:** _____________
+- **Publicación 1 — Link:** _____________
+  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+- **Publicación 2 — Link:** _____________
+  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
+- **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
+
+**Persona 7**
+- **Nombre:** _____________  **Empresa/rol:** _____________
+- **Publicación 1 — Link:** _____________
+  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+- **Publicación 2 — Link:** _____________
+  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
+- **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
+
+**Persona 8**
+- **Nombre:** _____________  **Empresa/rol:** _____________
+- **Publicación 1 — Link:** _____________
+  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+- **Publicación 2 — Link:** _____________
+  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
+- **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
+
+**Persona 9**
+- **Nombre:** _____________  **Empresa/rol:** _____________
+- **Publicación 1 — Link:** _____________
+  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+- **Publicación 2 — Link:** _____________
+  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
+- **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
+
+**Persona 10**
+- **Nombre:** _____________  **Empresa/rol:** _____________
+- **Publicación 1 — Link:** _____________
+  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+- **Publicación 2 — Link:** _____________
+  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
+- **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
+
+**Persona 11**
+- **Nombre:** _____________  **Empresa/rol:** _____________
+- **Publicación 1 — Link:** _____________
+  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+- **Publicación 2 — Link:** _____________
+  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
+- **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
+
+**Persona 12**
+- **Nombre:** _____________  **Empresa/rol:** _____________
+- **Publicación 1 — Link:** _____________
+  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+- **Publicación 2 — Link:** _____________
+  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
+- **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
+
+**Persona 13**
+- **Nombre:** _____________  **Empresa/rol:** _____________
+- **Publicación 1 — Link:** _____________
+  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+- **Publicación 2 — Link:** _____________
+  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
+- **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
+
+**Persona 14**
+- **Nombre:** _____________  **Empresa/rol:** _____________
+- **Publicación 1 — Link:** _____________
+  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+- **Publicación 2 — Link:** _____________
+  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
+- **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
+
+**Persona 15**
+- **Nombre:** _____________  **Empresa/rol:** _____________
+- **Publicación 1 — Link:** _____________
+  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+- **Publicación 2 — Link:** _____________
+  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
+- **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
+
