@@ -136,111 +136,119 @@ flowchart TD
   G -- No --> H
 ```
 
-### Tracker (15 personas/empresas) — con leads reales y comentarios 100% completos
+### Tracker (15 personas/empresas) — con leads reales
 
-Los 15 fueron leídos con contenido real (WebFetch, no solo snippet de buscador). Cada comentario está terminado, sin placeholders — listo para copiar y pegar tal cual, o ajustar el tono si querés.
+**Criterio revisado (20 jul 2026):** el comentario es solo para enganchar con lo que la persona plantea — nada de hablar de tus logros/cifras ahí. El DM de conexión es breve, sin pitch. El pitch de servicios se manda recién en un TERCER mensaje, después de que la conexión ya fue aceptada (plantilla al final de esta sección).
 
-**Persona 1 — Fernando Herrera**
-- **Tema:** agentes de IA con n8n y MCP · **Estado:** verificado, leído completo
+**Persona 1 — Fernando Herrera** ✅ **EJECUTADO — comentario real publicado el 20/07/2026**
+- **Tema:** agentes de IA con n8n y MCP
 - **Publicación 1 — Link:** https://es.linkedin.com/posts/fernando-herrera-b6b204200_n8n-mcp-agentesia-activity-7455624990852452352-gG4m
-  **Comentario (listo):** "Fernando, la combinación n8n + MCP es justo el patrón que uso para conectar agentes con sistemas reales sin reescribir integraciones cada vez. En un sistema de nómina multi-país que armé con este enfoque terminamos ahorrando 97% del tiempo que se iba en tareas manuales de cálculo y validación. El salto real no es que el agente 'hable', es que pueda ejecutar y tocar sistemas de verdad, como bien lo planteás acá."
-- **Publicación 2 — Link:** _____________ (buscar 2da publicación reciente en su perfil)
+- **Comentario publicado (versión real usada):** "Fernando, me parece super interesante como propones la combinación n8n + MCP. Es más, me parece que es justo el patrón que hoy en día más que ser una opción debe ser un estándar para la industria. Yo personalmente lo he utilizado para conectar agentes con sistemas de análisis financiero y proyecciones económicas reales, y es bueno saber cómo se pueden usar como plantilla, para no tener que reescribir y diseñar integraciones cada vez. El salto real no es que el agente 'ejecute', sino que pueda organizarse y gestionar sistemas, como bien lo planteás acá."
+- **Publicación 2 — Link:** _____________
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
 **Persona 2 — Manolo Quispe Campos (Colombia)**
-- **Tema:** matriz de seguimiento de tareas de proyectos en Power BI · **Estado:** verificado, leído completo
+- **Tema:** matriz de seguimiento de tareas de proyectos en Power BI
 - **Publicación 1 — Link:** https://co.linkedin.com/posts/manoloquispecampos_matriz-de-seguimiento-de-tareas-para-proyectos-activity-7028031394316439553-tPEf
-  **Comentario (listo):** "Manolo, una matriz de seguimiento así es la base de cualquier automatización de reporting que valga la pena: sin esa estructura de tareas/estados clara, no hay dashboard que sirva. En un grupo multi-país (Copper Group/1HVAC) construimos 15 sistemas de automatización distintos y todos arrancaron igual, con una matriz simple antes de meter una sola línea de código o consulta en Power BI. Gracias por compartir el tutorial, se lo voy a pasar a mi equipo."
+  **Comentario (listo, enfocado en su solución):** "Manolo, muy bueno el enfoque de la matriz — me gusta que resuelva primero el seguimiento de tareas y recién después piense en el dashboard, la mayoría arma esto al revés. ¿La pensaste para un tipo de proyecto específico o funciona igual de bien para cualquier equipo?"
 - **Publicación 2 — Link:** _____________
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
 **Persona 3 — Grant Thornton Costa Rica (Ivannia Sandí)**
-- **Tema:** IA en auditoría financiera, desafíos éticos y normativos · **Estado:** verificado, leído completo
+- **Tema:** IA en auditoría financiera, desafíos éticos y normativos
 - **Publicación 1 — Link:** https://es.linkedin.com/posts/grant-thornton-costa-rica_la-inteligencia-artificial-en-la-auditor%C3%ADa-activity-7447750135662395392-MXqY
-  **Comentario (listo):** "Muy de acuerdo con el planteo de Ivannia Sandí sobre los desafíos éticos y normativos que trae meter IA en auditoría, no solo la parte de eficiencia. Del lado financiero/operativo veo el mismo patrón: la IA detecta anomalías o riesgos mucho más rápido, pero la responsabilidad de la decisión y el criterio profesional siguen siendo humanos. En automatización de cobranza, por ejemplo, optimizamos un 20% de una cartera identificando patrones de riesgo, pero la decisión final de a quién presionar o renegociar la sigue tomando una persona."
+  **Comentario (listo, enfocado en su solución):** "Muy de acuerdo con el planteo de Ivannia Sandí — el tema ético y normativo de meter IA en auditoría se habla mucho menos que la parte de eficiencia, y es justo el que más debería preocupar a un cliente. Buen enfoque llevar la discusión hacia ahí en vez de quedarse solo en la promesa de velocidad."
 - **Publicación 2 — Link:** _____________
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
 **Persona 4 — Drivepoint**
-- **Tema:** AI Transition Playbook, por qué finanzas no es anti-IA · **Estado:** verificado, leído completo
+- **Tema:** AI Transition Playbook, por qué finanzas no es anti-IA
 - **Publicación 1 — Link:** https://www.linkedin.com/posts/drivepoint-io_most-finance-teams-arent-anti-ai-they-activity-7470152252817842176-0SgP
-  **Comentario (listo):** "Totalmente de acuerdo con el diagnóstico: no es que los equipos de finanzas sean anti-IA, es que nadie les mostró qué flujo de trabajo específico vale la pena automatizar primero. Yo empiezo siempre por lo repetitivo y auditable (conciliaciones, nómina, cobranza) antes de tocar nada que implique juicio. En un sistema de nómina multi-país el ahorro fue de 97% del tiempo operativo, y eso fue justo lo que destrabó la confianza del equipo para seguir avanzando con más procesos."
+  **Comentario (listo, enfocado en su solución):** "Buen diagnóstico — no es que los equipos de finanzas sean anti-IA, es que nadie les mostró qué automatizar primero. Me quedo pensando en cómo eligen ustedes cuál es el primer proceso a automatizar con un cliente nuevo, ¿tienen un criterio fijo o depende de cada caso?"
 - **Publicación 2 — Link:** _____________
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
 **Persona 5 — Wisy AI (Panamá)**
-- **Tema:** hiring, cultura "Velocity + Tranquilo", filosofía Dario Amodei · **Estado:** verificado, leído completo
+- **Tema:** hiring, cultura "Velocity + Tranquilo", filosofía Dario Amodei
 - **Publicación 1 — Link:** https://www.linkedin.com/posts/wisyai_hiring-aijobs-techstartups-activity-7449848957293264896-9IAL
-  **Comentario (listo):** "Me quedo con eso de 'Velocity + Tranquilo': ir rápido sin perder lo humano es más difícil de lo que parece cuando estás metiendo IA en procesos críticos. Coincido con la idea de Amodei del 40% dedicado a cultura, porque en los proyectos de automatización que armé (15 sistemas para un grupo multi-país) lo que más tiempo tomaba no era la parte técnica sino lograr que el equipo confiara en el proceso nuevo. Felicitaciones por el crecimiento, se nota que están construyendo con esa base."
+  **Comentario (listo, enfocado en su solución):** "Me quedo con eso de 'Velocity + Tranquilo' — ir rápido sin perder lo humano es más difícil de lo que parece cuando estás metiendo IA en procesos críticos. Buena forma de plantear la cultura antes de escalar el equipo, en vez de arreglarlo después."
 - **Publicación 2 — Link:** _____________
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
 **Persona 6 — Ben Murray (Fractional CFO SaaS, SoftwareMetrics.ai)**
-- **Tema:** "AI doesn't fix a messy process, AI exposes it" — framework de qué automatizar y qué dejar en juicio humano · **Estado:** verificado, leído completo
+- **Tema:** "AI doesn't fix a messy process, AI exposes it"
 - **Publicación 1 — Link:** https://www.linkedin.com/posts/benrmurray_saas-activity-7431812194629230592-ZOg1
-  **Comentario (listo):** "Totalmente de acuerdo con que la IA expone el proceso desordenado en vez de arreglarlo — lo vi de primera mano automatizando nómina multi-país: el 97% de ahorro de tiempo solo llegó después de rediseñar el proceso, no antes de meter IA. Buen framework para separar juicio humano de lo automatizable."
+  **Comentario (listo, enfocado en su solución):** "Totalmente de acuerdo con que la IA expone el proceso desordenado en vez de arreglarlo. Buen framework para separar juicio humano de lo automatizable — ¿cómo decidís vos ese límite cuando el proceso es ambiguo y no hay una regla clara?"
 - **Publicación 2 — Link:** _____________
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
 **Persona 7 — Paul Lynch (CEO Centage.com / Venture Partner Scaleworks)**
-- **Tema:** "CFOs: Don't Fall for AI Vaporware" — caso real de $400K en un AI analyst inútil · **Estado:** verificado, leído completo
+- **Tema:** "CFOs: Don't Fall for AI Vaporware"
 - **Publicación 1 — Link:** https://www.linkedin.com/posts/paulglynch_cfo-fpanda-ai-activity-7414318019495141376-Lg5L
-  **Comentario (listo):** "La distinción entre modelos probabilísticos y finanzas deterministas es exactamente donde más veo fallar implementaciones de automatización financiera. Construí sistemas reales (nómina, cuentas por cobrar) midiendo siempre el resultado en dólares antes de llamarlo éxito — coincido en no caer en vaporware sin números."
+  **Comentario (listo, enfocado en su solución):** "La distinción entre modelos probabilísticos y finanzas deterministas es clave, y pocas veces se explica tan claro. El caso del CFO que gastó $400K en vaporware debería ser lectura obligatoria antes de comprar cualquier herramienta de IA financiera."
 - **Publicación 2 — Link:** _____________
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
 **Persona 8 — Andrew Dimitruk (Co-fundador Ironflow AI, ex-COO Shield AI)**
-- **Tema:** lanzamiento de Ironflow, ERP nativo de IA para manufactura · **Estado:** verificado, leído completo
+- **Tema:** lanzamiento de Ironflow, ERP nativo de IA para manufactura
 - **Publicación 1 — Link:** https://www.linkedin.com/posts/andrewdimitruk_ironflow-ai-activity-7391540149551026176-hWlM
-  **Comentario (listo):** "Coincido totalmente con que la IA falla cuando se pega sobre arquitecturas que no fueron diseñadas para eso. Construyendo automatización para un grupo multi-país (15 sistemas entregados, desde forecasting hasta pricing dinámico) el mayor riesgo siempre fue forzar IA sobre procesos legacy en vez de rediseñar la base primero."
+  **Comentario (listo, enfocado en su solución):** "Coincido con que la IA falla cuando se pega sobre arquitecturas que no fueron diseñadas para eso. Buen approach construir el ERP nativo de IA desde cero en vez de parchar uno viejo, aunque seguro fue más lento salir al mercado así."
 - **Publicación 2 — Link:** _____________
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
 **Persona 9 — Bahaa Dawoud (finanzas, UAE)**
-- **Tema:** "Cash-flow forecasting requires a human touch" · **Estado:** verificado, leído completo
+- **Tema:** "Cash-flow forecasting requires a human touch"
 - **Publicación 1 — Link:** https://www.linkedin.com/posts/bahaa-dawoud_cash-flow-forecasting-requires-a-human-touch-activity-7115554724338163712-3JSM
-  **Comentario (listo):** "De acuerdo en que el forecasting de flujo de caja necesita supervisión humana. En un sistema de cobranza que armé (cartera de 6 cifras en 3 países, 20% optimizada en un mes) la predicción automática solo funcionó bien después de limpiar bien la data de entrada, tal como decís."
+  **Comentario (listo, enfocado en su solución):** "De acuerdo en que el forecasting de flujo de caja necesita supervisión humana — la limpieza de la data de entrada es justo donde más se rompe este tipo de modelos, y poca gente lo menciona."
 - **Publicación 2 — Link:** _____________
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
 **Persona 10 — StratiqAI**
-- **Tema:** memoria financiera para founders, diagnóstico sin carga de datos · **Estado:** verificado, leído completo
+- **Tema:** memoria financiera para founders, diagnóstico sin carga de datos
 - **Publicación 1 — Link:** https://www.linkedin.com/posts/stratiqai_stratiqai-aicfo-founderfinance-activity-7462218528813850624-iRFC
-  **Comentario (listo):** "Esa distinción entre 'respuestas puntuales de IA' y 'memoria financiera' es exactamente el problema que veo en la mayoría de herramientas de IA para finanzas: responden bien una pregunta aislada pero no recuerdan decisiones ni conectan contexto entre meses. Es lo mismo que busqué resolver en un sistema de nómina multi-país que terminó ahorrando 97% del tiempo operativo, porque el valor no estaba en un cálculo puntual sino en que el sistema mantuviera el historial y las reglas de cada país. Buena propuesta la del diagnóstico sin carga de datos, baja mucho la fricción para probarlo."
+  **Comentario (listo, enfocado en su solución):** "Esa distinción entre respuestas puntuales de IA y memoria financiera real es el problema de fondo de la mayoría de herramientas. Buena propuesta la del diagnóstico sin carga de datos, baja mucho la fricción para probarlo."
 - **Publicación 2 — Link:** _____________
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
 **Persona 11 — Christian Wattig (FP&A Corporate Trainer)**
-- **Tema:** votado #1 FP&A trainer por IA (ChatGPT, Gemini, Claude, en incógnito) · **Estado:** verificado, leído completo
+- **Tema:** votado #1 FP&A trainer por IA (ChatGPT, Gemini, Claude, en incógnito)
 - **Publicación 1 — Link:** https://www.linkedin.com/posts/christian-wattig_ai-voted-me-the-1-fpa-corporate-trainer-activity-7445477688015912960-9rIN
-  **Comentario (listo):** "Buenísimo el experimento de probar en incógnito qué recomiendan ChatGPT, Gemini y Claude para entrenamiento de FP&A, y que tu programa haya salido #1 en las tres. El salto de modelado financiero e IA para finanzas es justo el que más cuesta en los equipos con los que trabajo: pasar de reportar números a poder automatizar el proceso completo. En un sistema de nómina multi-país que armé el ahorro fue de 97% del tiempo, pero llegar ahí requirió primero ese cambio de mentalidad que describís de 'ir de reportar a influir en decisiones'."
+  **Comentario (listo, enfocado en su solución):** "Buenísimo el experimento de probar en incógnito qué recomiendan ChatGPT, Gemini y Claude, y salir #1 en las tres. El salto de reportar números a poder automatizar el proceso completo es justo el que más cuesta en cualquier equipo de FP&A."
 - **Publicación 2 — Link:** _____________
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
 **Persona 12 — Emre Kazdagli (Founder, Arc Intelligence)**
-- **Tema:** plataforma de IA para crédito privado, 99% de precisión, miles de millones procesados · **Estado:** verificado, leído completo
+- **Tema:** plataforma de IA para crédito privado, 99% de precisión
 - **Publicación 1 — Link:** https://www.linkedin.com/posts/ekazdagli_today-is-a-huge-milestone-for-arc-and-our-activity-7264693532588687360-KxWb
-  **Comentario (listo):** "Dos años de desarrollo y ya procesando miles de millones en volumen de préstamos es una validación fuerte, sobre todo en un sector tan intolerante al error como crédito privado. Ese 99% de precisión en análisis financiero complejo resuena con lo que buscamos en automatización operativa: no es solo que el proceso sea más rápido, es que tiene que ser confiable al nivel de un analista senior. En automatización de nómina multi-país llegamos a 97% de ahorro de tiempo, pero el gancho para que la empresa confiara fue la precisión, no la velocidad. Felicitaciones por el lanzamiento."
+  **Comentario (listo, enfocado en su solución):** "Dos años de desarrollo y ya procesando miles de millones en volumen es una validación fuerte, sobre todo en un sector tan intolerante al error como crédito privado. Felicitaciones por el lanzamiento."
 - **Publicación 2 — Link:** _____________
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
 **Persona 13 — Vivek Goel (WonderBotz, RPA-as-a-Service)**
-- **Tema:** caso de estudio Equinix, RPA en cuentas por pagar · **Estado:** verificado, leído completo
+- **Tema:** caso de estudio Equinix, RPA en cuentas por pagar
 - **Publicación 1 — Link:** https://www.linkedin.com/posts/vivek-goel-2271a516_wonderbotz-case-study-how-equinix-used-rpa-activity-7046647148339212288-X_fI
-  **Comentario (listo):** "Cuentas por pagar es literalmente el punto de entrada perfecto para RPA, tal como lo plantean con Equinix: procesos repetitivos, reglas claras, mucho volumen de validación manual. Es el mismo criterio que uso para priorizar qué automatizar primero en un grupo multi-país donde entregamos 15 sistemas de automatización distintos: siempre arrancamos por el proceso más repetitivo y de menor ambigüedad para generar confianza rápido antes de meternos con procesos que requieren más criterio. Buen caso de estudio."
+  **Comentario (listo, enfocado en su solución):** "Cuentas por pagar es el punto de entrada perfecto para RPA — reglas claras, mucho volumen, poca ambigüedad. Buen caso de estudio con Equinix, ¿cuánto tardó la implementación de punta a punta?"
 - **Publicación 2 — Link:** _____________
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
 **Persona 14 — Embat (fintech española, tesorería con agentes de IA)**
-- **Tema:** RPA vs IA generativa vs agentes de IA en tesorería, conciliación continua · **Estado:** verificado, leído completo
+- **Tema:** RPA vs IA generativa vs agentes de IA en tesorería
 - **Publicación 1 — Link:** https://es.linkedin.com/posts/embat-io_agentes-de-ia-para-finanzas-qu%C3%A9-son-y-casos-activity-7480244527149125633-Qyzx
-  **Comentario (listo):** "Esa distinción entre RPA (reglas fijas), IA generativa (crea contenido) y agentes de IA (razonan y ejecutan procesos completos) es la más clara que vi explicada en español. La conciliación continua entre bancos y contabilidad que mencionan es justo el tipo de proceso donde más se nota la diferencia: en un sistema de nómina multi-país reemplazamos ese tipo de validación manual y liberamos 97% del tiempo que antes se iba en buscar y cruzar datos, para que el equipo se enfocara en decidir, como bien dicen ustedes. Buen marco para explicarle esto a un CFO que todavía desconfía."
+  **Comentario (listo, enfocado en su solución):** "Esa distinción entre RPA, IA generativa y agentes de IA es la más clara que vi explicada en español. Buen marco para explicarle esto a un CFO que todavía desconfía de meter IA en tesorería."
 - **Publicación 2 — Link:** _____________
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
 **Persona 15 — Ionix Latam (Franco Mena)**
-- **Tema:** IA como asesor financiero, riesgo de fuga de datos y deepfakes financieros · **Estado:** verificado, leído completo (vía WebSearch + artículo de La Tercera que cita el mismo post)
+- **Tema:** IA como asesor financiero, riesgo de fuga de datos y deepfakes financieros
 - **Publicación 1 — Link:** https://es.linkedin.com/posts/ionix_la-inteligencia-artificial-es-mi-asesor-financiero-activity-7475648755317530624-HDGJ
-  **Comentario (listo):** "Muy acertado el punto de Franco Mena sobre el riesgo de fuga de datos y deepfakes financieros, es la cara menos hablada de meter IA en finanzas. Del lado empresarial veo el mismo dilema en otra escala: cuando automatizamos cobranza y optimizamos un 20% de una cartera, la parte más delicada no fue el modelo sino garantizar qué datos financieros se procesaban y dónde quedaban almacenados. La democratización del acceso que describís es real, pero sin ese control de datos y regulación de por medio, como bien advertís, el riesgo es alto."
+  **Comentario (listo, enfocado en su solución):** "Muy acertado el punto de Franco Mena sobre el riesgo de fuga de datos y deepfakes financieros — es la cara menos hablada de meter IA en finanzas, casi todo el discurso es solo sobre lo que gana el usuario."
 - **Publicación 2 — Link:** _____________
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
+
+---
+
+## Etapa 3 — Pitch de servicios (solo después de que aceptaron la conexión)
+
+Nunca en el comentario ni en el DM de conexión. Recién acá, en un mensaje nuevo días después de aceptada la conexión, mencionás lo que hacés vos.
+
+> "Hola [Nombre], gracias por conectar. Aprovecho para contarte un poco de mi lado: trabajo en automatización financiera y de operaciones con IA — armé sistemas reales como un flujo de nómina multi-país (97% de ahorro de tiempo) y un ecosistema de 15 sistemas de automatización para un grupo empresarial multi-país (orquestador multi-agente, forecasting, pricing dinámico, entre otros). Si en algún momento te sirve una segunda mirada sobre algo así, con gusto conversamos."
