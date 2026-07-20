@@ -136,127 +136,111 @@ flowchart TD
   G -- No --> H
 ```
 
-### Tracker (15 personas) — con comentario y link listos para cada publicación
+### Tracker (15 personas/empresas) — con leads reales encontrados por búsqueda
 
-Cada bloque es una persona. Completá Nombre, Empresa/rol y los 2 links de publicación cuando la encuentres con el método de arriba — el comentario ya viene redactado, solo ajustá el `[detalle concreto]` con algo real de esa publicación específica antes de pegarlo.
+Encontrados vía búsqueda web (no LinkedIn logueado) — 4 verificados con el contenido completo leído, 11 solo con snippet del buscador (título/fragmento, hay que abrir el link y confirmar antes de comentar). Cada uno tiene 1 link real; el segundo campo de link queda para que completes vos con una 2da publicación de esa misma persona una vez entres a su perfil.
 
-**Persona 1**
-- **Nombre:** _____________  **Empresa/rol:** _____________
-- **Publicación 1 — Link:** _____________
-  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
-- **Publicación 2 — Link:** _____________
-  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
+**Persona 1 — Fernando Herrera**
+- **Tema:** agentes de IA con n8n y MCP · **Estado:** solo snippet, verificar antes de comentar
+- **Publicación 1 — Link:** https://es.linkedin.com/posts/fernando-herrera-b6b204200_n8n-mcp-agentesia-activity-7455624990852452352-gG4m
+  **Comentario (editar tras leer el post real):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+- **Publicación 2 — Link:** _____________ (buscar 2da publicación reciente en su perfil)
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
-**Persona 2**
-- **Nombre:** _____________  **Empresa/rol:** _____________
-- **Publicación 1 — Link:** _____________
-  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+**Persona 2 — Manolo Quispe Campos (Colombia)**
+- **Tema:** matriz de seguimiento de tareas de proyectos en Power BI · **Estado:** solo snippet
+- **Publicación 1 — Link:** https://co.linkedin.com/posts/manoloquispecampos_matriz-de-seguimiento-de-tareas-para-proyectos-activity-7028031394316439553-tPEf
+  **Comentario (editar tras leer el post real):** "Muy bueno el enfoque de la matriz para seguimiento de proyectos. Yo vengo del lado de automatización financiera con Power BI — coincido en que el drill-down por área es donde más valor se pierde si no está bien armado. Gracias por compartirlo."
 - **Publicación 2 — Link:** _____________
-  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
-**Persona 3**
-- **Nombre:** _____________  **Empresa/rol:** _____________
-- **Publicación 1 — Link:** _____________
-  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+**Persona 3 — Grant Thornton Costa Rica**
+- **Tema:** IA en auditoría financiera (abril 2026) · **Estado:** solo snippet
+- **Publicación 1 — Link:** https://es.linkedin.com/posts/grant-thornton-costa-rica_la-inteligencia-artificial-en-la-auditor%C3%ADa-activity-7447750135662395392-MXqY
+  **Comentario (editar tras leer el post real):** "Coincido con el enfoque sobre IA en auditoría financiera. Armé sistemas similares de automatización financiera con IA (97% de ahorro de tiempo en un proceso de nómina) — el punto de [detalle concreto] aplica directo a lo que veo en manufactura."
 - **Publicación 2 — Link:** _____________
-  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
-**Persona 4**
-- **Nombre:** _____________  **Empresa/rol:** _____________
-- **Publicación 1 — Link:** _____________
-  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+**Persona 4 — Drivepoint**
+- **Tema:** por qué los equipos de finanzas no son anti-IA, necesitan otro enfoque de adopción · **Estado:** solo snippet
+- **Publicación 1 — Link:** https://www.linkedin.com/posts/drivepoint-io_most-finance-teams-arent-anti-ai-they-activity-7470152252817842176-0SgP
+  **Comentario (editar tras leer el post real):** "Totalmente de acuerdo — el problema no es resistencia a la IA, es que la adopción se hace mal. Vi lo mismo automatizando cuentas por cobrar: el cambio real vino de rediseñar el proceso, no de agregar IA encima."
 - **Publicación 2 — Link:** _____________
-  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
-**Persona 5**
-- **Nombre:** _____________  **Empresa/rol:** _____________
-- **Publicación 1 — Link:** _____________
-  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+**Persona 5 — Wisy AI (Panamá)**
+- **Tema:** hiring en IA, oficinas Silicon Valley–Panamá · **Estado:** solo snippet
+- **Publicación 1 — Link:** https://www.linkedin.com/posts/wisyai_hiring-aijobs-techstartups-activity-7449848957293264896-9IAL
+  **Comentario (editar tras leer el post real):** "Buenísimo ver una empresa con presencia en Panamá construyendo en IA. Vengo del lado de automatización financiera con IA (97% de ahorro de tiempo en un proceso real) — si en algún momento buscan este perfil, encantado de conversar."
 - **Publicación 2 — Link:** _____________
-  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
-**Persona 6**
-- **Nombre:** _____________  **Empresa/rol:** _____________
-- **Publicación 1 — Link:** _____________
-  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+**Persona 6 — Ben Murray (Fractional CFO SaaS, SoftwareMetrics.ai)**
+- **Tema:** "AI doesn't fix a messy process, AI exposes it" — framework de qué automatizar y qué dejar en juicio humano · **Estado:** verificado, leído completo
+- **Publicación 1 — Link:** https://www.linkedin.com/posts/benrmurray_saas-activity-7431812194629230592-ZOg1
+  **Comentario (listo):** "Totalmente de acuerdo con que la IA expone el proceso desordenado en vez de arreglarlo — lo vi de primera mano automatizando nómina multi-país: el 97% de ahorro de tiempo solo llegó después de rediseñar el proceso, no antes de meter IA. Buen framework para separar juicio humano de lo automatizable."
 - **Publicación 2 — Link:** _____________
-  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
-**Persona 7**
-- **Nombre:** _____________  **Empresa/rol:** _____________
-- **Publicación 1 — Link:** _____________
-  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+**Persona 7 — Paul Lynch (CEO Centage.com / Venture Partner Scaleworks)**
+- **Tema:** "CFOs: Don't Fall for AI Vaporware" — caso real de $400K gastados en un AI analyst inútil, "AI models are probabilistic, finance is deterministic" · **Estado:** verificado, leído completo
+- **Publicación 1 — Link:** https://www.linkedin.com/posts/paulglynch_cfo-fpanda-ai-activity-7414318019495141376-Lg5L
+  **Comentario (listo):** "La distinción entre modelos probabilísticos y finanzas deterministas es exactamente donde más veo fallar implementaciones de automatización financiera. Construí sistemas reales (nómina, cuentas por cobrar) midiendo siempre el resultado en dólares antes de llamarlo éxito — coincido en no caer en vaporware sin números."
 - **Publicación 2 — Link:** _____________
-  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
-**Persona 8**
-- **Nombre:** _____________  **Empresa/rol:** _____________
-- **Publicación 1 — Link:** _____________
-  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+**Persona 8 — Andrew Dimitruk (Co-fundador Ironflow AI, ex-COO Shield AI)**
+- **Tema:** lanzamiento de Ironflow, ERP nativo de IA para manufactura, "AI fails when bolted onto architectures never designed for it" · **Estado:** verificado, leído completo
+- **Publicación 1 — Link:** https://www.linkedin.com/posts/andrewdimitruk_ironflow-ai-activity-7391540149551026176-hWlM
+  **Comentario (listo):** "Coincido totalmente con que la IA falla cuando se pega sobre arquitecturas que no fueron diseñadas para eso. Construyendo automatización para un grupo multi-país (15 sistemas entregados, desde forecasting hasta pricing dinámico) el mayor riesgo siempre fue forzar IA sobre procesos legacy en vez de rediseñar la base primero."
 - **Publicación 2 — Link:** _____________
-  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
-**Persona 9**
-- **Nombre:** _____________  **Empresa/rol:** _____________
-- **Publicación 1 — Link:** _____________
-  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+**Persona 9 — Bahaa Dawoud (finanzas, UAE)**
+- **Tema:** "Cash-flow forecasting requires a human touch" — forecasting con IA útil pero requiere data limpia y supervisión humana por sesgos · **Estado:** verificado, leído completo
+- **Publicación 1 — Link:** https://www.linkedin.com/posts/bahaa-dawoud_cash-flow-forecasting-requires-a-human-touch-activity-7115554724338163712-3JSM
+  **Comentario (listo):** "De acuerdo en que el forecasting de flujo de caja necesita supervisión humana. En un sistema de cobranza que armé (cartera de 6 cifras en 3 países, 20% optimizada en un mes) la predicción automática solo funcionó bien después de limpiar bien la data de entrada, tal como decís."
 - **Publicación 2 — Link:** _____________
-  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
-**Persona 10**
-- **Nombre:** _____________  **Empresa/rol:** _____________
-- **Publicación 1 — Link:** _____________
-  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+**Persona 10 — StratiqAI**
+- **Tema:** "Financial Memory Diagnostic for Founders" — herramienta de AI CFO, memoria financiera en tiempo real · **Estado:** solo snippet
+- **Publicación 1 — Link:** https://www.linkedin.com/posts/stratiqai_stratiqai-aicfo-founderfinance-activity-7462218528813850624-iRFC
+  **Comentario (editar tras leer el post real):** "Interesante el enfoque de memoria financiera para founders. Vengo construyendo sistemas similares de analítica financiera con IA — coincido en que [detalle concreto] es el punto donde más se pierde visibilidad."
 - **Publicación 2 — Link:** _____________
-  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
-**Persona 11**
-- **Nombre:** _____________  **Empresa/rol:** _____________
-- **Publicación 1 — Link:** _____________
-  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+**Persona 11 — Christian Wattig (FP&A Corporate Trainer)**
+- **Tema:** rol de la IA en formación/evaluación de habilidades de FP&A · **Estado:** solo snippet
+- **Publicación 1 — Link:** https://www.linkedin.com/posts/christian-wattig_ai-voted-me-the-1-fpa-corporate-trainer-activity-7445477688015912960-9rIN
+  **Comentario (editar tras leer el post real):** "Buen punto sobre el rol de la IA en FP&A. Desde el lado de automatización financiera veo algo parecido: [detalle concreto de esta publicación]. Gracias por compartirlo."
 - **Publicación 2 — Link:** _____________
-  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
-**Persona 12**
-- **Nombre:** _____________  **Empresa/rol:** _____________
-- **Publicación 1 — Link:** _____________
-  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+**Persona 12 — Emre Kazdagli (Founder, Arc Intelligence)**
+- **Tema:** lanzamiento de plataforma de IA para deal teams de crédito privado · **Estado:** solo snippet
+- **Publicación 1 — Link:** https://www.linkedin.com/posts/ekazdagli_today-is-a-huge-milestone-for-arc-and-our-activity-7264693532588687360-KxWb
+  **Comentario (editar tras leer el post real):** "Felicitaciones por el lanzamiento. Vengo del lado de automatización financiera con IA aplicada a manufactura/distribución — coincido en que [detalle concreto] es el punto donde más valor hay para capturar."
 - **Publicación 2 — Link:** _____________
-  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
-**Persona 13**
-- **Nombre:** _____________  **Empresa/rol:** _____________
-- **Publicación 1 — Link:** _____________
-  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+**Persona 13 — Vivek Goel (WonderBotz, RPA-as-a-Service)**
+- **Tema:** caso de estudio real — cómo Equinix usó RPA de WonderBotz para automatizar infraestructura · **Estado:** solo snippet
+- **Publicación 1 — Link:** https://www.linkedin.com/posts/vivek-goel-2271a516_wonderbotz-case-study-how-equinix-used-rpa-activity-7046647148339212288-X_fI
+  **Comentario (editar tras leer el post real):** "Muy bueno el caso de Equinix. Yo construí automatizaciones similares para un grupo multi-país (15 sistemas entregados) — coincido en que [detalle concreto del caso] es donde más se nota el ROI real de RPA."
 - **Publicación 2 — Link:** _____________
-  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
-**Persona 14**
-- **Nombre:** _____________  **Empresa/rol:** _____________
-- **Publicación 1 — Link:** _____________
-  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+**Persona 14 — Embat (fintech española, tesorería con agentes de IA)**
+- **Tema:** "Agentes de IA para finanzas: qué son y casos de uso" · **Estado:** solo snippet
+- **Publicación 1 — Link:** https://es.linkedin.com/posts/embat-io_agentes-de-ia-para-finanzas-qu%C3%A9-son-y-casos-activity-7480244527149125633-Qyzx
+  **Comentario (editar tras leer el post real):** "Buen resumen de casos de uso de agentes de IA en finanzas. Coincido en que [detalle concreto de esta publicación] — lo vi de primera mano automatizando tesorería y cobranza para un cliente multi-país."
 - **Publicación 2 — Link:** _____________
-  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
 
-**Persona 15**
-- **Nombre:** _____________  **Empresa/rol:** _____________
-- **Publicación 1 — Link:** _____________
-  **Comentario 1 (listo, editar [detalle concreto]):** "Muy bueno el punto sobre [detalle concreto de esta publicación]. Yo trabajo del lado de automatización financiera con IA en manufactura y coincido en que [ángulo relacionado] es donde más tiempo se pierde. Gracias por compartirlo."
+**Persona 15 — Ionix Latam**
+- **Tema:** "La inteligencia artificial es mi asesor financiero" — caso de uso de IA como asesor financiero · **Estado:** solo snippet
+- **Publicación 1 — Link:** https://es.linkedin.com/posts/ionix_la-inteligencia-artificial-es-mi-asesor-financiero-activity-7475648755317530624-HDGJ
+  **Comentario (editar tras leer el post real):** "Me identifico con el enfoque de IA como asesor financiero. Construí sistemas parecidos de analítica y automatización financiera — coincido en que [detalle concreto] es clave para que esto funcione bien."
 - **Publicación 2 — Link:** _____________
-  **Comentario 2 (listo, editar [detalle concreto]):** "Coincido totalmente con [detalle concreto de esta publicación]. En un cliente de manufactura reciente vimos algo parecido: [cifra o resultado real propio] justo por atacar ese mismo cuello de botella. Buen aporte."
 - **Fecha conexión enviada:** _____________  **¿Aceptó?:** _____________
-
