@@ -1,6 +1,6 @@
 # Simulación 6d — Adaptación 2D "Stellar" con Nano Banana (Etapa 1 — Ilustración)
 
-[← Volver al índice de mis pruebas](../mis-pruebas-claude-code.md) · [← Volver a Simulación 6 (God Father)](simulacion-6-NANO%20BANANA.md)
+[← Volver al índice de mis pruebas](../mis-pruebas-claude-code.md) · [← Volver a Simulación 6](simulacion-6-NANO%20BANANA.md)
 
 Caso concreto dentro del proyecto de adaptación 2D: casco EDGE tipo integral (mismo molde/carcasa cerrada usado en otros casos) al que se le intenta trasplantar el diseño gráfico "The Godfather" (ya documentado en el caso hermano God Father/Padrino) sobre la carcasa identificada como modelo **Stellar**. Mismo patrón aditivo: casco base liso → capas de colorway/gráficos superpuestas, no reconstrucción de geometría.
 
@@ -50,12 +50,38 @@ No se pudo determinar si `download.jpg` es el intento final/vigente o un intento
 
 </details>
 
-<details><summary>Comparación visual (molde vs. referencia vs. resultado)</summary>
+<details><summary>Comparación por vista — foto real / foto adaptada / ilustración del PDF</summary>
 
-| Vista | Molde (real, sin diseño) | Referencia (diseño Godfather correcto) | Resultado IA (Stellar) |
-|---|---|---|---|
-| 3/4 lateral | ![Molde Stellar](imagenes-stellar/molde-stellar.png) | ![Referencia Godfather 1](imagenes-stellar/referencia-godfather-1.jpg) | ![Resultado IA Stellar](imagenes-stellar/resultado-ia-stellar.jpg) |
-| 3/4 lateral (variante) | — | ![Referencia Godfather 2](imagenes-stellar/referencia-godfather-2.jpg) | — |
+<details><summary>Vista 3/4 lateral</summary>
+
+| Foto real (molde) | Foto adaptada (resultado IA) | Ilustración del PDF |
+|---|---|---|
+| ![Molde Stellar](imagenes-stellar/molde-stellar.png) | ![Resultado IA Stellar](imagenes-stellar/resultado-ia-stellar.jpg) | ⏳ Pendiente — PDF no legible en este entorno, pero SÍ se pudo leer su texto/specs (ver Paso 1: "EDGE - BOSTON / GODFATHER / BLACK", Pantone 7562C/871C/877C/426C) |
+
+**Aciertos:**
+- Silueta general, ventilación superior, mecanismo de pivote de visera y rejillas de mentonera idénticos entre molde y resultado — geometría sin deformar
+- Logo "EDGE" sí presente (aunque duplicado, ver fallas)
+
+**Fallas:**
+- Texto "I DON'T APOLOGIZE" mal generado: sale "I DON'T APOL•GIZE" (carácter incorrecto)
+- Texto "TO TAKE CARE / OF MY FAMILY" corrupto: sale "APOLO CARE / >OUR MY FAMILY" — error típico de tipografía generada por IA
+- Logo "The Godfather" no visible con claridad donde debería estar
+- Visera con degradé plateado/espejado en vez de transparente como en la referencia real
+- Logo "EDGE" aparece duplicado (arriba y abajo) cuando en la referencia solo aparece una vez
+
+</details>
+
+<details><summary>Referencia adicional — foto de producto terminado (sin molde equivalente)</summary>
+
+Estas 2 imágenes muestran el diseño Godfather ya bien aplicado en un producto real (no son molde ni son el resultado de esta prueba puntual, sirven como vara de comparación de cómo debería verse):
+
+| Referencia 1 | Referencia 2 |
+|---|---|
+| ![Referencia Godfather 1](imagenes-stellar/referencia-godfather-1.jpg) | ![Referencia Godfather 2](imagenes-stellar/referencia-godfather-2.jpg) |
+
+**Lo que confirma esta referencia:** el texto se lee completo y correcto, la visera es transparente, y el logo EDGE aparece una sola vez — es la vara contra la que se midieron las fallas del resultado IA de arriba.
+
+</details>
 
 </details>
 

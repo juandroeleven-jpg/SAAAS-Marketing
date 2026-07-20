@@ -46,14 +46,53 @@ No se pudo abrir el PDF de referencia (`BOB ESPONJA - HERO.pdf`) por falta de he
 
 </details>
 
-<details><summary>Comparación visual (molde vs. resultado)</summary>
+<details><summary>Comparación por vista — foto real / foto adaptada / ilustración del PDF</summary>
 
-| Vista | Molde (real) | Resultado (generado) |
+<details><summary>Vista lateral</summary>
+
+| Foto real (molde) | Foto adaptada (resultado) | Ilustración del PDF |
 |---|---|---|
-| Lateral | ![Molde lateral](imagenes-bob-esponja/molde-lateral.jpg) | ![Resultado lateral](imagenes-bob-esponja/resultado-lateral.jpg) |
-| Frontal | ![Molde frontal](imagenes-bob-esponja/molde-frontal.jpg) | ![Resultado frontal](imagenes-bob-esponja/resultado-frontal.jpg) |
-| Trasera | ![Molde trasera](imagenes-bob-esponja/molde-trasera.jpg) | ![Resultado trasera — "intento perfecto"](imagenes-bob-esponja/resultado-trasera-intento-perfecto.jpg) |
-| Trasera (alternativa) | — | ![Resultado trasera — "fallida"](imagenes-bob-esponja/resultado-trasera-fallida.jpg) |
+| ![Molde lateral](imagenes-bob-esponja/molde-lateral.jpg) | ![Resultado lateral](imagenes-bob-esponja/resultado-lateral.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
+
+**Aciertos:**
+- Visor, mecanismo de pivote y correa con hebilla roja idénticos entre molde y resultado
+- Composición del diseño ocupa toda la superficie lateral sin dejar zonas en blanco descuidadas
+
+**Fallas:**
+- Sin la ilustración del PDF no se puede confirmar si el arte lateral es fiel al original o una interpretación libre
+
+</details>
+
+<details><summary>Vista frontal</summary>
+
+| Foto real (molde) | Foto adaptada (resultado) | Ilustración del PDF |
+|---|---|---|
+| ![Molde frontal](imagenes-bob-esponja/molde-frontal.jpg) | ![Resultado frontal](imagenes-bob-esponja/resultado-frontal.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
+
+**Aciertos:**
+- La cara de Bob Esponja queda centrada y simétrica sobre la frente del casco, bien encuadrada entre las dos ventilaciones superiores
+- El visor oscuro (bajado) no tapa ningún elemento clave del diseño
+
+**Fallas:**
+- Ninguna detectada en geometría; sin PDF no se puede auditar fidelidad de color/arte
+
+</details>
+
+<details><summary>Vista trasera (2 versiones a comparar)</summary>
+
+| Foto real (molde) | Resultado — "intento perfecto" | Resultado — "fallida" |
+|---|---|---|
+| ![Molde trasera](imagenes-bob-esponja/molde-trasera.jpg) | ![Resultado trasera — intento perfecto](imagenes-bob-esponja/resultado-trasera-intento-perfecto.jpg) | ![Resultado trasera — fallida](imagenes-bob-esponja/resultado-trasera-fallida.jpg) |
+
+**Aciertos (ambas versiones):**
+- Logo "SB", logo EDGE y etiquetas DOT/ECE en la misma posición que se espera en una ficha real de certificación
+- Spoiler trasero sin deformar en ninguna de las 2
+
+**Fallas:**
+- No hay diferencia visible a simple vista entre "intento perfecto" y "fallida" — el nombre del archivo asume un juicio de calidad que esta auditoría no puede confirmar ni refutar sin más contexto tuyo
+- Sin la ilustración del PDF, no se puede saber cuál de las 2 se acerca más al arte original
+
+</details>
 
 </details>
 

@@ -44,12 +44,39 @@ Igual que en los casos anteriores, no se pudo abrir el PDF de referencia por fal
 
 </details>
 
-<details><summary>Comparación visual (molde vs. resultado)</summary>
+<details><summary>Comparación por vista — foto real / foto adaptada / ilustración del PDF</summary>
 
-| Vista | Molde (negro) | Molde (azul) | Resultado |
-|---|---|---|---|
-| Lateral | ![Molde negro](imagenes-top-gun/molde-lateral-negro.png) | ![Molde azul](imagenes-top-gun/molde-lateral-azul.jpg) | ![Resultado A](imagenes-top-gun/resultado-a.jpg) |
-| Lateral (variante con logo marcado como malo) | — | — | ![Resultado B - logo malo](imagenes-top-gun/resultado-b-logo-malo.jpg) |
+<details><summary>Vista lateral — molde negro vs. resultado</summary>
+
+| Foto real (molde negro) | Foto adaptada (resultado) | Ilustración del PDF |
+|---|---|---|
+| ![Molde negro](imagenes-top-gun/molde-lateral-negro.png) | ![Resultado A](imagenes-top-gun/resultado-a.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
+
+**Aciertos:**
+- Silueta general (pico frontal, spoiler trasero, mentonera) y ranuras de ventilación consistentes entre molde y resultado
+- Visor doble (externo + interno oscuro) presente en ambos
+
+**Fallas:**
+- El molde no muestra logo/escudo EDGE en ningún ángulo — no se puede confirmar si es el casco físico real de EDGE o una foto de catálogo de proveedor
+- Sin PDF no se puede auditar fidelidad del diseño (avión, estrella, naipes) contra el arte original
+
+</details>
+
+<details><summary>Vista lateral — molde azul vs. resultado con logo marcado como malo</summary>
+
+| Foto real (molde azul) | Foto adaptada — "logo malo" | Ilustración del PDF |
+|---|---|---|
+| ![Molde azul](imagenes-top-gun/molde-lateral-azul.jpg) | ![Resultado B - logo malo](imagenes-top-gun/resultado-b-logo-malo.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
+
+**Aciertos:**
+- Misma geometría que el molde negro — confirma que negro y azul son el mismo casco, solo cambia el color base
+- Texto "MAVERICK" y las 3 estrellas se leen con claridad
+
+**Fallas:**
+- El propio usuario ya marcó esta imagen como defectuosa en el logo, pero comparándola contra el otro resultado no se identifica a simple vista cuál elemento específico está mal — falta que el usuario señale la zona exacta
+- Sin PDF no se puede comparar contra el logo original de referencia para aislar el error
+
+</details>
 
 </details>
 

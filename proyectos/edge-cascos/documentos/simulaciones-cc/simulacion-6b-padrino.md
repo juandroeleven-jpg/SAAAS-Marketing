@@ -49,13 +49,39 @@ Igual que en Bob Esponja, no se pudo abrir el PDF de referencia por falta de her
 
 </details>
 
-<details><summary>Comparación visual (molde vs. resultado)</summary>
+<details><summary>Comparación por vista — foto real / foto adaptada / ilustración del PDF</summary>
 
-| Vista | Molde (real) | Resultado (generado) |
+<details><summary>Vista lateral</summary>
+
+| Foto real (molde) | Foto adaptada (resultado) | Ilustración del PDF |
 |---|---|---|
-| Lateral | ![Molde lateral](imagenes-god-father/molde-lateral.jpg) | ![Resultado lateral](imagenes-god-father/resultado-lateral.jpg) |
-| 3/4 — intento A | — | ![Resultado 3/4 A](imagenes-god-father/resultado-3-4-a.jpg) |
-| 3/4 — intento B | — | ![Resultado 3/4 B](imagenes-god-father/resultado-3-4-b.jpg) |
+| ![Molde lateral](imagenes-god-father/molde-lateral.jpg) | ![Resultado lateral](imagenes-god-father/resultado-lateral.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
+
+**Aciertos:**
+- Geometría (visor, ventilación, remache, correa) idéntica entre molde y resultado
+- El retrato de Vito Corleone en escala de grises queda bien integrado sobre el fondo negro mate, sin verse "pegado"
+
+**Fallas:**
+- La frase "I DON'T APOLOGIZE... TO TAKE CARE OF MY FAMILY" se lee cortada por el borde del casco en esta vista — se pierde parte del texto ("I DON...GIZE...CARE...Y FAMILY")
+- Sin PDF no se puede confirmar si ese corte de texto es el diseño intencional o un error de composición
+
+</details>
+
+<details><summary>Vista 3/4 (2 intentos a comparar)</summary>
+
+| Foto adaptada — intento A | Foto adaptada — intento B | Ilustración del PDF |
+|---|---|---|
+| ![Resultado 3/4 A](imagenes-god-father/resultado-3-4-a.jpg) | ![Resultado 3/4 B](imagenes-god-father/resultado-3-4-b.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
+
+**Aciertos (ambos intentos):**
+- Logo "The Godfather" en tipografía dorada, legible y bien ubicado sobre la mentonera
+- Skyline de ciudad en la base del diseño, consistente entre ambos intentos
+
+**Fallas:**
+- Sin foto de molde en este ángulo específico (3/4), no se pudo auditar geometría en esta vista puntual — solo se comparó resultado contra resultado
+- Ninguna diferencia visible entre intento A y B que justifique preferir uno — necesita tu confirmación de cuál es el definitivo
+
+</details>
 
 </details>
 
