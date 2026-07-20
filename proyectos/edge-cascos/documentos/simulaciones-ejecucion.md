@@ -1,6 +1,6 @@
 # Índice de simulaciones — Pipeline EDGE
 
-📂 **GitHub de este archivo:** https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/simulaciones-ejecucion.md
+📂 **GitHub de este archivo:** https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/documentos/simulaciones-ejecucion.md
 📦 **Repositorio completo:** https://github.com/juandroeleven-jpg/SAAAS-Marketing
 
 **Qué es este documento:** un registro de pasos "ejecutados en papel" — se construye el artefacto real (prompt, política, taxonomía) y se analiza su efecto esperado usando la investigación ya validada, SIN llamar a la API real todavía. Esto no reemplaza la ejecución real: reduce el riesgo de que la primera ejecución real falle por un diseño evitable.

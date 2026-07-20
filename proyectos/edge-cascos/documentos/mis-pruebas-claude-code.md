@@ -12,7 +12,7 @@
 |---|---|---|---|
 | 4 | [Reconstrucción 3D del casco con Meshy AI](simulaciones-cc/simulacion-4-meshy-3d.md) | Etapa 2 — Turntable | ✅ Geometría validada · 🧪 Retexturizado pendiente de Blender |
 | 5 | [Cotizador tipo carrito](simulaciones-cc/simulacion-5-cotizador.md) | Fase 3 — Ventas/Cotización | 🧪 Lógica y mercado listos, precios ficticios |
-| 6 | [Adaptación 2D "God Father" con Nano Banana](simulaciones-cc/simulacion-6-god-father.md) | Etapa 1 — Ilustración | 🧪 Lógica confirmada, falta ruta local de archivos |
+| 6 | [Adaptación 2D "God Father" con Nano Banana](simulaciones-cc/simulacion-6-NANO%20BANANA.md) | Etapa 1 — Ilustración | 🧪 Lógica confirmada, falta ruta local de archivos |
 | 7 | [Catálogo / ficha técnica automatizada](simulaciones-cc/simulacion-7-catalogo.md) | Etapa 3 — Catálogo/ficha | 🧪 Método confirmado, falta primera ficha real |
 | 8 | [Pipeline Meshy AI + Blender para mapeo de textura exacto](simulaciones-cc/simulacion-8-meshy-blender.md) | Etapa 2 — Turntable (continuación) | 🧪 Flujo definido, falta conectar cuenta dedicada del usuario |
 

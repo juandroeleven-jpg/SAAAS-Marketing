@@ -7,10 +7,10 @@ Este documento no repite contenido de los otros — solo enlaza y da contexto ge
 
 ## Documentos del proyecto
 
-- **[Pipeline EDGE — 8 etapas, árboles de decisión, 40 hallazgos](https://claude.ai/code/artifact/b6456d96-242c-472b-8c24-71cc55306aed)** — el mapa completo de investigación de mercado, con Mermaid de decisión por etapa — [GitHub](https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/pipeline-edge-6-meses.md)
-- **[Simulaciones de ejecución](https://claude.ai/code/artifact/8c823f87-aa50-415d-8415-a52b413e6e07)** — prompts, taxonomías y políticas construidas y analizadas en papel, antes de correr contra la API real — [GitHub](https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/simulaciones-ejecucion.md)
-- **[Índice de simulaciones — con timeline, kanban y lectura tomista por simulación](indice-simulaciones.md)** — la misma info de arriba, reorganizada en secciones plegables (armado en otra sesión)
-- **[Mis pruebas — Claude Code VS Code local](mis-pruebas-claude-code.md)** — Simulación 4 (Meshy 3D) y Simulación 5 (cotizador tipo carrito, Fase 3)
+- **[Pipeline EDGE — 8 etapas, árboles de decisión, 40 hallazgos](https://claude.ai/code/artifact/b6456d96-242c-472b-8c24-71cc55306aed)** — el mapa completo de investigación de mercado, con Mermaid de decisión por etapa — [GitHub](https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/documentos/pipeline-edge-6-meses.md)
+- **[Simulaciones de ejecución](https://claude.ai/code/artifact/8c823f87-aa50-415d-8415-a52b413e6e07)** — prompts, taxonomías y políticas construidas y analizadas en papel, antes de correr contra la API real — [GitHub](https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/documentos/simulaciones-ejecucion.md)
+- **[Índice de simulaciones — con timeline, kanban y lectura tomista por simulación](documentos/indice-simulaciones.md)** — la misma info de arriba, reorganizada en secciones plegables (armado en otra sesión)
+- **[Mis pruebas — Claude Code VS Code local](documentos/mis-pruebas-claude-code.md)** — Simulación 4 (Meshy 3D) y Simulación 5 (cotizador tipo carrito, Fase 3)
 - **[Marca personal — página web + LinkedIn](../marca-personal/indice-simulaciones.md)** — proyecto nuevo, fuera de EDGE, con evidencia real de Copper Group y EDGE ya entregada
 
 **Comentario según Tomás de Aquino:** varios documentos ordenados a un mismo fin no deben repetir la misma materia — eso sería un desperdicio de medios sin causa suficiente. Cada documento aporta una *forma* distinta (investigación, simulación) sobre la misma materia final (el proyecto EDGE); por eso el índice no repite contenido, solo ordena las partes hacia el todo.

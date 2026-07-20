@@ -1,6 +1,6 @@
 # Pipeline completo — Automatización del área de marketing/producto de EDGE (6 meses de contrato)
 
-📂 **GitHub de este archivo:** https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/pipeline-edge-6-meses.md
+📂 **GitHub de este archivo:** https://github.com/juandroeleven-jpg/SAAAS-Marketing/blob/main/proyectos/edge-cascos/documentos/pipeline-edge-6-meses.md
 📦 **Repositorio completo:** https://github.com/juandroeleven-jpg/SAAAS-Marketing
 
 Cada etapa es un árbol de decisiones real (bifurcaciones Sí/No). Cada pregunta trae, conectado por una línea punteada, su propio nodo con las 5 restricciones y 5 criterios de éxito — todo dentro del mismo Mermaid.
