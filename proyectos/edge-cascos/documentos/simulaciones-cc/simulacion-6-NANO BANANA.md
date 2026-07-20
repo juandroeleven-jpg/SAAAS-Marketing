@@ -1,60 +1,20 @@
-# Simulación 6 — Adaptación 2D "God Father" con Nano Banana (Etapa 1 — Ilustración)
+# Simulación 6 — Adaptación 2D con Nano Banana (Etapa 1 — Ilustración)
 
 [← Volver al índice de mis pruebas](../mis-pruebas-claude-code.md)
 
-Proyecto nuevo: adaptar varios cascos ya existentes (carpeta local `Adaptacion God Father`, con 9 imágenes + `GODFATHER-HERO.ai.pdf`) usando el flujo ya validado de Nano Banana + prompts — no 3D, imágenes 2D listas para vender. Mismo patrón aditivo que Etapa 1: casco base + capas de colorway/gráficos superpuestas, no un diseño desde cero.
+Proyecto paraguas: adaptar varios cascos EDGE ya existentes usando el flujo ya validado de Nano Banana + prompts — no 3D, imágenes 2D listas para vender. Mismo patrón aditivo en todos los casos: casco base (molde real) + capas de colorway/gráficos superpuestas, no un diseño desde cero.
 
-**Nota explícita:** el usuario confirmó que ya tiene un proceso y prompts que probaron funcionar en casos anteriores (mismo patrón de trasplante de máscara ya usado en EDGE Boston) — esta simulación no reinventa la técnica, la aplica al caso "God Father".
+Cada caso tiene su propia subpágina, con su propia auditoría real de molde vs. resultado (no una simulación teórica — se leyeron los archivos reales de cada carpeta):
 
-### 🔴 Pendiente de tu parte
+| Caso | Molde usado | Estado |
+|---|---|---|
+| [6a — Bob Esponja](simulacion-6a-bob-esponja.md) | Casco abierto/jet blanco | ✅ Geometría validada · 🧪 Fidelidad de diseño sin verificar (PDF no legible) |
+| [6b — The Godfather / El Padrino](simulacion-6b-padrino.md) | Casco abierto/jet blanco (mismo molde que Bob Esponja) | ✅ Geometría validada · ⚠️ Hallazgo real: texto cortado por el borde |
+| [6c — Top Gun: Maverick](simulacion-6c-top-gun.md) | Casco full-face/modular (molde distinto, sin logo EDGE visible) | ✅ Geometría validada · ⚠️ Hallazgo real: "logo malo" marcado por el usuario |
+| [6d — Stellar](simulacion-6d-stellar.md) | Ver subpágina | Armado por agente en paralelo — ver detalle |
 
-```mermaid
-flowchart TD
-    T1["📁 Pasar la ruta local completa de<br/>la carpeta Adaptacion God Father"]
-    T2["🏷️ Confirmar cuáles de las 9 imágenes<br/>son molde real vs. intentos ya generados"]
-```
+**Patrón repetido entre los 3 primeros casos (real, no hipotético):**
+- El mismo molde blanco se reutiliza entre Bob Esponja y Padrino — confirma que EDGE trabaja con un catálogo chico de moldes base y varía el colorway/gráfico encima.
+- En los 3 casos aparecieron **2 intentos casi idénticos** de la misma vista, sin que el nombre del archivo indique cuál es la versión final — recomendación operativa: nombrar los archivos con "FINAL" o "DESCARTAR" en el momento de generarlos.
+- En los 3 casos, el PDF de referencia del arte original **no se pudo abrir** en este entorno (falta `pdftoppm`) — la fidelidad del diseño final contra el arte original queda sin verificar en los 3, no es un problema de un caso puntual.
 
-<details><summary>Pasos de la simulación</summary>
-
-**Paso 1 — Confirmar la lógica de diseño aditivo**
-El casco se arma por capas: base sin diseño → se van añadiendo elementos (color, gráfico, tono) uno sobre otro, cada capa respeta lo que ya está puesto. No es "generar un diseño específico desde cero", es "agregar N elementos sobre un casco base".
-
-**Paso 2 — Inventario de material disponible (según captura, sin acceso al archivo real todavía)**
-Carpeta local con 9 imágenes (varios ángulos: frontal, lateral, vista invertida, rotada) + 1 PDF (`GODFATHER-HERO.ai.pdf`). Nombres identificados en capturas posteriores: "vista lateral hero", "trasera bob", "ROTATE PADRINO". Pendiente confirmar cuáles son molde/checkpoint real y cuáles son intentos ya generados.
-
-**Paso 3 — Comparación molde vs. imagen vs. referencia (PENDIENTE — requiere acceso real)**
-No ejecutado todavía: falta la ruta local completa de la carpeta para leer los archivos reales y aplicar el mismo criterio de auditoría ya usado en el pipeline (comparación elemento por elemento contra checklist, separación geometría/textura vs. decal plano).
-
-</details>
-
-<details><summary>Línea de tiempo interna (Mermaid)</summary>
-
-```mermaid
-timeline
-    title Simulación 6 — Avance interno
-    Confirmación de lógica : Paso 1 - Diseño aditivo por capas (completo)
-    Inventario : Paso 2 - Material disponible identificado por captura (parcial)
-    Siguiente hito real : Paso 3 - Comparar molde vs imagen vs referencia (pendiente de ruta local)
-```
-
-</details>
-
-<details><summary>Kanban de progreso (Mermaid)</summary>
-
-```mermaid
-kanban
-  Diseñado
-    Paso1[Paso 1 - Lógica de diseño aditivo confirmada]
-  Simulado_Analizado
-    Paso2[Paso 2 - Inventario por captura]
-  Ejecutado_Real
-```
-
-Checklist de respaldo:
-- [x] Paso 1 — Confirmar lógica de diseño aditivo por capas
-- [x] Paso 2 — Inventario preliminar (por captura de pantalla)
-- [ ] Paso 3 — Leer archivos reales y comparar molde vs. imagen vs. referencia (pendiente: ruta local de la carpeta)
-
-</details>
-
-🧪 **SIMULACIÓN — lógica de diseño confirmada, pero la auditoría real molde/imagen/referencia no se ejecutó todavía. Falta la ruta local de `Adaptacion God Father` para leer los archivos de verdad.**
