@@ -6,6 +6,7 @@ Este documento no repite contenido de los otros — solo enlaza y da contexto ge
 
 - **[Pipeline EDGE — 8 etapas, árboles de decisión, 40 hallazgos](https://claude.ai/code/artifact/b6456d96-242c-472b-8c24-71cc55306aed)** — el mapa completo de investigación de mercado, con Mermaid de decisión por etapa
 - **[Simulaciones de ejecución](https://claude.ai/code/artifact/8c823f87-aa50-415d-8415-a52b413e6e07)** — prompts, taxonomías y políticas construidas y analizadas en papel, antes de correr contra la API real
+- **[Índice de simulaciones — con timeline, kanban y lectura tomista por simulación](indice-simulaciones.md)** — la misma info de arriba, reorganizada en secciones plegables
 
 ---
 
@@ -30,6 +31,10 @@ timeline
         Etapa 6 Infraestructura : self-hosting pospuesto con evidencia : OmniRoute descartado : token pendiente de rotar
     section Fase 5 — Sistema operativo (Etapa 7)
         Etapa 7 Sistema operativo : Softr validado sobre Retool : resto depende de Etapas 0-6
+    section Fase 6 — Marca personal y adquisicion (LinkedIn, Codeflow, este SaaS)
+        LinkedIn : metodo organico definido : volumen 60/dia asumiendo riesgo de restriccion : sin ejecutar aun
+        Codeflow : sin investigacion iniciada
+        SaaS Management, este repo : indice y simulaciones documentados : validacion de 3 clientes piloto pendiente
 ```
 
 ---
