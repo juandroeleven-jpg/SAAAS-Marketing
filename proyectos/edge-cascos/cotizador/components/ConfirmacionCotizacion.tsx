@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Colorway, DesgloseCotizacion, Modelo, TalleId } from "@/lib/types";
+import { encodeCotizacion } from "@/lib/cotizacionLink";
 
 interface ConfirmacionCotizacionProps {
   modelo: Modelo;
@@ -9,7 +11,9 @@ interface ConfirmacionCotizacionProps {
   talle: TalleId;
   cantidad: number;
   desglose: DesgloseCotizacion;
-  onVolver: () => void;
+  entregaTexto?: string;
+  onVolver?: () => void;
+  soloLectura?: boolean;
 }
 
 function formatoMoneda(valor: number): string {
@@ -25,8 +29,25 @@ export default function ConfirmacionCotizacion({
   talle,
   cantidad,
   desglose,
+  entregaTexto,
   onVolver,
+  soloLectura = false,
 }: ConfirmacionCotizacionProps) {
+  const [linkCopiado, setLinkCopiado] = useState(false);
+
+  function compartir() {
+    const id = encodeCotizacion({
+      modeloId: modelo.id,
+      colorwayId: colorway.id,
+      talle,
+      cantidad,
+    });
+    const url = `${window.location.origin}/cotizacion/${id}`;
+    navigator.clipboard?.writeText(url).catch(() => undefined);
+    setLinkCopiado(true);
+    setTimeout(() => setLinkCopiado(false), 2000);
+  }
+
   const mensaje = encodeURIComponent(
     `Hola, quiero confirmar esta cotización EDGE:\n` +
       `Modelo: ${modelo.nombre}\n` +
@@ -55,6 +76,11 @@ export default function ConfirmacionCotizacion({
         <p className="mt-1 text-sm text-edge-muted">
           Talle {talle} · Cantidad {cantidad}
         </p>
+        {entregaTexto && (
+          <p className="mt-3 inline-block rounded-full border border-edge-border bg-edge-bg px-4 py-1 text-xs font-medium text-edge-text">
+            Listo el {entregaTexto}
+          </p>
+        )}
       </div>
 
       <div className="rounded-2xl border border-edge-border bg-edge-bg p-6 text-left">
@@ -100,13 +126,25 @@ export default function ConfirmacionCotizacion({
         Enviar cotización por WhatsApp
       </a>
 
-      <button
-        type="button"
-        onClick={onVolver}
-        className="text-sm text-edge-muted underline-offset-4 hover:text-edge-text hover:underline"
-      >
-        ← Volver a modificar
-      </button>
+      {!soloLectura && (
+        <button
+          type="button"
+          onClick={compartir}
+          className="w-full rounded-xl border border-edge-border px-6 py-3 text-center font-semibold text-edge-text transition hover:border-edge-muted"
+        >
+          {linkCopiado ? "Link copiado ✓" : "Copiar link para compartir"}
+        </button>
+      )}
+
+      {!soloLectura && onVolver && (
+        <button
+          type="button"
+          onClick={onVolver}
+          className="text-sm text-edge-muted underline-offset-4 hover:text-edge-text hover:underline"
+        >
+          ← Volver a modificar
+        </button>
+      )}
 
       <p className="text-xs text-edge-muted">
         Precios de referencia, sujetos a confirmación.

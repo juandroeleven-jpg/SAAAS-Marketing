@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { CATALOGO } from "@/lib/catalogo";
 import { calcularPrecio } from "@/lib/calcularPrecio";
+import { estimarFechaEntrega } from "@/lib/entrega";
 import { SeleccionCotizador, TalleId } from "@/lib/types";
 import SelectorModelo from "./SelectorModelo";
 import SelectorColorway from "./SelectorColorway";
@@ -66,6 +67,7 @@ export default function Cotizador() {
   }
 
   if (confirmado && modelo && colorway && seleccion.talle && desglose) {
+    const entrega = estimarFechaEntrega(colorway, seleccion, new Date());
     return (
       <ConfirmacionCotizacion
         modelo={modelo}
@@ -73,6 +75,7 @@ export default function Cotizador() {
         talle={seleccion.talle}
         cantidad={seleccion.cantidad}
         desglose={desglose}
+        entregaTexto={entrega.fechaTexto}
         onVolver={() => setConfirmado(false)}
       />
     );
