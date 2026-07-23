@@ -9,7 +9,7 @@ import SelectorModelo from "./SelectorModelo";
 import SelectorColorway from "./SelectorColorway";
 import SelectorTalle from "./SelectorTalle";
 import SelectorCantidad from "./SelectorCantidad";
-import GaleriaImagen from "./GaleriaImagen";
+import CascoCapas from "./CascoCapas";
 import DesglosePrecio from "./DesglosePrecio";
 import ConfirmacionCotizacion from "./ConfirmacionCotizacion";
 
@@ -81,8 +81,9 @@ export default function Cotizador() {
   return (
     <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 lg:grid-cols-2">
       <div className="flex flex-col gap-6">
-        <GaleriaImagen
-          imagenUrl={colorway?.imagenUrl ?? null}
+        <CascoCapas
+          colorHex={colorway?.hex ?? null}
+          premium={colorway?.premium ?? false}
           nombreModelo={modelo?.nombre ?? null}
           nombreColorway={colorway?.nombre ?? null}
         />

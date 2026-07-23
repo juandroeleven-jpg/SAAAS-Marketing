@@ -21,10 +21,15 @@ flowchart LR
     F1 --> F2
 ```
 
-**Fase 1 — Cotizador 2D (arranca ya, no depende de nada externo):**
+**Fase 1 — Cotizador 2D (arranca ya, no depende de nada externo):** ✅ construido y publicado en GitHub (`proyectos/edge-cascos/cotizador/`).
 1. Lógica de campos y fórmula de precio — ya resuelta más abajo (Pasos 1-3), no requiere cambios.
-2. Galería de imagen estática por colorway: una foto o render por combinación modelo+colorway (puede usar directamente las imágenes ya generadas en Simulación 6a-6d si aplican al modelo, o placeholders mientras tanto).
-3. Publicar el cotizador funcionando de punta a punta con precios ficticios — esto es lo que se puede mostrar/probar primero.
+2. Galería de imagen estática por colorway — **reemplazada por el sistema de capas de Fase 1.5** antes de completarse (ver abajo), no se llegó a usar fotos reales.
+3. Publicar el cotizador funcionando de punta a punta con precios ficticios — ✅ hecho, con build verificado.
+
+**Fase 1.5 — Sistema de capas (referencia: Fanatik Bike Builder), decidido 23/07/2026:**
+En vez de una imagen estática por combinación modelo+colorway, el casco se compone de capas independientes — shell (color del colorway), visor (fijo), gráfico/decal (solo si el colorway es premium). Esto resuelve dos problemas a la vez: (a) no depende de tener una foto por cada combinación posible, (b) separa el logo/gráfico como pieza propia, evitando el problema de texto/logo mal generado que se documentó en las Simulaciones 6a-6d.
+
+Implementado con SVG propio (`components/CascoCapas.tsx`) como mecanismo funcional inicial — reemplazable por fotos reales en capas (PNG con transparencia) sin cambiar la lógica de composición. Estado: ✅ mecanismo construido y funcionando; pendiente sustituir el SVG placeholder por assets reales cuando estén listos.
 
 **Fase 2 — Visor 3D (solo después de que Fase 1 esté publicada y validada):**
 1. Depende de que Meshy (Simulación 4) tenga el GLB del modelo correspondiente listo.
