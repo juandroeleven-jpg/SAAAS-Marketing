@@ -49,45 +49,85 @@ export default function CascoCapas({
               viewBox="0 0 240 220"
               className="h-auto w-full max-w-xs drop-shadow-2xl"
             >
-              {/* Capa 1: shell — color del colorway */}
+              <defs>
+                <linearGradient id="shellShade" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.22" />
+                  <stop offset="45%" stopColor="#FFFFFF" stopOpacity="0" />
+                  <stop offset="100%" stopColor="#000000" stopOpacity="0.28" />
+                </linearGradient>
+                <radialGradient id="visorShine" cx="35%" cy="25%" r="75%">
+                  <stop offset="0%" stopColor="#7FA8C9" stopOpacity="0.55" />
+                  <stop offset="55%" stopColor="#0B0D10" stopOpacity="0.9" />
+                  <stop offset="100%" stopColor="#0B0D10" stopOpacity="0.95" />
+                </radialGradient>
+              </defs>
+
+              {/* Capa 1: shell — color del colorway, silueta tipo casco jet */}
               <motion.path
-                d="M40 140 C40 70 80 20 120 20 C160 20 200 70 200 140 C200 165 185 180 160 185 L80 185 C55 180 40 165 40 140 Z"
+                d="M32 138 C30 82 66 24 121 22 C176 22 214 78 210 136
+                   C208 158 198 172 176 180
+                   L170 150 C168 138 158 130 145 130
+                   L96 130 C83 130 73 138 71 150
+                   L65 180
+                   C46 172 34 158 32 138 Z"
                 fill={shellColor}
-                stroke="#00000033"
+                stroke="#00000040"
                 strokeWidth="1.5"
                 animate={{ fill: shellColor }}
                 transition={{ duration: 0.35 }}
               />
-
-              {/* Capa 2: visor — siempre igual, independiente del color */}
+              {/* Sombreado sutil para dar volumen, sin depender del color elegido */}
               <path
-                d="M55 120 C55 95 85 80 120 80 C155 80 185 95 185 120 C185 138 160 148 120 148 C80 148 55 138 55 120 Z"
-                fill="#0B0D10"
-                opacity="0.85"
+                d="M32 138 C30 82 66 24 121 22 C176 22 214 78 210 136
+                   C208 158 198 172 176 180
+                   L170 150 C168 138 158 130 145 130
+                   L96 130 C83 130 73 138 71 150
+                   L65 180
+                   C46 172 34 158 32 138 Z"
+                fill="url(#shellShade)"
+              />
+
+              {/* Ranura de ventilación superior — detalle fijo */}
+              <rect x="112" y="34" width="16" height="7" rx="2" fill="#00000055" />
+
+              {/* Capa 2: visor — forma tipo casco jet, siempre igual */}
+              <path
+                d="M48 132 C46 104 70 88 121 88 C170 88 194 104 192 132
+                   C191 146 182 156 168 160
+                   L60 160 C50 156 49 146 48 132 Z"
+                fill="url(#visorShine)"
               />
               <path
-                d="M65 115 C65 100 90 90 120 90 C150 90 175 100 175 115"
+                d="M48 132 C46 104 70 88 121 88 C170 88 194 104 192 132"
                 fill="none"
                 stroke="#3A4048"
                 strokeWidth="2"
-                opacity="0.6"
+                opacity="0.7"
+              />
+              {/* Línea de mentonera */}
+              <path
+                d="M65 180 L71 150 M176 180 L170 150"
+                stroke="#00000055"
+                strokeWidth="2"
+                strokeLinecap="round"
               />
 
               {/* Capa 3: gráfico/decal — solo si el colorway es premium */}
               {premium && (
                 <g>
                   <path
-                    d="M110 30 L130 30 L140 55 L100 55 Z"
+                    d="M104 34 L138 34 L148 58 L94 58 Z"
                     fill="#FF3D2E"
-                    opacity="0.9"
+                    opacity="0.92"
                   />
                   <text
-                    x="120"
-                    y="50"
+                    x="121"
+                    y="52"
                     textAnchor="middle"
-                    fontSize="10"
+                    fontSize="11"
                     fill="#F5F6F7"
                     fontWeight="700"
+                    letterSpacing="1"
                   >
                     LTD
                   </text>
