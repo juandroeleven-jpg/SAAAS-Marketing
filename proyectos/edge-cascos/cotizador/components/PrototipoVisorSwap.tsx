@@ -8,10 +8,11 @@ import {
   poligonoACss,
 } from "@/lib/visorSlots";
 
-// Prototipo funcional: demuestra el mecanismo de "ranura calibrada" sobre
-// fotos REALES (Simulacion 6a/6b). El tinte de visor es un overlay de color
-// recortado (clip-path) sobre la posicion exacta del visor de cada foto —
-// mismo principio que aplicaria con una foto de visor real en vez de color.
+// Prototipo funcional: demuestra que el MISMO MOLDE de casco puede llevar
+// distintas caratulas/licencias intercambiables (Bob Esponja <-> Godfather),
+// con la ranura del visor calibrada para que quede en la misma posicion
+// entre licencias -- es el mecanismo real de negocio (una sola forma
+// fisica, muchas licencias vendibles encima), no solo un cambio de color.
 export default function PrototipoVisorSwap() {
   const [ranuraIdx, setRanuraIdx] = useState(0);
   const [visorId, setVisorId] = useState(VISOR_VARIANTES[0].id);
@@ -27,13 +28,17 @@ export default function PrototipoVisorSwap() {
             key={ranura.fotoBase}
             src={ranura.fotoBase}
             alt={ranura.nombreLicencia}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0, scale: 1.04 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.97 }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
             className="absolute inset-0 h-full w-full object-cover"
           />
         </AnimatePresence>
+
+        <div className="absolute left-4 top-4 rounded-full bg-edge-bg/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-edge-accent backdrop-blur">
+          Mismo molde · carátula {ranura.nombreLicencia}
+        </div>
 
         {/* Capa de tinte de visor — recortada exactamente a la ranura calibrada */}
         <motion.div
@@ -66,8 +71,8 @@ export default function PrototipoVisorSwap() {
 
       <div className="flex flex-col gap-4">
         <div>
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-edge-muted">
-            Casco con licencia (foto base fija)
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-edge-accent">
+            1. Carátula / licencia — el molde físico es el mismo, esto es lo que el cliente compra
           </p>
           <div className="flex flex-wrap gap-2">
             {RANURAS_VISOR.map((r, idx) => (
@@ -88,7 +93,7 @@ export default function PrototipoVisorSwap() {
 
         <div>
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-edge-muted">
-            Tipo de visor (capa intercambiable)
+            2. Tipo de visor — capa secundaria, misma ranura calibrada en ambas carátulas
           </p>
           <div className="flex flex-wrap gap-2">
             {VISOR_VARIANTES.map((v) => (
@@ -109,11 +114,11 @@ export default function PrototipoVisorSwap() {
       </div>
 
       <p className="text-xs text-edge-muted">
-        Prototipo: el tinte de color demuestra el mecanismo de posicionamiento
-        (clip-path calibrado por foto). Con visores reales generados por
-        Nano Banana (mismo tamaño/forma, distinto color/tipo) se reemplaza
-        el overlay de color por la imagen real del visor, sin cambiar la
-        lógica de capas.
+        Prototipo: cambiar de carátula demuestra el mecanismo real de negocio
+        — un solo molde de casco, múltiples licencias vendibles encima, con
+        el visor calibrado en la misma posición en cada foto. El tinte de
+        visor es secundario: mismo principio (clip-path calibrado), aplicado
+        a una capa distinta.
       </p>
     </div>
   );
