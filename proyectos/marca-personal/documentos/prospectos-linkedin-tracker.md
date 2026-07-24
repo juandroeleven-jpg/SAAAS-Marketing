@@ -42,3 +42,24 @@ Criterio de ICP confirmado por el usuario (22/07/2026): empresas que puedan paga
 1. Usuario confirma si Automátika Latam tiene vacante abierta (pestaña Empleos).
 2. Decidir si se amplía el filtro geográfico a Costa Rica (por Accesos Automáticos) o se mantiene estricto a Panamá.
 3. Seguir agregando filas a este tracker a medida que el usuario encuentre más perfiles manualmente.
+
+---
+
+## Listos para enviar — link + mensaje ya redactado (copiar, ajustar a tu voz, enviar tú mismo)
+
+**Formato de uso:** clic al link → ajustás el mensaje a tu forma de hablar → enviás. Cuando alguien responda, pegás la respuesta en el chat con Claude para recibir sugerencia de siguiente mensaje — el seguimiento de conversación no es automático, depende de que la traigas tú.
+
+### Automátika Latam
+- **Link del perfil:** linkedin.com/company/automatika-latam (confirmar exacto al entrar)
+- **Estado:** ⏳ falta confirmar vacante — revisar pestaña Empleos antes de decidir Motor 1 vs Motor 2
+- **Comentario listo (Motor 1, sobre post de Academia Virtual):**
+  > "Me parece muy acertado que además de vender la tecnología, estén invirtiendo en formar técnicamente a la región con la Academia — eso genera mucha más confianza a largo plazo que solo el producto. ¿Los 8 módulos son abiertos a cualquiera o pensados para su propia red de instaladores?"
+- **DM de conexión (recién después de 2-3 comentarios reales, sin pitch):** pendiente de redactar hasta confirmar vacante.
+
+### Accesos Automáticos S.A. (Costa Rica — usar solo si se amplía el filtro geográfico)
+- **Link del perfil:** linkedin.com/company/accesos-automaticos (confirmar exacto al entrar)
+- **Estado:** vacante de Dibujante confirmada activa; posts sin sustancia → usar Motor 2 directo, no comentario.
+- **DM directo listo:**
+  > "Hola, vi que Accesos Automáticos está creciendo el equipo técnico (vi la vacante de Dibujante). Trabajo ayudando a empresas de ingeniería/automatización a optimizar procesos internos con IA — reportería, seguimiento de proyectos, análisis de costos. Si en algún momento les sirve una mirada externa a esa parte mientras crecen el equipo, con gusto conversamos."
+
+*(Platinum Brands no aparece aquí — descartada por tamaño, ver clasificación arriba.)*
