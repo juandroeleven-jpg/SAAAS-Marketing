@@ -6,14 +6,14 @@ const config: Config = {
     extend: {
       colors: {
         cf: {
-          bg: "#08090C",
-          surface: "#111318",
-          surface2: "#171A21",
-          border: "#262B33",
-          accent: "#6C5CE7",
-          accent2: "#00D9C0",
-          text: "#F5F6F7",
-          muted: "#9AA1AC",
+          bg: "#F5F8FF",
+          surface: "#FFFFFF",
+          surface2: "#EEF3FF",
+          border: "#DCE4F5",
+          accent: "#2563EB",
+          accent2: "#60A5FA",
+          text: "#0F1B2D",
+          muted: "#5B6B85",
         },
       },
       fontFamily: {

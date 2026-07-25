@@ -22,7 +22,7 @@ export default function PlaceholderDashboard() {
 
         <ScrollReveal delay={0.1} className="mt-12">
           <TiltCard>
-            <div className="mx-auto max-w-3xl rounded-3xl border border-cf-border bg-cf-surface p-6 shadow-2xl shadow-black/50">
+            <div className="mx-auto max-w-3xl rounded-3xl border border-cf-border bg-cf-surface p-6 shadow-2xl shadow-cf-accent/10">
               <div className="flex items-center gap-2 border-b border-cf-border pb-3">
                 <span className="h-3 w-3 rounded-full bg-cf-accent" />
                 <span className="h-3 w-3 rounded-full bg-cf-accent2" />
