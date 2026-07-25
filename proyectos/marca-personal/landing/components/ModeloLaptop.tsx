@@ -14,7 +14,7 @@ import * as THREE from "three";
 // mitad izquierda del atlas UV compartido: u[0.004-0.5] v[0.004-0.861]
 // (medido con un debug de bounding box de UV). Las coordenadas de los
 // nodos son fracciones 0-1 DENTRO de ese rectangulo, no del canvas completo.
-const PANTALLA_UV = { uMin: 0.01, uMax: 0.49, vMin: 0.02, vMax: 0.85 };
+const PANTALLA_UV = { uMin: 0.04, uMax: 0.46, vMin: 0.06, vMax: 0.8 };
 
 const NODOS = [
   { id: "webhook", label: "Webhook", x: 0.15, y: 0.78, color: "#F43F5E" },
