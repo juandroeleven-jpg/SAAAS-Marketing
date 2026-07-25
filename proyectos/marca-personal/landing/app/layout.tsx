@@ -1,0 +1,20 @@
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "Codeflow — Automatización e IA aplicada",
+  description:
+    "Sistemas de IA y automatización con evidencia real: Copper Group/1HVAC, EDGE Helmet.",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="es">
+      <body className="font-display antialiased">{children}</body>
+    </html>
+  );
+}
