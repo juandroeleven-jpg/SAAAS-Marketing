@@ -1,4 +1,10 @@
-import LaptopFlotante from "@/components/LaptopFlotante";
+"use client";
+
+import dynamic from "next/dynamic";
+
+const ModeloLaptop = dynamic(() => import("@/components/ModeloLaptop"), {
+  ssr: false,
+});
 
 export default function PlataformaPage() {
   return (
@@ -17,7 +23,13 @@ export default function PlataformaPage() {
           </p>
         </div>
 
-        <LaptopFlotante />
+        <div>
+          <ModeloLaptop />
+          <p className="mt-3 text-center text-xs text-cf-muted">
+            Modelo 3D &ldquo;MacBook Laptop&rdquo; por Issac Ghazanfar,
+            licencia Creative Commons Attribution
+          </p>
+        </div>
       </div>
     </main>
   );
