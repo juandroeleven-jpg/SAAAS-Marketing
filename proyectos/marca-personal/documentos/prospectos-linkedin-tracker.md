@@ -88,6 +88,125 @@
 
 ---
 
+## Ronda 2 — 25 jul 2026: empresas panameñas grandes (no multinacionales) + vacante activa
+
+**Ajuste de criterio ICP (decisión del usuario, 25 jul 2026):** el criterio original excluía empresas grandes por tamaño (>200 empleados). Se ajusta: **sí se aceptan empresas panameñas grandes, mientras sean de capital/operación panameña real y no una multinacional extranjera con sede fuera de Panamá.** Lo que sigue descartando a una empresa no es el tamaño, sino que su sede real esté fuera de Panamá (ej. Miami, España, California) — eso es la señal de que no hay "presencia real en Panamá" aunque publiquen una vacante presencial acá.
+
+Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs con filtro Panamá + últimos 7 días, usando términos de cargo (contralor, gerente financiero, gerente de operaciones, analista de nómina, etc.), y verificación independiente de cada empresa en su página pública de LinkedIn antes de decidir.
+
+### 6. Generadora Gatún — 🟢 Vacante más fresca de toda la búsqueda
+
+**Industria:** Generación de energía eléctrica (proyecto de 670 MW, capacidad limpia para la matriz energética de Panamá).
+**Tamaño confirmado:** 51-200 empleados, 4,000 seguidores — dentro del rango ICP.
+**Ubicación:** Colón, Panamá — presencia real confirmada.
+**Señal de necesidad:** Vacante de **"Contralor/a"** publicada hace 17 horas (69 solicitudes ya recibidas) — la señal más reciente de las 10 prospectos analizados hasta ahora.
+**Decisión Motor 1 vs Motor 2:** **Motor 2** — mensaje directo referenciando la vacante de Contralor/a.
+
+**Mensaje sugerido:**
+> "Hola [Nombre], vi la búsqueda de Contralor/a en Generadora Gatún — trabajo en automatización financiera con IA (Codeflow AI) y armé sistemas reales como un flujo de nómina multi-país que redujo el tiempo de procesamiento en 97%, y un ecosistema de reporting/forecasting para un grupo empresarial multi-país. Me encantaría mostrarte cómo aplicaría ese enfoque de control financiero en Gatún. ¿15 min esta semana?"
+
+**Evidencia:**
+
+![Generadora Gatún - LinkedIn](evidencia-prospectos/generadora-gatun.jpg)
+
+**Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/generadora-gatun/)
+
+---
+
+### 7. Bi Bank Panamá — 🟢 Banco panameño real (Corporación Bi)
+
+**Industria:** Banca — parte de Corporación Bi, grupo financiero panameño (no multinacional extranjera).
+**Tamaño confirmado:** 51-200 empleados, 15,000 seguidores — dentro del rango ICP.
+**Ubicación:** Panamá, Panamá — presencia real confirmada.
+**Señal de necesidad:** Vacante de **"Analista de Procesos y Proyectos Operativos"** publicada hace 2 días.
+**Decisión Motor 1 vs Motor 2:** **Motor 2** — mensaje directo.
+
+**Mensaje sugerido:**
+> "Hola [Nombre], vi la vacante de Analista de Procesos y Proyectos Operativos en Bi Bank — trabajo en automatización de procesos y reporting con IA (Codeflow AI), con casos reales de auditoría automática y dashboards de rendimiento para operaciones multi-área. Me encantaría mostrarte cómo aplicaría ese enfoque a la optimización de procesos operativos en Bi Bank. ¿Charlamos 15 min?"
+
+**Evidencia:**
+
+![Bi Bank Panamá - LinkedIn](evidencia-prospectos/bi-bank-panama.jpg)
+
+**Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/bibankpa/)
+
+---
+
+### 8. UETA — 🟢 Holding panameño real (201-500 empleados)
+
+**Industria:** Importación y exportación al por mayor — holding panameño desde 2002 ("World's Best Brands"), dueño de marcas de retail/moda como Merkato Bar, Bloomberg y SWG.
+**Tamaño confirmado:** 201-500 empleados, 17,000 seguidores — por encima del techo original de 200, pero dentro del criterio ajustado (empresa panameña real, no multinacional).
+**Ubicación:** Panamá, Panamá — presencia real confirmada (sede propia, no franquicia extranjera).
+**Señal de necesidad:** Vacante de **"Contador (Panamá)"** publicada hace 5 días.
+**Decisión Motor 1 vs Motor 2:** **Motor 2** — mensaje directo.
+
+**Mensaje sugerido:**
+> "Hola [Nombre], vi que UETA está buscando un Contador — trabajo en automatización contable y financiera con IA (Codeflow AI), y ya construí sistemas de auditoría automática de nómina y reporting multi-área para grupos empresariales con varias líneas de negocio. Me encantaría mostrarte cómo aplicaría eso a la operación de UETA. ¿15 min esta semana?"
+
+**Evidencia:**
+
+![UETA - LinkedIn](evidencia-prospectos/ueta.jpg)
+
+**Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/ueta-inc./)
+
+---
+
+### 9. Tantalo Hotel Kitchen Roofbar (Tántalo Group) — 🟢 Confirmado
+
+**Industria:** Hostelería boutique — hotel, rooftop, coffee & dine y teatro en Casco Viejo.
+**Tamaño confirmado:** 51-200 empleados, 1,050 seguidores — dentro del rango ICP.
+**Ubicación:** Panama City, Panamá — presencia real confirmada.
+**Señal de necesidad:** Vacante de **"Gerente de operaciones"**, vista recientemente.
+**Decisión Motor 1 vs Motor 2:** **Motor 2** — mensaje directo.
+
+**Mensaje sugerido:**
+> "Hola [Nombre], vi la búsqueda de Gerente de Operaciones en Tántalo Group — trabajo en automatización de reporting y control operativo con IA (Codeflow AI), con dashboards de rendimiento aplicados a operaciones con múltiples puntos de servicio. Me encantaría mostrarte cómo se vería algo así aplicado al control operativo de Tántalo. ¿Charlamos 15 min?"
+
+**Evidencia:**
+
+![Tantalo Group - LinkedIn](evidencia-prospectos/tantalo-group.jpg)
+
+**Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/tantalogroup/)
+
+---
+
+### 10. Barraza y Cia, S.A. — 🟡 Empresa panameña grande, aprobada por el usuario
+
+**Industria:** Industria manufacturera — "empresa líder en detergentes y lavaplatos en Panamá" (marcas Sin y Americano).
+**Tamaño confirmado:** 1,000-5,000 empleados, 5,000 seguidores — muy por encima del ICP original de 200, pero el usuario confirmó explícitamente que quiere incluir este tipo de empresa grande panameña (no multinacional) en la búsqueda.
+**Ubicación:** Panamá, Panamá — presencia real confirmada, capital 100% panameño.
+**Señal de necesidad:** Vacante de **"Jefe de producción"**, publicada hace menos de 1 hora al momento de la búsqueda.
+**Decisión Motor 1 vs Motor 2:** **Motor 2** — mensaje directo.
+
+**Nota de honestidad:** el rol vacante (Jefe de producción) es operativo/planta, no financiero — el ángulo de acercamiento debería ser dashboard de rendimiento de planta, no automatización financiera.
+
+**Mensaje sugerido:**
+> "Hola [Nombre], vi la búsqueda de Jefe de Producción en Barraza y Cia — trabajo en automatización de reporting de planta con IA (Codeflow AI), y construí un dashboard de rendimiento diario por planta con drill-down por área para una empresa de manufactura con dos plantas, reemplazando reportes mensuales manuales por seguimiento diario automático. Me encantaría mostrarte cómo se vería algo similar en Barraza. ¿15 min esta semana?"
+
+**Evidencia:** (pendiente de captura — se puede agregar en una próxima verificación)
+
+**Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/barraza-y-cia/)
+
+---
+
+### 11. Mowat Corporation — 🟡 Aprobada por el usuario, con una alerta de honestidad
+
+**Industria registrada en LinkedIn:** "Tecnología, información e internet" — 218 seguidores, 2-10 empleados.
+**Ubicación:** Panama City (aparece en su página).
+**Señal de necesidad:** Vacante de **"Controller / Encargado(a) de Finanzas"**, publicada hace 18 horas, 21 solicitudes.
+**Decisión Motor 1 vs Motor 2:** **Motor 2**, pero con una alerta que el usuario debe conocer antes de escribir.
+
+**⚠️ Nota de honestidad (importante):** hay una discrepancia entre el rubro registrado (Tecnología) y el tamaño (2-10 empleados) versus el tipo de vacante que publican (Controller de Finanzas, típico de una empresa más grande). Esto es la señal clásica de que quien publica podría ser un intermediario/agencia de reclutamiento actuando en nombre de un cliente real, no la empresa operativa final. El usuario pidió incluirla igual — se documenta aquí para que el mensaje de acercamiento pueda ajustarse ("¿ustedes son la empresa que contrata o gestionan la contratación para un cliente?") en vez de asumir que Mowat es el empleador final.
+
+**Mensaje sugerido (con la salvedad de arriba):**
+> "Hola [Nombre], vi la vacante de Controller / Encargado de Finanzas que publicaron — trabajo en automatización financiera con IA (Codeflow AI). Antes de todo, ¿la posición es para operar dentro de Mowat directamente o es para un cliente suyo? Según el caso, tengo casos reales (auditoría de nómina, reporting multi-país) que podrían aplicar."
+
+**Evidencia:** (pendiente de captura)
+
+**Fuentes:** [LinkedIn empleo](https://www.linkedin.com/jobs/) (vacante vista en búsqueda de empleos, Panamá, últimos 7 días)
+
+---
+
 ## Resumen y siguiente paso
 
 | # | Empresa | Empleados | Presencia Panamá | Relevancia ICP | Acción |
@@ -95,7 +214,13 @@
 | 1 | Centro Financiero Empresarial | 135 ✅ | Sí ✅ | 🟢 Alta | **Enviar mensaje Motor 2 esta semana** |
 | 2 | GVA Hospitality | 27 ✅ | Sí ✅ | 🟡 Media-alta | Revisar contenido reciente, luego decidir Motor 1/2 |
 | 3 | Endavant | 34 ✅ | No (Miami) ❌ | 🟡 Media | No priorizar — falla criterio de ubicación |
-| 4 | Platinum Brands, S.A. | 1,500+ ✅ | Sí, tamaño excesivo | 🔴 Descartado | No contactar |
+| 4 | Platinum Brands, S.A. | 1,500+ ✅ | Sí, tamaño excesivo (criterio viejo) | 🟡 Reconsiderar con criterio ajustado | Evaluar si se reabre con el nuevo criterio |
 | 5 | Productos Nevada (Dos Pinos) | Sin confirmar | Sí (probable) | 🔴 Baja | No contactar sin más evidencia |
+| 6 | Generadora Gatún | 51-200 ✅ | Sí ✅ | 🟢 Alta | **Vacante Contralor/a hace 17h — priorizar esta semana** |
+| 7 | Bi Bank Panamá | 51-200 ✅ | Sí ✅ | 🟢 Alta | Vacante Analista de Procesos hace 2 días |
+| 8 | UETA | 201-500 ✅ | Sí ✅ | 🟢 Alta (criterio ajustado) | Vacante Contador hace 5 días |
+| 9 | Tantalo Hotel Kitchen Roofbar | 51-200 ✅ | Sí ✅ | 🟢 Alta | Vacante Gerente de Operaciones |
+| 10 | Barraza y Cia, S.A. | 1,000-5,000 ✅ | Sí ✅ | 🟡 Alta (criterio ajustado, aprobado por usuario) | Vacante Jefe de Producción, muy reciente |
+| 11 | Mowat Corporation | 2-10 ⚠️ | Sí (a confirmar si es intermediario) | 🟡 Con alerta | Confirmar si es empleador final antes de escribir |
 
-**Siguiente paso recomendado:** enviar el mensaje a Centro Financiero Empresarial esta semana (es el único con todo verificado: tamaño, ubicación y portal de empleos activo). En paralelo, revisar los posts recientes de GVA Hospitality para decidir su enfoque.
+**Siguiente paso recomendado:** con el criterio ajustado, los 3 más sólidos para contactar esta semana son **Generadora Gatún** (vacante de 17 horas), **Centro Financiero Empresarial** (ya verificado en Ronda 1) y **Bi Bank Panamá**. UETA y Tantalo son el siguiente lote. Barraza y Cia tiene la vacante más reciente de todas, pero el ángulo de mensaje debe ser operativo/planta, no financiero. Mowat Corporation necesita una pregunta de calificación antes de invertir tiempo en el mensaje completo, por la posible intermediación.
