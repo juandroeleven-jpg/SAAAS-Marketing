@@ -293,6 +293,38 @@ Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs 
 
 ---
 
+## Ronda 4 — búsqueda de 10 prospectos adicionales más (1 confirmado de 10 solicitados)
+
+### 16. Playa Blanca Hotel & Resort Panamá — 🟢 Confirmado
+
+**Industria:** Hostelería — resort todo incluido.
+**Tamaño confirmado:** 201-500 empleados, 2 mil seguidores — por encima del techo original de 200, dentro del criterio ajustado (empresa panameña real, no multinacional extranjera).
+**Ubicación:** Panamá, Panamá — presencia real confirmada (resort físico operando en el país).
+**Señal de necesidad:** Vacante de **"Diseñador gráfico"**, presencial.
+**Decisión Motor 1 vs Motor 2:** **Motor 2** — mensaje directo.
+
+**Mensaje sugerido:**
+> "Hola [Nombre], vi la búsqueda de Diseñador Gráfico en Playa Blanca Hotel & Resort — trabajo en automatización de reporting y control operativo con IA (Codeflow AI), con dashboards de ocupación y rendimiento para operaciones hoteleras con múltiples áreas de servicio. Me encantaría mostrarte cómo se vería algo similar aplicado a la operación de Playa Blanca. ¿15 min esta semana?"
+
+**Evidencia:**
+
+![Playa Blanca Hotel & Resort - LinkedIn](evidencia-prospectos/playa-blanca-hotel-resort.jpg)
+
+**Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/playa-blanca-hotel-resort-panam%C3%A1/)
+
+---
+
+**Nota honesta sobre esta ronda:** se pidieron 10 prospectos nuevos; se encontró y verificó solo 1 sólido (Playa Blanca Hotel & Resort). Se investigaron y descartaron explícitamente, con evidencia, los siguientes:
+
+- **Feel Good Mkt Panamá** (comercio al por menor, Ciudad de Panamá) — descartada: solo 2-10 empleados, tamaño insuficiente incluso bajo el criterio ajustado.
+- **Analytical Technologies S.A.** (biotecnología) — descartada: sede real en Munro, Buenos Aires, Argentina — no Panamá.
+- **iQtek - Consultora de Tecnología** — descartada: sede real en Santo Domingo, República Dominicana — no Panamá.
+- **Smart Business Solutions S.A.** (TI, Panamá) — descartada: solo 2-10 empleados, tamaño insuficiente.
+
+El resto de búsquedas (contador, gerente de ventas, jefe de almacén, coordinador de mercadeo, ferretería, constructora, seguros, call center) dieron mayoritariamente agencias de staffing remoto (Remote Leverage, Hire Hangar, Globaltize, BairesDev, Confidential Careers), multinacionales ya conocidas (Expeditors, Canadian Solar, TD SYNNEX, Grainger) o cero resultados directos. Siguiendo la regla de "no inventar/no forzar", no se completaron los 10 con candidatos de menor calidad de evidencia.
+
+---
+
 ## Resumen y siguiente paso
 
 | # | Empresa | Empleados | Presencia Panamá | Relevancia ICP | Acción |
@@ -312,5 +344,6 @@ Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs 
 | 13 | Cervecería Nacional, S. de R.L. | 1,000-5,000 ✅ | Sí ✅ (grupo AB InBev ⚠️) | 🟡 Alta, con alerta de propiedad | Vacante activa — confirmar si el usuario acepta pese al vínculo con AB InBev |
 | 14 | Dichter & Neira Research | 501-1,000 ✅ | Sí (firma regional con oficina local) | 🟢 Alta | Vacante Ingeniero de Datos (Backend) |
 | 15 | LAC Legal | 11-50 ✅ | Sí ✅ | 🟢 Alta | Vacantes Gerente Contable de Outsourcing y Asistente Contable |
+| 16 | Playa Blanca Hotel & Resort Panamá | 201-500 ✅ | Sí ✅ | 🟢 Alta (criterio ajustado) | Vacante Diseñador Gráfico |
 
 **Siguiente paso recomendado:** con el criterio ajustado, los 3 más sólidos para contactar esta semana son **Generadora Gatún** (vacante de 17 horas), **Centro Financiero Empresarial** (ya verificado en Ronda 1) y **Bi Bank Panamá**. UETA y Tantalo son el siguiente lote. Barraza y Cia tiene la vacante más reciente de todas, pero el ángulo de mensaje debe ser operativo/planta, no financiero. Mowat Corporation necesita una pregunta de calificación antes de invertir tiempo en el mensaje completo, por la posible intermediación. De la Ronda 3, **Punto Pago Panamá** y **LAC Legal** son los más listos para contactar ya; Cervecería Nacional requiere que el usuario confirme si acepta el vínculo con AB InBev antes de escribir.
