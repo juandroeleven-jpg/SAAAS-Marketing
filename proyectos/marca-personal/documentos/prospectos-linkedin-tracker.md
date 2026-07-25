@@ -207,6 +207,92 @@ Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs 
 
 ---
 
+## Ronda 3 (búsqueda de 10 prospectos adicionales — 4 confirmados de 10 solicitados)
+
+### 12. Punto Pago Panamá — 🟢 Confirmado
+
+**Industria:** Fintech — "SuperApp" de pagos y servicios financieros digitales.
+**Tamaño confirmado:** 51-200 empleados — dentro del rango ICP.
+**Ubicación:** Panamá, Panamá — presencia real confirmada.
+**Señal de necesidad:** Vacante de **"Collections & Recovery Manager"**.
+**Decisión Motor 1 vs Motor 2:** **Motor 2** — mensaje directo.
+
+**Mensaje sugerido:**
+> "Hola [Nombre], vi la búsqueda de Collections & Recovery Manager en Punto Pago — trabajo en automatización de reporting y cobranza con IA (Codeflow AI), con dashboards de mora y seguimiento automático de cartera para negocios fintech. Me encantaría mostrarte cómo aplicaría eso a la operación de cobranza de Punto Pago. ¿15 min esta semana?"
+
+**Evidencia:**
+
+![Punto Pago Panama - LinkedIn](evidencia-prospectos/punto-pago-panama.jpg)
+
+**Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/punto-pago-panama/)
+
+---
+
+### 13. Cervecería Nacional, S. de R.L. — 🟡 Empresa grande panameña, con alerta de honestidad
+
+**Industria:** Bebidas — "la empresa de bebidas más grande de Panamá" (cervezas, aguas, jugos).
+**Tamaño confirmado:** 1,000-5,000 empleados — muy por encima del ICP original, incluida bajo el criterio ajustado (empresa panameña real, no multinacional extranjera con sede fuera de Panamá).
+**Ubicación:** Panamá, Panamá — sede y operación real en el país, marca histórica panameña.
+**Señal de necesidad:** vacante activa detectada en la búsqueda de empleos en Panamá.
+**Decisión Motor 1 vs Motor 2:** **Motor 2** — mensaje directo.
+
+**⚠️ Nota de honestidad (importante):** Cervecería Nacional es, en última instancia, propiedad de **AB InBev** (multinacional global con sede fuera de Panamá) desde hace años, aunque opera como una entidad panameña distinta con más de un siglo de historia local y presencia/operación 100% real en el país. Se incluye porque el criterio ajustado del usuario prioriza operación real en Panamá sobre estructura de propiedad accionaria, pero se documenta esta relación de propiedad para que el usuario decida con la información completa si prefiere tratarla como "empresa panameña grande" o excluirla por ser parte de un grupo multinacional.
+
+**Mensaje sugerido:**
+> "Hola [Nombre], vi que Cervecería Nacional está en búsqueda activa de talento — trabajo en automatización de reporting operativo y financiero con IA (Codeflow AI), con casos aplicados a empresas de manufactura y consumo masivo con múltiples plantas/líneas. Me encantaría mostrarte cómo se vería algo similar aplicado a la operación de Cervecería Nacional. ¿Charlamos 15 min?"
+
+**Evidencia:**
+
+![Cervecería Nacional - LinkedIn](evidencia-prospectos/cerveceria-nacional.jpg)
+
+**Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/cervecer%C3%ADa-nacional-panama/)
+
+---
+
+### 14. Dichter & Neira Research — 🟢 Confirmado
+
+**Industria:** Investigación de mercado — firma de research con presencia regional.
+**Tamaño confirmado:** 501-1,000 empleados — por encima del techo original de 200, pero dentro del criterio ajustado si se confirma como operación real y no meramente regional/extranjera (ver nota).
+**Ubicación:** Panamá — oficina/operación confirmada en el país.
+**Señal de necesidad:** Vacante de **"Ingeniero de datos (Backend)"**.
+**Decisión Motor 1 vs Motor 2:** **Motor 2** — mensaje directo.
+
+**Nota:** Dichter & Neira es una firma con operación en varios países de la región (no es una multinacional con sede fuera de Panamá en el sentido de las descartadas — Miami, España, etc. — sino una firma latinoamericana con oficina local); se documenta para que quede claro que no es 100% una empresa panameña de origen, a diferencia de Barraza, Cervecería Nacional o UETA.
+
+**Mensaje sugerido:**
+> "Hola [Nombre], vi la búsqueda de Ingeniero de Datos (Backend) en Dichter & Neira — trabajo en automatización de procesamiento y reporting de datos con IA (Codeflow AI), con experiencia en pipelines de datos y dashboards para firmas de investigación y análisis. Me encantaría mostrarte cómo aplicaría eso al trabajo de datos de Dichter & Neira. ¿15 min esta semana?"
+
+**Evidencia:**
+
+![Dichter & Neira Research - LinkedIn](evidencia-prospectos/dichter-neira.jpg)
+
+**Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/dichter-neira-research/)
+
+---
+
+### 15. LAC Legal — 🟢 Confirmado
+
+**Industria:** Servicios legales — firma de abogados con oficina en Tower Financial Center.
+**Tamaño confirmado:** 11-50 empleados — dentro del rango ICP.
+**Ubicación:** Panamá, Panamá — presencia real confirmada.
+**Señal de necesidad:** Vacantes de **"Gerente Contable de Outsourcing"** y **"Asistente contable"**.
+**Decisión Motor 1 vs Motor 2:** **Motor 2** — mensaje directo.
+
+**Mensaje sugerido:**
+> "Hola [Nombre], vi las búsquedas de Gerente Contable de Outsourcing y Asistente Contable en LAC Legal — trabajo en automatización contable y de reporting con IA (Codeflow AI), con casos de auditoría automática y reducción de trabajo manual repetitivo para firmas de servicios profesionales. Me encantaría mostrarte cómo aplicaría eso al área contable de LAC Legal. ¿Charlamos 15 min?"
+
+**Evidencia:**
+
+![LAC Legal - LinkedIn](evidencia-prospectos/lac-legal.jpg)
+
+**Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/lac-legal/)
+
+---
+
+**Nota honesta sobre esta ronda:** el usuario pidió 10 prospectos nuevos; se encontraron y verificaron 4 sólidos (Punto Pago Panamá, Cervecería Nacional, Dichter & Neira Research, LAC Legal). El resto de las búsquedas intentadas (más de 10 combinaciones de palabras clave distintas) dieron mayoritariamente empresas multinacionales con sede fuera de Panamá (WTW, Expeditors, Credicorp Bank, Tetra Pak, Deloitte, Dollarcity, American Foods, Muebles Jamar — sede en Barranquilla, Colombia), agencias de staffing/reclutamiento remoto, duplicados de empresas ya documentadas, o cero resultados directos. Siguiendo la regla de "no inventar/no forzar" del propio método del usuario, no se completaron los 10 con empresas de menor calidad de evidencia — se documentan solo las 4 verificadas de forma independiente.
+
+---
+
 ## Resumen y siguiente paso
 
 | # | Empresa | Empleados | Presencia Panamá | Relevancia ICP | Acción |
@@ -222,5 +308,9 @@ Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs 
 | 9 | Tantalo Hotel Kitchen Roofbar | 51-200 ✅ | Sí ✅ | 🟢 Alta | Vacante Gerente de Operaciones |
 | 10 | Barraza y Cia, S.A. | 1,000-5,000 ✅ | Sí ✅ | 🟡 Alta (criterio ajustado, aprobado por usuario) | Vacante Jefe de Producción, muy reciente |
 | 11 | Mowat Corporation | 2-10 ⚠️ | Sí (a confirmar si es intermediario) | 🟡 Con alerta | Confirmar si es empleador final antes de escribir |
+| 12 | Punto Pago Panamá | 51-200 ✅ | Sí ✅ | 🟢 Alta | Vacante Collections & Recovery Manager |
+| 13 | Cervecería Nacional, S. de R.L. | 1,000-5,000 ✅ | Sí ✅ (grupo AB InBev ⚠️) | 🟡 Alta, con alerta de propiedad | Vacante activa — confirmar si el usuario acepta pese al vínculo con AB InBev |
+| 14 | Dichter & Neira Research | 501-1,000 ✅ | Sí (firma regional con oficina local) | 🟢 Alta | Vacante Ingeniero de Datos (Backend) |
+| 15 | LAC Legal | 11-50 ✅ | Sí ✅ | 🟢 Alta | Vacantes Gerente Contable de Outsourcing y Asistente Contable |
 
-**Siguiente paso recomendado:** con el criterio ajustado, los 3 más sólidos para contactar esta semana son **Generadora Gatún** (vacante de 17 horas), **Centro Financiero Empresarial** (ya verificado en Ronda 1) y **Bi Bank Panamá**. UETA y Tantalo son el siguiente lote. Barraza y Cia tiene la vacante más reciente de todas, pero el ángulo de mensaje debe ser operativo/planta, no financiero. Mowat Corporation necesita una pregunta de calificación antes de invertir tiempo en el mensaje completo, por la posible intermediación.
+**Siguiente paso recomendado:** con el criterio ajustado, los 3 más sólidos para contactar esta semana son **Generadora Gatún** (vacante de 17 horas), **Centro Financiero Empresarial** (ya verificado en Ronda 1) y **Bi Bank Panamá**. UETA y Tantalo son el siguiente lote. Barraza y Cia tiene la vacante más reciente de todas, pero el ángulo de mensaje debe ser operativo/planta, no financiero. Mowat Corporation necesita una pregunta de calificación antes de invertir tiempo en el mensaje completo, por la posible intermediación. De la Ronda 3, **Punto Pago Panamá** y **LAC Legal** son los más listos para contactar ya; Cervecería Nacional requiere que el usuario confirme si acepta el vínculo con AB InBev antes de escribir.
