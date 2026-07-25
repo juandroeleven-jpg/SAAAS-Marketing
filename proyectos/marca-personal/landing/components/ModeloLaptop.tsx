@@ -205,7 +205,7 @@ export default function ModeloLaptop() {
       <Canvas camera={{ fov: 32 }} dpr={[1, 2]}>
         <CamaraFija />
         <Iluminacion />
-        <Center>
+        <Center scale={1.8}>
           <Laptop />
         </Center>
       </Canvas>

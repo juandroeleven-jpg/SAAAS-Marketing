@@ -9,7 +9,7 @@ const ModeloLaptop = dynamic(() => import("@/components/ModeloLaptop"), {
 export default function PlataformaPage() {
   return (
     <main className="min-h-screen bg-cf-bg px-6 py-20 sm:px-12 sm:py-28">
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
           <span className="text-sm font-semibold uppercase tracking-widest text-cf-accent">
             Plataforma
