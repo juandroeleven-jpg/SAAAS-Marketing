@@ -131,9 +131,53 @@ Checklist de respaldo:
 - [x] Paso 4 — Flujo paso a paso del carrito
 - [x] Paso 6 — Investigación de mercado completa, decisión low-cost tomada
 - [x] Decisión de secuencia — Fase 1 (2D) antes que Fase 2 (3D), 22/07/2026
-- [ ] Paso 5a — Fase 1: galería de imagen + cotizador publicado con precios ficticios
-- [ ] Paso 5b — Fase 2: integrar Three.js/R3F sobre GLB de Meshy
+- [x] Paso 5a — Fase 1: galería de imagen + cotizador publicado con precios ficticios
+- [x] Fase 1.5 — Sistema de capas (shell/visor/gráfico), SVG mejorado
+- [x] Guardar/compartir cotización — link con estado codificado (`lib/cotizacionLink.ts`)
+- [x] Estimación de fecha de entrega — reglas simples, fecha de calendario (`lib/entrega.ts`)
+- [x] Prototipo de carátula/licencia intercambiable sobre fotos reales — Bob Esponja + Godfather (`/prototipo-visor`)
+- [ ] Extender el prototipo de carátula a Top Gun y Stellar
+- [ ] Conectar el mecanismo de carátula real al cotizador principal (hoy vive aislado en `/prototipo-visor`)
+- [ ] Paso 5b — Fase 2: integrar `<model-viewer>` o Three.js/R3F sobre GLB real (depende de resolver fidelidad, ver Simulación 8)
 - [ ] Ejecución real contra base de datos de catálogo (precios reales)
+
+</details>
+
+<details><summary>Roadmap de evolución 2D → 3D (planificado 24/07/2026, sin ejecutar aún)</summary>
+
+```mermaid
+flowchart TD
+    E1["Etapa 1 - Consolidar 2D<br/>caratula intercambiable en las 4 licencias<br/>conectada al cotizador real"] --> E2["Etapa 2 - Resolver fidelidad<br/>Blender+xatlas (proyeccion determinista)<br/>O fotogrametria real del casco fisico"]
+    E2 --> E3["Etapa 3 - Piloto con 1 sola licencia<br/>Meshy geometria + Blender grafico real<br/>exportar GLB"]
+    E3 --> E4["Etapa 4 - Integrar model-viewer<br/>sobre el GLB del piloto<br/>reemplaza la capa 2D solo en ese modelo"]
+    E4 --> E5["Etapa 5 - Escalar al resto<br/>del catalogo, con tiempo/costo<br/>ya conocido por el piloto"]
+```
+
+**Por qué este orden:** arrancar el 3D antes de la Etapa 2 repite el problema ya confirmado con Meshy (texto/logos mal generados, Simulaciones 6a-6d). Blender MCP se descartó para "arreglar" texto generado (requiere juicio visual que un agente no tiene hoy) — sirve para operaciones deterministas (proyección UV, bake), no para juzgar calidad.
+
+</details>
+
+<details><summary>Mejoras propuestas al cotizador (24/07/2026, sin priorizar aún)</summary>
+
+1. Múltiples fotos por ángulo (frontal, 3/4, lateral) — efecto pseudo-360 sin ser 3D real.
+2. Selector de accesorios/complementos (comunicador Bluetooth, bolsa protectora, etc.).
+3. Comparador lado a lado de 2 configuraciones.
+4. Validación de compatibilidad entre gráfico y molde (si en el futuro no todo combina con todo).
+5. Panel/historial de cotizaciones para el dueño del negocio, no solo el link del cliente.
+6. Formulario de contacto (nombre/email/teléfono) antes de confirmar, para capturar el lead aunque no escriban por WhatsApp.
+
+</details>
+
+<details><summary>Gaps para producción real (24/07/2026)</summary>
+
+- **Datos reales**: precios, talles, descuentos, envío — hoy 100% ficticio.
+- **Persistencia real**: base de datos (Postgres/Supabase) en vez de catálogo hardcodeado y link con estado codificado.
+- **Pagos**: sin procesador conectado, el flujo termina en WhatsApp.
+- **Autenticación + panel admin**: sin login, sin forma de editar catálogo sin tocar código.
+- **Imágenes reales**: reemplazar SVG/prototipo por assets finales de las 4+ licencias.
+- **Despliegue**: nunca se ha publicado a un dominio real, solo corre en entorno local de prueba.
+- **Seguridad**: sin rate-limiting ni validación de servidor robusta.
+- **Legal/operativo**: sin términos de servicio, sin proceso definido de seguimiento post-cotización.
 
 </details>
 
