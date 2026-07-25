@@ -1,7 +1,13 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
-import TiltCard from "./TiltCard";
+
+// Escena 3D real (React Three Fiber) — solo cliente, evita problemas de
+// hidratacion con WebGL en el render de servidor.
+const Orquestador3D = dynamic(() => import("./Orquestador3D"), {
+  ssr: false,
+});
 
 export default function Hero() {
   return (
@@ -62,30 +68,36 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
+          className="relative"
         >
-          <TiltCard className="mx-auto w-full max-w-sm">
-            <div className="rounded-3xl border border-cf-border bg-cf-surface/80 p-8 shadow-2xl shadow-black/40 backdrop-blur">
-              <p className="text-xs font-semibold uppercase tracking-wide text-cf-muted">
-                Ecosistema entregado
-              </p>
-              <p className="mt-3 text-5xl font-bold text-cf-accent2">15</p>
-              <p className="mt-1 text-sm text-cf-muted">
-                sistemas de IA y automatización interconectados
-              </p>
-              <div className="mt-6 h-px bg-cf-border" />
-              <div className="mt-6 grid grid-cols-2 gap-4 text-sm">
-                <div>
-                  <p className="text-2xl font-bold text-cf-text">97%</p>
-                  <p className="text-cf-muted">ahorro de tiempo, nómina</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-cf-text">95-98%</p>
-                  <p className="text-cf-muted">precisión, EDGE Helmet</p>
-                </div>
-              </div>
+          <div className="relative h-[380px] w-full sm:h-[440px]">
+            <Orquestador3D />
+          </div>
+          <div className="flex justify-center">
+            <div className="rounded-full border border-cf-border bg-cf-surface/80 px-4 py-1.5 text-xs text-cf-muted backdrop-blur">
+              15 sistemas orquestándose en tiempo real — no es decoración, es el producto
             </div>
-          </TiltCard>
+          </div>
         </motion.div>
+      </div>
+
+      <div className="relative mx-auto mt-10 grid w-full max-w-6xl grid-cols-2 gap-6 border-t border-cf-border pt-8 sm:grid-cols-4">
+        <div>
+          <p className="text-2xl font-bold text-cf-accent2">15</p>
+          <p className="text-xs text-cf-muted">sistemas interconectados</p>
+        </div>
+        <div>
+          <p className="text-2xl font-bold text-cf-text">97%</p>
+          <p className="text-xs text-cf-muted">ahorro de tiempo, nómina</p>
+        </div>
+        <div>
+          <p className="text-2xl font-bold text-cf-text">95-98%</p>
+          <p className="text-xs text-cf-muted">precisión, EDGE Helmet</p>
+        </div>
+        <div>
+          <p className="text-2xl font-bold text-cf-text">Multi-país</p>
+          <p className="text-xs text-cf-muted">multi-moneda, un solo panel</p>
+        </div>
       </div>
     </section>
   );
