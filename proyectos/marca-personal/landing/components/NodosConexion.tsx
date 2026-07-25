@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 // Canvas animado de conexiones entre apps/agentes (referencia: nixtio.com),
 // vive dentro de la pantalla de la laptop flotante. SVG + CSS, sin WebGL.
 const NODOS = [
@@ -70,9 +72,22 @@ export default function NodosConexion() {
         );
       })}
 
-      {/* Nodos */}
-      {NODOS.map((n) => (
-        <g key={n.id}>
+      {/* Nodos — cada uno flota/pulsa levemente, con retardo escalonado */}
+      {NODOS.map((n, i) => (
+        <motion.g
+          key={n.id}
+          animate={{
+            y: [0, -2.5, 0],
+            scale: [1, 1.08, 1],
+          }}
+          transition={{
+            duration: 2.4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: i * 0.25,
+          }}
+          style={{ transformOrigin: `${n.x}px ${n.y}px` }}
+        >
           <circle cx={n.x} cy={n.y} r="3.2" fill="white" stroke={n.color} strokeWidth="0.6" />
           <circle cx={n.x} cy={n.y} r="1.3" fill={n.color} />
           <text
@@ -85,7 +100,7 @@ export default function NodosConexion() {
           >
             {n.label}
           </text>
-        </g>
+        </motion.g>
       ))}
     </svg>
   );

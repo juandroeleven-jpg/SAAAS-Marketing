@@ -23,19 +23,19 @@ export default function LaptopFlotante() {
           className="relative h-full w-full"
           style={{
             transformStyle: "preserve-3d",
-            transform: "rotateX(48deg) rotateZ(-28deg) rotateY(6deg)",
+            transform: "rotateY(-16deg)",
           }}
         >
-          {/* Base/teclado */}
+          {/* Base/teclado — casi horizontal, da la perspectiva de "mesa" */}
           <div
-            className="absolute bottom-0 left-[6%] h-[8%] w-[88%] rounded-lg bg-cf-text/90 shadow-2xl"
-            style={{ transform: "translateZ(-4px)" }}
+            className="absolute bottom-[6%] left-[6%] h-[10%] w-[88%] origin-top rounded-lg bg-cf-text/90 shadow-2xl"
+            style={{ transform: "rotateX(72deg) translateZ(6px)" }}
           />
 
-          {/* Pantalla */}
+          {/* Pantalla — casi de frente, apenas reclinada hacia atrás */}
           <div
             className="absolute left-0 top-0 h-[86%] w-full origin-bottom rounded-xl bg-cf-text p-[3%] shadow-2xl"
-            style={{ transform: "rotateX(-100deg) translateY(-2%)" }}
+            style={{ transform: "rotateX(9deg)" }}
           >
             <div className="h-full w-full overflow-hidden rounded-lg bg-white p-[4%]">
               <NodosConexion />
