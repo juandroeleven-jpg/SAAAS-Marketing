@@ -35,6 +35,36 @@ export const RANURAS_VISOR: RanuraVisor[] = [
       [70, 90],
     ],
   },
+  {
+    // Molde full-face/modular distinto (pico frontal, spoiler trasero),
+    // vista lateral — geometría de visor propia, no reutiliza el mismo
+    // ángulo que Bob Esponja/Godfather.
+    fotoBase: "/prototipo/top-gun.jpg",
+    nombreLicencia: "Top Gun",
+    poligonoVisor: [
+      [66, 49],
+      [66, 37],
+      [76, 29],
+      [84, 27],
+      [96, 30],
+      [97, 63],
+      [80, 65],
+    ],
+  },
+  {
+    // Mismo molde/ángulo de cámara que Godfather (casco full-face liso,
+    // vista 3/4), por eso la ranura del visor cae en una zona similar.
+    fotoBase: "/prototipo/stellar.jpg",
+    nombreLicencia: "Stellar",
+    poligonoVisor: [
+      [16, 72],
+      [15, 44],
+      [26, 32],
+      [47, 30],
+      [72, 42],
+      [73, 73],
+    ],
+  },
 ];
 
 export function poligonoACss(poligono: [number, number][]): string {
