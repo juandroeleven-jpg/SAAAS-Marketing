@@ -92,10 +92,15 @@ function rectRedondeado(
 }
 
 function usarTexturaPantalla() {
+  const { gl } = useThree();
   const canvas = useMemo(() => {
     const c = document.createElement("canvas");
-    c.width = 2048;
-    c.height = 1280;
+    // La malla solo muestrea una fraccion del atlas: el rectangulo de
+    // pantalla se queda con ~0.43 x 0.30 del canvas. A 3072x1920 eso da
+    // ~1320x580 texeles reales para la pantalla, que es lo que hace falta
+    // para que no se vea pixelada al agrandar el objeto.
+    c.width = 3072;
+    c.height = 1920;
     return c;
   }, []);
   const textura = useMemo(() => {
@@ -104,9 +109,14 @@ function usarTexturaPantalla() {
     // El modelo se ve pequeno en pantalla (laptop chica dentro de la
     // escena) -- sin esto, el mipmapping difumina circulos/texto chicos
     // hasta volverlos casi invisibles al minificarse tanto.
-    t.generateMipmaps = false;
-    t.minFilter = THREE.LinearFilter;
+    // La pantalla se ve en angulo oblicuo, que es justo el caso que degrada
+    // mas una textura: sin mipmaps + anisotropia el muestreo se rompe y se
+    // percibe "pixelado"/con moire. Con anisotropia al maximo que soporte la
+    // GPU, el texto y las lineas finas se mantienen nitidos en diagonal.
+    t.generateMipmaps = true;
+    t.minFilter = THREE.LinearMipmapLinearFilter;
     t.magFilter = THREE.LinearFilter;
+    t.anisotropy = gl.capabilities.getMaxAnisotropy();
     // Fix "texto espejado" (ganador experimento 4/5, intento 4): la malla
     // "Object_6" usa un UV horizontalmente invertido para este atlas, lo
     // que hace que cualquier texto dibujado normal en el canvas salga en
@@ -121,18 +131,24 @@ function usarTexturaPantalla() {
     // alrededor del centro del propio rectangulo PANTALLA_UV, en el
     // useEffect de dibujo de abajo.
     return t;
-  }, [canvas]);
+  }, [canvas, gl]);
 
   // El bisel negro no cambia nunca: se pinta una sola vez sobre TODO el
   // canvas y despues cada frame solo se redibuja el rectangulo de pantalla.
   // (La malla cubre la tapa entera, cara trasera incluida, asi que este
   // negro tambien deja la parte de atras oscura como en el modelo original.)
   const biselPintado = useRef(false);
+  const ultimoDibujo = useRef(0);
 
   useFrame((state) => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
     const t = state.clock.getElapsedTime();
+    // Subir una textura de 3072x1920 a la GPU en cada frame es caro. A 24
+    // por segundo la animacion se sigue viendo fluida y el coste baja a
+    // menos de la mitad.
+    if (t - ultimoDibujo.current < 1 / 24) return;
+    ultimoDibujo.current = t;
     const W = canvas.width;
     const H = canvas.height;
 
@@ -328,7 +344,10 @@ function Iluminacion() {
 function CamaraFija() {
   const { camera } = useThree();
   useEffect(() => {
-    camera.position.set(-0.35, 0.4, -1.4);
+    // Angulo mas frontal a la pantalla: menos desplazamiento lateral y menos
+    // altura que antes. Ademas de mostrar mas de frente el contenido, reduce
+    // lo oblicuo del muestreo de la textura, que era parte del pixelado.
+    camera.position.set(-0.16, 0.22, -1.5);
     camera.lookAt(0, 0, 0);
   }, [camera]);
   return null;
