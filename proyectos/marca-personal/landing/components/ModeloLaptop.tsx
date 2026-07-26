@@ -342,16 +342,41 @@ function Laptop() {
   return <primitive object={scene} rotation={[0, GIRO_Y, 0]} />;
 }
 
-// Flotacion: el objeto sube y baja suavemente, y se inclina apenas, para que
-// se lea como suspendido en el aire y no apoyado en el borde del contenedor.
+// Entrada: al cargar, el laptop llega desde el lateral derecho y se acomoda
+// en su sitio, con un giro que se endereza al llegar (no aparece "puesto",
+// llega). Despues queda flotando: sube y baja con un seno lento y se inclina
+// apenas, para que se lea suspendido en el aire y no apoyado en el borde.
+const DURACION_ENTRADA = 1.15; // segundos
+const DESPLAZAMIENTO_ENTRADA = 2.6; // unidades hacia la derecha
+const GIRO_ENTRADA = 0.4; // rad extra que se endereza al llegar
+
 function Flotacion({ children }: { children: React.ReactNode }) {
   const grupo = useRef<THREE.Group>(null);
+  const inicio = useRef<number | null>(null);
+
   useFrame((state) => {
     if (!grupo.current) return;
     const t = state.clock.getElapsedTime();
-    grupo.current.position.y = Math.sin(t * 0.7) * 0.035;
-    grupo.current.rotation.z = Math.sin(t * 0.5) * 0.012;
+    if (inicio.current === null) inicio.current = t;
+    const transcurrido = t - inicio.current;
+
+    // easeOutCubic: entra rapido y frena al final, que es lo que hace que
+    // se sienta que "se acomoda" en vez de deslizarse a velocidad constante.
+    const p = Math.min(1, transcurrido / DURACION_ENTRADA);
+    const suave = 1 - Math.pow(1 - p, 3);
+    const restante = 1 - suave;
+
+    // La flotacion arranca recien cuando la entrada termina, asi los dos
+    // movimientos no se pisan.
+    const tFlot = Math.max(0, transcurrido - DURACION_ENTRADA);
+
+    grupo.current.position.x = DESPLAZAMIENTO_ENTRADA * restante;
+    grupo.current.position.y =
+      Math.sin(tFlot * 0.7) * 0.045 + restante * 0.25;
+    grupo.current.rotation.y = restante * GIRO_ENTRADA;
+    grupo.current.rotation.z = Math.sin(tFlot * 0.5) * 0.015;
   });
+
   return <group ref={grupo}>{children}</group>;
 }
 
