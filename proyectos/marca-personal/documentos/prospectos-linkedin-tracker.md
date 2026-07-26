@@ -109,6 +109,32 @@ Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs 
 
 ![Generadora Gatún - LinkedIn](evidencia-prospectos/generadora-gatun.jpg)
 
+**Actualización:** vacante de Contralor/a sigue activa en la página de empleos de la empresa (confirmado de nuevo al buscar el contacto directo).
+
+#### 🎯 Contacto directo identificado — Esteban Barrientos M
+
+**Nombre:** Esteban Barrientos M
+**Cargo:** Chief Executive Officer (CEO) / Gerente General de Generadora Gatún
+**Grado de conexión:** 2º grado (contacto en común: Fernando J. Robinson Biendicho) — mucho más accesible que un contacto de 3er grado.
+**Perfil:** https://www.linkedin.com/in/esteban-barrientos-m-a35a0031/
+**Por qué es un excelente contacto:** es el CEO real de la empresa (no un intermediario ni RRHH), tiene insignia de verificación, 5,820 seguidores, y publica contenido propio con frecuencia (no solo comparte de terceros) — perfil ideal para Motor 1, con material genuino y reciente sobre el cual comentar. Reconocido además por Forbes Centroamérica entre las 100 Mentes Más Influyentes de la Región 2025 (#11 en Panamá).
+**Nota de honestidad:** sus publicaciones más recientes (hace 5 días y hace 2 meses) tratan sobre la emisión de bonos corporativos por US$1,050 millones — no mencionan directamente el área de Contraloría/Finanzas operativas, pero sí muestran su rol activo en las decisiones financieras de la empresa, lo cual conecta naturalmente con el pitch de Codeflow AI sin forzar el ángulo.
+
+**Motor 1 — Comentario sugerido #1** (sobre su post de hace 5 días, Toque de Campana / emisión de bonos):
+> "Felicidades por este hito, Esteban — una emisión de este tamaño con esa demanda dice mucho de la disciplina financiera detrás de Generadora Gatún. Se nota que hay procesos sólidos de reporting y control para sostener la confianza de los inversionistas en un proyecto de esta escala."
+
+**Motor 1 — Comentario sugerido #2** (sobre su post de hace 2 meses, cierre del bono a 18.4 años con grado de inversión Baa3/BBB):
+> "Una calificación grado de inversión en la emisión privada más grande del sector energía en Centroamérica en 5 años es un resultado impresionante. Detrás de un roadshow de 110 reuniones en tres días tiene que haber un equipo financiero muy bien organizado — felicitaciones a todo el equipo de Generadora Gatún."
+
+**Motor 2 — Mensaje directo sugerido** (después de los 2 comentarios y tras enviar solicitud de conexión):
+> "Hola Esteban, felicidades de nuevo por el cierre del bono — un logro enorme para Generadora Gatún. Vi también que están buscando Contralor/a para el equipo. Trabajo con Codeflow AI en automatización financiera con IA: construí un flujo de nómina multi-país que redujo el tiempo de procesamiento en 97%, y sistemas de reporting/forecasting para grupos empresariales multi-país — justo el tipo de control que suele volverse crítico después de una emisión de esta magnitud, con más visibilidad exigida a inversionistas y calificadoras. Me encantaría mostrarte cómo aplicaría ese enfoque en Gatún. ¿15 min esta semana?"
+
+**Evidencia del contacto:**
+
+![Esteban Barrientos M - perfil LinkedIn](evidencia-prospectos/generadora-gatun-esteban-barrientos-perfil.jpg)
+
+**Estado del flujo (según instrucción del usuario "yo preparo, vos envías"):** contacto identificado y contenido redactado — pendiente de que Juan Diego revise y publique/envíe manualmente desde su propia cuenta.
+
 **Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/generadora-gatun/)
 
 ---
@@ -356,7 +382,7 @@ El resto de búsquedas (contador, gerente de ventas, jefe de almacén, coordinad
 **Señal de necesidad:** Vacante activa de **"Contralor / Director de Contabilidad"** — encaja perfecto con el pitch financiero de Codeflow AI.
 **Decisión Motor 1 vs Motor 2:** **Motor 2** — mensaje directo.
 
-**Mensaje sugerido:**
+**Mensaje sugerido (genérico, sin contacto):**
 > "Hola [Nombre], vi la búsqueda de Contralor/Director de Contabilidad en Feax International — trabajo en automatización financiera con IA (Codeflow AI), y armé sistemas reales como un flujo de nómina multi-país que redujo el tiempo de procesamiento en 97%, y ecosistemas de reporting/forecasting. Me encantaría mostrarte cómo aplicaría ese enfoque en Feax. ¿15 min esta semana?"
 
 **Evidencia:**
@@ -364,6 +390,32 @@ El resto de búsquedas (contador, gerente de ventas, jefe de almacén, coordinad
 ![Feax International - LinkedIn](evidencia-prospectos/feax-international.jpg)
 
 **Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/feaxint/), [Portal CCIAP](https://cciap.hiringroomcampus.com/companies)
+
+#### 🎯 Contacto directo identificado — Susana Arguelles
+
+**Nombre:** Susana Arguelles
+**Cargo:** General Manager | Country Manager | CFO — FMCG, Food Service & Retail (perfil confirmado con P&L Leadership, Commercial Growth, Finance & Operations)
+**Empresa confirmada:** Feax International, S.A. (confirmado vía filtro "Empresas actuales" de LinkedIn, no solo por keyword — descarta falsos positivos)
+**Grado de conexión:** 3er grado
+**Perfil:** https://www.linkedin.com/in/susana-arguelles-0058a0b5/
+**Por qué es un buen contacto:** título de máxima decisión (GM/Country Manager/CFO), con actividad reciente en LinkedIn (3-4 días) — cumple el requisito de tener publicaciones sobre las cuales comentar genuinamente antes de conectar.
+**Nota de honestidad:** las publicaciones disponibles en su actividad son contenido que ella *compartió* (no autoría propia) — son posts de liderazgo/gestión de personas que ella eligió republicar, lo cual igual sirve como base legítima para un comentario genuino sobre el tema, no se están inventando publicaciones que no existen.
+
+**Motor 1 — Comentario sugerido #1** (sobre el post de Juan José Hernández Fernández que ella compartió, tema "sinergia generacional / edadismo en equipos"):
+> "Totalmente de acuerdo con el punto de la sinergia generacional — en los equipos financieros y de operaciones pasa igual: la experiencia sabe qué preguntar y la energía nueva sabe dónde automatizar. Gracias por compartirlo, Susana."
+
+**Motor 1 — Comentario sugerido #2** (sobre el post de Simon Sinek/Iñaki Léonard que ella compartió, tema "liderazgo que empodera"):
+> "Esa frase de Sinek aplica directo a finanzas también: los mejores CFOs que he visto no acumulan control, delegan y automatizan lo repetitivo para que el equipo piense en lo estratégico. Buen post, Susana."
+
+**Motor 2 — Mensaje directo sugerido** (después de que los 2 comentarios generen visibilidad, y tras enviar solicitud de conexión):
+> "Hola Susana, vi que Feax International está buscando Contralor/Director de Contabilidad — con tu rol de CFO seguro estás de cerca en ese proceso. Trabajo con Codeflow AI en automatización financiera con IA: armé un flujo de nómina multi-país que redujo el tiempo de procesamiento en 97% y sistemas de reporting/forecasting para operaciones como la de Feax. Me encantaría mostrarte cómo aplicaría eso mientras se resuelve la búsqueda del puesto. ¿Tienes 15 min esta semana?"
+
+**Evidencia del contacto:**
+
+![Susana Arguelles - perfil LinkedIn](evidencia-prospectos/feax-susana-arguelles-perfil.jpg)
+![Susana Arguelles - actividad reciente LinkedIn](evidencia-prospectos/feax-susana-arguelles-actividad.jpg)
+
+**Estado del flujo (según instrucción del usuario "yo preparo, vos envías"):** contacto identificado y contenido redactado — pendiente de que Juan Diego revise y publique/envíe manualmente desde su propia cuenta.
 
 ---
 
