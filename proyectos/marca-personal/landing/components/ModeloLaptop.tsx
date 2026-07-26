@@ -369,10 +369,15 @@ function Flotacion({ children }: { children: React.ReactNode }) {
     const tFlot = Math.max(0, transcurrido - DURACION_ENTRADA);
 
     grupo.current.position.x = DESPLAZAMIENTO_ENTRADA * restante;
+    // Amplitud generosa a proposito: con valores chicos (0.045) el movimiento
+    // existia pero no se percibia. 0.12 es ~15% del alto del objeto, que se
+    // nota sin volverse inquieto. Periodo ~5.5s (2*PI / 1.15).
     grupo.current.position.y =
-      Math.sin(tFlot * 0.7) * 0.045 + restante * 0.25;
+      Math.sin(tFlot * 1.15) * 0.12 + restante * 0.25;
     grupo.current.rotation.y = restante * GIRO_ENTRADA;
-    grupo.current.rotation.z = Math.sin(tFlot * 0.5) * 0.015;
+    // Balanceo leve, con otro periodo para que no se sienta mecanico.
+    grupo.current.rotation.z = Math.sin(tFlot * 0.72) * 0.022;
+    grupo.current.rotation.x = Math.sin(tFlot * 0.55) * 0.016;
   });
 
   return <group ref={grupo}>{children}</group>;
@@ -425,8 +430,8 @@ export default function ModeloLaptop() {
     // columna en desktop para ganar tamano sin obligar a acercar la camara.
     <div className="relative aspect-[5/4.4] w-full lg:-mr-[4vw] lg:w-[calc(100%+4vw)]">
       {/* Sombra difusa debajo: es lo que vende el efecto de estar suspendido */}
-      <div className="pointer-events-none absolute inset-x-[18%] bottom-[8%] h-[10%] rounded-[50%] bg-cf-text/25 blur-2xl" />
-      <div className="pointer-events-none absolute inset-x-[10%] bottom-[4%] h-[18%] rounded-[50%] bg-cf-accent/25 blur-3xl" />
+      <div className="sombra-flotante pointer-events-none absolute inset-x-[18%] bottom-[8%] h-[10%] rounded-[50%] bg-cf-text/25 blur-2xl" />
+      <div className="sombra-flotante pointer-events-none absolute inset-x-[10%] bottom-[4%] h-[18%] rounded-[50%] bg-cf-accent/25 blur-3xl" />
       <Canvas
         camera={{ fov: 36, position: POSICION_CAMARA.toArray() }}
         dpr={Math.min(3, typeof window !== "undefined" ? window.devicePixelRatio : 1)}
