@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { useGLTF, Center } from "@react-three/drei";
+import { useGLTF, Center, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 
 // Modelo real: "MacBook Laptop" por Issac Ghazanfar, licencia CC Attribution
@@ -341,13 +341,29 @@ function Iluminacion() {
   );
 }
 
+// Angulo aprobado por el usuario: frontal a la pantalla, con poco
+// desplazamiento lateral y poca altura. Ademas de mostrar mas de frente el
+// contenido, reduce lo oblicuo del muestreo de la textura.
+// Para acercar la camara se ESCALA este vector (misma direccion de vista,
+// menor magnitud) — no se cambia su direccion.
+const DIRECCION_CAMARA = new THREE.Vector3(-0.16, 0.22, -1.5);
+const ACERCAMIENTO = 0.70; // 1 = encuadre original; <1 = mas cerca
+const POSICION_CAMARA = DIRECCION_CAMARA.clone().multiplyScalar(ACERCAMIENTO);
+
+// Angulos esfericos del encuadre inicial, usados para acotar la orbita.
+const RADIO_INICIAL = POSICION_CAMARA.length();
+const POLAR_INICIAL = Math.acos(POSICION_CAMARA.y / RADIO_INICIAL);
+const AZIMUT_INICIAL = Math.atan2(POSICION_CAMARA.x, POSICION_CAMARA.z);
+// Margen de giro: suficiente para que se sienta interactivo, pero sin llegar
+// nunca a ver la tapa trasera ni el laptop desde abajo.
+const MARGEN_AZIMUT = 0.2;
+const MARGEN_POLAR_ARRIBA = 0.18;
+const MARGEN_POLAR_ABAJO = 0.14;
+
 function CamaraFija() {
   const { camera } = useThree();
   useEffect(() => {
-    // Angulo mas frontal a la pantalla: menos desplazamiento lateral y menos
-    // altura que antes. Ademas de mostrar mas de frente el contenido, reduce
-    // lo oblicuo del muestreo de la textura, que era parte del pixelado.
-    camera.position.set(-0.16, 0.22, -1.5);
+    camera.position.copy(POSICION_CAMARA);
     camera.lookAt(0, 0, 0);
   }, [camera]);
   return null;
@@ -355,17 +371,34 @@ function CamaraFija() {
 
 export default function ModeloLaptop() {
   return (
-    <div className="relative aspect-[4/3.2] w-full max-w-xl">
+    // El laptop es el protagonista: sangra fuera de su columna en desktop y
+    // se recorta por los bordes, como en la referencia.
+    <div className="relative aspect-[4/3.2] w-full lg:-mr-[12vw] lg:w-[calc(100%+12vw)]">
       <div className="pointer-events-none absolute inset-x-[10%] bottom-[0%] h-[16%] rounded-[50%] bg-cf-accent/30 blur-2xl" />
       <Canvas
-        camera={{ fov: 36 }}
+        camera={{ fov: 36, position: POSICION_CAMARA.toArray() }}
         dpr={Math.min(3, typeof window !== "undefined" ? window.devicePixelRatio : 1)}
       >
         <CamaraFija />
         <Iluminacion />
-        <Center scale={2.6}>
+        <Center scale={2.9}>
           <Laptop />
         </Center>
+        {/* Orbita acotada. enableZoom={false} es critico: con la rueda activa
+            el canvas se comeria el scroll de la pagina al pasar el cursor. */}
+        <OrbitControls
+          makeDefault
+          target={[0, 0, 0]}
+          enableZoom={false}
+          enablePan={false}
+          enableDamping
+          dampingFactor={0.08}
+          rotateSpeed={0.45}
+          minPolarAngle={POLAR_INICIAL - MARGEN_POLAR_ARRIBA}
+          maxPolarAngle={POLAR_INICIAL + MARGEN_POLAR_ABAJO}
+          minAzimuthAngle={AZIMUT_INICIAL - MARGEN_AZIMUT}
+          maxAzimuthAngle={AZIMUT_INICIAL + MARGEN_AZIMUT}
+        />
       </Canvas>
     </div>
   );

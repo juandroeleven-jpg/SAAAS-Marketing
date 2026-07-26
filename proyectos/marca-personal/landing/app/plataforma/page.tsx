@@ -8,8 +8,8 @@ const ModeloLaptop = dynamic(() => import("@/components/ModeloLaptop"), {
 
 export default function PlataformaPage() {
   return (
-    <main className="min-h-screen bg-cf-bg px-6 py-20 sm:px-12 sm:py-28">
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+    <main className="min-h-screen overflow-x-hidden bg-cf-bg px-6 py-20 sm:px-12 sm:py-28">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-10">
         <div>
           <span className="text-sm font-semibold uppercase tracking-widest text-cf-accent">
             Plataforma
@@ -23,9 +23,9 @@ export default function PlataformaPage() {
           </p>
         </div>
 
-        <div>
+        <div className="min-w-0">
           <ModeloLaptop />
-          <p className="mt-3 text-center text-xs text-cf-muted">
+          <p className="relative z-10 mt-6 text-center text-xs text-cf-muted">
             Modelo 3D &ldquo;MacBook Laptop&rdquo; por Issac Ghazanfar,
             licencia Creative Commons Attribution
           </p>
