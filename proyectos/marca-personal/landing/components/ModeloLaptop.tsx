@@ -32,15 +32,20 @@ const BARRA_H = 74;
 // Grafo tipo canvas de automatizacion real (fan-in / fan-out sobre un nodo
 // central), no circulos sueltos con etiquetas. Coordenadas = centro de cada
 // tarjeta, en espacio de diseno.
-const TARJETA = { w: 310, h: 86 };
+// Al acercar la camara, el encuadre recorta los bordes de la pantalla: solo
+// queda visible aproximadamente x[360, 1575] del espacio de diseno. Por eso
+// el grafo se mantiene compactado dentro de ese rango -- con las posiciones
+// anteriores (columna de entrada en x=250) Webhook y Discord quedaban fuera
+// de cuadro y el flujo perdia su origen.
+const TARJETA = { w: 290, h: 86 };
 const NODOS = [
-  { id: "webhook", label: "Webhook", sub: "Disparador", x: 250, y: 300, color: "#F43F5E" },
-  { id: "discord", label: "Discord", sub: "Mensajes", x: 250, y: 730, color: "#5865F2" },
-  { id: "gpt", label: "ChatGPT", sub: "Agente", x: 760, y: 515, color: "#10B981" },
-  { id: "slack", label: "Slack", sub: "Notifica", x: 1290, y: 250, color: "#36C5F0" },
-  { id: "drive", label: "Drive", sub: "Archiva", x: 1290, y: 430, color: "#FBBC04" },
-  { id: "notion", label: "Notion", sub: "Registra", x: 1290, y: 610, color: "#E5E7EB" },
-  { id: "canva", label: "Canva", sub: "Publica", x: 1290, y: 790, color: "#8B5CF6" },
+  { id: "webhook", label: "Webhook", sub: "Disparador", x: 625, y: 300, color: "#F43F5E" },
+  { id: "discord", label: "Discord", sub: "Mensajes", x: 625, y: 730, color: "#5865F2" },
+  { id: "gpt", label: "ChatGPT", sub: "Agente", x: 1010, y: 515, color: "#10B981" },
+  { id: "slack", label: "Slack", sub: "Notifica", x: 1380, y: 250, color: "#36C5F0" },
+  { id: "drive", label: "Drive", sub: "Archiva", x: 1380, y: 430, color: "#FBBC04" },
+  { id: "notion", label: "Notion", sub: "Registra", x: 1380, y: 610, color: "#E5E7EB" },
+  { id: "canva", label: "Canva", sub: "Publica", x: 1380, y: 790, color: "#8B5CF6" },
 ];
 const CONEXIONES: [string, string][] = [
   ["webhook", "gpt"],
@@ -207,14 +212,14 @@ function usarTexturaPantalla() {
     const semaforo = ["#FF5F57", "#FEBC2E", "#28C840"];
     semaforo.forEach((c, i) => {
       ctx.beginPath();
-      ctx.arc(50 + i * 46, BARRA_H / 2, 14, 0, Math.PI * 2);
+      ctx.arc(660 + i * 46, BARRA_H / 2, 14, 0, Math.PI * 2);
       ctx.fillStyle = c;
       ctx.fill();
     });
     ctx.fillStyle = "#A9B7CA";
     ctx.font = "600 30px system-ui, sans-serif";
     ctx.textAlign = "left";
-    ctx.fillText("Codeflow — Orquestador", 200, BARRA_H / 2 + 11);
+    ctx.fillText("Codeflow — Orquestador", 812, BARRA_H / 2 + 11);
     // Indicador "en ejecucion", parpadeo lento
     const vivo = 0.55 + Math.sin(t * 2.4) * 0.45;
     ctx.beginPath();
