@@ -299,6 +299,11 @@ function usarTexturaPantalla() {
   return textura;
 }
 
+// El modelo no nace mirando a la camara: la tapa queda de costado respecto
+// al eje sobre el que ubicamos la camara. Este giro sobre Y lo endereza para
+// que la pantalla se vea casi de frente, con un angulo leve.
+const GIRO_Y = -0.35;
+
 function Laptop() {
   const { scene } = useGLTF("/modelos-3d/macbook.glb");
   const pantallaRef = useRef<THREE.Mesh | null>(null);
@@ -329,11 +334,12 @@ function Laptop() {
           map: textura,
         });
         mesh.material = nuevoMaterial;
+
       }
     });
   }, [scene, textura]);
 
-  return <primitive object={scene} />;
+  return <primitive object={scene} rotation={[0, GIRO_Y, 0]} />;
 }
 
 function Iluminacion() {
