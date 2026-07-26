@@ -325,6 +325,109 @@ El resto de búsquedas (contador, gerente de ventas, jefe de almacén, coordinad
 
 ---
 
+## Ronda 5 — Método B: directorio de empresas afiliadas a la Cámara de Comercio de Panamá (CCIAP)
+
+**Cambio de método:** en vez de pescar con palabras clave en LinkedIn Jobs, se usó el portal de empleos de la Cámara de Comercio, Industrias y Agricultura de Panamá (cciap.hiringroomcampus.com/companies) — 398 empresas afiliadas reales, cada una con su conteo de vacantes activas visible directamente. Se revisó la lista y se verificó cada candidato en su página de LinkedIn antes de incluirlo. Este método dio una tasa de éxito mucho más alta que las rondas anteriores (5 confirmados de 8 candidatos revisados, contra 1 de cada ~10 búsquedas por palabra clave).
+
+### 17. Inversiones Sagrav, S.A. — 🟢 Confirmado
+
+**Industria:** Distribución de equipos, reactivos y software de laboratorio (diagnóstico clínico) — más de 25 años operando en Panamá.
+**Tamaño confirmado:** 51-200 empleados, 273 seguidores — dentro del rango ICP.
+**Ubicación:** Panamá — presencia real confirmada.
+**Señal de necesidad:** 1 vacante activa publicada en el portal de la CCIAP.
+**Decisión Motor 1 vs Motor 2:** **Motor 2** — mensaje directo.
+
+**Mensaje sugerido:**
+> "Hola [Nombre], vi que Inversiones Sagrav está en búsqueda activa de talento — trabajo en automatización de reporting y control de inventario con IA (Codeflow AI), con casos aplicados a distribuidoras de equipos médicos/laboratorio. Me encantaría mostrarte cómo aplicaría eso a la operación de Sagrav. ¿15 min esta semana?"
+
+**Evidencia:**
+
+![Inversiones Sagrav - LinkedIn](evidencia-prospectos/inversiones-sagrav.jpg)
+
+**Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/inversiones-sagrav/), [Portal CCIAP](https://cciap.hiringroomcampus.com/companies)
+
+---
+
+### 18. Feax International, S.A. — 🟢 Confirmado, vacante ideal para el pitch
+
+**Industria:** Servicios integrales de comercialización y distribución 24 horas en Ciudad de Panamá — desde 1989.
+**Tamaño confirmado:** 51-200 empleados, 465 seguidores — dentro del rango ICP.
+**Ubicación:** Panamá, Panamá — presencia real confirmada.
+**Señal de necesidad:** Vacante activa de **"Contralor / Director de Contabilidad"** — encaja perfecto con el pitch financiero de Codeflow AI.
+**Decisión Motor 1 vs Motor 2:** **Motor 2** — mensaje directo.
+
+**Mensaje sugerido:**
+> "Hola [Nombre], vi la búsqueda de Contralor/Director de Contabilidad en Feax International — trabajo en automatización financiera con IA (Codeflow AI), y armé sistemas reales como un flujo de nómina multi-país que redujo el tiempo de procesamiento en 97%, y ecosistemas de reporting/forecasting. Me encantaría mostrarte cómo aplicaría ese enfoque en Feax. ¿15 min esta semana?"
+
+**Evidencia:**
+
+![Feax International - LinkedIn](evidencia-prospectos/feax-international.jpg)
+
+**Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/feaxint/), [Portal CCIAP](https://cciap.hiringroomcampus.com/companies)
+
+---
+
+### 19. Vets&Pets Panamá — 🟢 Confirmado
+
+**Industria:** Distribuidor autorizado de IDEXX (diagnóstico veterinario) en Panamá.
+**Tamaño confirmado:** 11-50 empleados, 67 seguidores — dentro del rango ICP, extremo chico.
+**Ubicación:** Provincia de Panamá — presencia real confirmada.
+**Señal de necesidad:** 2 vacantes activas en el portal de la CCIAP.
+**Decisión Motor 1 vs Motor 2:** **Motor 2** — mensaje directo.
+
+**Mensaje sugerido:**
+> "Hola [Nombre], vi que Vets&Pets está en búsqueda activa de talento — trabajo en automatización de reporting e inventario con IA (Codeflow AI), con casos aplicados a distribuidoras médicas/veterinarias. Me encantaría mostrarte cómo se vería algo similar en Vets&Pets. ¿Charlamos 15 min?"
+
+**Evidencia:**
+
+![Vets and Pets Panama - LinkedIn](evidencia-prospectos/vets-and-pets.jpg)
+
+**Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/vetsandpetspanama/), [Portal CCIAP](https://cciap.hiringroomcampus.com/companies)
+
+---
+
+### 20. Medcom Panamá (Corporación Medcom) — 🟢 Confirmado, empresa panameña grande
+
+**Industria:** "El mayor y más relevante generador de contenidos de Panamá" — agrupa 3 canales de TV abierta (Telemetro, RPC TV, OYE) y 3 de TV Premium.
+**Tamaño confirmado:** 201-500 empleados, 7 mil seguidores — por encima del techo original de 200, dentro del criterio ajustado (empresa panameña real, no multinacional).
+**Ubicación:** Panamá, Panamá — presencia real confirmada.
+**Señal de necesidad:** 3 vacantes activas en el portal de la CCIAP.
+**Decisión Motor 1 vs Motor 2:** **Motor 2** — mensaje directo.
+
+**Mensaje sugerido:**
+> "Hola [Nombre], vi que Medcom está en búsqueda activa de talento — trabajo en automatización de reporting operativo con IA (Codeflow AI), con casos aplicados a operaciones de medios con múltiples canales/unidades de negocio. Me encantaría mostrarte cómo se vería algo similar en Medcom. ¿15 min esta semana?"
+
+**Evidencia:**
+
+![Medcom Panama - LinkedIn](evidencia-prospectos/medcom-panama.jpg)
+
+**Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/corporacion-medcom/), [Portal CCIAP](https://cciap.hiringroomcampus.com/companies)
+
+---
+
+### 21. Unión Nacional de Empresas, S.A. (UNESA) — 🟡 Empresa panameña grande, aprobar bajo criterio ajustado
+
+**Industria:** Holding diversificado que cotiza en la Bolsa de Valores de Panamá — desarrollo habitacional (Grupo Sucasa), desarrollo comercial, hostelería, finanzas, alquiler de equipo pesado. Fundada en 1974.
+**Tamaño confirmado:** 1,000-5,000 empleados, 167 seguidores — muy por encima del ICP original, dentro del criterio ajustado (empresa panameña real, cotiza localmente, no multinacional extranjera).
+**Ubicación:** Panamá, Panamá — presencia real confirmada.
+**Señal de necesidad:** 6 vacantes activas en el portal de la CCIAP — la mayor cantidad de todos los candidatos de esta ronda.
+**Decisión Motor 1 vs Motor 2:** **Motor 2** — mensaje directo.
+
+**Mensaje sugerido:**
+> "Hola [Nombre], vi que UNESA tiene varias búsquedas activas — trabajo en automatización de reporting financiero y operativo con IA (Codeflow AI), con casos aplicados a grupos empresariales diversificados con múltiples líneas de negocio. Me encantaría mostrarte cómo aplicaría eso a la operación de UNESA. ¿15 min esta semana?"
+
+**Evidencia:**
+
+![UNESA - LinkedIn](evidencia-prospectos/unesa.jpg)
+
+**Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/union-nacional-de-empresas-s-a-/), [Portal CCIAP](https://cciap.hiringroomcampus.com/companies)
+
+---
+
+**Nota honesta sobre esta ronda:** se revisaron 8 candidatos del directorio de la CCIAP; 5 se confirmaron con evidencia (arriba). Se descartaron explícitamente por ser subsidiarias de multinacionales extranjeras: **Cervecería Panamá S.A.** (marca del grupo HEINEKEN, sede en Países Bajos), **COSCO Shipping Lines (Panamá) Inc.** (naviera estatal china) e **Hisense Panamá S.A.** (electrónica china). Otros 3 candidatos con vacante visible en el portal de la CCIAP (**DIMEDISA**, **CIF Express**, **SETPOINT**) no tienen página de LinkedIn localizable, así que no se pudo verificar su tamaño real de forma independiente — se documentan aquí como pendientes por si el usuario quiere contactarlos directamente sin pasar por LinkedIn, ya que el propio portal de la cámara confirma que son empresas reales con vacantes vigentes.
+
+---
+
 ## Resumen y siguiente paso
 
 | # | Empresa | Empleados | Presencia Panamá | Relevancia ICP | Acción |
@@ -345,5 +448,10 @@ El resto de búsquedas (contador, gerente de ventas, jefe de almacén, coordinad
 | 14 | Dichter & Neira Research | 501-1,000 ✅ | Sí (firma regional con oficina local) | 🟢 Alta | Vacante Ingeniero de Datos (Backend) |
 | 15 | LAC Legal | 11-50 ✅ | Sí ✅ | 🟢 Alta | Vacantes Gerente Contable de Outsourcing y Asistente Contable |
 | 16 | Playa Blanca Hotel & Resort Panamá | 201-500 ✅ | Sí ✅ | 🟢 Alta (criterio ajustado) | Vacante Diseñador Gráfico |
+| 17 | Inversiones Sagrav, S.A. | 51-200 ✅ | Sí ✅ | 🟢 Alta | 1 vacante activa (CCIAP) |
+| 18 | Feax International, S.A. | 51-200 ✅ | Sí ✅ | 🟢 Alta | **Vacante Contralor/Director de Contabilidad — pitch ideal** |
+| 19 | Vets&Pets Panamá | 11-50 ✅ | Sí ✅ | 🟢 Alta | 2 vacantes activas (CCIAP) |
+| 20 | Medcom Panamá | 201-500 ✅ | Sí ✅ | 🟢 Alta (criterio ajustado) | 3 vacantes activas (CCIAP) |
+| 21 | UNESA | 1,000-5,000 ✅ | Sí ✅ | 🟡 Alta (criterio ajustado) | 6 vacantes activas — la mayor señal de toda la búsqueda |
 
-**Siguiente paso recomendado:** con el criterio ajustado, los 3 más sólidos para contactar esta semana son **Generadora Gatún** (vacante de 17 horas), **Centro Financiero Empresarial** (ya verificado en Ronda 1) y **Bi Bank Panamá**. UETA y Tantalo son el siguiente lote. Barraza y Cia tiene la vacante más reciente de todas, pero el ángulo de mensaje debe ser operativo/planta, no financiero. Mowat Corporation necesita una pregunta de calificación antes de invertir tiempo en el mensaje completo, por la posible intermediación. De la Ronda 3, **Punto Pago Panamá** y **LAC Legal** son los más listos para contactar ya; Cervecería Nacional requiere que el usuario confirme si acepta el vínculo con AB InBev antes de escribir.
+**Siguiente paso recomendado:** con el criterio ajustado, los 3 más sólidos para contactar esta semana son **Generadora Gatún** (vacante de 17 horas), **Centro Financiero Empresarial** (ya verificado en Ronda 1) y **Bi Bank Panamá**. UETA y Tantalo son el siguiente lote. Barraza y Cia tiene la vacante más reciente de todas, pero el ángulo de mensaje debe ser operativo/planta, no financiero. Mowat Corporation necesita una pregunta de calificación antes de invertir tiempo en el mensaje completo, por la posible intermediación. De la Ronda 3, **Punto Pago Panamá** y **LAC Legal** son los más listos para contactar ya; Cervecería Nacional requiere que el usuario confirme si acepta el vínculo con AB InBev antes de escribir. De la Ronda 5 (Método B, directorio CCIAP), **Feax International** es el mensaje más fácil de escribir porque su vacante (Contralor/Director de Contabilidad) calza directo con el pitch financiero, y **UNESA** es la señal más fuerte por volumen de vacantes (6 activas).
