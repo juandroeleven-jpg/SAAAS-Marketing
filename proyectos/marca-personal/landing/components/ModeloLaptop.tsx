@@ -32,20 +32,18 @@ const BARRA_H = 74;
 // Grafo tipo canvas de automatizacion real (fan-in / fan-out sobre un nodo
 // central), no circulos sueltos con etiquetas. Coordenadas = centro de cada
 // tarjeta, en espacio de diseno.
-// Al acercar la camara, el encuadre recorta los bordes de la pantalla: solo
-// queda visible aproximadamente x[360, 1575] del espacio de diseno. Por eso
-// el grafo se mantiene compactado dentro de ese rango -- con las posiciones
-// anteriores (columna de entrada en x=250) Webhook y Discord quedaban fuera
-// de cuadro y el flujo perdia su origen.
-const TARJETA = { w: 290, h: 86 };
+// Ahora que el objeto entra completo en cuadro se ve toda la pantalla, asi
+// que el grafo vuelve a estar centrado en el espacio de diseno: abarca de
+// x=220 a x=1380, o sea centro exacto en 800 (DISENO.w / 2).
+const TARJETA = { w: 340, h: 100 };
 const NODOS = [
-  { id: "webhook", label: "Webhook", sub: "Disparador", x: 625, y: 300, color: "#F43F5E" },
-  { id: "discord", label: "Discord", sub: "Mensajes", x: 625, y: 730, color: "#5865F2" },
-  { id: "gpt", label: "ChatGPT", sub: "Agente", x: 1010, y: 515, color: "#10B981" },
-  { id: "slack", label: "Slack", sub: "Notifica", x: 1380, y: 250, color: "#36C5F0" },
-  { id: "drive", label: "Drive", sub: "Archiva", x: 1380, y: 430, color: "#FBBC04" },
-  { id: "notion", label: "Notion", sub: "Registra", x: 1380, y: 610, color: "#E5E7EB" },
-  { id: "canva", label: "Canva", sub: "Publica", x: 1380, y: 790, color: "#8B5CF6" },
+  { id: "webhook", label: "Webhook", sub: "Disparador", x: 390, y: 300, color: "#F43F5E" },
+  { id: "discord", label: "Discord", sub: "Mensajes", x: 390, y: 730, color: "#5865F2" },
+  { id: "gpt", label: "ChatGPT", sub: "Agente", x: 800, y: 515, color: "#10B981" },
+  { id: "slack", label: "Slack", sub: "Notifica", x: 1210, y: 250, color: "#36C5F0" },
+  { id: "drive", label: "Drive", sub: "Archiva", x: 1210, y: 430, color: "#FBBC04" },
+  { id: "notion", label: "Notion", sub: "Registra", x: 1210, y: 610, color: "#E5E7EB" },
+  { id: "canva", label: "Canva", sub: "Publica", x: 1210, y: 790, color: "#8B5CF6" },
 ];
 const CONEXIONES: [string, string][] = [
   ["webhook", "gpt"],
@@ -212,14 +210,14 @@ function usarTexturaPantalla() {
     const semaforo = ["#FF5F57", "#FEBC2E", "#28C840"];
     semaforo.forEach((c, i) => {
       ctx.beginPath();
-      ctx.arc(660 + i * 46, BARRA_H / 2, 14, 0, Math.PI * 2);
+      ctx.arc(58 + i * 48, BARRA_H / 2, 14, 0, Math.PI * 2);
       ctx.fillStyle = c;
       ctx.fill();
     });
     ctx.fillStyle = "#A9B7CA";
     ctx.font = "600 30px system-ui, sans-serif";
     ctx.textAlign = "left";
-    ctx.fillText("Codeflow — Orquestador", 812, BARRA_H / 2 + 11);
+    ctx.fillText("Codeflow — Orquestador", 210, BARRA_H / 2 + 11);
     // Indicador "en ejecucion", parpadeo lento
     const vivo = 0.55 + Math.sin(t * 2.4) * 0.45;
     ctx.beginPath();
@@ -237,8 +235,8 @@ function usarTexturaPantalla() {
       ctx.beginPath();
       ctx.moveTo(c.x0, c.y0);
       ctx.bezierCurveTo(c.cx0, c.cy0, c.cx1, c.cy1, c.x1, c.y1);
-      ctx.strokeStyle = "#2B3A4F";
-      ctx.lineWidth = 5;
+      ctx.strokeStyle = "#41556F";
+      ctx.lineWidth = 8;
       ctx.stroke();
     });
 
@@ -250,11 +248,11 @@ function usarTexturaPantalla() {
       const [px, py] = puntoEnCurva(c, p);
       const desvanece = Math.sin(p * Math.PI); // entra y sale sin cortes
       ctx.beginPath();
-      ctx.arc(px, py, 20, 0, Math.PI * 2);
+      ctx.arc(px, py, 28, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(96, 165, 250, ${0.16 * desvanece})`;
       ctx.fill();
       ctx.beginPath();
-      ctx.arc(px, py, 8, 0, Math.PI * 2);
+      ctx.arc(px, py, 11, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(147, 197, 253, ${desvanece})`;
       ctx.fill();
     });
@@ -264,29 +262,29 @@ function usarTexturaPantalla() {
       const x = n.x - TARJETA.w / 2;
       const y = n.y - TARJETA.h / 2;
 
-      rectRedondeado(ctx, x, y, TARJETA.w, TARJETA.h, 18);
+      rectRedondeado(ctx, x, y, TARJETA.w, TARJETA.h, 22);
       ctx.fillStyle = "#19212D";
       ctx.fill();
-      ctx.strokeStyle = "#2C3A4D";
-      ctx.lineWidth = 3;
+      ctx.strokeStyle = "#3A4B62";
+      ctx.lineWidth = 4;
       ctx.stroke();
 
       // Cuadrito de color del servicio
-      rectRedondeado(ctx, x + 18, y + 19, 48, 48, 13);
+      rectRedondeado(ctx, x + 22, y + 23, 56, 56, 15);
       ctx.fillStyle = n.color;
       ctx.fill();
 
       ctx.textAlign = "left";
       ctx.fillStyle = "#E6EDF7";
-      ctx.font = "600 30px system-ui, sans-serif";
-      ctx.fillText(n.label, x + 82, y + 40);
+      ctx.font = "600 36px system-ui, sans-serif";
+      ctx.fillText(n.label, x + 96, y + 46);
       ctx.fillStyle = "#77869B";
-      ctx.font = "500 24px system-ui, sans-serif";
-      ctx.fillText(n.sub, x + 82, y + 70);
+      ctx.font = "500 28px system-ui, sans-serif";
+      ctx.fillText(n.sub, x + 96, y + 81);
 
       // Punto de estado, desfasado por nodo
       ctx.beginPath();
-      ctx.arc(x + TARJETA.w - 26, y + TARJETA.h / 2, 6, 0, Math.PI * 2);
+      ctx.arc(x + TARJETA.w - 28, y + TARJETA.h / 2, 8, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(52, 211, 153, ${0.35 + Math.abs(Math.sin(t * 1.6 + i)) * 0.65})`;
       ctx.fill();
     });
