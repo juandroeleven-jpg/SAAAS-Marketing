@@ -26,6 +26,22 @@
 
 **Fuentes:** [IDB — creación de CFE](https://www.iadb.org/en/project/PN-L1126), [LinkedIn empresa](https://pa.linkedin.com/company/centrofinancieroempresarial), [Portal de empleos CFE](https://cfe.hiringroom.com/jobs)
 
+#### 🎯 Contacto directo identificado — Maria Laura Trujillo
+
+**Cargo:** Head of Legal and Compliance @ Centro Financiero Empresarial | Attorney, Banking and Finance Law
+**Grado:** 3er grado. **Perfil:** https://www.linkedin.com/in/maria-laura-trujillo-2990b9176/
+**Nota de honestidad:** su rol es Legal/Cumplimiento, no Finanzas puras — el ángulo del mensaje debe hablar de automatización de reporting de cumplimiento, no de nómina. Actividad más reciente: contenido de la empresa que ella compartió hace 4 meses (modelo operativo de CFE) — no hay publicación propia más fresca para comentar con algo específico y genuino.
+
+**Motor 1 — Comentario sugerido** (sobre el post de CFE que ella compartió, tema "modelo descentralizado por sucursales"):
+> "Me parece muy acertado ese modelo de decisión en campo — en automatización financiera vemos algo parecido: entre más cerca esté el dato de donde ocurre la operación, más rápido y preciso es el reporting. Gracias por compartirlo, Maria Laura."
+
+**Motor 2 — Mensaje sugerido:**
+> "Hola Maria Laura, vi que en CFE mantienen un modelo ágil por sucursal — trabajo en automatización de reporting financiero y de cumplimiento con IA (Codeflow AI), con casos reales de auditoría automática de nómina y dashboards de cartera. Me encantaría mostrarte cómo aplicaría ese enfoque en CFE. ¿15 min esta semana?"
+
+**Evidencia:** ![Maria Laura Trujillo - perfil](evidencia-prospectos/cfe-maria-laura-trujillo-perfil.jpg)
+
+**Estado:** contacto identificado y contenido redactado — pendiente de revisión y envío manual por Juan Diego.
+
 ---
 
 ## 2. GVA Hospitality (VerdeAzul Hotels / The Santa Maria Hotel)
@@ -45,6 +61,19 @@
 ![GVA Hospitality - LinkedIn](evidencia-prospectos/gva-hospitality.jpg)
 
 **Fuentes:** [LinkedIn empresa](https://pa.linkedin.com/company/the-bristol-hospitality-group), [Grupo Verde Azul — equipo](https://grupoverdeazul.com/en/our-team/)
+
+#### 🎯 Contacto directo identificado — Glenn Simon
+
+**Cargo:** Chief Operating Officer at VerdeAzul Hotels. **Grado:** 3er grado. **Perfil:** https://www.linkedin.com/in/glenn-simon-49a9857/
+**Nota de honestidad (importante):** es el COO real, pero no tiene publicaciones propias — su actividad reciente son solo comentarios cortos tipo "Congrats 🙌" en publicaciones ajenas (2 días y 1 semana), sin sustancia para un comentario Motor 1 genuino y específico. No se fuerza un comentario sobre contenido que no da pie a nada real.
+**Recomendación:** ir directo a Motor 2 con él, o esperar a que publique contenido propio.
+
+**Motor 2 — Mensaje sugerido:**
+> "Hola Glenn, trabajo en automatización de reporting y control de costos con IA (Codeflow AI) — ya construí dashboards de rendimiento y control de costos para operaciones hoteleras con múltiples propiedades. Me encantaría mostrarte cómo se vería algo así aplicado a GVA Hospitality. ¿15 min esta semana?"
+
+**Evidencia:** ![Glenn Simon - perfil](evidencia-prospectos/gva-hospitality-glenn-simon-perfil.jpg)
+
+**Estado:** contacto identificado — pendiente de revisión y envío manual por Juan Diego.
 
 ---
 
@@ -156,6 +185,18 @@ Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs 
 
 **Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/bibankpa/)
 
+#### 🎯 Contacto directo identificado — Victor Viggiano
+
+**Cargo:** Presidente Ejecutivo de Bi Bank Panamá. **Grado:** 3er grado. **Perfil:** https://www.linkedin.com/in/victor-viggiano-6a2700261/
+**Nota de honestidad (importante):** es el máximo cargo real, pero su actividad más reciente en LinkedIn es de hace 9 meses y 1 año — no hay contenido lo bastante fresco para un comentario Motor 1 que se vea genuino y actual. Se recomienda ir directo a Motor 2 con él, o monitorear su perfil por unas semanas antes de comentar.
+
+**Motor 2 — Mensaje sugerido:**
+> "Hola Victor, vi la vacante de Analista de Procesos y Proyectos Operativos en Bi Bank — trabajo en automatización de procesos y reporting con IA (Codeflow AI), con casos reales de auditoría automática y dashboards de rendimiento para operaciones multi-área. Me encantaría mostrarte cómo aplicaría ese enfoque en Bi Bank. ¿15 min esta semana?"
+
+**Evidencia:** ![Victor Viggiano - perfil](evidencia-prospectos/bi-bank-victor-viggiano-perfil.jpg)
+
+**Estado:** contacto identificado — pendiente de revisión y envío manual por Juan Diego.
+
 ---
 
 ### 8. UETA — 🟢 Holding panameño real (201-500 empleados)
@@ -174,6 +215,14 @@ Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs 
 ![UETA - LinkedIn](evidencia-prospectos/ueta.jpg)
 
 **Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/ueta-inc./)
+
+#### ⚠️ Búsqueda de contacto directo — sin resultado limpio (nota de honestidad)
+
+Se buscaron decisores reales entre los empleados actuales de UETA en LinkedIn, con dos intentos:
+1. **"Miro Falic", CFO** — apareció como empleado actual de UETA en el filtro de búsqueda, pero al verificar su perfil su empleador real es **Bloomberg Línea** (medio digital de noticias financieras), no la marca de retail "Bloomberg" que pertenece a UETA. Es un falso positivo del buscador de LinkedIn — se descarta, no se contacta.
+2. **Sonia Espino, Gerente Regional en UETA Inc.** — confirmada como empleada real, pero su perfil muestra la insignia **"En busca de empleo"** — está buscando trabajo activamente, por lo que no es un decisor útil para el pitch (mismo criterio de descarte que se usó con Angélica Algandona en Feax International).
+
+**Conclusión honesta:** no se encontró todavía un contacto limpio y activo en UETA. El mensaje genérico de la ficha original sigue siendo válido para enviar a través del formulario de RRHH o a quien aparezca como Gerente/Contador en la vacante publicada, pero no hay un nombre propio verificado y recomendable en este momento.
 
 ---
 
@@ -194,6 +243,10 @@ Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs 
 
 **Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/tantalogroup/)
 
+#### ⚠️ Búsqueda de contacto directo — sin resultado (nota de honestidad)
+
+Se revisó la lista de empleados de Tantalo Hotel Kitchen Roofbar filtrados por "empresa actual" en LinkedIn: los únicos perfiles con nombre visible son personal operativo (ama de llaves, recepcionista, valet parking, bartender, asistente) — ningún gerente ni dueño visible con nombre propio; el resto son perfiles anonimizados ("Miembro de LinkedIn"). No se identificó un decisor real para esta ronda. El mensaje genérico de la ficha original sigue siendo la única opción disponible, dirigido al puesto de Gerente de Operaciones vacante, sin un nombre específico.
+
 ---
 
 ### 10. Barraza y Cia, S.A. — 🟡 Empresa panameña grande, aprobada por el usuario
@@ -213,6 +266,18 @@ Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs 
 
 **Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/barraza-y-cia/)
 
+#### 🎯 Contacto identificado (parcial) — Omar Castillo Castillo
+
+**Cargo:** Gerente de desarrollo de productos en Barraza y Cía., S.A. **Grado:** 3er grado. **Perfil:** https://www.linkedin.com/in/omar-castillo-castillo-31a52574/
+**Nota de honestidad:** no es un cargo de decisión de alto nivel (no es Gerente General ni de Planta), y su única actividad reciente son comentarios cortos tipo "¡Felicidades! 🎉" (3 semanas y 2 meses) sin sustancia para un comentario Motor 1 genuino. Se documenta como el contacto más visible encontrado, no como el ideal — se recomienda usarlo solo si no aparece un mejor candidato (Gerente de Planta/Producción) más adelante.
+
+**Motor 2 — Mensaje sugerido:**
+> "Hola Omar, vi la búsqueda de Jefe de Producción en Barraza y Cia — trabajo en automatización de reporting de planta con IA (Codeflow AI), y construí un dashboard de rendimiento diario por planta con drill-down por área. Me encantaría mostrarte cómo se vería algo similar en Barraza. ¿15 min esta semana?"
+
+**Evidencia:** ![Omar Castillo Castillo - perfil](evidencia-prospectos/barraza-omar-castillo-perfil.jpg)
+
+**Estado:** contacto identificado (parcial, no ideal) — pendiente de revisión por Juan Diego.
+
 ---
 
 ### 11. Mowat Corporation — 🟡 Aprobada por el usuario, con una alerta de honestidad
@@ -230,6 +295,10 @@ Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs 
 **Evidencia:** (pendiente de captura)
 
 **Fuentes:** [LinkedIn empleo](https://www.linkedin.com/jobs/) (vacante vista en búsqueda de empleos, Panamá, últimos 7 días)
+
+#### ⚠️ Búsqueda de contacto directo — no realizada (nota de honestidad)
+
+Dado que esta empresa ya tiene una alerta activa de posible intermediario/agencia de reclutamiento (ver nota arriba) y solo tiene 2-10 empleados registrados, no se invirtió tiempo en buscar un contacto individual en esta ronda — el mensaje ya sugerido, que pregunta directamente si Mowat es el empleador final, sigue siendo el mejor primer paso antes de identificar a una persona específica.
 
 ---
 
@@ -252,6 +321,24 @@ Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs 
 
 **Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/punto-pago-panama/)
 
+#### 🎯 Contacto directo identificado — Andrey Gorsky
+
+**Cargo:** CEO / Founder de Punto Pago SA | Venture Partner – FinSight Ventures. **Grado:** 2º grado. **Perfil:** https://www.linkedin.com/in/andrey-gorsky-0b420053/
+**Por qué es un excelente contacto:** es el fundador y CEO real, con insignia de verificación, muy activo en LinkedIn (publicaciones propias cada pocos días sobre el crecimiento de Punto Pago, resultados de negocio y fintech en general).
+
+**Motor 1 — Comentario sugerido #1** (sobre su post de hace 3 días, celebrando el Series B de Cashea vía FinSight Ventures):
+> "Felicidades a todo el equipo de FinSight — es una señal fuerte de hacia dónde va el capital en fintech de mercados emergentes. Se nota la visión detrás de Punto Pago también, construyendo el mismo tipo de ecosistema financiero acá en Panamá."
+
+**Motor 1 — Comentario sugerido #2** (sobre su post de hace 2 semanas, resultados H1 2026 — 200K+ préstamos, 10x crecimiento interanual):
+> "Ese dato del 44% de clientes sin historial crediticio previo es potente — construir un modelo de evaluación distinto en vez de rechazar por falta de historial es exactamente el tipo de decisión que separa a una fintech que solo mide de una que realmente construye inclusión financiera. Felicidades por los resultados de H1."
+
+**Motor 2 — Mensaje sugerido:**
+> "Hola Andrey, felicidades por los resultados de crecimiento de Punto Pago este semestre — impresionante el 10x interanual en préstamos. Trabajo en automatización financiera con IA (Codeflow AI): construí dashboards de mora y seguimiento automático de cartera para negocios fintech. Me encantaría mostrarte cómo aplicaría eso a la operación de cobranza de Punto Pago, especialmente con el volumen que están manejando ahora. ¿15 min esta semana?"
+
+**Evidencia:** ![Andrey Gorsky - perfil](evidencia-prospectos/puntopago-andrey-gorsky-perfil.jpg)
+
+**Estado:** contacto identificado y contenido redactado — pendiente de revisión y envío manual por Juan Diego.
+
 ---
 
 ### 13. Cervecería Nacional, S. de R.L. — 🟡 Empresa grande panameña, con alerta de honestidad
@@ -272,6 +359,10 @@ Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs 
 ![Cervecería Nacional - LinkedIn](evidencia-prospectos/cerveceria-nacional.jpg)
 
 **Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/cervecer%C3%ADa-nacional-panama/)
+
+#### ⚠️ Búsqueda de contacto directo — pausada (nota de honestidad)
+
+Dado que esta empresa ya tiene una alerta pendiente de resolución con el usuario (propiedad de AB InBev), no se invirtió tiempo en buscar un contacto individual en esta ronda hasta que Juan Diego confirme si quiere tratarla como "empresa panameña grande" o excluirla del todo.
 
 ---
 
@@ -294,6 +385,10 @@ Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs 
 
 **Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/dichter-neira-research/)
 
+#### ⚠️ Actualización importante (nota de honestidad)
+
+Al intentar verificar el contacto directo en esta ronda, la página de empresa de Dichter & Neira Research en LinkedIn ya **no está disponible** (LinkedIn redirige a una página de "no disponible/unavailable"). Esto puede significar que la página fue dada de baja, renombrada, o fusionada con otra entidad. Se recomienda no priorizar este prospecto hasta confirmar por otra vía (web propia de la empresa) que sigue operando activamente en Panamá bajo ese nombre.
+
 ---
 
 ### 15. LAC Legal — 🟢 Confirmado
@@ -312,6 +407,21 @@ Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs 
 ![LAC Legal - LinkedIn](evidencia-prospectos/lac-legal.jpg)
 
 **Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/lac-legal/)
+
+#### 🎯 Contacto directo identificado — Raúl Enrique González Casatti
+
+**Cargo:** Socio - LAC Legal | Legal500 (Tax) | Ranked Leaders League (Corporate tax). **Grado:** 2º grado. **Perfil:** https://www.linkedin.com/in/raul-enrique-gonzalez-casatti-55071415/
+**Por qué es un excelente contacto:** Socio real de la firma, especialista en impuestos, muy activo (publicaciones propias cada 3-4 semanas sobre temas fiscales y eventos con clientes empresariales).
+
+**Motor 1 — Comentario sugerido** (sobre su post de hace 3 semanas, evento ADEDAPP sobre sustancia económica y precios de transferencia):
+> "Excelente resumen, Raúl. La parte de recomendaciones prácticas para que las empresas evalúen sus estructuras y procesos internos es justo donde más se nota la brecha — muchas empresas todavía llevan ese control en hojas de cálculo dispersas en vez de un proceso auditable."
+
+**Motor 2 — Mensaje sugerido:**
+> "Hola Raúl, vi el trabajo que están haciendo desde LAC Legal en temas de sustancia económica y cumplimiento tributario — trabajo en automatización contable y de reporting con IA (Codeflow AI), con casos de auditoría automática y reducción de trabajo manual repetitivo para firmas de servicios profesionales. Me encantaría mostrarte cómo aplicaría eso al área contable/administrativa de LAC Legal. ¿15 min esta semana?"
+
+**Evidencia:** ![Raúl González Casatti - perfil](evidencia-prospectos/lac-legal-raul-gonzalez-casatti-perfil.jpg)
+
+**Estado:** contacto identificado y contenido redactado — pendiente de revisión y envío manual por Juan Diego.
 
 ---
 
@@ -337,6 +447,21 @@ Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs 
 ![Playa Blanca Hotel & Resort - LinkedIn](evidencia-prospectos/playa-blanca-hotel-resort.jpg)
 
 **Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/playa-blanca-hotel-resort-panam%C3%A1/)
+
+#### 🎯 Contacto directo identificado — Dyana Lisette Díaz Lucena
+
+**Cargo:** Gerente superior de marketing en Playa Blanca Hotel & Resort Panamá. **Grado:** 3er grado. **Perfil:** https://www.linkedin.com/in/dyana-lisette-d%C3%ADaz-lucena-149583359/
+**Nota de honestidad:** su rol es Marketing, no Finanzas/Operaciones — el ángulo del mensaje debe ajustarse (reporting comercial/ocupación, no financiero puro). Actividad reciente: hace 3 semanas (compartió contenido de Amadeus Hospitality sobre publicidad en redes).
+
+**Motor 1 — Comentario sugerido:**
+> "Interesante la oferta de Amadeus — en el sector hotelero cada vez se vuelve más crítico medir bien el retorno de cada canal, sobre todo cuando se maneja ocupación y ventas de varias líneas (habitaciones, eventos, bodas) al mismo tiempo. Gracias por compartirlo, Dyana."
+
+**Motor 2 — Mensaje sugerido:**
+> "Hola Dyana, vi la búsqueda de Diseñador Gráfico en Playa Blanca — trabajo en automatización de reporting y control operativo con IA (Codeflow AI), con dashboards de ocupación y rendimiento para operaciones hoteleras con múltiples áreas de servicio (habitaciones, eventos, bodas, ferias). Me encantaría mostrarte cómo se vería algo similar aplicado a Playa Blanca. ¿15 min esta semana?"
+
+**Evidencia:** ![Dyana Díaz Lucena - perfil](evidencia-prospectos/playablanca-dyana-diaz-perfil.jpg)
+
+**Estado:** contacto identificado y contenido redactado — pendiente de revisión y envío manual por Juan Diego.
 
 ---
 
@@ -371,6 +496,18 @@ El resto de búsquedas (contador, gerente de ventas, jefe de almacén, coordinad
 ![Inversiones Sagrav - LinkedIn](evidencia-prospectos/inversiones-sagrav.jpg)
 
 **Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/inversiones-sagrav/), [Portal CCIAP](https://cciap.hiringroomcampus.com/companies)
+
+#### 🎯 Contacto directo identificado — Jose Alfredo Delgado
+
+**Cargo:** Director Comercial en Inversiones Sagrav. **Grado:** 3er grado. **Perfil:** https://www.linkedin.com/in/jose-alfredo-delgado-940237a5/
+**Nota de honestidad:** su actividad reciente son solo comentarios cortos ("Congrats!!", "Espectacular") de hace 8-10 meses — no hay contenido lo bastante fresco ni sustancial para un comentario Motor 1 genuino. Se recomienda ir directo a Motor 2.
+
+**Motor 2 — Mensaje sugerido:**
+> "Hola Jose Alfredo, vi que Inversiones Sagrav está en búsqueda activa de talento — trabajo en automatización de reporting y control de inventario con IA (Codeflow AI), con casos aplicados a distribuidoras de equipos médicos/laboratorio. Me encantaría mostrarte cómo aplicaría eso a la operación de Sagrav. ¿15 min esta semana?"
+
+**Evidencia:** ![Jose Alfredo Delgado - perfil](evidencia-prospectos/sagrav-jose-delgado-perfil.jpg)
+
+**Estado:** contacto identificado — pendiente de revisión y envío manual por Juan Diego.
 
 ---
 
@@ -436,6 +573,10 @@ El resto de búsquedas (contador, gerente de ventas, jefe de almacén, coordinad
 
 **Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/vetsandpetspanama/), [Portal CCIAP](https://cciap.hiringroomcampus.com/companies)
 
+#### ⚠️ Búsqueda de contacto directo — sin resultado (nota de honestidad)
+
+Se revisó la lista de empleados actuales de Vets&Pets Panamá en LinkedIn: solo aparecen perfiles de personal técnico (químico-farmacéutico, veterinario), sin ningún gerente o dueño visible con nombre propio. Empresa muy pequeña (67 seguidores) — no se identificó un decisor real en esta ronda. El mensaje genérico de la ficha original sigue siendo la única opción disponible.
+
 ---
 
 ### 20. Medcom Panamá (Corporación Medcom) — 🟢 Confirmado, empresa panameña grande
@@ -455,6 +596,21 @@ El resto de búsquedas (contador, gerente de ventas, jefe de almacén, coordinad
 
 **Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/corporacion-medcom/), [Portal CCIAP](https://cciap.hiringroomcampus.com/companies)
 
+#### 🎯 Contacto directo identificado — Geraldine Prescott
+
+**Cargo:** Digital & Media Leader | Content, innovation & revenue growth | Streaming | Creators economy | AI, en Medcom Panamá. **Grado:** 2º grado. **Perfil:** https://www.linkedin.com/in/geraldine-prescott-62207141/
+**Nota de honestidad:** perfil con insignia de verificación y rol de liderazgo real en el área digital de Medcom, pero su publicación propia más reciente es de hace 10 meses (reconocimiento en los Effies 2025 como jurado) — no es contenido de esta semana, pero sigue siendo lo bastante reciente y específico para un comentario genuino.
+
+**Motor 1 — Comentario sugerido:**
+> "Qué buena forma de aportar al ecosistema creativo panameño desde el otro lado, evaluando en vez de solo presentando. Se nota el nivel que tiene el trabajo digital de Medcom, entre Gio Alemán y los reconocimientos internacionales."
+
+**Motor 2 — Mensaje sugerido:**
+> "Hola Geraldine, vi que Medcom está en búsqueda activa de talento — trabajo en automatización de reporting operativo con IA (Codeflow AI), con casos aplicados a operaciones de medios con múltiples canales/unidades de negocio. Me encantaría mostrarte cómo se vería algo similar en Medcom. ¿15 min esta semana?"
+
+**Evidencia:** ![Geraldine Prescott - perfil](evidencia-prospectos/medcom-geraldine-prescott-perfil.jpg)
+
+**Estado:** contacto identificado y contenido redactado — pendiente de revisión y envío manual por Juan Diego.
+
 ---
 
 ### 21. Unión Nacional de Empresas, S.A. (UNESA) — 🟡 Empresa panameña grande, aprobar bajo criterio ajustado
@@ -473,6 +629,18 @@ El resto de búsquedas (contador, gerente de ventas, jefe de almacén, coordinad
 ![UNESA - LinkedIn](evidencia-prospectos/unesa.jpg)
 
 **Fuentes:** [LinkedIn empresa](https://www.linkedin.com/company/union-nacional-de-empresas-s-a-/), [Portal CCIAP](https://cciap.hiringroomcampus.com/companies)
+
+#### 🎯 Contacto directo identificado — Diego Quijano Durán
+
+**Cargo:** Vicepresidente de Vivienda en UNESA (Grupo SUCASA); Socio-Fundador de Cervecería Clandestina; Expresidente del CNP. **Grado:** 3er grado. **Perfil:** https://www.linkedin.com/in/diegoquijanoaa06743/
+**Por qué es un buen contacto:** cargo de vicepresidencia real dentro del grupo, con perfil empresarial visible (además fundador de otra empresa y expresidente de un gremio). Actividad reciente: comentarios cortos ("Awesome! Congratulations!") de hace 8-10 meses — no hay publicación propia sustancial más fresca.
+
+**Motor 2 — Mensaje sugerido:**
+> "Hola Diego, vi que UNESA tiene varias búsquedas activas en este momento — trabajo en automatización de reporting financiero y operativo con IA (Codeflow AI), con casos aplicados a grupos empresariales diversificados con múltiples líneas de negocio (como Sucasa y las demás unidades de UNESA). Me encantaría mostrarte cómo aplicaría eso a la operación de UNESA. ¿15 min esta semana?"
+
+**Evidencia:** ![Diego Quijano Durán - perfil](evidencia-prospectos/unesa-diego-quijano-perfil.jpg)
+
+**Estado:** contacto identificado — pendiente de revisión y envío manual por Juan Diego.
 
 ---
 
@@ -507,3 +675,37 @@ El resto de búsquedas (contador, gerente de ventas, jefe de almacén, coordinad
 | 21 | UNESA | 1,000-5,000 ✅ | Sí ✅ | 🟡 Alta (criterio ajustado) | 6 vacantes activas — la mayor señal de toda la búsqueda |
 
 **Siguiente paso recomendado:** con el criterio ajustado, los 3 más sólidos para contactar esta semana son **Generadora Gatún** (vacante de 17 horas), **Centro Financiero Empresarial** (ya verificado en Ronda 1) y **Bi Bank Panamá**. UETA y Tantalo son el siguiente lote. Barraza y Cia tiene la vacante más reciente de todas, pero el ángulo de mensaje debe ser operativo/planta, no financiero. Mowat Corporation necesita una pregunta de calificación antes de invertir tiempo en el mensaje completo, por la posible intermediación. De la Ronda 3, **Punto Pago Panamá** y **LAC Legal** son los más listos para contactar ya; Cervecería Nacional requiere que el usuario confirme si acepta el vínculo con AB InBev antes de escribir. De la Ronda 5 (Método B, directorio CCIAP), **Feax International** es el mensaje más fácil de escribir porque su vacante (Contralor/Director de Contabilidad) calza directo con el pitch financiero, y **UNESA** es la señal más fuerte por volumen de vacantes (6 activas).
+
+---
+
+## Ronda 6 — Búsqueda de contacto directo (decisor real) en todas las empresas restantes del tracker
+
+**Contexto:** siguiendo la instrucción del usuario de identificar, para cada empresa ya documentada, a la persona real que la dirige (para tener un punto de contacto más directo que un mensaje genérico "Hola [Nombre]"), y de preparar 2 comentarios Motor 1 + 1 mensaje Motor 2 por cada contacto — bajo la regla **"Yo preparo, vos envías"**: Claude solo identifica y redacta, Juan Diego revisa y publica/envía manualmente desde su propia cuenta. Ya se había hecho la prueba inicial con 2 empresas (Feax International y Generadora Gatún, ver arriba); esta ronda cubre el resto de empresas activas del tracker.
+
+**Método:** búsqueda de personas en LinkedIn filtrada por "Empresas actuales" (`currentCompany`) — no por keyword libre, para evitar falsos positivos (una persona que solo menciona el nombre de la empresa en su perfil sin trabajar ahí) — combinada con palabras clave de cargo (gerente, director, presidente, CEO, fundador, socio). Para cada candidato encontrado se verificó su perfil completo y su actividad reciente antes de redactar cualquier comentario, seleccionando siempre el título más senior disponible con actividad razonablemente reciente.
+
+**Resultado — contacto identificado y contenido redactado (7 de 16 empresas revisadas):**
+
+| Empresa | Contacto | Cargo | Grado | Calidad de actividad |
+|---|---|---|---|---|
+| Centro Financiero Empresarial | Maria Laura Trujillo | Head of Legal and Compliance | 3er | Media (contenido compartido, 4 meses) |
+| GVA Hospitality | Glenn Simon | COO | 3er | Baja (solo comentarios cortos) |
+| Bi Bank Panamá | Victor Viggiano | Presidente Ejecutivo | 3er | Baja (9m-1año) |
+| Barraza y Cia | Omar Castillo Castillo | Gerente de Desarrollo de Productos | 3er | Baja (solo "Felicidades") |
+| **Punto Pago Panamá** | **Andrey Gorsky** | **CEO / Founder** | **2º** | **Muy alta (posts propios cada pocos días)** |
+| **LAC Legal** | **Raúl Enrique González Casatti** | **Socio** | **2º** | **Alta (posts propios cada 3-4 semanas)** |
+| Playa Blanca Hotel & Resort | Dyana Lisette Díaz Lucena | Gerente Superior de Marketing | 3er | Media (3 semanas) |
+| Inversiones Sagrav | Jose Alfredo Delgado | Director Comercial | 3er | Baja (8-10 meses) |
+| Medcom Panamá | Geraldine Prescott | Digital & Media Leader | 2º | Media (10 meses, pero contenido sustancial) |
+| UNESA | Diego Quijano Durán | Vicepresidente de Vivienda | 3er | Baja (8-10 meses) |
+
+**Sin contacto limpio identificado (nota de honestidad, no se fuerza):**
+
+- **UETA** — el único "CFO" encontrado resultó ser un falso positivo (empleado real de "Bloomberg Línea", medio de noticias, no de la marca retail "Bloomberg" de UETA); la única gerente regional confirmada tiene la insignia "En busca de empleo" (job-hunting, se descarta por la misma regla usada con Angélica Algandona en Feax).
+- **Tantalo Hotel Kitchen Roofbar** — solo aparece personal operativo (ama de llaves, recepcionista, bartender, valet) con nombre visible; el resto son perfiles anonimizados.
+- **Vets&Pets Panamá** — solo personal técnico (químico-farmacéutico, veterinario) visible, empresa muy pequeña (67 seguidores).
+- **Mowat Corporation** — no se investigó; ya tiene alerta de posible intermediario y solo 2-10 empleados, no justifica la inversión de tiempo.
+- **Cervecería Nacional** — no se investigó; pendiente de que el usuario confirme si acepta el vínculo con AB InBev antes de invertir tiempo en un contacto.
+- **Dichter & Neira Research** — su página de empresa en LinkedIn ya no está disponible ("unavailable") — posible baja o cambio de nombre; se recomienda no priorizar hasta confirmar por otra vía que sigue operando.
+
+**Nota de honestidad general sobre esta ronda:** de las 16 empresas revisadas (de las 21 documentadas, excluyendo las 2 ya trabajadas en la prueba inicial —Feax y Gatún— y las 3 descartadas/pendientes de Ronda 1 —Endavant, Platinum Brands, Productos Nevada—), se encontró un contacto identificable en 10 y se redactaron comentarios Motor 1 + mensaje Motor 2 completos solo para las que tenían actividad reciente y sustancial (Punto Pago y LAC Legal son los casos ideales; el resto tiene al menos el mensaje Motor 2 listo, con la actividad de cada contacto documentada honestamente para que Juan Diego decida si prefiere esperar a que publiquen algo más fresco antes de comentar). En las 6 empresas sin contacto limpio, no se inventó ni forzó un nombre — se documenta la razón concreta del descarte en cada caso.
