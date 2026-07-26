@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef } from "react";
-import { Canvas, useThree } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useGLTF, Center } from "@react-three/drei";
 import * as THREE from "three";
 
@@ -14,34 +14,88 @@ import * as THREE from "three";
 // mitad izquierda del atlas UV compartido: u[0.004-0.5] v[0.004-0.861]
 // (medido con un debug de bounding box de UV). Las coordenadas de los
 // nodos son fracciones 0-1 DENTRO de ese rectangulo, no del canvas completo.
-const PANTALLA_UV = { uMin: 0.09, uMax: 0.41, vMin: 0.13, vMax: 0.72 };
+// Medido con una grilla de calibracion 10x10 renderizada sobre la malla: la
+// malla "Object_6" cubre la tapa ENTERA (cara trasera incluida), y la
+// pantalla frontal ocupa todo el ancho del rango UV pero solo la MITAD
+// INFERIOR en V -- v por encima de ~0.43 cae en la parte de atras de la
+// tapa. Los valores de abajo son esa region frontal con un margen adentro
+// que hace de bisel.
+const PANTALLA_UV = { uMin: 0.038, uMax: 0.466, vMin: 0.522, vMax: 0.826 };
 
+// Espacio de diseno en el que se dibuja la UI de la pantalla, en 16:10 como
+// una pantalla real. Se "aplasta" al meterlo en el rectangulo UV (que es mas
+// alto que ancho): la GPU lo vuelve a estirar al mapearlo sobre la tapa, asi
+// que las proporciones salen correctas en el render final.
+const DISENO = { w: 1600, h: 1000 };
+const BARRA_H = 74;
+
+// Grafo tipo canvas de automatizacion real (fan-in / fan-out sobre un nodo
+// central), no circulos sueltos con etiquetas. Coordenadas = centro de cada
+// tarjeta, en espacio de diseno.
+const TARJETA = { w: 310, h: 86 };
 const NODOS = [
-  { id: "webhook", label: "Webhook", x: 0.15, y: 0.78, color: "#F43F5E" },
-  { id: "slack", label: "Slack", x: 0.62, y: 0.85, color: "#22C55E" },
-  { id: "gpt", label: "ChatGPT", x: 0.42, y: 0.58, color: "#10B981" },
-  { id: "drive", label: "Drive", x: 0.16, y: 0.4, color: "#2563EB" },
-  { id: "canva", label: "Canva", x: 0.68, y: 0.5, color: "#8B5CF6" },
-  { id: "notion", label: "Notion", x: 0.82, y: 0.3, color: "#0F1B2D" },
-  { id: "discord", label: "Discord", x: 0.32, y: 0.18, color: "#5865F2" },
+  { id: "webhook", label: "Webhook", sub: "Disparador", x: 250, y: 300, color: "#F43F5E" },
+  { id: "discord", label: "Discord", sub: "Mensajes", x: 250, y: 730, color: "#5865F2" },
+  { id: "gpt", label: "ChatGPT", sub: "Agente", x: 760, y: 515, color: "#10B981" },
+  { id: "slack", label: "Slack", sub: "Notifica", x: 1290, y: 250, color: "#36C5F0" },
+  { id: "drive", label: "Drive", sub: "Archiva", x: 1290, y: 430, color: "#FBBC04" },
+  { id: "notion", label: "Notion", sub: "Registra", x: 1290, y: 610, color: "#E5E7EB" },
+  { id: "canva", label: "Canva", sub: "Publica", x: 1290, y: 790, color: "#8B5CF6" },
 ];
 const CONEXIONES: [string, string][] = [
-  ["webhook", "slack"],
-  ["slack", "gpt"],
+  ["webhook", "gpt"],
+  ["discord", "gpt"],
+  ["gpt", "slack"],
   ["gpt", "drive"],
+  ["gpt", "notion"],
   ["gpt", "canva"],
-  ["canva", "notion"],
-  ["drive", "discord"],
 ];
 function nodo(id: string) {
   return NODOS.find((n) => n.id === id)!;
 }
 
+// Curva entre el borde derecho de la tarjeta origen y el izquierdo de la
+// destino, con tiradores horizontales -- el mismo trazo que usan n8n/Zapier.
+function curva(a: (typeof NODOS)[number], b: (typeof NODOS)[number]) {
+  const x0 = a.x + TARJETA.w / 2;
+  const y0 = a.y;
+  const x1 = b.x - TARJETA.w / 2;
+  const y1 = b.y;
+  const dx = Math.max(60, (x1 - x0) * 0.5);
+  return { x0, y0, cx0: x0 + dx, cy0: y0, cx1: x1 - dx, cy1: y1, x1, y1 };
+}
+
+function puntoEnCurva(c: ReturnType<typeof curva>, t: number): [number, number] {
+  const u = 1 - t;
+  const x =
+    u * u * u * c.x0 + 3 * u * u * t * c.cx0 + 3 * u * t * t * c.cx1 + t * t * t * c.x1;
+  const y =
+    u * u * u * c.y0 + 3 * u * u * t * c.cy0 + 3 * u * t * t * c.cy1 + t * t * t * c.y1;
+  return [x, y];
+}
+
+function rectRedondeado(
+  ctx: CanvasRenderingContext2D,
+  x: number,
+  y: number,
+  w: number,
+  h: number,
+  r: number
+) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
+
 function usarTexturaPantalla() {
   const canvas = useMemo(() => {
     const c = document.createElement("canvas");
-    c.width = 1024;
-    c.height = 640;
+    c.width = 2048;
+    c.height = 1280;
     return c;
   }, []);
   const textura = useMemo(() => {
@@ -69,112 +123,157 @@ function usarTexturaPantalla() {
     return t;
   }, [canvas]);
 
-  // NOTA DE DISENO: esta es la version "estatica" (intento 4 ganador) --
-  // se dibuja el contenido UNA sola vez (sin useFrame), por lo que se
-  // pierde la animacion de los puntos viajando por las conexiones y el
-  // pulso de los nodos. Se eligio esta opcion sobre trocia-three-text
-  // (intento 2, preserva la animacion) porque troika requiere resolver 3
-  // bugs adicionales (mesh equivocada por ancestro duplicado, fetch de
-  // fuente sin red disponible en este entorno, orientacion de texto vs.
-  // normal de la cara) que no se pueden verificar de forma solida sin
-  // acceso a red para la carga de la fuente en este pipeline. La textura
-  // estatica es la opcion que se puede validar completamente end-to-end
-  // aqui: menos piezas moviles, mismo fix de espejado, sin animacion.
-  useEffect(() => {
+  // El bisel negro no cambia nunca: se pinta una sola vez sobre TODO el
+  // canvas y despues cada frame solo se redibuja el rectangulo de pantalla.
+  // (La malla cubre la tapa entera, cara trasera incluida, asi que este
+  // negro tambien deja la parte de atras oscura como en el modelo original.)
+  const biselPintado = useRef(false);
+
+  useFrame((state) => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    const t = 0.6; // instante fijo: fase agradable de nodos/puntos, sin reloj
+    const t = state.clock.getElapsedTime();
     const W = canvas.width;
     const H = canvas.height;
 
-    // Convierte una coordenada fraccional (0-1 dentro de "la pantalla")
-    // a pixeles del canvas, ubicandola dentro del rectangulo UV real que
-    // usa esta malla, y compensando el flipY por defecto de las texturas
-    // en three.js (fila 0 del canvas = V alto, no V bajo).
-    function mapear(nx: number, ny: number): [number, number] {
-      const u = PANTALLA_UV.uMin + nx * (PANTALLA_UV.uMax - PANTALLA_UV.uMin);
-      const v = PANTALLA_UV.vMin + ny * (PANTALLA_UV.vMax - PANTALLA_UV.vMin);
-      return [u * W, (1 - v) * H];
+    if (!biselPintado.current) {
+      ctx.fillStyle = "#08090B";
+      ctx.fillRect(0, 0, W, H);
+      biselPintado.current = true;
     }
 
-    ctx.fillStyle = "#E8ECF5";
-    ctx.fillRect(0, 0, W, H);
-    const [rx0, ry0] = mapear(0, 0);
-    const [rx1, ry1] = mapear(1, 1);
-    ctx.fillStyle = "#FFFFFF";
-    ctx.fillRect(Math.min(rx0, rx1), Math.min(ry0, ry1), Math.abs(rx1 - rx0), Math.abs(ry1 - ry0));
+    // Rectangulo real de "pantalla" dentro del atlas UV compartido. El eje V
+    // va invertido respecto a las filas del canvas (flipY por defecto de las
+    // texturas en three.js), por eso vMax define el borde superior.
+    const x0 = PANTALLA_UV.uMin * W;
+    const x1 = PANTALLA_UV.uMax * W;
+    const y0 = (1 - PANTALLA_UV.vMax) * H;
+    const y1 = (1 - PANTALLA_UV.vMin) * H;
+    const anchoRect = x1 - x0;
+    const altoRect = y1 - y0;
 
-    // Fix "texto espejado": rota 180 grados TODO lo que se dibuje de aca
-    // en adelante (lineas, puntos, nodos y texto), pero solo alrededor del
-    // centro del rectangulo PANTALLA_UV real -- no del canvas completo --
-    // para no desplazar el contenido fuera del area que la malla muestrea.
-    const centroX = (rx0 + rx1) / 2;
-    const centroY = (ry0 + ry1) / 2;
     ctx.save();
-    ctx.translate(centroX, centroY);
+    // Fix "texto espejado": la malla muestrea este sub-rectangulo con el UV
+    // rotado 180 grados, asi que se rota todo el dibujo alrededor del centro
+    // del propio rectangulo (no del canvas) para compensarlo.
+    ctx.translate((x0 + x1) / 2, (y0 + y1) / 2);
     ctx.rotate(Math.PI);
-    ctx.translate(-centroX, -centroY);
+    ctx.translate(-(x0 + x1) / 2, -(y0 + y1) / 2);
+    // A partir de aca se dibuja en el espacio de diseno 16:10; la escala no
+    // uniforme lo aplasta dentro del rectangulo UV y la GPU lo re-estira al
+    // proyectarlo sobre la tapa, devolviendo las proporciones correctas.
+    ctx.translate(x0, y0);
+    ctx.scale(anchoRect / DISENO.w, altoRect / DISENO.h);
+    ctx.beginPath();
+    ctx.rect(0, 0, DISENO.w, DISENO.h);
+    ctx.clip();
 
-    // Líneas
-    ctx.strokeStyle = "#94A3B8";
-    ctx.lineWidth = 4;
-    ctx.setLineDash([10, 8]);
+    // Fondo de la app (oscuro: es una pantalla encendida, no una hoja)
+    ctx.fillStyle = "#0D1117";
+    ctx.fillRect(0, 0, DISENO.w, DISENO.h);
+
+
+    // Retícula de puntos del lienzo
+    ctx.fillStyle = "#1B2331";
+    for (let gx = 40; gx < DISENO.w; gx += 46) {
+      for (let gy = BARRA_H + 30; gy < DISENO.h; gy += 46) {
+        ctx.beginPath();
+        ctx.arc(gx, gy, 2.6, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    // Barra superior de ventana
+    ctx.fillStyle = "#212C3B";
+    ctx.fillRect(0, 0, DISENO.w, BARRA_H);
+    ctx.fillStyle = "#33425A";
+    ctx.fillRect(0, BARRA_H - 3, DISENO.w, 3);
+    const semaforo = ["#FF5F57", "#FEBC2E", "#28C840"];
+    semaforo.forEach((c, i) => {
+      ctx.beginPath();
+      ctx.arc(50 + i * 46, BARRA_H / 2, 14, 0, Math.PI * 2);
+      ctx.fillStyle = c;
+      ctx.fill();
+    });
+    ctx.fillStyle = "#A9B7CA";
+    ctx.font = "600 30px system-ui, sans-serif";
+    ctx.textAlign = "left";
+    ctx.fillText("Codeflow — Orquestador", 200, BARRA_H / 2 + 11);
+    // Indicador "en ejecucion", parpadeo lento
+    const vivo = 0.55 + Math.sin(t * 2.4) * 0.45;
+    ctx.beginPath();
+    ctx.arc(DISENO.w - 180, BARRA_H / 2, 9, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(52, 211, 153, ${vivo})`;
+    ctx.fill();
+    ctx.fillStyle = "#5D6B7E";
+    ctx.font = "500 26px system-ui, sans-serif";
+    ctx.fillText("activo", DISENO.w - 158, BARRA_H / 2 + 9);
+
+    // Conexiones (curvas, por debajo de las tarjetas)
+    ctx.lineCap = "round";
     CONEXIONES.forEach(([a, b]) => {
-      const na = nodo(a);
-      const nb = nodo(b);
-      const [ax, ay] = mapear(na.x, na.y);
-      const [bx, by] = mapear(nb.x, nb.y);
+      const c = curva(nodo(a), nodo(b));
       ctx.beginPath();
-      ctx.moveTo(ax, ay);
-      ctx.lineTo(bx, by);
-      ctx.stroke();
-    });
-    ctx.setLineDash([]);
-
-    // Puntos viajando
-    CONEXIONES.forEach(([a, b], i) => {
-      const na = nodo(a);
-      const nb = nodo(b);
-      const dur = 2.4 + (i % 3) * 0.6;
-      const p = ((t + i * 0.4) % dur) / dur;
-      const [ax, ay] = mapear(na.x, na.y);
-      const [bx, by] = mapear(nb.x, nb.y);
-      const px = ax + (bx - ax) * p;
-      const py = ay + (by - ay) * p;
-      ctx.beginPath();
-      ctx.arc(px, py, 10, 0, Math.PI * 2);
-      ctx.fillStyle = "#2563EB";
-      ctx.fill();
-    });
-
-    // Nodos, con leve pulso
-    NODOS.forEach((n, i) => {
-      const pulso = 1 + Math.sin(t * 2 + i) * 0.08;
-      const r = 22 * pulso;
-      const [nx, ny] = mapear(n.x, n.y);
-      ctx.beginPath();
-      ctx.arc(nx, ny, r, 0, Math.PI * 2);
-      ctx.fillStyle = "#FFFFFF";
-      ctx.fill();
+      ctx.moveTo(c.x0, c.y0);
+      ctx.bezierCurveTo(c.cx0, c.cy0, c.cx1, c.cy1, c.x1, c.y1);
+      ctx.strokeStyle = "#2B3A4F";
       ctx.lineWidth = 5;
-      ctx.strokeStyle = n.color;
+      ctx.stroke();
+    });
+
+    // Paquetes viajando por cada conexion
+    CONEXIONES.forEach(([a, b], i) => {
+      const c = curva(nodo(a), nodo(b));
+      const dur = 2.6 + (i % 3) * 0.5;
+      const p = ((t + i * 0.45) % dur) / dur;
+      const [px, py] = puntoEnCurva(c, p);
+      const desvanece = Math.sin(p * Math.PI); // entra y sale sin cortes
+      ctx.beginPath();
+      ctx.arc(px, py, 20, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(96, 165, 250, ${0.16 * desvanece})`;
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(px, py, 8, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(147, 197, 253, ${desvanece})`;
+      ctx.fill();
+    });
+
+    // Tarjetas de nodo
+    NODOS.forEach((n, i) => {
+      const x = n.x - TARJETA.w / 2;
+      const y = n.y - TARJETA.h / 2;
+
+      rectRedondeado(ctx, x, y, TARJETA.w, TARJETA.h, 18);
+      ctx.fillStyle = "#19212D";
+      ctx.fill();
+      ctx.strokeStyle = "#2C3A4D";
+      ctx.lineWidth = 3;
       ctx.stroke();
 
-      ctx.beginPath();
-      ctx.arc(nx, ny, r * 0.45, 0, Math.PI * 2);
+      // Cuadrito de color del servicio
+      rectRedondeado(ctx, x + 18, y + 19, 48, 48, 13);
       ctx.fillStyle = n.color;
       ctx.fill();
 
-      ctx.fillStyle = "#1E293B";
-      ctx.font = "700 26px system-ui, sans-serif";
-      ctx.textAlign = "center";
-      ctx.fillText(n.label, nx, ny + r + 30);
+      ctx.textAlign = "left";
+      ctx.fillStyle = "#E6EDF7";
+      ctx.font = "600 30px system-ui, sans-serif";
+      ctx.fillText(n.label, x + 82, y + 40);
+      ctx.fillStyle = "#77869B";
+      ctx.font = "500 24px system-ui, sans-serif";
+      ctx.fillText(n.sub, x + 82, y + 70);
+
+      // Punto de estado, desfasado por nodo
+      ctx.beginPath();
+      ctx.arc(x + TARJETA.w - 26, y + TARJETA.h / 2, 6, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(52, 211, 153, ${0.35 + Math.abs(Math.sin(t * 1.6 + i)) * 0.65})`;
+      ctx.fill();
     });
 
     ctx.restore();
 
     textura.needsUpdate = true;
-  }, [canvas, textura]);
+  });
 
   return textura;
 }
