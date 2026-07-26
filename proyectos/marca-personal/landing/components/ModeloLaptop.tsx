@@ -302,7 +302,7 @@ function usarTexturaPantalla() {
 // El modelo no nace mirando a la camara: la tapa queda de costado respecto
 // al eje sobre el que ubicamos la camara. Este giro sobre Y lo endereza para
 // que la pantalla se vea casi de frente, con un angulo leve.
-const GIRO_Y = -0.35;
+const GIRO_Y = -0.58;
 
 function Laptop() {
   const { scene } = useGLTF("/modelos-3d/macbook.glb");
@@ -342,6 +342,19 @@ function Laptop() {
   return <primitive object={scene} rotation={[0, GIRO_Y, 0]} />;
 }
 
+// Flotacion: el objeto sube y baja suavemente, y se inclina apenas, para que
+// se lea como suspendido en el aire y no apoyado en el borde del contenedor.
+function Flotacion({ children }: { children: React.ReactNode }) {
+  const grupo = useRef<THREE.Group>(null);
+  useFrame((state) => {
+    if (!grupo.current) return;
+    const t = state.clock.getElapsedTime();
+    grupo.current.position.y = Math.sin(t * 0.7) * 0.035;
+    grupo.current.rotation.z = Math.sin(t * 0.5) * 0.012;
+  });
+  return <group ref={grupo}>{children}</group>;
+}
+
 function Iluminacion() {
   return (
     <>
@@ -358,7 +371,9 @@ function Iluminacion() {
 // Para acercar la camara se ESCALA este vector (misma direccion de vista,
 // menor magnitud) — no se cambia su direccion.
 const DIRECCION_CAMARA = new THREE.Vector3(-0.16, 0.22, -1.5);
-const ACERCAMIENTO = 0.70; // 1 = encuadre original; <1 = mas cerca
+// Se aleja respecto al encuadre "recortado" anterior: ahora el objeto entra
+// completo, con aire alrededor, para que se lea flotando en vez de cortado.
+const ACERCAMIENTO = 1.28;
 const POSICION_CAMARA = DIRECCION_CAMARA.clone().multiplyScalar(ACERCAMIENTO);
 
 // Angulos esfericos del encuadre inicial, usados para acotar la orbita.
@@ -382,19 +397,24 @@ function CamaraFija() {
 
 export default function ModeloLaptop() {
   return (
-    // El laptop es el protagonista: sangra fuera de su columna en desktop y
-    // se recorta por los bordes, como en la referencia.
-    <div className="relative aspect-[4/3.2] w-full lg:-mr-[12vw] lg:w-[calc(100%+12vw)]">
-      <div className="pointer-events-none absolute inset-x-[10%] bottom-[0%] h-[16%] rounded-[50%] bg-cf-accent/30 blur-2xl" />
+    // Contenedor grande y con aire: el objeto entra completo y flota dentro,
+    // sin recortarse contra los bordes. Sigue sangrando un poco fuera de su
+    // columna en desktop para ganar tamano sin obligar a acercar la camara.
+    <div className="relative aspect-[5/4.4] w-full lg:-mr-[4vw] lg:w-[calc(100%+4vw)]">
+      {/* Sombra difusa debajo: es lo que vende el efecto de estar suspendido */}
+      <div className="pointer-events-none absolute inset-x-[18%] bottom-[8%] h-[10%] rounded-[50%] bg-cf-text/25 blur-2xl" />
+      <div className="pointer-events-none absolute inset-x-[10%] bottom-[4%] h-[18%] rounded-[50%] bg-cf-accent/25 blur-3xl" />
       <Canvas
         camera={{ fov: 36, position: POSICION_CAMARA.toArray() }}
         dpr={Math.min(3, typeof window !== "undefined" ? window.devicePixelRatio : 1)}
       >
         <CamaraFija />
         <Iluminacion />
-        <Center scale={2.9}>
-          <Laptop />
-        </Center>
+        <Flotacion>
+          <Center scale={2.9}>
+            <Laptop />
+          </Center>
+        </Flotacion>
         {/* Orbita acotada. enableZoom={false} es critico: con la rueda activa
             el canvas se comeria el scroll de la pagina al pasar el cursor. */}
         <OrbitControls
