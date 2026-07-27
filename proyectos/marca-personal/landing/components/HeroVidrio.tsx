@@ -45,7 +45,7 @@ export default function HeroVidrio() {
         transition={{ duration: quieto ? 0 : 0.7, ease: "easeOut" }}
         // pb generoso: la pantalla se apoya en el borde inferior y sobresale,
         // asi que el texto tiene que terminar bastante antes.
-        className="vidrio relative z-10 mx-auto w-full max-w-6xl rounded-[32px] px-6 pb-[52%] pt-8 sm:px-10 sm:pb-[46%] sm:pt-10 lg:px-14 lg:pb-[38%]"
+        className="vidrio relative z-10 mx-auto w-full max-w-6xl rounded-[32px] px-6 pb-[52%] pt-8 sm:px-10 sm:pb-[46%] sm:pt-10 lg:px-14 lg:pb-[42%]"
       >
         {/* Fila superior: marca a la izquierda y metricas donde la referencia
             pone el menu. */}
@@ -89,7 +89,7 @@ export default function HeroVidrio() {
             del vidrio (z-20) a proposito: backdrop-filter solo desenfoca lo
             que quedo pintado DETRAS, asi que un canvas animado aqui arriba no
             obliga a recalcularlo en cada frame. */}
-        <div className="absolute inset-x-0 -bottom-[10%] z-20 mx-auto w-[88%] sm:w-[76%]">
+        <div className="absolute inset-x-0 -bottom-[10%] z-20 mx-auto w-[94%] sm:w-[88%]">
           {/* Luz LED detras de la pantalla. Es `filter: blur`, no
               backdrop-filter: se desenfoca a si misma y no lee lo que tiene
               detras, asi que no anade coste al vidrio. */}

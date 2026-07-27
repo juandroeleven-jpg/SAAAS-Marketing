@@ -192,10 +192,11 @@ function Panel() {
 }
 
 // Camara frontal. El objeto mide ALTO + 2*MARCO = 2.15 de alto; con fov 30 el
-// alto visible a distancia d es 2*d*tan(15) = 0.536*d, asi que a d = 4.8 entran
-// 2.57 unidades: queda ~0.2 de aire arriba y abajo POR ENCIMA de la flotacion
-// (+-0.1). La pantalla nunca se corta contra el borde del contenedor.
-const DISTANCIA = 4.8;
+// alto visible a distancia d es 2*d*tan(15) = 0.536*d, asi que a d = 4.55 entran
+// 2.44 unidades contra 2.15 del objeto: quedan 0.145 arriba y abajo, por encima
+// de la flotacion de +-0.1. La pantalla nunca se corta contra el contenedor,
+// y al estar la camara mas cerca ocupa mas ancho del que tiene disponible.
+const DISTANCIA = 4.55;
 const POSICION_CAMARA = new THREE.Vector3(0, 0.18, DISTANCIA);
 
 // En contenedores angostos el fov vertical no cambia pero el ancho visible se
