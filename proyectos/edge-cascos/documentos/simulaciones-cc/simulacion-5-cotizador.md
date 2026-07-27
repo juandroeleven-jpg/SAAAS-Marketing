@@ -2,19 +2,54 @@
 
 [← Volver al índice de mis pruebas](../mis-pruebas-claude-code.md)
 
-Diseño del flujo y los campos del cotizador donde el cliente arma su pedido de cascos EDGE eligiendo modelo, colorway, talle y cantidad, con precio calculado y (a futuro) visualización 3D del casco ensamblándose.
+Diseño del flujo y los campos del cotizador donde el cliente arma su pedido de cascos EDGE eligiendo modelo, colorway, talle y cantidad, con precio calculado.
 
 **Nota explícita:** el usuario confirmó que el precio SÍ varía por colorway/talle en la realidad, pero para esta etapa de diseño se usan campos ficticios — ningún precio de esta simulación es un precio real de EDGE, son placeholders para probar la lógica del flujo.
+
+## Roadmap por fases — de imagen estática a 3D
+
+**Decisión de secuencia (22/07/2026): no arrancamos directo en 3D.** El cotizador se construye y se publica primero con imágenes 2D por colorway (rápido, sin dependencia de Meshy/Blender), y el visor 3D se suma como una fase posterior e independiente, nunca como bloqueante del lanzamiento.
+
+```mermaid
+flowchart LR
+    subgraph F1["Fase 1 — Cotizador 2D (imagen estática)"]
+        A1[Lógica de campos y fórmula<br/>ya definida, Pasos 1-4] --> A2[Galería de imagen por colorway<br/>una foto/render por combinación] --> A3[Publicar cotizador funcional<br/>con precios ficticios]
+    end
+    subgraph F2["Fase 2 — Visor 3D (mejora visual)"]
+        B1[GLB de Meshy por modelo<br/>Simulación 4] --> B2[Integrar Three.js/React Three Fiber<br/>sobre el mismo cotizador de Fase 1] --> B3[Rotación libre + cambio de<br/>colorway en vivo sobre el 3D]
+    end
+    F1 --> F2
+```
+
+**Fase 1 — Cotizador 2D (arranca ya, no depende de nada externo):** ✅ construido y publicado en GitHub (`proyectos/edge-cascos/cotizador/`).
+1. Lógica de campos y fórmula de precio — ya resuelta más abajo (Pasos 1-3), no requiere cambios.
+2. Galería de imagen estática por colorway — **reemplazada por el sistema de capas de Fase 1.5** antes de completarse (ver abajo), no se llegó a usar fotos reales.
+3. Publicar el cotizador funcionando de punta a punta con precios ficticios — ✅ hecho, con build verificado.
+
+**Fase 1.5 — Sistema de capas (referencia: Fanatik Bike Builder), decidido 23/07/2026:**
+En vez de una imagen estática por combinación modelo+colorway, el casco se compone de capas independientes — shell (color del colorway), visor (fijo), gráfico/decal (solo si el colorway es premium). Esto resuelve dos problemas a la vez: (a) no depende de tener una foto por cada combinación posible, (b) separa el logo/gráfico como pieza propia, evitando el problema de texto/logo mal generado que se documentó en las Simulaciones 6a-6d.
+
+Implementado con SVG propio (`components/CascoCapas.tsx`) como mecanismo funcional inicial — reemplazable por fotos reales en capas (PNG con transparencia) sin cambiar la lógica de composición. Estado: ✅ mecanismo construido y funcionando; pendiente sustituir el SVG placeholder por assets reales cuando estén listos.
+
+**Fase 2 — Visor 3D (solo después de que Fase 1 esté publicada y validada):**
+1. Depende de que Meshy (Simulación 4) tenga el GLB del modelo correspondiente listo.
+2. Se integra Three.js/React Three Fiber **sobre el mismo cotizador de Fase 1** — no se reconstruye desde cero, el 3D reemplaza la galería de imagen, la lógica de precio no cambia.
+3. Mejora final: rotación libre del casco y cambio de colorway en vivo sobre el modelo 3D (nivel helmade.com).
 
 ### 🔴 Pendiente de tu parte
 
 ```mermaid
 flowchart TD
-    T1["💲 Pasar precio_base_modelo real<br/>por cada modelo EDGE"]
-    T2["🎨 Confirmar qué colorways son<br/>premium/edición limitada (recargo)"]
-    T3["📦 Definir umbrales reales de<br/>descuento por cantidad mayorista"]
-    T4["📏 Pasar tabla real de talles<br/>disponibles por modelo"]
-    T5["🚚 Definir si el envío se cotiza<br/>en el mismo flujo o después"]
+    subgraph P1["No bloquea Fase 1 - se construye con datos ficticios"]
+        T1["💲 precio_base_modelo real<br/>(placeholder mientras tanto)"]
+        T2["🎨 Colorways premium/recargo<br/>(placeholder mientras tanto)"]
+        T3["📦 Umbrales reales de<br/>descuento mayorista (placeholder)"]
+        T4["📏 Tabla real de talles<br/>(placeholder genérico S/M/L/XL)"]
+        T5["🚚 Envío en el mismo flujo o después<br/>(placeholder)"]
+    end
+    subgraph P2["Para Fase 2 - 3D (no antes)"]
+        T6["🧊 GLB de Meshy listo por<br/>cada modelo a mostrar en 3D"]
+    end
 ```
 
 <details><summary>Pasos de la simulación</summary>
@@ -48,8 +83,8 @@ total = subtotal − descuento + costo_envio
 3. Cliente elige talle y cantidad → sistema calcula precio en vivo
 4. Cliente confirma → se genera cotización con desglose visible (no solo el total)
 
-**Paso 5 — Conectar con la capa visual (Meshy, opcional y no bloqueante)**
-El cotizador debe funcionar completo con imágenes estáticas por colorway aunque el 3D de Meshy ([Simulación 4](simulacion-4-meshy-3d.md)) no esté listo — el 3D se suma como mejora visual, nunca como requisito para que el cotizador funcione.
+**Paso 5 — Fase 1: galería de imagen estática por colorway**
+El cotizador se construye y publica completo con imágenes estáticas por colorway. El 3D de Meshy ([Simulación 4](simulacion-4-meshy-3d.md)) NO es requisito para esta fase — se suma después, en Fase 2, como mejora visual sobre el mismo cotizador ya funcionando.
 
 **Paso 6 — Investigación de mercado: mejores sistemas de cotización para nichos**
 Investigado (ver bitácora): helmade.com es la referencia directa más cercana (configurador 3D real de cascos de moto de marcas reales). Opciones evaluadas de más barata a más cara: Three.js/React Three Fiber + GLB de Meshy (gratis, requiere desarrollo propio) → Zakeke (~$68-340/mes, SaaS Shopify) → Threekit (enterprise, 3-6 meses de implementación). Meshy exporta GLB compatible sin conversión con cualquiera de las 3. Decisión: empezar por la ruta low-cost (Three.js + GLB de Meshy).
@@ -60,13 +95,14 @@ Investigado (ver bitácora): helmade.com es la referencia directa más cercana (
 
 ```mermaid
 timeline
-    title Simulación 5 — Avance interno
+    title Simulación 5 — Avance interno (roadmap por fases)
     Definición de campos : Paso 1 - Campos de selección (completo) : Paso 2 - Campos de precio ficticios (completo)
     Lógica de cálculo : Paso 3 - Fórmula de precio (completo)
     Diseño de flujo : Paso 4 - Flujo paso a paso del carrito (completo)
-    Integración futura : Paso 5 - Conexión no-bloqueante con Meshy (diseñado)
     Investigación de mercado : Paso 6 - helmade.com y comparación Zakeke/Threekit/Three.js (completo) : Decisión low-cost confirmada
-    Siguiente hito real : Reemplazar campos ficticios con precios reales de EDGE y construir el cálculo contra datos reales
+    Decisión de secuencia : 22 jul 2026 - no se arranca en 3D, primero Fase 1 en 2D
+    Fase 1 - Cotizador 2D : Paso 5a - Galeria de imagen por colorway (siguiente hito real) : Publicar con precios ficticios
+    Fase 2 - Visor 3D : Paso 5b - Integrar Three.js/R3F sobre GLB de Meshy (a futuro, no bloqueante)
 ```
 
 </details>
@@ -76,13 +112,15 @@ timeline
 ```mermaid
 kanban
   Diseñado
-    Paso5[Paso 5 - Integración no-bloqueante con Meshy]
+    Paso5b[Fase 2 - Visor 3D sobre GLB de Meshy]
   Simulado_Analizado
     Paso1[Paso 1 - Campos de selección]
     Paso2[Paso 2 - Campos de precio ficticios]
     Paso3[Paso 3 - Fórmula de cálculo]
     Paso4[Paso 4 - Flujo del carrito]
     Paso6[Paso 6 - Investigación de mercado, decisión low-cost]
+  Falta_Ejecutar
+    Paso5a[Fase 1 - Galería de imagen por colorway y publicación 2D]
   Ejecutado_Real
 ```
 
@@ -92,9 +130,55 @@ Checklist de respaldo:
 - [x] Paso 3 — Fórmula de cálculo definida
 - [x] Paso 4 — Flujo paso a paso del carrito
 - [x] Paso 6 — Investigación de mercado completa, decisión low-cost tomada
-- [ ] Paso 5 — Reemplazar precios ficticios por reales de EDGE
-- [ ] Ejecución real contra base de datos de catálogo
+- [x] Decisión de secuencia — Fase 1 (2D) antes que Fase 2 (3D), 22/07/2026
+- [x] Paso 5a — Fase 1: galería de imagen + cotizador publicado con precios ficticios
+- [x] Fase 1.5 — Sistema de capas (shell/visor/gráfico), SVG mejorado
+- [x] Guardar/compartir cotización — link con estado codificado (`lib/cotizacionLink.ts`)
+- [x] Estimación de fecha de entrega — reglas simples, fecha de calendario (`lib/entrega.ts`)
+- [x] Prototipo de carátula/licencia intercambiable sobre fotos reales — Bob Esponja + Godfather (`/prototipo-visor`)
+- [ ] Extender el prototipo de carátula a Top Gun y Stellar
+- [ ] Conectar el mecanismo de carátula real al cotizador principal (hoy vive aislado en `/prototipo-visor`)
+- [ ] Paso 5b — Fase 2: integrar `<model-viewer>` o Three.js/R3F sobre GLB real (depende de resolver fidelidad, ver Simulación 8)
+- [ ] Ejecución real contra base de datos de catálogo (precios reales)
 
 </details>
 
-🧪 **SIMULACIÓN — todos los precios son placeholders ficticios, no representan precios reales de EDGE. La lógica del flujo y la investigación de mercado son la parte validable hoy; los números deben reemplazarse antes de producción.**
+<details><summary>Roadmap de evolución 2D → 3D (planificado 24/07/2026, sin ejecutar aún)</summary>
+
+```mermaid
+flowchart TD
+    E1["Etapa 1 - Consolidar 2D<br/>caratula intercambiable en las 4 licencias<br/>conectada al cotizador real"] --> E2["Etapa 2 - Resolver fidelidad<br/>Blender+xatlas (proyeccion determinista)<br/>O fotogrametria real del casco fisico"]
+    E2 --> E3["Etapa 3 - Piloto con 1 sola licencia<br/>Meshy geometria + Blender grafico real<br/>exportar GLB"]
+    E3 --> E4["Etapa 4 - Integrar model-viewer<br/>sobre el GLB del piloto<br/>reemplaza la capa 2D solo en ese modelo"]
+    E4 --> E5["Etapa 5 - Escalar al resto<br/>del catalogo, con tiempo/costo<br/>ya conocido por el piloto"]
+```
+
+**Por qué este orden:** arrancar el 3D antes de la Etapa 2 repite el problema ya confirmado con Meshy (texto/logos mal generados, Simulaciones 6a-6d). Blender MCP se descartó para "arreglar" texto generado (requiere juicio visual que un agente no tiene hoy) — sirve para operaciones deterministas (proyección UV, bake), no para juzgar calidad.
+
+</details>
+
+<details><summary>Mejoras propuestas al cotizador (24/07/2026, sin priorizar aún)</summary>
+
+1. Múltiples fotos por ángulo (frontal, 3/4, lateral) — efecto pseudo-360 sin ser 3D real.
+2. Selector de accesorios/complementos (comunicador Bluetooth, bolsa protectora, etc.).
+3. Comparador lado a lado de 2 configuraciones.
+4. Validación de compatibilidad entre gráfico y molde (si en el futuro no todo combina con todo).
+5. Panel/historial de cotizaciones para el dueño del negocio, no solo el link del cliente.
+6. Formulario de contacto (nombre/email/teléfono) antes de confirmar, para capturar el lead aunque no escriban por WhatsApp.
+
+</details>
+
+<details><summary>Gaps para producción real (24/07/2026)</summary>
+
+- **Datos reales**: precios, talles, descuentos, envío — hoy 100% ficticio.
+- **Persistencia real**: base de datos (Postgres/Supabase) en vez de catálogo hardcodeado y link con estado codificado.
+- **Pagos**: sin procesador conectado, el flujo termina en WhatsApp.
+- **Autenticación + panel admin**: sin login, sin forma de editar catálogo sin tocar código.
+- **Imágenes reales**: reemplazar SVG/prototipo por assets finales de las 4+ licencias.
+- **Despliegue**: nunca se ha publicado a un dominio real, solo corre en entorno local de prueba.
+- **Seguridad**: sin rate-limiting ni validación de servidor robusta.
+- **Legal/operativo**: sin términos de servicio, sin proceso definido de seguimiento post-cotización.
+
+</details>
+
+🧪 **SIMULACIÓN — todos los precios son placeholders ficticios, no representan precios reales de EDGE. La lógica del flujo y la investigación de mercado son la parte validable hoy; los números deben reemplazarse antes de producción. El orden de construcción es Fase 1 (2D) → Fase 2 (3D), nunca al revés.**
