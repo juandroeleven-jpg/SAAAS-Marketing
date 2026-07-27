@@ -401,7 +401,14 @@ function Iluminacion() {
 const DIRECCION_CAMARA = new THREE.Vector3(-0.16, 0.22, -1.5);
 // Se aleja respecto al encuadre "recortado" anterior: ahora el objeto entra
 // completo, con aire alrededor, para que se lea flotando en vez de cortado.
-const ACERCAMIENTO = 1.28;
+// El objeto mide ~1.04 unidades de alto ya escalado. Con fov 36 el alto
+// visible a distancia d es 2*d*tan(18deg) = 0.65*d. A 1.28 la distancia era
+// 1.94 y el alto visible 1.26: sobraban 0.11 arriba y abajo, que la
+// flotacion de +-0.12 se comia -- en el punto bajo del ciclo el teclado se
+// salia del cuadro. A 1.45 la distancia es 2.20 y el alto visible 1.43, o
+// sea 0.075 de margen POR ENCIMA de la flotacion. Pantalla y teclado quedan
+// siempre completos.
+const ACERCAMIENTO = 1.45;
 const POSICION_CAMARA = DIRECCION_CAMARA.clone().multiplyScalar(ACERCAMIENTO);
 
 // Angulos esfericos del encuadre inicial, usados para acotar la orbita.
@@ -414,12 +421,18 @@ const MARGEN_AZIMUT = 0.2;
 const MARGEN_POLAR_ARRIBA = 0.18;
 const MARGEN_POLAR_ABAJO = 0.14;
 
+// En contenedores angostos (movil) el ancho visible se achica pero el fov
+// vertical es el mismo, asi que el laptop se sale por los costados. Se aleja
+// la camara sobre la MISMA linea de vision -- se conserva el angulo, solo
+// cambia cuanto entra en cuadro.
 function CamaraFija() {
-  const { camera } = useThree();
+  const { camera, size } = useThree();
   useEffect(() => {
-    camera.position.copy(POSICION_CAMARA);
+    const aspecto = size.width / size.height;
+    const factor = aspecto >= 1.25 ? 1 : 1 + (1.25 - aspecto) * 0.9;
+    camera.position.copy(POSICION_CAMARA).multiplyScalar(factor);
     camera.lookAt(0, 0, 0);
-  }, [camera]);
+  }, [camera, size.width, size.height]);
   return null;
 }
 
