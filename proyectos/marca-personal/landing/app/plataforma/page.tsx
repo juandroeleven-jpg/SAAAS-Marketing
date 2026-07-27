@@ -1,34 +1,49 @@
 "use client";
 
 import { motion } from "framer-motion";
-import TarjetasFlotantes from "@/components/TarjetasFlotantes";
+import TarjetasFlotantes, {
+  type ContenidoTarjetas,
+} from "@/components/TarjetasFlotantes";
+
+// Pagina sin texto: la animacion de las cuatro tarjetas es el unico
+// contenido, centrada en la pantalla. El componente es el mismo del home
+// -- misma composicion, mismos tiempos -- y solo cambia lo que dicen las
+// tarjetas, que aca hablan de la plataforma en vez de los logros.
+const CONTENIDO_PLATAFORMA: ContenidoTarjetas = {
+  principal: {
+    etiqueta: "Herramientas conectadas",
+    valor: "6",
+    // Textos cortos a proposito: las tarjetas se pisan entre si por diseno,
+    // y una linea larga queda tapada por la tarjeta de al lado.
+    detalle: "Slack, Drive, Notion…",
+  },
+  destacada: {
+    etiqueta: "Sin intervención",
+    valor: "24/7",
+    detalle: "los flujos corren solos",
+  },
+  proceso: {
+    etiqueta: "Un solo flujo",
+    detalle: "Webhook → ChatGPT",
+  },
+  secundaria: {
+    etiqueta: "Pasos manuales",
+    valor: "0",
+    detalle: "por ejecución",
+  },
+};
 
 export default function PlataformaPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-cf-bg px-6 py-20 sm:px-12 sm:py-28">
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-        <div>
-          <span className="text-sm font-semibold uppercase tracking-widest text-cf-accent">
-            Plataforma
-          </span>
-          <h1 className="mt-4 text-4xl font-bold leading-tight text-cf-text sm:text-5xl">
-            Tus herramientas, orquestadas en un solo flujo
-          </h1>
-          <p className="mt-6 max-w-lg text-lg text-cf-muted">
-            Slack, ChatGPT, Drive, Canva, Notion, Discord — conectados y
-            automatizados, sin que tengas que operar cada uno por separado.
-          </p>
-        </div>
-
-        <motion.div
-          className="min-w-0"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
-        >
-          <TarjetasFlotantes />
-        </motion.div>
-      </div>
+    <main className="flex min-h-screen items-center justify-center overflow-x-hidden bg-cf-bg px-6 py-20 sm:px-12">
+      <motion.div
+        className="w-full max-w-2xl"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        <TarjetasFlotantes contenido={CONTENIDO_PLATAFORMA} />
+      </motion.div>
     </main>
   );
 }
