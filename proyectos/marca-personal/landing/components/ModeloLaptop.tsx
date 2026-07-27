@@ -5,6 +5,11 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useGLTF, Center, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import { DISENO, dibujarFlujo } from "@/lib/flujo";
+import { dibujarAgentes } from "@/lib/agentes";
+
+// Que se ve en la pantalla del laptop. Las dos escenas comparten espacio de
+// diseno, asi que son intercambiables sin tocar el mapeo UV ni la geometria.
+export type Escena = "flujo" | "agentes";
 
 // Modelo real: "MacBook Laptop" por Issac Ghazanfar, licencia CC Attribution
 // (uso comercial permitido con credito) — https://sketchfab.com
@@ -23,7 +28,7 @@ import { DISENO, dibujarFlujo } from "@/lib/flujo";
 // que hace de bisel.
 const PANTALLA_UV = { uMin: 0.038, uMax: 0.466, vMin: 0.522, vMax: 0.826 };
 
-function usarTexturaPantalla() {
+function usarTexturaPantalla(escena: Escena) {
   const { gl } = useThree();
   const canvas = useMemo(() => {
     const c = document.createElement("canvas");
@@ -119,7 +124,8 @@ function usarTexturaPantalla() {
     ctx.rect(0, 0, DISENO.w, DISENO.h);
     ctx.clip();
 
-    dibujarFlujo(ctx, t);
+    if (escena === "agentes") dibujarAgentes(ctx, t);
+    else dibujarFlujo(ctx, t);
 
     ctx.restore();
 
@@ -134,10 +140,10 @@ function usarTexturaPantalla() {
 // que la pantalla se vea casi de frente, con un angulo leve.
 const GIRO_Y = -0.58;
 
-function Laptop() {
+function Laptop({ escena }: { escena: Escena }) {
   const { scene } = useGLTF("/modelos-3d/macbook.glb");
   const pantallaRef = useRef<THREE.Mesh | null>(null);
-  const textura = usarTexturaPantalla();
+  const textura = usarTexturaPantalla(escena);
 
   useEffect(() => {
     // "Ecran_6" es un nodo contenedor vacio; la malla real es su hijo
@@ -245,7 +251,7 @@ const DIRECCION_CAMARA = new THREE.Vector3(-0.16, 0.22, -1.5);
 // salia del cuadro. A 1.45 la distancia es 2.20 y el alto visible 1.43, o
 // sea 0.075 de margen POR ENCIMA de la flotacion. Pantalla y teclado quedan
 // siempre completos.
-const ACERCAMIENTO = 1.45;
+const ACERCAMIENTO = 1.38;
 const POSICION_CAMARA = DIRECCION_CAMARA.clone().multiplyScalar(ACERCAMIENTO);
 
 // Angulos esfericos del encuadre inicial, usados para acotar la orbita.
@@ -273,12 +279,16 @@ function CamaraFija() {
   return null;
 }
 
-export default function ModeloLaptop() {
+export default function ModeloLaptop({
+  escena = "flujo",
+}: {
+  escena?: Escena;
+}) {
   return (
     // Contenedor grande y con aire: el objeto entra completo y flota dentro,
     // sin recortarse contra los bordes. Sigue sangrando un poco fuera de su
     // columna en desktop para ganar tamano sin obligar a acercar la camara.
-    <div className="relative aspect-[5/4.4] w-full lg:-mr-[4vw] lg:w-[calc(100%+4vw)]">
+    <div className="relative aspect-[5/3.9] w-full lg:-mr-[4vw] lg:w-[calc(100%+4vw)]">
       {/* Sombra difusa debajo: es lo que vende el efecto de estar suspendido */}
       <div className="sombra-flotante pointer-events-none absolute inset-x-[18%] bottom-[8%] h-[10%] rounded-[50%] bg-cf-text/25 blur-2xl" />
       <div className="sombra-flotante pointer-events-none absolute inset-x-[10%] bottom-[4%] h-[18%] rounded-[50%] bg-cf-accent/25 blur-3xl" />
@@ -290,7 +300,7 @@ export default function ModeloLaptop() {
         <Iluminacion />
         <Flotacion>
           <Center scale={2.9}>
-            <Laptop />
+            <Laptop escena={escena} />
           </Center>
         </Flotacion>
         {/* Orbita acotada. enableZoom={false} es critico: con la rueda activa

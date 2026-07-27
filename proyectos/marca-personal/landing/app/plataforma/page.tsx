@@ -2,42 +2,76 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { usarMovimientoReducido } from "@/lib/movimiento";
 
 const ModeloLaptop = dynamic(() => import("@/components/ModeloLaptop"), {
   ssr: false,
 });
+const FondoOndas = dynamic(() => import("@/components/FondoOndas"), {
+  ssr: false,
+});
 
 export default function PlataformaPage() {
-  return (
-    <main className="min-h-screen overflow-x-hidden bg-cf-bg px-6 py-20 sm:px-12 sm:py-28">
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-10">
-        <div>
-          <span className="text-sm font-semibold uppercase tracking-widest text-cf-accent">
-            Plataforma
-          </span>
-          <h1 className="mt-4 text-4xl font-bold leading-tight text-cf-text sm:text-5xl">
-            Tus herramientas, orquestadas en un solo flujo
-          </h1>
-          <p className="mt-6 max-w-lg text-lg text-cf-muted">
-            Slack, ChatGPT, Drive, Canva, Notion, Discord — conectados y
-            automatizados, sin que tengas que operar cada uno por separado.
-          </p>
-          <Link
-            href="/flujos"
-            className="mt-8 inline-block rounded-xl bg-cf-accent px-6 py-3 font-semibold text-white transition hover:brightness-110"
-          >
-            Ver los flujos
-          </Link>
-        </div>
+  const quieto = usarMovimientoReducido();
 
-        <div className="min-w-0">
-          <ModeloLaptop />
-          <p className="relative z-10 mt-6 text-center text-xs text-cf-muted">
-            Modelo 3D &ldquo;MacBook Laptop&rdquo; por Issac Ghazanfar,
-            licencia Creative Commons Attribution
-          </p>
+  return (
+    <main className="fondo-azul relative isolate flex min-h-screen items-center overflow-hidden px-4 py-16 sm:px-8 sm:py-20">
+      <FondoOndas />
+
+      {/* Mancha oscura difusa bajo la columna de texto: el fondo animado tiene
+          zonas brillantes y sin esto el contraste del titular cae por debajo
+          del minimo cuando una cresta pasa por detras. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-[6%] top-[22%] -z-[5] h-[56%] w-[42%] rounded-full bg-[#020817] opacity-70 blur-[110px]"
+      />
+
+      <motion.div
+        initial={quieto ? false : { opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: quieto ? 0 : 0.7, ease: "easeOut" }}
+        className="vidrio relative z-10 mx-auto w-full max-w-6xl rounded-[32px] px-6 py-10 sm:px-10 sm:py-12 lg:px-14 lg:py-14"
+      >
+        {/* Texto a la izquierda y objeto a la derecha en escritorio; en movil
+            la grilla pasa a una columna y, por el orden del DOM, el texto
+            queda arriba y el laptop abajo -- que es justo lo pedido, sin
+            necesidad de reordenar nada. */}
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,0.68fr)_minmax(0,1.32fr)] lg:gap-10">
+          <div>
+            <span className="text-sm font-semibold uppercase tracking-widest text-sky-200">
+              Plataforma
+            </span>
+            <h1 className="mt-4 text-4xl font-bold leading-[1.08] text-white sm:text-5xl">
+              Un agente que <span className="text-sky-300">razona</span> y
+              ejecuta
+            </h1>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/flujos"
+                className="rounded-full bg-white px-6 py-3 text-base font-semibold text-[#071634] transition hover:bg-sky-100"
+              >
+                Ver los flujos
+              </Link>
+              <Link
+                href="/"
+                className="rounded-full border border-white/35 px-6 py-3 text-base font-semibold text-white transition hover:border-white/70 hover:bg-white/10"
+              >
+                Volver
+              </Link>
+            </div>
+          </div>
+
+          <div className="min-w-0">
+            <ModeloLaptop escena="agentes" />
+            <p className="relative z-10 mt-4 text-center text-xs text-slate-300/70">
+              Modelo 3D &ldquo;MacBook Laptop&rdquo; por Issac Ghazanfar,
+              licencia Creative Commons Attribution
+            </p>
+          </div>
         </div>
-      </div>
+      </motion.div>
     </main>
   );
 }
