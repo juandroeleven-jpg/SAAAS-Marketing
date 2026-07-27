@@ -6,6 +6,7 @@ import { RoundedBox, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { DISENO, dibujarFlujo } from "@/lib/flujo";
+import { usarMovimientoReducido } from "@/lib/movimiento";
 
 // Pantalla suelta (sin teclado ni cuerpo) para el hero.
 //
@@ -29,8 +30,6 @@ const TEX = { w: 2048, h: 1280 };
 const FPS_TEXTURA = 15;
 
 function usarTexturaPantalla() {
-  const { gl } = useThree();
-
   const canvas = useMemo(() => {
     const c = document.createElement("canvas");
     c.width = TEX.w;
@@ -41,15 +40,25 @@ function usarTexturaPantalla() {
   const textura = useMemo(() => {
     const t = new THREE.CanvasTexture(canvas);
     t.colorSpace = THREE.SRGBColorSpace;
-    // Mipmaps + anisotropia: la pantalla se ve casi de frente, pero al flotar
-    // e inclinarse el muestreo se vuelve oblicuo y sin esto aparece moire en
-    // la reticula de puntos y en las lineas finas.
-    t.generateMipmaps = true;
-    t.minFilter = THREE.LinearMipmapLinearFilter;
+    // SIN mipmaps, al reves que en ModeloLaptop, y no es un descuido:
+    //
+    // three.js regenera la piramide de mipmaps ENTERA en cada needsUpdate. A
+    // 15 redibujados por segundo sobre 2048x1280 eso es trabajo de GPU
+    // constante que aqui no compra nada: los mipmaps solo ayudan cuando la
+    // textura se MINIFICA mucho, y este plano se ve casi de frente y a escala
+    // casi 1:1 (a 1440 de viewport el panel mide ~740 px CSS, ~1480 de
+    // dispositivo con dpr 2, contra 2048 texeles: factor 1.38).
+    //
+    // ModeloLaptop si los necesita: alli la pantalla es una porcion pequena y
+    // oblicua de la tapa del GLB, con minificacion fuerte, que es justo el
+    // caso que sin mipmaps produce moire.
+    t.generateMipmaps = false;
+    t.minFilter = THREE.LinearFilter;
     t.magFilter = THREE.LinearFilter;
-    t.anisotropy = gl.capabilities.getMaxAnisotropy();
+    // anisotropy solo actua sobre el muestreo de mipmaps: sin piramide no
+    // hace nada, asi que no se toca.
     return t;
-  }, [canvas, gl]);
+  }, [canvas]);
 
   const ultimoDibujo = useRef(-1);
 
@@ -110,12 +119,26 @@ const GIRO_ENTRADA = 0.35;
 // Entra desde el lateral derecho, se endereza al llegar y despues queda
 // flotando. Mismos tiempos que el laptop de /plataforma para que las dos
 // paginas se sientan del mismo sitio.
-function Flotacion({ children }: { children: React.ReactNode }) {
+function Flotacion({
+  children,
+  quieto,
+}: {
+  children: React.ReactNode;
+  quieto: boolean;
+}) {
   const grupo = useRef<THREE.Group>(null);
   const inicio = useRef<number | null>(null);
 
   useFrame((state) => {
     if (!grupo.current) return;
+    // Con menos movimiento pedido: sin entrada lateral ni flotacion. La
+    // pantalla se queda en su sitio y solo sigue corriendo el flujo, que es
+    // el contenido y no un adorno.
+    if (quieto) {
+      grupo.current.position.set(0, 0, 0);
+      grupo.current.rotation.set(0, 0, 0);
+      return;
+    }
     const t = state.clock.getElapsedTime();
     if (inicio.current === null) inicio.current = t;
     const transcurrido = t - inicio.current;
@@ -193,6 +216,8 @@ function CamaraResponsiva() {
 }
 
 export default function PantallaFlotante() {
+  const quieto = usarMovimientoReducido();
+
   return (
     <div className="relative aspect-[16/11] w-full">
       {/* Resplandor de la pantalla encendida. Va en CSS y no como una malla
@@ -223,7 +248,7 @@ export default function PantallaFlotante() {
         <ambientLight intensity={0.35} />
         <directionalLight position={[3, 4, 5]} intensity={1.1} />
         <directionalLight position={[-4, 1, 2]} intensity={0.35} />
-        <Flotacion>
+        <Flotacion quieto={quieto}>
           <Panel />
         </Flotacion>
         <OrbitControls

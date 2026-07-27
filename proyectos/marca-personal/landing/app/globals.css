@@ -49,12 +49,18 @@ body {
 }
 
 .vidrio {
-  background: rgba(255, 255, 255, 0.1);
+  /* El tinte propio sube de 0.10 a 0.14 y el blur BAJA de 28 a 16 px, que
+     van juntos: cuanto mas aporta el tinte, menos depende el panel de lo que
+     tiene detras. Y eso importa aca porque detras hay un canvas 3D animado --
+     backdrop-filter tiene que rehacer el desenfoque cada vez que el fondo
+     cambia, y el coste crece con el radio. 16 px sigue leyendo como vidrio
+     con la varianza ya atenuada por el tinte. */
+  background: rgba(255, 255, 255, 0.14);
   border: 1px solid rgba(255, 255, 255, 0.22);
   /* saturate ademas de blur: sin el, el color que se ve a traves del vidrio
      queda lavado y el panel parece gris sucio en vez de vidrio blanco. */
-  -webkit-backdrop-filter: blur(28px) saturate(160%);
-  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  backdrop-filter: blur(16px) saturate(160%);
   /* Sombra exterior para despegarlo del fondo + linea interior clara arriba,
      que es lo que simula el canto iluminado de una lamina de vidrio. */
   box-shadow:
