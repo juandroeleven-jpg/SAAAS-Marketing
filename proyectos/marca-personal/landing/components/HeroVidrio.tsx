@@ -16,11 +16,14 @@ const FondoOndas = dynamic(() => import("./FondoOndas"), { ssr: false });
 // Ocupan el lugar que en la referencia tiene el menu de navegacion: misma
 // fila, mismo peso visual, pero diciendo lo unico que le importa a quien
 // llega -- que esto ya funciona y cuanto rinde.
+// Etiquetas cortas a proposito: los chips son grandes y tienen que entrar
+// los cuatro en UNA sola fila junto a la marca. Con textos largos se parten
+// en dos lineas y la fila deja de leerse como una barra de navegacion.
 const METRICAS = [
   { valor: "15", texto: "sistemas" },
-  { valor: "97%", texto: "ahorro en nómina" },
+  { valor: "97%", texto: "ahorro nómina" },
   { valor: "95-98%", texto: "precisión" },
-  { valor: "24/7", texto: "sin intervención" },
+  { valor: "24/7", texto: "activo" },
 ];
 
 export default function HeroVidrio() {
@@ -48,41 +51,46 @@ export default function HeroVidrio() {
         className="vidrio relative z-10 mx-auto w-full max-w-6xl rounded-[32px] px-6 pb-[52%] pt-8 sm:px-10 sm:pb-[46%] sm:pt-10 lg:px-14 lg:pb-[42%]"
       >
         {/* Fila superior: marca a la izquierda y metricas donde la referencia
-            pone el menu. */}
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-4">
-          <span className="text-lg font-bold tracking-tight text-white">
+            pone el menu. El boton NO va aqui: con los chips grandes la fila se
+            partia en tres lineas. Baja debajo del titular, que ademas es donde
+            corresponde a una llamada a la accion. */}
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+          <span className="text-xl font-bold tracking-tight text-white sm:text-2xl">
             Codeflow <span className="text-sky-300">AI</span>
           </span>
 
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2.5">
             {METRICAS.map((m) => (
               <span
                 key={m.texto}
-                className="rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-sm text-slate-200"
+                className="rounded-full border border-white/25 bg-white/[0.07] px-4 py-2 text-sm text-slate-200 sm:px-6 sm:py-3 sm:text-lg"
               >
-                <strong className="font-semibold text-white">{m.valor}</strong>{" "}
+                <strong className="font-bold text-white">{m.valor}</strong>{" "}
                 {m.texto}
               </span>
             ))}
           </div>
-
-          <Link
-            href="/plataforma"
-            className="ml-auto hidden rounded-full bg-white px-5 py-2 text-sm font-semibold text-[#071634] transition hover:bg-sky-100 lg:block"
-          >
-            Ver la plataforma
-          </Link>
         </div>
 
-        <h1 className="mt-10 max-w-4xl text-4xl font-bold leading-[1.06] text-white sm:text-5xl lg:text-6xl">
+        <h1 className="mt-12 max-w-4xl text-4xl font-bold leading-[1.06] text-white sm:text-5xl lg:text-6xl">
           Agentes de IA que ya operan{" "}
           <span className="text-sky-300">procesos reales</span>
         </h1>
-        <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-200/90">
-          15 sistemas conectados y corriendo — multi-agente, forecasting,
-          pricing dinámico, integración de herramientas. Evidencia verificable,
-          no mockups.
-        </p>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link
+            href="/plataforma"
+            className="rounded-full bg-white px-7 py-3 text-base font-semibold text-[#071634] transition hover:bg-sky-100"
+          >
+            Ver la plataforma
+          </Link>
+          <Link
+            href="/flujos"
+            className="rounded-full border border-white/35 px-7 py-3 text-base font-semibold text-white transition hover:border-white/70 hover:bg-white/10"
+          >
+            Ver los flujos
+          </Link>
+        </div>
 
         {/* La pantalla: sale desde el borde inferior del panel y sobresale por
             debajo, igual que los personajes de la referencia. Va POR ENCIMA
