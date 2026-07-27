@@ -57,6 +57,51 @@ function nodo(id: string) {
   return NODOS.find((n) => n.id === id)!;
 }
 
+// El flujo se EJECUTA en bucle en vez de estar quieto: se disparan las
+// entradas, viajan los paquetes iluminando su linea, el agente procesa y
+// recien despues salen los paquetes a las cuatro salidas, que se encienden
+// al recibir. Los tiempos estan en segundos dentro del ciclo.
+const CICLO = 6.4;
+const PROGRAMA_CONEXION: Record<string, { inicio: number; dur: number }> = {
+  "webhook>gpt": { inicio: 0.55, dur: 1.15 },
+  "discord>gpt": { inicio: 0.75, dur: 1.15 },
+  "gpt>slack": { inicio: 2.55, dur: 1.0 },
+  "gpt>drive": { inicio: 2.7, dur: 1.0 },
+  "gpt>notion": { inicio: 2.85, dur: 1.0 },
+  "gpt>canva": { inicio: 3.0, dur: 1.0 },
+};
+const PROGRAMA_NODO: Record<string, number> = {
+  webhook: 0.25,
+  discord: 0.45,
+  gpt: 1.95,
+  slack: 3.55,
+  drive: 3.7,
+  notion: 3.85,
+  canva: 4.0,
+};
+
+// Sube rapido y decae lento: es lo que hace que se lea como un "disparo" y
+// no como un parpadeo simetrico.
+const SUBIDA = 0.18;
+const CAIDA = 1.05;
+function pulso(fase: number, inicio: number): number {
+  let d = fase - inicio;
+  if (d < 0) d += CICLO;
+  if (d > SUBIDA + CAIDA) return 0;
+  return d < SUBIDA ? d / SUBIDA : 1 - (d - SUBIDA) / CAIDA;
+}
+function progresoConexion(fase: number, id: string): number {
+  const p = PROGRAMA_CONEXION[id];
+  if (!p) return -1;
+  const d = fase - p.inicio;
+  if (d < 0 || d > p.dur) return -1;
+  return d / p.dur;
+}
+function conAlfa(hex: string, alfa: number): string {
+  const n = parseInt(hex.slice(1), 16);
+  return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${alfa})`;
+}
+
 // Curva entre el borde derecho de la tarjeta origen y el izquierdo de la
 // destino, con tiradores horizontales -- el mismo trazo que usan n8n/Zapier.
 function curva(a: (typeof NODOS)[number], b: (typeof NODOS)[number]) {
@@ -229,63 +274,104 @@ function usarTexturaPantalla() {
     ctx.fillText("activo", DISENO.w - 158, BARRA_H / 2 + 9);
 
     // Conexiones (curvas, por debajo de las tarjetas)
+    const fase = t % CICLO;
+
+    // Conexiones en reposo
     ctx.lineCap = "round";
     CONEXIONES.forEach(([a, b]) => {
       const c = curva(nodo(a), nodo(b));
       ctx.beginPath();
       ctx.moveTo(c.x0, c.y0);
       ctx.bezierCurveTo(c.cx0, c.cy0, c.cx1, c.cy1, c.x1, c.y1);
-      ctx.strokeStyle = "#41556F";
+      ctx.strokeStyle = "#2C3B50";
       ctx.lineWidth = 8;
       ctx.stroke();
     });
 
-    // Paquetes viajando por cada conexion
-    CONEXIONES.forEach(([a, b], i) => {
+    // Conexion activa: se ilumina el tramo ya recorrido y viaja el paquete.
+    // Iluminar solo lo recorrido (y no la linea entera) es lo que hace ver
+    // POR DONDE va el dato ahora mismo.
+    CONEXIONES.forEach(([a, b]) => {
+      const p = progresoConexion(fase, a + ">" + b);
+      if (p < 0) return;
       const c = curva(nodo(a), nodo(b));
-      const dur = 2.6 + (i % 3) * 0.5;
-      const p = ((t + i * 0.45) % dur) / dur;
-      const [px, py] = puntoEnCurva(c, p);
-      const desvanece = Math.sin(p * Math.PI); // entra y sale sin cortes
+
       ctx.beginPath();
-      ctx.arc(px, py, 28, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(96, 165, 250, ${0.16 * desvanece})`;
+      const pasos = 26;
+      for (let i = 0; i <= pasos; i++) {
+        const [sx, sy] = puntoEnCurva(c, (i / pasos) * p);
+        if (i === 0) ctx.moveTo(sx, sy);
+        else ctx.lineTo(sx, sy);
+      }
+      ctx.strokeStyle = "#5B9BFF";
+      ctx.lineWidth = 9;
+      ctx.stroke();
+
+      const [px, py] = puntoEnCurva(c, p);
+      ctx.beginPath();
+      ctx.arc(px, py, 30, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(147, 197, 253, 0.2)";
       ctx.fill();
       ctx.beginPath();
-      ctx.arc(px, py, 11, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(147, 197, 253, ${desvanece})`;
+      ctx.arc(px, py, 12, 0, Math.PI * 2);
+      ctx.fillStyle = "#DBEAFE";
       ctx.fill();
     });
 
     // Tarjetas de nodo
-    NODOS.forEach((n, i) => {
+    NODOS.forEach((n) => {
       const x = n.x - TARJETA.w / 2;
       const y = n.y - TARJETA.h / 2;
+      const enc = pulso(fase, PROGRAMA_NODO[n.id]);
 
+      // Onda que se expande al dispararse el nodo
+      if (enc > 0.02) {
+        const r = 1 - enc;
+        rectRedondeado(ctx, x - 16 * r, y - 16 * r, TARJETA.w + 32 * r, TARJETA.h + 32 * r, 22 + 16 * r);
+        ctx.strokeStyle = conAlfa(n.color, 0.45 * enc);
+        ctx.lineWidth = 5;
+        ctx.stroke();
+      }
+
+      ctx.save();
+      if (enc > 0) {
+        ctx.shadowColor = n.color;
+        ctx.shadowBlur = 42 * enc;
+      }
       rectRedondeado(ctx, x, y, TARJETA.w, TARJETA.h, 22);
       ctx.fillStyle = "#19212D";
       ctx.fill();
-      ctx.strokeStyle = "#3A4B62";
-      ctx.lineWidth = 4;
+      ctx.restore();
+
+      if (enc > 0) {
+        rectRedondeado(ctx, x, y, TARJETA.w, TARJETA.h, 22);
+        ctx.fillStyle = conAlfa(n.color, 0.16 * enc);
+        ctx.fill();
+      }
+
+      rectRedondeado(ctx, x, y, TARJETA.w, TARJETA.h, 22);
+      ctx.strokeStyle = enc > 0 ? conAlfa(n.color, 0.35 + 0.65 * enc) : "#3A4B62";
+      ctx.lineWidth = 4 + 3 * enc;
       ctx.stroke();
 
-      // Cuadrito de color del servicio
-      rectRedondeado(ctx, x + 22, y + 23, 56, 56, 15);
+      // Cuadrito de color del servicio, crece un poco al activarse
+      const cr = 56 + 6 * enc;
+      rectRedondeado(ctx, x + 22 - 3 * enc, y + 23 - 3 * enc, cr, cr, 15);
       ctx.fillStyle = n.color;
       ctx.fill();
 
       ctx.textAlign = "left";
-      ctx.fillStyle = "#E6EDF7";
+      ctx.fillStyle = enc > 0.3 ? "#FFFFFF" : "#E6EDF7";
       ctx.font = "600 36px system-ui, sans-serif";
       ctx.fillText(n.label, x + 96, y + 46);
       ctx.fillStyle = "#77869B";
       ctx.font = "500 28px system-ui, sans-serif";
       ctx.fillText(n.sub, x + 96, y + 81);
 
-      // Punto de estado, desfasado por nodo
+      // Punto de estado: verde apagado en reposo, encendido al ejecutarse
       ctx.beginPath();
-      ctx.arc(x + TARJETA.w - 28, y + TARJETA.h / 2, 8, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(52, 211, 153, ${0.35 + Math.abs(Math.sin(t * 1.6 + i)) * 0.65})`;
+      ctx.arc(x + TARJETA.w - 28, y + TARJETA.h / 2, 8 + 2 * enc, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(52, 211, 153, ${0.28 + 0.72 * enc})`;
       ctx.fill();
     });
 
