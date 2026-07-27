@@ -11,6 +11,75 @@ body {
   color: #0f1b2d;
 }
 
+/* ---------------------------------------------------------------------------
+   Hero de vidrio sobre azul con textura.
+
+   Orden de capas, que NO es decorativo sino de rendimiento: el fondo (.fondo-azul
+   y su grano) es completamente ESTATICO y va detras; el panel .vidrio va encima
+   con backdrop-filter; y el canvas WebGL animado va DENTRO del panel, o sea por
+   delante. backdrop-filter desenfoca lo que quedo pintado DETRAS del elemento:
+   si el canvas animado estuviera ahi, el navegador recalcularia el desenfoque en
+   cada frame y la pagina se arrastraria. Con el canvas por delante, el desenfoque
+   se calcula una sola vez.
+   --------------------------------------------------------------------------- */
+
+.fondo-azul {
+  /* Varios radial-gradient superpuestos en vez de un solo linear: es lo que da
+     la profundidad tipo "aurora" en vez de una rampa plana de color. */
+  background-color: #071634;
+  background-image:
+    radial-gradient(90% 60% at 15% 10%, rgba(59, 130, 246, 0.5) 0%, transparent 60%),
+    radial-gradient(70% 55% at 85% 5%, rgba(129, 140, 248, 0.42) 0%, transparent 62%),
+    radial-gradient(80% 70% at 70% 95%, rgba(14, 165, 233, 0.34) 0%, transparent 65%),
+    linear-gradient(160deg, #0A1B3D 0%, #071634 45%, #050F26 100%);
+}
+
+/* Grano procedural con feTurbulence como data-URI: sin peticiones de red y sin
+   imagen que licenciar. Ademas cumple una funcion tecnica y no solo estetica --
+   rompe el banding, que es el defecto tipico de un degradado azul a pantalla
+   completa en paneles de 8 bits. */
+.fondo-azul::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.22;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.vidrio {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  /* saturate ademas de blur: sin el, el color que se ve a traves del vidrio
+     queda lavado y el panel parece gris sucio en vez de vidrio blanco. */
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  backdrop-filter: blur(28px) saturate(160%);
+  /* Sombra exterior para despegarlo del fondo + linea interior clara arriba,
+     que es lo que simula el canto iluminado de una lamina de vidrio. */
+  box-shadow:
+    0 24px 70px rgba(3, 10, 26, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* Sin soporte de backdrop-filter (Firefox con la flag desactivada, navegadores
+   viejos) el panel quedaria casi transparente y el texto ilegible: se compensa
+   subiendo la opacidad del fondo propio. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .vidrio {
+    background: rgba(17, 32, 63, 0.72);
+  }
+}
+
+/* Quien pide menos transparencia en el sistema recibe un panel solido. */
+@media (prefers-reduced-transparency: reduce) {
+  .vidrio {
+    background: rgba(10, 24, 51, 0.92);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
 /* Sombra del objeto 3D flotante: se encoge y se aclara cuando el objeto
    sube, y vuelve a crecer cuando baja. El periodo (8.73s) coincide con el
    del seno que mueve el modelo en ModeloLaptop.tsx (2*PI / 0.72), asi que

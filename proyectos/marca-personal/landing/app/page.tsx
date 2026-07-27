@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero";
+import HeroVidrio from "@/components/HeroVidrio";
 import Logros from "@/components/Logros";
 import PlaceholderDashboard from "@/components/PlaceholderDashboard";
 import CVSection from "@/components/CVSection";
@@ -6,7 +6,7 @@ import CVSection from "@/components/CVSection";
 export default function Home() {
   return (
     <main className="bg-cf-bg">
-      <Hero />
+      <HeroVidrio />
       <Logros />
       <PlaceholderDashboard />
       <CVSection />

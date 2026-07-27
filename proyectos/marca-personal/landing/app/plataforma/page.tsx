@@ -1,49 +1,43 @@
 "use client";
 
-import { motion } from "framer-motion";
-import TarjetasFlotantes, {
-  type ContenidoTarjetas,
-} from "@/components/TarjetasFlotantes";
+import dynamic from "next/dynamic";
+import Link from "next/link";
 
-// Pagina sin texto: la animacion de las cuatro tarjetas es el unico
-// contenido, centrada en la pantalla. El componente es el mismo del home
-// -- misma composicion, mismos tiempos -- y solo cambia lo que dicen las
-// tarjetas, que aca hablan de la plataforma en vez de los logros.
-const CONTENIDO_PLATAFORMA: ContenidoTarjetas = {
-  principal: {
-    etiqueta: "Herramientas conectadas",
-    valor: "6",
-    // Textos cortos a proposito: las tarjetas se pisan entre si por diseno,
-    // y una linea larga queda tapada por la tarjeta de al lado.
-    detalle: "Slack, Drive, Notion…",
-  },
-  destacada: {
-    etiqueta: "Sin intervención",
-    valor: "24/7",
-    detalle: "los flujos corren solos",
-  },
-  proceso: {
-    etiqueta: "Un solo flujo",
-    detalle: "Webhook → ChatGPT",
-  },
-  secundaria: {
-    etiqueta: "Pasos manuales",
-    valor: "0",
-    detalle: "por ejecución",
-  },
-};
+const ModeloLaptop = dynamic(() => import("@/components/ModeloLaptop"), {
+  ssr: false,
+});
 
 export default function PlataformaPage() {
   return (
-    <main className="flex min-h-screen items-center justify-center overflow-x-hidden bg-cf-bg px-6 py-20 sm:px-12">
-      <motion.div
-        className="w-full max-w-2xl"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-      >
-        <TarjetasFlotantes contenido={CONTENIDO_PLATAFORMA} />
-      </motion.div>
+    <main className="min-h-screen overflow-x-hidden bg-cf-bg px-6 py-20 sm:px-12 sm:py-28">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-10">
+        <div>
+          <span className="text-sm font-semibold uppercase tracking-widest text-cf-accent">
+            Plataforma
+          </span>
+          <h1 className="mt-4 text-4xl font-bold leading-tight text-cf-text sm:text-5xl">
+            Tus herramientas, orquestadas en un solo flujo
+          </h1>
+          <p className="mt-6 max-w-lg text-lg text-cf-muted">
+            Slack, ChatGPT, Drive, Canva, Notion, Discord — conectados y
+            automatizados, sin que tengas que operar cada uno por separado.
+          </p>
+          <Link
+            href="/flujos"
+            className="mt-8 inline-block rounded-xl bg-cf-accent px-6 py-3 font-semibold text-white transition hover:brightness-110"
+          >
+            Ver los flujos
+          </Link>
+        </div>
+
+        <div className="min-w-0">
+          <ModeloLaptop />
+          <p className="relative z-10 mt-6 text-center text-xs text-cf-muted">
+            Modelo 3D &ldquo;MacBook Laptop&rdquo; por Issac Ghazanfar,
+            licencia Creative Commons Attribution
+          </p>
+        </div>
+      </div>
     </main>
   );
 }
