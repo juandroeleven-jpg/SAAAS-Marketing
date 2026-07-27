@@ -1,7 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import TarjetasFlotantes from "./TarjetasFlotantes";
+import dynamic from "next/dynamic";
+
+// El objeto 3D solo en cliente: monta WebGL, no tiene nada que renderizar en
+// el servidor. Con ssr:false el HTML inicial llega sin el canvas y el resto
+// del hero (titulo, copy, CTAs) pinta de una, sin esperar al modelo.
+const ModeloLaptop = dynamic(() => import("./ModeloLaptop"), { ssr: false });
 
 export default function Hero() {
   return (
@@ -41,12 +46,23 @@ export default function Hero() {
           </div>
         </motion.div>
 
+        {/* Sin scale ni y en la transicion de entrada: el modelo ya trae su
+            propia entrada lateral en 3D (ModeloLaptop/Flotacion). Animar
+            tambien el contenedor obligaria al navegador a recomponer el
+            canvas WebGL en cada frame -- eso es justo lo que se ve
+            "laggeado". Aca solo se desvanece la opacidad, que es una
+            propiedad compuesta y no toca el canvas. */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.94 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
+          className="min-w-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
         >
-          <TarjetasFlotantes />
+          <ModeloLaptop />
+          <p className="relative z-10 mt-4 text-center text-xs text-cf-muted">
+            Modelo 3D &ldquo;MacBook Laptop&rdquo; por Issac Ghazanfar,
+            licencia Creative Commons Attribution
+          </p>
         </motion.div>
       </div>
 
