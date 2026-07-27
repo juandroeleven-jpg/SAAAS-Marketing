@@ -48,7 +48,7 @@ export default function HeroVidrio() {
         transition={{ duration: quieto ? 0 : 0.7, ease: "easeOut" }}
         // pb generoso: la pantalla se apoya en el borde inferior y sobresale,
         // asi que el texto tiene que terminar bastante antes.
-        className="vidrio relative z-10 mx-auto w-full max-w-6xl rounded-[32px] px-6 pb-[52%] pt-8 sm:px-10 sm:pb-[46%] sm:pt-10 lg:px-14 lg:pb-[42%]"
+        className="vidrio relative z-10 mx-auto w-full max-w-6xl rounded-[32px] px-6 pb-10 pt-8 sm:px-10 sm:pb-[46%] sm:pt-10 lg:px-14 lg:pb-[42%]"
       >
         {/* Fila superior: marca a la izquierda y metricas donde la referencia
             pone el menu. El boton NO va aqui: con los chips grandes la fila se
@@ -97,7 +97,12 @@ export default function HeroVidrio() {
             del vidrio (z-20) a proposito: backdrop-filter solo desenfoca lo
             que quedo pintado DETRAS, asi que un canvas animado aqui arriba no
             obliga a recalcularlo en cada frame. */}
-        <div className="absolute inset-x-0 -bottom-[10%] z-20 mx-auto w-[94%] sm:w-[88%]">
+        {/* En movil la pantalla NO se superpone: va en el flujo normal,
+            debajo de los botones. Colocada en absoluto tapaba las llamadas a
+            la accion, que es lo primero que hay que poder tocar en un
+            telefono. A partir de sm vuelve a apoyarse en el borde inferior
+            del panel y a sobresalir. */}
+        <div className="relative z-20 mt-10 w-full sm:absolute sm:inset-x-0 sm:-bottom-[10%] sm:mx-auto sm:mt-0 sm:w-[88%]">
           {/* Luz LED detras de la pantalla. Es `filter: blur`, no
               backdrop-filter: se desenfoca a si misma y no lee lo que tiene
               detras, asi que no anade coste al vidrio. */}
