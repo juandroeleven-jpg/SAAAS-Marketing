@@ -211,7 +211,7 @@ function Flotacion({ children }: { children: React.ReactNode }) {
     // sentia inquieto; asi respira. La amplitud sube apenas para que, aun
     // siendo mas lento, se siga notando.
     grupo.current.position.y =
-      Math.sin(tFlot * 0.72) * 0.13 + restante * 0.25;
+      Math.sin(tFlot * 0.72) * 0.075 + restante * 0.25;
     grupo.current.rotation.y = restante * GIRO_ENTRADA;
     // Balanceo leve, con otro periodo para que no se sienta mecanico.
     grupo.current.rotation.z = Math.sin(tFlot * 0.46) * 0.022;
@@ -245,13 +245,17 @@ const DIRECCION_CAMARA = new THREE.Vector3(-0.16, 0.22, -1.5);
 // Se aleja respecto al encuadre "recortado" anterior: ahora el objeto entra
 // completo, con aire alrededor, para que se lea flotando en vez de cortado.
 // El objeto mide ~1.04 unidades de alto ya escalado. Con fov 36 el alto
-// visible a distancia d es 2*d*tan(18deg) = 0.65*d. A 1.28 la distancia era
+// visible a distancia d es 2*d*tan(18deg) = 0.65*d, o sea 0.9909*ACERCAMIENTO.
+// A 1.25 el alto visible es 1.239 y sobran (1.239-1.04)/2 = 0.0995 por lado.
+// Por eso la flotacion baja a +-0.075: con la amplitud anterior de 0.13 el
+// teclado se saldria del cuadro en el punto bajo del ciclo. Acercar la camara
+// y bajar la amplitud van juntos, no son dos ajustes independientes. A 1.28 la distancia era
 // 1.94 y el alto visible 1.26: sobraban 0.11 arriba y abajo, que la
 // flotacion de +-0.12 se comia -- en el punto bajo del ciclo el teclado se
 // salia del cuadro. A 1.45 la distancia es 2.20 y el alto visible 1.43, o
 // sea 0.075 de margen POR ENCIMA de la flotacion. Pantalla y teclado quedan
 // siempre completos.
-const ACERCAMIENTO = 1.38;
+const ACERCAMIENTO = 1.25;
 const POSICION_CAMARA = DIRECCION_CAMARA.clone().multiplyScalar(ACERCAMIENTO);
 
 // Angulos esfericos del encuadre inicial, usados para acotar la orbita.
@@ -288,7 +292,7 @@ export default function ModeloLaptop({
     // Contenedor grande y con aire: el objeto entra completo y flota dentro,
     // sin recortarse contra los bordes. Sigue sangrando un poco fuera de su
     // columna en desktop para ganar tamano sin obligar a acercar la camara.
-    <div className="relative aspect-[5/3.9] w-full lg:-mr-[4vw] lg:w-[calc(100%+4vw)]">
+    <div className="relative aspect-[5/3.9] w-full lg:-mr-[10vw] lg:w-[calc(100%+10vw)]">
       {/* Sombra difusa debajo: es lo que vende el efecto de estar suspendido */}
       <div className="sombra-flotante pointer-events-none absolute inset-x-[18%] bottom-[8%] h-[10%] rounded-[50%] bg-cf-text/25 blur-2xl" />
       <div className="sombra-flotante pointer-events-none absolute inset-x-[10%] bottom-[4%] h-[18%] rounded-[50%] bg-cf-accent/25 blur-3xl" />

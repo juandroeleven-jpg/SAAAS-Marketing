@@ -37,12 +37,12 @@ export default function PlataformaPage() {
             la grilla pasa a una columna y, por el orden del DOM, el texto
             queda arriba y el laptop abajo -- que es justo lo pedido, sin
             necesidad de reordenar nada. */}
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,0.68fr)_minmax(0,1.32fr)] lg:gap-10">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:gap-8">
           <div>
             <span className="text-sm font-semibold uppercase tracking-widest text-sky-200">
               Plataforma
             </span>
-            <h1 className="mt-4 text-4xl font-bold leading-[1.08] text-white sm:text-5xl">
+            <h1 className="mt-4 text-4xl font-bold leading-[1.08] text-white sm:text-5xl lg:text-[2.9rem] xl:text-5xl">
               Un agente que <span className="text-sky-300">razona</span> y
               ejecuta
             </h1>
@@ -65,13 +65,17 @@ export default function PlataformaPage() {
 
           <div className="min-w-0">
             <ModeloLaptop escena="agentes" />
-            <p className="relative z-10 mt-4 text-center text-xs text-slate-300/70">
-              Modelo 3D &ldquo;MacBook Laptop&rdquo; por Issac Ghazanfar,
-              licencia Creative Commons Attribution
-            </p>
           </div>
         </div>
       </motion.div>
+
+      {/* La licencia Creative Commons Attribution del modelo 3D EXIGE
+          mantener el credito. Se puede sacar de encima del objeto, no
+          eliminar: aqui queda al pie, discreto, fuera del panel. */}
+      <p className="absolute inset-x-0 bottom-4 z-10 text-center text-[11px] text-slate-400/50">
+        Modelo 3D &ldquo;MacBook Laptop&rdquo; por Issac Ghazanfar, licencia
+        Creative Commons Attribution
+      </p>
     </main>
   );
 }
