@@ -112,13 +112,11 @@ function EntornoDeEstudio() {
   return null;
 }
 
-const DURACION_ENTRADA = 1.5;
-const DESPLAZAMIENTO_ENTRADA = 2.4;
-const GIRO_ENTRADA = 0.35;
-
-// Entra desde el lateral derecho, se endereza al llegar y despues queda
-// flotando. Mismos tiempos que el laptop de /plataforma para que las dos
-// paginas se sientan del mismo sitio.
+const DURACION_ENTRADA = 1.8;
+// Sube desde abajo, no entra de lado: la pantalla esta apoyada en el borde
+// inferior del panel de vidrio y tiene que leerse como que EMERGE de ahi.
+const DESPLAZAMIENTO_ENTRADA = 1.9; // unidades hacia abajo
+const GIRO_ENTRADA = 0.14; // inclinacion que se endereza al llegar
 function Flotacion({
   children,
   quieto,
@@ -148,11 +146,12 @@ function Flotacion({
     const restante = 1 - suave;
     const tFlot = Math.max(0, transcurrido - DURACION_ENTRADA);
 
-    grupo.current.position.x = DESPLAZAMIENTO_ENTRADA * restante;
-    grupo.current.position.y = Math.sin(tFlot * 0.72) * 0.1 + restante * 0.22;
-    grupo.current.rotation.y = restante * GIRO_ENTRADA + Math.sin(tFlot * 0.4) * 0.02;
+    grupo.current.position.x = 0;
+    grupo.current.position.y =
+      Math.sin(tFlot * 0.72) * 0.1 - DESPLAZAMIENTO_ENTRADA * restante;
+    grupo.current.rotation.y = Math.sin(tFlot * 0.4) * 0.02;
     grupo.current.rotation.z = Math.sin(tFlot * 0.46) * 0.016;
-    grupo.current.rotation.x = Math.sin(tFlot * 0.36) * 0.012;
+    grupo.current.rotation.x = restante * GIRO_ENTRADA + Math.sin(tFlot * 0.36) * 0.012;
   });
 
   return <group ref={grupo}>{children}</group>;
