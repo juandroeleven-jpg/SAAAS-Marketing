@@ -192,10 +192,13 @@ function usarTexturaPantalla() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
     const t = state.clock.getElapsedTime();
-    // Subir una textura de 3072x1920 a la GPU en cada frame es caro. A 24
-    // por segundo la animacion se sigue viendo fluida y el coste baja a
-    // menos de la mitad.
-    if (t - ultimoDibujo.current < 1 / 24) return;
+    // Cada redibujado sube ~23 MB de textura (3072x1920) a la GPU. A 24 por
+    // segundo eran ~566 MB/s, suficiente para producir tirones en equipos
+    // reales. A 15 baja a ~354 MB/s y el contenido de la pantalla igual se
+    // ve fluido: son transiciones lentas, no accion rapida. Importante: esto
+    // NO limita el 3D -- el laptop sigue flotando y girando a 60 fps, porque
+    // el render de la escena es independiente de este redibujado.
+    if (t - ultimoDibujo.current < 1 / 15) return;
     ultimoDibujo.current = t;
     const W = canvas.width;
     const H = canvas.height;
@@ -430,7 +433,7 @@ function Laptop() {
 // en su sitio, con un giro que se endereza al llegar (no aparece "puesto",
 // llega). Despues queda flotando: sube y baja con un seno lento y se inclina
 // apenas, para que se lea suspendido en el aire y no apoyado en el borde.
-const DURACION_ENTRADA = 1.15; // segundos
+const DURACION_ENTRADA = 1.5; // segundos
 const DESPLAZAMIENTO_ENTRADA = 2.6; // unidades hacia la derecha
 const GIRO_ENTRADA = 0.4; // rad extra que se endereza al llegar
 
@@ -455,15 +458,15 @@ function Flotacion({ children }: { children: React.ReactNode }) {
     const tFlot = Math.max(0, transcurrido - DURACION_ENTRADA);
 
     grupo.current.position.x = DESPLAZAMIENTO_ENTRADA * restante;
-    // Amplitud generosa a proposito: con valores chicos (0.045) el movimiento
-    // existia pero no se percibia. 0.12 es ~15% del alto del objeto, que se
-    // nota sin volverse inquieto. Periodo ~5.5s (2*PI / 1.15).
+    // Movimiento lento a proposito: periodo ~8.7s (2*PI / 0.72). A 1.15 se
+    // sentia inquieto; asi respira. La amplitud sube apenas para que, aun
+    // siendo mas lento, se siga notando.
     grupo.current.position.y =
-      Math.sin(tFlot * 1.15) * 0.12 + restante * 0.25;
+      Math.sin(tFlot * 0.72) * 0.13 + restante * 0.25;
     grupo.current.rotation.y = restante * GIRO_ENTRADA;
     // Balanceo leve, con otro periodo para que no se sienta mecanico.
-    grupo.current.rotation.z = Math.sin(tFlot * 0.72) * 0.022;
-    grupo.current.rotation.x = Math.sin(tFlot * 0.55) * 0.016;
+    grupo.current.rotation.z = Math.sin(tFlot * 0.46) * 0.022;
+    grupo.current.rotation.x = Math.sin(tFlot * 0.36) * 0.016;
   });
 
   return <group ref={grupo}>{children}</group>;

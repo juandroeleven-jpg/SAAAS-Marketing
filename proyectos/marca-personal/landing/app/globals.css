@@ -12,8 +12,8 @@ body {
 }
 
 /* Sombra del objeto 3D flotante: se encoge y se aclara cuando el objeto
-   sube, y vuelve a crecer cuando baja. El periodo (5.46s) coincide con el
-   del seno que mueve el modelo en ModeloLaptop.tsx (2*PI / 1.15), asi que
+   sube, y vuelve a crecer cuando baja. El periodo (8.73s) coincide con el
+   del seno que mueve el modelo en ModeloLaptop.tsx (2*PI / 0.72), asi que
    los dos movimientos van juntos -- es lo que hace leer que el objeto esta
    suspendido y no simplemente moviendose. */
 @keyframes sombra-flotante {
@@ -29,7 +29,7 @@ body {
 }
 
 .sombra-flotante {
-  animation: sombra-flotante 5.46s ease-in-out infinite;
+  animation: sombra-flotante 8.73s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
