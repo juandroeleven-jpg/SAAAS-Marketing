@@ -383,12 +383,17 @@ function Flotacion({ children }: { children: React.ReactNode }) {
   return <group ref={grupo}>{children}</group>;
 }
 
+// La suma anterior (0.9 + 1.4 + 0.5) saturaba el aluminio del cuerpo: la
+// base y el teclado se iban casi a blanco y se perdia el detalle de las
+// teclas. Con menos intensidad vuelve el gris del aluminio y las teclas
+// recuperan contraste. Esto NO afecta la pantalla, que usa MeshBasicMaterial
+// (sin iluminacion) justamente para que se vea igual pase lo que pase.
 function Iluminacion() {
   return (
     <>
-      <ambientLight intensity={0.9} />
-      <directionalLight position={[3, 5, 4]} intensity={1.4} />
-      <directionalLight position={[-4, 2, -3]} intensity={0.5} />
+      <ambientLight intensity={0.42} />
+      <directionalLight position={[3, 5, 4]} intensity={0.85} />
+      <directionalLight position={[-4, 2, -3]} intensity={0.28} />
     </>
   );
 }
