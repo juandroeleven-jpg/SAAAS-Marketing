@@ -37,7 +37,7 @@ export default function PlataformaPage() {
             la grilla pasa a una columna y, por el orden del DOM, el texto
             queda arriba y el laptop abajo -- que es justo lo pedido, sin
             necesidad de reordenar nada. */}
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:gap-8">
+        <div className="grid grid-cols-1 items-center gap-4 sm:gap-10 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:gap-8">
           <div>
             <span className="text-sm font-semibold uppercase tracking-widest text-sky-200">
               Plataforma
@@ -63,7 +63,11 @@ export default function PlataformaPage() {
             </div>
           </div>
 
-          <div className="min-w-0">
+          {/* En movil el objeto se sale del acolchado del panel (-mx-6, que es
+              justo el px-6 del panel) para ganar 48 px de ancho: dentro del
+              acolchado quedaba con demasiado aire a los lados y se veia
+              pequeno en un telefono. */}
+          <div className="-mx-6 min-w-0 sm:mx-0">
             <ModeloLaptop escena="agentes" />
           </div>
         </div>
