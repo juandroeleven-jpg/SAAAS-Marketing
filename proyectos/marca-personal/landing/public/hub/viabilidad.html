@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Viabilidad · Top 5 — Codeflow</title>
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<style>
+  /* Mismas variables que el Lead Hub: las dos paginas son el mismo producto. */
+  :root {
+    --bg:#eef1f4; --surface:#fff; --surface-2:#f6f8fa; --ink:#172431; --ink-dim:#5c6b7a;
+    --line:#dde3e9; --accent:#0e7c86; --accent-ink:#fff; --good:#2f9e44; --good-bg:#e8f6ea;
+    --warn:#b5790f; --warn-bg:#fbf1de; --crit:#c8433a; --crit-bg:#fbeae8; --mute:#667080; --mute-bg:#eef0f3;
+    --font-ui:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --font-mono:"SF Mono","Cascadia Code","Consolas","Liberation Mono",monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#10161c; --surface:#161e26; --surface-2:#1c2530; --ink:#e7ecf1; --ink-dim:#93a1ae;
+      --line:#263241; --accent:#4fb8c4; --accent-ink:#06171a; --good:#5fbf7a; --good-bg:#14261b;
+      --warn:#e0ac4a; --warn-bg:#2b2210; --crit:#e2695f; --crit-bg:#2b1613; --mute:#7b8894; --mute-bg:#1c242c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg:#10161c; --surface:#161e26; --surface-2:#1c2530; --ink:#e7ecf1; --ink-dim:#93a1ae;
+    --line:#263241; --accent:#4fb8c4; --accent-ink:#06171a; --good:#5fbf7a; --good-bg:#14261b;
+    --warn:#e0ac4a; --warn-bg:#2b2210; --crit:#e2695f; --crit-bg:#2b1613; --mute:#7b8894; --mute-bg:#1c242c;
+  }
+  :root[data-theme="light"] {
+    --bg:#eef1f4; --surface:#fff; --surface-2:#f6f8fa; --ink:#172431; --ink-dim:#5c6b7a;
+    --line:#dde3e9; --accent:#0e7c86; --good:#2f9e44; --warn:#b5790f; --crit:#c8433a;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:var(--font-ui);
+    line-height:1.5; display:grid; grid-template-columns:220px 1fr; min-height:100vh; }
+  .sidebar { position:sticky; top:0; height:100vh; background:var(--surface); border-right:1px solid var(--line);
+    padding:1.25rem 1rem; display:flex; flex-direction:column; gap:1.75rem; overflow-y:auto; }
+  .brand { display:flex; align-items:center; gap:.5rem; }
+  .brand-mark { width:32px; height:32px; border-radius:8px; background:var(--accent); color:var(--accent-ink);
+    display:flex; align-items:center; justify-content:center; font-weight:700; flex:none; }
+  .brand-name { font-weight:700; font-size:.94rem; }
+  .brand-sub { font-size:.73rem; color:var(--ink-dim); }
+  nav.side-nav { display:flex; flex-direction:column; gap:.1rem; }
+  nav.side-nav a { color:var(--ink-dim); text-decoration:none; font-size:.85rem; font-weight:600;
+    padding:.5rem .55rem; border-radius:6px; display:flex; flex-direction:column; gap:.05rem; }
+  nav.side-nav a.active, nav.side-nav a:hover { background:var(--surface-2); color:var(--accent); }
+  nav.side-nav a span.sub { font-size:.71rem; font-weight:400; color:var(--ink-dim); }
+  .sidebar-foot { margin-top:auto; font-size:.73rem; color:var(--ink-dim); border-top:1px solid var(--line);
+    padding-top:.8rem; display:flex; align-items:center; gap:.4rem; }
+  .dot { width:7px; height:7px; border-radius:50%; background:var(--good); flex:none; }
+
+  main { padding:1.75rem 2.25rem 5rem; max-width:1100px; }
+  .top-row { display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; flex-wrap:wrap; }
+  .live-tag { font-family:var(--font-mono); font-size:.71rem; letter-spacing:.07em; text-transform:uppercase;
+    color:var(--accent); display:flex; align-items:center; gap:.4rem; }
+  .live-tag .dot { background:var(--accent); }
+  h1 { font-size:1.55rem; font-weight:700; margin:.3rem 0 .15rem; text-wrap:balance; }
+  .subline { color:var(--ink-dim); font-size:.9rem; margin:0; }
+  .data-source { text-align:right; font-size:.72rem; color:var(--ink-dim); }
+  .data-source b { display:block; color:var(--ink); font-size:.85rem; }
+  h2 { font-size:1.05rem; font-weight:700; margin:0; scroll-margin-top:1.5rem; }
+  .section-head { margin:2.5rem 0 1.1rem; }
+  .section-head p { color:var(--ink-dim); font-size:.85rem; margin:.15rem 0 0; max-width:70ch; }
+  .widget { background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:1rem 1.15rem 1.15rem; }
+  .widget + .widget { margin-top:.9rem; }
+  .widget p { margin:.35rem 0 0; font-size:.92rem; }
+  .kpi-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:.85rem; margin-top:1.4rem; }
+  .kpi-value { font-family:var(--font-mono); font-size:1.7rem; font-weight:600; font-variant-numeric:tabular-nums; margin-top:.15rem; }
+  .kpi-label { display:flex; align-items:center; gap:.4rem; font-size:.82rem; }
+  .kpi-note { font-size:.72rem; color:var(--ink-dim); margin-top:.2rem; }
+
+  .ficha { background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:1rem 1.15rem;
+    margin-bottom:1rem; cursor:pointer; }
+  .ficha > summary { list-style:none; }
+  .ficha > summary::-webkit-details-marker { display:none; }
+  .ficha-top { display:flex; align-items:flex-start; gap:.85rem; }
+  .pos { font-family:var(--font-mono); font-size:1.05rem; font-weight:700; color:var(--accent);
+    background:var(--surface-2); border-radius:6px; padding:.25rem .55rem; flex:none; }
+  .ficha-id { flex:1; min-width:0; }
+  .ficha-nombre { font-weight:700; font-size:1rem; }
+  .ficha-tag { margin-top:.3rem; }
+  .status-tag { font-size:.62rem; font-weight:700; letter-spacing:.03em; text-transform:uppercase;
+    padding:.18rem .5rem; border-radius:4px; color:#fff; }
+  .status-tag.st-good { background:var(--good); }
+  .status-tag.st-warn { background:var(--warn); }
+  .status-tag.st-crit { background:var(--crit); }
+  .ficha-score { text-align:right; flex:none; }
+  .card-stat-label { font-size:.65rem; color:var(--ink-dim); text-transform:uppercase; letter-spacing:.03em; }
+  .card-stat-value { font-family:var(--font-mono); font-weight:700; font-size:1.5rem; font-variant-numeric:tabular-nums; }
+  .card-stat-value.good { color:var(--good); } .card-stat-value.warn { color:var(--warn); } .card-stat-value.crit { color:var(--crit); }
+  .de { font-size:.7rem; color:var(--ink-dim); font-weight:400; }
+  .ficha-resumen { font-size:.88rem; color:var(--ink-dim); margin:.7rem 0 0; }
+  .chev-hint { font-size:.68rem; color:var(--accent); margin-top:.55rem; font-weight:600; }
+  .ficha[open] .chev-hint::after { content:"▴ ver menos"; }
+  .ficha:not([open]) .chev-hint::after { content:"▾ ver las seis dimensiones y el primer paso"; }
+  .ficha-detalle { border-top:1px dashed var(--line); margin-top:.85rem; padding-top:.9rem; }
+  .dims { display:grid; grid-template-columns:1fr 1fr; gap:.9rem 1.5rem; }
+  .dim-head { display:flex; justify-content:space-between; font-size:.8rem; font-weight:600; }
+  .dim-head b { font-family:var(--font-mono); }
+  .dim-head b.good { color:var(--good); } .dim-head b.warn { color:var(--warn); } .dim-head b.crit { color:var(--crit); }
+  .barra { height:5px; border-radius:3px; background:var(--surface-2); margin:.3rem 0 .35rem; overflow:hidden; }
+  .barra i { display:block; height:100%; border-radius:3px; }
+  .barra i.good { background:var(--good); } .barra i.warn { background:var(--warn); } .barra i.crit { background:var(--crit); }
+  .dim-why { font-size:.76rem; color:var(--ink-dim); margin:0; }
+  .dos-columnas { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-top:1.1rem; }
+  .bloque ul { margin:0; padding-left:1.05rem; font-size:.82rem; color:var(--ink-dim); }
+  .bloque li { margin-bottom:.25rem; }
+  .bloque { margin-top:1rem; }
+  h5.dbtitle { margin:0 0 .35rem; font-size:.72rem; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-dim); }
+  .a-favor li::marker { color:var(--good); }
+  .en-contra li::marker { color:var(--crit); }
+  .primer-paso { margin-top:1.1rem; background:var(--surface-2); border-left:3px solid var(--accent);
+    border-radius:0 4px 4px 0; padding:.7rem .85rem; }
+  .primer-paso p { margin:0; font-size:.86rem; }
+  .salvedades { background:var(--warn-bg); border:1px solid var(--warn); border-radius:8px; padding:1rem 1.15rem; }
+  .salvedades ul { margin:.4rem 0 0; padding-left:1.1rem; font-size:.84rem; }
+  .salvedades li { margin-bottom:.5rem; }
+  footer { margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--line);
+    font-family:var(--font-mono); font-size:.73rem; color:var(--ink-dim); }
+  @media (max-width:860px) {
+    body { grid-template-columns:1fr; }
+    .sidebar { position:static; height:auto; flex-direction:row; align-items:center; flex-wrap:wrap;
+      gap:.75rem 1.25rem; padding:.9rem 1rem; border-right:none; border-bottom:1px solid var(--line); }
+    nav.side-nav { display:none; }
+    .sidebar-foot { margin-top:0; border-top:none; padding-top:0; }
+    main { padding:1.25rem 1rem 3rem; }
+    .dims, .dos-columnas { grid-template-columns:1fr; }
+    .top-row { flex-direction:column; } .data-source { text-align:left; }
+    h1 { font-size:1.3rem; }
+  }
+</style>
+</head>
+<body>
+<aside class="sidebar">
+  <div class="brand">
+    <div class="brand-mark">L</div>
+    <div><div class="brand-name">Lead Hub</div><div class="brand-sub">Calificación de prospectos</div></div>
+  </div>
+  <nav class="side-nav">
+    <a href="./index.html"><span>Panel general</span><span class="sub">KPIs y mapa de prioridad</span></a>
+    <a href="./index.html#metodologia"><span>Metodología</span><span class="sub">Cómo se calcula cada puntaje</span></a>
+    <a href="./index.html#clasificacion"><span>Clasificación</span><span class="sub">15 prospectos, detalle completo</span></a>
+    <a href="./viabilidad.html" class="active"><span>Viabilidad · Top 5</span><span class="sub">Qué proyecto priorizar</span></a>
+  </nav>
+  <div class="sidebar-foot"><span class="dot"></span>5 proyectos evaluados</div>
+</aside>
+
+<main>
+  <div class="top-row">
+    <div>
+      <div class="live-tag"><span class="dot"></span>Informe verificado</div>
+      <h1 id="panel">Informe de viabilidad — 5 proyectos, orden corregido tras verificación en disco (28-jul-2026)</h1>
+      <p class="subline">6 dimensiones ponderadas · 2 pasadas de refutación · 2026-07-28</p>
+    </div>
+    <div class="data-source">FUENTE<b>2 repos · ~900 KB de documentación</b></div>
+  </div>
+
+  <div class="kpi-row">
+    <div class="widget">
+      <div class="kpi-label"><span class="dot" style="background:var(--accent)"></span>Proyectos evaluados</div>
+      <div class="kpi-value">5</div>
+      <div class="kpi-note">de 6 candidatos consolidados</div>
+    </div>
+    <div class="widget">
+      <div class="kpi-label"><span class="dot" style="background:var(--good)"></span>Mejor puntuación</div>
+      <div class="kpi-value">45.5<span class="de">/100</span></div>
+      <div class="kpi-note">P1 / EDGE — Pipeline de cascos y cotizador</div>
+    </div>
+    <div class="widget">
+      <div class="kpi-label"><span class="dot" style="background:var(--warn)"></span>Cerca de cobrar</div>
+      <div class="kpi-value">2</div>
+      <div class="kpi-note">el resto necesita construir antes de vender</div>
+    </div>
+    <div class="widget">
+      <div class="kpi-label"><span class="dot" style="background:var(--crit)"></span>Clientes pagando hoy</div>
+      <div class="kpi-value">0</div>
+      <div class="kpi-note">ninguno de los cinco tiene ingreso activo</div>
+    </div>
+  </div>
+
+  <div class="section-head"><h2>Conclusión</h2></div>
+  <div class="widget"><p>Ninguno de los cinco tiene un cliente pagando hoy, y el orden que traías estaba invertido: el #1 se apoyaba en $900 cobrados que no existen en ningún archivo de ningún repo, y el último lugar se apoyaba en un directorio que tu propio status.md declara &quot;antiguo y erróneo&quot;. Con las cifras corregidas, P1/EDGE encabeza (45.5) porque es lo único con comprador nombrado, pedido concreto y una herramienta terminada y compilada de hace tres días; El Príncipe Azul cae al tercer puesto (42.5) porque un contrato vencido con IP cedida irrevocablemente y cliente en silencio no es demanda. El patrón de fondo, verificado con git: An-lisis-de-mercado lleva 25 días sin un commit (último 2026-07-03) y SAAAS-Marketing acumula 106 commits con 19 hoy mismo — tu preferencia revelada ya eligió, y eligió lo contrario a la tabla. La decisión práctica no es cuál construir, es dejar de construir en los cuatro y cobrar en uno.</p></div>
+  <div class="widget">
+    <h5 class="dbtitle">Qué hacer en dos semanas</h5>
+    <p>Dos semanas, tres actos, cero código nuevo fuera de lo que ya está construido. Semana 1: (1) cargar los precios reales de EDGE en cotizador/lib/catalogo.ts y emitir la cotización de las 7 fichas de Benzaquen desde el cotizador ya desplegado — es la única transacción real disponible y el software ya existe; (2) descomponer los $10,868 de Puertomar en recurrente vs corrección única, con query y baseline fechado, antes de publicar el Post 1 o la sección 3 de la web; es gratis y desbloquea todo el pitch. Semana 2: (3) cerrar El Príncipe Azul con una sonda de 3 horas — arreglar el desfase de fechas con un flag, grabar la demo con los dos agentes que sí corren, mandar el email a Graciela con corte a 2 semanas — y no invertir una hora más ahí. P2 y P3 se congelan: no toques Supabase, ni los 7 archivos que faltan, ni los 8 agentes, ni las 16-23 h de build de P3 hasta que uno de los tres actos anteriores produzca una factura pagada. Si a los 30 días no hay ni un cobro fuera de tu empleador, el problema no es el producto en ninguno de los cinco: es que nadie de esta red compra a estos precios, y eso se arregla cambiando de red, no de repositorio.</p>
+  </div>
+
+  <div class="section-head" id="clasificacion">
+    <h2>Clasificación</h2>
+    <p>Ordenado por puntuación total. Abre cualquiera para ver las seis dimensiones con su justificación y el primer paso concreto.</p>
+  </div>
+  
+    <details class="ficha" open>
+      <summary>
+        <div class="ficha-top">
+          <span class="pos">#1</span>
+          <div class="ficha-id">
+            <div class="ficha-nombre">P1 / EDGE — Pipeline de cascos y cotizador</div>
+            <div class="ficha-tag"><span class="status-tag st-good">Cerca</span></div>
+          </div>
+          <div class="ficha-score">
+            <div class="card-stat-label">Puntuación</div>
+            <div class="card-stat-value warn">45.5<span class="de">/100</span></div>
+          </div>
+        </div>
+        <p class="ficha-resumen">Sube del cuarto al primer puesto y no por mérito nuevo, sino porque la evaluación anterior puntuó la carpeta equivocada. Es el único de los cinco con comprador nombrado, pedido concreto (las 7 fichas de Benzaquen) y software terminado y compilado: 1.453 líneas íntegras de cotizador con build real, commiteadas el 25-jul. El primerPaso que te recetaban — &#x27;cotizar por escrito con una sola cifra&#x27; — ya está construido; lo que falta son los precios reales de EDGE, no arquitectura. Sigue siendo un proyecto con riesgo legal serio (todo el portfolio visible son personajes con dueño) y con un solo comprador que además es tu empleador. Pero es donde estás trabajando de verdad: 19 commits hoy.</p>
+        <div class="chev-hint"></div>
+      </summary>
+      <div class="ficha-detalle">
+        <div class="dims">
+      <div class="dim">
+        <div class="dim-head"><span>Demanda</span><b class="warn">4<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:40%" class="warn"></i></div>
+        <p class="dim-why">Comprador nombrado y pedido concreto: las 7 fichas técnicas de Benzaquen, más $1,500 previstos como primer job del empleador. Cero dólares cobrados y sin contrato. Los 5 clientes de p1-ejecucion-001.md están marcados [DATO SINTÉTICO]. Corrijo a la baja la &#x27;aprobación por WhatsApp&#x27;: indice-simulaciones.md:7 dice aprobación EN CURSO de Benzaquen y Garzon, no otorgada. Tope de 4 sin dinero real.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Listeza técnica</span><b class="warn">4<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:40%" class="warn"></i></div>
+        <p class="dim-why">Sube de 2. Los 43 archivos de 363 bytes (no 46) de p1-helmet son un volcado truncado de descarga desde Vercel, no código perdido, y p1-helmet es la carpeta que status.md:163 declara &#x27;antigua y errónea&#x27;. Lo vigente sí existe: cotizador con 1.453 líneas de TS/TSX, tsconfig, next.config, tailwind.config, postcss.config, package-lock y tsbuildinfo de 82 KB. No llega a más porque el pipeline central sigue con fallos reales de calidad (Stellar produjo &#x27;APOL•GIZE&#x27; y visera mal coloreada) y /api/texture corre 12+ min contra el límite de Vercel sin arquitectura de cola.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Margen</span><b class="good">7<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:70%" class="good"></i></div>
+        <p class="dim-why">Sube de 6. Economía unitaria buena y verificada en constantes de código: MESHY_COST_USD=0.20 + Recraft $0.08 + HIGGSFIELD_COST_USD=0.11 = $0.39/job. Ojo: el $0.46 &#x27;verificado en producción&#x27; es de OTRO pipeline (Flux/Recraft + Higgsfield, sin Meshy, codeflow.md:365-371); son dos costeos distintos, no el mismo. Y la quema fija que se te atribuía no está soportada: solo Meshy Pro ($20.80) consta como suscripción viva; Claude Code Pro, Higgsfield y Supabase Pro son precios de catálogo o cuentas sin activar.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Tiempo al ingreso</span><b class="warn">6<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:60%" class="warn"></i></div>
+        <p class="dim-why">Sube de 3, y es el mayor cambio del informe. Con el cotizador desplegado y las plantillas Kova/Furious/Spartan más Playwright (&lt;5s por ficha, lote de 7 en &lt;35s), puedes emitir cotización y entregar esta semana sin tocar el pipeline. Lo que bloquea no es desarrollo: es que lib/catalogo.ts declara todos los precios como placeholders ficticios y no hay mecanismo de cobro (sin Stripe, SP-14 en revisión).</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Capacidad</span><b class="crit">3<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:30%" class="crit"></i></div>
+        <p class="dim-why">Sube de 2 solo por preferencia revelada: 48 commits en 6 días demuestran que sostienes el ritmo aquí. Pero el trabajo físico no delegable sigue en la ruta crítica (comprar y medir un casco competidor, montar rig, UV mapping manual en Blender), el checklist tiene 22 pendientes todos en la columna &#x27;depende de tu decisión final&#x27;, y de los modos de fallo el repo tiene dos taxonomías incompatibles (10 en indice-simulaciones.md:163, 12 en pipeline-edge-6-meses.md:1158).</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Riesgo</span><b class="crit">2<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:20%" class="crit"></i></div>
+        <p class="dim-why">El más alto del conjunto y no cambia. Todo el portfolio visible son personajes con dueño (Bob Esponja, El Padrino, Top Gun de Paramount; Wolverine de Marvel en el demo) contra tu propia restricción 14, que reconoce equipos legales activos. Multa NHTSA de hasta $27.874 por etiquetado no conforme sobre un sistema que ya generó texto roto. Cuatro proveedores de IA encadenados, con el slug gemini-3-pro-image-preview aún hardcodeado en v5:855 y :859 pese a haber sido retirado el 25/06/2026. Y el token de Notion sigue expuesto sin rotar.</p>
+      </div></div>
+        <div class="dos-columnas">
+          <div class="bloque a-favor"><h5 class="dbtitle">A favor</h5><ul><li>Único proyecto con comprador nombrado y pedido concreto (7 fichas de Benzaquen)</li><li>Cotizador terminado, compilado y commiteado el 25-jul: 1.453 líneas íntegras con build verificado</li><li>Coste unitario real y bajo: $0.39/job según constantes del propio código</li><li>Es donde estás trabajando: 106 commits, 48 en 6 días, 19 hoy</li><li>Entrega semi-manual posible ya con plantillas existentes + Playwright ($0, &lt;35s el lote de 7)</li></ul></div>
+          <div class="bloque en-contra"><h5 class="dbtitle">En contra</h5><ul><li>Cero dólares cobrados y el único comprador es tu empleador</li><li>Todos los precios del cotizador son placeholders declarados en el código</li><li>Riesgo de propiedad intelectual sobre el portfolio entero: Paramount y Marvel</li><li>Sin mecanismo de cobro: no hay Stripe ni contrato ni entregables formales</li><li>Cuatro generaciones del producto conviviendo y una taxonomía de fallos duplicada</li></ul></div>
+        </div>
+        <div class="bloque bloq"><h5 class="dbtitle">Bloqueantes</h5><ul><li>Precios reales de EDGE para sustituir los placeholders de lib/catalogo.ts y lib/types.ts</li><li>Ausencia total de mecanismo de cobro (SP-14)</li><li>Licencia sobre los personajes del portfolio, sin la cual la línea de arte custom no existe legalmente</li></ul></div>
+        <div class="primer-paso">
+          <h5 class="dbtitle">Primer paso — esta semana</h5>
+          <p>Esta semana: pedirle a EDGE los precios reales por modelo, sustituir con ellos los placeholders de cotizador/lib/catalogo.ts (precioBase 189/219), lib/types.ts (RECARGO_COLORWAY_PREMIUM 15) y lib/entrega.ts (COSTO_ENVIO_PLACEHOLDER 12), y emitir desde el cotizador ya desplegado la cotización de las 7 fichas de Benzaquen con link compartible vía app/cotizacion/[id]. Es media jornada, no requiere una línea de código nueva, y convierte una aprobación &#x27;en curso&#x27; por WhatsApp en un documento con precio. Aparte, 10 minutos: rota el token de Notion.</p>
+        </div>
+      </div>
+    </details>
+    <details class="ficha" >
+      <summary>
+        <div class="ficha-top">
+          <span class="pos">#2</span>
+          <div class="ficha-id">
+            <div class="ficha-nombre">Módulo Auditoría de Nómina — caso Puertomar</div>
+            <div class="ficha-tag"><span class="status-tag st-good">Cerca</span></div>
+          </div>
+          <div class="ficha-score">
+            <div class="card-stat-label">Puntuación</div>
+            <div class="card-stat-value warn">43.5<span class="de">/100</span></div>
+          </div>
+        </div>
+        <p class="ficha-resumen">Sigue siendo tu mejor activo de credibilidad y tu peor activo verificable. Los $10,868 de la pesquera de 660 personas son el eje de todo el pitch — LinkedIn, sección 3 de la web, precio de $800/mes, cláusula de success fee — y no existen fuera de codeflow.md: sin carpeta de cliente, sin datos, sin reporte, sin una línea de código de nómina en ninguno de los dos repos. Verifiqué además que Copper Group/1HVAC, que sí es trabajo real entregado (15 sistemas en producción), está bajo NDA con cifras explícitamente no publicables. Tienes dos casos y ninguno se puede citar con números todavía. Ese es el problema entero, y es resoluble en una sesión.</p>
+        <div class="chev-hint"></div>
+      </summary>
+      <div class="ficha-detalle">
+        <div class="dims">
+      <div class="dim">
+        <div class="dim-head"><span>Demanda</span><b class="warn">4<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:40%" class="warn"></i></div>
+        <p class="dim-why">Hay acceso real y hallazgo real, y eso es más que cero. No hay contrato, factura, retainer ni prospecto nombrado para este módulo. El Post 1 sigue en cola sin publicar. Mantengo 4 por el techo de la rúbrica: acceso a datos reales de una empresa de 660 personas no es lo mismo que nada, pero tampoco es alguien que pague.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Listeza técnica</span><b class="crit">2<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:20%" class="crit"></i></div>
+        <p class="dim-why">Repetí el grep de nómina sobre los DOS repos, no solo uno: los únicos hits son copy de marketing en la landing (CVSection.tsx:7-8, TarjetasFlotantes.tsx:52, HeroVidrio.tsx:14). Cero código de nómina. Lo más cercano, p2-auditing, es para anomalías de proveedores y ni siquiera arranca. Puertomar se hizo a mano y la cadena de 8 agentes es especificación, no software.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Margen</span><b class="good">9<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:90%" class="good"></i></div>
+        <p class="dim-why">El mejor del conjunto y con números que resisten: $0.198 por corrida de los 8 agentes, ~$0.60 por ciclo completo de cliente contra un precio de entrada de ~$800/mes = 0.075% del ingreso. Infra ~$25/mes amortizada multi-tenant. No es 10 porque tus propias cifras de coste ya fallaron por 4x una vez (.env.local.example documenta Haiku a $0.25/$1.25 cuando el real es $1.00/$5.00) y porque el coste dominante no son los $0.60 sino tus 30-45 min de revisión humana por reporte.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Tiempo al ingreso</span><b class="warn">4<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:40%" class="warn"></i></div>
+        <p class="dim-why">Puertomar prueba que la entrega se puede hacer a mano, así que nada estructural impide vender una auditoría manual. Pero hay tres puertas: la descomposición recurrente vs corrección única antes de publicar el número (imperfección B, CRÍTICO), el baseline congelado y firmado por el contador del cliente antes de analizar (restricción P2-4 nº2), y cero prospectos nombrados en un canal que por tu propio diagnóstico tarda 4-6 meses en generar inbounds.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Capacidad</span><b class="warn">5<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:50%" class="warn"></i></div>
+        <p class="dim-why">Ya lo entregaste solo una vez, así que se puede. El techo está escrito en tu propio repo: la escala temprana la limitan tus horas, no el cómputo, con tope de 2 clientes. Cada ciclo son 45 min de kickoff, 30-45 min de revisión y una negociación de baseline con el contador del cliente.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Riesgo</span><b class="crit">3<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:30%" class="crit"></i></div>
+        <p class="dim-why">Cuatro frentes. Estructural: una fuga de nómina se encuentra una vez y se corrige; tu propio spec dice que el cliente cancela el retainer en el mes 2-3. Bala única: el número está replicado en 12+ puntos de codeflow.md (no 6, como se dijo antes) y una mala presentación ante un CFO lo quema para siempre. Legal: cero hits de &#x27;habeas data&#x27;, &#x27;NDA&#x27; o &#x27;DPA&#x27; en material contractual para un módulo que procesaría nóminas de 660 empleados nombrados en LATAM. Terceros: el bug conocido de duplicados por created_at de n8n es exactamente la clase de fallo que infla un número de recuperación delante de un CFO.</p>
+      </div></div>
+        <div class="dos-columnas">
+          <div class="bloque a-favor"><h5 class="dbtitle">A favor</h5><ul><li>Acceso demostrado a datos reales de una empresa de 660 personas</li><li>El mejor margen del portafolio y verificado: ~$0.60 por ciclo contra $800/mes</li><li>Entrega manual ya probada una vez: no necesitas producto para facturar</li><li>Existe un segundo cuerpo de trabajo real (Copper/1HVAC, 15 sistemas en producción) que nadie había contabilizado</li></ul></div>
+          <div class="bloque en-contra"><h5 class="dbtitle">En contra</h5><ul><li>Cero líneas de código de nómina en ninguno de los dos repos</li><li>Puertomar no aparece en SAAAS-Marketing y no tiene carpeta, datos ni reporte en An-lisis-de-mercado</li><li>El caso de Copper está bajo NDA con cifras explícitamente no publicables</li><li>Problema estructural de recurrencia que tu propio spec identifica como señal de fallo del modelo</li><li>Sin NDA/DPA propio para procesar datos personales de empleados</li></ul></div>
+        </div>
+        <div class="bloque bloq"><h5 class="dbtitle">Bloqueantes</h5><ul><li>Descomposición de los $10,868 en recurrente vs corrección única, con baseline fechado</li><li>Ausencia de cláusula de datos personales antes de tocar la nómina de un segundo cliente</li><li>Baseline congelado y firmado por el contador del cliente antes de cualquier success fee</li></ul></div>
+        <div class="primer-paso">
+          <h5 class="dbtitle">Primer paso — esta semana</h5>
+          <p>Esta semana, en una sola sesión: crear /clientes/puertomar/ y escribir dentro el desglose de los $10,868 en dos cifras separadas — recurrente y corrección única — con la query que las produjo, la fórmula, la fuente por línea y la fecha del baseline sobre el que se midieron. Si no encuentras el dato fuente, escríbelo también: esa ausencia es la información más importante del informe. Hasta que ese archivo exista, no publiques el Post 1 ni la sección 3 de la web ni cotices un success fee.</p>
+        </div>
+      </div>
+    </details>
+    <details class="ficha" >
+      <summary>
+        <div class="ficha-top">
+          <span class="pos">#3</span>
+          <div class="ficha-id">
+            <div class="ficha-nombre">El Príncipe Azul — dashboards y agentes para retail/floristería</div>
+            <div class="ficha-tag"><span class="status-tag st-warn">Cerrar</span></div>
+          </div>
+          <div class="ficha-score">
+            <div class="card-stat-label">Puntuación</div>
+            <div class="card-stat-value warn">42.5<span class="de">/100</span></div>
+          </div>
+        </div>
+        <p class="ficha-resumen">Baja del primero al tercer puesto porque la cifra que lo sostenía no existe. Los $900 no aparecen en ningún archivo: lo verificable es un contrato de 3 meses a $300/mes firmado el 12-mar y vencido el 12-jun. Eso lo deja con la misma demanda actual que los demás (cero) más una restricción que los demás no tienen: la IP está cedida irrevocablemente y ni el código ni las metodologías se pueden revender. Dos de tres agentes corren hoy con coste API cero, y eso es real. Pero la secuencia que tienes escrita — construir 7 entregables antes de preguntarle a la clienta si sigue ahí — es exactamente el orden inverso al correcto cuando la incertidumbre está en la demanda. Sonda barata de 3 horas y cierre.</p>
+        <div class="chev-hint"></div>
+      </summary>
+      <div class="ficha-detalle">
+        <div class="dims">
+      <div class="dim">
+        <div class="dim-head"><span>Demanda</span><b class="crit">3<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:30%" class="crit"></i></div>
+        <p class="dim-why">Corregido de 5. Los $900 son una multiplicación (3 x $300) presentada como cobro verificado; `grep -rn &quot;900&quot;` sobre clientes/principe-azul/ devuelve cero. Lo documentado es el contrato (proyecto.md:13) y &#x27;El pago recibido&#x27; sin cifra (:25). Crédito parcial por relación contractual histórica con cliente nombrado; penalización porque la restricción 2 prohíbe venderle esto mismo a nadie más, y el cliente lleva semanas en silencio sin fecha de inicio documentada.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Listeza técnica</span><b class="warn">4<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:40%" class="warn"></i></div>
+        <p class="dim-why">Verificado ejecutando: margin_analyzer.py (321 líneas) e inventory_alert.py (231) corren end-to-end con exit 0 sobre 150 filas de ventas y 30 de inventario. weekly_report.py (255) nunca se ha ejecutado: muere con &#x27;ERROR: Falta la librería anthropic&#x27;. Y ahí acaba: 0 dashboards en un proyecto que se llama &#x27;dashboards&#x27;, el schema SQL solo como texto (proyecto.md:123-179), 3 decisiones de stack sin cerrar, y &#x27;Agente 1&#x27; y &#x27;Agente 2&#x27; marcados como entregados pero con [CONFIRMAR tipo] en :231-232. El bug de fechas es reproducible: 16 productos en &#x27;PRÓXIMOS A VENCER&#x27; con días negativos.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Margen</span><b class="good">8<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:80%" class="good"></i></div>
+        <p class="dim-why">Los dos agentes que corren son lógica pura Python: sin ANTHROPIC_API_KEY, sin red, coste marginal $0. Solo weekly_report.py llama a la API, una vez por semana con max_tokens=500: céntimos al mes. Infra desplegada hoy: ninguna. No sube más porque proyecto.md no documenta ni un solo coste de API y porque una de las decisiones abiertas es el dashboard: Power BI Pro son ~$14/usuario/mes recurrentes.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Tiempo al ingreso</span><b class="crit">2<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:20%" class="crit"></i></div>
+        <p class="dim-why">Corregido de 3. Ocho puertas encadenadas: 7 de ~10 entregables sin construir, demo por grabar, la restricción 7 que prohíbe escribir hasta el 100%, 3 decisiones de stack que bloquean el resto, el email, 2 semanas de espera del criterio 5, un tercero que ya dejó de contestar, y la exigencia de duplicar el precio a $600. La última puerta la abre alguien que ya falló una vez. Un proyecto cuyo ingreso depende de una contraparte no responsiva debe puntuar por debajo de uno que solo depende de ti.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Capacidad</span><b class="good">7<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:70%" class="good"></i></div>
+        <p class="dim-why">Bajado de 8. Un cliente, tres scripts CLI de ~800 líneas, datasets de 150 y 30 filas, sin infraestructura que vigilar: una hora a la semana en régimen. Pero el repo lleva 25 días sin un commit y el dataset se congeló el 18-jun; el README está escrito para una clienta no técnica mientras el sistema exige lanzar scripts a mano desde terminal.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Riesgo</span><b class="warn">4<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:40%" class="warn"></i></div>
+        <p class="dim-why">Subido de 3: la &#x27;reclamación de devolución abierta&#x27; no existe — el criterio 8 es un criterio de éxito (&#x27;Ningún reclamo de devolución&#x27;) y la restricción 6 dice que una devolución no tendría base. Lo que sí es real e insalvable: IP cedida irrevocablemente (restricción 2), prohibición extendida a las metodologías (restricción 8), NDA vigente indefinidamente que impide usarlo de portfolio sin anonimizar, y concentración del 100% en un cliente en silencio con posible disputa interna entre socias.</p>
+      </div></div>
+        <div class="dos-columnas">
+          <div class="bloque a-favor"><h5 class="dbtitle">A favor</h5><ul><li>Dos agentes verificados corriendo hoy con exit 0 y coste API $0</li><li>Cliente nombrado y contrato real firmado, con relación histórica</li><li>Carga operativa mínima: una hora semanal en régimen</li><li>La lección de contratos ya escrita (proyecto.md:243-252) vale más que el código</li></ul></div>
+          <div class="bloque en-contra"><h5 class="dbtitle">En contra</h5><ul><li>Los $900 cobrados no están documentados en ninguna parte</li><li>IP cedida irrevocablemente: valor de reventa contractualmente cero</li><li>Contrato vencido el 12-jun sin renovación y cliente sin responder</li><li>25 días sin un commit en el repo; el dataset lleva 6 semanas congelado</li><li>weekly_report.py nunca se ha ejecutado y no hay ni un dashboard</li></ul></div>
+        </div>
+        <div class="bloque bloq"><h5 class="dbtitle">Bloqueantes</h5><ul><li>Las 3 decisiones de stack (dashboard, base de datos, formato fuente) bloquean todo lo demás</li><li>La restricción 7 impide contactar al cliente hasta tener el sistema al 100% — es el bloqueante que hay que romper, no cumplir</li><li>Sin respuesta de Graciela no hay nada que construir</li></ul></div>
+        <div class="primer-paso">
+          <h5 class="dbtitle">Primer paso — esta semana</h5>
+          <p>Esta semana, en una tarde: añadir un flag --fecha-referencia a inventory_alert.py (15 min, arregla los 16 productos con &#x27;vence en: -34 días&#x27; sin falsear el CSV), grabar una demo de 4 minutos con los dos agentes que ya corren, y enviar el email a Graciela Paredes con el borrador que ya tienes listo, indicando el piso de $600/mes y un plazo de dos semanas. Rompe deliberadamente la restricción 7: no construyas los 7 entregables restantes antes de saber si la contraparte existe.</p>
+        </div>
+      </div>
+    </details>
+    <details class="ficha" >
+      <summary>
+        <div class="ficha-top">
+          <span class="pos">#4</span>
+          <div class="ficha-id">
+            <div class="ficha-nombre">P2 — Auditoría financiera continua con IA</div>
+            <div class="ficha-tag"><span class="status-tag st-crit">Lejos</span></div>
+          </div>
+          <div class="ficha-score">
+            <div class="card-stat-label">Puntuación</div>
+            <div class="card-stat-value crit">35<span class="de">/100</span></div>
+          </div>
+        </div>
+        <p class="ficha-resumen">Mercado real, margen casi irrelevante ($0.037 por corrida) y un esqueleto de backend de 1.443 líneas que funciona conceptualmente. Y nada más: cero clientes, cero prospectos, cero pipeline contra un criterio propio de $15K. No está bloqueado por Supabase, está bloqueado por no haber hablado nunca con un comprador. Faltan 7 archivos de configuración y UI, no 2; el bug de fecha vs detected_at hace que el reporte principal salga con transacciones y cero alertas; y RLS está habilitado con cero políticas en un producto que custodiaría transacciones financieras ajenas. Lo vendible hoy no es el software: es la auditoría de proceso, entregable documental, cero código.</p>
+        <div class="chev-hint"></div>
+      </summary>
+      <div class="ficha-detalle">
+        <div class="dims">
+      <div class="dim">
+        <div class="dim-head"><span>Demanda</span><b class="crit">2<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:20%" class="crit"></i></div>
+        <p class="dim-why">Cero clientes y cero conversaciones registradas. DistriAndina está marcado [DATO SINTÉTICO] de forma repetida y la ejecución de manufactura está etiquetada SIMULADA. La categoría sí tiene demanda con fuente verificada (ACFE 2024: 5% de ingresos perdidos por fraude, mediana USD 145.000 sobre 1.921 casos; APQC: 0,8-2% de duplicados; AppZen ~USD 26.000/año), pero demanda de categoría no es alguien que te pague. Retiro de la lista el dato de tamaño de mercado de AP Automation: no está en ningún archivo.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Listeza técnica</span><b class="crit">3<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:30%" class="crit"></i></div>
+        <p class="dim-why">1.443 líneas de TypeScript reales (upload 297, analyze 335, report 341, AnomalyTable 376, supabase.ts 94) más schema.sql 95, y un CSV demo verificado de 200 transacciones con 8 anomalías. Pero faltan tsconfig.json, next.config.js, tailwind.config.js, postcss.config.js, app/layout.tsx, app/page.tsx y globals.css: `next build` no puede correr. El bug que rompe el entregable es literal: report/route.ts filtra transacciones por fecha (:209-213) y alertas por detected_at (:226-228). Nota: el bug del tipo &#x27;servicio&#x27; YA está corregido en upload/route.ts:66 — status.md:68 es un pendiente caducado, y el CSV tiene 40 filas, no ~80.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Margen</span><b class="good">8<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:80%" class="good"></i></div>
+        <p class="dim-why">La dimensión sólida y la única defendible. Coste medido: $0.037 por corrida completa sobre 200 transacciones ($0.0234 analyze + $0.0140 report); un cliente de 50.000 tx/mes ≈ $4.50/mes. Contra un retainer de $650-1.500 eso es 95-99% bruto. Descuento por tres cosas: el neto real de DIFERENCIAS.md:115 es $465/mes = 36%, la mitad del 70% que exige tu propio criterio 5; el stack del embudo suma ~$130/mes; y el precio no está decidido — $650 vs $1.500 es 2,3x y cambia el negocio entero.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Tiempo al ingreso</span><b class="crit">3<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:30%" class="crit"></i></div>
+        <p class="dim-why">Bajado de 4 por inactividad verificada: 25 días sin un commit en el repo que lo contiene. La auditoría de proceso a $1.500-2.000 se puede vender sin una línea de código, pero con pipeline en $0 el primer contacto está a semanas del primer peso, y con pagos 50/50 el primer cobro real son $750 tras un embudo de 11 pasos.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Capacidad</span><b class="warn">4<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:40%" class="warn"></i></div>
+        <p class="dim-why">Contradicción aritmética en tu propio material: la restricción 20 fija máximo 2 clientes simultáneos con equipo de 1 persona (techo ~$3.000/mes) contra un objetivo declarado de $5.000/mes con 3 clientes. Con 20 h/semana son 80 h/mes x $50/h = $4.000 máximo; harían falta $62,50/h. La restricción 7 (ningún cliente &gt;40% del revenue) es imposible de cumplir con máximo 2 clientes.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Riesgo</span><b class="crit">2<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:20%" class="crit"></i></div>
+        <p class="dim-why">El peor del conjunto junto con P1 y P3. `grep -c &quot;CREATE POLICY&quot; schema.sql` = 0 con RLS habilitado: cero aislamiento entre clientes en un producto que aloja transacciones financieras de terceros; prevenirlo cuesta 2-4 h. affected_amount se le pide a Claude sin fórmula fija, así que dos corridas del mismo CSV dan cifras distintas — descalificante para algo llamado &#x27;auditoría&#x27;. El &#x27;reporte firmado&#x27; no tiene firma ni hash. Y la restricción 11 renuncia explícitamente a abogado. Además tu documentación miente en puntos que dirigen decisiones: investigacion-p2.md afirma que /api/report no existe cuando tiene 341 líneas.</p>
+      </div></div>
+        <div class="dos-columnas">
+          <div class="bloque a-favor"><h5 class="dbtitle">A favor</h5><ul><li>Demanda de categoría documentada con fuentes verificables (ACFE, APQC, AppZen)</li><li>Coste de IA medido y despreciable: $0.037 por corrida</li><li>1.443 líneas de backend que funcionan conceptualmente y un CSV demo con 8 anomalías reales</li><li>La capa de servicio ($1.500-2.000 de auditoría de proceso) se puede vender sin código</li></ul></div>
+          <div class="bloque en-contra"><h5 class="dbtitle">En contra</h5><ul><li>Cero clientes, cero prospectos, cero pipeline contra un criterio propio de $15K</li><li>Faltan 7 archivos de configuración y UI: la app no compila</li><li>RLS habilitado con cero políticas sobre datos financieros de terceros</li><li>Resultados no reproducibles: el importe afectado lo estima el modelo sin fórmula fija</li><li>Tres precios y tres cálculos de margen incompatibles para lo mismo</li></ul></div>
+        </div>
+        <div class="bloque bloq"><h5 class="dbtitle">Bloqueantes</h5><ul><li>No hay comprador: nunca se ha tenido una conversación de venta</li><li>Supabase sin desplegar y sin keys</li><li>Bug fecha vs detected_at que vacía de alertas el entregable principal</li></ul></div>
+        <div class="primer-paso">
+          <h5 class="dbtitle">Primer paso — esta semana</h5>
+          <p>Esta semana: bloquear tres horas, escribir una lista nominal de 20 pymes de Bogotá/Medellín de 50-150 empleados cuyo ERP exporte a Excel, y enviar los 20 primeros mensajes ofreciendo SOLO la auditoría de proceso a $1.500 (entregable: documento de mapeo y recomendaciones, cero código), usando el CSV demo de 200 transacciones como demostración en pantalla. No toques Supabase, ni los 7 archivos que faltan, ni los 8 agentes hasta que alguien haya transferido los $750 de upfront.</p>
+        </div>
+      </div>
+    </details>
+    <details class="ficha" >
+      <summary>
+        <div class="ficha-top">
+          <span class="pos">#5</span>
+          <div class="ficha-id">
+            <div class="ficha-nombre">P3 — LinkedIn: motor de contenido, agentes y prospección</div>
+            <div class="ficha-tag"><span class="status-tag st-crit">Lejos</span></div>
+          </div>
+          <div class="ficha-score">
+            <div class="card-stat-label">Puntuación</div>
+            <div class="card-stat-value crit">28.5<span class="de">/100</span></div>
+          </div>
+        </div>
+        <p class="ficha-resumen">El mejor margen unitario del portafolio (99,5%) y el peor todo lo demás. Es el proyecto con más documentación y menos código: cero archivos .py, cero manifest.json, tres arquitecturas competidoras para el mismo problema que nunca se referencian entre sí — señal clásica de rediseñar en vez de construir. Peor aún: el activo que se le acreditaba (13 empresas con vacante, 15 perfiles verificados) no está en el tracker vivo, que tiene 3 empresas, dos ya descartadas por criterio y una con la vacante sin verificar. Y venderlo como retainer significa vender reputación sin tener reputación propia: cero posts publicados. Mantenlo como canal terciario, que es lo que tu propio codeflow.md ya dice.</p>
+        <div class="chev-hint"></div>
+      </summary>
+      <div class="ficha-detalle">
+        <div class="dims">
+      <div class="dim">
+        <div class="dim-head"><span>Demanda</span><b class="crit">2<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:20%" class="crit"></i></div>
+        <p class="dim-why">Cero clientes, cero posts publicados, cero respuestas de outreach. La ejecución real es 1 comentario de 15 y 0 de 13 mensajes. El precio de $800-1.500/mes está marcado [DATO SINTÉTICO - validar con primer cliente]. Corrijo el activo que se le atribuía: prospectos-linkedin-tracker.md (modificado hoy) tiene 3 empresas, no 13 — Platinum Brands descartada por tamaño, Accesos Automáticos por geografía, y Automátika Latam con la vacante pendiente de verificar. Queda 1 prospecto útil. Lo que sí es real es el ICP confirmado el 22/07 con banda de $1.000-$10.000.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Listeza técnica</span><b class="crit">2<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:20%" class="crit"></i></div>
+        <p class="dim-why">Verificado: 0 archivos .py y 0 manifest.json. post_generator.py, alert_system.py, background.js y content.js viven como texto dentro de un .md. La extensión está declarada &#x27;esqueleto funcional, no terminada&#x27; y le faltan popup.html, popup.js, el endpoint de comentarios y POST /leads/log. Las 7 variables de entorno están vacías y ninguna cuenta existe. El sistema de 12 agentes tiene cero código. Lo construido de verdad son 3 posts validados en formato y unos prompts: artefactos, no sistema.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Margen</span><b class="good">7<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:70%" class="good"></i></div>
+        <p class="dim-why">~$6/mes por cliente (Claude $0.19-1.32 + Buffer $5-6 + Notion y Telegram $0) contra $1.150/mes = 99,5% bruto. Pero el margen real no es de API sino de tu tiempo: 14 h/mes por cliente da $82/h, y eso es un salario, no un margen. A $500/mes, que es el piso real de mercado entry-level, cae a $35/h — por debajo de tu propio mínimo de $50/h.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Tiempo al ingreso</span><b class="crit">2<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:20%" class="crit"></i></div>
+        <p class="dim-why">El build no es el bloqueante (16-23 h a MVP). El bloqueante es que no existe ningún caso real publicable y el caso &#x27;Industrias Aguamarina S.A.S.&#x27; es inventado: la disyuntiva documentada es publicar datos ficticios (engañoso) o publicar sin cifras (genérico). Las 16 preguntas SP-1 a SP-16 están todas en revisión sin una sola decisión aprobada, y &#x27;cualificado&#x27; no está definido operacionalmente pese a ser la unidad de la meta.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Capacidad</span><b class="crit">3<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:30%" class="crit"></i></div>
+        <p class="dim-why">La aritmética no cierra: 3-4 h/semana por cliente contra un presupuesto de 5 h (2 h si hay proyectos activos) significa que UN cliente agota el presupuesto; los 4-5 clientes en paralelo exigirían 3-4x lo permitido. La prospección es 100% manual porque LinkedIn bloquea la búsqueda automatizada. Y hay patrón de abandono ya documentado en tu propio material.</p>
+      </div>
+      <div class="dim">
+        <div class="dim-head"><span>Riesgo</span><b class="crit">2<span class="de">/10</span></b></div>
+        <div class="barra"><i style="width:20%" class="crit"></i></div>
+        <p class="dim-why">Riesgo de plataforma casi máximo: 23% de tasa de restricción en 90 días con automatización, detección +340% de 2023 a 2025, y recuperación &#x27;virtualmente cero&#x27; ante baneo permanente sobre el único activo del proyecto. El cementerio de 2026 lo confirma (HeyReach baneada, Lempod fuera del Chrome Web Store, Expandi/Dripify/Waalaxy con 40% de usuarios restringidos). La apertura programática de pestañas con jitter ES un patrón de automatización aunque el clic final sea humano. Y un generador de 3 variantes por post es exactamente el mecanismo que publica dos cifras distintas del mismo caso.</p>
+      </div></div>
+        <div class="dos-columnas">
+          <div class="bloque a-favor"><h5 class="dbtitle">A favor</h5><ul><li>Mejor margen unitario del portafolio: ~$6/mes por cliente</li><li>ICP confirmado el 22/07/2026 con banda de precio de $1.000-$10.000</li><li>3 posts ya validados en formato y plantillas de outreach redactadas</li><li>El tracker está vivo: modificado hoy, con prospectos triados y descartados por criterio</li></ul></div>
+          <div class="bloque en-contra"><h5 class="dbtitle">En contra</h5><ul><li>Cero archivos ejecutables: todo el código vive como texto dentro de documentos</li><li>Tres arquitecturas competidoras para el mismo problema, sin referenciarse entre sí</li><li>El tracker real tiene 3 empresas, no 13; solo 1 sigue viva</li><li>Vender gestión de reputación sin reputación propia: cero posts publicados</li><li>Un solo cliente consumiría el 100% del presupuesto semanal</li><li>23% de riesgo de restricción de cuenta en 90 días con automatización</li></ul></div>
+        </div>
+        <div class="bloque bloq"><h5 class="dbtitle">Bloqueantes</h5><ul><li>No existe ningún caso real publicable (Gap 1): sin eso, ni contenido ni outreach con sustancia</li><li>Dependencia circular: P3 necesita resultados de P1/P2 para tener algo que contar</li><li>Las 16 decisiones SP-1 a SP-16 sin aprobar, incluida la definición de &#x27;cualificado&#x27;</li></ul></div>
+        <div class="primer-paso">
+          <h5 class="dbtitle">Primer paso — esta semana</h5>
+          <p>Esta semana, dos horas totales y $0: verificar la pestaña Empleos de Automátika Latam (el único prospecto vivo del tracker), enviarle el DM del Motor 2 ya redactado, y llevar el tracker de 3 a 10 empresas del ICP con el mismo criterio de triaje que ya aplicaste. Máximo 3-4 acciones al día para no gatillar el límite de LinkedIn. El DM del Motor 2 habla de la vacante del prospecto, no de un caso de éxito tuyo, así que es lo único del proyecto que no está bloqueado por Gap 1. No construyas nada, no crees ninguna cuenta, no publiques ningún post.</p>
+        </div>
+      </div>
+    </details>
+
+  <div class="section-head" id="salvedades">
+    <h2>Salvedades</h2>
+    <p>Lo que la verificación tumbó o dejó en duda. Va aquí y no enterrado al final a propósito: cambia decisiones.</p>
+  </div>
+  <div class="salvedades"><ul><li>Los $900 de El Príncipe Azul no existen. `grep -rn &quot;900&quot;` sobre clientes/principe-azul/ no devuelve nada; lo único documentado es &quot;Contrato de 3 meses ($300/mes) firmado 12-marzo-2026&quot; (proyecto.md:13) y &quot;El pago recibido&quot; en singular y sin cifra (:25). No hay factura, recibo ni extracto. Bajé demanda de 5 a 3 por eso. Si tienes el comprobante de los tres pagos, sube a 4-5 y el proyecto vuelve al segundo puesto; si fue un mes o un pago parcial, baja a 2 y cae al cuarto. Esta es la única corrección que tú puedes cerrar en cinco minutos y yo no.</li><li>La &quot;reclamación de devolución abierta&quot; de los $900 tampoco existe, y estaba invertida: el criterio 8 (proyecto.md:42) es un criterio de ÉXITO (&quot;Ningún reclamo de devolución&quot;) y la restricción 6 (:25) dice que una devolución &quot;no tiene base&quot;. Subí riesgo de 3 a 4. El aviso vale igual como contingencia, pero no como hecho.</li><li>No puedo saber si Puertomar y el trabajo de Copper Group/1HVAC son el mismo cuerpo de trabajo. El caso de Copper está documentado (15 sistemas, entregados, en producción) pero bajo NDA explícito y sin una sola cifra publicable; Puertomar y sus $10,868 no aparecen en SAAAS-Marketing en absoluto. Si son lo mismo, el módulo de nómina sube en demanda y en listeza y encabeza la tabla. Es la pregunta más rentable de todo el informe y solo tú la puedes contestar.</li><li>Los 43 archivos de 363 bytes de p1-helmet son output truncado de una descarga desde Vercel (commit literal: &quot;sync: codigo completo descargado desde Vercel&quot;), no código ausente: la fuente vive desplegada. La evaluación original lo trató como prueba de inmadurez en P1 (listeza=2) y como nota al pie en El Príncipe Azul (listeza=4) con evidencia idéntica. Corregí la asimetría, pero no puedo verificar la calidad del código desplegado sin re-descargarlo con `vercel pull`. Mi listeza=4 para P1 asume que lo desplegado funciona; si no funciona, baja a 2 y P1 pierde el primer puesto.</li><li>El cotizador está terminado y compila, pero TODOS sus precios son placeholders declarados en el propio código. La arquitectura de precios está decidida (una fórmula, no cuatro esquemas); las cifras no. Lo que falta no es desarrollo, es que EDGE te dé los números — y eso depende de un tercero.</li><li>Las 13 empresas con vacante y 15 perfiles verificados que se le acreditaban a P3 no están en el tracker vivo: hay 3 empresas, dos ya descartadas por criterio y una con la vacante pendiente de verificar. No sé de dónde salió el 13. Mantuve demanda=2 por prudencia, pero con 1 prospecto útil el argumento de &quot;lo único con valor es la lista de prospectos&quot; se cae.</li><li>Los anclajes de línea de la ficha del SaaS Launcher estaban desplazados de forma sistemática (+5/+7 en status.md, y codeflow.md:1993 apunta a la fila que contradice lo que pretendía respaldar). Es el motivo principal por el que ese candidato no aparece en los cinco: no pude usarlo para decidir nada sin re-verificarlo entero.</li><li>Evalué 5 candidatos, no 6. Dejé fuera el &quot;SaaS Launcher&quot;: es el envoltorio comercial de los módulos 1-2, sin código propio (la capa de catálogo y activación tiene cero líneas), con dos cifras clave ya tumbadas (el bug del tipo &#x27;servicio&#x27; está corregido desde upload/route.ts:66 y el CSV tiene 40 filas, no ~80) y con los anclajes rotos. No es un proyecto independiente hoy; es el plan de precios de los otros dos.</li><li>El desfase de fechas de inventory_alert.py (16 productos con &#x27;vence en: -34 días&#x27;) no es un bug de código, es la huella de que el dataset se congeló el 18-jun y nadie lo tocó desde entonces. Lo mismo dice el git log. Lo mantengo como arreglo de 15 minutos, pero léelo como síntoma de abandono, no como trámite previo a una demo.</li><li>Ninguna proyección de ingreso de este informe está validada por un comprador. Todos los precios ($150/casco, $800/mes, $1,500 de auditoría, $650-1.500 de retainer, $1.150 de LinkedIn) provienen de tus documentos, varios marcados como dato sintético. El único precio que alguien aceptó alguna vez fue $300/mes.</li></ul></div>
+
+  <div class="section-head" id="metodologia"><h2>Metodología</h2></div>
+  <div class="widget"><p>Partí de la evaluación de seis candidatos con seis dimensiones ponderadas (demanda 25%, listeza técnica 20%, tiempo al ingreso 20%, margen 15%, capacidad 10%, riesgo 10% — pesos confirmados: reproducen los seis totales originales al decimal), y encima apliqué dos pasadas de refutación: una sobre cifras (19 errores, 5 de gravedad alta) y otra sobre el orden (10 errores, 5 de gravedad alta). Luego verifiqué yo mismo en disco lo que decide el ranking. Comandos y resultados: `git log` en /home/user/SAAAS-Marketing (106 commits, último 2026-07-28 22:36, 19 hoy) y en /home/user/An-lisis-de-mercado (66 commits, último 2026-07-03 16:26). `find /home/user/An-lisis-de-mercado/p1-helmet -type f -size 363c` = 43 de 63 archivos (la evaluación decía 46). `wc -l` sobre /home/user/SAAAS-Marketing/proyectos/edge-cascos/cotizador = 1.453 líneas de TS/TSX íntegras, con tsconfig.json, next.config.js, tailwind.config.ts, postcss.config.js, package-lock.json y un tsconfig.tsbuildinfo de 82 KB (build real), commit del 2026-07-25. Pero también verifiqué que lib/catalogo.ts:4, lib/types.ts:2 y lib/entrega.ts:3 declaran explícitamente que TODOS los precios son placeholders ficticios (precioBase 189/219, RECARGO_COLORWAY_PREMIUM 15, COSTO_ENVIO_PLACEHOLDER 12) — dato que matiza a favor y en contra. Repetí el grep de nómina sobre los DOS repos: los únicos hits son copy de marketing (landing/components/CVSection.tsx:7-8, TarjetasFlotantes.tsx:52, HeroVidrio.tsx:14 &quot;97% ahorro nómina&quot;), cero código de nómina. `grep -rn &quot;10,868\|10868&quot;` y `grep -rni &quot;puertomar&quot;` sobre SAAAS-Marketing: cero resultados — Puertomar solo existe en codeflow.md. Leí caso-estudio-anonimizado.md completo (23 líneas): Copper Group/1HVAC, 15 sistemas, y una nota final que dice que &quot;cifras exactas y nombre de la empresa se mantienen confidenciales por acuerdo de confidencialidad&quot; — es decir, es un activo de credibilidad sin una sola cifra publicable. Leí prospectos-linkedin-tracker.md (modificado hoy 22:36): 3 empresas, no 13; una descartada por tamaño, otra por geografía, y la tercera con la vacante aún sin verificar. De la pasada previa incorporé lo ya ejecutado: margin_analyzer.py e inventory_alert.py salen con exit 0, weekly_report.py muere por falta de la librería anthropic, y el bug de fechas de inventory_alert.py es reproducible.</p></div>
+
+  <footer>Generado el 2026-07-28 · documento interno, no publicar</footer>
+</main>
+</body>
+</html>
