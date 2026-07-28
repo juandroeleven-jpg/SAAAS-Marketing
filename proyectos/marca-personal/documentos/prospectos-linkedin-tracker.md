@@ -32,8 +32,10 @@
 **Grado:** 3er grado. **Perfil:** https://www.linkedin.com/in/maria-laura-trujillo-2990b9176/
 **Nota de honestidad:** su rol es Legal/Cumplimiento, no Finanzas puras — el ángulo del mensaje debe hablar de automatización de reporting de cumplimiento, no de nómina. Actividad más reciente: contenido de la empresa que ella compartió hace 4 meses (modelo operativo de CFE) — no hay publicación propia más fresca para comentar con algo específico y genuino.
 
-**Motor 1 — Comentario sugerido** (sobre el post de CFE que ella compartió, tema "modelo descentralizado por sucursales"):
-> "Me parece muy acertado ese modelo de decisión en campo — en automatización financiera vemos algo parecido: entre más cerca esté el dato de donde ocurre la operación, más rápido y preciso es el reporting. Gracias por compartirlo, Maria Laura."
+**Motor 1 — Comentario sugerido** (sobre el post de CFE que ella compartió — texto real: "no somos una organización dirigida desde Casa Matriz; somos un modelo impulsado desde nuestras sucursales... eliminamos fricción, reducimos burocracia y tomamos decisiones donde la información está en campo"):
+> "Me parece muy acertado ese modelo impulsado desde las sucursales y no desde Casa Matriz — en automatización financiera vemos exactamente el mismo principio: entre más cerca esté el dato de donde ocurre la operación, más rápido y preciso es el reporting, sin sacrificar el criterio. Gracias por compartirlo, Maria Laura."
+>
+> **Link directo al post:** https://www.linkedin.com/posts/centrofinancieroempresarial_en-centro-financiero-empresarial-cfe-hemos-activity-7440435110769922048-knAB
 
 **Motor 2 — Mensaje sugerido:**
 > "Hola Maria Laura, vi que en CFE mantienen un modelo ágil por sucursal — trabajo en automatización de reporting financiero y de cumplimiento con IA (Codeflow AI), con casos reales de auditoría automática de nómina y dashboards de cartera. Me encantaría mostrarte cómo aplicaría ese enfoque en CFE. ¿15 min esta semana?"
@@ -149,11 +151,15 @@ Método usado (idéntico al de la Ronda 1, Motor 2): búsqueda en LinkedIn Jobs 
 **Por qué es un excelente contacto:** es el CEO real de la empresa (no un intermediario ni RRHH), tiene insignia de verificación, 5,820 seguidores, y publica contenido propio con frecuencia (no solo comparte de terceros) — perfil ideal para Motor 1, con material genuino y reciente sobre el cual comentar. Reconocido además por Forbes Centroamérica entre las 100 Mentes Más Influyentes de la Región 2025 (#11 en Panamá).
 **Nota de honestidad:** sus publicaciones más recientes (hace 5 días y hace 2 meses) tratan sobre la emisión de bonos corporativos por US$1,050 millones — no mencionan directamente el área de Contraloría/Finanzas operativas, pero sí muestran su rol activo en las decisiones financieras de la empresa, lo cual conecta naturalmente con el pitch de Codeflow AI sin forzar el ángulo.
 
-**Motor 1 — Comentario sugerido #1** (sobre su post de hace 5 días, Toque de Campana / emisión de bonos):
-> "Felicidades por este hito, Esteban — una emisión de este tamaño con esa demanda dice mucho de la disciplina financiera detrás de Generadora Gatún. Se nota que hay procesos sólidos de reporting y control para sostener la confianza de los inversionistas en un proyecto de esta escala."
+**Motor 1 — Comentario sugerido #1** (sobre su post de "Toque de Campana" — texto real: emisión de US$1,050 millones con demanda de US$4,600 millones):
+> "Felicidades por este hito, Esteban — una emisión de US$1,050 millones con demanda de US$4,600 millones no se logra sin años de disciplina financiera y procesos de reporting sólidos detrás. Se nota que el equipo de Generadora Gatún construyó la confianza del mercado con datos, no solo con relaciones."
+>
+> **Link directo al post:** https://www.linkedin.com/posts/esteban-barrientos-m-a35a0031_generadoragataeqn-emisiaejndebonos-activity-7485019762251513856-AcVf
 
-**Motor 1 — Comentario sugerido #2** (sobre su post de hace 2 meses, cierre del bono a 18.4 años con grado de inversión Baa3/BBB):
-> "Una calificación grado de inversión en la emisión privada más grande del sector energía en Centroamérica en 5 años es un resultado impresionante. Detrás de un roadshow de 110 reuniones en tres días tiene que haber un equipo financiero muy bien organizado — felicitaciones a todo el equipo de Generadora Gatún."
+**Motor 1 — Comentario sugerido #2** (sobre su post del cierre del bono a 18.4 años — texto real: calificación Baa3/BBB, 110 reuniones de roadshow en 3 días, 670 MW):
+> "Una calificación grado de inversión Baa3/BBB en la emisión privada más grande del sector energía en Centroamérica en 5 años, con 110 reuniones de roadshow en solo tres días, es un resultado impresionante. Detrás de ese nivel de exigencia con inversionistas institucionales tiene que haber información financiera impecable y en tiempo real — felicitaciones a todo el equipo de Generadora Gatún."
+>
+> **Link directo al post:** https://www.linkedin.com/posts/esteban-barrientos-m-a35a0031_generadoragataeqn-energaedafirme-gasnatural-activity-7460066766040334337-smpg
 
 **Motor 2 — Mensaje directo sugerido** (después de los 2 comentarios y tras enviar solicitud de conexión):
 > "Hola Esteban, felicidades de nuevo por el cierre del bono — un logro enorme para Generadora Gatún. Vi también que están buscando Contralor/a para el equipo. Trabajo con Codeflow AI en automatización financiera con IA: construí un flujo de nómina multi-país que redujo el tiempo de procesamiento en 97%, y sistemas de reporting/forecasting para grupos empresariales multi-país — justo el tipo de control que suele volverse crítico después de una emisión de esta magnitud, con más visibilidad exigida a inversionistas y calificadoras. Me encantaría mostrarte cómo aplicaría ese enfoque en Gatún. ¿15 min esta semana?"
@@ -326,11 +332,15 @@ Dado que esta empresa ya tiene una alerta activa de posible intermediario/agenci
 **Cargo:** CEO / Founder de Punto Pago SA | Venture Partner – FinSight Ventures. **Grado:** 2º grado. **Perfil:** https://www.linkedin.com/in/andrey-gorsky-0b420053/
 **Por qué es un excelente contacto:** es el fundador y CEO real, con insignia de verificación, muy activo en LinkedIn (publicaciones propias cada pocos días sobre el crecimiento de Punto Pago, resultados de negocio y fintech en general).
 
-**Motor 1 — Comentario sugerido #1** (sobre su post de hace 3 días, celebrando el Series B de Cashea vía FinSight Ventures):
-> "Felicidades a todo el equipo de FinSight — es una señal fuerte de hacia dónde va el capital en fintech de mercados emergentes. Se nota la visión detrás de Punto Pago también, construyendo el mismo tipo de ecosistema financiero acá en Panamá."
+**Motor 1 — Comentario sugerido #1** (sobre su post celebrando el Series B de Cashea vía FinSight Ventures):
+> "Felicidades a todo el equipo de FinSight por liderar la ronda de Cashea — es una señal fuerte de hacia dónde va el capital de riesgo en fintech de mercados emergentes. Se nota la misma visión detrás de Punto Pago, construyendo un ecosistema financiero real aquí en Panamá."
+>
+> **Link directo al post:** https://www.linkedin.com/posts/andrey-gorsky-0b420053_venturecapital-fintech-emergingmarkets-activity-7485738871075483648-ot-P
 
-**Motor 1 — Comentario sugerido #2** (sobre su post de hace 2 semanas, resultados H1 2026 — 200K+ préstamos, 10x crecimiento interanual):
-> "Ese dato del 44% de clientes sin historial crediticio previo es potente — construir un modelo de evaluación distinto en vez de rechazar por falta de historial es exactamente el tipo de decisión que separa a una fintech que solo mide de una que realmente construye inclusión financiera. Felicidades por los resultados de H1."
+**Motor 1 — Comentario sugerido #2** (sobre su post de resultados H1 2026 — texto real de la imagen: 200K+ préstamos/10x vs 2025, 1.1M clientes, 4x crecimiento de cartera; y la cita de Jesus Zumeta que él compartió: "Credit history isn't a fact about a person. It's a fact about whether they ever had access to the financial system before"):
+> "Esa frase de que 'el historial crediticio no dice quién es una persona, dice si alguna vez tuvo acceso al sistema financiero' resume perfecto el problema que resuelve Punto Pago. Pasar de 200K+ préstamos (10x vs 2025) y 4x de crecimiento en cartera en un país de 4.5M de personas es un resultado enorme — felicidades a todo el equipo."
+>
+> **Link directo al post:** https://www.linkedin.com/posts/andrey-gorsky-0b420053_puntopago-fintech-panama-activity-7480814360848830465-xsrz
 
 **Motor 2 — Mensaje sugerido:**
 > "Hola Andrey, felicidades por los resultados de crecimiento de Punto Pago este semestre — impresionante el 10x interanual en préstamos. Trabajo en automatización financiera con IA (Codeflow AI): construí dashboards de mora y seguimiento automático de cartera para negocios fintech. Me encantaría mostrarte cómo aplicaría eso a la operación de cobranza de Punto Pago, especialmente con el volumen que están manejando ahora. ¿15 min esta semana?"
@@ -413,8 +423,10 @@ Al intentar verificar el contacto directo en esta ronda, la página de empresa d
 **Cargo:** Socio - LAC Legal | Legal500 (Tax) | Ranked Leaders League (Corporate tax). **Grado:** 2º grado. **Perfil:** https://www.linkedin.com/in/raul-enrique-gonzalez-casatti-55071415/
 **Por qué es un excelente contacto:** Socio real de la firma, especialista en impuestos, muy activo (publicaciones propias cada 3-4 semanas sobre temas fiscales y eventos con clientes empresariales).
 
-**Motor 1 — Comentario sugerido** (sobre su post de hace 3 semanas, evento ADEDAPP sobre sustancia económica y precios de transferencia):
-> "Excelente resumen, Raúl. La parte de recomendaciones prácticas para que las empresas evalúen sus estructuras y procesos internos es justo donde más se nota la brecha — muchas empresas todavía llevan ese control en hojas de cálculo dispersas en vez de un proceso auditable."
+**Motor 1 — Comentario sugerido** (sobre su post del evento ADEDAPP del 17 de junio — texto real: "Fue un encuentro enriquecedor en donde junto a mi socio Diego Lacayo pudimos discutir la materia con escenarios prácticos", sobre sustancia económica, precios de transferencia y obligaciones formales en el Área Económica Especial Panamá Pacífico):
+> "Excelente resumen, Raúl. Que hayan llevado la sesión del 17 de junio a escenarios prácticos con Diego Lacayo, en vez de quedarse solo en la teoría de sustancia económica y precios de transferencia, es justo lo que más falta hace — muchas empresas todavía llevan ese control en hojas de cálculo dispersas en vez de un proceso auditable."
+>
+> **Link directo al post:** https://www.linkedin.com/posts/activity-7477807740078407680-fqId
 
 **Motor 2 — Mensaje sugerido:**
 > "Hola Raúl, vi el trabajo que están haciendo desde LAC Legal en temas de sustancia económica y cumplimiento tributario — trabajo en automatización contable y de reporting con IA (Codeflow AI), con casos de auditoría automática y reducción de trabajo manual repetitivo para firmas de servicios profesionales. Me encantaría mostrarte cómo aplicaría eso al área contable/administrativa de LAC Legal. ¿15 min esta semana?"
@@ -453,8 +465,10 @@ Al intentar verificar el contacto directo en esta ronda, la página de empresa d
 **Cargo:** Gerente superior de marketing en Playa Blanca Hotel & Resort Panamá. **Grado:** 3er grado. **Perfil:** https://www.linkedin.com/in/dyana-lisette-d%C3%ADaz-lucena-149583359/
 **Nota de honestidad:** su rol es Marketing, no Finanzas/Operaciones — el ángulo del mensaje debe ajustarse (reporting comercial/ocupación, no financiero puro). Actividad reciente: hace 3 semanas (compartió contenido de Amadeus Hospitality sobre publicidad en redes).
 
-**Motor 1 — Comentario sugerido:**
-> "Interesante la oferta de Amadeus — en el sector hotelero cada vez se vuelve más crítico medir bien el retorno de cada canal, sobre todo cuando se maneja ocupación y ventas de varias líneas (habitaciones, eventos, bodas) al mismo tiempo. Gracias por compartirlo, Dyana."
+**Motor 1 — Comentario sugerido** (sobre el post de Amadeus Hospitality que ella compartió — texto real: "Get 50% extra ad spend for your 2026 social media campaigns... Launch your Facebook, Instagram or TikTok campaigns with Amadeus and receive matched media budget during your first 3 months"):
+> "Interesante la oferta de Amadeus de igualar presupuesto de pauta en Instagram, Facebook y TikTok durante los primeros 3 meses — en hotelería cada vez se vuelve más crítico medir bien el retorno de cada canal, sobre todo cuando se maneja ocupación y ventas de varias líneas (habitaciones, eventos, bodas) al mismo tiempo. Gracias por compartirlo, Dyana."
+>
+> **Link directo al post:** https://www.linkedin.com/posts/amadeus-hospitality_get-50-extra-ad-spend-on-social-media-advertising-activity-7477736720139132928-pX2Y
 
 **Motor 2 — Mensaje sugerido:**
 > "Hola Dyana, vi la búsqueda de Diseñador Gráfico en Playa Blanca — trabajo en automatización de reporting y control operativo con IA (Codeflow AI), con dashboards de ocupación y rendimiento para operaciones hoteleras con múltiples áreas de servicio (habitaciones, eventos, bodas, ferias). Me encantaría mostrarte cómo se vería algo similar aplicado a Playa Blanca. ¿15 min esta semana?"
@@ -538,11 +552,15 @@ El resto de búsquedas (contador, gerente de ventas, jefe de almacén, coordinad
 **Por qué es un buen contacto:** título de máxima decisión (GM/Country Manager/CFO), con actividad reciente en LinkedIn (3-4 días) — cumple el requisito de tener publicaciones sobre las cuales comentar genuinamente antes de conectar.
 **Nota de honestidad:** las publicaciones disponibles en su actividad son contenido que ella *compartió* (no autoría propia) — son posts de liderazgo/gestión de personas que ella eligió republicar, lo cual igual sirve como base legítima para un comentario genuino sobre el tema, no se están inventando publicaciones que no existen.
 
-**Motor 1 — Comentario sugerido #1** (sobre el post de Juan José Hernández Fernández que ella compartió, tema "sinergia generacional / edadismo en equipos"):
-> "Totalmente de acuerdo con el punto de la sinergia generacional — en los equipos financieros y de operaciones pasa igual: la experiencia sabe qué preguntar y la energía nueva sabe dónde automatizar. Gracias por compartirlo, Susana."
+**Motor 1 — Comentario sugerido #1** (sobre el post de Juan José Hernández Fernández que ella compartió — texto real: "Binomio Intergeneracional de Alto Rendimiento... el junior aporta energía, tecnología, velocidad y ruptura; el senior aporta criterio, memoria, anticipación y serenidad"):
+> "Me quedo con la idea del 'Binomio Intergeneracional de Alto Rendimiento' — en equipos financieros y de operaciones pasa exactamente igual: el senior sabe qué preguntar, el junior sabe dónde automatizar, y juntos generan más criterio que cualquiera por separado. Gracias por compartirlo, Susana."
+>
+> **Link directo al post:** https://www.linkedin.com/posts/juanjosehernandezliderq_edadismo-talentosenior-talentojoven-activity-7486062668286562304-_emj
 
-**Motor 1 — Comentario sugerido #2** (sobre el post de Simon Sinek/Iñaki Léonard que ella compartió, tema "liderazgo que empodera"):
-> "Esa frase de Sinek aplica directo a finanzas también: los mejores CFOs que he visto no acumulan control, delegan y automatizan lo repetitivo para que el equipo piense en lo estratégico. Buen post, Susana."
+**Motor 1 — Comentario sugerido #2** (nota de corrección: el post que ella compartió es de **Iñaki Léonard**, no de Simon Sinek — el comentario original citaba mal la autoría; corregido con la frase real del post: "si todo depende de ti, quizá no estás liderando tanto como crees"):
+> "Esa frase de 'si todo depende de ti, quizás no estás liderando tanto como crees' aplica igual de fuerte en finanzas: he visto CFOs que confunden control con aporte de valor, cuando lo que de verdad escala un equipo es delegar y automatizar lo repetitivo para que la gente piense en lo estratégico. Buen post, Susana."
+>
+> **Link directo al post:** https://www.linkedin.com/posts/i-leonard_hay-jefes-que-no-lideran-equipos-los-mantienen-activity-7485288034586824704-ZRZ6
 
 **Motor 2 — Mensaje directo sugerido** (después de que los 2 comentarios generen visibilidad, y tras enviar solicitud de conexión):
 > "Hola Susana, vi que Feax International está buscando Contralor/Director de Contabilidad — con tu rol de CFO seguro estás de cerca en ese proceso. Trabajo con Codeflow AI en automatización financiera con IA: armé un flujo de nómina multi-país que redujo el tiempo de procesamiento en 97% y sistemas de reporting/forecasting para operaciones como la de Feax. Me encantaría mostrarte cómo aplicaría eso mientras se resuelve la búsqueda del puesto. ¿Tienes 15 min esta semana?"
@@ -601,8 +619,10 @@ Se revisó la lista de empleados actuales de Vets&Pets Panamá en LinkedIn: solo
 **Cargo:** Digital & Media Leader | Content, innovation & revenue growth | Streaming | Creators economy | AI, en Medcom Panamá. **Grado:** 2º grado. **Perfil:** https://www.linkedin.com/in/geraldine-prescott-62207141/
 **Nota de honestidad:** perfil con insignia de verificación y rol de liderazgo real en el área digital de Medcom, pero su publicación propia más reciente es de hace 10 meses (reconocimiento en los Effies 2025 como jurado) — no es contenido de esta semana, pero sigue siendo lo bastante reciente y específico para un comentario genuino.
 
-**Motor 1 — Comentario sugerido:**
-> "Qué buena forma de aportar al ecosistema creativo panameño desde el otro lado, evaluando en vez de solo presentando. Se nota el nivel que tiene el trabajo digital de Medcom, entre Gio Alemán y los reconocimientos internacionales."
+**Motor 1 — Comentario sugerido** (sobre su post — texto real: "Hoy son los Effies 2025. Gracias @effiepanama por permitirme ser parte del grupo de jurados que reconocen la calidad y el talento de los profesionales que tenemos en Panamá... Ser parte del proceso de evaluar y premiar la creatividad de las agencias siempre será una Mega experiencia"):
+> "Qué buena forma de aportar al ecosistema creativo panameño desde el otro lado, evaluando la creatividad de las agencias en vez de solo presentarla. Ser jurado de los Effies también dice mucho del nivel del trabajo digital que se hace desde Medcom."
+>
+> **Link directo al post:** https://www.linkedin.com/posts/geraldine-prescott-62207141_hoy-son-los-effies-2025-gracias-effiepanama-activity-7371728065284026368-kuhZ
 
 **Motor 2 — Mensaje sugerido:**
 > "Hola Geraldine, vi que Medcom está en búsqueda activa de talento — trabajo en automatización de reporting operativo con IA (Codeflow AI), con casos aplicados a operaciones de medios con múltiples canales/unidades de negocio. Me encantaría mostrarte cómo se vería algo similar en Medcom. ¿15 min esta semana?"
@@ -709,3 +729,19 @@ Se revisó la lista de empleados actuales de Vets&Pets Panamá en LinkedIn: solo
 - **Dichter & Neira Research** — su página de empresa en LinkedIn ya no está disponible ("unavailable") — posible baja o cambio de nombre; se recomienda no priorizar hasta confirmar por otra vía que sigue operando.
 
 **Nota de honestidad general sobre esta ronda:** de las 16 empresas revisadas (de las 21 documentadas, excluyendo las 2 ya trabajadas en la prueba inicial —Feax y Gatún— y las 3 descartadas/pendientes de Ronda 1 —Endavant, Platinum Brands, Productos Nevada—), se encontró un contacto identificable en 10 y se redactaron comentarios Motor 1 + mensaje Motor 2 completos solo para las que tenían actividad reciente y sustancial (Punto Pago y LAC Legal son los casos ideales; el resto tiene al menos el mensaje Motor 2 listo, con la actividad de cada contacto documentada honestamente para que Juan Diego decida si prefiere esperar a que publiquen algo más fresco antes de comentar). En las 6 empresas sin contacto limpio, no se inventó ni forzó un nombre — se documenta la razón concreta del descarte en cada caso.
+
+---
+
+## Ronda 7 — Corrección: enlaces directos a cada post y personalización real de los comentarios Motor 1
+
+**Motivo:** el usuario señaló, con razón, dos problemas en los comentarios Motor 1 redactados en la Ronda 6: (1) no incluían un link directo al post específico sobre el que se comenta, solo el perfil del contacto; y (2) el texto de los comentarios no estaba suficientemente personalizado al contenido real de cada post.
+
+**Qué se hizo:** se volvió a entrar a LinkedIn vía Chrome para cada uno de los 7 contactos que tienen al menos un comentario Motor 1 redactado (Susana Arguelles/Feax, Esteban Barrientos/Generadora Gatún, Andrey Gorsky/Punto Pago, Raúl González Casatti/LAC Legal, Dyana Díaz Lucena/Playa Blanca, Maria Laura Trujillo/CFE, Geraldine Prescott/Medcom), se abrió cada post exacto referenciado, se leyó su texto completo (antes solo se tenía el resumen/tema, no la cita textual), se obtuvo el link directo mediante la opción "Copiar enlace a la publicación" de LinkedIn, y se reescribió cada comentario citando frases o datos concretos del post real en vez de referencias genéricas al tema.
+
+**Hallazgo importante de honestidad:** al releer el post real que Susana Arguelles compartió (el de "liderazgo que empodera"), se confirmó que es autoría de **Iñaki Léonard**, no de Simon Sinek como decía el comentario original de la Ronda 6 — fue un error de atribución en esa primera redacción. Ya está corregido arriba con la cita real del post y el link directo.
+
+**Nota técnica:** los 9 links directos ahora insertados en cada sección de arriba apuntan al post exacto (no al perfil general), obtenidos directamente de la función nativa de LinkedIn para compartir/copiar enlace de una publicación — no son enlaces inventados ni reconstruidos.
+
+**Nota de honestidad operativa (accidentes menores y corregidos durante esta ronda):** al navegar los perfiles de Esteban Barrientos y de Geraldine Prescott, dos clics mal calculados en la interfaz activaron por accidente el botón "Seguir" en sus perfiles (una acción real, aunque de bajo impacto, en la cuenta de LinkedIn de Juan Diego). Ambos se revirtieron de inmediato (se hizo clic en "Dejar de seguir" apenas se detectó el error) y no se envió ningún mensaje, solicitud de conexión ni comentario sin autorización — se documenta aquí por transparencia, siguiendo la misma regla de "no ocultar nada" que rige todo este proyecto.
+
+**Estado:** con esta corrección, los 9 comentarios Motor 1 de las 7 empresas con contacto de alta calidad quedan con link directo al post + texto personalizado, listos para que Juan Diego revise y publique manualmente desde su cuenta (regla "yo preparo, vos envías" sigue vigente — no se publicó ni envió nada).
