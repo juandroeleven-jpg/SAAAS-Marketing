@@ -279,6 +279,30 @@ Primer molde de casco retro/redondo (estilo café racer, calota lisa, pivote cro
 
 ---
 
+## Casco blanco glossy con detalles tostados — goma del borde inferior a negro — Simulación 27
+
+Casco blanco perlado/glossy con pico frontal y ventilación lateral beige/tostados, visor azul espejado. Primer caso donde se aplica explícitamente la nueva regla general del equipo (comentario de "jimgarzons"): la goma del borde inferior siempre pasa a negro, sin tocar los demás accesorios de color (ver sección 9 de `orquestacion-agentes-paralelos.md`).
+
+[`simulacion-27-casco-blanco-glossy-goma-negra.md`](simulacion-27-casco-blanco-glossy-goma-negra.md)
+
+| Prompt / pieza | Tipo de pieza | Estado | Ubicación |
+|---|---|---|---|
+| Goma del borde inferior a negro (accesorios tostados sin cambios) | Tipo A (cambio puntual de color) | ✅ listo para usar — todavía no corrido | `simulacion-27-casco-blanco-glossy-goma-negra.md` |
+
+---
+
+## Banner de marca "Diseñado para superar tus límites" — Simulación 28
+
+Pieza de marketing/marca (no casco): banner con comilla roja, texto "DISEÑADO PARA / SUPERAR TUS LÍMITES." y fila de 3 íconos (RACING, URBANO, TOURING). La referencia real está borrosa con ghosting — pedido de mejora de calidad/nitidez del mismo contenido, variante del Tipo B.
+
+[`simulacion-28-banner-superar-limites.md`](simulacion-28-banner-superar-limites.md)
+
+| Prompt / pieza | Tipo de pieza | Estado | Ubicación |
+|---|---|---|---|
+| Mejora de calidad del banner (mismo contenido, sin blur) | Tipo B (mejora de calidad/nitidez) | ✅ listo para usar — todavía no corrido | `simulacion-28-banner-superar-limites.md` |
+
+---
+
 ## Resumen numérico
 
 | Caso | Prompts indexados | ✅ Listo | ⚠️ Con reintento | 🔴 Bloqueado |
@@ -300,8 +324,10 @@ Primer molde de casco retro/redondo (estilo café racer, calota lisa, pivote cro
 | Casco EDGE flip-up (quitar stickers) | 3 | 3 | 0 | 0 |
 | Carbex | 3 | 3 | 0 | 0 |
 | Casco retro/redondo | 2 | 2 | 0 | 0 |
-| **Total** | **66** | **52** | **10** | **3** |
+| Casco blanco glossy (goma negra) | 1 | 1 | 0 | 0 |
+| Banner "Superar tus límites" | 1 | 1 | 0 | 0 |
+| **Total** | **68** | **54** | **10** | **3** |
 
 ---
 
-**Última actualización:** 2026-07-28 · índice maestro armado a pedido explícito del usuario para organizar todos los prompts de las Simulaciones 10-19 en un único punto de entrada, sin modificar el contenido de ninguno de los 10 archivos originales.
+**Última actualización:** 2026-07-28 · índice maestro armado a pedido explícito del usuario para organizar todos los prompts de las Simulaciones 10-19 en un único punto de entrada, sin modificar el contenido de ninguno de los 10 archivos originales · agregadas las secciones de Simulación 27 (casco blanco glossy, goma del borde inferior a negro) y Simulación 28 (banner de marca "Diseñado para superar tus límites").

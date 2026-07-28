@@ -236,4 +236,14 @@ Esto corre en background — cuando termine te aviso con el resultado, no hace f
 
 ---
 
-**Última actualización:** 2026-07-28 · agregados 2 ítems de checklist (Tipo A: diseño gráfico solo sobre superficie pintada; Tipo B: describir cada bloque jerárquico por separado) y sección 8 con las lecciones aprendidas de la sesión del 2026-07-28 (confirmación de nombre Boston 4.0, sub-tipo de prompt de swap de texto en logo, línea de licencias de marca y caso Top Gun, primer casco retro, re-lectura de excel del caso Hero).
+## 9. Regla de negocio — goma del borde inferior siempre negro
+
+- **Regla confirmada por el equipo**, vía comentario directo de un compañero ("jimgarzons") dejado sobre una pieza real en la herramienta de diseño (Canva): en **TODOS** los cascos del catálogo, la goma/tira del borde inferior de la calota debe ser color **NEGRO**, sin excepción. Texto exacto del comentario: "LA GOMA DE ABAJO DEL CASCO DEBE SER COLOR NEGRO. LOS ACCESORIOS SI PUEDEN QUEDARSE DE ESE COLOR, SOLO CAMBIAR LA GOMA DE ABAJO A COLOR NEGRO. ESTO APLICAR PARA TODOS LOS CASOS".
+- **Los demás accesorios de color SÍ pueden mantener su color propio** — pico frontal/spoiler, piezas de ventilación, etc. no se ven afectados por esta regla. Aplica específicamente a la goma del borde inferior, no a todas las piezas de acabado del casco.
+- **Se aplica retroactivamente como checklist a futuros prompts de variantes de color**: cuando se genere o audite cualquier variante de color de un casco del catálogo, hay que verificar puntualmente que la goma del borde inferior sea negra, independientemente de qué otro color tenga el resto del casco.
+- **Primer caso donde se aplicó explícitamente:** Simulación 27 (casco blanco/glossy con detalles tostados) — `simulaciones-cc/simulacion-27-casco-blanco-glossy-goma-negra.md`.
+- **Referencia cruzada:** la Simulación 26 (casco retro/redondo, `simulaciones-cc/simulacion-26-casco-retro-goma-negra.md`) ya había hecho este mismo tipo de cambio puntual antes de que la regla se formalizara como política general — vale la pena revisarla para confirmar que cumple.
+
+---
+
+**Última actualización:** 2026-07-28 · agregados 2 ítems de checklist (Tipo A: diseño gráfico solo sobre superficie pintada; Tipo B: describir cada bloque jerárquico por separado), sección 8 con las lecciones aprendidas de la sesión del 2026-07-28 (confirmación de nombre Boston 4.0, sub-tipo de prompt de swap de texto en logo, línea de licencias de marca y caso Top Gun, primer casco retro, re-lectura de excel del caso Hero), y sección 9 con la nueva regla de negocio de goma del borde inferior siempre negro (confirmada por comentario del equipo, primer caso Simulación 27).
