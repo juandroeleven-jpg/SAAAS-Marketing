@@ -283,6 +283,87 @@ borrar ni simplificar ningún detalle físico real del casco.
 3. Subir las 2 imágenes de referencia (molde azul + arte Top Gun) como adjuntos para versionarlas.
 4. Cuando el usuario mande el primer caso de Marvel/DC/Paramount, crear el archivo de caso correspondiente siguiendo esta misma estructura (Tipo A — transferencia de diseño 2D sobre molde real, geometría intacta) y sumarlo al índice maestro de prompts.
 
+### Resultado del Intento 2 — auditado, muy cerca del objetivo
+
+**Estado:** ✅ Gran mejora, con 1 defecto residual — el resto quedó bien.
+
+**Qué salió bien (confirmado contra las 2 imágenes de referencia):** los 7 elementos gráficos están presentes esta vez (logotipo "TOP GUN MAVERICK" incluido, ya no se omite), las posiciones de naipes/chevrones/avión/escudo/texto "MAVERICK"/3 estrellas quedaron consistentes con el arte de referencia, no se agregó ningún elemento extra fuera de la lista, y la geometría física del molde (pico frontal, ranuras de ventilación, mentonera, spoiler, silueta) se mantuvo intacta.
+
+**Qué falló (defecto residual, 1 solo):** el **visor** cambió de transparente/claro (como en el molde azul real y en el arte de referencia) a un visor OSCURO/ahumado, dejando ver de forma muy marcada el mecanismo interno (tornillos/engranaje del pivote) a través del cristal — en las 2 imágenes de referencia el visor es claro y no se ve tanto detalle mecánico a través de él. El prompt pedía "no cambiar el color ni la transparencia del visor", pero no bastó para evitar este desvío puntual.
+
+### Intento 3 — mismo prompt que funcionó, con el visor blindado
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una imagen de producto del mismo casco azul mate de la
+referencia adjunta (molde real, vista lateral), mismo ángulo, encuadre
+y fondo blanco.
+
+CRÍTICO — GEOMETRÍA Y TEXTURA 100% INTACTAS: NO borres, simplifiques
+ni alteres NINGÚN detalle físico visible en la foto real del molde
+azul, aunque quede cubierto parcialmente por el diseño gráfico: pico
+frontal puntiagudo, cada ranura de ventilación lateral tipo cuchilla
+(mismo conteo y forma exacta), mentonera integrada, mecanismo de
+pivote junto al visor, spoiler/borde trasero, silueta general. El
+diseño gráfico se aplica COMO UNA CALCOMANÍA ENCIMA de la superficie
+real del casco — nunca reemplaza, recorta ni "limpia" ningún detalle
+físico que ya estaba en la foto original. Es el mismo objeto 3D
+exacto, sin excepciones.
+
+CRÍTICO — VISOR: EXACTAMENTE igual de CLARO Y TRANSPARENTE que en la
+foto real del molde azul (un intento anterior lo oscureció/ahumó y
+dejó ver de forma muy marcada el mecanismo interno del pivote a través
+del cristal — no lo repitas). El visor debe quedar tan claro y
+transparente como en la referencia, sin tinte oscuro ni efecto ahumado,
+y sin resaltar el mecanismo interno más de lo que se ve en la foto
+real del molde. El diseño gráfico NO va sobre el visor, solo sobre la
+carcasa.
+
+DISEÑO A TRANSFERIR — EXACTAMENTE 7 ELEMENTOS, mantené las mismas
+posiciones que lograste en el intento anterior (funcionaron bien, no
+las cambies):
+
+1. Avión de combate estilizado (silueta tipo jet) — zona delantera
+   SUPERIOR de la calota, cerca de la parte más alta del casco.
+2. Escudo circular con estrella grande de 5 puntas — zona CENTRAL
+   superior de la calota, al lado del avión.
+3. Un par de naipes (ases de pique) — sobre la superficie del PICO
+   FRONTAL puntiagudo.
+4. Franjas diagonales tipo chevron repetidas — sobre la MENTONERA /
+   parte inferior delantera del casco.
+5. Logotipo "TOP GUN MAVERICK" en tipografía condensada dentro de un
+   recuadro alargado — junto a las ranuras de ventilación laterales.
+   Este elemento NO puede faltar bajo ningún concepto.
+6. Texto grande "MAVERICK" en mayúsculas, fuente bold sans-serif —
+   zona inferior TRASERA del casco (cerca del spoiler/borde trasero).
+7. 3 estrellas de 5 puntas alineadas horizontalmente — debajo del texto
+   "MAVERICK", misma zona trasera inferior.
+
+PALETA DE COLOR — ANCLADA A LAS IMÁGENES DE REFERENCIA: todos los
+elementos gráficos en el mismo tono dorado/mostaza envejecido de la
+imagen de referencia del arte Top Gun, misma textura desgastada/grunge.
+La base azul mate del casco en el mismo tono de azul del molde real.
+
+PROHIBIDO ABSOLUTO: no oscurecer, tintar ni ahumar el visor. No
+agregar logos, textos o símbolos que no estén en la lista de 7
+elementos de arriba. No omitir el logotipo "TOP GUN MAVERICK". No
+cambiar el color negro de la mentonera/ribetes. No cambiar cantidad,
+forma o tamaño de las ranuras de ventilación. No cambiar la silueta,
+el pico frontal ni el spoiler trasero del molde azul real. No borrar
+ni simplificar ningún detalle físico real del casco.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:**
+1. Correr el prompt (en sesión aislada) y mandar el resultado para auditoría — si el visor queda claro esta vez, este caso queda cerrado.
+2. Confirmar si este molde azul es el casco físico real de la marca licenciante o solo una referencia — sigue siendo la misma pregunta abierta de este caso (ver pendientes arriba).
+3. Subir las 2 imágenes de referencia (molde azul + arte Top Gun) como adjuntos para versionarlas.
+4. Cuando el usuario mande el primer caso de Marvel/DC/Paramount, crear el archivo de caso correspondiente siguiendo esta misma estructura (Tipo A — transferencia de diseño 2D sobre molde real, geometría intacta) y sumarlo al índice maestro de prompts.
+
 ---
 
-**Última actualización:** 2026-07-28 · Intento 2 agregado tras auditar el resultado real del Intento 1 (logotipo omitido, elementos mal ubicados, geometría real alterada, paleta de color desviada de las referencias) — línea de licencias de marca (Marvel/DC/Paramount), a pedido de velocidad del usuario.
+**Última actualización:** 2026-07-28 · Intento 3 agregado tras auditar el resultado real del Intento 2 (7 elementos y posiciones correctos esta vez, único defecto residual: visor oscurecido/ahumado en vez de claro) — línea de licencias de marca (Marvel/DC/Paramount), a pedido de velocidad del usuario.
