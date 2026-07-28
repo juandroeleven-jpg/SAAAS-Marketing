@@ -126,6 +126,7 @@ Todo lo que quedó abierto esperando respuesta del usuario o del fabricante, jun
 | Variante 3 — Morado pastel + detalles rosados | Variantes de color | ✅ listo para usar — todavía no corrido | [`simulacion-14-stellar-verificacion.md`](simulacion-14-stellar-verificacion.md), sección `## Sub-caso — 4 variantes de color` |
 | Variante 4 — Azul oscuro brillante/glossy (único que cambia de mate a glossy) | Variantes de color | ✅ listo para usar — todavía no corrido | [`simulacion-14-stellar-verificacion.md`](simulacion-14-stellar-verificacion.md), sección `## Sub-caso — 4 variantes de color` |
 | Foto lifestyle en la playa, ultra realista, golden hour | Foto lifestyle | ✅ listo para usar — todavía no corrido | [`simulacion-14-stellar-verificacion.md`](simulacion-14-stellar-verificacion.md), sección `## Sub-caso — Foto lifestyle en la playa, ultra realista, luz cálida` |
+| Sub-caso — Logo "BOSTON 4.0" → "STELLAR" (mismas dimensiones) | Tipo A (logo/título) | ✅ listo para usar — todavía no corrido | [`simulacion-14-stellar-verificacion.md`](simulacion-14-stellar-verificacion.md), sección `## Sub-caso — Logo/título de marca "BOSTON 4.0" → "STELLAR"` |
 
 ### Shift (Simulación 15) — Tipo C, ficha vs. excel
 [`simulacion-15-shift-verificacion.md`](simulacion-15-shift-verificacion.md)
@@ -272,7 +273,7 @@ Octavo caso EDGEPRO, el con más features confirmadas del catálogo (17). Prompt
 | Vortex | 4 | 2 | 2 | 0 |
 | Hero | 7 | 5 | 1 | 1 |
 | Shanghai | 2 | 1 | 0 | 1 |
-| Stellar | 7 | 7 | 0 | 0 |
+| Stellar | 8 | 8 | 0 | 0 |
 | Shift | 2 | 2 | 0 | 0 |
 | Evolution 929 | 2 | 2 | 0 | 0 |
 | Casco carbono/camo | 5 | 4 | 1 | 0 |
@@ -284,7 +285,7 @@ Octavo caso EDGEPRO, el con más features confirmadas del catálogo (17). Prompt
 | Casco adventure con pico | 4 | 1 | 3 | 0 |
 | Casco EDGE flip-up (quitar stickers) | 3 | 3 | 0 | 0 |
 | Carbex | 3 | 3 | 0 | 0 |
-| **Total** | **61** | **47** | **10** | **4** |
+| **Total** | **62** | **48** | **10** | **4** |
 
 ---
 

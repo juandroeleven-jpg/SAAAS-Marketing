@@ -341,6 +341,48 @@ ni de estudio — tiene que ser cálida, de exterior, playa real.
 
 **Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría.
 
+## Sub-caso — Logo/título de marca "BOSTON 4.0" → "STELLAR"
+
+Mismo tipo de pedido que el sub-caso de logo de Carbex (`simulacion-25-carbex-verificacion.md`): mismo diseño de logo/título de referencia (ícono tipo abanico/espiral, barra roja divisoria, tipografía condensada itálica con contorno blanco, fondo con textura diagonal), reemplazando el texto "BOSTON 4.0" por "STELLAR", mismas dimensiones exactas.
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una imagen del mismo logo/título de marca de la referencia
+adjunta, EXACTAMENTE en las mismas dimensiones y tamaño de lienzo (mismo
+ancho x alto en píxeles, mismo aspect ratio, sin recortar ni estirar).
+
+CRÍTICO — TODO IGUAL, SIN EXCEPCIÓN:
+- Ícono gráfico a la izquierda (la forma tipo abanico/espiral en blanco
+  y negro): EXACTAMENTE igual, mismo diseño, mismo tamaño, misma
+  posición.
+- Barra vertical roja divisoria: igual, mismo color, mismo grosor,
+  misma posición.
+- Tipografía: misma familia condensada/itálica bold, mismo efecto de
+  contorno blanco sobre el texto negro, mismo tamaño de letra relativo
+  al lienzo.
+- Fondo: mismo fondo gris claro con textura diagonal a rayas, igual.
+- Composición general: mismo layout, mismo espaciado entre el ícono, la
+  barra y el texto.
+
+ÚNICO CAMBIO PERMITIDO: el texto "BOSTON 4.0" se reemplaza por
+"STELLAR" — mismo estilo tipográfico, mismo tamaño de letra relativo
+(ajustar el ancho de la caja de texto si "STELLAR" tiene más o menos
+caracteres que "BOSTON 4.0", pero manteniendo la misma altura de letra
+y el mismo centrado vertical respecto al ícono y la barra roja).
+
+PROHIBIDO ABSOLUTO: no agregar números, subtítulos ni ningún otro texto
+adicional a "STELLAR". No cambiar el ícono, la barra roja, la
+tipografía, el fondo, ni las dimensiones del lienzo. Alta calidad,
+texto nítido y legible.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría.
+
 ---
 
 **Última actualización:** 2026-07-28 · Agente Auditor + Generador independiente, corridos en esta sesión a pedido explícito de auditar el quinto caso del catálogo (Stellar) y adaptar los 2 prompts. Sub-caso de 4 variantes de color agregado el mismo día a pedido del usuario. Sub-caso de foto de playa agregado el mismo día.
