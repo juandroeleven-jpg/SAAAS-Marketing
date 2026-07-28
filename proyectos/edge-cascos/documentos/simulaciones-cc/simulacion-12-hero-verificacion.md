@@ -127,4 +127,60 @@ flowchart TD
 
 ---
 
-**Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación + adaptación de prompts), corridos en esta sesión a pedido explícito de auditar el tercer caso del catálogo (Hero).
+## Sub-caso — Foto lifestyle inspirada (Tipo A, distinto del catálogo de specs de arriba)
+
+Pedido aparte del usuario, en paralelo a la auditoría de specs: generar una foto lifestyle del Hero (persona con el casco puesto, plano contrapicado) **inspirada en la composición** de una foto de referencia ajena (persona con un casco integral negro/dorado distinto, mismo tipo de plano contrapicado contra el cielo) — pero usando **únicamente** la geometría/color/diseño del casco real Hero, nunca el casco de la referencia.
+
+Regla aplicada (Lección 7 del pipeline): la referencia de estilo va primero en el payload, la foto real del casco (autoridad) va al final.
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una fotografía de producto tipo lifestyle en 4K, formato vertical
+(relación aproximada 3:4, igual que la imagen de referencia de composición).
+
+CRÍTICO — el casco que aparece en la imagen debe ser EXACTAMENTE el casco real
+adjunto como autoridad (foto del modelo Hero): open face / tipo jet, negro mate,
+visera clara/transparente abatible con mecanismo de pivote visible, ventilación
+superior con rejilla, correa con hebilla roja, acolchado interior negro en el
+borde. No cambies su geometría, forma, color, ni le agregues ningún gráfico,
+diseño, franja ni pintura que no esté en la foto real del casco.
+
+La imagen de referencia de estilo (persona con casco negro, plano contrapicado,
+cielo de fondo) se usa ÚNICAMENTE para tomar prestado lo siguiente:
+- Ángulo de cámara: contrapicado (desde abajo, mirando hacia arriba)
+- Encuadre: persona de hombros hacia arriba, casco puesto, centrada o levemente
+  descentrada, con espacio de cielo/fondo claro alrededor de la cabeza
+- Iluminación: luz natural suave, cálida, de día despejado
+- Mood/composición general: minimalista, editorial, sin elementos que distraigan
+
+PROHIBIDO ABSOLUTO: no copiar el casco de la imagen de referencia (es un
+modelo integral/full-face con diseño de pintura distinto, gris/dorado con
+líneas — no tiene nada que ver con el casco real que estás usando). La
+referencia es SOLO para ángulo, luz y encuadre — el único casco permitido en
+la imagen final es el casco real adjunto (Hero), sin excepciones.
+
+Persona modelo: sin rasgos específicos pedidos — cualquier persona con el
+casco puesto, rostro no necesariamente visible (el casco puede cubrirlo,
+como en la referencia).
+
+Fondo: cielo despejado o levemente nublado, tono cálido/neutro, sin elementos
+que compitan visualmente con el casco. Sin logos, sin texto superpuesto,
+sin marca de agua.
+
+Orden de imágenes en el payload: 1) foto de referencia de estilo/composición,
+2) foto real del casco Hero (autoridad final de geometría y color) — la
+imagen del casco real manda sobre cualquier otro detalle.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar — esta sesión no tiene conectada una herramienta de generación de imagen, el prompt queda listo para correr en la herramienta ya validada (Nano Banana Pro/OpenRouter).
+
+**Qué falló:** N/A (no generado todavía).
+
+**Qué hay que hacer:** correr el prompt, y mandar el resultado para auditoría (Tipo A — geometría del casco real intacta, ningún elemento del casco de referencia debe aparecer).
+
+---
+
+**Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación + adaptación de prompts), corridos en esta sesión a pedido explícito de auditar el tercer caso del catálogo (Hero). Sub-caso de foto lifestyle agregado el mismo día a pedido del usuario.
