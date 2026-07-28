@@ -211,6 +211,22 @@ function Flotacion({
   return <group ref={grupo}>{children}</group>;
 }
 
+// Avisa cuando la escena ya dibujo de verdad. Tres frames y no uno: en el
+// primero puede faltar todavia la textura de la pantalla, y el cruce con el
+// poster se veria como un parpadeo a negro.
+function AvisaListo({ onListo }: { onListo?: () => void }) {
+  const n = useRef(0);
+  useFrame(() => {
+    if (n.current < 0) return;
+    n.current += 1;
+    if (n.current >= 3) {
+      n.current = -1;
+      onListo?.();
+    }
+  });
+  return null;
+}
+
 function Panel({ quieto }: { quieto: boolean }) {
   const textura = usarTexturaPantalla(quieto);
 
@@ -276,7 +292,7 @@ function CamaraResponsiva() {
   return null;
 }
 
-export default function PantallaFlotante() {
+export default function PantallaFlotante({ onListo }: { onListo?: () => void }) {
   const quieto = usarMovimientoReducido();
   const fino = usarPunteroFino();
   const [ref, visible] = usarVisibilidad<HTMLDivElement>();
@@ -288,7 +304,9 @@ export default function PantallaFlotante() {
       // El contenedor sigue la proporcion del objeto: 16/9. Con el objeto ya
       // en 16:9 no hay aire vertical que desperdiciar, y la seccion baja de
       // altura sin que la pantalla pierda ancho.
-      className="relative aspect-[16/9] w-full"
+      // Ocupa el hueco que le da quien lo usa (ahi vive tambien el poster),
+      // en vez de definir su propia proporcion.
+      className="absolute inset-0"
       // El canvas es decorativo para quien no lo ve: describe lo mismo que
       // el texto de al lado, pero un lector de pantalla no puede leer pixeles.
       role="img"
@@ -321,6 +339,7 @@ export default function PantallaFlotante() {
         dpr={[1, 2]}
         gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
       >
+        <AvisaListo onListo={onListo} />
         <CamaraResponsiva />
         <EntornoDeEstudio />
         <ambientLight intensity={0.35} />

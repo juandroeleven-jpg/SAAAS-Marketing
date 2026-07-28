@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { usarMovimientoReducido } from "@/lib/movimiento";
 
@@ -27,6 +28,7 @@ const METRICAS = [
 
 export default function HeroVidrio() {
   const quieto = usarMovimientoReducido();
+  const [listo, setListo] = useState(false);
 
   return (
     <section className="fondo-azul relative isolate flex min-h-screen flex-col justify-center overflow-hidden px-4 pb-12 pt-14 sm:px-8 sm:pb-16 sm:pt-20">
@@ -108,7 +110,11 @@ export default function HeroVidrio() {
             los costados del panel y el conjunto se leia apretado. El panel
             ademas paso a max-w-7xl, asi que en pixeles la pantalla apenas
             pierde tamano pero gana aire a los lados. */}
-        <div className="relative z-20 mx-auto mt-10 w-full sm:mt-10 sm:w-[82%] sm:-mb-[13%]">
+        {/* El hueco lo define ESTE contenedor, no el componente 3D. Asi el
+            poster tiene su sitio ya en el HTML inicial y se pinta en la primera
+            pasada, sin esperar a que cargue nada de JavaScript. Cuando la
+            escena real lleva unos frames dibujados, se cruzan. */}
+        <div className="relative z-20 mx-auto mt-10 aspect-[16/9] w-full sm:mt-10 sm:w-[82%] sm:-mb-[13%]">
           {/* Luz LED detras de la pantalla. Es `filter: blur`, no
               backdrop-filter: se desenfoca a si misma y no lee lo que tiene
               detras, asi que no anade coste al vidrio. */}
@@ -120,7 +126,24 @@ export default function HeroVidrio() {
             aria-hidden
             className="pointer-events-none absolute left-1/2 top-[72%] h-[60%] w-[96%] -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-cyan-300/40 blur-[70px]"
           />
-          <PantallaFlotante />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/posters/pantalla.webp"
+            alt=""
+            aria-hidden
+            width={1912}
+            height={1075}
+            className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-700 ${
+              listo ? "opacity-0" : "opacity-100"
+            }`}
+          />
+          <div
+            className={`absolute inset-0 transition-opacity duration-700 ${
+              listo ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <PantallaFlotante onListo={() => setListo(true)} />
+          </div>
         </div>
       </motion.div>
     </section>
