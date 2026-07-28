@@ -18,12 +18,18 @@ import { usarPunteroFino, usarVisibilidad } from "@/lib/visibilidad";
 // Con geometria propia el mapeo es 1:1: TODOS los texeles del canvas son
 // pantalla. A 2048x1280 eso da 3.4 veces mas resolucion util que el GLB y
 // ademas baja la subida a ~10 MB por redibujado. Mas nitido y mas barato.
-const ANCHO = 3.2; // unidades de escena; 16:10 respecto al alto
-const ALTO = ANCHO * (DISENO.h / DISENO.w);
+// La pantalla es 16:9, mas ancha y mas baja que el espacio de diseno, que es
+// 16:10. La diferencia NO se resuelve aplastando el dibujo (deformaria el
+// texto) sino recortandolo, y el recorte va ENTERO ABAJO, no repartido:
+// a 16:9 se ven 900 de las 1000 unidades de alto del diseno, y en esas 100
+// que sobran no hay nada (la barra de ventana esta en y 0-74 y el grafo
+// termina en y=840). Centrar el recorte cortaria la barra por arriba.
+const ANCHO = 3.2; // unidades de escena
+const ALTO = (ANCHO * 9) / 16;
 const GROSOR = 0.085;
 const MARCO = 0.075; // cuanto asoma el bisel por fuera de la imagen
 
-const TEX = { w: 2048, h: 1280 };
+const TEX = { w: 2048, h: 1152 }; // 16:9
 
 // El redibujado del canvas 2D es lo unico caro de la escena. 15 veces por
 // segundo alcanza para que el flujo se lea fluido (son transiciones lentas,
@@ -77,9 +83,10 @@ function usarTexturaPantalla(quieto: boolean) {
     ultimoDibujo.current = t;
 
     ctx.save();
-    // Mapeo 1:1 -- el canvas ENTERO es la pantalla, asi que solo hay que
-    // llevar el espacio de diseno (1600x1000) al tamano de la textura.
-    ctx.scale(TEX.w / DISENO.w, TEX.h / DISENO.h);
+    // Escala UNIFORME (la del ancho): el dibujo no se deforma y lo que no
+    // entra se pierde por abajo, que es donde no hay nada.
+    const escala = TEX.w / DISENO.w;
+    ctx.scale(escala, escala);
     dibujarFlujo(ctx, t);
 
     // Reflejo diagonal muy tenue: es lo que hace leer la superficie como
@@ -202,11 +209,10 @@ function Panel({ quieto }: { quieto: boolean }) {
 }
 
 // Camara frontal. El objeto mide ALTO + 2*MARCO = 2.15 de alto; con fov 30 el
-// alto visible a distancia d es 2*d*tan(15) = 0.536*d, asi que a d = 4.35 entran
-// 2.33 unidades contra 2.15 del objeto: quedan 0.09 arriba y abajo. La
-// flotacion baja a +-0.07 para no comerse ese margen. Mas cerca compensa el
-// ancho que se le quito al contenedor para que respire dentro del panel.
-const DISTANCIA = 4.35;
+// alto visible a distancia d es 2*d*tan(15) = 0.536*d, asi que a d = 4.0 entran
+// 2.144 unidades contra 1.95 del objeto (1.8 de pantalla + 0.15 de marco):
+// quedan 0.097 arriba y abajo, por encima de la flotacion de +-0.07.
+const DISTANCIA = 4.0;
 const POSICION_CAMARA = new THREE.Vector3(0, 0.18, DISTANCIA);
 
 // En contenedores angostos el fov vertical no cambia pero el ancho visible se
@@ -233,10 +239,10 @@ export default function PantallaFlotante() {
   return (
     <div
       ref={ref}
-      // 16/9.5 en vez de 16/11: el encuadre tenia aire vertical de sobra y ese
-      // aire se traducia en altura de seccion. Verificado que el objeto sigue
-      // entrando: a 4.35 el alto visible es 2.33 contra 2.15 del objeto.
-      className="relative aspect-[16/9.5] w-full"
+      // El contenedor sigue la proporcion del objeto: 16/9. Con el objeto ya
+      // en 16:9 no hay aire vertical que desperdiciar, y la seccion baja de
+      // altura sin que la pantalla pierda ancho.
+      className="relative aspect-[16/9] w-full"
       // El canvas es decorativo para quien no lo ve: describe lo mismo que
       // el texto de al lado, pero un lector de pantalla no puede leer pixeles.
       role="img"
