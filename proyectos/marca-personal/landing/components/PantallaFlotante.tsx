@@ -8,6 +8,7 @@ import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment
 import { DISENO, dibujarFlujo } from "@/lib/flujo";
 import { usarMovimientoReducido } from "@/lib/movimiento";
 import { usarPunteroFino, usarVisibilidad } from "@/lib/visibilidad";
+import { usarDesplazando } from "@/lib/desplazamiento";
 import { usarPuntero } from "@/lib/puntero";
 
 // Pantalla suelta (sin teclado ni cuerpo) para el hero.
@@ -279,6 +280,7 @@ export default function PantallaFlotante() {
   const quieto = usarMovimientoReducido();
   const fino = usarPunteroFino();
   const [ref, visible] = usarVisibilidad<HTMLDivElement>();
+  const desplazando = usarDesplazando();
 
   return (
     <div
@@ -310,7 +312,9 @@ export default function PantallaFlotante() {
       <Canvas
         className="relative"
         // Apagado fuera de pantalla: rAF no se detiene por scroll.
-        frameloop={visible ? "always" : "never"}
+        // Durante el scroll la escena no se dibuja. Se retoma al parar, y
+        // como el reloj sigue corriendo, la animacion no da un salto.
+        frameloop={visible && !desplazando ? "always" : "never"}
         camera={{ fov: 30, position: POSICION_CAMARA.toArray() }}
         // Rango en vez de un valor fijo: en pantallas retina sube a 2 para que
         // el texto no se vea blando, pero R3F puede bajarlo si el equipo no da.
