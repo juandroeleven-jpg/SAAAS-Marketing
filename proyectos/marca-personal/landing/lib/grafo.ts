@@ -102,18 +102,36 @@ export const RADIO = 0.13;
 /** Bloque de texto bajo la esfera. */
 export const ETIQUETA = { w: 0.7, h: 0.15 };
 
-export function posicion(n: Nodo): [number, number, number] {
+/**
+ * Disposicion vertical, para un hueco en retrato (el que ocupa el movil en la
+ * referencia). Es el mismo grafo girado 90 grados: las entradas arriba, el
+ * agente en medio y las salidas abajo, que ademas es como se lee un flujo
+ * cuando el espacio es mas alto que ancho.
+ *
+ * La escala es mayor que en horizontal porque el reparto cambia: en vertical
+ * las cuatro salidas se separan a lo ANCHO, y con 0.0026 sus etiquetas se
+ * montaban unas sobre otras.
+ */
+export const ESCALA_V = 0.004;
+
+export function posicion(n: Nodo, vertical = false): [number, number, number] {
+  if (vertical) {
+    return [(n.y - CENTRO.y) * ESCALA_V, (CENTRO.x - n.x) * ESCALA_V, n.z];
+  }
   return [(n.x - CENTRO.x) * ESCALA, (CENTRO.y - n.y) * ESCALA, n.z];
 }
 
-/** La conexion sale y entra por el BORDE de la esfera, no por su centro. */
-export function salida(n: Nodo): [number, number, number] {
-  const p = posicion(n);
-  return [p[0] + RADIO, p[1], p[2]];
+/**
+ * La conexion sale y entra por el BORDE de la esfera, no por su centro.
+ * En vertical sale por abajo y entra por arriba, siguiendo el giro del grafo.
+ */
+export function salida(n: Nodo, vertical = false): [number, number, number] {
+  const p = posicion(n, vertical);
+  return vertical ? [p[0], p[1] - RADIO, p[2]] : [p[0] + RADIO, p[1], p[2]];
 }
-export function entrada(n: Nodo): [number, number, number] {
-  const p = posicion(n);
-  return [p[0] - RADIO, p[1], p[2]];
+export function entrada(n: Nodo, vertical = false): [number, number, number] {
+  const p = posicion(n, vertical);
+  return vertical ? [p[0], p[1] + RADIO, p[2]] : [p[0] - RADIO, p[1], p[2]];
 }
 
 export function buscar(id: string): Nodo {
@@ -129,14 +147,18 @@ export const TEX_ONDA = { w: 512, h: 128 };
  * Nombre y funcion del agente, centrados, sobre canvas transparente.
  * Se dibuja una sola vez por agente: no cambia nunca.
  */
-export function dibujarEtiqueta(ctx: CanvasRenderingContext2D, n: Nodo) {
+export function dibujarEtiqueta(
+  ctx: CanvasRenderingContext2D,
+  n: Nodo,
+  color = "#FFFFFF"
+) {
   const { w, h } = TEX_ETIQUETA;
   ctx.clearRect(0, 0, w, h);
   ctx.textAlign = "center";
 
   // Solo el nombre: con la esfera ocupando el alto disponible no entra una
   // segunda linea sin que las etiquetas se monten unas sobre otras.
-  ctx.fillStyle = "#FFFFFF";
+  ctx.fillStyle = color;
   ctx.font = "600 64px system-ui, sans-serif";
   ctx.fillText(n.label, w / 2, 74);
 }

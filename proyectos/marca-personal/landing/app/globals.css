@@ -316,3 +316,62 @@ body {
 .desplazando .sombra-flotante {
   animation-play-state: paused;
 }
+
+/* ---------------------------------------------------------------------------
+   Hero claro
+   --------------------------------------------------------------------------- */
+
+/* Sustituye a .fondo-azul en la portada: blanco y azules, sin la retícula de
+   red neuronal. Es un degradado, no un canvas: el hero deja de necesitar un
+   contexto WebGL solo para el fondo. */
+.fondo-claro {
+  background-color: #f7faff;
+  background-image:
+    radial-gradient(70% 55% at 8% 0%, rgba(219, 234, 254, 0.9) 0%, transparent 60%),
+    radial-gradient(60% 50% at 95% 8%, rgba(199, 218, 252, 0.75) 0%, transparent 62%),
+    linear-gradient(180deg, #ffffff 0%, #f2f7ff 55%, #e9f0fd 100%);
+}
+
+/* Manchas de color del hero. Se mueven con `transform` y su suavidad viene del
+   propio degradado, no de `filter: blur`: escalar un elemento desenfocado
+   obliga a rasterizarlo de nuevo en cada frame; escalar un degradado no. */
+.mancha-hero {
+  position: absolute;
+  border-radius: 9999px;
+  will-change: transform;
+}
+.mancha-hero-1 {
+  left: -12%;
+  top: -10%;
+  width: 62%;
+  height: 70%;
+  background: radial-gradient(closest-side, rgba(96, 165, 250, 0.4), transparent 72%);
+  animation: aurora-1 26s ease-in-out infinite;
+}
+.mancha-hero-2 {
+  right: -14%;
+  top: 4%;
+  width: 58%;
+  height: 66%;
+  background: radial-gradient(closest-side, rgba(37, 99, 235, 0.26), transparent 72%);
+  animation: aurora-2 31s ease-in-out infinite;
+}
+.mancha-hero-3 {
+  bottom: -22%;
+  left: 22%;
+  width: 66%;
+  height: 62%;
+  background: radial-gradient(closest-side, rgba(147, 197, 253, 0.42), transparent 74%);
+  animation: aurora-3 36s ease-in-out infinite;
+}
+
+/* Mientras se desplaza, quietas: es cuando menos se aprecia el movimiento y
+   más se nota un tirón. */
+.desplazando .mancha-hero {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .mancha-hero {
+    animation: none;
+  }
+}
