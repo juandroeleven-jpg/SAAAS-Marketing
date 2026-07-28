@@ -867,6 +867,66 @@ MAVERICK". No dejar el logo pegado al visor/ventilaciones sin espacio.
 
 **Recomendación para el próximo paso** (queda pendiente de que el usuario decida, no es una decisión que se pueda tomar sola): probar el enfoque de edición puntual ya preparado en el Intento 8 (editar solo el logo sobre la imagen ya aprobada del Intento 6, sin regenerar geometría) — es la única variante de este caso que todavía no se probó y que por diseño evita que la herramienta vuelva a decidir la geometría desde cero. Si eso también falla, el paso siguiente sería una edición manual (fuera de la IA) del logo sobre el Intento 6, ya que ese resultado tiene la geometría y los 8 elementos correctos.
 
+### Intento 10 — prompt más corto, geometría en 2 pasos secuenciales, menos texto compitiendo por atención
+
+A pedido del usuario de seguir mejorando el prompt (sin cambiar al enfoque de edición). Estrategia distinta a los Intentos 5/9: en vez de agregar más reglas y advertencias (lo que ya se probó y no alcanzó), este intento ACORTA la descripción de los 8 elementos gráficos a lo esencial y agrega una instrucción explícita de secuencia ("primero fijá la forma, recién después agregá el diseño") para que la geometría no compita en volumen de texto con el resto de las instrucciones — la hipótesis es que cuanto más texto describe el diseño gráfico, menos peso relativo tiene el bloque de geometría, aunque esté escrito en detalle.
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una imagen de producto de un casco, mismo ángulo, encuadre y
+fondo blanco.
+
+PASO 1 — FORMA (hacé esto primero, antes de pensar en el diseño): la
+forma del casco es una copia EXACTA de la primera imagen de
+referencia (molde azul real), sin ninguna excepción:
+- Pico frontal largo y fino, muy angulado.
+- EXACTAMENTE 3 ventilaciones laterales, iguales entre sí, tipo
+  cuchilla/aleta — no 2, no formas distintas entre ellas.
+- Carcasa del pivote junto al visor: CHICA y angular, con un tornillo
+  chico visible — nunca redondeada ni agrandada.
+- Mentonera angulosa, calota aerodinámica y afilada (no redondeada),
+  spoiler trasero igual al de la referencia, visor claro y
+  transparente.
+Una vez que tengas esta forma exacta fijada, recién ahí pasá al paso
+2. La forma NUNCA cambia por lo que pase en el paso 2.
+
+PASO 2 — DISEÑO (se agrega ENCIMA de la forma ya fijada del paso 1,
+como una calcomanía, sin tocar la forma): tomá el diseño gráfico de la
+segunda imagen de referencia (arte Top Gun) — solo el diseño, no su
+forma de casco — y aplicalo sobre la superficie azul pintada del
+casco del paso 1, nunca sobre las piezas negras (ventilaciones,
+mentonera, spoiler, carcasa del pivote). 8 elementos, posiciones
+resumidas:
+1. Avión — arriba adelante.
+2. Escudo con estrella — arriba centro.
+3. Barras verticales azul claro/grisáceo (no doradas) — junto al
+   escudo, arriba centro.
+4. Naipes — sobre el pico frontal.
+5. Chevrones dorados — mentonera, sobre superficie azul.
+6. Logo "TOP GUN" (arriba) / "MAVERICK" (abajo, itálica) en recuadro
+   inclinado — junto a las ventilaciones, más abajo que pegado al
+   visor, dejando el logo sobre azul, sin tocar la mentonera negra.
+7. "MAVERICK" grande — atrás abajo, sobre azul, sin tocar el spoiler.
+8. 3 estrellas — debajo del texto "MAVERICK".
+Paleta: dorado/mostaza envejecido para todo excepto el elemento 3
+(azul claro/grisáceo). Base azul mate igual a la referencia 1.
+
+CHEQUEO FINAL antes de entregar: ¿la forma del casco (ventilaciones,
+pivote, pico, calota) es una copia exacta de la primera imagen? Si no,
+corregila antes de agregar el diseño — la forma tiene prioridad
+absoluta sobre el diseño.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:**
+1. Correr el prompt y mandar el resultado para auditoría, revisando primero que no ver contra los 3 puntos de drift ya conocidos (conteo/forma de ventilaciones, tamaño de la carcasa del pivote, redondeo de calota) antes de mirar el resto.
+2. Si este intento también falla en el mismo punto geométrico, sería la 4ta vez con generación completa — en ese punto la recomendación pasa de "sugerida" a directa: usar el Intento 8 (edición puntual) o edición manual fuera de la IA.
+3. Confirmar si este molde azul es el casco físico real de la marca licenciante o solo una referencia — sigue siendo la misma pregunta abierta de este caso.
+
 ---
 
-**Última actualización:** 2026-07-28 · Intento 9 auditado — la geometría volvió a driftear (ventilaciones, carcasa del pivote) por 3ra vez consecutiva (Intentos 4, 7, 9) pese al checklist reforzado; se recomienda retomar el enfoque de edición puntual del Intento 8, pendiente de confirmación del usuario — línea de licencias de marca (Marvel/DC/Paramount).
+**Última actualización:** 2026-07-28 · Intento 10 agregado a pedido del usuario de seguir mejorando el prompt — nueva estrategia: acortar la descripción del diseño gráfico y secuenciar explícitamente "forma primero, diseño después", en vez de seguir sumando más reglas de geometría (ya no alcanzó en el Intento 9) — línea de licencias de marca (Marvel/DC/Paramount).
