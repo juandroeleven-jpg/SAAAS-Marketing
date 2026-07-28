@@ -713,6 +713,62 @@ intento anterior.
 3. Subir las imágenes de referencia como adjuntos para versionarlas.
 4. Cuando el usuario mande el primer caso de Marvel/DC/Paramount, aplicar desde el arranque la regla de "fuente de forma vs. fuente de diseño" y "gráfico solo sobre superficie pintada, nunca sobre piezas negras".
 
+### Resultado del Intento 7 — auditado: el logo bajó bien, pero la geometría volvió a cambiar
+
+**Estado:** ❌ Falló — el reposicionamiento del logo funcionó, pero volvió el problema de geometría ya resuelto en el Intento 5.
+
+**Qué salió bien:** el logotipo "TOP GUN MAVERICK" sí bajó hacia el espacio libre pedido, sin invadir la mentonera negra.
+
+**Qué falló (comparado contra la foto real del molde azul):** la geometría del casco se corrió otra vez — la carcasa del mecanismo de pivote junto al visor salió más grande y redondeada/abultada en vez de la pieza angular y ajustada del molde real, y las ventilaciones ya no se leen como las 3 aletas separadas del original. Es el mismo tipo de defecto del Intento 4, que ya se había corregido en el Intento 5 y se había mantenido bien en el Intento 6.
+
+**Causa raíz probable:** el Intento 7 volvió a ser una regeneración completa del casco con un prompt muy largo (geometría + regla de piezas negras + 8 elementos + paleta + reposición del logo, todas juntas) — el checklist Tipo A de este mismo documento ya advierte sobre esto ("Attention budget: máximo 2-3 tareas por llamada de generación"), y este prompt tenía muchas más que eso. Cada regeneración completa vuelve a poner en juego toda la geometría, aunque se le diga en texto "mantené lo del intento anterior" — sin la imagen real del resultado anterior como base de edición, esa instrucción no tiene nada concreto de dónde partir.
+
+### Intento 8 — edición mínima sobre la imagen del Intento 6 (no una regeneración completa)
+
+Cambio de estrategia: en vez de regenerar el casco completo otra vez, este intento usa como ÚNICA imagen base el resultado real del Intento 6 (el que tenía la geometría correcta y los 8 elementos bien, con el único defecto de que el logo estaba muy arriba) y le pide una edición puntual, mínima, de una sola tarea — sin volver a describir toda la geometría ni los 8 elementos, porque ya están bien en esa imagen y no hace falta que el generador los vuelva a decidir desde cero.
+
+**Imagen a adjuntar:** SOLO el resultado del Intento 6 (screenshot/descarga de esa imagen). No adjuntar el molde real ni el arte Top Gun esta vez — no hacen falta para una edición puntual.
+
+<details><summary>Prompt usado</summary>
+
+```
+Esta es una edición puntual sobre la imagen adjunta, NO una
+generación nueva desde cero. La imagen adjunta ya está aprobada tal
+cual está — geometría del casco, ventilaciones, mecanismo de pivote,
+mentonera, spoiler, visor, y los 8 elementos gráficos (avión, escudo
+con estrella, barras azul claro, naipes, chevrones dorados, logotipo
+"TOP GUN MAVERICK", texto "MAVERICK", 3 estrellas) quedan
+EXACTAMENTE IGUAL, pixel por pixel, sin ningún cambio.
+
+ÚNICO CAMBIO PERMITIDO EN TODA LA IMAGEN: desplazar el logotipo "TOP
+GUN MAVERICK" (el recuadro angosto inclinado con "TOP GUN" arriba y
+"MAVERICK" abajo en itálica) más abajo, hacia el espacio vacío en la
+superficie azul que queda entre su posición actual y el borde
+superior de la mentonera negra — sin tocar ni superponerse con la
+mentonera negra. El logo se mueve, pero mantiene su mismo tamaño,
+diseño y orientación, solo cambia de posición verticalmente hacia
+abajo.
+
+PROHIBIDO ABSOLUTO: no tocar ni redibujar ningún otro elemento de la
+imagen — ni la forma del casco, ni las ventilaciones, ni el mecanismo
+de pivote, ni la mentonera, ni el spoiler, ni el visor, ni ninguno de
+los otros 7 elementos gráficos (avión, escudo, barras azul claro,
+naipes, chevrones, texto "MAVERICK", 3 estrellas). Ninguno de esos
+elementos cambia de posición, tamaño, forma ni color. Esta es una
+edición de una sola pieza (el logo), todo lo demás permanece
+idéntico a la imagen adjunta.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:**
+1. Correr el prompt como EDICIÓN de la imagen del Intento 6 (no como generación nueva), adjuntando solo esa imagen, y mandar el resultado para auditoría.
+2. Si la herramienta de generación no soporta bien "editar una imagen adjunta sin regenerar todo" y la geometría vuelve a cambiar, escalar a humano (edición manual puntual del logo) en vez de seguir reintentando regeneraciones completas — ya es el 3er intento con el mismo tipo de drift de geometría (Intento 4 y ahora Intento 7).
+3. Confirmar si este molde azul es el casco físico real de la marca licenciante o solo una referencia — sigue siendo la misma pregunta abierta de este caso.
+4. Cuando el usuario mande el primer caso de Marvel/DC/Paramount, aplicar desde el arranque tanto la regla de "fuente de forma vs. fuente de diseño" como esta lección de preferir ediciones puntuales sobre un resultado ya aprobado en vez de regenerar todo de cero cuando solo hace falta ajustar un elemento chico.
+
 ---
 
 **Última actualización:** 2026-07-28 · Intento 7 agregado tras auditar el Intento 6 (los 8 elementos y el bloqueo de piezas negras funcionaron; único defecto: el logotipo "TOP GUN MAVERICK" quedó demasiado arriba, pegado al visor/ventilaciones, dejando espacio vacío en la superficie azul por encima de la mentonera — se reposiciona el logo más abajo, sin tocar piezas negras) — línea de licencias de marca (Marvel/DC/Paramount).
