@@ -383,6 +383,17 @@ Diferencia clave respecto a los intentos 2 y 3: esta vez la imagen de referencia
 Genera una fotografía de producto tipo lifestyle/photoshoot editorial en 4K,
 formato vertical (relación aproximada 2:3), escena NOCTURNA urbana.
 
+ADVERTENCIA MÁXIMA — LEER PRIMERO: el casco NO CAMBIA ABSOLUTAMENTE NADA.
+Ni su geometría, ni su forma, ni su tamaño, ni sus proporciones, ni su
+color, ni su textura/acabado, ni la posición de ningún elemento físico
+(ventilación, tornillos, hebilla, correa, mecanismo de la visera,
+acolchado). El casco de esta imagen tiene que ser una réplica exacta,
+pixel a pixel en cuanto a diseño, del casco real adjunto (checkpoint Hero).
+Lo único que cambia en esta imagen es el ENTORNO, la ILUMINACIÓN y la
+PERSONA — el casco en sí queda 100% intacto, como si fuera un objeto 3D
+fijo que solo se está re-iluminando y fotografiando en un escenario nuevo,
+nunca rediseñando.
+
 CRÍTICO — el casco que aparece en la imagen debe ser EXACTAMENTE el casco
 real adjunto como autoridad (foto del modelo Hero, checkpoint): open face /
 tipo jet, 100% negro MATE (no glossy, no carbono, no textura de fibra —
@@ -422,6 +433,11 @@ PROHIBIDO ABSOLUTO: no cambiar el casco a un acabado glossy/brillante ni
 textura de carbono — sigue siendo el casco real Hero, mate, con la
 geometría del checkpoint. No agregar logos, texto ni marca de agua.
 
+RECORDATORIO FINAL: el casco es el ÚNICO elemento de esta imagen que debe
+permanecer 100% sin alteraciones respecto al checkpoint adjunto — cero
+cambios de diseño, cero reinterpretación creativa del objeto. Todo lo
+demás (luz, fondo, persona, ropa) sí es libre de generar según lo descrito.
+
 Orden de imágenes en el payload: SOLO la foto real del casco Hero
 (checkpoint, autoridad de geometría/color) — no se adjunta ninguna imagen
 de referencia de estilo, todo el mood/iluminación descrito arriba debe
@@ -430,7 +446,7 @@ lograrse únicamente a partir de este texto.
 
 </details>
 
-**Estado:** 🔴 pendiente de generar.
+**Estado:** 🔴 pendiente de generar. Prompt reforzado a pedido explícito del usuario, agregando advertencia inicial y recordatorio final de que el casco no cambia absolutamente nada.
 
 **Qué falló:** N/A (todavía no generado).
 
