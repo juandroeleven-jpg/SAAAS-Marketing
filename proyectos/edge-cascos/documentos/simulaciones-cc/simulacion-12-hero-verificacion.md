@@ -175,12 +175,75 @@ imagen del casco real manda sobre cualquier otro detalle.
 
 </details>
 
+### Intento 1 — resultado auditado
+
+![Resultado intento 1](pendiente-subir-como-adjunto-real.jpg)
+
+**Estado:** ⚠️ Falló — reintentar con prompt ajustado (ver Intento 2 abajo).
+
+**Qué falló:**
+- Formato vertical en vez de horizontal (pedido explícito del usuario).
+- Ángulo de cámara 3/4 frontal en vez de perfil lateral, que es el ángulo real del checkpoint.
+- **Degradé de color bronce/dorado en la parte inferior del casco** — el casco real es 100% negro mate sin ninguna transición de color. Contaminación del casco de referencia (estilo) hacia la geometría/color del casco real — justo lo que el prompt intentaba prohibir.
+- **Forma de la ventilación superior distinta** a la del checkpoint (salió más grande y con forma de rombo; en el real es una rejilla alargada/ovalada más chica).
+
+**Qué hay que hacer:** reintentar con el prompt corregido (Intento 2) — máximo 1-2 reintentos antes de escalar a humano, según la regla del pipeline.
+
+### Intento 2 — prompt corregido
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una fotografía de producto tipo lifestyle en 4K, formato HORIZONTAL
+(apaisado, relación aproximada 4:3 — NO vertical/retrato).
+
+ÁNGULO DE CÁMARA: perfil lateral (de lado), igual que la foto de referencia
+del casco real (checkpoint) — NO uses un ángulo de 3/4 frontal. La cámara
+mira al casco desde el costado, a la altura de los ojos aprox., igual que
+en la foto de referencia del casco.
+
+CRÍTICO — el casco que aparece en la imagen debe ser EXACTAMENTE el casco
+real adjunto como autoridad (foto del modelo Hero, checkpoint): open face /
+tipo jet, 100% negro mate SIN degradé ni ningún otro color (nada de bronce,
+dorado ni ninguna transición de color — el intento anterior agregó un
+degradé bronce que NO existe en el casco real, no lo repitas), visera
+clara/transparente abatible con mecanismo de pivote visible, ventilación
+superior con la MISMA forma exacta del checkpoint (rejilla alargada/ovalada
+pequeña, no un rombo grande — el intento anterior cambió esta forma, no la
+repitas), correa con hebilla roja, acolchado interior negro con costura roja
+en el borde. No cambies su geometría, forma, color ni ningún detalle físico.
+
+La imagen de referencia de estilo (persona con casco negro/dorado, cielo de
+fondo) se usa ÚNICAMENTE para tomar prestado:
+- Iluminación: luz natural suave, cálida, de día despejado
+- Mood: minimalista, editorial, sin elementos que distraigan
+NO se usa para el ángulo de cámara (eso lo define el checkpoint, ver arriba)
+ni para el color/diseño del casco.
+
+PROHIBIDO ABSOLUTO: no copiar el color, degradé, ni ninguna forma del casco
+de la imagen de referencia de estilo — el único casco permitido es el casco
+real adjunto (Hero), en negro mate puro, sin excepciones.
+
+Persona modelo: sin rasgos específicos pedidos, casco puesto, rostro puede
+estar parcialmente visible por el ángulo de perfil.
+
+Fondo: cielo despejado o levemente nublado, tono cálido/neutro, sin
+elementos que compitan visualmente con el casco. Sin logos, sin texto
+superpuesto, sin marca de agua.
+
+Orden de imágenes en el payload: 1) foto de referencia de estilo/iluminación,
+2) foto real del casco Hero de perfil (autoridad final de geometría, color
+y ángulo) — la imagen del checkpoint manda sobre cualquier otro detalle.
+```
+
+</details>
+
 **Estado:** 🔴 pendiente de generar — esta sesión no tiene conectada una herramienta de generación de imagen, el prompt queda listo para correr en la herramienta ya validada (Nano Banana Pro/OpenRouter).
 
-**Qué falló:** N/A (no generado todavía).
+**Qué falló:** N/A (todavía no generado).
 
-**Qué hay que hacer:** correr el prompt, y mandar el resultado para auditoría (Tipo A — geometría del casco real intacta, ningún elemento del casco de referencia debe aparecer).
+**Qué hay que hacer:** correr el prompt, mandar el resultado para auditoría. Si vuelve a fallar en color/forma/ángulo, es el segundo y último reintento automático antes de escalar a humano (regla del pipeline).
 
 ---
 
-**Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación + adaptación de prompts), corridos en esta sesión a pedido explícito de auditar el tercer caso del catálogo (Hero). Sub-caso de foto lifestyle agregado el mismo día a pedido del usuario.
+**Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación + adaptación de prompts), corridos en esta sesión a pedido explícito de auditar el tercer caso del catálogo (Hero). Sub-caso de foto lifestyle: intento 1 auditado con 4 defectos (formato, ángulo, degradé de color, forma de ventilación), intento 2 con prompt corregido listo para correr.
