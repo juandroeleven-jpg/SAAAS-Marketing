@@ -8,6 +8,7 @@ import {
   CICLO,
   CONEXIONES,
   ESCALA,
+  ESCALA_V,
   NODOS,
   PROGRAMA_NODO,
   ETIQUETA,
@@ -43,7 +44,7 @@ import { ahora } from "@/lib/reloj";
 
 // --- Texturas -------------------------------------------------------------
 
-function usarTexturasEtiqueta() {
+function usarTexturasEtiqueta(claro: boolean) {
   return useMemo(() => {
     const mapa = new Map<string, THREE.CanvasTexture>();
     NODOS.forEach((n) => {
@@ -51,7 +52,8 @@ function usarTexturasEtiqueta() {
       c.width = TEX_ETIQUETA.w;
       c.height = TEX_ETIQUETA.h;
       const ctx = c.getContext("2d");
-      if (ctx) dibujarEtiqueta(ctx, n);
+      // Sobre fondo claro el texto blanco no se lee.
+      if (ctx) dibujarEtiqueta(ctx, n, claro ? "#0F1B2D" : "#FFFFFF");
       const t = new THREE.CanvasTexture(c);
       t.colorSpace = THREE.SRGBColorSpace;
       // Se ve casi de frente y casi 1:1: la piramide de mipmaps no compraria
@@ -62,7 +64,7 @@ function usarTexturasEtiqueta() {
       mapa.set(n.id, t);
     });
     return mapa;
-  }, []);
+  }, [claro]);
 }
 
 // La onda de voz, UNA sola textura para los siete agentes. Se repite en
@@ -128,6 +130,8 @@ function Agente({
   halo,
   quieto,
   indice,
+  vertical,
+  claro,
 }: {
   nodo: Nodo;
   etiqueta: THREE.Texture;
@@ -135,13 +139,15 @@ function Agente({
   halo: THREE.Texture;
   quieto: boolean;
   indice: number;
+  vertical: boolean;
+  claro: boolean;
 }) {
   const grupo = useRef<THREE.Group>(null);
   const luz = useRef<THREE.Mesh>(null);
   const esfera = useRef<THREE.Mesh>(null);
   const borde = useRef<THREE.Mesh>(null);
   const voz = useRef<THREE.Mesh>(null);
-  const base = useMemo(() => posicion(nodo), [nodo]);
+  const base = useMemo(() => posicion(nodo, vertical), [nodo, vertical]);
 
   // La onda se comparte entre los siete agentes, asi que el desplazamiento no
   // puede vivir en la textura: cada agente lleva su propio material con su
@@ -202,7 +208,7 @@ function Agente({
           transparent
           opacity={0.38}
           depthWrite={false}
-          blending={THREE.AdditiveBlending}
+          blending={claro ? THREE.NormalBlending : THREE.AdditiveBlending}
         />
       </mesh>
 
@@ -216,18 +222,27 @@ function Agente({
           efecto Fresnel sin escribir un shader. */}
       <mesh ref={esfera}>
         <sphereGeometry args={[RADIO * 0.965, 24, 18]} />
-        <meshBasicMaterial color={oscuro(nodo.color)} transparent opacity={0.88} />
+        <meshBasicMaterial
+          color={claro ? nodo.color : oscuro(nodo.color)}
+          transparent
+          opacity={claro ? 0.95 : 0.88}
+        />
       </mesh>
+      {/* El borde encendido. En oscuro es aditivo (brillo que se suma al
+          fondo). En claro el aditivo sobre blanco satura y desaparece, y
+          ademas un agente casi blanco como Notion se volvia invisible: ahi el
+          borde pasa a mezcla normal y a un tono oscurecido, que actua como
+          aro de contorno y devuelve la silueta. */}
       <mesh ref={borde}>
         <sphereGeometry args={[RADIO * 1.16, 32, 24]} />
         <meshBasicMaterial
-          color={nodo.color}
+          color={claro ? oscuro(nodo.color) : nodo.color}
           transparent
           opacity={0.5}
           side={THREE.BackSide}
           depthWrite={false}
           depthTest={false}
-          blending={THREE.AdditiveBlending}
+          blending={claro ? THREE.NormalBlending : THREE.AdditiveBlending}
         />
       </mesh>
 
@@ -237,12 +252,13 @@ function Agente({
         <planeGeometry args={[RADIO * 2.25, RADIO * 1.7]} />
         <meshBasicMaterial
           map={mapaPropio}
+          color={claro ? "#12325C" : "#FFFFFF"}
           transparent
           opacity={0.75}
           depthWrite={false}
           depthTest={false}
           toneMapped={false}
-          blending={THREE.AdditiveBlending}
+          blending={claro ? THREE.NormalBlending : THREE.AdditiveBlending}
         />
       </mesh>
 
@@ -257,9 +273,21 @@ function Agente({
 
 // --- Conexiones -----------------------------------------------------------
 
-function curva(a: Nodo, b: Nodo) {
-  const p0 = new THREE.Vector3(...salida(a));
-  const p1 = new THREE.Vector3(...entrada(b));
+function curva(a: Nodo, b: Nodo, vertical: boolean) {
+  const p0 = new THREE.Vector3(...salida(a, vertical));
+  const p1 = new THREE.Vector3(...entrada(b, vertical));
+  // Los tiradores de la curva siguen el eje del flujo: horizontal cuando el
+  // grafo va de izquierda a derecha, vertical cuando va de arriba abajo. Con
+  // el eje equivocado la curva sale en S y el trazo se cruza con las esferas.
+  if (vertical) {
+    const dy = Math.max(60 * ESCALA_V, (p0.y - p1.y) * 0.5);
+    return new THREE.CubicBezierCurve3(
+      p0,
+      new THREE.Vector3(p0.x, p0.y - dy, p0.z),
+      new THREE.Vector3(p1.x, p1.y + dy, p1.z),
+      p1
+    );
+  }
   const dx = Math.max(60 * ESCALA, (p1.x - p0.x) * 0.5);
   return new THREE.CubicBezierCurve3(
     p0,
@@ -272,13 +300,21 @@ function curva(a: Nodo, b: Nodo) {
 function Conexiones({
   halo,
   quieto,
+  vertical,
+  claro,
 }: {
   halo: THREE.Texture;
   quieto: boolean;
+  vertical: boolean;
+  claro: boolean;
 }) {
   const curvas = useMemo(
-    () => CONEXIONES.map(([a, b]) => ({ id: a + ">" + b, c: curva(buscar(a), buscar(b)) })),
-    []
+    () =>
+      CONEXIONES.map(([a, b]) => ({
+        id: a + ">" + b,
+        c: curva(buscar(a), buscar(b), vertical),
+      })),
+    [vertical]
   );
   const paquetes = useRef<(THREE.Group | null)[]>([]);
 
@@ -313,9 +349,9 @@ function Conexiones({
             {/* Azul claro y translucido, no gris oscuro: sobre el fondo azul
                 del hero un tono oscuro se leia como un cable negro grueso. */}
             <meshBasicMaterial
-              color="#8FB6E8"
+              color={claro ? "#7C9AC4" : "#8FB6E8"}
               transparent
-              opacity={0.5}
+              opacity={claro ? 0.55 : 0.5}
               depthWrite={false}
               toneMapped={false}
             />
@@ -413,20 +449,41 @@ function AvisaListo({ onListo }: { onListo?: () => void }) {
 const DISTANCIA = 4.0;
 const ANCHO_GRAFO = 3.02;
 
-function CamaraResponsiva() {
+// En vertical el grafo mide 2.16 de ancho (cuatro salidas separadas 0.72) por
+// 3.28 de alto, mas la etiqueta que cuelga de la ultima esfera. A fov 30 el
+// alto visible es 0.536*d, asi que 7.2 deja 3.86 contra los ~3.6 que ocupa.
+const DISTANCIA_V = 7.2;
+const ANCHO_GRAFO_V = 2.86;
+
+function CamaraResponsiva({ vertical }: { vertical: boolean }) {
   const { camera, size } = useThree();
   useEffect(() => {
+    const d = vertical ? DISTANCIA_V : DISTANCIA;
+    const ancho = vertical ? ANCHO_GRAFO_V : ANCHO_GRAFO;
     const aspecto = size.width / size.height;
-    const necesario = ANCHO_GRAFO * 1.08;
-    const visible = 0.536 * DISTANCIA * aspecto;
+    // En un hueco estrecho el fov vertical no cambia pero el ancho visible se
+    // achica, asi que el grafo se saldria por los costados: se aleja la camara
+    // lo justo para que quepa de ancho.
+    const necesario = ancho * 1.06;
+    const visible = 0.536 * d * aspecto;
     const factor = visible >= necesario ? 1 : necesario / visible;
-    camera.position.set(0, 0, DISTANCIA * factor);
+    camera.position.set(0, 0, d * factor);
     camera.lookAt(0, 0, 0);
-  }, [camera, size.width, size.height]);
+  }, [camera, size.width, size.height, vertical]);
   return null;
 }
 
-export default function FlujoFlotante({ onListo }: { onListo?: () => void }) {
+export default function FlujoFlotante({
+  onListo,
+  vertical = false,
+  claro = false,
+}: {
+  onListo?: () => void;
+  /** Entradas arriba y salidas abajo, para huecos en retrato. */
+  vertical?: boolean;
+  /** Ajusta texto, halos y conexiones para fondo claro. */
+  claro?: boolean;
+}) {
   const quieto = usarMovimientoReducido();
   const [ref, visible] = usarVisibilidad<HTMLDivElement>();
   const desplazando = usarDesplazando();
@@ -447,24 +504,32 @@ export default function FlujoFlotante({ onListo }: { onListo?: () => void }) {
         // lo reinicia en cada cambio de frameloop, y aqui cambia con cada
         // scroll. Ver lib/reloj.ts.
         frameloop={visible && !desplazando ? "always" : "never"}
-        camera={{ fov: 30, position: [0, 0, DISTANCIA] }}
+        camera={{ fov: 30, position: [0, 0, vertical ? DISTANCIA_V : DISTANCIA] }}
         dpr={[1, 2]}
         gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
       >
         <AvisaListo onListo={onListo} />
-        <CamaraResponsiva />
+        <CamaraResponsiva vertical={vertical} />
         <ambientLight intensity={0.55} />
         <directionalLight position={[3, 4, 5]} intensity={0.9} />
         <directionalLight position={[-4, 1, 2]} intensity={0.3} />
-        <Contenido quieto={quieto} />
+        <Contenido quieto={quieto} vertical={vertical} claro={claro} />
         <Preload all />
       </Canvas>
     </div>
   );
 }
 
-function Contenido({ quieto }: { quieto: boolean }) {
-  const etiquetas = usarTexturasEtiqueta();
+function Contenido({
+  quieto,
+  vertical,
+  claro,
+}: {
+  quieto: boolean;
+  vertical: boolean;
+  claro: boolean;
+}) {
+  const etiquetas = usarTexturasEtiqueta(claro);
   const onda = usarTexturaOnda();
   const halo = usarTexturaHalo();
 
@@ -478,7 +543,7 @@ function Contenido({ quieto }: { quieto: boolean }) {
 
   return (
     <Conjunto quieto={quieto}>
-      <Conexiones halo={halo} quieto={quieto} />
+      <Conexiones halo={halo} quieto={quieto} vertical={vertical} claro={claro} />
       {NODOS.map((n, i) => (
         <Agente
           key={n.id}
@@ -488,6 +553,8 @@ function Contenido({ quieto }: { quieto: boolean }) {
           onda={onda}
           halo={halo}
           quieto={quieto}
+          vertical={vertical}
+          claro={claro}
         />
       ))}
     </Conjunto>
