@@ -22,6 +22,7 @@
 | 9 | [Sistema Ilustrador Automático (licencia → collage → variantes)](simulaciones-cc/simulacion-9-ilustrador-automatico.md) | Etapa 0.5 — previa a Ilustración | 🧪 Diseño sin ejecutar |
 | 10 | [Kratos — verificación ficha vs. excel maestro](simulaciones-cc/simulacion-10-kratos-verificacion.md) | Etapa 3 — Catálogo | ⚠️ 4 de 13 claims + certificación no coinciden con el excel |
 | 11 | [Vortex — verificación ficha vs. excel maestro](simulaciones-cc/simulacion-11-vortex-verificacion.md) | Etapa 3 — Catálogo | ✅ 12 de 12 claims coinciden — prompts de plantilla confirmados correctos |
+| 12 | [Hero — verificación ficha vs. excel maestro](simulaciones-cc/simulacion-12-hero-verificacion.md) | Etapa 3 — Catálogo | 🔴 9 de 13 claims sin dato, "diseño modular" contradice "open face" confirmado — bloqueado hasta completar excel |
 
 ---
 
