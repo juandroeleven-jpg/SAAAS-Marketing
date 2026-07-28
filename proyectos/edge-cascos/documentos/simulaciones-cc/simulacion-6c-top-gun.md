@@ -761,14 +761,102 @@ idéntico a la imagen adjunta.
 
 </details>
 
+**Estado:** ⏸️ Descartado a pedido explícito del usuario — prefiere seguir con generación completa desde cero (estilo Intento 6/7) en vez de edición puntual sobre una imagen ya generada. Se deja documentado como opción de respaldo si el Intento 9 vuelve a fallar en geometría.
+
+**Qué hay que hacer si se retoma:** correr el prompt como EDICIÓN de la imagen del Intento 6 (no como generación nueva), adjuntando solo esa imagen.
+
+### Intento 9 — generación completa de nuevo (mismo enfoque que el Intento 6), con el checklist de geometría reforzado
+
+A pedido explícito del usuario: se vuelve al enfoque de generación completa desde cero (no edición), retomando el prompt del Intento 6 que ya había funcionado bien en geometría, con el logo reposicionado (mismo cambio que se intentó en el Intento 7). La diferencia clave respecto al Intento 7: acá el bloque de geometría vuelve a ser el checklist itemizado y detallado del Intento 5 (el que más confiablemente logró geometría correcta), en vez del párrafo resumido de una sola línea que tenían los Intentos 6 y 7 — la hipótesis es que ese resumen corto perdió fuerza frente al resto del prompt (8 elementos + reposición de logo) y por eso el pivote/ventilaciones volvieron a driftear en el Intento 7.
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una imagen de producto de un casco, mismo ángulo, encuadre y
+fondo blanco.
+
+REGLA MÁS IMPORTANTE — DOS FUENTES, DOS ROLES QUE NUNCA SE MEZCLAN:
+- La PRIMERA imagen de referencia (molde azul real) es la ÚNICA
+  autoridad de FORMA.
+- La SEGUNDA imagen de referencia (arte Top Gun) es SOLO fuente de
+  diseño gráfico (colores, íconos, textos). Su forma se ignora por
+  completo.
+
+CRÍTICO — GEOMETRÍA EXACTA DEL MOLDE REAL (primera imagen), verificá
+cada punto antes de terminar — esto es lo que más veces se corrió en
+intentos anteriores, máxima atención acá:
+- Pico frontal: LARGO, FINO, muy angulado hacia abajo y adelante — no
+  cortarlo ni redondearlo.
+- Ranuras de ventilación lateral: EXACTAMENTE 3 aletas/cuchillas
+  separadas, verticales, del mismo tamaño entre sí — no menos de 3, no
+  agrupadas en una sola forma.
+- Carcasa del mecanismo de pivote junto al visor: pieza angular y
+  AJUSTADA/CHICA (NO redondeada, NO abultada, NO sobredimensionada),
+  con un tornillo/tuerca chico y visible, del mismo tamaño relativo
+  que en la foto real — un intento anterior la agrandó y redondeó, no
+  lo repitas.
+- Mentonera y zona inferior delantera: líneas angulosas y rectas, no
+  curvas.
+- Curvatura general de la calota: aerodinámica y afilada, NO
+  redondeada ni "llena".
+- Spoiler/borde trasero: misma forma y proporción que en la foto real.
+- Visor: CLARO Y TRANSPARENTE, igual que en la foto real del molde —
+  sin tinte oscuro ni ahumado.
+
+CRÍTICO — EL DISEÑO GRÁFICO VA SOLO SOBRE LA SUPERFICIE AZUL MATE
+PINTADA, NUNCA SOBRE PIEZAS NEGRAS: las ventilaciones negras, la
+mentonera negra, el spoiler/cola negra y la carcasa negra del pivote
+tienen que quedar SIN NINGÚN gráfico encima. Si un elemento del diseño
+cae naturalmente cerca del límite entre la superficie azul y una pieza
+negra, recortalo o desplazalo para que no invada la pieza negra.
+
+DISEÑO GRÁFICO A TRANSFERIR — EXACTAMENTE 8 ELEMENTOS:
+
+1. Avión de combate estilizado — zona delantera superior de la calota.
+2. Escudo circular con estrella de 5 puntas — zona central superior.
+3. Grupo de barras verticales cortas en AZUL CLARO/GRISÁCEO (NO
+   dorado), estilo insignia de rango militar — junto al escudo con
+   estrella, en la misma zona superior central. Distinto de los
+   chevrones dorados del punto 5.
+4. Un par de naipes (ases de pique) — sobre el pico frontal.
+5. Franjas diagonales tipo chevron, en DORADO — sobre la superficie
+   azul de la mentonera/parte inferior delantera, SIN invadir la pieza
+   de plástico negro de la mentonera.
+6. Logotipo "TOP GUN MAVERICK": recuadro angosto inclinado con "TOP
+   GUN" arriba (más grande) y "MAVERICK" abajo (más chico, itálica) —
+   junto a las ventilaciones, sobre superficie azul, PERO MÁS ABAJO
+   que en intentos anteriores: un intento anterior lo dejó pegado al
+   visor/ventilaciones, con un hueco vacío de superficie azul entre el
+   logo y la mentonera — corregí eso desplazando el logo hacia ese
+   espacio libre, sin tocar ni superponerse con la mentonera negra.
+   Obligatorio, no omitir ni simplificar el diseño de 2 líneas.
+7. Texto grande "MAVERICK" en mayúsculas — zona trasera inferior,
+   sobre superficie azul, cerca del spoiler pero sin tocarlo.
+8. 3 estrellas de 5 puntas alineadas — debajo del texto "MAVERICK".
+
+PALETA: dorado/mostaza envejecido para los elementos 1, 2, 4, 5, 6, 7
+y 8. Azul claro/grisáceo (no dorado) específicamente para el elemento
+3. Base azul mate del casco, mismo tono que el molde real.
+
+PROHIBIDO ABSOLUTO: no dibujar ningún elemento gráfico sobre piezas de
+plástico negro. No omitir el grupo de barras azul claro/grisáceo junto
+al escudo. No copiar la forma del casco de la segunda imagen. No
+agrandar ni redondear el pico frontal, el pivote ni la calota. No
+reducir la cantidad ni cambiar la forma de las 3 ventilaciones. No
+oscurecer el visor. No omitir ni simplificar el logotipo "TOP GUN
+MAVERICK". No dejar el logo pegado al visor/ventilaciones sin espacio.
+```
+
+</details>
+
 **Estado:** 🔴 pendiente de generar.
 
 **Qué hay que hacer:**
-1. Correr el prompt como EDICIÓN de la imagen del Intento 6 (no como generación nueva), adjuntando solo esa imagen, y mandar el resultado para auditoría.
-2. Si la herramienta de generación no soporta bien "editar una imagen adjunta sin regenerar todo" y la geometría vuelve a cambiar, escalar a humano (edición manual puntual del logo) en vez de seguir reintentando regeneraciones completas — ya es el 3er intento con el mismo tipo de drift de geometría (Intento 4 y ahora Intento 7).
+1. Correr el prompt (en sesión aislada, adjuntando molde real + arte Top Gun) y mandar el resultado para auditoría — revisar en especial pico frontal, las 3 ventilaciones y la carcasa del pivote, que son los puntos que más veces driftearon.
+2. Si vuelve a driftear la geometría a pesar del checklist reforzado, es la 3ra vez que pasa (Intentos 4 y 7) — ahí sí conviene reconsiderar el enfoque de edición puntual (Intento 8, dejado como respaldo arriba) en vez de seguir regenerando completo.
 3. Confirmar si este molde azul es el casco físico real de la marca licenciante o solo una referencia — sigue siendo la misma pregunta abierta de este caso.
-4. Cuando el usuario mande el primer caso de Marvel/DC/Paramount, aplicar desde el arranque tanto la regla de "fuente de forma vs. fuente de diseño" como esta lección de preferir ediciones puntuales sobre un resultado ya aprobado en vez de regenerar todo de cero cuando solo hace falta ajustar un elemento chico.
+4. Cuando el usuario mande el primer caso de Marvel/DC/Paramount, aplicar desde el arranque la regla de "fuente de forma vs. fuente de diseño" y el checklist itemizado de geometría (no el resumen corto).
 
 ---
 
-**Última actualización:** 2026-07-28 · Intento 7 agregado tras auditar el Intento 6 (los 8 elementos y el bloqueo de piezas negras funcionaron; único defecto: el logotipo "TOP GUN MAVERICK" quedó demasiado arriba, pegado al visor/ventilaciones, dejando espacio vacío en la superficie azul por encima de la mentonera — se reposiciona el logo más abajo, sin tocar piezas negras) — línea de licencias de marca (Marvel/DC/Paramount).
+**Última actualización:** 2026-07-28 · Intento 9 agregado a pedido explícito del usuario, quien prefirió volver a generación completa desde cero en vez de la edición puntual del Intento 8 — se retoma el prompt del Intento 6 con el logo reposicionado y el checklist de geometría reforzado al nivel de detalle del Intento 5, tras el drift de geometría detectado en el Intento 7 — línea de licencias de marca (Marvel/DC/Paramount).
