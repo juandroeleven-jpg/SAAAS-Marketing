@@ -297,6 +297,78 @@ y ángulo) — la imagen del checkpoint manda sobre cualquier otro detalle.
 
 **Qué hay que hacer:** correr el prompt, mandar el resultado para auditoría. Si vuelve a fallar en color/forma/ángulo, es el segundo y último reintento automático antes de escalar a humano (regla del pipeline).
 
+### Intento 3 — mismo casco, nueva referencia de estilo (moody urbano)
+
+El usuario cambió la imagen de referencia de estilo (ahora: motociclista de perfil/espaldas, casco integral negro brillante con parche y sticker, campera de cuero, mochila táctica, fondo urbano de concreto desenfocado, paleta fría/desaturada) — pidió explícitamente **no modificar nada de la descripción del casco Hero**, solo actualizar qué se toma prestado de la referencia (mood, paleta, fondo, vestuario). Mantiene el ángulo de perfil lateral del intento 2 (viene del checkpoint, no de la referencia).
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una fotografía de producto tipo lifestyle en 4K, formato HORIZONTAL
+(apaisado, relación aproximada 4:3 — NO vertical/retrato).
+
+ÁNGULO DE CÁMARA: perfil lateral (de lado), igual que la foto de referencia
+del casco real (checkpoint) — NO uses un ángulo de 3/4 frontal. La cámara
+mira al casco desde el costado, a la altura de los ojos aprox., igual que
+en la foto de referencia del casco.
+
+CRÍTICO — el casco que aparece en la imagen debe ser EXACTAMENTE el casco
+real adjunto como autoridad (foto del modelo Hero, checkpoint): open face /
+tipo jet, 100% negro mate SIN degradé ni ningún otro color (nada de bronce,
+dorado ni ninguna transición de color), visera clara/transparente abatible
+con mecanismo de pivote visible, ventilación superior con la MISMA forma
+exacta del checkpoint (rejilla alargada/ovalada pequeña, no un rombo
+grande), correa con hebilla roja, acolchado interior negro con costura roja
+en el borde. No cambies su geometría, forma, color ni ningún detalle físico.
+
+La NUEVA imagen de referencia de estilo (persona de espaldas/perfil sobre
+una moto, casco integral negro brillante con parche/sticker en la mandíbula,
+campera de cuero negra, mochila táctica negra al hombro, fondo urbano de
+concreto desenfocado, paleta desaturada y fría, luz difusa de exterior/día
+nublado) se usa ÚNICAMENTE para tomar prestado:
+- Mood/paleta: tonos fríos, desaturados, urbano/editorial, nada cálido
+- Iluminación: luz difusa, suave, de exterior nublado (no sol directo)
+- Fondo: concreto/pared urbana desenfocada (bokeh), no cielo
+- Vestuario del modelo: campera de cuero negra, guantes negros, mochila al
+  hombro — estos elementos de vestuario SÍ se pueden copiar de la referencia
+  (no son parte del casco)
+- Composición: figura recortada contra el fondo, sensación de movimiento/
+  acción congelada
+
+NO se usa la referencia para: el ángulo de cámara (eso lo define el
+checkpoint, perfil lateral — la referencia tiene un ángulo de 3/4 trasero,
+NO lo copies), ni para el casco (es un modelo integral/full-face distinto,
+con visera oscura/ahumada y un parche con bandera sueca — nada de eso debe
+aparecer).
+
+PROHIBIDO ABSOLUTO: no copiar el casco de la referencia (integral, visera
+oscura, parche/sticker) bajo ninguna forma — el único casco permitido es el
+casco real adjunto (Hero, open face, negro mate puro, visera transparente),
+sin excepciones. No agregar ningún sticker, parche, bandera ni texto al
+casco Hero.
+
+Persona modelo: sin rasgos específicos pedidos, casco puesto, rostro puede
+estar parcialmente visible por el ángulo de perfil. Puede llevar campera de
+cuero y mochila como en la referencia.
+
+Fondo: pared/concreto urbano desenfocado, tono frío/neutro, sin elementos
+que compitan visualmente con el casco. Sin logos, sin texto superpuesto,
+sin marca de agua.
+
+Orden de imágenes en el payload: 1) foto de referencia de estilo/mood/
+vestuario, 2) foto real del casco Hero de perfil (autoridad final de
+geometría, color y ángulo) — la imagen del checkpoint manda sobre
+cualquier otro detalle del casco.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué falló:** N/A (todavía no generado).
+
+**Qué hay que hacer:** correr el prompt, mandar el resultado para auditoría.
+
 ---
 
 **Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación + adaptación de prompts), corridos en esta sesión a pedido explícito de auditar el tercer caso del catálogo (Hero). Sub-caso de foto lifestyle: intento 1 auditado con 4 defectos (formato, ángulo, degradé de color, forma de ventilación), intento 2 con prompt corregido listo para correr.
