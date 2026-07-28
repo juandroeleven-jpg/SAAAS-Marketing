@@ -21,6 +21,7 @@
 | 8 | [Pipeline Meshy AI + Blender para mapeo de textura exacto](simulaciones-cc/simulacion-8-meshy-blender.md) | Etapa 2 — Turntable (continuación) | 🧪 Flujo definido, falta conectar cuenta dedicada del usuario |
 | 9 | [Sistema Ilustrador Automático (licencia → collage → variantes)](simulaciones-cc/simulacion-9-ilustrador-automatico.md) | Etapa 0.5 — previa a Ilustración | 🧪 Diseño sin ejecutar |
 | 10 | [Kratos — verificación ficha vs. excel maestro](simulaciones-cc/simulacion-10-kratos-verificacion.md) | Etapa 3 — Catálogo | ⚠️ 4 de 13 claims + certificación no coinciden con el excel |
+| 11 | [Vortex — verificación ficha vs. excel maestro](simulaciones-cc/simulacion-11-vortex-verificacion.md) | Etapa 3 — Catálogo | ✅ 12 de 12 claims coinciden — prompts de plantilla confirmados correctos |
 
 ---
 
