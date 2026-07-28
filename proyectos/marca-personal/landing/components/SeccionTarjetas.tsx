@@ -50,7 +50,7 @@ export default function SeccionTarjetas() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.25 }}
         transition={{ duration: quieto ? 0 : 0.6, ease: "easeOut" }}
-        className="tarjeta-blanca relative z-10 w-full max-w-3xl rounded-[28px] px-6 py-12 sm:px-12 sm:py-14"
+        className="tarjeta-blanca relative z-10 w-full max-w-5xl rounded-[28px] px-6 py-14 sm:px-14 sm:py-20"
       >
         <div className="text-center">
           <span className="text-sm font-semibold uppercase tracking-widest text-blue-700">
@@ -61,7 +61,7 @@ export default function SeccionTarjetas() {
           </h2>
         </div>
 
-        <div className="mt-8">
+        <div className="mt-12">
           <TarjetasFlotantes contenido={CONTENIDO} />
         </div>
       </motion.div>
