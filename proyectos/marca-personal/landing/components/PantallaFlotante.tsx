@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { RoundedBox, OrbitControls } from "@react-three/drei";
+import { RoundedBox, OrbitControls, Preload } from "@react-three/drei";
 import * as THREE from "three";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { DISENO, dibujarFlujo } from "@/lib/flujo";
@@ -352,6 +352,9 @@ export default function PantallaFlotante({ onListo }: { onListo?: () => void }) 
             el canvas, asi que en un telefono el dedo hace girar el objeto en
             vez de desplazar la pagina: el hero se convierte en una trampa de
             scroll. */}
+        {/* Compila los shaders al montar. Sin esto, esa compilacion cae en el
+            primer frame que se ve, que es justo donde mas se nota. */}
+        <Preload all />
         {fino && (
         <OrbitControls
           makeDefault

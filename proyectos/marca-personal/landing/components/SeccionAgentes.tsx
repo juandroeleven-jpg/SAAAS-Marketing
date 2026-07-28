@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { usarMovimientoReducido } from "@/lib/movimiento";
 import MontarCerca from "./MontarCerca";
@@ -14,6 +15,7 @@ const ModeloLaptop = dynamic(() => import("./ModeloLaptop"), { ssr: false });
 // (ya hay dos en el hero) y el movimiento lo compone la GPU sin repintar.
 export default function SeccionAgentes() {
   const quieto = usarMovimientoReducido();
+  const [listo, setListo] = useState(false);
 
   return (
     <section
@@ -61,21 +63,33 @@ export default function SeccionAgentes() {
             </div>
           </div>
 
-          {/* El objeto se sale del acolchado del panel para ganar ancho: en
-              movil los 24 px de cada lado, en escritorio bastante mas, porque
-              es la pieza que tiene que llevar el peso visual de la seccion. */}
-          {/* margen 0: esta seccion arranca a solo ~56 px del pliegue, asi que
-              con cualquier margen se montaria enseguida, mientras el visitante
-              todavia esta en el hero. Con 0 espera a que la seccion entre de
-              verdad en pantalla -- y como el hueco esta a media altura, para
-              cuando se ve ya lleva un momento montado. */}
-          <MontarCerca
-            proporcion="5 / 3.9"
-            margen="0px"
-            className="-mx-6 min-w-0 sm:mx-0"
-          >
-            <ModeloLaptop escena="agentes" />
-          </MontarCerca>
+          {/* El hueco y el sangrado los define ESTE contenedor, no el
+              componente 3D: asi el poster ya tiene su sitio y su tamano en el
+              HTML inicial, y el objeto se ve desde el primer momento aunque
+              todavia no exista nada de WebGL. Cuando la escena real lleva unos
+              frames dibujados, se cruzan. */}
+          <div className="relative -mx-6 aspect-[5/3.9] min-w-0 sm:mx-0 lg:-mr-[14vw] lg:w-[calc(100%+14vw)]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/posters/laptop.webp"
+              alt=""
+              aria-hidden
+              width={1701}
+              height={1327}
+              className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-700 ${
+                listo ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <MontarCerca
+              proporcion="5 / 3.9"
+              margen="0px"
+              className={`absolute inset-0 transition-opacity duration-700 ${
+                listo ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <ModeloLaptop escena="agentes" onListo={() => setListo(true)} />
+            </MontarCerca>
+          </div>
         </div>
       </motion.div>
 
