@@ -6,6 +6,7 @@ import * as THREE from "three";
 import { usarMovimientoReducido } from "@/lib/movimiento";
 import { usarVisibilidad } from "@/lib/visibilidad";
 import { usarDesplazando } from "@/lib/desplazamiento";
+import { ahora } from "@/lib/reloj";
 
 // Fondo 3D: un campo de ondas de energia que se pierde en el horizonte, con
 // la retícula de una red por encima. Cumple el mismo papel que el terreno
@@ -109,14 +110,14 @@ function Ondas({ quieto }: { quieto: boolean }) {
   // buffers en cada frame para producir exactamente los mismos valores.
   const yaCongelado = useRef(false);
 
-  useFrame((state) => {
+  useFrame(() => {
     if (quieto) {
       if (yaCongelado.current) return;
       yaCongelado.current = true;
     } else {
       yaCongelado.current = false;
     }
-    const t = quieto ? 0 : state.clock.getElapsedTime();
+    const t = quieto ? 0 : ahora();
 
     const pos = geometria.getAttribute("position") as THREE.BufferAttribute;
     const arr = pos.array as Float32Array;
