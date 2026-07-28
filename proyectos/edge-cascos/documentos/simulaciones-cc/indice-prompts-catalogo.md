@@ -265,6 +265,19 @@ Octavo caso EDGEPRO, el con más features confirmadas del catálogo (17). Prompt
 
 ---
 
+## Casco retro/redondo — Simulación 26
+
+Primer molde de casco retro/redondo (estilo café racer, calota lisa, pivote cromado) del catálogo. Pedido puntual: cambiar solo la goma del borde inferior a negro, sin tocar nada más de la imagen.
+
+[`simulacion-26-casco-retro-goma-negra.md`](simulacion-26-casco-retro-goma-negra.md)
+
+| Prompt / pieza | Tipo de pieza | Estado | Ubicación |
+|---|---|---|---|
+| Variante lila/rosa — goma inferior a negro | Tipo A (cambio puntual de color) | ✅ listo para usar — todavía no corrido | `simulacion-26-casco-retro-goma-negra.md` |
+| Variante blanco/azul marino — goma inferior a negro | Tipo A (cambio puntual de color) | ✅ listo para usar — todavía no corrido | `simulacion-26-casco-retro-goma-negra.md` |
+
+---
+
 ## Resumen numérico
 
 | Caso | Prompts indexados | ✅ Listo | ⚠️ Con reintento | 🔴 Bloqueado |
@@ -285,7 +298,8 @@ Octavo caso EDGEPRO, el con más features confirmadas del catálogo (17). Prompt
 | Casco adventure con pico | 4 | 1 | 3 | 0 |
 | Casco EDGE flip-up (quitar stickers) | 3 | 3 | 0 | 0 |
 | Carbex | 3 | 3 | 0 | 0 |
-| **Total** | **62** | **48** | **10** | **4** |
+| Casco retro/redondo | 2 | 2 | 0 | 0 |
+| **Total** | **64** | **50** | **10** | **4** |
 
 ---
 
