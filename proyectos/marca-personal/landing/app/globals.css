@@ -91,23 +91,49 @@ body {
    del seno que mueve el modelo en ModeloLaptop.tsx (2*PI / 0.72), asi que
    los dos movimientos van juntos -- es lo que hace leer que el objeto esta
    suspendido y no simplemente moviendose. */
-/* Solo opacity, sin scaleX. Escalar un elemento con `filter: blur()` obliga
-   al navegador a RE-RASTERIZAR el desenfoque en cada frame, porque el blur se
-   calcula sobre la capa ya rasterizada y al cambiar de tamano deja de servir.
-   La opacidad, en cambio, la aplica el compositor sobre la capa cacheada: es
-   practicamente gratis. El efecto de "la sombra respira" se conserva. */
+/* La sombra vuelve a ENSANCHARSE ademas de aclararse, que es lo que da la
+   lectura de profundidad: se estrecha cuando el objeto sube y se abre cuando
+   baja. Solo la opacidad no transmitia eso.
+
+   Se puede volver a escalar porque la suavidad ya NO viene de `filter: blur()`
+   sino de un radial-gradient. La diferencia es la clave: escalar un elemento
+   con blur obliga a rehacer la convolucion del desenfoque en cada frame,
+   mientras que un degradado se pinta una vez en su capa y el compositor la
+   escala como una textura. Mismo resultado visual, sin el coste. */
 @keyframes sombra-flotante {
   0%,
   100% {
+    transform: scaleX(1);
     opacity: 0.95;
   }
   50% {
-    opacity: 0.55;
+    transform: scaleX(0.82);
+    opacity: 0.5;
   }
 }
 
 .sombra-flotante {
+  will-change: transform, opacity;
   animation: sombra-flotante 8.73s ease-in-out infinite;
+}
+
+/* Sombra difusa sin filtro: la suavidad la da el propio degradado. */
+.sombra-difusa {
+  background: radial-gradient(
+    closest-side,
+    rgba(2, 8, 23, 0.55) 0%,
+    rgba(2, 8, 23, 0.28) 45%,
+    rgba(2, 8, 23, 0) 100%
+  );
+}
+
+.sombra-difusa-color {
+  background: radial-gradient(
+    closest-side,
+    rgba(37, 99, 235, 0.4) 0%,
+    rgba(37, 99, 235, 0.16) 50%,
+    rgba(37, 99, 235, 0) 100%
+  );
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -131,44 +157,71 @@ body {
 
 .aurora-mancha {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
+  /* Sin `filter: blur()`: la suavidad la da el radial-gradient de cada mancha.
+     Con blur, cualquier cambio de tamano obliga a rehacer la convolucion sobre
+     una capa a pantalla completa -- lo mas caro de toda la pagina. Sin el, la
+     capa se pinta una vez y el compositor la mueve y la escala como textura. */
   will-change: transform;
 }
 
-/* Solo TRASLACION, nunca escala, por el mismo motivo que la sombra: escalar
-   una capa con blur de 90 px la obliga a re-rasterizarse en cada frame, que
-   es de lo mas caro que se le puede pedir al compositor. Trasladarla es mover
-   una textura ya calculada. Se compensa la falta de escala con recorridos mas
-   largos y periodos distintos, que es lo que da la sensacion de que el color
-   cambia de sitio. */
+.mancha-cian {
+  background: radial-gradient(
+    closest-side,
+    rgba(125, 211, 252, 0.95) 0%,
+    rgba(125, 211, 252, 0.4) 50%,
+    rgba(125, 211, 252, 0) 100%
+  );
+}
+
+.mancha-indigo {
+  background: radial-gradient(
+    closest-side,
+    rgba(165, 180, 252, 0.85) 0%,
+    rgba(165, 180, 252, 0.34) 50%,
+    rgba(165, 180, 252, 0) 100%
+  );
+}
+
+.mancha-azul {
+  background: radial-gradient(
+    closest-side,
+    rgba(59, 130, 246, 0.6) 0%,
+    rgba(59, 130, 246, 0.22) 50%,
+    rgba(59, 130, 246, 0) 100%
+  );
+}
+
+/* Vuelven a escalar ademas de trasladarse: sin la escala, el color solo se
+   deslizaba y se notaba mecanico. Es seguro hacerlo ahora que las manchas no
+   llevan `filter: blur()` -- el compositor escala una textura ya pintada en
+   vez de recalcular un desenfoque de 90 px a pantalla completa. */
 @keyframes aurora-1 {
   0%,
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) scale(1);
   }
   50% {
-    transform: translate3d(18%, 12%, 0);
+    transform: translate3d(16%, 10%, 0) scale(1.15);
   }
 }
 
 @keyframes aurora-2 {
   0%,
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) scale(1.08);
   }
   50% {
-    transform: translate3d(-20%, -14%, 0);
+    transform: translate3d(-18%, -12%, 0) scale(0.94);
   }
 }
 
 @keyframes aurora-3 {
   0%,
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) scale(0.96);
   }
   50% {
-    transform: translate3d(14%, -16%, 0);
+    transform: translate3d(12%, -14%, 0) scale(1.18);
   }
 }
 

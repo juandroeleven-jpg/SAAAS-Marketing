@@ -285,7 +285,7 @@ export default function PantallaFlotante() {
       />
       <div
         aria-hidden
-        className="sombra-flotante pointer-events-none absolute inset-x-[16%] bottom-[6%] h-[7%] rounded-[50%] bg-[#020817]/55 blur-2xl"
+        className="sombra-flotante sombra-difusa pointer-events-none absolute inset-x-[16%] bottom-[4%] h-[12%]"
       />
       <Canvas
         className="relative"

@@ -22,9 +22,9 @@ export default function SeccionAgentes() {
       {/* Manchas de color. Van detras del panel y son estaticas en tamano:
           solo se desplazan, que es lo barato. */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="aurora-mancha aurora-1 left-[-10%] top-[-15%] h-[70%] w-[60%] bg-sky-300/60" />
-        <div className="aurora-mancha aurora-2 right-[-8%] top-[10%] h-[65%] w-[55%] bg-indigo-300/50" />
-        <div className="aurora-mancha aurora-3 bottom-[-20%] left-[25%] h-[70%] w-[65%] bg-blue-500/30" />
+        <div className="aurora-mancha mancha-cian aurora-1 left-[-10%] top-[-15%] h-[80%] w-[70%]" />
+        <div className="aurora-mancha mancha-indigo aurora-2 right-[-8%] top-[10%] h-[75%] w-[65%]" />
+        <div className="aurora-mancha mancha-azul aurora-3 bottom-[-20%] left-[25%] h-[80%] w-[75%]" />
       </div>
 
       <motion.div
