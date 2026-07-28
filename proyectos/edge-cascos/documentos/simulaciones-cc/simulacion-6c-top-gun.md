@@ -121,3 +121,79 @@ Checklist de respaldo:
 </details>
 
 🧪 **SIMULACIÓN — geometría validada por auditoría real (molde vs. resultado coinciden en silueta y ventilación), pero con 2 preguntas abiertas específicas de este caso: origen real del molde (sin logo EDGE visible) y ubicación exacta del defecto de logo ya señalado por el usuario.**
+
+---
+
+## Prompt de transferencia de diseño — molde azul real + arte "Top Gun: Maverick" (primer caso de la línea de licencias de marca)
+
+Este es el primer caso concreto de la nueva línea **"Licencias de marca"** (Marvel, DC, Paramount, etc. — el usuario confirmó que tiene licencias pagas con estas marcas y que el flujo de trabajo es siempre el mismo: tomar un molde de casco real y adaptarle un diseño). Se reutiliza el molde azul de este mismo caso (`download - 2026-07-18T125401.108.jpg`, ya identificado arriba como "molde azul").
+
+**Punto de partida distinto al de los resultados anteriores de este archivo:** el arte de referencia (avión, escudo de estrella, naipes, "TOP GUN MAVERICK", "MAVERICK", 3 estrellas, todo en dorado envejecido/desgastado sobre azul) fue diseñado originalmente sobre **otro molde de casco**, con una mentonera y un spoiler trasero de forma distinta a la de este molde azul. Pedido explícito del usuario: el diseño se adapta al molde azul real, **sin alterar en nada la geometría del molde azul** — no se reproduce la forma del casco del arte de referencia, solo su diseño gráfico 2D.
+
+<details><summary>Prompt — Top Gun: Maverick sobre molde azul (Tipo A, geometría intacta)</summary>
+
+```
+Genera una imagen de producto del mismo casco azul mate de la
+referencia adjunta (molde real, vista lateral), mismo ángulo, encuadre
+y fondo blanco.
+
+CRÍTICO — GEOMETRÍA INTACTA, CERO CAMBIOS: no modifiques absolutamente
+ningún componente físico del casco azul — mismo pico frontal
+puntiagudo, mismas ranuras de ventilación laterales tipo cuchilla
+(mismo conteo y forma), misma mentonera integrada, mismo mecanismo de
+pivote visible junto al visor, mismo spoiler/borde trasero, misma
+silueta general, mismo visor transparente. Es el mismo objeto 3D
+exacto — SOLO se le agrega una gráfica 2D encima de la superficie
+azul, como una calcomanía/pintura aplicada al molde, nunca cambiando
+su forma.
+
+DISEÑO A TRANSFERIR (tomado de la segunda imagen de referencia, que
+está aplicado sobre OTRO casco de forma distinta — no copies la forma
+de ese otro casco, solo su arte gráfico):
+- Avión de combate estilizado (silueta tipo jet), ubicado en la zona
+  delantera superior de la calota.
+- Escudo circular con una estrella grande de 5 puntas en el centro,
+  en la zona superior/central.
+- Un par de naipes (ases de pique) cerca de la zona del pico frontal.
+- Franjas diagonales tipo chevron repetidas en la parte inferior
+  delantera.
+- Logotipo "TOP GUN MAVERICK" en tipografía condensada dentro de un
+  recuadro alargado, ubicado cerca de las ranuras de ventilación.
+- Texto grande "MAVERICK" en la zona inferior trasera, en mayúsculas,
+  fuente bold sans-serif.
+- 3 estrellas de 5 puntas alineadas horizontalmente debajo del texto
+  "MAVERICK".
+- Paleta y acabado: todos estos elementos van en color DORADO/MOSTAZA
+  envejecido con textura desgastada/grunge (bordes irregulares,
+  aspecto rayado y descascarado, como pintura militar vieja), sobre
+  la base azul mate del casco que se mantiene visible de fondo.
+
+ADAPTACIÓN AL MOLDE REAL (no al molde del arte de referencia): como
+este molde azul tiene ranuras de ventilación, mentonera y spoiler de
+forma distinta a los del casco donde se diseñó originalmente el arte,
+reposicioná y escalá cada elemento gráfico para que respete los
+límites reales de los paneles de ESTE casco — ningún elemento del
+diseño debe quedar cortado de forma rara ni superpuesto de manera
+ilógica sobre las ranuras de ventilación o el mecanismo de pivote.
+
+PROHIBIDO ABSOLUTO: no cambiar el color ni la transparencia del
+visor. No agregar logos, textos o símbolos que no estén en la lista
+de arriba. No cambiar el color negro de la mentonera/ribetes ni el
+azul mate de la carcasa base. No cambiar cantidad, forma o tamaño de
+las ranuras de ventilación. No cambiar la silueta, el pico frontal ni
+el spoiler trasero del molde azul real.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:**
+1. Correr el prompt (en sesión aislada, ver hallazgo de contaminación cruzada de este mismo catálogo) y mandar el resultado para auditoría.
+2. Confirmar si este molde azul es el casco físico real de la marca licenciante o solo una referencia — sigue siendo la misma pregunta abierta de este caso (ver pendientes arriba).
+3. Subir las 2 imágenes de referencia (molde azul + arte Top Gun) como adjuntos para versionarlas.
+4. Cuando el usuario mande el primer caso de Marvel/DC/Paramount, crear el archivo de caso correspondiente siguiendo esta misma estructura (Tipo A — transferencia de diseño 2D sobre molde real, geometría intacta) y sumarlo al índice maestro de prompts.
+
+---
+
+**Última actualización:** 2026-07-28 · primer prompt de la nueva línea de licencias de marca (Marvel/DC/Paramount), armado directo sobre el molde azul ya documentado en este caso, a pedido de velocidad del usuario.
