@@ -1,0 +1,151 @@
+# Orquestación de agentes en paralelo — pipeline de generación/auditoría de imagen
+
+[← Volver al índice del proyecto EDGE](../indice-proyecto-edge.md)
+
+**Qué es esto:** la plantilla operativa para correr varios agentes en paralelo sobre distintos casos (cascos, tarjetas de specs, y lo que se sume después) y distintos tipos de prompt de generación/edición de imagen. No es un caso puntual — es el proceso que se reutiliza cada vez que se agrega un caso nuevo.
+
+**Qué NO es esto:** un generador de imágenes. Esta sesión de Claude Code no tiene conectada una herramienta de edición tipo Nano Banana/Gemini — la generación real de píxeles se sigue corriendo donde ya se corre hoy (Nano Banana Pro vía OpenRouter, según `pipeline-edge-6-meses.md`). Lo que este documento y los agentes en paralelo aportan es **razonamiento, comparación, auditoría y documentación** antes y después de cada generación — el Agente 0, el plan por vista, y el Agente Auditor del diagrama de abajo.
+
+---
+
+## 1. Pipeline de roles
+
+```mermaid
+graph TD
+    A0["Agente 0: Intake y Razonamiento<br/>(primer paso del pipeline, antes de generar nada)"]
+
+    A0 --> G1["Recopilar TODAS las ilustraciones/referencias<br/>(lateral, frontal, superior, trasera — o el layout fijo del caso)"]
+    A0 --> G2["Recopilar TODOS los checkpoints reales<br/>(foto original del modelo/producto, por vista o pieza)"]
+
+    G1 --> CMP["Comparar referencia vs. checkpoint real<br/>por vista/pieza, elemento por elemento"]
+    G2 --> CMP
+
+    CMP --> RULES["Cruzar cada elemento contra el checklist<br/>del tipo de prompt (sección 2)"]
+
+    RULES --> CLASS["Clasificar cada elemento:<br/>replica fiel / aproximación mejorable /<br/>pendiente de ejecución / imposible por restricción"]
+
+    CLASS --> PLAN["Generar plan paso a paso por vista/pieza<br/>separando SIEMPRE geometría (o layout) / color / estilo"]
+
+    PLAN --> BUDGET["Aplicar límite de attention budget:<br/>máximo 2-3 tareas por llamada"]
+
+    BUDGET --> ORDER["Fijar orden de imágenes en el payload:<br/>referencia primero, foto/checkpoint real (autoridad) al final"]
+
+    ORDER --> OUT["Entregar razonamiento estructurado<br/>al Agente Generador de cada vista/pieza"]
+
+    OUT --> QA["Agente Auditor (separado del Generador):<br/>verifica con zoom directo + valores RGB reales<br/>antes de aprobar, nunca el mismo agente que generó"]
+
+    QA -->|"defecto total (otro objeto, collage, aspect ratio roto)"| RETRY["Reintentar automáticamente 1-2 veces<br/>antes de escalar a humano"]
+    RETRY --> OUT
+    QA -->|"aprobado"| DONE["Checkpoint aprobado<br/>se documenta en este repo + Artifact/Notion"]
+```
+
+**Regla dura:** el Agente Auditor nunca es el mismo agente (ni la misma llamada) que el Agente Generador. Si no hay forma de separarlos en una ejecución dada, el resultado se marca `sin auditar`, no `aprobado`.
+
+---
+
+## 2. Tipos de prompt (taxonomía extensible)
+
+Cada caso nuevo se clasifica en uno de estos tipos antes de armar el plan. Si no encaja en ninguno, se agrega un tipo nuevo con su propio checklist — no se fuerza a que encaje en uno existente.
+
+### Tipo A — Transferencia de diseño gráfico sobre geometría/objeto real existente
+Ejemplo: aplicar un diseño (manga/samurái, "The Godfather", etc.) sobre la carcasa real de un casco ya fabricado, por vista (lateral, frontal, superior, trasera).
+
+Checklist de auditoría (Tipo A):
+- [ ] **Geometría intacta** — silueta, proporciones, curvatura sin alterar entre checkpoint real y resultado.
+- [ ] **Elementos físicos reales en su posición exacta** — ventilaciones, tornillos/remaches, hebilla, correa, mentonera, soporte de cámara, etc. — ni cubiertos ni movidos.
+- [ ] **Visera/lente transparente y limpia** — sin tinte, sin sombra oscura cerca del pivote/bisagra, sin diseño aplicado encima.
+- [ ] **Transición limpia** entre carcasa y piezas adyacentes (correa, acolchado) — sin línea negra ni gap visible.
+- [ ] **Sin soporte/pole de estudio** visible, fondo plano y limpio según lo pedido.
+- [ ] **Textura/relieve real vs. pintura/decal plano** — no confundir un relieve físico con un gráfico 2D superpuesto.
+- [ ] **Cambio de superficie, no de estructura** — el prompt nunca debe pedir (ni el resultado mostrar) un cambio de forma del objeto.
+- [ ] **Plan separado por capa**: geometría / color / estilo nunca se piden juntos en la misma instrucción.
+- [ ] **Attention budget**: máximo 2-3 tareas por llamada de generación.
+- [ ] **Orden de imágenes en el payload**: referencia de diseño primero, foto real (autoridad) al final.
+
+### Tipo B — Reproducción exacta de layout fijo (tarjetas de specs, homologación, grids de íconos)
+Ejemplo: tarjeta "HOMOLOGACIÓN" (DOT, FNVSS 510, ECE 22.06 + lista de 6 features) o grid 2x3 de íconos de características — mismo lienzo, mismo aspect ratio que la referencia, cambiando solo el contenido de texto/íconos.
+
+Checklist de auditoría (Tipo B):
+- [ ] **Aspect ratio y tamaño en píxeles idénticos** a la referencia — sin recorte, sin estirar, sin cambiar orientación.
+- [ ] **Proporción relativa de cada bloque** (header, bloque de logo, área de lista/grid) igual a la referencia — no comprimir ni expandir ningún bloque por separado.
+- [ ] **Lista de ítems exacta** — ni de más ni de menos que lo pedido, mismo orden.
+- [ ] **Lista de exclusión explícita respetada** — si el prompt dice "prohibido absoluto" sobre un texto/ítem, verificar que no aparezca en ninguna forma (ni tachado, ni parcial).
+- [ ] **Tipografía/estilo consistente** con la referencia (peso, mayúsculas, alineación, separadores).
+- [ ] **Estilo de ícono consistente** (línea, color, forma del contenedor) cuando aplica.
+- [ ] **Sin duplicados entre piezas de un mismo set** — si dos tarjetas del mismo caso comparten un ítem (ej. "Visera Anti Scratch" ya en la ficha de homologación), no repetirlo en la segunda pieza.
+- [ ] **Resolución pedida** (ej. 4K) respetada.
+
+### Tipo C, D, ... — pendientes
+Se agregan acá a medida que lleguen casos que no encajen en A o B, con su propio checklist derivado del prompt real que los define.
+
+---
+
+## 3. Las 12 lecciones aprendidas (Sesión 2 del Artifact)
+
+Referenciadas en el diagrama original pero documentadas en un Artifact externo, no en este repo todavía.
+
+**🔴 Pendiente de tu parte:** pegar acá el contenido completo de las 12 lecciones (o el link al Artifact) para que quede versionado en el repo junto con el resto del pipeline, en vez de vivir solo en una conversación aparte.
+
+---
+
+## 4. Estructura de carpetas por caso
+
+Cada caso nuevo (casco, tarjeta, o lo que sea) vive en su propia carpeta dentro de `proyectos/edge-cascos/documentos/simulaciones-cc/` (si es continuación del patrón ya existente) con esta estructura mínima:
+
+```
+simulacion-N-nombre-caso/
+├── referencias/       ← ilustraciones, PDFs de diseño, mockups (lo que define "cómo debería verse")
+├── checkpoints/        ← fotos reales del objeto/persona/modelo (la autoridad final)
+├── resultados/          ← salidas generadas, nombradas con FINAL o DESCARTAR (ver lección de simulación 6)
+└── auditoria.md          ← hallazgos del Agente Auditor por vista/pieza, checklist del tipo A o B marcado
+```
+
+Cuando subas fotos por el chat, decime a qué caso y a qué carpeta (`referencias/` o `checkpoints/`) corresponden y las guardo ahí.
+
+---
+
+## 5. Cómo se ejecuta con agentes en paralelo
+
+Con el tool de Workflow, el patrón por caso es un **pipeline** (no una barrera) de dos etapas por vista/pieza, para que la vista 1 pueda estar en auditoría mientras la vista 2 todavía está en generación de plan:
+
+```
+pipeline(
+  vistas_o_piezas_del_caso,
+  vista => Agente 0 + Generador  → arma el plan (sección 1) y produce/describe el resultado de esa vista,
+  resultado => Agente Auditor    → aplica el checklist del tipo A o B (sección 2), nunca el mismo agente
+)
+```
+
+Reintentos (`RETRY` del diagrama) se hacen dentro de la misma etapa, máximo 1-2 veces, antes de marcar la vista como `escalar a humano` en `auditoria.md`.
+
+Esto corre en background — cuando termine te aviso con el resultado, no hace falta que preguntes por el estado mientras tanto.
+
+---
+
+## 6. Registro de casos
+
+| Caso | Tipo | Estado | Bloqueo |
+|---|---|---|---|
+| Dakota (diseño manga/samurái) | A | 🔴 Sin archivos | Esperando ilustración de referencia + checkpoints reales por vista |
+| Tarjeta HOMOLOGACIÓN (DOT/FNVSS/ECE) | B | 🔴 Sin archivos | Esperando imagen de referencia real (la que define el aspect ratio exacto) |
+| Grid de features 2x3 (íconos) | B | 🔴 Sin archivos | Esperando imagen de referencia real |
+| Bob Esponja, Padrino, Top Gun, Stellar | A | Ver `simulaciones-cc/` | Ya documentados, no usan todavía este checklist formal — se puede retro-auditar con la sección 2 si hace falta |
+
+---
+
+## 7. Plantilla para agregar un caso nuevo
+
+```
+### Caso: <nombre>
+- Tipo de prompt: A / B / nuevo (definir checklist)
+- Referencias adjuntas: sí/no — ruta: referencias/...
+- Checkpoints reales adjuntos: sí/no — ruta: checkpoints/...
+- Prompt exacto usado: <pegar completo>
+- Resultado: <archivo o "pendiente de generar">
+- Auditoría (checklist tipo A o B): <marcar ítem por ítem>
+- Veredicto: aprobado / reintentar / escalar a humano
+```
+
+---
+
+**Última actualización:** 2026-07-28 · creado a pedido explícito de formalizar el pipeline de agentes en paralelo (Agente 0 / Generador / Auditor) como proceso reutilizable para múltiples casos y tipos de prompt, no solo para un caso puntual.

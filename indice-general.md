@@ -19,6 +19,7 @@ Pipeline de 8 etapas (Intake → Ilustración → Turntable → Catálogo → Fe
 - **Cotizador/carrito** — decisión tomada: ruta low-cost con Meshy AI (GLB) + Three.js, evaluado contra Zakeke/Threekit. Ver Simulación 5.
 - **Meshy 3D** — prompt con 4 vistas listo, generación real pendiente de tu ejecución (suscripción Pro).
 - **Adaptación 2D con Nano Banana** — 4 casos auditados con archivos reales (Bob Esponja, The Godfather/Padrino, Top Gun: Maverick, Stellar). Geometría validada en los 4; fidelidad de diseño contra el arte original pendiente en todos por falta de herramienta para renderizar PDF en este entorno. Ver [Simulación 6](proyectos/edge-cascos/documentos/simulaciones-cc/simulacion-6-NANO%20BANANA.md).
+- **Orquestación de agentes en paralelo** — plantilla reutilizable para correr Agente 0 / Generador / Auditor en paralelo sobre múltiples casos y tipos de prompt (transferencia de diseño sobre casco, tarjetas de specs/homologación con layout exacto). Ver [orquestacion-agentes-paralelos.md](proyectos/edge-cascos/documentos/orquestacion-agentes-paralelos.md) — casos Dakota y tarjetas de homologación cargados, pendientes de que subas las fotos/referencias reales.
 
 ## 2. Marca personal
 
