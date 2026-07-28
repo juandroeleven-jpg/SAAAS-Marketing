@@ -1,19 +1,20 @@
 import HeroVidrio from "@/components/HeroVidrio";
+import SeccionAgentes from "@/components/SeccionAgentes";
+import SeccionTarjetas from "@/components/SeccionTarjetas";
 
-// La portada es SOLO el hero. Las secciones que vivian debajo (Logros,
-// PlaceholderDashboard, CVSection y el pie) se quitaron a proposito: son de
-// la version anterior, siguen con el estilo claro y rompian la lectura al
-// hacer scroll. Los componentes siguen en el repo por si su contenido se
-// reaprovecha, pero ya no se renderizan en ninguna ruta.
+// Una sola pagina, tres secciones a las que se llega haciendo scroll. Los
+// botones del hero ya no navegan a otra ruta: son anclas (#agentes, #flujos)
+// y el desplazamiento suave lo da `scroll-behavior: smooth` de globals.css.
 //
-// El sitio son tres paginas y nada mas:
-//   /            pantalla flotante con el flujo ejecutandose
-//   /plataforma  el agente que razona
-//   /flujos      las cuatro tarjetas
+// Cada seccion trae su propio fondo y ocupa la altura de la ventana, asi que
+// el recorrido se lee como tres pantallas encadenadas y no como un documento
+// largo.
 export default function Home() {
   return (
-    <main className="bg-cf-bg">
+    <main>
       <HeroVidrio />
+      <SeccionAgentes />
+      <SeccionTarjetas />
     </main>
   );
 }

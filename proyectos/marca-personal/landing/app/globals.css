@@ -112,3 +112,110 @@ body {
     animation: none;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Aurora clara: fondo de la seccion de agentes.
+
+   Son manchas de color muy desenfocadas que se mueven con `transform`, no un
+   `background-position` animado. La diferencia importa: transform lo compone
+   la GPU sin repintar, mientras que animar la posicion de un degradado obliga
+   a rasterizar el fondo entero en cada frame. Y como no hay WebGL aqui, la
+   seccion no anade un tercer contexto grafico a la pagina.
+   --------------------------------------------------------------------------- */
+.aurora-clara {
+  background: linear-gradient(165deg, #ffffff 0%, #eaf1ff 42%, #cddffc 100%);
+}
+
+.aurora-mancha {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  will-change: transform;
+}
+
+@keyframes aurora-1 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(12%, 8%, 0) scale(1.18);
+  }
+}
+
+@keyframes aurora-2 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.1);
+  }
+  50% {
+    transform: translate3d(-14%, -10%, 0) scale(0.92);
+  }
+}
+
+@keyframes aurora-3 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(0.95);
+  }
+  50% {
+    transform: translate3d(9%, -12%, 0) scale(1.22);
+  }
+}
+
+.aurora-1 {
+  animation: aurora-1 19s ease-in-out infinite;
+}
+.aurora-2 {
+  animation: aurora-2 25s ease-in-out infinite;
+}
+.aurora-3 {
+  animation: aurora-3 31s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-1,
+  .aurora-2,
+  .aurora-3 {
+    animation: none;
+  }
+}
+
+/* Vidrio sobre fondo CLARO: el de arriba (.vidrio) esta calibrado para texto
+   blanco sobre azul profundo y aqui dejaria el texto oscuro ilegible. Este
+   sube el blanco propio y oscurece apenas el borde para que el canto se vea
+   contra un fondo claro. */
+.vidrio-claro {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  backdrop-filter: blur(18px) saturate(150%);
+  box-shadow:
+    0 24px 60px rgba(15, 43, 96, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .vidrio-claro {
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .vidrio-claro {
+    background: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+/* Tarjeta blanca solida, sin vidrio: para la tercera seccion. La sombra es en
+   dos capas -- una corta y densa que da el contacto, otra larga y suave que
+   da la altura. Una sola sombra grande se lee como mancha, no como objeto
+   levantado. */
+.tarjeta-blanca {
+  background: #ffffff;
+  box-shadow:
+    0 2px 6px rgba(15, 43, 96, 0.06),
+    0 30px 70px -20px rgba(15, 43, 96, 0.28);
+}

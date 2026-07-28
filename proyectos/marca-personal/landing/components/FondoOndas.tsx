@@ -16,8 +16,16 @@ import { usarVisibilidad } from "@/lib/visibilidad";
 //     vertices; indices, normales y colores no se tocan.
 //   - La altura es una suma de tres senos, no una simulacion de fluidos.
 //   - dpr fijo en 1 y sin antialias: es una capa difusa detras de todo.
-const FILAS = 96; // profundidad (hacia el horizonte)
-const COLS = 128; // ancho
+// La malla baja de 128x96 a 96x72: de 12.513 vertices a 7.081 (-43%). A la
+// distancia y el desenfoque a los que se ve, la diferencia de densidad de
+// retícula no se percibe, pero el trabajo por frame casi se parte a la mitad.
+const FILAS = 72; // profundidad (hacia el horizonte)
+const COLS = 96; // ancho
+
+// Las ondas se recalculan 30 veces por segundo, no en cada frame. Es un
+// movimiento lento: a 30 Hz se ve igual de fluido y en un monitor de 120 Hz
+// se hace la cuarta parte del trabajo.
+const HZ_OLAS = 30;
 const ANCHO = 46;
 const FONDO = 34;
 
@@ -79,6 +87,7 @@ function Ondas({ quieto }: { quieto: boolean }) {
   // temprano. Antes se recalculaban los ~37.500 senos y se resubian los dos
   // buffers en cada frame para producir exactamente los mismos valores.
   const yaCongelado = useRef(false);
+  const ultimo = useRef(-1);
 
   useFrame((state) => {
     if (quieto) {
@@ -88,6 +97,10 @@ function Ondas({ quieto }: { quieto: boolean }) {
       yaCongelado.current = false;
     }
     const t = quieto ? 0 : state.clock.getElapsedTime();
+    if (!quieto) {
+      if (ultimo.current >= 0 && t - ultimo.current < 1 / HZ_OLAS) return;
+      ultimo.current = t;
+    }
 
     const pos = geometria.getAttribute("position") as THREE.BufferAttribute;
     const arr = pos.array as Float32Array;
@@ -151,7 +164,7 @@ export default function FondoOndas() {
         // dpr 1 y sin antialias: capa difusa de fondo. Subirla no cambia lo
         // que se percibe y multiplica los pixeles a rasterizar.
         dpr={1}
-        gl={{ antialias: false, alpha: true }}
+        gl={{ antialias: false, alpha: true, powerPreference: "high-performance" }}
       >
         {/* Niebla del color del fondo: funde las ondas lejanas con el
             degradado CSS y evita el corte duro del borde de la geometria. */}

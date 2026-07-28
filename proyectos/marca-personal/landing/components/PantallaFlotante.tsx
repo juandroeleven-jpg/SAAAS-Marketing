@@ -262,7 +262,7 @@ export default function PantallaFlotante() {
         // Rango en vez de un valor fijo: en pantallas retina sube a 2 para que
         // el texto no se vea blando, pero R3F puede bajarlo si el equipo no da.
         dpr={[1, 2]}
-        gl={{ antialias: true, alpha: true }}
+        gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
       >
         <CamaraResponsiva />
         <EntornoDeEstudio />
