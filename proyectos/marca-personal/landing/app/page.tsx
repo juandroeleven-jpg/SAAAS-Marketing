@@ -1,19 +1,19 @@
 import HeroVidrio from "@/components/HeroVidrio";
-import Logros from "@/components/Logros";
-import PlaceholderDashboard from "@/components/PlaceholderDashboard";
-import CVSection from "@/components/CVSection";
 
+// La portada es SOLO el hero. Las secciones que vivian debajo (Logros,
+// PlaceholderDashboard, CVSection y el pie) se quitaron a proposito: son de
+// la version anterior, siguen con el estilo claro y rompian la lectura al
+// hacer scroll. Los componentes siguen en el repo por si su contenido se
+// reaprovecha, pero ya no se renderizan en ninguna ruta.
+//
+// El sitio son tres paginas y nada mas:
+//   /            pantalla flotante con el flujo ejecutandose
+//   /plataforma  el agente que razona
+//   /flujos      las cuatro tarjetas
 export default function Home() {
   return (
     <main className="bg-cf-bg">
       <HeroVidrio />
-      <Logros />
-      <PlaceholderDashboard />
-      <CVSection />
-
-      <footer className="border-t border-cf-border px-6 py-10 text-center text-sm text-cf-muted">
-        Codeflow — automatización e IA aplicada.
-      </footer>
     </main>
   );
 }

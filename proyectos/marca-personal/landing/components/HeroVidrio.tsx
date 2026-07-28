@@ -30,7 +30,7 @@ export default function HeroVidrio() {
   const quieto = usarMovimientoReducido();
 
   return (
-    <section className="fondo-azul relative isolate overflow-hidden px-4 pb-24 pt-10 sm:px-8 sm:pb-32 sm:pt-14">
+    <section className="fondo-azul relative isolate flex min-h-screen flex-col justify-center overflow-hidden px-4 pb-24 pt-10 sm:px-8 sm:pb-32 sm:pt-14">
       {/* Capa 1, al fondo: el campo de ondas de energia en 3D. */}
       <FondoOndas />
 
