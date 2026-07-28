@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { usarMovimientoReducido } from "@/lib/movimiento";
+import MontarCerca from "./MontarCerca";
 
 const ModeloLaptop = dynamic(() => import("./ModeloLaptop"), { ssr: false });
 
@@ -63,9 +64,18 @@ export default function SeccionAgentes() {
           {/* El objeto se sale del acolchado del panel para ganar ancho: en
               movil los 24 px de cada lado, en escritorio bastante mas, porque
               es la pieza que tiene que llevar el peso visual de la seccion. */}
-          <div className="-mx-6 min-w-0 sm:mx-0">
+          {/* margen 0: esta seccion arranca a solo ~56 px del pliegue, asi que
+              con cualquier margen se montaria enseguida, mientras el visitante
+              todavia esta en el hero. Con 0 espera a que la seccion entre de
+              verdad en pantalla -- y como el hueco esta a media altura, para
+              cuando se ve ya lleva un momento montado. */}
+          <MontarCerca
+            proporcion="5 / 3.9"
+            margen="0px"
+            className="-mx-6 min-w-0 sm:mx-0"
+          >
             <ModeloLaptop escena="agentes" />
-          </div>
+          </MontarCerca>
         </div>
       </motion.div>
 
