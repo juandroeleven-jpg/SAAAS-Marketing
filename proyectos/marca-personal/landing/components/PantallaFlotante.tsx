@@ -7,6 +7,7 @@ import * as THREE from "three";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { DISENO, dibujarFlujo } from "@/lib/flujo";
 import { usarMovimientoReducido } from "@/lib/movimiento";
+import { usarPunteroFino, usarVisibilidad } from "@/lib/visibilidad";
 
 // Pantalla suelta (sin teclado ni cuerpo) para el hero.
 //
@@ -29,7 +30,7 @@ const TEX = { w: 2048, h: 1280 };
 // no accion rapida) y deja el render 3D corriendo a la tasa del monitor.
 const FPS_TEXTURA = 15;
 
-function usarTexturaPantalla() {
+function usarTexturaPantalla(quieto: boolean) {
   const canvas = useMemo(() => {
     const c = document.createElement("canvas");
     c.width = TEX.w;
@@ -65,7 +66,11 @@ function usarTexturaPantalla() {
   useFrame((state) => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    const t = state.clock.getElapsedTime();
+    const t = quieto ? 0 : state.clock.getElapsedTime();
+    // Con movimiento reducido se pinta el primer fotograma y se para: el
+    // contenido queda legible y deja de haber animacion (y de subirse 10 MB
+    // de textura quince veces por segundo).
+    if (quieto && ultimoDibujo.current >= 0) return;
     if (ultimoDibujo.current >= 0 && t - ultimoDibujo.current < 1 / FPS_TEXTURA) {
       return;
     }
@@ -157,19 +162,24 @@ function Flotacion({
   return <group ref={grupo}>{children}</group>;
 }
 
-function Panel() {
-  const textura = usarTexturaPantalla();
+function Panel({ quieto }: { quieto: boolean }) {
+  const textura = usarTexturaPantalla(quieto);
 
   return (
     <group>
       {/* Marco: caja con cantos redondeados y material metalico. El bisel
           real (y no un borde dibujado en la textura) es lo que le da grosor
           y hace que se lea como un objeto y no como un cartel. */}
+      {/* radius NO puede superar GROSOR/2 (0.0425): RoundedBox construye una
+          ExtrudeGeometry con depth = GROSOR - 2*radius, asi que con 0.055 esa
+          profundidad salia NEGATIVA y la caja quedaba degenerada. A 0.04 el
+          depth es +0.005 y los biseles no se solapan.
+          castShadow fuera: no hay ninguna luz con shadow map ni receptor, era
+          codigo muerto. */}
       <RoundedBox
         args={[ANCHO + MARCO * 2, ALTO + MARCO * 2, GROSOR]}
-        radius={0.055}
+        radius={0.04}
         smoothness={6}
-        castShadow
       >
         <meshStandardMaterial
           color="#1A1E26"
@@ -217,9 +227,18 @@ function CamaraResponsiva() {
 
 export default function PantallaFlotante() {
   const quieto = usarMovimientoReducido();
+  const fino = usarPunteroFino();
+  const [ref, visible] = usarVisibilidad<HTMLDivElement>();
 
   return (
-    <div className="relative aspect-[16/11] w-full">
+    <div
+      ref={ref}
+      className="relative aspect-[16/11] w-full"
+      // El canvas es decorativo para quien no lo ve: describe lo mismo que
+      // el texto de al lado, pero un lector de pantalla no puede leer pixeles.
+      role="img"
+      aria-label="Pantalla mostrando un flujo de automatización: un webhook y mensajes de Discord disparan un agente de ChatGPT, que notifica en Slack, archiva en Drive, registra en Notion y publica en Canva."
+    >
       {/* Resplandor de la pantalla encendida. Va en CSS y no como una malla
           mas en la escena: un plano 3D transparente se recorta con bordes
           duros contra el marco y se lee como un rectangulo oscuro pegado
@@ -237,6 +256,8 @@ export default function PantallaFlotante() {
       />
       <Canvas
         className="relative"
+        // Apagado fuera de pantalla: rAF no se detiene por scroll.
+        frameloop={visible ? "always" : "never"}
         camera={{ fov: 30, position: POSICION_CAMARA.toArray() }}
         // Rango en vez de un valor fijo: en pantallas retina sube a 2 para que
         // el texto no se vea blando, pero R3F puede bajarlo si el equipo no da.
@@ -249,8 +270,13 @@ export default function PantallaFlotante() {
         <directionalLight position={[3, 4, 5]} intensity={1.1} />
         <directionalLight position={[-4, 1, 2]} intensity={0.35} />
         <Flotacion quieto={quieto}>
-          <Panel />
+          <Panel quieto={quieto} />
         </Flotacion>
+        {/* Solo con raton/trackpad. OrbitControls pone touch-action:none en
+            el canvas, asi que en un telefono el dedo hace girar el objeto en
+            vez de desplazar la pagina: el hero se convierte en una trampa de
+            scroll. */}
+        {fino && (
         <OrbitControls
           makeDefault
           target={[0, 0, 0]}
@@ -264,6 +290,7 @@ export default function PantallaFlotante() {
           minAzimuthAngle={-0.26}
           maxAzimuthAngle={0.26}
         />
+        )}
       </Canvas>
     </div>
   );

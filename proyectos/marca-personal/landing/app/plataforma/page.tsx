@@ -56,7 +56,7 @@ export default function PlataformaPage() {
               </Link>
               <Link
                 href="/"
-                className="rounded-full border border-white/35 px-6 py-3 text-base font-semibold text-white transition hover:border-white/70 hover:bg-white/10"
+                className="rounded-full border border-white/60 px-6 py-3 text-base font-semibold text-white transition hover:border-white/70 hover:bg-white/10"
               >
                 Volver
               </Link>

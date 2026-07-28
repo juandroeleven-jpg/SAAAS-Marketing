@@ -86,7 +86,7 @@ export default function HeroVidrio() {
           </Link>
           <Link
             href="/flujos"
-            className="rounded-full border border-white/35 px-7 py-3 text-base font-semibold text-white transition hover:border-white/70 hover:bg-white/10"
+            className="rounded-full border border-white/60 px-7 py-3 text-base font-semibold text-white transition hover:border-white/70 hover:bg-white/10"
           >
             Ver los flujos
           </Link>
