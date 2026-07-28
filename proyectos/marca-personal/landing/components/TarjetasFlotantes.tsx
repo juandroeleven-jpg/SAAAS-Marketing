@@ -61,9 +61,12 @@ export default function TarjetasFlotantes({
   contenido?: ContenidoTarjetas;
 }) {
   return (
-    <div className="relative mx-auto aspect-[4/2.9] w-full max-w-xl">
+    // En movil las cuatro se apilan en el flujo normal: el colage superpuesto
+    // necesita ancho y por debajo de sm las tarjetas se pisaban entre si,
+    // dejando el texto tapado. A partir de sm vuelve el colage absoluto.
+    <div className="relative mx-auto grid w-full grid-cols-1 gap-4 sm:block sm:aspect-[4/2.15]">
       {/* Resplandor detrás — profundidad sin necesitar 3D real */}
-      <div className="pointer-events-none absolute inset-0">
+      <div className="pointer-events-none absolute inset-0 hidden sm:block">
         <div className="absolute left-1/2 top-1/2 h-[70%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cf-accent/12 blur-3xl" />
         <div className="absolute right-0 top-0 h-[45%] w-[45%] rounded-full bg-cf-accent2/15 blur-3xl" />
       </div>
@@ -73,7 +76,7 @@ export default function TarjetasFlotantes({
         initial={{ opacity: 0, y: 48, rotate: -18, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, rotate: -6, scale: 1 }}
         transition={{ duration: ENSAMBLAJE_DURACION, ease: "easeOut" }}
-        className="absolute left-[4%] top-[8%] w-[62%]"
+        className="relative w-full sm:absolute sm:left-[1%] sm:top-[4%] sm:w-[47%]"
       >
         <motion.div
           animate={{ y: [0, -7, 0] }}
@@ -85,7 +88,7 @@ export default function TarjetasFlotantes({
           }}
         >
           <TiltCard>
-            <div className="rounded-2xl border border-cf-border bg-cf-surface p-[5%] shadow-xl shadow-cf-accent/10">
+            <div className="rounded-2xl border border-slate-200 bg-cf-surface p-[5%] shadow-xl shadow-cf-accent/10">
               <p className="text-xs font-semibold uppercase tracking-wide text-cf-muted">
                 {contenido.principal.etiqueta}
               </p>
@@ -108,7 +111,7 @@ export default function TarjetasFlotantes({
         initial={{ opacity: 0, y: 48, rotate: 16, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, rotate: 4, scale: 1 }}
         transition={{ duration: ENSAMBLAJE_DURACION, ease: "easeOut", delay: 0.12 }}
-        className="absolute right-[2%] top-[2%] w-[52%]"
+        className="relative w-full sm:absolute sm:right-[2%] sm:top-[10%] sm:w-[41%]"
       >
         <motion.div
           animate={{ y: [0, -6, 0] }}
@@ -120,7 +123,7 @@ export default function TarjetasFlotantes({
           }}
         >
           <TiltCard>
-            <div className="rounded-2xl border border-cf-border bg-cf-surface p-[5%] shadow-xl shadow-cf-accent2/10">
+            <div className="rounded-2xl border border-slate-200 bg-cf-surface p-[5%] shadow-xl shadow-cf-accent2/10">
               <p className="text-xs font-semibold uppercase tracking-wide text-cf-muted">
                 {contenido.destacada.etiqueta}
               </p>
@@ -142,7 +145,7 @@ export default function TarjetasFlotantes({
         initial={{ opacity: 0, y: 48, rotate: -14, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, rotate: -3, scale: 1 }}
         transition={{ duration: ENSAMBLAJE_DURACION, ease: "easeOut", delay: 0.24 }}
-        className="absolute bottom-[6%] left-[16%] w-[58%]"
+        className="relative w-full sm:absolute sm:bottom-[3%] sm:left-[8%] sm:w-[45%]"
       >
         <motion.div
           animate={{ y: [0, -8, 0] }}
@@ -154,7 +157,7 @@ export default function TarjetasFlotantes({
           }}
         >
           <TiltCard>
-            <div className="rounded-2xl border border-cf-border bg-cf-surface p-[5%] shadow-xl shadow-cf-accent/10">
+            <div className="rounded-2xl border border-slate-200 bg-cf-surface p-[5%] shadow-xl shadow-cf-accent/10">
               <p className="text-xs font-semibold uppercase tracking-wide text-cf-muted">
                 {contenido.proceso.etiqueta}
               </p>
@@ -176,7 +179,7 @@ export default function TarjetasFlotantes({
         initial={{ opacity: 0, y: 48, rotate: 22, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, rotate: 8, scale: 1 }}
         transition={{ duration: ENSAMBLAJE_DURACION, ease: "easeOut", delay: 0.36 }}
-        className="absolute bottom-[2%] right-[8%] w-[42%]"
+        className="relative w-full sm:absolute sm:bottom-[10%] sm:right-[5%] sm:w-[37%]"
       >
         <motion.div
           animate={{ y: [0, -6, 0] }}
@@ -188,7 +191,7 @@ export default function TarjetasFlotantes({
           }}
         >
           <TiltCard>
-            <div className="rounded-2xl border border-cf-border bg-cf-surface p-[5%] shadow-xl shadow-cf-accent2/10">
+            <div className="rounded-2xl border border-slate-200 bg-cf-surface p-[5%] shadow-xl shadow-cf-accent2/10">
               <p className="text-xs font-semibold uppercase tracking-wide text-cf-muted">
                 {contenido.secundaria.etiqueta}
               </p>

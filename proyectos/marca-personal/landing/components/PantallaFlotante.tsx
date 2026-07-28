@@ -153,7 +153,7 @@ function Flotacion({
 
     grupo.current.position.x = 0;
     grupo.current.position.y =
-      Math.sin(tFlot * 0.72) * 0.1 - DESPLAZAMIENTO_ENTRADA * restante;
+      Math.sin(tFlot * 0.72) * 0.07 - DESPLAZAMIENTO_ENTRADA * restante;
     grupo.current.rotation.y = Math.sin(tFlot * 0.4) * 0.02;
     grupo.current.rotation.z = Math.sin(tFlot * 0.46) * 0.016;
     grupo.current.rotation.x = restante * GIRO_ENTRADA + Math.sin(tFlot * 0.36) * 0.012;
@@ -202,11 +202,11 @@ function Panel({ quieto }: { quieto: boolean }) {
 }
 
 // Camara frontal. El objeto mide ALTO + 2*MARCO = 2.15 de alto; con fov 30 el
-// alto visible a distancia d es 2*d*tan(15) = 0.536*d, asi que a d = 4.55 entran
-// 2.44 unidades contra 2.15 del objeto: quedan 0.145 arriba y abajo, por encima
-// de la flotacion de +-0.1. La pantalla nunca se corta contra el contenedor,
-// y al estar la camara mas cerca ocupa mas ancho del que tiene disponible.
-const DISTANCIA = 4.55;
+// alto visible a distancia d es 2*d*tan(15) = 0.536*d, asi que a d = 4.35 entran
+// 2.33 unidades contra 2.15 del objeto: quedan 0.09 arriba y abajo. La
+// flotacion baja a +-0.07 para no comerse ese margen. Mas cerca compensa el
+// ancho que se le quito al contenedor para que respire dentro del panel.
+const DISTANCIA = 4.35;
 const POSICION_CAMARA = new THREE.Vector3(0, 0.18, DISTANCIA);
 
 // En contenedores angostos el fov vertical no cambia pero el ancho visible se
@@ -233,7 +233,10 @@ export default function PantallaFlotante() {
   return (
     <div
       ref={ref}
-      className="relative aspect-[16/11] w-full"
+      // 16/9.5 en vez de 16/11: el encuadre tenia aire vertical de sobra y ese
+      // aire se traducia en altura de seccion. Verificado que el objeto sigue
+      // entrando: a 4.35 el alto visible es 2.33 contra 2.15 del objeto.
+      className="relative aspect-[16/9.5] w-full"
       // El canvas es decorativo para quien no lo ve: describe lo mismo que
       // el texto de al lado, pero un lector de pantalla no puede leer pixeles.
       role="img"
