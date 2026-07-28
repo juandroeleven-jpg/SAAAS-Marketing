@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { useGLTF, Center, OrbitControls } from "@react-three/drei";
+import { useGLTF, Center, OrbitControls, Preload } from "@react-three/drei";
 import * as THREE from "three";
 import { DISENO, dibujarFlujo } from "@/lib/flujo";
 import { dibujarAgentes } from "@/lib/agentes";
@@ -150,6 +150,21 @@ function usarTexturaPantalla(escena: Escena, quieto: boolean) {
 // al eje sobre el que ubicamos la camara. Este giro sobre Y lo endereza para
 // que la pantalla se vea casi de frente, con un angulo leve.
 const GIRO_Y = -0.58;
+
+// Avisa cuando la escena ya dibujo de verdad. Tres frames y no uno: en el
+// primero puede faltar todavia la textura de la pantalla.
+function AvisaListo({ onListo }: { onListo?: () => void }) {
+  const n = useRef(0);
+  useFrame(() => {
+    if (n.current < 0) return;
+    n.current += 1;
+    if (n.current >= 3) {
+      n.current = -1;
+      onListo?.();
+    }
+  });
+  return null;
+}
 
 function Laptop({ escena, quieto }: { escena: Escena; quieto: boolean }) {
   const { scene } = useGLTF("/modelos-3d/macbook.glb");
@@ -330,8 +345,10 @@ function CamaraFija() {
 
 export default function ModeloLaptop({
   escena = "flujo",
+  onListo,
 }: {
   escena?: Escena;
+  onListo?: () => void;
 }) {
   const quieto = usarMovimientoReducido();
   const fino = usarPunteroFino();
@@ -344,7 +361,8 @@ export default function ModeloLaptop({
     // columna en desktop para ganar tamano sin obligar a acercar la camara.
     <div
       ref={ref}
-      className="relative aspect-[5/3.9] w-full lg:-mr-[14vw] lg:w-[calc(100%+14vw)]"
+      // Ocupa el hueco que le da quien lo usa: alli vive tambien el poster.
+      className="absolute inset-0"
       role="img"
       aria-label={
         escena === "agentes"
@@ -366,6 +384,7 @@ export default function ModeloLaptop({
         dpr={[1, 2]}
         gl={{ antialias: true, powerPreference: "high-performance" }}
       >
+        <AvisaListo onListo={onListo} />
         <CamaraFija />
         <Iluminacion />
         <Flotacion quieto={quieto}>
@@ -378,6 +397,9 @@ export default function ModeloLaptop({
             haria girar el objeto en vez de desplazar la pagina.
             enableZoom={false} es critico: con la rueda activa el canvas se
             comeria el scroll al pasar el cursor. */}
+        {/* Compila los shaders al montar. Sin esto, esa compilacion cae en el
+            primer frame que se ve, que es justo donde mas se nota. */}
+        <Preload all />
         {fino && (
         <OrbitControls
           makeDefault
