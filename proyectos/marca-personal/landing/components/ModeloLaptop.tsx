@@ -10,6 +10,7 @@ import { usarMovimientoReducido } from "@/lib/movimiento";
 import { usarPunteroFino, usarVisibilidad } from "@/lib/visibilidad";
 import { usarDesplazando } from "@/lib/desplazamiento";
 import { usarPuntero } from "@/lib/puntero";
+import { ahora } from "@/lib/reloj";
 
 // Que se ve en la pantalla del laptop. Las dos escenas comparten espacio de
 // diseno, asi que son intercambiables sin tocar el mapeo UV ni la geometria.
@@ -86,10 +87,10 @@ function usarTexturaPantalla(escena: Escena, quieto: boolean) {
   const biselPintado = useRef(false);
   const ultimoDibujo = useRef(0);
 
-  useFrame((state) => {
+  useFrame(() => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    const t = quieto ? 0 : state.clock.getElapsedTime();
+    const t = quieto ? 0 : ahora();
     if (quieto && ultimoDibujo.current > 0) return;
     // La subida de la textura es lo unico que produce PICOS: ocurre dentro
     // del mismo frame, asi que cada vez que toca, ese frame absorbe los
@@ -235,14 +236,14 @@ function Flotacion({
   const puntero = usarPuntero();
   const giro = useRef({ x: 0, y: 0 });
 
-  useFrame((state) => {
+  useFrame(() => {
     if (!grupo.current) return;
     if (quieto) {
       grupo.current.position.set(0, 0, 0);
       grupo.current.rotation.set(0, 0, 0);
       return;
     }
-    const t = state.clock.getElapsedTime();
+    const t = ahora();
     if (inicio.current === null) inicio.current = t;
     const transcurrido = t - inicio.current;
 

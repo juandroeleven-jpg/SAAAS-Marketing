@@ -10,6 +10,7 @@ import { usarMovimientoReducido } from "@/lib/movimiento";
 import { usarPunteroFino, usarVisibilidad } from "@/lib/visibilidad";
 import { usarDesplazando } from "@/lib/desplazamiento";
 import { usarPuntero } from "@/lib/puntero";
+import { ahora } from "@/lib/reloj";
 
 // Pantalla suelta (sin teclado ni cuerpo) para el hero.
 //
@@ -71,10 +72,10 @@ function usarTexturaPantalla(quieto: boolean) {
 
   const ultimoDibujo = useRef(-1);
 
-  useFrame((state) => {
+  useFrame(() => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    const t = quieto ? 0 : state.clock.getElapsedTime();
+    const t = quieto ? 0 : ahora();
     // Con movimiento reducido se pinta el primer fotograma y se para: el
     // contenido queda legible y deja de haber animacion (y de subirse 10 MB
     // de textura quince veces por segundo).
@@ -173,7 +174,7 @@ function Flotacion({
   const puntero = usarPuntero();
   const giro = useRef({ x: 0, y: 0 });
 
-  useFrame((state) => {
+  useFrame(() => {
     if (!grupo.current) return;
     // Con menos movimiento pedido: sin entrada lateral ni flotacion. La
     // pantalla se queda en su sitio y solo sigue corriendo el flujo, que es
@@ -183,7 +184,7 @@ function Flotacion({
       grupo.current.rotation.set(0, 0, 0);
       return;
     }
-    const t = state.clock.getElapsedTime();
+    const t = ahora();
     if (inicio.current === null) inicio.current = t;
     const transcurrido = t - inicio.current;
 
@@ -330,8 +331,11 @@ export default function PantallaFlotante({ onListo }: { onListo?: () => void }) 
       <Canvas
         className="relative"
         // Apagado fuera de pantalla: rAF no se detiene por scroll.
-        // Durante el scroll la escena no se dibuja. Se retoma al parar, y
-        // como el reloj sigue corriendo, la animacion no da un salto.
+        // Durante el scroll la escena no se dibuja. Se retoma al parar sin
+        // salto, pero eso NO lo garantiza react-three-fiber: su store pone
+        // `clock.elapsedTime = 0` en cada cambio de frameloop. Por eso el
+        // tiempo de la animacion sale de `ahora()` (ver lib/reloj.ts) y no
+        // de `state.clock`.
         frameloop={visible && !desplazando ? "always" : "never"}
         camera={{ fov: 30, position: POSICION_CAMARA.toArray() }}
         // Rango en vez de un valor fijo: en pantallas retina sube a 2 para que
