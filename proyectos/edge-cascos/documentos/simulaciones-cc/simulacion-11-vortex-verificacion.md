@@ -165,17 +165,21 @@ Ambos prompts pasaron la auditoría sin cambios (12/12 claims correctos) — lis
 
 ## Auditoría del resultado generado (Intento 1)
 
-**Prompt A (tarjeta HOMOLOGACIÓN): ❌ Falló — se generó con la lista equivocada.** El resultado trae: VISERA ANTI SCRATCH, ERS, LINER DESMONTABLE Y LAVABLE, **PREPARADO PARA ANTI EMPAÑANTE**, CUBRE BARBILLA, CUBRE NARIZ. Ese es el listado corregido de **Kratos**, no el de Vortex — "Preparado para anti empañante" es N/A para Vortex en el excel, y falta **"Sistema de liberación rápida del visor"**, que sí está confirmado con X para Vortex y debía estar en la lista. No es un defecto menor de generación — se usó el prompt/caso equivocado.
+**Corrección post-auditoría:** el usuario confirmó que sí usó el texto correcto del Prompt A de Vortex (el de esta página, con "Sistema de liberación rápida del visor"). El diagnóstico original de "se usó el prompt de Kratos" queda descartado — el input fue correcto. El problema es del generador, no del prompt.
+
+**Prompt A (tarjeta HOMOLOGACIÓN): ❌ Falló — el generador sustituyó un ítem aunque el prompt era correcto.** El resultado trae "PREPARADO PARA ANTI EMPAÑANTE" (el ítem que le correspondía a Kratos, el caso generado inmediatamente antes en la misma sesión) en vez de "SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR" (el ítem correcto de Vortex, confirmado con X en el excel, presente en el prompt real usado). **Hallazgo de fondo: contaminación entre generaciones de la misma sesión** — el modelo generativo parece arrastrar/mezclar datos del caso anterior (Kratos) incluso cuando el prompt actual es correcto, no un error de quién escribió el prompt.
 
 **Prompt B (grid de íconos): ⚠️ Falló parcialmente — contenido correcto, un ícono mal.** Los 6 ítems generados sí son los correctos para Vortex (Canal para lentes, Hebilla micrométrica, Espacio para Bluetooth, Kit de mecanismo visor, Material exterior ABS, Interior EPS), todos confirmados en el excel. Pero el ícono de "HEBILLA MICROMÉTRICA" salió con una **X roja tachándolo** (ni siquiera parece un ícono de hebilla) — el prompt pedía explícitamente "ícono de hebilla, SIN tachar, SIN la X roja" y no se respetó.
 
 **Qué falló:**
-- Prompt A: lista de ítems de otro caso (Kratos) en vez de la de Vortex.
+- Prompt A: el modelo sustituyó un ítem por el del caso anterior (Kratos) pese a que el prompt de Vortex era correcto — falla de fidelidad del generador, no del prompt.
 - Prompt B: ícono de hebilla micrométrica generado con tache/X roja, contradice la instrucción explícita del prompt.
 
 **Qué hay que hacer:**
-1. Reintentar el Prompt A **con el prompt de Vortex correcto** (ver arriba, sección "Prompts confirmados") — verificar antes de correrlo que no se esté reusando por error el prompt de otro caso.
-2. Reintentar el Prompt B agregando una instrucción reforzada: "el ícono de HEBILLA MICROMÉTRICA debe mostrar únicamente el broche/hebilla, sin ninguna marca de tache, X, prohibición ni símbolo de exclusión superpuesto — ícono limpio y positivo, no negativo."
+1. Reintentar el Prompt A en una llamada/sesión de generación **aislada** (nueva conversación con la herramienta de generación, no continuar en el mismo hilo donde se generó Kratos) para eliminar la posible contaminación cruzada entre casos.
+2. Reforzar el prompt con una línea explícita: "IGNORA cualquier lista de ítems usada en imágenes anteriores de esta sesión — la única lista válida es la de este prompt." y repetir la lista de 6 ítems una vez más al final del prompt, como refuerzo.
+3. Reintentar el Prompt B agregando: "el ícono de HEBILLA MICROMÉTRICA debe mostrar únicamente el broche/hebilla, sin ninguna marca de tache, X, prohibición ni símbolo de exclusión superpuesto — ícono limpio y positivo, no negativo."
+4. Aplicar esta misma precaución (aislar sesión de generación por caso) a Kratos y a los casos que sigan — ver nota agregada en `orquestacion-agentes-paralelos.md`.
 
 ---
 

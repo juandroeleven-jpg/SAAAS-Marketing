@@ -61,6 +61,7 @@ Checklist de auditoría (Tipo A):
 - [ ] **Plan separado por capa**: geometría / color / estilo nunca se piden juntos en la misma instrucción.
 - [ ] **Attention budget**: máximo 2-3 tareas por llamada de generación.
 - [ ] **Orden de imágenes en el payload**: referencia de diseño primero, foto real (autoridad) al final.
+- [ ] **Sesión de generación aislada por caso** — no generar dos cascos/piezas distintas en el mismo hilo/conversación de la herramienta de generación seguidos uno del otro. Hallazgo real (caso Vortex, `simulacion-11-vortex-verificacion.md`): con un prompt confirmado correcto, el generador sustituyó un ítem por el del caso inmediatamente anterior (Kratos) en la misma sesión — contaminación cruzada entre generaciones, no error de quién escribió el prompt. Empezar una sesión nueva por caso, o reforzar el prompt con "ignora cualquier lista usada en imágenes anteriores de esta sesión".
 
 ### Tipo B — Reproducción exacta de layout fijo (tarjetas de specs, homologación, grids de íconos)
 Ejemplo: tarjeta "HOMOLOGACIÓN" (DOT, FNVSS 510, ECE 22.06 + lista de 6 features) o grid 2x3 de íconos de características — mismo lienzo, mismo aspect ratio que la referencia, cambiando solo el contenido de texto/íconos.
