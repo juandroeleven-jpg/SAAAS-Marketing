@@ -531,6 +531,91 @@ agregar elementos fuera de la lista de 7.
 4. Subir las imágenes de referencia como adjuntos para versionarlas.
 5. Cuando el usuario mande el primer caso de Marvel/DC/Paramount, aplicar desde el arranque la regla de "fuente de forma vs. fuente de diseño" (ya que es esperable que los mockups de esas marcas también estén diseñados sobre cascos genéricos de forma distinta al molde real).
 
+### Resultado del Intento 5 — auditado: la geometría por fin se respetó, quedan 2 defectos gráficos puntuales
+
+**Estado:** ✅ Geometría resuelta — la separación "fuente de forma / fuente de diseño" funcionó. Quedan 2 defectos menores, ambos de aplicación del diseño gráfico, no de forma.
+
+**Qué salió bien (confirmado contra el molde real):** pico frontal, ventilaciones (3 aletas), carcasa del pivote, mentonera y curvatura de calota ya coinciden con la foto real del molde azul. El visor quedó claro/transparente. Este es el mejor resultado de geometría de todos los intentos.
+
+**Qué falló (2 defectos puntuales, no de geometría):**
+1. **Gráficos superpuestos sobre piezas negras en vez de respetarlas:** el generador dibujó elementos dorados (parte de los chevrones, cerca de la cola/spoiler) encima de piezas de plástico negro del casco, en vez de limitar el diseño gráfico exclusivamente a la superficie azul mate pintada. Las piezas negras (ventilaciones, mentonera negra, spoiler/cola negra, carcasa del pivote) tienen que quedar libres de gráfico, igual que en el molde real.
+2. **Falta un elemento del arte original:** el grupo de barras verticales cortas en tono AZUL CLARO/GRISÁCEO (estilo insignia de rango militar) que va junto al escudo con estrella, en la zona superior central, no aparece en el resultado — se perdió. Es un elemento distinto de los chevrones dorados (que sí están, más abajo), y no había sido listado por separado en los prompts anteriores — se agrega ahora como elemento propio.
+
+### Intento 6 — agrega el elemento faltante y prohíbe gráfico sobre piezas negras
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una imagen de producto de un casco, mismo ángulo, encuadre y
+fondo blanco.
+
+REGLA MÁS IMPORTANTE — DOS FUENTES, DOS ROLES QUE NUNCA SE MEZCLAN
+(esto ya funcionó bien en el intento anterior, mantenelo igual):
+- La PRIMERA imagen de referencia (molde azul real) es la ÚNICA
+  autoridad de FORMA — pico frontal largo y fino, 3 ventilaciones tipo
+  cuchilla, carcasa del pivote angular y ajustada, mentonera angulosa,
+  calota aerodinámica, visor claro y transparente. Mantené esta
+  geometría exactamente como en el intento anterior, que ya quedó
+  correcta.
+- La SEGUNDA imagen de referencia (arte Top Gun) es SOLO fuente de
+  diseño gráfico (colores, íconos, textos). Su forma se ignora por
+  completo.
+
+CRÍTICO — EL DISEÑO GRÁFICO VA SOLO SOBRE LA SUPERFICIE AZUL MATE
+PINTADA, NUNCA SOBRE PIEZAS NEGRAS (defecto real del intento anterior:
+unos chevrones dorados quedaron dibujados encima de una pieza de
+plástico negro — no lo repitas): las ventilaciones negras, la
+mentonera negra, el spoiler/cola negra y la carcasa negra del pivote
+tienen que quedar SIN NINGÚN gráfico encima, tal como en el molde
+real. Si un elemento del diseño cae naturalmente cerca del límite
+entre la superficie azul y una pieza negra, recortalo o desplazalo
+para que no invada la pieza negra.
+
+DISEÑO GRÁFICO A TRANSFERIR — EXACTAMENTE 8 ELEMENTOS (el intento
+anterior logró 7 pero le faltó 1 — agregalo esta vez):
+
+1. Avión de combate estilizado — zona delantera superior de la calota.
+2. Escudo circular con estrella de 5 puntas — zona central superior.
+3. Grupo de barras verticales cortas en AZUL CLARO/GRISÁCEO (NO
+   dorado), estilo insignia de rango militar — junto al escudo con
+   estrella, en la misma zona superior central. ESTE ELEMENTO FALTÓ EN
+   EL INTENTO ANTERIOR, no lo omitas esta vez. Es distinto de los
+   chevrones dorados del punto 5.
+4. Un par de naipes (ases de pique) — sobre el pico frontal.
+5. Franjas diagonales tipo chevron, en DORADO — sobre la superficie
+   azul de la mentonera/parte inferior delantera, SIN invadir la pieza
+   de plástico negro de la mentonera.
+6. Logotipo "TOP GUN MAVERICK": recuadro angosto inclinado con "TOP
+   GUN" arriba (más grande) y "MAVERICK" abajo (más chico, itálica) —
+   junto a las ventilaciones, sobre superficie azul, sin invadir las
+   piezas negras. Obligatorio, no omitir ni simplificar.
+7. Texto grande "MAVERICK" en mayúsculas — zona trasera inferior,
+   sobre superficie azul, cerca del spoiler pero sin tocarlo.
+8. 3 estrellas de 5 puntas alineadas — debajo del texto "MAVERICK".
+
+PALETA: dorado/mostaza envejecido para los elementos 1, 2, 4, 5, 6, 7
+y 8. Azul claro/grisáceo (no dorado) específicamente para el elemento
+3. Base azul mate del casco, mismo tono que el molde real.
+
+PROHIBIDO ABSOLUTO: no dibujar ningún elemento gráfico sobre piezas de
+plástico negro (ventilaciones, mentonera, spoiler, carcasa del
+pivote). No omitir el grupo de barras azul claro/grisáceo junto al
+escudo. No copiar la forma del casco de la segunda imagen. No cambiar
+geometría, ventilaciones, pivote ni calota respecto al molde real. No
+oscurecer el visor. No omitir ni simplificar el logotipo "TOP GUN
+MAVERICK".
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:**
+1. Correr el prompt (en sesión aislada) y mandar el resultado para auditoría — si los 8 elementos aparecen sin invadir piezas negras, este caso queda cerrado.
+2. Confirmar si este molde azul es el casco físico real de la marca licenciante o solo una referencia — sigue siendo la misma pregunta abierta de este caso.
+3. Subir las imágenes de referencia como adjuntos para versionarlas.
+4. Cuando el usuario mande el primer caso de Marvel/DC/Paramount, aplicar desde el arranque la regla de "fuente de forma vs. fuente de diseño" y "gráfico solo sobre superficie pintada, nunca sobre piezas negras".
+
 ---
 
-**Última actualización:** 2026-07-28 · Intento 5 agregado tras auditar el Intento 4 (la geometría del casco se alejó del molde real — pico frontal, ventilaciones, pivote y curvatura de calota cambiaron, probablemente por mezclar la forma del casco de la imagen de estilo) — nuevo hallazgo generalizable sobre separar "fuente de forma" de "fuente de diseño gráfico", agregado también al checklist Tipo A.
+**Última actualización:** 2026-07-28 · Intento 6 agregado tras auditar el Intento 5 (geometría por fin correcta; quedaron 2 defectos gráficos: chevrones invadiendo piezas negras y un elemento faltante — barras azul claro/grisáceo junto al escudo) — línea de licencias de marca (Marvel/DC/Paramount).
