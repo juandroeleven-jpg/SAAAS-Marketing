@@ -131,6 +131,7 @@ LISTA DE CARACTERÍSTICAS (exactamente 6 ítems, en este orden):
 CRÍTICO:
 - Cantidad de ítems: exactamente 6, en el orden listado.
 - Certificación exacta: "DOT FNVSS 510 & ECE 22.06", sin abreviar.
+- DIMENSIONES: el lienzo final debe tener EXACTAMENTE el mismo ancho y alto en píxeles (mismo aspect ratio, formato vertical angosto) que la imagen de referencia — no generar un lienzo cuadrado, panorámico ni de proporción distinta.
 
 PROHIBIDO ABSOLUTO:
 - No agregar ítems fuera de la lista (NO "Diseño modular", "Con luz led", "Doble visera", "Con pinlock").
@@ -143,6 +144,12 @@ PROHIBIDO ABSOLUTO:
 
 ```
 FORMATO: Grid de íconos 2x3, resolución 4K, aspect ratio idéntico al de referencia. Fondo gris claro uniforme.
+
+CRÍTICO — DIMENSIONES Y LAYOUT EXACTOS (verificado que un generador anterior falló acá con otro caso — produjo 2x4 con celdas duplicadas, prestar máxima atención):
+- El grid debe tener EXACTAMENTE 2 columnas x 3 filas = 6 celdas en total. NUNCA 2x4, NUNCA 8 celdas, NUNCA una fila o columna de más.
+- Cada uno de los 6 ítems aparece en UNA sola celda, UNA sola vez — no dupliques ningún ítem para rellenar una fila extra.
+- El lienzo final debe tener EXACTAMENTE el mismo ancho y alto en píxeles que la imagen de referencia.
+- Antes de terminar, contá las celdas: deben ser 6, ni una más ni una menos, ninguna repetida.
 
 LISTA DE ÍTEMS (exactamente 6, en este orden, uno por celda):
 1. CANAL PARA LENTES

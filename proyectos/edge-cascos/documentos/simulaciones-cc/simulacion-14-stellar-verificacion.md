@@ -96,6 +96,9 @@ Lista de EXACTAMENTE 6 ítems, en este orden:
 5. CUBRE BARBILLA
 6. CUBRE NARIZ
 
+CRÍTICO — DIMENSIONES EXACTAS:
+- El lienzo final debe tener EXACTAMENTE el mismo ancho y alto en píxeles (mismo aspect ratio, formato vertical angosto) que la imagen de referencia — no generar un lienzo cuadrado, panorámico ni de proporción distinta.
+
 CRÍTICO / PROHIBIDO ABSOLUTO:
 - NO incluir "Sistema de liberación rápida del visor" — N/A para Stellar.
 - No mostrar certificación incompleta.

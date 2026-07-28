@@ -97,6 +97,9 @@ Lista de EXACTAMENTE 6 ítems, en este orden:
 5. CUBRE BARBILLA
 6. CUBRE NARIZ
 
+CRÍTICO — DIMENSIONES EXACTAS:
+- El lienzo final debe tener EXACTAMENTE el mismo ancho y alto en píxeles (mismo aspect ratio, formato vertical angosto) que la imagen de referencia — no generar un lienzo cuadrado, panorámico ni de proporción distinta.
+
 CRÍTICO / PROHIBIDO ABSOLUTO:
 - NO incluir "Sistema de emergencia de liberación rápida (ERS)" — N/A para Shanghai.
 - NO incluir "Sistema de liberación rápida del visor" — N/A para Shanghai.
@@ -112,9 +115,15 @@ CRÍTICO / PROHIBIDO ABSOLUTO:
 **Corrección:** la versión anterior de este prompt incluía "DOBLE VISERA" como ítem confirmado — error real, el excel dice **N/A** para Shanghai en esa fila (ver tabla de auditoría arriba). Se saca y el grid queda en 4 ítems confirmados, no 5.
 
 ```
-Diseñá un grid de íconos 2x3 para el casco EDGE/EDGEPRO modelo "Shanghai",
-mismo formato 4K, fondo gris claro, íconos lineales rojo/bordo en octágono
-que la referencia.
+Diseñá un grid de íconos EN FORMATO 2 COLUMNAS x 2 FILAS (4 celdas, NO 2x3)
+para el casco EDGE/EDGEPRO modelo "Shanghai", mismo formato 4K, fondo gris
+claro, íconos lineales rojo/bordo en octágono que la referencia.
+
+CRÍTICO — DIMENSIONES Y LAYOUT EXACTOS (verificado que un generador anterior falló acá con otro caso — produjo un grid con filas/celdas de más y contenido repetido, prestar máxima atención):
+- El grid debe tener EXACTAMENTE 2 columnas x 2 filas = 4 celdas en total. NO uses el layout 2x3 de 6 celdas de la referencia — este prompt tiene solo 4 ítems confirmados, rediseñá el grid como 2x2, no dejes 2 celdas vacías de un layout 2x3.
+- Cada uno de los 4 ítems aparece en UNA sola celda, UNA sola vez — no dupliques ningún ítem para rellenar espacio.
+- El lienzo final debe tener EXACTAMENTE el mismo ancho y alto en píxeles que la imagen de referencia adjunta.
+- Antes de terminar, contá las celdas: deben ser 4, ni una más ni una menos, ninguna repetida.
 
 Ítems confirmados (4, no 6 — ver nota):
 1. CANAL PARA LENTES
@@ -124,7 +133,7 @@ que la referencia.
 
 NOTA: NO incluir "Doble visera" — el excel confirma N/A para Shanghai, no
 está disponible como ítem. No hay más features físicas confirmadas por el
-excel para completar el grid a 5 o 6 sin repetir con el Prompt A. Los únicos
+excel para completar el grid sin repetir con el Prompt A. Los únicos
 ítems restantes confirmados con X son de empaque/logística (Master Box o
 Inner Box) — no se agregan automático, usarlos solo si el usuario los
 aprueba explícitamente para completar el grid.

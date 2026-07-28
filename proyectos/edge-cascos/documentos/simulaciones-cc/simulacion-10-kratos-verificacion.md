@@ -145,6 +145,9 @@ Genera una tarjeta gráfica de "HOMOLOGACIÓN" en formato vertical angosto, reso
   5. CUBRE BARBILLA
   6. CUBRE NARIZ
 
+CRÍTICO — DIMENSIONES EXACTAS:
+- El lienzo final debe tener EXACTAMENTE el mismo ancho y alto en píxeles (mismo aspect ratio, formato vertical angosto) que la imagen de referencia — no generes un lienzo cuadrado, panorámico, ni de proporciones distintas.
+
 CRÍTICO — prohibiciones explícitas:
 - NO incluir "Sistema de liberación rápida del visor" (Quick Visor Release System) bajo ninguna forma — NO está confirmado para Kratos en el excel.
 - NO agregar íconos, sellos ni elementos gráficos ajenos a la referencia.
@@ -158,6 +161,12 @@ CRÍTICO — prohibiciones explícitas:
 
 ```
 Genera un grid de íconos 2x3 en formato 4K, idéntico en composición, estilo y aspect ratio a la referencia. Fondo gris claro uniforme. Cada una de las 6 celdas contiene un ícono lineal en color rojo/bordo dentro de un octágono (mismo estilo de línea, grosor y paleta que la referencia), con el texto correspondiente en mayúscula bold centrado debajo del ícono.
+
+CRÍTICO — DIMENSIONES Y LAYOUT EXACTOS (verificado que un generador anterior falló acá, prestar máxima atención):
+- El grid debe tener EXACTAMENTE 2 columnas x 3 filas = 6 celdas en total. NUNCA 2x4, NUNCA 8 celdas, NUNCA una fila o columna de más.
+- Cada uno de los 6 ítems de la lista aparece en UNA sola celda, UNA sola vez. NO repitas ningún ítem para rellenar una celda extra — si sobra espacio, el grid termina en la 6ta celda, no se agrega una 4ta fila con ítems duplicados.
+- El lienzo final debe tener EXACTAMENTE el mismo ancho y alto en píxeles (mismo aspect ratio) que la imagen de referencia adjunta.
+- Antes de terminar, contá las celdas: deben ser 6, ni una más ni una menos, y ninguna repetida.
 
 Los 6 ítems, en este orden exacto:
 1. CANAL PARA LENTES

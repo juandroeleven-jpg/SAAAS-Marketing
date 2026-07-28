@@ -154,6 +154,12 @@ simétrica, espaciado igual entre celdas y márgenes iguales en los 4 bordes.
 Cada celda: ícono centrado arriba, texto del ítem en mayúsculas centrado
 debajo, mismo tamaño de fuente en las 4 celdas.
 
+CRÍTICO — DIMENSIONES Y LAYOUT EXACTOS (verificado que un generador anterior falló acá con otro caso — produjo un grid con filas/celdas de más y contenido repetido, prestar máxima atención):
+- El grid debe tener EXACTAMENTE 2 columnas x 2 filas = 4 celdas en total, nunca 2x3 ni 6 celdas, nunca una fila de más.
+- Cada uno de los 4 ítems aparece en UNA sola celda, UNA sola vez — no dupliques ningún ítem para rellenar espacio.
+- El lienzo final debe tener EXACTAMENTE el mismo ancho y alto en píxeles (mismo aspect ratio) que la imagen de referencia adjunta.
+- Antes de terminar, contá las celdas: deben ser 4, ni una más ni una menos, ninguna repetida.
+
 ESTILO DE ÍCONO — mantener consistencia con las demás piezas de esta ficha:
 - Estilo lineal, trazo uniforme, sin relleno sólido salvo detalles mínimos.
 - Color principal rojo/bordo (tono EDGE), sobre octágono de fondo.
