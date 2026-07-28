@@ -221,6 +221,21 @@ Full face negro mate, aleta lateral tipo tiburón, visera dorada/ámbar iridisce
 
 ---
 
+## Casco adventure/motocross con pico solar — Simulación 23
+
+Negro mate, pico/visera solar, mentonera con ventilaciones, acolchado interior naranja. **Modelo sin nombre confirmado.** 4 variantes, 3 de dos tonos (carcasa + "detalles" — división asumida, sin confirmar).
+
+[`simulacion-23-casco-adventure-pico-4-colores.md`](simulacion-23-casco-adventure-pico-4-colores.md) — ⚠️ confirmar qué piezas exactas son "los detalles"
+
+| Prompt / pieza | Tipo de pieza | Estado | Ubicación |
+|---|---|---|---|
+| Variante 1 — Blanco + detalles beige | Variantes de color | ⚠️ división de "detalles" asumida, confirmar | `simulacion-23-casco-adventure-pico-4-colores.md` |
+| Variante 2 — Gris + detalles azul oscuro | Variantes de color | ⚠️ división de "detalles" asumida, confirmar | `simulacion-23-casco-adventure-pico-4-colores.md` |
+| Variante 3 — Verde claro + detalles chocolate | Variantes de color | ⚠️ división de "detalles" asumida, confirmar | `simulacion-23-casco-adventure-pico-4-colores.md` |
+| Variante 4 — Rojo mate (color único) | Variantes de color | ✅ listo para usar — todavía no corrido | `simulacion-23-casco-adventure-pico-4-colores.md` |
+
+---
+
 ## Resumen numérico
 
 | Caso | Prompts indexados | ✅ Listo | ⚠️ Con reintento | 🔴 Bloqueado |
@@ -238,7 +253,8 @@ Full face negro mate, aleta lateral tipo tiburón, visera dorada/ámbar iridisce
 | Casco adventure (blanco→negro) | 4 | 4 | 0 | 0 |
 | Boston | 4 | 4 | 0 | 0 |
 | Casco dorado iridiscente | 4 | 2 | 2 | 0 |
-| **Total** | **51** | **40** | **7** | **4** |
+| Casco adventure con pico | 4 | 1 | 3 | 0 |
+| **Total** | **55** | **41** | **10** | **4** |
 
 ---
 
