@@ -89,87 +89,102 @@ export function progresoConexion(fase: number, id: string): number {
 export const ESCALA = 0.0026;
 // El centro vertical del grafo es 520 (entre 250 y 790), no 500: centrar en
 // 500 dejaria el conjunto descolgado hacia arriba.
-const CENTRO = { x: 800, y: 520 };
+// 549 y no 520: la etiqueta cuelga por debajo de cada esfera, asi que el
+// conjunto pesa hacia abajo y hay que subirlo para que quede centrado.
+const CENTRO = { x: 800, y: 549 };
 
-export const TARJETA = { w: 340 * ESCALA, h: 100 * ESCALA };
+// El radio lo fija el hueco disponible, no el gusto: la columna de salidas
+// tiene cuatro agentes separados 180 unidades de diseno, o sea 0.468 de
+// escena. Cada uno ocupa 2*RADIO de esfera mas la etiqueta mas un respiro:
+// 0.26 + 0.15 + 0.02 = 0.43, que entra en 0.468. Con un radio mayor las
+// etiquetas se montarian sobre la esfera de abajo.
+export const RADIO = 0.13;
+/** Bloque de texto bajo la esfera. */
+export const ETIQUETA = { w: 0.7, h: 0.15 };
 
 export function posicion(n: Nodo): [number, number, number] {
   return [(n.x - CENTRO.x) * ESCALA, (CENTRO.y - n.y) * ESCALA, n.z];
 }
 
-/** Punto de salida (borde derecho) y de entrada (borde izquierdo). */
+/** La conexion sale y entra por el BORDE de la esfera, no por su centro. */
 export function salida(n: Nodo): [number, number, number] {
   const p = posicion(n);
-  return [p[0] + TARJETA.w / 2, p[1], p[2]];
+  return [p[0] + RADIO, p[1], p[2]];
 }
 export function entrada(n: Nodo): [number, number, number] {
   const p = posicion(n);
-  return [p[0] - TARJETA.w / 2, p[1], p[2]];
+  return [p[0] - RADIO, p[1], p[2]];
 }
 
 export function buscar(id: string): Nodo {
   return NODOS.find((n) => n.id === id)!;
 }
 
-// --- Textura de una tarjeta ----------------------------------------------
+// --- Texturas ------------------------------------------------------------
 
-// Se dibuja a 2x del espacio de diseno de la tarjeta (340x100), que es la
-// resolucion a la que se ve en un portatil con dpr 2 y el panel al 82% de
-// 1280 px de ancho. Mas seria pagar memoria por nada.
-export const TEX_TARJETA = { w: 680, h: 200 };
+export const TEX_ETIQUETA = { w: 512, h: 110 };
+export const TEX_ONDA = { w: 512, h: 128 };
 
-function rectRedondeado(
-  ctx: CanvasRenderingContext2D,
-  x: number,
-  y: number,
-  w: number,
-  h: number,
-  r: number
-) {
-  ctx.beginPath();
-  ctx.moveTo(x + r, y);
-  ctx.arcTo(x + w, y, x + w, y + h, r);
-  ctx.arcTo(x + w, y + h, x, y + h, r);
-  ctx.arcTo(x, y + h, x, y, r);
-  ctx.arcTo(x, y, x + w, y, r);
-  ctx.closePath();
+/**
+ * Nombre y funcion del agente, centrados, sobre canvas transparente.
+ * Se dibuja una sola vez por agente: no cambia nunca.
+ */
+export function dibujarEtiqueta(ctx: CanvasRenderingContext2D, n: Nodo) {
+  const { w, h } = TEX_ETIQUETA;
+  ctx.clearRect(0, 0, w, h);
+  ctx.textAlign = "center";
+
+  // Solo el nombre: con la esfera ocupando el alto disponible no entra una
+  // segunda linea sin que las etiquetas se monten unas sobre otras.
+  ctx.fillStyle = "#FFFFFF";
+  ctx.font = "600 64px system-ui, sans-serif";
+  ctx.fillText(n.label, w / 2, 74);
 }
 
 /**
- * Dibuja UNA tarjeta en su estado de reposo, sobre un canvas transparente.
+ * La onda de voz que vive dentro de la esfera.
  *
- * El estado "ejecutandose" NO va aqui: se consigue con el halo que la rodea y
- * con el desplazamiento del objeto, para que esta textura se suba a la GPU
- * una sola vez en toda la sesion.
+ * Se dibuja UNA vez y despues se anima moviendo `offset.x` de la textura y
+ * escalando el plano: las dos cosas son gratis, mientras que redibujar la
+ * onda en cada frame obligaria a subirla a la GPU sesenta veces por segundo.
+ * Por eso es CICLICA en horizontal (todas las frecuencias son enteras): al
+ * desplazarse no se ve la costura.
  */
-export function dibujarTarjeta(ctx: CanvasRenderingContext2D, n: Nodo) {
-  const { w, h } = TEX_TARJETA;
-  const m = 8; // margen para que el trazo del borde no se corte
+export function dibujarOnda(ctx: CanvasRenderingContext2D) {
+  const { w, h } = TEX_ONDA;
   ctx.clearRect(0, 0, w, h);
 
-  rectRedondeado(ctx, m, m, w - m * 2, h - m * 2, 44);
-  ctx.fillStyle = "#19212D";
-  ctx.fill();
-  ctx.strokeStyle = "#3A4B62";
-  ctx.lineWidth = 8;
-  ctx.stroke();
+  // Envolvente: fuerte en el centro y apagada en los extremos, como en un
+  // medidor de voz real.
+  const envolvente = (x: number) => Math.pow(Math.sin((x / w) * Math.PI), 1.6);
 
-  // Cuadrito de color del servicio
-  rectRedondeado(ctx, m + 36, m + 38, 112, 112, 30);
-  ctx.fillStyle = n.color;
-  ctx.fill();
+  for (const capa of [
+    { amp: 0.42, grosor: 7, alfa: 0.95, f: [3, 7, 11] },
+    { amp: 0.26, grosor: 4, alfa: 0.55, f: [5, 9, 17] },
+  ]) {
+    ctx.beginPath();
+    for (let x = 0; x <= w; x += 2) {
+      const u = (x / w) * Math.PI * 2;
+      const v =
+        Math.sin(u * capa.f[0]) * 0.5 +
+        Math.sin(u * capa.f[1]) * 0.32 +
+        Math.sin(u * capa.f[2]) * 0.18;
+      const y = h / 2 + v * capa.amp * h * envolvente(x);
+      if (x === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.strokeStyle = `rgba(255, 255, 255, ${capa.alfa})`;
+    ctx.lineWidth = capa.grosor;
+    ctx.lineCap = "round";
+    ctx.stroke();
+  }
 
-  ctx.textAlign = "left";
-  ctx.fillStyle = "#E6EDF7";
-  ctx.font = "600 72px system-ui, sans-serif";
-  ctx.fillText(n.label, m + 184, m + 84);
-  ctx.fillStyle = "#77869B";
-  ctx.font = "500 56px system-ui, sans-serif";
-  ctx.fillText(n.sub, m + 184, m + 154);
-
-  // Punto de estado, apagado en reposo
-  ctx.beginPath();
-  ctx.arc(w - m - 48, h / 2, 16, 0, Math.PI * 2);
-  ctx.fillStyle = "rgba(52, 211, 153, 0.28)";
-  ctx.fill();
+  // Nucleo horizontal encendido: es lo que hace que la onda se lea como luz
+  // y no como un trazo dibujado.
+  const g = ctx.createLinearGradient(0, 0, w, 0);
+  g.addColorStop(0, "rgba(255,255,255,0)");
+  g.addColorStop(0.5, "rgba(255,255,255,0.9)");
+  g.addColorStop(1, "rgba(255,255,255,0)");
+  ctx.fillStyle = g;
+  ctx.fillRect(0, h / 2 - 2, w, 4);
 }
