@@ -191,6 +191,21 @@ Doble visera (externa iridiscente dorada/violeta + interna ahumada), color origi
 
 ---
 
+## Boston (EDGE) — Simulación 21
+
+Primer caso con **nombre de modelo confirmado por el usuario**. Full face, negro mate, panel lateral glossy con LEDs rojas de freno, cover de carbono en el pivote. 4 variantes de color + tinte de visor.
+
+[`simulacion-21-boston-4-colores.md`](simulacion-21-boston-4-colores.md) — ⚠️ confirmar si es Boston o Boston 4.0, y si el panel LED/cover de carbono cambia de color
+
+| Prompt / pieza | Tipo de pieza | Estado | Ubicación |
+|---|---|---|---|
+| Variante 1 — Azul oscuro mate + visor celeste transparente | Variantes de color | ✅ listo para usar — todavía no corrido | `simulacion-21-boston-4-colores.md` |
+| Variante 2 — Rojo brillante + visor negro | Variantes de color | ✅ listo para usar — todavía no corrido | `simulacion-21-boston-4-colores.md` |
+| Variante 3 — Gris claro + visor azul oscuro transparente | Variantes de color | ✅ listo para usar — todavía no corrido | `simulacion-21-boston-4-colores.md` |
+| Variante 4 — Morado mate + visor rojo | Variantes de color | ✅ listo para usar — todavía no corrido | `simulacion-21-boston-4-colores.md` |
+
+---
+
 ## Resumen numérico
 
 | Caso | Prompts indexados | ✅ Listo | ⚠️ Con reintento | 🔴 Bloqueado |
@@ -206,7 +221,8 @@ Doble visera (externa iridiscente dorada/violeta + interna ahumada), color origi
 | Casco flip-up | 4 | 4 | 0 | 0 |
 | Casco carbono glossy | 4 | 2 | 0 | 2 |
 | Casco adventure (blanco→negro) | 4 | 4 | 0 | 0 |
-| **Total** | **43** | **34** | **5** | **4** |
+| Boston | 4 | 4 | 0 | 0 |
+| **Total** | **47** | **38** | **5** | **4** |
 
 ---
 
