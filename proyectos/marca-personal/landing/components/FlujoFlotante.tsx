@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { RoundedBox, Preload } from "@react-three/drei";
+import { Preload } from "@react-three/drei";
 import * as THREE from "three";
 import {
   CICLO,
@@ -10,10 +10,13 @@ import {
   ESCALA,
   NODOS,
   PROGRAMA_NODO,
-  TARJETA,
-  TEX_TARJETA,
+  ETIQUETA,
+  RADIO,
+  TEX_ETIQUETA,
+  TEX_ONDA,
   buscar,
-  dibujarTarjeta,
+  dibujarEtiqueta,
+  dibujarOnda,
   entrada,
   posicion,
   progresoConexion,
@@ -27,29 +30,28 @@ import { usarDesplazando } from "@/lib/desplazamiento";
 import { usarPuntero } from "@/lib/puntero";
 import { ahora } from "@/lib/reloj";
 
-// Los agentes del hero, sueltos en el espacio: sin monitor, sin marco y sin
-// barra de ventana.
+// Los agentes del hero: esferas de energia sueltas en el espacio, conectadas
+// entre si. Sin monitor, sin marco y sin barra de ventana.
 //
 // Por que esto es MAS BARATO que la version anterior, no mas caro: antes
 // habia un canvas de 2048x1152 que se redibujaba y se subia a la GPU quince
 // veces por segundo (~10 MB por subida), y era con diferencia lo mas caro de
-// la seccion. Aqui cada tarjeta lleva una textura de 680x200 dibujada UNA vez
-// -- 7 subidas en toda la sesion, ~3.8 MB en total -- y lo que se anima son
-// posiciones, escalas y opacidades, que no cuestan subidas.
-
-const GROSOR = 0.055;
+// la seccion. Aqui hay DOS texturas compartidas por los siete agentes (la
+// onda y el degradado del halo) mas una etiqueta por agente, todas dibujadas
+// una sola vez. Lo que se anima son posiciones, escalas, opacidades y el
+// desplazamiento de la textura de onda: nada de eso cuesta subidas.
 
 // --- Texturas -------------------------------------------------------------
 
-function usarTexturasTarjeta() {
+function usarTexturasEtiqueta() {
   return useMemo(() => {
     const mapa = new Map<string, THREE.CanvasTexture>();
     NODOS.forEach((n) => {
       const c = document.createElement("canvas");
-      c.width = TEX_TARJETA.w;
-      c.height = TEX_TARJETA.h;
+      c.width = TEX_ETIQUETA.w;
+      c.height = TEX_ETIQUETA.h;
       const ctx = c.getContext("2d");
-      if (ctx) dibujarTarjeta(ctx, n);
+      if (ctx) dibujarEtiqueta(ctx, n);
       const t = new THREE.CanvasTexture(c);
       t.colorSpace = THREE.SRGBColorSpace;
       // Se ve casi de frente y casi 1:1: la piramide de mipmaps no compraria
@@ -60,6 +62,25 @@ function usarTexturasTarjeta() {
       mapa.set(n.id, t);
     });
     return mapa;
+  }, []);
+}
+
+// La onda de voz, UNA sola textura para los siete agentes. Se repite en
+// horizontal para poder desplazarla sin costura.
+function usarTexturaOnda() {
+  return useMemo(() => {
+    const c = document.createElement("canvas");
+    c.width = TEX_ONDA.w;
+    c.height = TEX_ONDA.h;
+    const ctx = c.getContext("2d");
+    if (ctx) dibujarOnda(ctx);
+    const t = new THREE.CanvasTexture(c);
+    t.colorSpace = THREE.SRGBColorSpace;
+    t.wrapS = THREE.RepeatWrapping;
+    t.generateMipmaps = false;
+    t.minFilter = THREE.LinearFilter;
+    t.magFilter = THREE.LinearFilter;
+    return t;
   }, []);
 }
 
@@ -85,72 +106,150 @@ function usarTexturaHalo() {
   }, []);
 }
 
-// --- Un nodo --------------------------------------------------------------
+// Mezcla el color del agente hacia el azul oscuro del fondo, para el nucleo
+// de la esfera. Un nucleo del color puro sale pastel; oscurecido, el borde
+// encendido tiene contra que destacar.
+function oscuro(hex: string): string {
+  const n = parseInt(hex.slice(1), 16);
+  const m = (c: number, f: number) => Math.round(c * f);
+  return `rgb(${m((n >> 16) & 255, 0.5)}, ${m((n >> 8) & 255, 0.5)}, ${m(n & 255, 0.62)})`;
+}
 
-function Tarjeta({
+// --- Un agente -----------------------------------------------------------
+
+// Cuanto se desplaza la onda dentro de la esfera, en anchos de textura por
+// segundo. Lento: es un agente pensando, no un ecualizador de musica.
+const VELOCIDAD_ONDA = 0.075;
+
+function Agente({
   nodo,
-  textura,
+  etiqueta,
+  onda,
   halo,
   quieto,
   indice,
 }: {
   nodo: Nodo;
-  textura: THREE.Texture;
+  etiqueta: THREE.Texture;
+  onda: THREE.Texture;
   halo: THREE.Texture;
   quieto: boolean;
   indice: number;
 }) {
   const grupo = useRef<THREE.Group>(null);
   const luz = useRef<THREE.Mesh>(null);
+  const esfera = useRef<THREE.Mesh>(null);
+  const borde = useRef<THREE.Mesh>(null);
+  const voz = useRef<THREE.Mesh>(null);
   const base = useMemo(() => posicion(nodo), [nodo]);
 
+  // La onda se comparte entre los siete agentes, asi que el desplazamiento no
+  // puede vivir en la textura: cada agente lleva su propio material con su
+  // propia copia del mapa, que comparte la imagen subida a la GPU pero tiene
+  // offset independiente.
+  const mapaPropio = useMemo(() => {
+    const t = onda.clone();
+    t.needsUpdate = false;
+    t.offset.x = indice * 0.17;
+    return t;
+  }, [onda, indice]);
+  useEffect(() => () => mapaPropio.dispose(), [mapaPropio]);
+
   useFrame(() => {
-    if (!grupo.current || !luz.current) return;
+    if (!grupo.current || !luz.current || !esfera.current || !voz.current) return;
+    if (!borde.current) return;
     const t = quieto ? 0 : ahora();
     const enc = pulso(t % CICLO, PROGRAMA_NODO[nodo.id]);
-
-    // Flotacion propia de cada tarjeta, desfasada para que el conjunto no
-    // suba y baje en bloque (que se leeria como una sola pieza rigida).
     const desfase = indice * 1.37;
-    const flot = quieto ? 0 : Math.sin(t * 0.6 + desfase) * 0.022;
-    // Al ejecutarse, la tarjeta se adelanta hacia la camara.
-    grupo.current.position.set(base[0], base[1] + flot, base[2] + enc * 0.09);
-    grupo.current.rotation.z = quieto ? 0 : Math.sin(t * 0.42 + desfase) * 0.012;
 
-    const m = luz.current.material as THREE.MeshBasicMaterial;
-    m.opacity = 0.15 + enc * 0.85;
-    const s = 1 + enc * 0.22;
-    luz.current.scale.set(s, s, 1);
+    // Flotacion desfasada: si todos subieran a la vez se leerian como una
+    // sola pieza rigida en vez de como siete agentes independientes.
+    const flot = quieto ? 0 : Math.sin(t * 0.6 + desfase) * 0.022;
+    grupo.current.position.set(base[0], base[1] + flot, base[2] + enc * 0.09);
+
+    // Halo: apagado en reposo, encendido mientras el agente ejecuta.
+    const ml = luz.current.material as THREE.MeshBasicMaterial;
+    ml.opacity = 0.38 + enc * 0.62;
+    const sl = 1 + enc * 0.3;
+    luz.current.scale.set(sl, sl, 1);
+
+    // La esfera respira, y al ejecutarse se hincha un poco.
+    const resp = quieto ? 1 : 1 + Math.sin(t * 1.1 + desfase) * 0.018;
+    const se = resp + enc * 0.07;
+    esfera.current.scale.setScalar(se);
+    borde.current.scale.setScalar(se);
+    const mb = borde.current.material as THREE.MeshBasicMaterial;
+    mb.opacity = 0.5 + enc * 0.5;
+
+    // La onda: se desplaza siempre (el agente esta vivo) y sube de amplitud
+    // cuando le toca trabajar. Mover el offset es gratis; redibujarla no.
+    if (!quieto) mapaPropio.offset.x = (indice * 0.17 + t * VELOCIDAD_ONDA) % 1;
+    const amp = 0.52 + enc * 0.48 + (quieto ? 0 : Math.sin(t * 3.1 + desfase) * 0.06);
+    voz.current.scale.set(se, se * amp, 1);
+    const mv = voz.current.material as THREE.MeshBasicMaterial;
+    mv.opacity = 0.75 + enc * 0.25;
   });
 
   return (
     <group ref={grupo}>
-      {/* Halo detras: es lo que dice "este agente esta ejecutando ahora".
-          Aditivo y sin escritura de profundidad para que se funda con el
-          fondo en vez de recortarse contra el. */}
-      <mesh ref={luz} position={[0, 0, -0.02]}>
-        <planeGeometry args={[TARJETA.w * 1.75, TARJETA.h * 2.6]} />
+      {/* Resplandor exterior. Aditivo y sin escritura de profundidad para que
+          se funda con el fondo en vez de recortarse contra el. */}
+      <mesh ref={luz} position={[0, 0, -0.05]}>
+        <planeGeometry args={[RADIO * 5.2, RADIO * 5.2]} />
         <meshBasicMaterial
           map={halo}
           color={nodo.color}
           transparent
-          opacity={0.15}
+          opacity={0.38}
           depthWrite={false}
           blending={THREE.AdditiveBlending}
         />
       </mesh>
 
-      {/* Cuerpo con grosor real: es lo que hace que al girar con el raton se
-          lea como un objeto y no como una calcomania. */}
-      <RoundedBox args={[TARJETA.w, TARJETA.h, GROSOR]} radius={0.024} smoothness={4}>
-        <meshStandardMaterial color="#141B25" metalness={0.35} roughness={0.55} />
-      </RoundedBox>
+      {/* La esfera, en dos capas.
+          El nucleo va OSCURO a proposito: un orbe de energia se lee por
+          contraste contra su propio borde. Pintado del color entero salia
+          pastel y chato.
+          El borde es la misma esfera dibujada por dentro (BackSide) y en
+          aditivo: de frente apenas se acumula una capa y en la silueta se
+          acumulan muchas, asi que el brillo cae solo en el canto. Es el
+          efecto Fresnel sin escribir un shader. */}
+      <mesh ref={esfera}>
+        <sphereGeometry args={[RADIO * 0.965, 24, 18]} />
+        <meshBasicMaterial color={oscuro(nodo.color)} transparent opacity={0.88} />
+      </mesh>
+      <mesh ref={borde}>
+        <sphereGeometry args={[RADIO * 1.16, 32, 24]} />
+        <meshBasicMaterial
+          color={nodo.color}
+          transparent
+          opacity={0.5}
+          side={THREE.BackSide}
+          depthWrite={false}
+          depthTest={false}
+          blending={THREE.AdditiveBlending}
+        />
+      </mesh>
 
-      {/* Cara con el contenido. MeshBasic: la tarjeta se lee como superficie
-          encendida, no debe apagarse segun donde este la luz. */}
-      <mesh position={[0, 0, GROSOR / 2 + 0.001]}>
-        <planeGeometry args={[TARJETA.w, TARJETA.h]} />
-        <meshBasicMaterial map={textura} transparent toneMapped={false} />
+      {/* La onda de voz, por delante del centro de la esfera. Aditiva: es
+          luz atravesando el volumen. */}
+      <mesh ref={voz} position={[0, 0, RADIO * 1.05]} renderOrder={3}>
+        <planeGeometry args={[RADIO * 2.25, RADIO * 1.7]} />
+        <meshBasicMaterial
+          map={mapaPropio}
+          transparent
+          opacity={0.75}
+          depthWrite={false}
+          depthTest={false}
+          toneMapped={false}
+          blending={THREE.AdditiveBlending}
+        />
+      </mesh>
+
+      {/* Nombre y funcion, debajo. */}
+      <mesh position={[0, -RADIO - ETIQUETA.h * 0.62, 0]}>
+        <planeGeometry args={[ETIQUETA.w, ETIQUETA.h]} />
+        <meshBasicMaterial map={etiqueta} transparent toneMapped={false} depthWrite={false} />
       </mesh>
     </group>
   );
@@ -210,8 +309,16 @@ function Conexiones({
           {/* La linea en reposo. Un tubo y no una linea de 1 px: a esta
               escala una linea fina desaparece en pantallas densas. */}
           <mesh>
-            <tubeGeometry args={[cv.c, 22, 0.011, 6, false]} />
-            <meshBasicMaterial color="#2C3B50" toneMapped={false} />
+            <tubeGeometry args={[cv.c, 22, 0.007, 6, false]} />
+            {/* Azul claro y translucido, no gris oscuro: sobre el fondo azul
+                del hero un tono oscuro se leia como un cable negro grueso. */}
+            <meshBasicMaterial
+              color="#8FB6E8"
+              transparent
+              opacity={0.5}
+              depthWrite={false}
+              toneMapped={false}
+            />
           </mesh>
 
           {/* El paquete que viaja: nucleo solido + resplandor aditivo. */}
@@ -299,11 +406,11 @@ function AvisaListo({ onListo }: { onListo?: () => void }) {
   return null;
 }
 
-// El grafo mide 3.02 x 1.66 unidades. Con fov 30, el alto visible a distancia
-// d es 0.536*d, asi que a 3.8 entran 2.04 contra 1.66 del contenido: queda
-// margen para la flotacion (+-0.022), el adelanto al ejecutarse (0.09) y la
-// inclinacion hacia el raton.
-const DISTANCIA = 3.8;
+// El grafo mide 3.02 de ancho y, contando la etiqueta que cuelga bajo la
+// ultima esfera, 1.81 de alto. Con fov 30 el alto visible a distancia d es
+// 0.536*d, asi que a 4.0 entran 2.14: queda margen para la flotacion
+// (+-0.022), el adelanto al ejecutarse (0.09) y la inclinacion hacia el raton.
+const DISTANCIA = 4.0;
 const ANCHO_GRAFO = 3.02;
 
 function CamaraResponsiva() {
@@ -357,25 +464,28 @@ export default function FlujoFlotante({ onListo }: { onListo?: () => void }) {
 }
 
 function Contenido({ quieto }: { quieto: boolean }) {
-  const texturas = usarTexturasTarjeta();
+  const etiquetas = usarTexturasEtiqueta();
+  const onda = usarTexturaOnda();
   const halo = usarTexturaHalo();
 
   useEffect(() => {
     return () => {
-      texturas.forEach((t) => t.dispose());
+      etiquetas.forEach((t) => t.dispose());
+      onda.dispose();
       halo.dispose();
     };
-  }, [texturas, halo]);
+  }, [etiquetas, onda, halo]);
 
   return (
     <Conjunto quieto={quieto}>
       <Conexiones halo={halo} quieto={quieto} />
       {NODOS.map((n, i) => (
-        <Tarjeta
+        <Agente
           key={n.id}
           nodo={n}
           indice={i}
-          textura={texturas.get(n.id)!}
+          etiqueta={etiquetas.get(n.id)!}
+          onda={onda}
           halo={halo}
           quieto={quieto}
         />
