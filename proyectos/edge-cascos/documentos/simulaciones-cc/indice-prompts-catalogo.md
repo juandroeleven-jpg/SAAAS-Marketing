@@ -250,6 +250,19 @@ Modular/flip-up marca EDGE, negro mate, cromado en el pico, acolchado rojo. **Mo
 
 ---
 
+## Carbex — Simulación 25
+
+Octavo caso EDGEPRO, el con más features confirmadas del catálogo (17). Prompts genéricos casi funcionaban tal cual — solo 1 mismatch real (hebilla micrométrica → doble D) + 2 prohibiciones factualmente incorrectas limpiadas (preparado anti empañante y con pinlock sí son reales para Carbex, solo no van en la lista de 6).
+
+[`simulacion-25-carbex-verificacion.md`](simulacion-25-carbex-verificacion.md)
+
+| Prompt / pieza | Tipo de pieza | Estado | Ubicación |
+|---|---|---|---|
+| Prompt A — Homologación (6/6) | Tipo B/C | ✅ listo para usar — todavía no corrido | `simulacion-25-carbex-verificacion.md` |
+| Prompt B — Grid (6/6, hebilla doble D) | Tipo B/C | ✅ listo para usar — todavía no corrido | `simulacion-25-carbex-verificacion.md` |
+
+---
+
 ## Resumen numérico
 
 | Caso | Prompts indexados | ✅ Listo | ⚠️ Con reintento | 🔴 Bloqueado |
@@ -269,7 +282,8 @@ Modular/flip-up marca EDGE, negro mate, cromado en el pico, acolchado rojo. **Mo
 | Casco dorado iridiscente | 4 | 2 | 2 | 0 |
 | Casco adventure con pico | 4 | 1 | 3 | 0 |
 | Casco EDGE flip-up (quitar stickers) | 3 | 3 | 0 | 0 |
-| **Total** | **58** | **44** | **10** | **4** |
+| Carbex | 2 | 2 | 0 | 0 |
+| **Total** | **60** | **46** | **10** | **4** |
 
 ---
 
