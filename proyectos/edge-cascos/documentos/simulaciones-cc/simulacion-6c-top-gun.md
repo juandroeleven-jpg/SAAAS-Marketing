@@ -616,6 +616,103 @@ MAVERICK".
 3. Subir las imágenes de referencia como adjuntos para versionarlas.
 4. Cuando el usuario mande el primer caso de Marvel/DC/Paramount, aplicar desde el arranque la regla de "fuente de forma vs. fuente de diseño" y "gráfico solo sobre superficie pintada, nunca sobre piezas negras".
 
+### Resultado del Intento 6 — auditado: buen resultado, un ajuste de posición
+
+**Estado:** ✅ Buen resultado — el bloqueo de piezas negras y los 8 elementos funcionaron. Queda 1 defecto puntual, de posición, no de contenido.
+
+**Qué salió bien (confirmado contra el molde real y el arte de referencia):** el usuario mandó una captura marcando con un círculo verde solo la zona del logo — no reportó ningún problema en los otros 7 elementos ni en el respeto a las piezas negras, lo que confirma que los 8 elementos gráficos quedaron presentes y que la regla "gráfico solo sobre superficie azul pintada, nunca sobre piezas negras" (ventilaciones, mentonera, spoiler, carcasa del pivote) se cumplió esta vez. También se mantuvo la geometría intacta del molde real (pico frontal, 3 ventilaciones, pivote, mentonera, calota, visor claro) lograda desde el Intento 5.
+
+**Qué falló (1 defecto puntual, de posición):** el logotipo "TOP GUN MAVERICK" (el recuadro angosto inclinado con "TOP GUN" arriba y "MAVERICK" abajo en itálica) quedó ubicado demasiado ARRIBA, pegado al visor y a las ventilaciones. Esto deja un espacio vacío sin usar en la superficie azul mate, justo debajo del logo y por encima del borde superior de la mentonera negra — superficie azul disponible que no se está aprovechando. El usuario pidió explícitamente mover el logo más abajo, hacia ese espacio libre, sin sacarlo de la zona general de las ventilaciones ni ponerlo sobre ninguna pieza negra.
+
+### Intento 7 — logo reposicionado más abajo, aprovechando el espacio libre
+
+**Único cambio respecto al Intento 6:** la posición del elemento 6 (logotipo "TOP GUN MAVERICK"). Todo lo demás —los otros 7 elementos, sus posiciones, la geometría del molde real, el visor, la paleta, la prohibición de gráfico sobre piezas negras— se mantiene exactamente igual a como quedó en el Intento 6, porque ya funcionó bien y el usuario no reportó ningún problema ahí.
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una imagen de producto de un casco, mismo ángulo, encuadre y
+fondo blanco.
+
+REGLA MÁS IMPORTANTE — DOS FUENTES, DOS ROLES QUE NUNCA SE MEZCLAN
+(esto ya funcionó bien en los intentos anteriores, mantenelo igual):
+- La PRIMERA imagen de referencia (molde azul real) es la ÚNICA
+  autoridad de FORMA — pico frontal largo y fino, 3 ventilaciones tipo
+  cuchilla, carcasa del pivote angular y ajustada, mentonera angulosa,
+  calota aerodinámica, visor claro y transparente. Mantené esta
+  geometría exactamente como en el intento anterior, que ya quedó
+  correcta.
+- La SEGUNDA imagen de referencia (arte Top Gun) es SOLO fuente de
+  diseño gráfico (colores, íconos, textos). Su forma se ignora por
+  completo.
+
+CRÍTICO — EL DISEÑO GRÁFICO VA SOLO SOBRE LA SUPERFICIE AZUL MATE
+PINTADA, NUNCA SOBRE PIEZAS NEGRAS (esto ya se cumplió en el intento
+anterior, mantenelo igual): las ventilaciones negras, la mentonera
+negra, el spoiler/cola negra y la carcasa negra del pivote tienen que
+quedar SIN NINGÚN gráfico encima, tal como en el molde real. Si un
+elemento del diseño cae naturalmente cerca del límite entre la
+superficie azul y una pieza negra, recortalo o desplazalo para que no
+invada la pieza negra.
+
+DISEÑO GRÁFICO A TRANSFERIR — EXACTAMENTE 8 ELEMENTOS, mismas
+posiciones que en el intento anterior EXCEPTO el elemento 6 (logotipo),
+que se reposiciona más abajo — ver nota específica en ese punto:
+
+1. Avión de combate estilizado — zona delantera superior de la calota.
+2. Escudo circular con estrella de 5 puntas — zona central superior.
+3. Grupo de barras verticales cortas en AZUL CLARO/GRISÁCEO (NO
+   dorado), estilo insignia de rango militar — junto al escudo con
+   estrella, en la misma zona superior central. Es distinto de los
+   chevrones dorados del punto 5.
+4. Un par de naipes (ases de pique) — sobre el pico frontal.
+5. Franjas diagonales tipo chevron, en DORADO — sobre la superficie
+   azul de la mentonera/parte inferior delantera, SIN invadir la pieza
+   de plástico negro de la mentonera.
+6. Logotipo "TOP GUN MAVERICK" (recuadro angosto inclinado con "TOP
+   GUN" arriba, más grande, y "MAVERICK" abajo, más chico, en
+   itálica) — ÚNICO ELEMENTO QUE CAMBIA DE POSICIÓN EN ESTE INTENTO:
+   en el resultado anterior quedó demasiado arriba, pegado al visor y
+   a las ventilaciones, dejando un espacio vacío sin usar en la
+   superficie azul justo debajo de él, por encima de la mentonera. Esta
+   vez desplazá el logo MÁS ABAJO, dentro de esa misma zona general
+   junto a las ventilaciones, ocupando el espacio libre que quedó
+   entre el logo y el borde superior de la mentonera negra — sin
+   bajarlo tanto como para tocar o superponerse con la mentonera negra,
+   y sin moverlo a ninguna otra zona del casco. El logo tiene que
+   seguir estando completo sobre superficie azul mate, nunca sobre
+   piezas negras. Obligatorio, no omitir ni simplificar el diseño de 2
+   líneas.
+7. Texto grande "MAVERICK" en mayúsculas — zona trasera inferior,
+   sobre superficie azul, cerca del spoiler pero sin tocarlo.
+8. 3 estrellas de 5 puntas alineadas — debajo del texto "MAVERICK".
+
+PALETA: dorado/mostaza envejecido para los elementos 1, 2, 4, 5, 6, 7
+y 8. Azul claro/grisáceo (no dorado) específicamente para el elemento
+3. Base azul mate del casco, mismo tono que el molde real.
+
+PROHIBIDO ABSOLUTO: no dibujar ningún elemento gráfico sobre piezas de
+plástico negro (ventilaciones, mentonera, spoiler, carcasa del
+pivote) — el logotipo reposicionado tampoco puede invadir la
+mentonera negra. No omitir el grupo de barras azul claro/grisáceo
+junto al escudo. No copiar la forma del casco de la segunda imagen.
+No cambiar geometría, ventilaciones, pivote ni calota respecto al
+molde real. No oscurecer el visor. No omitir ni simplificar el
+logotipo "TOP GUN MAVERICK". No mover ningún elemento que no sea el
+logotipo — los otros 7 elementos mantienen exactamente la posición del
+intento anterior.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:**
+1. Correr el prompt (en sesión aislada) y mandar el resultado para auditoría — si el logo baja al espacio libre sin tocar la mentonera negra y los otros 7 elementos se mantienen sin cambios, este caso queda cerrado.
+2. Confirmar si este molde azul es el casco físico real de la marca licenciante o solo una referencia — sigue siendo la misma pregunta abierta de este caso.
+3. Subir las imágenes de referencia como adjuntos para versionarlas.
+4. Cuando el usuario mande el primer caso de Marvel/DC/Paramount, aplicar desde el arranque la regla de "fuente de forma vs. fuente de diseño" y "gráfico solo sobre superficie pintada, nunca sobre piezas negras".
+
 ---
 
-**Última actualización:** 2026-07-28 · Intento 6 agregado tras auditar el Intento 5 (geometría por fin correcta; quedaron 2 defectos gráficos: chevrones invadiendo piezas negras y un elemento faltante — barras azul claro/grisáceo junto al escudo) — línea de licencias de marca (Marvel/DC/Paramount).
+**Última actualización:** 2026-07-28 · Intento 7 agregado tras auditar el Intento 6 (los 8 elementos y el bloqueo de piezas negras funcionaron; único defecto: el logotipo "TOP GUN MAVERICK" quedó demasiado arriba, pegado al visor/ventilaciones, dejando espacio vacío en la superficie azul por encima de la mentonera — se reposiciona el logo más abajo, sin tocar piezas negras) — línea de licencias de marca (Marvel/DC/Paramount).
