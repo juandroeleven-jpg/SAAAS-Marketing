@@ -6,6 +6,7 @@ import TarjetasFlotantes, {
   type ContenidoTarjetas,
 } from "./TarjetasFlotantes";
 import { usarMovimientoReducido } from "@/lib/movimiento";
+import MontarCerca from "./MontarCerca";
 
 const FondoOndas = dynamic(() => import("./FondoOndas"), { ssr: false });
 
@@ -43,7 +44,12 @@ export default function SeccionTarjetas() {
       id="flujos"
       className="fondo-azul relative isolate flex min-h-screen items-center justify-center overflow-hidden px-4 py-20 sm:px-8"
     >
-      <FondoOndas />
+      {/* El fondo 3D de esta seccion tampoco se inicializa en la carga: es el
+          ultimo tramo de la pagina y crear su contexto WebGL al principio solo
+          le quita recursos al hero. */}
+      <MontarCerca proporcion="1 / 1" className="absolute inset-0 -z-10">
+        <FondoOndas />
+      </MontarCerca>
 
       <motion.div
         initial={quieto ? false : { opacity: 0, y: 20 }}

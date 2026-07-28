@@ -113,13 +113,33 @@ function usarTexturaPantalla(quieto: boolean) {
 function EntornoDeEstudio() {
   const { gl, scene } = useThree();
   useEffect(() => {
-    const pmrem = new THREE.PMREMGenerator(gl);
-    const entorno = pmrem.fromScene(new RoomEnvironment(), 0.04);
-    scene.environment = entorno.texture;
+    let entorno: { texture: THREE.Texture } | null = null;
+    let pmrem: THREE.PMREMGenerator | null = null;
+
+    // Generar el entorno NO es gratis: monta una escena auxiliar, la renderiza
+    // a un cubemap y le hace el prefiltrado. Hacerlo de forma sincrona en el
+    // montaje anadia ese trabajo al primer frame, que es el mas cargado de
+    // toda la sesion. Se difiere a cuando el navegador este libre; hasta
+    // entonces el marco se ve con la iluminacion normal, sin reflejos.
+    const arrancar = () => {
+      pmrem = new THREE.PMREMGenerator(gl);
+      entorno = pmrem.fromScene(new RoomEnvironment(), 0.04);
+      scene.environment = entorno.texture;
+    };
+
+    // requestIdleCallback donde exista (Chrome, Firefox); Safari todavia no lo
+    // trae, ahi basta con un retardo corto.
+    const conIdle = typeof window.requestIdleCallback === "function";
+    const ric = conIdle
+      ? window.requestIdleCallback(arrancar, { timeout: 2000 })
+      : window.setTimeout(arrancar, 600);
+
     return () => {
+      if (conIdle) window.cancelIdleCallback(ric);
+      else clearTimeout(ric);
       scene.environment = null;
-      entorno.texture.dispose();
-      pmrem.dispose();
+      entorno?.texture.dispose();
+      pmrem?.dispose();
     };
   }, [gl, scene]);
   return null;

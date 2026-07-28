@@ -394,4 +394,8 @@ export default function ModeloLaptop({
   );
 }
 
-useGLTF.preload("/modelos-3d/macbook.glb");
+// SIN preload a nivel de modulo. `useGLTF.preload` se ejecuta al IMPORTAR el
+// archivo, asi que descargaba los 2,5 MB del modelo durante la carga inicial
+// de la portada -- compitiendo por ancho de banda con lo unico que el
+// visitante esta mirando, que es el hero. El modelo se pide cuando el
+// componente se monta, y el componente ahora se monta al acercarse su seccion.
