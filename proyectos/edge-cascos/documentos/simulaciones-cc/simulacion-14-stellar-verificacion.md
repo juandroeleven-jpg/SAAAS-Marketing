@@ -106,6 +106,47 @@ CRÍTICO / PROHIBIDO ABSOLUTO:
 
 </details>
 
+### Intento 1 — resultado auditado
+
+**Estado:** ⚠️ Falló — espaciado desparejo entre ítems.
+
+**Qué falló:** los 6 ítems (Visera anti scratch, Preparado anti empañante, ERS, Liner desmontable y lavable, Cubre barbilla, Cubre nariz) están todos presentes y con el texto correcto, pero el espacio vertical entre el ítem 4 (Liner) y el ítem 5 (Cubre barbilla) salió mucho más grande que entre los demás — se ve como un hueco vacío, como si faltara un ítem, aunque no falta ninguno. Es un defecto de espaciado, no de contenido.
+
+**Qué hay que hacer:** reintentar con el prompt reforzado (Intento 2, abajo), que fuerza espaciado uniforme entre los 6 ítems.
+
+### Intento 2 — prompt corregido con espaciado uniforme forzado
+
+<details><summary>Prompt usado</summary>
+
+```
+Diseñá una tarjeta de HOMOLOGACIÓN para el casco EDGEPRO STELLAR, mismo
+formato vertical angosto 4K que la referencia. Título: "HOMOLOGACIÓN —
+DOT & ECE 22.06" (usar exactamente este texto completo).
+
+Lista de EXACTAMENTE 6 ítems, en este orden:
+1. VISERA ANTI SCRATCH
+2. PREPARADO PARA ANTI EMPAÑANTE
+3. SISTEMA DE EMERGENCIA DE LIBERACIÓN RÁPIDA (ERS)
+4. LINER DESMONTABLE Y LAVABLE
+5. CUBRE BARBILLA
+6. CUBRE NARIZ
+
+CRÍTICO — ESPACIADO UNIFORME (defecto real detectado en un intento anterior, no lo repitas): el espacio vertical entre cada uno de los 6 ítems debe ser EXACTAMENTE IGUAL — mismo espacio entre el 1 y el 2, entre el 2 y el 3, entre el 3 y el 4, entre el 4 y el 5, y entre el 5 y el 6. NO dejes un hueco más grande entre ningún par de ítems que entre los demás — el intento anterior dejó un espacio enorme y vacío entre el ítem 4 (Liner) y el ítem 5 (Cubre barbilla), como si faltara texto ahí, aunque los 6 ítems estaban presentes. Distribuí el área gris completa de forma pareja entre los 6 ítems, de arriba a abajo, sin huecos irregulares.
+
+CRÍTICO — TEXTO COMPLETO: los 6 ítems deben tener su texto visible y legible, ninguno puede quedar en blanco, cortado ni con solo la línea separadora sin texto arriba.
+
+PROHIBIDO ABSOLUTO:
+- NO incluir "Sistema de liberación rápida del visor" — N/A para Stellar.
+- No mostrar certificación incompleta.
+- No dejar ningún espacio vacío entre ítems más grande que los demás.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría.
+
 <details><summary>Prompt B — Grid de íconos Stellar (6/6, completo)</summary>
 
 ```
