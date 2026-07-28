@@ -1,7 +1,6 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { usarMovimientoReducido } from "@/lib/movimiento";
 
@@ -78,18 +77,21 @@ export default function HeroVidrio() {
         </h1>
 
         <div className="mt-8 flex flex-wrap gap-3">
-          <Link
-            href="/plataforma"
+          {/* Anclas dentro de la misma pagina, no rutas: el recorrido es por
+              scroll. El desplazamiento suave lo da scroll-behavior en
+              globals.css, sin JavaScript. */}
+          <a
+            href="#agentes"
             className="rounded-full bg-white px-7 py-3 text-base font-semibold text-[#071634] transition hover:bg-sky-100"
           >
             Ver la plataforma
-          </Link>
-          <Link
-            href="/flujos"
+          </a>
+          <a
+            href="#flujos"
             className="rounded-full border border-white/60 px-7 py-3 text-base font-semibold text-white transition hover:border-white/70 hover:bg-white/10"
           >
             Ver los flujos
-          </Link>
+          </a>
         </div>
 
         {/* La pantalla: sale desde el borde inferior del panel y sobresale por

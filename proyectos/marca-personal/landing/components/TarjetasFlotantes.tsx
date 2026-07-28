@@ -61,11 +61,11 @@ export default function TarjetasFlotantes({
   contenido?: ContenidoTarjetas;
 }) {
   return (
-    <div className="relative mx-auto aspect-[4/3.4] w-full max-w-xl">
+    <div className="relative mx-auto aspect-[4/2.9] w-full max-w-xl">
       {/* Resplandor detrás — profundidad sin necesitar 3D real */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-1/2 h-[70%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cf-accent/25 blur-3xl" />
-        <div className="absolute right-0 top-0 h-[45%] w-[45%] rounded-full bg-cf-accent2/30 blur-3xl" />
+        <div className="absolute left-1/2 top-1/2 h-[70%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cf-accent/12 blur-3xl" />
+        <div className="absolute right-0 top-0 h-[45%] w-[45%] rounded-full bg-cf-accent2/15 blur-3xl" />
       </div>
 
       {/* Tarjeta 1 — la principal */}

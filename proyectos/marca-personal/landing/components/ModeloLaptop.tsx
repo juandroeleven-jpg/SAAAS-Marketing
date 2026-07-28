@@ -28,6 +28,8 @@ export type Escena = "flujo" | "agentes";
 // INFERIOR en V -- v por encima de ~0.43 cae en la parte de atras de la
 // tapa. Los valores de abajo son esa region frontal con un margen adentro
 // que hace de bisel.
+const FPS_TEXTURA = 12;
+
 const PANTALLA_UV = { uMin: 0.038, uMax: 0.466, vMin: 0.522, vMax: 0.826 };
 
 function usarTexturaPantalla(escena: Escena, quieto: boolean) {
@@ -87,13 +89,14 @@ function usarTexturaPantalla(escena: Escena, quieto: boolean) {
     if (!ctx) return;
     const t = quieto ? 0 : state.clock.getElapsedTime();
     if (quieto && ultimoDibujo.current > 0) return;
-    // Cada redibujado sube ~23 MB de textura (3072x1920) a la GPU. A 24 por
-    // segundo eran ~566 MB/s, suficiente para producir tirones en equipos
-    // reales. A 15 baja a ~354 MB/s y el contenido de la pantalla igual se
-    // ve fluido: son transiciones lentas, no accion rapida. Importante: esto
-    // NO limita el 3D -- el laptop sigue flotando y girando a 60 fps, porque
-    // el render de la escena es independiente de este redibujado.
-    if (t - ultimoDibujo.current < 1 / 15) return;
+    // La subida de la textura es lo unico que produce PICOS: ocurre dentro
+    // del mismo frame, asi que cada vez que toca, ese frame absorbe los
+    // 10,5 MB de golpe. Bajar la frecuencia no reduce el pico pero si cuantas
+    // veces por segundo aparece. A 12 Hz el contenido sigue leyendose fluido
+    // (son transiciones lentas) y el 3D no se ve afectado: el render de la
+    // escena es independiente de este redibujado y sigue a la tasa del
+    // monitor.
+    if (t - ultimoDibujo.current < 1 / FPS_TEXTURA) return;
     ultimoDibujo.current = t;
     const W = canvas.width;
     const H = canvas.height;
@@ -233,7 +236,7 @@ function Flotacion({
     // sentia inquieto; asi respira. La amplitud sube apenas para que, aun
     // siendo mas lento, se siga notando.
     grupo.current.position.y =
-      Math.sin(tFlot * 0.72) * 0.075 + restante * 0.25;
+      Math.sin(tFlot * 0.72) * 0.06 + restante * 0.22;
     grupo.current.rotation.y = restante * GIRO_ENTRADA;
     // Balanceo leve, con otro periodo para que no se sienta mecanico.
     grupo.current.rotation.z = Math.sin(tFlot * 0.46) * 0.022;
@@ -268,16 +271,17 @@ const DIRECCION_CAMARA = new THREE.Vector3(-0.16, 0.22, -1.5);
 // completo, con aire alrededor, para que se lea flotando en vez de cortado.
 // El objeto mide ~1.04 unidades de alto ya escalado. Con fov 36 el alto
 // visible a distancia d es 2*d*tan(18deg) = 0.65*d, o sea 0.9909*ACERCAMIENTO.
-// A 1.25 el alto visible es 1.239 y sobran (1.239-1.04)/2 = 0.0995 por lado.
-// Por eso la flotacion baja a +-0.075: con la amplitud anterior de 0.13 el
-// teclado se saldria del cuadro en el punto bajo del ciclo. Acercar la camara
-// y bajar la amplitud van juntos, no son dos ajustes independientes. A 1.28 la distancia era
+// A 1.20 el alto visible es 1.189 y sobran (1.189-1.04)/2 = 0.0745 por lado.
+// Por eso la flotacion baja a +-0.06: con la amplitud anterior el teclado se
+// saldria del cuadro en el punto bajo del ciclo. Acercar la camara y bajar la
+// amplitud van juntos, no son dos ajustes independientes. Margen real que
+// queda: 0.0145 unidades. A 1.28 la distancia era
 // 1.94 y el alto visible 1.26: sobraban 0.11 arriba y abajo, que la
 // flotacion de +-0.12 se comia -- en el punto bajo del ciclo el teclado se
 // salia del cuadro. A 1.45 la distancia es 2.20 y el alto visible 1.43, o
 // sea 0.075 de margen POR ENCIMA de la flotacion. Pantalla y teclado quedan
 // siempre completos.
-const ACERCAMIENTO = 1.25;
+const ACERCAMIENTO = 1.20;
 const POSICION_CAMARA = DIRECCION_CAMARA.clone().multiplyScalar(ACERCAMIENTO);
 
 // Angulos esfericos del encuadre inicial, usados para acotar la orbita.
@@ -320,7 +324,7 @@ export default function ModeloLaptop({
     // columna en desktop para ganar tamano sin obligar a acercar la camara.
     <div
       ref={ref}
-      className="relative aspect-[5/3.9] w-full lg:-mr-[10vw] lg:w-[calc(100%+10vw)]"
+      className="relative aspect-[5/3.9] w-full lg:-mr-[14vw] lg:w-[calc(100%+14vw)]"
       role="img"
       aria-label={
         escena === "agentes"
@@ -335,7 +339,10 @@ export default function ModeloLaptop({
         // Apagado fuera de pantalla: rAF no se detiene por scroll.
         frameloop={visible ? "always" : "never"}
         camera={{ fov: 36, position: POSICION_CAMARA.toArray() }}
-        dpr={Math.min(3, typeof window !== "undefined" ? window.devicePixelRatio : 1)}
+        // dpr tope 2, no 3: en un movil de dpr 3 se rasterizarian 2,25 veces
+        // mas pixeles por un detalle que no se percibe a esa densidad.
+        dpr={[1, 2]}
+        gl={{ antialias: true, powerPreference: "high-performance" }}
       >
         <CamaraFija />
         <Iluminacion />
