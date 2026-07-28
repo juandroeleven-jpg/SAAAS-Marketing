@@ -126,6 +126,10 @@ real sin repetir con el Prompt A. El único ítem restante confirmado con X
 es de empaque/logística (Master Box o Inner Box) — no se agrega automático,
 usarlo solo si el usuario lo aprueba explícitamente para completar a 6.
 
+CRÍTICO — íconos nuevos, no reciclados de la referencia:
+- Diseñá un ícono lineal NUEVO específico para cada ítem, incluido "DOBLE VISERA" (no está en la referencia de Kratos/Vortex, hay que crearlo desde cero) y especialmente "HEBILLA MICROMÉTRICA" — si la referencia muestra ese ícono con tache/X roja, NO lo copies así, Shanghai sí tiene esta feature confirmada, el ícono debe ser positivo/limpio.
+- No reutilices el dibujo de ningún ícono de la referencia que corresponda a un ítem que no está en esta lista de 5.
+
 CRÍTICO / PROHIBIDO ABSOLUTO:
 - NO incluir "Diseño modular" — Shanghai es Full Face, contradicción de categoría.
 - NO incluir "Con luz LED" — N/A para Shanghai.

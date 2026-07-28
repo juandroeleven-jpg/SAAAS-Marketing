@@ -169,6 +169,11 @@ Los 6 ítems, en este orden exacto:
 
 (Los 3 ítems añadidos —Kit de mecanismo visor, Material exterior ABS, Interior EPS— se eligieron por ser features físicas/técnicas del casco, coherentes con un grid de producto, en vez de ítems de empaque como Master Box o maletín.)
 
+CRÍTICO — íconos nuevos, no reciclados de la referencia:
+- Diseñá un ícono lineal NUEVO y específico para cada uno de los 6 ítems de esta lista, que represente visualmente ese ítem en particular.
+- La imagen de referencia que se adjunta tiene ítems DISTINTOS (ej. "Diseño modular", "Con luz LED", "Doble visera") — NO reutilices el dibujo/pictograma de ningún ícono de la referencia que corresponda a un ítem que no está en esta lista. Si el ítem nuevo (ej. "Kit de mecanismo visor", "Material exterior ABS", "Interior EPS") no aparece en la referencia, creá el pictograma desde cero.
+- Mantené SOLO el estilo visual de la referencia (línea, grosor, color rojo/bordo, forma de octágono, tipografía), nunca el contenido/dibujo interno de un ícono que no corresponde al ítem de esta lista.
+
 CRÍTICO — prohibiciones explícitas:
 - NO incluir "Diseño modular" — el excel confirma que Kratos es FULL FACE, no modular.
 - NO incluir "Con luz LED" ni "Doble visera" — ambos N/A para Kratos en el excel.

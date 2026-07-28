@@ -117,6 +117,10 @@ Lista de EXACTAMENTE 6 ítems, en este orden:
 5. CON PINLOCK
 6. KIT DE MECANISMO VISOR
 
+CRÍTICO — íconos nuevos, no reciclados de la referencia:
+- Diseñá un ícono lineal NUEVO específico para cada ítem, incluido "CON PINLOCK" (probablemente no está en la referencia, hay que crearlo desde cero) y especialmente "HEBILLA MICROMÉTRICA" y "DOBLE VISERA" — si la referencia muestra alguno de estos íconos con tache/X roja o ausente, NO lo copies así, ambos están confirmados con X para Stellar y deben verse de forma positiva/limpia.
+- No reutilices el dibujo de ningún ícono de la referencia que corresponda a un ítem que no está en esta lista.
+
 CRÍTICO / PROHIBIDO ABSOLUTO:
 - NO incluir "Diseño modular" — Stellar es Full Face, no modular.
 - NO incluir "Con luz LED" — N/A para Stellar.

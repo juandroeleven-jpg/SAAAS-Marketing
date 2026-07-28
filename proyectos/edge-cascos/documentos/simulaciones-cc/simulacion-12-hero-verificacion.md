@@ -165,6 +165,10 @@ LOS 4 ÍTEMS A REPRESENTAR (en este orden):
 3. KIT DE MECANISMO VISOR
 4. HEBILLA DOBLE D
 
+CRÍTICO — íconos nuevos, no reciclados de la referencia:
+- Diseñá un ícono lineal NUEVO específico para cada ítem, especialmente "HEBILLA DOBLE D" — la imagen de referencia (de otro modelo) probablemente muestre un ícono de "hebilla micrométrica" con tache o X; NO lo copies, doble D es un broche físicamente distinto y debe dibujarse desde cero, sin tache.
+- No reutilices el dibujo de ningún ícono de la referencia que corresponda a un ítem que no está en esta lista de 4.
+
 PROHIBIDO ABSOLUTO:
 - No agregar un quinto o sexto ítem para "completar" el grid a 6.
 - No incluir "Hebilla micrométrica" (no confirmada; el dato correcto es doble D).

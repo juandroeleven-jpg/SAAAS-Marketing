@@ -154,6 +154,11 @@ LISTA DE ÍTEMS (exactamente 6, en este orden, uno por celda):
 
 CRÍTICO: cantidad de ítems exactamente 6, en grid 2x3, en el orden listado.
 
+CRÍTICO — íconos correctos, no copiados con defecto de la referencia:
+- Diseñá un ícono lineal limpio y correcto para cada uno de los 6 ítems.
+- Si algún ícono de la imagen de referencia tiene una marca de tache, X roja, prohibición o cualquier símbolo de exclusión superpuesto (ej. el ícono de "Hebilla micrométrica"), NO lo copies así — ese ítem SÍ está confirmado como presente en este modelo, el ícono debe representarlo de forma positiva/limpia, sin tachar.
+- Mantené solo el estilo visual de la referencia (línea, grosor, color rojo/bordo, octágono, tipografía), nunca un defecto o marca de exclusión que la referencia tenga por error.
+
 PROHIBIDO ABSOLUTO:
 - No incluir "Diseño modular", "Con luz led", "Doble visera" ni "Con pinlock" — Vortex no los tiene.
 - No incluir "Visera anti scratch" ni "Quick Visor Release System" — ya están en el Prompt A, evitar duplicado.
@@ -169,16 +174,18 @@ Ambos prompts pasaron la auditoría sin cambios (12/12 claims correctos) — lis
 
 **Prompt A (tarjeta HOMOLOGACIÓN): ❌ Falló — el generador sustituyó un ítem aunque el prompt era correcto.** El resultado trae "PREPARADO PARA ANTI EMPAÑANTE" (el ítem que le correspondía a Kratos, el caso generado inmediatamente antes en la misma sesión) en vez de "SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR" (el ítem correcto de Vortex, confirmado con X en el excel, presente en el prompt real usado). **Hallazgo de fondo: contaminación entre generaciones de la misma sesión** — el modelo generativo parece arrastrar/mezclar datos del caso anterior (Kratos) incluso cuando el prompt actual es correcto, no un error de quién escribió el prompt.
 
-**Prompt B (grid de íconos): ⚠️ Falló parcialmente — contenido correcto, un ícono mal.** Los 6 ítems generados sí son los correctos para Vortex (Canal para lentes, Hebilla micrométrica, Espacio para Bluetooth, Kit de mecanismo visor, Material exterior ABS, Interior EPS), todos confirmados en el excel. Pero el ícono de "HEBILLA MICROMÉTRICA" salió con una **X roja tachándolo** (ni siquiera parece un ícono de hebilla) — el prompt pedía explícitamente "ícono de hebilla, SIN tachar, SIN la X roja" y no se respetó.
+**Prompt B (grid de íconos): ⚠️ Falló parcialmente — contenido correcto, un ícono mal, y 2 etiquetas de texto truncadas.** Los 6 ítems generados sí son los correctos para Vortex (Canal para lentes, Hebilla micrométrica, Espacio para Bluetooth, Kit de mecanismo visor, Material exterior ABS, Interior EPS), todos confirmados en el excel. Pero:
+- El ícono de "HEBILLA MICROMÉTRICA" salió con una **X roja tachándolo** (ni siquiera parece un ícono de hebilla) — el prompt pedía explícitamente "ícono de hebilla, SIN tachar, SIN la X roja" y no se respetó.
+- El texto de dos etiquetas salió **truncado**: "MATERIAL EXTERIOR ABS" (falta "ALTA RESISTENCIA") e "INTERIOR EPS" (falta "DE ALTA RESISTENCIA") — el prompt pedía el texto completo. Comparando contra el resultado de Kratos, donde esas mismas dos etiquetas sí salieron completas, confirma que es un defecto puntual de esta generación, no un problema del prompt. El resto del texto (títulos, certificación, los otros 4 ítems) salió limpio y completo, sin errores de ortografía ni acentuación.
 
 **Qué falló:**
 - Prompt A: el modelo sustituyó un ítem por el del caso anterior (Kratos) pese a que el prompt de Vortex era correcto — falla de fidelidad del generador, no del prompt.
-- Prompt B: ícono de hebilla micrométrica generado con tache/X roja, contradice la instrucción explícita del prompt.
+- Prompt B: ícono de hebilla micrométrica generado con tache/X roja; dos etiquetas de texto truncadas (falta "alta resistencia" en ambas).
 
 **Qué hay que hacer:**
 1. Reintentar el Prompt A en una llamada/sesión de generación **aislada** (nueva conversación con la herramienta de generación, no continuar en el mismo hilo donde se generó Kratos) para eliminar la posible contaminación cruzada entre casos.
 2. Reforzar el prompt con una línea explícita: "IGNORA cualquier lista de ítems usada en imágenes anteriores de esta sesión — la única lista válida es la de este prompt." y repetir la lista de 6 ítems una vez más al final del prompt, como refuerzo.
-3. Reintentar el Prompt B agregando: "el ícono de HEBILLA MICROMÉTRICA debe mostrar únicamente el broche/hebilla, sin ninguna marca de tache, X, prohibición ni símbolo de exclusión superpuesto — ícono limpio y positivo, no negativo."
+3. Reintentar el Prompt B agregando: "el ícono de HEBILLA MICROMÉTRICA debe mostrar únicamente el broche/hebilla, sin ninguna marca de tache, X, prohibición ni símbolo de exclusión superpuesto — ícono limpio y positivo, no negativo." y "el texto de cada etiqueta debe reproducirse COMPLETO, tal cual está escrito en la lista — no lo acortes ni le quites palabras (ej. 'MATERIAL EXTERIOR ABS ALTA RESISTENCIA' completo, no 'MATERIAL EXTERIOR ABS' solo)."
 4. Aplicar esta misma precaución (aislar sesión de generación por caso) a Kratos y a los casos que sigan — ver nota agregada en `orquestacion-agentes-paralelos.md`.
 
 ---
