@@ -19,6 +19,8 @@
 | 6d | [↳ Stellar](simulaciones-cc/simulacion-6d-stellar.md) | Etapa 1 | Armado por agente en paralelo |
 | 7 | [Catálogo / ficha técnica automatizada](simulaciones-cc/simulacion-7-catalogo.md) | Etapa 3 — Catálogo/ficha | 🧪 Método confirmado, falta primera ficha real |
 | 8 | [Pipeline Meshy AI + Blender para mapeo de textura exacto](simulaciones-cc/simulacion-8-meshy-blender.md) | Etapa 2 — Turntable (continuación) | 🧪 Flujo definido, falta conectar cuenta dedicada del usuario |
+| 9 | [Sistema Ilustrador Automático (licencia → collage → variantes)](simulaciones-cc/simulacion-9-ilustrador-automatico.md) | Etapa 0.5 — previa a Ilustración | 🧪 Diseño sin ejecutar |
+| 10 | [Kratos — verificación ficha vs. excel maestro](simulaciones-cc/simulacion-10-kratos-verificacion.md) | Etapa 3 — Catálogo | ⚠️ 4 de 13 claims + certificación no coinciden con el excel |
 
 ---
 
