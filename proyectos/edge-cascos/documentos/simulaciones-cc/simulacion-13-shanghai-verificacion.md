@@ -10,7 +10,7 @@ Cuarto caso del catálogo, pipeline **Tipo C**, con Agente Auditor + Generador i
 flowchart TD
     T1["⚖️ Resolver certificación: ficha dice 'DOT FNVSS 510'<br/>(sin ECE visible), excel dice 'DOT & ECE'<br/>(sin el número 22.06) — ninguna fuente está completa"]
     T2["🖼️ Este es el TERCER caso seguido (después de Vortex<br/>y Hero) con un rectángulo negro sólido en el mismo<br/>lugar del layout — revisar si es un problema del<br/>template maestro, no de cada ficha individual"]
-    T3["🔩 Decidir si el grid de íconos queda en 5 ítems<br/>o se completa a 6 con un ítem de empaque<br/>(Master Box / Inner Box) — no hay más features<br/>físicas confirmadas disponibles"]
+    T3["🔩 Decidir si el grid de íconos queda en 4 ítems<br/>o se completa con un ítem de empaque<br/>(Master Box / Inner Box) — no hay más features<br/>físicas confirmadas disponibles"]
 ```
 
 <details><summary>Claims transcritos de la ficha Shanghai</summary>
@@ -107,28 +107,31 @@ CRÍTICO / PROHIBIDO ABSOLUTO:
 
 </details>
 
-<details><summary>Prompt B — Grid de íconos Shanghai (5/6 — falta 1 sin dato confirmado)</summary>
+<details><summary>Prompt B — Grid de íconos Shanghai (4/6 — CORREGIDO, "Doble visera" sacado por error de transcripción)</summary>
+
+**Corrección:** la versión anterior de este prompt incluía "DOBLE VISERA" como ítem confirmado — error real, el excel dice **N/A** para Shanghai en esa fila (ver tabla de auditoría arriba). Se saca y el grid queda en 4 ítems confirmados, no 5.
 
 ```
 Diseñá un grid de íconos 2x3 para el casco EDGE/EDGEPRO modelo "Shanghai",
 mismo formato 4K, fondo gris claro, íconos lineales rojo/bordo en octágono
 que la referencia.
 
-Ítems confirmados (5, no 6 — ver nota):
+Ítems confirmados (4, no 6 — ver nota):
 1. CANAL PARA LENTES
 2. HEBILLA MICROMÉTRICA
 3. ESPACIO PARA BLUETOOTH
-4. DOBLE VISERA
-5. INTERIOR EPS DE ALTA RESISTENCIA
+4. INTERIOR EPS DE ALTA RESISTENCIA
 
-NOTA: no hay un 6º ítem confirmado por el excel que sea una feature física
-real sin repetir con el Prompt A. El único ítem restante confirmado con X
-es de empaque/logística (Master Box o Inner Box) — no se agrega automático,
-usarlo solo si el usuario lo aprueba explícitamente para completar a 6.
+NOTA: NO incluir "Doble visera" — el excel confirma N/A para Shanghai, no
+está disponible como ítem. No hay más features físicas confirmadas por el
+excel para completar el grid a 5 o 6 sin repetir con el Prompt A. Los únicos
+ítems restantes confirmados con X son de empaque/logística (Master Box o
+Inner Box) — no se agregan automático, usarlos solo si el usuario los
+aprueba explícitamente para completar el grid.
 
 CRÍTICO — íconos nuevos, no reciclados de la referencia:
-- Diseñá un ícono lineal NUEVO específico para cada ítem, incluido "DOBLE VISERA" (no está en la referencia de Kratos/Vortex, hay que crearlo desde cero) y especialmente "HEBILLA MICROMÉTRICA" — si la referencia muestra ese ícono con tache/X roja, NO lo copies así, Shanghai sí tiene esta feature confirmada, el ícono debe ser positivo/limpio.
-- No reutilices el dibujo de ningún ícono de la referencia que corresponda a un ítem que no está en esta lista de 5.
+- Diseñá un ícono lineal NUEVO específico para cada ítem, especialmente "HEBILLA MICROMÉTRICA" — si la referencia muestra ese ícono con tache/X roja, NO lo copies así, Shanghai sí tiene esta feature confirmada, el ícono debe ser positivo/limpio.
+- No reutilices el dibujo de ningún ícono de la referencia que corresponda a un ítem que no está en esta lista de 4 (esto incluye "Doble visera", que NO va en este prompt — ver corrección arriba).
 
 CRÍTICO / PROHIBIDO ABSOLUTO:
 - NO incluir "Diseño modular" — Shanghai es Full Face, contradicción de categoría.
@@ -138,11 +141,11 @@ CRÍTICO / PROHIBIDO ABSOLUTO:
 
 </details>
 
-### Estado: ⚠️ Falló — 4 de 13 claims + 1 sin dato no coinciden; prompts corregidos entregados, uno de los dos queda en 5/6 ítems por falta de dato
+### Estado: ⚠️ Falló — 4 de 13 claims + 1 sin dato no coinciden; prompts corregidos entregados, uno de los dos queda en 4/6 ítems por falta de dato
 
 **Qué hay que hacer:**
 1. Decidir certificación real (ni la ficha ni el excel están completos).
-2. Confirmar con el fabricante si hay una 6ª feature física para completar el grid B, o aceptar 5 ítems / usar un ítem de empaque.
+2. Confirmar con el fabricante si hay más features físicas para completar el grid B, o aceptar 4 ítems / usar un ítem de empaque.
 3. Revisar el template maestro por el rectángulo negro recurrente (3er caso seguido).
 4. Subir los archivos originales como adjunto real para versionarlos.
 
