@@ -59,8 +59,8 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.22);
   /* saturate ademas de blur: sin el, el color que se ve a traves del vidrio
      queda lavado y el panel parece gris sucio en vez de vidrio blanco. */
-  -webkit-backdrop-filter: blur(16px) saturate(160%);
-  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(165%);
+  backdrop-filter: blur(12px) saturate(165%);
   /* Sombra exterior para despegarlo del fondo + linea interior clara arriba,
      que es lo que simula el canto iluminado de una lamina de vidrio. */
   box-shadow:

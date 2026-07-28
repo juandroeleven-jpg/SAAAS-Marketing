@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ProveedorMovimiento from "@/components/ProveedorMovimiento";
+import CursorEnergia from "@/components/CursorEnergia";
 
 export const metadata: Metadata = {
   title: "Codeflow — Automatización e IA aplicada",
@@ -16,7 +17,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className="font-display antialiased">
-        <ProveedorMovimiento>{children}</ProveedorMovimiento>
+        <ProveedorMovimiento>
+          <CursorEnergia />
+          {children}
+        </ProveedorMovimiento>
       </body>
     </html>
   );

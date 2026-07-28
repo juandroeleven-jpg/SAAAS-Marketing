@@ -8,6 +8,7 @@ import { DISENO, dibujarFlujo } from "@/lib/flujo";
 import { dibujarAgentes } from "@/lib/agentes";
 import { usarMovimientoReducido } from "@/lib/movimiento";
 import { usarPunteroFino, usarVisibilidad } from "@/lib/visibilidad";
+import { usarPuntero } from "@/lib/puntero";
 
 // Que se ve en la pantalla del laptop. Las dos escenas comparten espacio de
 // diseno, asi que son intercambiables sin tocar el mapeo UV ni la geometria.
@@ -28,7 +29,7 @@ export type Escena = "flujo" | "agentes";
 // INFERIOR en V -- v por encima de ~0.43 cae en la parte de atras de la
 // tapa. Los valores de abajo son esa region frontal con un margen adentro
 // que hace de bisel.
-const FPS_TEXTURA = 12;
+const FPS_TEXTURA = 10;
 
 const PANTALLA_UV = { uMin: 0.038, uMax: 0.466, vMin: 0.522, vMax: 0.826 };
 
@@ -196,6 +197,12 @@ function Laptop({ escena, quieto }: { escena: Escena; quieto: boolean }) {
 // en su sitio, con un giro que se endereza al llegar (no aparece "puesto",
 // llega). Despues queda flotando: sube y baja con un seno lento y se inclina
 // apenas, para que se lea suspendido en el aire y no apoyado en el borde.
+// Cuanto gira el laptop siguiendo al raton, en radianes en cada extremo de la
+// ventana, con inercia para que no copie el temblor del puntero.
+const SEGUIMIENTO_Y = 0.16;
+const SEGUIMIENTO_X = 0.07;
+const INERCIA = 0.06;
+
 const DURACION_ENTRADA = 1.5; // segundos
 const DESPLAZAMIENTO_ENTRADA = 2.6; // unidades hacia la derecha
 const GIRO_ENTRADA = 0.4; // rad extra que se endereza al llegar
@@ -209,6 +216,8 @@ function Flotacion({
 }) {
   const grupo = useRef<THREE.Group>(null);
   const inicio = useRef<number | null>(null);
+  const puntero = usarPuntero();
+  const giro = useRef({ x: 0, y: 0 });
 
   useFrame((state) => {
     if (!grupo.current) return;
@@ -235,12 +244,20 @@ function Flotacion({
     // Movimiento lento a proposito: periodo ~8.7s (2*PI / 0.72). A 1.15 se
     // sentia inquieto; asi respira. La amplitud sube apenas para que, aun
     // siendo mas lento, se siga notando.
+    // Objetivo de giro segun donde este el raton, con inercia: el objeto se
+    // orienta hacia el puntero en vez de quedarse mirando siempre al frente.
+    const raton = puntero.current;
+    const objY = raton.activo ? raton.x * SEGUIMIENTO_Y : 0;
+    const objX = raton.activo ? raton.y * SEGUIMIENTO_X : 0;
+    giro.current.y += (objY - giro.current.y) * INERCIA;
+    giro.current.x += (objX - giro.current.x) * INERCIA;
+
     grupo.current.position.y =
       Math.sin(tFlot * 0.72) * 0.06 + restante * 0.22;
-    grupo.current.rotation.y = restante * GIRO_ENTRADA;
+    grupo.current.rotation.y = restante * GIRO_ENTRADA + giro.current.y;
     // Balanceo leve, con otro periodo para que no se sienta mecanico.
     grupo.current.rotation.z = Math.sin(tFlot * 0.46) * 0.022;
-    grupo.current.rotation.x = Math.sin(tFlot * 0.36) * 0.016;
+    grupo.current.rotation.x = Math.sin(tFlot * 0.36) * 0.016 + giro.current.x;
   });
 
   return <group ref={grupo}>{children}</group>;
