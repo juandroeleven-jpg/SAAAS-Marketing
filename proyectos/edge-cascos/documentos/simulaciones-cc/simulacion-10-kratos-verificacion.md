@@ -204,6 +204,22 @@ CRÍTICO — prohibiciones explícitas:
 
 **Qué hay que hacer:** reintentar el Prompt A (1er reintento) con una instrucción reforzada contra duplicados — agregar explícitamente: "cada uno de los 6 ítems debe aparecer UNA SOLA VEZ, no repitas ningún ítem aunque el espacio vertical sobre o falte".
 
+## Re-auditoría de la ficha completa corregida (súper crítica, corrida en segundo plano)
+
+El usuario mandó la ficha Kratos completa (con logo EDGE, renders, foto lifestyle, variantes de color) ya con el duplicado del Prompt A corregido — 6 ítems de homologación (no 7) y certificación "DOT & ECE 22.06" completa. Se pidió una auditoría explícitamente escéptica, sin dar nada por bueno.
+
+**Los 12 claims (6 homologación + 6 grid) y la certificación coinciden EXACTAMENTE, letra por letra, con el excel.** El ajuste de 7 a 6 ítems de homologación es correcto (los candidatos a 7° ítem — doble visera, hebilla doble D, luz LED, quick visor release — son todos N/A).
+
+**Pero la ficha NO está 100% limpia — el auditor encontró 5 problemas reales que no se habían señalado antes:**
+
+1. **4 features confirmadas por el excel que la ficha nunca comunica:** Con Pinlock, Master Box, Inner Box, y sobre todo **Con maletín de lujo** — un accesorio premium con peso comercial que llama la atención que falte justo en la "versión corregida". No son errores (nada de lo que dice la ficha es falso), son oportunidades de venta no usadas.
+2. **El rectángulo negro sigue sin resolver** — persiste en esta versión "corregida" también. Confirma que la corrección fue solo de texto (contenido de los 2 prompts), no del asset de diseño faltante. Sigue siendo el mismo patrón transversal ya visto en Vortex, Hero, Shanghai y Shift.
+3. **El ícono de "Hebilla micrométrica" no se puede verificar solo por transcripción de texto** — si tiene una marca de tache/X superpuesta (como pasó en el intento generado de Vortex), contradiría el texto que sí la reclama. Requiere inspección visual directa del archivo, no alcanza con leer la lista.
+4. **El typo "HOMOLOGACÓN"** (falta la segunda "I") sigue presente — heredado de toda la línea del catálogo, pero real y visible, no se descarta solo por ser antiguo.
+5. **El N° de air vents (3, según el excel) no es verificable** desde la descripción — habría que contar las ventilaciones directamente en el render.
+
+**Estado: ⚠️ Contenido de texto correcto, pero NO aprobable como versión final** hasta resolver el rectángulo negro, confirmar visualmente el ícono de hebilla micrométrica, y decidir si se incorporan las 4 oportunidades no usadas (especialmente el maletín de lujo).
+
 ---
 
-**Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación) + Agente Generador (prompts corregidos) + auditoría del resultado generado (Intento 1: grid aprobado, homologación con duplicado a reintentar), corridos en esta sesión a pedido explícito de auditar el primer caso del catálogo (Kratos) bajo el pipeline de orquestación en paralelo.
+**Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación) + Agente Generador (prompts corregidos) + auditoría del resultado generado (Intento 1) + re-auditoría súper crítica de la ficha completa corregida (corrida en segundo plano), corridos en esta sesión a pedido explícito de auditar el primer caso del catálogo (Kratos) bajo el pipeline de orquestación en paralelo.
