@@ -26,6 +26,7 @@
 | 13 | [Shanghai — verificación ficha vs. excel maestro](simulaciones-cc/simulacion-13-shanghai-verificacion.md) | Etapa 3 — Catálogo | ⚠️ 8 de 13 claims coinciden; 3er caso seguido con rectángulo negro recurrente en el layout |
 | 14 | [Stellar — verificación ficha vs. excel maestro](simulaciones-cc/simulacion-14-stellar-verificacion.md) | Etapa 3 — Catálogo | ⚠️ 10 de 13 claims coinciden — mejor resultado del catálogo hasta ahora, prompts completados sin ítems de empaque |
 | 15 | [Shift — verificación ficha vs. excel maestro](simulaciones-cc/simulacion-15-shift-verificacion.md) | Etapa 3 — Catálogo | ⚠️ 9 de 13 claims coinciden; "hebilla micrométrica" N/A para este modelo (caso distinto a los demás); 4to caso seguido con rectángulo negro recurrente |
+| 16 | [Evolution 929 — verificación ficha vs. excel maestro](simulaciones-cc/simulacion-16-evolution929-verificacion.md) | Etapa 3 — Catálogo | ✅ 11 de 13 claims coinciden — mejor resultado del catálogo; primer caso con "Diseño modular" real (tipo Flip Up); primer caso de la marca EDGE (no EDGEPRO) |
 
 ---
 
