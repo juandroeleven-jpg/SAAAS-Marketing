@@ -140,6 +140,122 @@ CRÍTICO / PROHIBIDO ABSOLUTO:
 2. Sacar "diseño modular", "con luz LED" y "liberación rápida del visor" antes de reimprimir/republicar.
 3. Subir los archivos originales como adjunto real para versionarlos.
 
+## Sub-caso — 4 variantes de color (Tipo A, geometría 100% intacta)
+
+Pedido del usuario: 4 colorways nuevos del mismo casco (asumiendo que es Stellar por la silueta redondeada, pivote cromado y visera clara de la foto adjuntada — a confirmar), sin cambiar ningún componente físico, solo color/acabado de superficie.
+
+| Variante | Carcasa | Detalles | Visera | Acabado |
+|---|---|---|---|---|
+| 1 | Blanco | Piezas puntuales en azul oscuro | Sin cambios (transparente) | Igual al original |
+| 2 | Gris | — | Ahumada azul (semitransparente) | Igual al original |
+| 3 | Morado pastel | Detalles en rosa | Sin cambios (transparente) | Igual al original |
+| 4 | Azul oscuro | — | Sin cambios (transparente) | **Brillante/glossy** (único caso que cambia de mate a brillante) |
+
+<details><summary>Prompt Variante 1 — Blanco + azul oscuro, visera sin cambios</summary>
+
+```
+Genera una imagen de producto del mismo casco de la referencia adjunta,
+en formato y ángulo idénticos (vista 3/4 lateral), fondo idéntico.
+
+CRÍTICO — GEOMETRÍA INTACTA: no cambies absolutamente ningún componente
+físico del casco — mismo pivote cromado de la visera, misma forma y
+posición de la ventilación lateral, misma silueta redondeada, mismo
+borde inferior, misma correa/mentonera. Es el mismo objeto 3D, solo
+cambia el color de la superficie.
+
+CAMBIO DE COLOR — ÚNICO cambio permitido:
+- Carcasa principal: BLANCO (mismo tipo de acabado/textura que el original,
+  no agregar brillo ni textura nueva salvo que se pida).
+- Algunas piezas puntuales (mentonera inferior / zona de la ventilación /
+  franja del borde) en AZUL OSCURO — aplicar como bloque de color sólido,
+  no como degradé ni gráfico.
+- Visera: SIN CAMBIOS — mantener exactamente transparente/clara como en
+  la referencia, no tintar, no oscurecer.
+- El pivote cromado y cualquier pieza metálica quedan igual (cromado),
+  no se pintan.
+
+PROHIBIDO ABSOLUTO: no agregar gráficos, logos, texto, ni cambiar la forma,
+tamaño o posición de ningún elemento. Solo color de carcasa + piezas
+puntuales en azul oscuro. Visera intacta.
+```
+
+</details>
+
+<details><summary>Prompt Variante 2 — Gris total, visera ahumada azul</summary>
+
+```
+Genera una imagen de producto del mismo casco de la referencia adjunta,
+en formato y ángulo idénticos, fondo idéntico.
+
+CRÍTICO — GEOMETRÍA INTACTA: mismo pivote, misma ventilación, misma
+silueta, mismo borde, misma correa — ningún componente cambia de forma
+ni posición. Solo cambia el color.
+
+CAMBIO DE COLOR — ÚNICO cambio permitido:
+- Carcasa completa: GRIS (tono medio, uniforme en todo el casco, mismo
+  tipo de acabado que el original).
+- Visera: AHUMADA AZUL — semitransparente, con tinte azul, no opaca del
+  todo (se debe seguir insinuando que es un visor, no un panel sólido).
+- El pivote cromado queda igual (cromado, sin pintar).
+
+PROHIBIDO ABSOLUTO: no agregar gráficos, logos, ni cambiar forma/tamaño/
+posición de ningún componente. Solo color de carcasa (gris) + tinte de
+visera (ahumado azul).
+```
+
+</details>
+
+<details><summary>Prompt Variante 3 — Morado pastel + detalles rosados</summary>
+
+```
+Genera una imagen de producto del mismo casco de la referencia adjunta,
+en formato y ángulo idénticos, fondo idéntico.
+
+CRÍTICO — GEOMETRÍA INTACTA: mismo pivote, misma ventilación, misma
+silueta, mismo borde, misma correa — ningún componente cambia de forma
+ni posición. Solo cambia el color.
+
+CAMBIO DE COLOR — ÚNICO cambio permitido:
+- Carcasa principal: MORADO PASTEL (tono suave, no saturado).
+- Algunos detalles puntuales (ventilación / borde / mentonera) en ROSA.
+- Visera: SIN CAMBIOS — mantener transparente/clara como en la referencia.
+- El pivote cromado queda igual (cromado, sin pintar).
+
+PROHIBIDO ABSOLUTO: no agregar gráficos, logos, ni cambiar forma/tamaño/
+posición de ningún componente. Solo color de carcasa (morado pastel) +
+detalles puntuales (rosa). Visera intacta.
+```
+
+</details>
+
+<details><summary>Prompt Variante 4 — Azul oscuro brillante (glossy)</summary>
+
+```
+Genera una imagen de producto del mismo casco de la referencia adjunta,
+en formato y ángulo idénticos, fondo idéntico.
+
+CRÍTICO — GEOMETRÍA INTACTA: mismo pivote, misma ventilación, misma
+silueta, mismo borde, misma correa — ningún componente cambia de forma
+ni posición. Solo cambia el color/acabado de superficie.
+
+CAMBIO DE COLOR — ÚNICO cambio permitido:
+- Carcasa completa: AZUL OSCURO, con acabado BRILLANTE/GLOSSY (a
+  diferencia del mate del original — este es el único caso donde el
+  acabado sí cambia, de mate a brillante, según lo pedido).
+- Visera: SIN CAMBIOS — mantener transparente/clara como en la referencia.
+- El pivote cromado queda igual (cromado, sin pintar).
+
+PROHIBIDO ABSOLUTO: no agregar gráficos, logos, ni cambiar forma/tamaño/
+posición de ningún componente. Solo color de carcasa (azul oscuro
+brillante). Visera intacta.
+```
+
+</details>
+
+**Estado:** 🔴 pendientes de generar (los 4).
+
+**Qué hay que hacer:** correr los 4 prompts (en sesiones aisladas cada uno, ver hallazgo de contaminación cruzada en el caso Vortex) y mandar los resultados para auditoría — verificar especialmente que el pivote cromado y la geometría no cambien entre variantes.
+
 ---
 
-**Última actualización:** 2026-07-28 · Agente Auditor + Generador independiente, corridos en esta sesión a pedido explícito de auditar el quinto caso del catálogo (Stellar) y adaptar los 2 prompts.
+**Última actualización:** 2026-07-28 · Agente Auditor + Generador independiente, corridos en esta sesión a pedido explícito de auditar el quinto caso del catálogo (Stellar) y adaptar los 2 prompts. Sub-caso de 4 variantes de color agregado el mismo día a pedido del usuario.
