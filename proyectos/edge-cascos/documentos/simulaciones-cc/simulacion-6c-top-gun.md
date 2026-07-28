@@ -364,6 +364,80 @@ ni simplificar ningún detalle físico real del casco.
 3. Subir las 2 imágenes de referencia (molde azul + arte Top Gun) como adjuntos para versionarlas.
 4. Cuando el usuario mande el primer caso de Marvel/DC/Paramount, crear el archivo de caso correspondiente siguiendo esta misma estructura (Tipo A — transferencia de diseño 2D sobre molde real, geometría intacta) y sumarlo al índice maestro de prompts.
 
+### Resultado del Intento 3 — auditado: visor arreglado, pero se perdió el layout bueno del Intento 2
+
+**Estado:** ⚠️ El visor quedó bien (claro/transparente, arreglado), pero el intento de "mantener las mismas posiciones" no funcionó — sin la imagen del Intento 2 como referencia visual, el generador no pudo recordar ese layout y volvió a variar posiciones y a rehacer el logo desde cero.
+
+**Qué falló (auditado contra el Intento 2 y el arte original):**
+- **Logotipo mal hecho:** en el arte original y en el Intento 2, "TOP GUN" y "MAVERICK" van juntos en un recuadro angosto inclinado (dos líneas apiladas, "TOP GUN" arriba más grande, "MAVERICK" abajo más chico en itálica, con una cola tipo flecha). En el Intento 3 el generador lo reemplazó por una versión simplificada — solo "TOP GUN" con un ícono genérico tipo cinta/estrella al lado, sin la estructura de 2 líneas ni el recuadro angosto original.
+- **Elementos corridos de lugar:** los naipes, que en el Intento 2 estaban sobre el pico frontal, en el Intento 3 aparecen más abajo, cerca de la mentonera. El texto "MAVERICK" + las 3 estrellas, que en el Intento 2 estaban en la zona trasera inferior (cerca del spoiler), en el Intento 3 aparecen en la zona delantera inferior (cerca de la boca/mentonera). Son variaciones de posición no pedidas.
+
+**Causa raíz:** el prompt le decía en texto "mantené las mismas posiciones que lograste en el intento anterior", pero sin la imagen real del Intento 2 adjunta como referencia visual, esa instrucción no tiene nada concreto para copiar — hay que adjuntar esa imagen como referencia, no solo describirla.
+
+### Intento 4 — usa el resultado del Intento 2 como referencia visual de layout, además del molde y el arte original
+
+**Adjuntar 3 imágenes esta vez:** (1) el molde azul real, (2) el arte de referencia original de Top Gun, y (3) el resultado del Intento 2 (el que tenía las posiciones correctas y el logo bien hecho, pero el visor oscuro).
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una imagen de producto del mismo casco azul mate del molde real
+(primera imagen de referencia), mismo ángulo, encuadre y fondo blanco.
+
+CRÍTICO — GEOMETRÍA Y TEXTURA 100% INTACTAS: NO borres, simplifiques ni
+alteres ningún detalle físico del molde real: pico frontal, ranuras de
+ventilación tipo cuchilla, mentonera integrada, mecanismo de pivote,
+spoiler/borde trasero, silueta general.
+
+CRÍTICO — LAYOUT: COPIÁ LA POSICIÓN Y EL DISEÑO EXACTOS DE LA TERCERA
+IMAGEN DE REFERENCIA (no inventes posiciones nuevas, esa imagen ya
+tiene el layout correcto — reproducilo tal cual, elemento por
+elemento):
+- Avión de combate: misma posición (zona delantera superior de la
+  calota) y mismo tamaño que en la tercera imagen.
+- Escudo circular con estrella: misma posición (zona central superior,
+  al lado del avión) que en la tercera imagen.
+- Naipes (ases de pique): sobre el PICO FRONTAL — igual que en la
+  tercera imagen, NO los bajes hacia la mentonera.
+- Chevrones diagonales: sobre la mentonera / parte inferior delantera
+  — igual que en la tercera imagen.
+- Logotipo "TOP GUN MAVERICK": reproducí EXACTAMENTE el mismo diseño de
+  logo que aparece en la tercera imagen — recuadro angosto inclinado
+  con "TOP GUN" en la línea de arriba (más grande) y "MAVERICK" en la
+  línea de abajo (más chico, itálica), con la cola tipo flecha al
+  costado. NO lo reemplaces por una versión simplificada de una sola
+  línea ni le cambies el ícono. Misma posición: junto a las ranuras de
+  ventilación.
+- Texto "MAVERICK" grande + 3 estrellas debajo: en la zona TRASERA
+  inferior del casco (cerca del spoiler) — igual que en la tercera
+  imagen, NO los muevas hacia la zona delantera/mentonera.
+
+CRÍTICO — VISOR: el ÚNICO cambio respecto a la tercera imagen de
+referencia es el visor — tiene que quedar CLARO Y TRANSPARENTE como en
+la primera imagen (molde real), no oscuro/ahumado como salió en la
+tercera imagen. Todo lo demás (posiciones, logo, textos, colores) se
+copia igual que en la tercera imagen.
+
+PALETA DE COLOR: mismo tono dorado/mostaza envejecido y misma base
+azul mate que en la tercera imagen de referencia.
+
+PROHIBIDO ABSOLUTO: no inventar posiciones nuevas para ningún
+elemento. No simplificar ni rediseñar el logotipo "TOP GUN MAVERICK".
+No oscurecer ni ahumar el visor. No cambiar geometría, forma ni
+tamaño de ningún componente físico del casco.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:**
+1. Correr el prompt adjuntando las 3 imágenes (molde real + arte original + resultado del Intento 2) y mandar el resultado para auditoría.
+2. Si el layout y el logo quedan bien pero el visor sigue fallando (o viceversa), aislar ese único punto en el próximo reintento en vez de volver a tocar todo el prompt.
+3. Confirmar si este molde azul es el casco físico real de la marca licenciante o solo una referencia — sigue siendo la misma pregunta abierta de este caso (ver pendientes arriba).
+4. Subir las imágenes de referencia (molde azul, arte Top Gun, resultado Intento 2) como adjuntos para versionarlas.
+5. Cuando el usuario mande el primer caso de Marvel/DC/Paramount, crear el archivo de caso correspondiente siguiendo esta misma estructura y sumarlo al índice maestro de prompts.
+
 ---
 
-**Última actualización:** 2026-07-28 · Intento 3 agregado tras auditar el resultado real del Intento 2 (7 elementos y posiciones correctos esta vez, único defecto residual: visor oscurecido/ahumado en vez de claro) — línea de licencias de marca (Marvel/DC/Paramount), a pedido de velocidad del usuario.
+**Última actualización:** 2026-07-28 · Intento 4 agregado tras auditar el Intento 3 (visor arreglado, pero el logo se rehizo mal y varios elementos se corrieron de posición al no tener el Intento 2 como referencia visual) — línea de licencias de marca (Marvel/DC/Paramount), a pedido de velocidad del usuario.
