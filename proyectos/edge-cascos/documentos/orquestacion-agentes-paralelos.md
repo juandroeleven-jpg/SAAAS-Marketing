@@ -91,8 +91,17 @@ Checklist de auditoría (Tipo C):
 - [ ] **Tres resultados posibles, no dos** — MATCH, MISMATCH (la fuente confirma explícitamente lo contrario, ej. N/A) y **SIN DATO** (la celda está vacía — no hay forma de confirmar ni descartar). Nunca tratar una celda vacía como si fuera un N/A confirmado (caso Hero, `simulacion-12-hero-verificacion.md`).
 - [ ] **Contradicciones estructurales aparte de mismatches de dato** — si un claim contradice una categoría confirmada (ej. "diseño modular" cuando el tipo de casco confirmado es "open face"), marcarlo con más peso que un simple dato faltante, aunque técnicamente derive de la misma fila.
 
-### Tipo D, ... — pendientes
-Se agregan acá a medida que lleguen casos que no encajen en A, B o C, con su propio checklist derivado del caso real que los define.
+### Tipo D — Limpieza de producto (quitar stickers/logos/etiquetas)
+No es cambio de color ni de contenido: es sacar elementos que sobran en la foto real (stickers de certificación, logos de protección de envío, calcomanías temporales) dejando el producto real intacto. Ejemplo: casco EDGE flip-up, `simulacion-24-edge-flipup-quitar-stickers.md`.
+
+Checklist de auditoría (Tipo D):
+- [ ] **Cada sticker/logo a quitar nombrado explícitamente** en el prompt — no decir "sacá los logos" en general si se puede describir cuál es cuál (posición, contenido, tamaño), para que el generador no dude ni saque de más ni de menos.
+- [ ] **Sin restos fantasma** — verificar que no quede una sombra, un borde o una silueta tenue donde estaba el sticker; la superficie debe quedar limpia y continua con el material real de esa zona (mate, cromado, transparente, según corresponda).
+- [ ] **No inventar textura nueva en el área limpiada** — si se saca un sticker de una visera transparente, esa zona vuelve a ser transparente lisa, no un parche opaco o difuminado.
+- [ ] **Todo lo demás sin cambios** — mismo criterio de geometría intacta que Tipo A, pero acá se extiende a que ni el color, ni el acabado (mate/cromado/glossy) de la pieza limpiada cambien, solo desaparece el sticker/logo.
+
+### Tipo E, ... — pendientes
+Se agregan acá a medida que lleguen casos que no encajen en A, B, C o D, con su propio checklist derivado del caso real que los define.
 
 ---
 

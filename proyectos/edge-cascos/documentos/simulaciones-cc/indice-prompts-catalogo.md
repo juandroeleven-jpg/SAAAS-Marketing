@@ -236,6 +236,20 @@ Negro mate, pico/visera solar, mentonera con ventilaciones, acolchado interior n
 
 ---
 
+## Casco EDGE flip-up — quitar stickers/logos — Simulación 24
+
+Modular/flip-up marca EDGE, negro mate, cromado en el pico, acolchado rojo. **Modelo sin nombre confirmado.** Primer caso de tipo "limpieza de producto" (no cambio de color): sacar todos los stickers/logos/etiquetas, preservar el resto 100%. 3 vistas (trasera, 3/4 lateral, frontal).
+
+[`simulacion-24-edge-flipup-quitar-stickers.md`](simulacion-24-edge-flipup-quitar-stickers.md)
+
+| Prompt / pieza | Tipo de pieza | Estado | Ubicación |
+|---|---|---|---|
+| Prompt 1 — Vista trasera (sacar logo EDGE + sticker DOT) | Limpieza de producto | ✅ listo para usar — todavía no corrido | `simulacion-24-edge-flipup-quitar-stickers.md` |
+| Prompt 2 — Vista 3/4 lateral (sacar cualquier logo visible) | Limpieza de producto | ✅ listo para usar — todavía no corrido | `simulacion-24-edge-flipup-quitar-stickers.md` |
+| Prompt 3 — Vista frontal (sacar logo calota + sticker de visera) | Limpieza de producto | ✅ listo para usar — todavía no corrido | `simulacion-24-edge-flipup-quitar-stickers.md` |
+
+---
+
 ## Resumen numérico
 
 | Caso | Prompts indexados | ✅ Listo | ⚠️ Con reintento | 🔴 Bloqueado |
@@ -254,7 +268,8 @@ Negro mate, pico/visera solar, mentonera con ventilaciones, acolchado interior n
 | Boston | 4 | 4 | 0 | 0 |
 | Casco dorado iridiscente | 4 | 2 | 2 | 0 |
 | Casco adventure con pico | 4 | 1 | 3 | 0 |
-| **Total** | **55** | **41** | **10** | **4** |
+| Casco EDGE flip-up (quitar stickers) | 3 | 3 | 0 | 0 |
+| **Total** | **58** | **44** | **10** | **4** |
 
 ---
 
