@@ -111,4 +111,58 @@ flowchart TD
 
 ---
 
-**Última actualización:** 2026-07-28 · verificación directa (sin subagente auditor separado, por pedido de velocidad) a pedido explícito de auditar el segundo caso del catálogo (Vortex) y confirmar si los 2 prompts de plantilla producirían una ficha correcta.
+## Prompts confirmados (sin cambios — ya pasaron la auditoría)
+
+<details><summary>Prompt A — HOMOLOGACIÓN Vortex (confirmado, sin cambios)</summary>
+
+```
+FORMATO: Tarjeta vertical angosta, resolución 4K, aspect ratio idéntico al de referencia. Fondo blanco limpio, composición centrada.
+
+BLOQUE DE CERTIFICACIÓN (parte superior, tipografía técnica mayúsculas): DOT FNVSS 510 & ECE 22.06
+
+LISTA DE CARACTERÍSTICAS (exactamente 6 ítems, en este orden):
+1. VISERA ANTI SCRATCH
+2. SISTEMA DE EMERGENCIA DE LIBERACIÓN RÁPIDA (ERS)
+3. LINER DESMONTABLE Y LAVABLE
+4. SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR
+5. CUBRE BARBILLA
+6. CUBRE NARIZ
+
+CRÍTICO:
+- Cantidad de ítems: exactamente 6, en el orden listado.
+- Certificación exacta: "DOT FNVSS 510 & ECE 22.06", sin abreviar.
+
+PROHIBIDO ABSOLUTO:
+- No agregar ítems fuera de la lista (NO "Diseño modular", "Con luz led", "Doble visera", "Con pinlock").
+- No cambiar el aspect ratio ni el formato vertical angosto.
+```
+
+</details>
+
+<details><summary>Prompt B — Grid de íconos Vortex (confirmado, sin cambios)</summary>
+
+```
+FORMATO: Grid de íconos 2x3, resolución 4K, aspect ratio idéntico al de referencia. Fondo gris claro uniforme.
+
+LISTA DE ÍTEMS (exactamente 6, en este orden, uno por celda):
+1. CANAL PARA LENTES
+2. HEBILLA MICROMÉTRICA
+3. ESPACIO PARA BLUETOOTH
+4. KIT DE MECANISMO VISOR
+5. MATERIAL EXTERIOR ABS ALTA RESISTENCIA
+6. INTERIOR EPS DE ALTA RESISTENCIA
+
+CRÍTICO: cantidad de ítems exactamente 6, en grid 2x3, en el orden listado.
+
+PROHIBIDO ABSOLUTO:
+- No incluir "Diseño modular", "Con luz led", "Doble visera" ni "Con pinlock" — Vortex no los tiene.
+- No incluir "Visera anti scratch" ni "Quick Visor Release System" — ya están en el Prompt A, evitar duplicado.
+```
+
+</details>
+
+Ambos prompts pasaron la auditoría sin cambios (12/12 claims correctos) — listos para generar tal cual.
+
+---
+
+**Última actualización:** 2026-07-28 · verificación directa (sin subagente auditor separado, por pedido de velocidad) + Agente Generador confirmando los 2 prompts sin cambios, a pedido explícito de auditar el segundo caso del catálogo (Vortex).

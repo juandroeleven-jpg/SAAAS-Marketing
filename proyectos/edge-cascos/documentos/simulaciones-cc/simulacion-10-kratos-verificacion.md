@@ -125,4 +125,61 @@ Estas imágenes llegaron pegadas directamente en el chat. Esta sesión de Claude
 
 ---
 
-**Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación), corridos en esta sesión a pedido explícito de auditar el primer caso del catálogo (Kratos) bajo el pipeline de orquestación en paralelo.
+## Prompts corregidos (Agente Generador, tras auditoría)
+
+Solo usan ítems confirmados con X en el excel — ninguno de los 4 mismatches quedó incluido.
+
+<details><summary>Prompt A — HOMOLOGACIÓN Kratos (corregido)</summary>
+
+```
+Genera una tarjeta gráfica de "HOMOLOGACIÓN" en formato vertical angosto, resolución 4K, idéntica en aspect ratio, composición y estilo tipográfico a la referencia usada anteriormente para esta ficha. Mantené exactamente la misma estructura visual:
+
+- Encabezado superior con el texto "HOMOLOGACIÓN" en tipografía bold, mismo tamaño y posición que la referencia.
+- Bloque negro debajo del encabezado que contenga el logo/isotipo "DOT" y el texto de certificación "DOT & ECE 22.06" (CRÍTICO: la certificación debe decir exactamente "DOT & ECE 22.06", NO "DOT FNVSS 510" — dato corregido tras auditoría contra el excel maestro).
+- Debajo del bloque negro, un área de fondo gris claro con una lista de EXACTAMENTE 6 ítems, en mayúscula, tipografía bold, centrados, cada ítem separado por una línea delgada horizontal (sin íconos, sin viñetas).
+- Los 6 ítems, en este orden exacto:
+  1. VISERA ANTI SCRATCH
+  2. SISTEMA DE EMERGENCIA DE LIBERACIÓN RÁPIDA (ERS)
+  3. LINER DESMONTABLE Y LAVABLE
+  4. PREPARADO PARA ANTI EMPAÑANTE
+  5. CUBRE BARBILLA
+  6. CUBRE NARIZ
+
+CRÍTICO — prohibiciones explícitas:
+- NO incluir "Sistema de liberación rápida del visor" (Quick Visor Release System) bajo ninguna forma — NO está confirmado para Kratos en el excel.
+- NO agregar íconos, sellos ni elementos gráficos ajenos a la referencia.
+- NO alterar el aspect ratio ni la jerarquía tipográfica de la referencia.
+- Mantener exactamente 6 ítems, ni más ni menos.
+```
+
+</details>
+
+<details><summary>Prompt B — Grid de íconos Kratos (corregido)</summary>
+
+```
+Genera un grid de íconos 2x3 en formato 4K, idéntico en composición, estilo y aspect ratio a la referencia. Fondo gris claro uniforme. Cada una de las 6 celdas contiene un ícono lineal en color rojo/bordo dentro de un octágono (mismo estilo de línea, grosor y paleta que la referencia), con el texto correspondiente en mayúscula bold centrado debajo del ícono.
+
+Los 6 ítems, en este orden exacto:
+1. CANAL PARA LENTES
+2. HEBILLA MICROMÉTRICA
+3. ESPACIO PARA BLUETOOTH
+4. KIT DE MECANISMO VISOR
+5. MATERIAL EXTERIOR ABS ALTA RESISTENCIA
+6. INTERIOR EPS DE ALTA RESISTENCIA
+
+(Los 3 ítems añadidos —Kit de mecanismo visor, Material exterior ABS, Interior EPS— se eligieron por ser features físicas/técnicas del casco, coherentes con un grid de producto, en vez de ítems de empaque como Master Box o maletín.)
+
+CRÍTICO — prohibiciones explícitas:
+- NO incluir "Diseño modular" — el excel confirma que Kratos es FULL FACE, no modular.
+- NO incluir "Con luz LED" ni "Doble visera" — ambos N/A para Kratos en el excel.
+- NO agregar íconos o texto que no correspondan a los 6 ítems listados.
+- Mantener exactamente 6 celdas en grid 2x3, ni más ni menos.
+```
+
+</details>
+
+**Cambios respecto al prompt original:** Prompt A — se quitó "liberación rápida del visor" (N/A), se completó con "preparado para anti empañante" (X, ya estaba en la ficha original), se corrigió la certificación. Prompt B — se quitaron "diseño modular" y "luz LED" (ambos incorrectos), se completó con 3 ítems técnicos confirmados con X.
+
+---
+
+**Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación) + Agente Generador (prompts corregidos), corridos en esta sesión a pedido explícito de auditar el primer caso del catálogo (Kratos) bajo el pipeline de orquestación en paralelo.

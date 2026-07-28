@@ -125,6 +125,59 @@ flowchart TD
 4. Confirmar qué va en el rectángulo negro de la ficha (mismo pendiente que Vortex).
 5. Una vez completado el excel, recién ahí adaptar los 2 prompts con la lista de ítems corregida (ver tablas arriba) y generar.
 
+## Prompts del catálogo (Agente Generador) — A bloqueado, B reducido a 4 ítems
+
+**Prompt A sigue bloqueado, no se generó texto de prompt.** Datos que hacen falta pedirle al fabricante para poder armarlo (celdas vacías en el excel, columna Hero, bloque de homologación):
+1. Visera anti scratch — ¿el visor tiene tratamiento anti-rayado?
+2. Preparado para anti empañante — ¿admite/incluye tratamiento anti-vaho?
+3. Sistema de emergencia de liberación rápida (ERS) — ¿el liner tiene ERS?
+4. Sistema de liberación rápida del visor — ¿el mecanismo permite desmontaje rápido sin herramientas?
+5. Cubre barbilla y cubre nariz — ¿Hero incluye estas piezas accesorias?
+
+<details><summary>Prompt B — Grid de íconos Hero (4 ítems, versión con datos disponibles — NO 6)</summary>
+
+```
+Diseña una tarjeta de especificaciones técnicas en formato GRID DE ÍCONOS 2x2
+(dos columnas, dos filas), resolución 4K, fondo transparente o blanco liso,
+para el casco EDGE modelo HERO (open face / jet).
+
+NOTA: Esta es una versión de 4 ítems, no de 6. El grid original contemplaba
+6 elementos (2x3), pero solo 4 características de Hero están confirmadas con
+dato verificado en el excel maestro. NO se incluyen "Material exterior ABS
+alta resistencia" ni "Interior EPS de alta resistencia" porque, aunque están
+confirmadas para otros modelos del catálogo, para Hero esas filas no tienen
+dato. Tampoco se incluye "Hebilla micrométrica" porque el excel confirma que
+Hero usa un tipo de hebilla distinto: hebilla doble D.
+
+LAYOUT: grid de 2 columnas x 2 filas (4 celdas), distribución uniforme y
+simétrica, espaciado igual entre celdas y márgenes iguales en los 4 bordes.
+Cada celda: ícono centrado arriba, texto del ítem en mayúsculas centrado
+debajo, mismo tamaño de fuente en las 4 celdas.
+
+ESTILO DE ÍCONO — mantener consistencia con las demás piezas de esta ficha:
+- Estilo lineal, trazo uniforme, sin relleno sólido salvo detalles mínimos.
+- Color principal rojo/bordo (tono EDGE), sobre octágono de fondo.
+- Mismo grosor de trazo, mismo tamaño de octágono y misma paleta en los 4 íconos.
+
+LOS 4 ÍTEMS A REPRESENTAR (en este orden):
+1. CANAL PARA LENTES
+2. ESPACIO PARA BLUETOOTH
+3. KIT DE MECANISMO VISOR
+4. HEBILLA DOBLE D
+
+PROHIBIDO ABSOLUTO:
+- No agregar un quinto o sexto ítem para "completar" el grid a 6.
+- No incluir "Hebilla micrométrica" (no confirmada; el dato correcto es doble D).
+- No incluir "Material exterior ABS" ni "Interior EPS" (sin dato confirmado para Hero).
+- No dejar celdas vacías decorativas ni forzar un layout 2x3 con huecos: rediseñar
+  limpiamente como 2x2.
+
+ASPECTO Y SALIDA: relación 1:1 o 4:3 (consistente con el resto de la ficha),
+4K, fondo limpio apto para maquetación junto a las demás piezas.
+```
+
+</details>
+
 ---
 
 ## Sub-caso — Foto lifestyle inspirada (Tipo A, distinto del catálogo de specs de arriba)
