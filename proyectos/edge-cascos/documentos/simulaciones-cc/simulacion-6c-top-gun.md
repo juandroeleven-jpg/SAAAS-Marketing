@@ -624,6 +624,14 @@ MAVERICK".
 
 **Qué falló (1 defecto puntual, de posición):** el logotipo "TOP GUN MAVERICK" (el recuadro angosto inclinado con "TOP GUN" arriba y "MAVERICK" abajo en itálica) quedó ubicado demasiado ARRIBA, pegado al visor y a las ventilaciones. Esto deja un espacio vacío sin usar en la superficie azul mate, justo debajo del logo y por encima del borde superior de la mentonera negra — superficie azul disponible que no se está aprovechando. El usuario pidió explícitamente mover el logo más abajo, hacia ese espacio libre, sin sacarlo de la zona general de las ventilaciones ni ponerlo sobre ninguna pieza negra.
 
+### ⚠️ Hallazgo importante — el mismo prompt del Intento 6, corrido de nuevo, dio un resultado distinto
+
+El usuario volvió a correr el **mismo prompt exacto del Intento 6, sin cambiar una letra**, y el resultado salió distinto a la primera vez (no igual de bien). Esto confirma que el generador **no es determinístico**: el mismo prompt puede dar resultados de calidad/geometría distinta entre una corrida y otra, no solo entre versiones distintas del prompt.
+
+**Esto obliga a releer toda la secuencia de Intentos 4 a 11 con otra luz:** parte de lo que se interpretó como "este cambio de prompt rompió la geometría" o "este cambio de prompt la arregló" puede haber sido, en realidad, variación aleatoria entre corridas y no un efecto real del texto del prompt. No se puede concluir que un prompt "funciona" o "falla" a partir de una sola corrida — hace falta correr el mismo prompt 2-3 veces para saber si el resultado es confiable o si fue una corrida con suerte (buena o mala). Se agrega esta regla al checklist Tipo A de `orquestacion-agentes-paralelos.md`.
+
+**Qué hay que hacer con esto:** antes de seguir iterando el texto del prompt, conviene correr el Intento 6 (o el 11) 2-3 veces tal cual está y ver qué tan seguido sale bien — si sale bien la mayoría de las veces, el prompt está OK y solo hace falta reintentar hasta que salga una corrida limpia; si sale mal la mayoría de las veces, ahí sí vale la pena seguir ajustando el texto.
+
 ### Intento 7 — logo reposicionado más abajo, aprovechando el espacio libre
 
 **Único cambio respecto al Intento 6:** la posición del elemento 6 (logotipo "TOP GUN MAVERICK"). Todo lo demás —los otros 7 elementos, sus posiciones, la geometría del molde real, el visor, la paleta, la prohibición de gráfico sobre piezas negras— se mantiene exactamente igual a como quedó en el Intento 6, porque ya funcionó bien y el usuario no reportó ningún problema ahí.
