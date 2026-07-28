@@ -6,6 +6,10 @@ Sub-caso de variantes de color/patrón, mismo patrón que las 4 variantes de Ste
 
 Hecho en primer plano (no en segundo plano) a pedido explícito de velocidad del usuario.
 
+### Corrección — mismo patrón en las 4 variantes, no inventar uno nuevo por variante
+
+El usuario probó la Variante 2 en Gemini y el resultado mostró un patrón de manchas genérico, inventado libremente por el generador. Corrección: **las 4 variantes tienen que usar el mismo patrón/distribución de manchas** (mismo tipo de camuflaje militar real y reconocible, mismo tamaño y forma de mancha) — lo único que cambia entre variantes es la paleta de color aplicada sobre ese patrón, nunca la forma de las manchas. Se agregó esta instrucción explícita a los 4 prompts.
+
 <details><summary>Prompt Variante 1 — Camuflaje gris + turquesa</summary>
 
 ```
@@ -24,6 +28,14 @@ CAMBIO DE SUPERFICIE — ÚNICO cambio permitido:
   (no geométricas, no simétricas), en dos tonos: GRIS y TURQUESA,
   distribuidas de forma natural sobre toda la calota, mentonera y
   spoiler trasero.
+- CRÍTICO — patrón consistente: el patrón de manchas debe replicar el
+  ESTILO de un camuflaje militar real y reconocible (tipo woodland/
+  disruptivo clásico) — manchas de tamaño y forma consistente entre sí,
+  NO una composición abstracta o artística inventada libremente. Esta
+  MISMA distribución/forma de manchas se usa en las otras 3 variantes de
+  este casco (Variantes 2, 3 y 4) — la única diferencia entre las 4
+  variantes es la paleta de color aplicada sobre el mismo patrón base,
+  nunca la forma ni distribución de las manchas.
 - Las piezas que ya son negras en el original (borde inferior, detalle
   de ventilación, acabado del spoiler) se mantienen negras, el patrón
   no las cubre.
@@ -31,8 +43,9 @@ CAMBIO DE SUPERFICIE — ÚNICO cambio permitido:
 - Herrajes/tornillos del pivote: sin cambios (metálicos).
 
 PROHIBIDO ABSOLUTO: no agregar logos, texto, gráficos figurativos ni
-cambiar forma/tamaño/posición de ningún componente. Solo el patrón
-camuflaje gris/turquesa sobre la carcasa. Visera intacta.
+cambiar forma/tamaño/posición de ningún componente. No inventes una
+distribución de manchas distinta a la de un camuflaje militar real. Solo
+el patrón camuflaje gris/turquesa sobre la carcasa. Visera intacta.
 ```
 
 </details>
@@ -51,13 +64,22 @@ CAMBIO DE SUPERFICIE — ÚNICO cambio permitido:
 - Patrón camuflaje militar disruptivo (manchas orgánicas irregulares) en
   dos tonos: GRIS y ROJO, sobre toda la carcasa (calota, mentonera,
   spoiler trasero).
+- CRÍTICO — patrón consistente: el patrón de manchas debe replicar el
+  ESTILO de un camuflaje militar real y reconocible (tipo woodland/
+  disruptivo clásico) — manchas de tamaño y forma consistente entre sí,
+  NO una composición abstracta o artística inventada libremente. Esta
+  MISMA distribución/forma de manchas se usa en las otras 3 variantes de
+  este casco (Variantes 1, 3 y 4) — la única diferencia entre las 4
+  variantes es la paleta de color aplicada sobre el mismo patrón base,
+  nunca la forma ni distribución de las manchas.
 - Piezas ya negras del original se mantienen negras.
 - Visera: SIN CAMBIOS — transparente.
 - Herrajes del pivote: sin cambios.
 
 PROHIBIDO ABSOLUTO: no agregar logos, texto ni gráficos figurativos, no
-cambiar forma/tamaño/posición de ningún componente. Solo el patrón
-camuflaje gris/rojo. Visera intacta.
+cambiar forma/tamaño/posición de ningún componente. No inventes una
+distribución de manchas distinta a la de un camuflaje militar real. Solo
+el patrón camuflaje gris/rojo. Visera intacta.
 ```
 
 </details>
@@ -76,14 +98,23 @@ CAMBIO DE SUPERFICIE — ÚNICO cambio permitido:
 - Patrón camuflaje militar disruptivo (manchas orgánicas irregulares) en
   BLANCO y NEGRO, alto contraste, sobre toda la carcasa (calota,
   mentonera, spoiler trasero).
+- CRÍTICO — patrón consistente: el patrón de manchas debe replicar el
+  ESTILO de un camuflaje militar real y reconocible (tipo woodland/
+  disruptivo clásico) — manchas de tamaño y forma consistente entre sí,
+  NO una composición abstracta o artística inventada libremente. Esta
+  MISMA distribución/forma de manchas se usa en las otras 3 variantes de
+  este casco (Variantes 1, 2 y 4) — la única diferencia entre las 4
+  variantes es la paleta de color aplicada sobre el mismo patrón base,
+  nunca la forma ni distribución de las manchas.
 - El resto de piezas negras del casco (borde, detalles) se integran de
   forma natural con el negro del patrón.
 - Visera: SIN CAMBIOS — transparente.
 - Herrajes del pivote: sin cambios.
 
 PROHIBIDO ABSOLUTO: no agregar logos, texto ni gráficos figurativos, no
-cambiar forma/tamaño/posición de ningún componente. Solo el patrón
-camuflaje blanco/negro. Visera intacta.
+cambiar forma/tamaño/posición de ningún componente. No inventes una
+distribución de manchas distinta a la de un camuflaje militar real. Solo
+el patrón camuflaje blanco/negro. Visera intacta.
 ```
 
 </details>
@@ -103,22 +134,33 @@ CAMBIO DE SUPERFICIE — ÚNICO cambio permitido:
   monocromático en tonos AZULES: mezcla de AZUL CLARO y AZUL OSCURO
   únicamente (sin gris, sin otro color), sobre toda la carcasa (calota,
   mentonera, spoiler trasero).
+- CRÍTICO — patrón consistente: el patrón de manchas debe replicar el
+  ESTILO de un camuflaje militar real y reconocible (tipo woodland/
+  disruptivo clásico) — manchas de tamaño y forma consistente entre sí,
+  NO una composición abstracta o artística inventada libremente. Esta
+  MISMA distribución/forma de manchas se usa en las otras 3 variantes de
+  este casco (Variantes 1, 2 y 3) — la única diferencia entre las 4
+  variantes es la paleta de color aplicada sobre el mismo patrón base,
+  nunca la forma ni distribución de las manchas.
 - Piezas ya negras del original se mantienen negras.
 - Visera: SIN CAMBIOS — transparente.
 - Herrajes del pivote: sin cambios.
 
 PROHIBIDO ABSOLUTO: no agregar logos, texto ni gráficos figurativos, no
-cambiar forma/tamaño/posición de ningún componente. Solo el patrón
-camuflaje azul claro/azul oscuro. Visera intacta.
+cambiar forma/tamaño/posición de ningún componente. No inventes una
+distribución de manchas distinta a la de un camuflaje militar real. Solo
+el patrón camuflaje azul claro/azul oscuro. Visera intacta.
 ```
 
 </details>
 
-**Estado:** 🔴 pendientes de generar (los 4).
+**Estado:** 🔴 pendientes de generar/reintentar (los 4) — Variante 2 ya se corrió una vez en Gemini con el prompt viejo (sin la instrucción de patrón consistente), hay que reintentarla con el prompt corregido de arriba.
+
+**Qué falló (Variante 2, intento 1):** el patrón de manchas salió inventado libremente por el generador, sin replicar un camuflaje militar real reconocible ni mantener consistencia con lo que se espera de las otras 3 variantes.
 
 **Qué hay que hacer:**
 1. Confirmar a qué modelo del catálogo corresponde este casco (no asumido en esta sesión).
-2. Correr los 4 prompts (idealmente en sesiones aisladas, ver hallazgo de contaminación cruzada documentado en `simulacion-11-vortex-verificacion.md`) y mandar los resultados para auditoría.
+2. Reintentar las 4 variantes con el prompt corregido (idealmente en sesiones aisladas, ver hallazgo de contaminación cruzada documentado en `simulacion-11-vortex-verificacion.md`) y mandar los resultados para auditoría.
 3. Subir la foto de referencia real como adjunto para versionarla.
 
 ## Sub-caso — Foto lifestyle con fondo degradado atardecer (Tipo A)
@@ -178,4 +220,4 @@ físico del casco.
 
 ---
 
-**Última actualización:** 2026-07-28 · prompts armados en primer plano (sin agente) a pedido explícito de velocidad del usuario. Sub-caso de fondo degradado atardecer agregado el mismo día.
+**Última actualización:** 2026-07-28 · prompts armados en primer plano (sin agente) a pedido explícito de velocidad del usuario. Sub-caso de fondo degradado atardecer agregado el mismo día. Corrección de patrón camuflaje consistente entre las 4 variantes tras auditar el resultado real de la Variante 2 en Gemini.
