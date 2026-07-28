@@ -351,8 +351,8 @@ export default function ModeloLaptop({
       }
     >
       {/* Sombra difusa debajo: es lo que vende el efecto de estar suspendido */}
-      <div className="sombra-flotante pointer-events-none absolute inset-x-[18%] bottom-[8%] h-[10%] rounded-[50%] bg-cf-text/25 blur-2xl" />
-      <div className="sombra-flotante pointer-events-none absolute inset-x-[10%] bottom-[4%] h-[18%] rounded-[50%] bg-cf-accent/25 blur-3xl" />
+      <div className="sombra-flotante sombra-difusa pointer-events-none absolute inset-x-[18%] bottom-[6%] h-[14%]" />
+      <div className="sombra-flotante sombra-difusa-color pointer-events-none absolute inset-x-[8%] bottom-[2%] h-[22%]" />
       <Canvas
         // Apagado fuera de pantalla: rAF no se detiene por scroll.
         frameloop={visible ? "always" : "never"}
