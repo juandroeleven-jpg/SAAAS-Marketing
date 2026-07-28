@@ -857,6 +857,16 @@ MAVERICK". No dejar el logo pegado al visor/ventilaciones sin espacio.
 3. Confirmar si este molde azul es el casco físico real de la marca licenciante o solo una referencia — sigue siendo la misma pregunta abierta de este caso.
 4. Cuando el usuario mande el primer caso de Marvel/DC/Paramount, aplicar desde el arranque la regla de "fuente de forma vs. fuente de diseño" y el checklist itemizado de geometría (no el resumen corto).
 
+### Resultado del Intento 9 — auditado: la geometría volvió a driftear, 3ra vez consecutiva
+
+**Estado:** ❌ Falló — mismo tipo de defecto que el Intento 4 y el Intento 7, a pesar del checklist de geometría reforzado con el nivel de detalle del Intento 5.
+
+**Qué falló (comparado contra la foto real del molde azul):** las ventilaciones laterales ya no se leen como las 3 aletas separadas e iguales del molde real — salieron como 2 formas distintas entre sí (una más rectangular, otra más triangular), y la carcasa del mecanismo de pivote junto al visor volvió a salir más grande y redondeada que la pieza angular y chica del molde real.
+
+**Conclusión — 3 intentos consecutivos de generación completa (Intento 4, 7 y 9) fallaron en el mismo punto geométrico** (ventilaciones y/o carcasa del pivote), incluso cuando el Intento 9 usó el checklist de geometría más detallado y explícito de todo el caso. Esto ya no parece ser un problema de redacción del prompt — parece un límite real de la herramienta de generación para sostener fidelidad geométrica exacta mientras procesa al mismo tiempo una transferencia de diseño de 8 elementos gráficos. Según la propia regla del pipeline ("Reintentar automáticamente 1-2 veces antes de escalar a humano", sección 1 de `orquestacion-agentes-paralelos.md`), este caso ya superó varias veces ese límite.
+
+**Recomendación para el próximo paso** (queda pendiente de que el usuario decida, no es una decisión que se pueda tomar sola): probar el enfoque de edición puntual ya preparado en el Intento 8 (editar solo el logo sobre la imagen ya aprobada del Intento 6, sin regenerar geometría) — es la única variante de este caso que todavía no se probó y que por diseño evita que la herramienta vuelva a decidir la geometría desde cero. Si eso también falla, el paso siguiente sería una edición manual (fuera de la IA) del logo sobre el Intento 6, ya que ese resultado tiene la geometría y los 8 elementos correctos.
+
 ---
 
-**Última actualización:** 2026-07-28 · Intento 9 agregado a pedido explícito del usuario, quien prefirió volver a generación completa desde cero en vez de la edición puntual del Intento 8 — se retoma el prompt del Intento 6 con el logo reposicionado y el checklist de geometría reforzado al nivel de detalle del Intento 5, tras el drift de geometría detectado en el Intento 7 — línea de licencias de marca (Marvel/DC/Paramount).
+**Última actualización:** 2026-07-28 · Intento 9 auditado — la geometría volvió a driftear (ventilaciones, carcasa del pivote) por 3ra vez consecutiva (Intentos 4, 7, 9) pese al checklist reforzado; se recomienda retomar el enfoque de edición puntual del Intento 8, pendiente de confirmación del usuario — línea de licencias de marca (Marvel/DC/Paramount).
