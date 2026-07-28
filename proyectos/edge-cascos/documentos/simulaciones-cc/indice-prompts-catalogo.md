@@ -206,6 +206,21 @@ Primer caso con **nombre de modelo confirmado por el usuario**. Full face, negro
 
 ---
 
+## Casco negro mate + visera dorada iridiscente — Simulación 22
+
+Full face negro mate, aleta lateral tipo tiburón, visera dorada/ámbar iridiscente con degradé azul-violeta. **Modelo sin nombre confirmado.** 4 variantes de color de carcasa, visera sin cambios en todas.
+
+[`simulacion-22-casco-dorado-4-colores.md`](simulacion-22-casco-dorado-4-colores.md) — ⚠️ confirmar si "gris" y "gris mate" eran dos tonos distintos o el mismo pedido dos veces
+
+| Prompt / pieza | Tipo de pieza | Estado | Ubicación |
+|---|---|---|---|
+| Variante 1 — Celeste claro | Variantes de color | ✅ listo para usar — todavía no corrido | `simulacion-22-casco-dorado-4-colores.md` |
+| Variante 2 — Gris medio | Variantes de color | ⚠️ tono asumido, confirmar | `simulacion-22-casco-dorado-4-colores.md` |
+| Variante 3 — Rosado neón | Variantes de color | ✅ listo para usar — todavía no corrido | `simulacion-22-casco-dorado-4-colores.md` |
+| Variante 4 — Gris mate oscuro | Variantes de color | ⚠️ tono asumido, confirmar | `simulacion-22-casco-dorado-4-colores.md` |
+
+---
+
 ## Resumen numérico
 
 | Caso | Prompts indexados | ✅ Listo | ⚠️ Con reintento | 🔴 Bloqueado |
@@ -222,7 +237,8 @@ Primer caso con **nombre de modelo confirmado por el usuario**. Full face, negro
 | Casco carbono glossy | 4 | 2 | 0 | 2 |
 | Casco adventure (blanco→negro) | 4 | 4 | 0 | 0 |
 | Boston | 4 | 4 | 0 | 0 |
-| **Total** | **47** | **38** | **5** | **4** |
+| Casco dorado iridiscente | 4 | 2 | 2 | 0 |
+| **Total** | **51** | **40** | **7** | **4** |
 
 ---
 
