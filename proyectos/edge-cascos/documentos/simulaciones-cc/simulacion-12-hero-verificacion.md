@@ -373,6 +373,69 @@ cualquier otro detalle del casco.
 
 **Qué hay que hacer:** correr el prompt, mandar el resultado para auditoría.
 
+### Intento 4 — mismo casco, mood/iluminación nocturna descrita SIN adjuntar la foto de referencia
+
+Diferencia clave respecto a los intentos 2 y 3: esta vez la imagen de referencia de estilo (persona con casco integral carbono/glossy, escena nocturna urbana, luces de ciudad desenfocadas) **NO se adjunta al generador** — solo se manda la foto real del casco Hero (checkpoint). Todo el mood/iluminación de la referencia se describe en texto, a propósito, para lograr el mismo look sin copiar visualmente nada de esa foto (ni el casco glossy/carbono, que de todas formas está prohibido).
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una fotografía de producto tipo lifestyle/photoshoot editorial en 4K,
+formato vertical (relación aproximada 2:3), escena NOCTURNA urbana.
+
+CRÍTICO — el casco que aparece en la imagen debe ser EXACTAMENTE el casco
+real adjunto como autoridad (foto del modelo Hero, checkpoint): open face /
+tipo jet, 100% negro MATE (no glossy, no carbono, no textura de fibra —
+mate uniforme), visera clara/transparente abatible con mecanismo de pivote
+visible, ventilación superior con la forma exacta del checkpoint, correa
+con hebilla roja, acolchado interior negro con costura roja. No cambies su
+geometría, forma, color, textura ni ningún detalle físico.
+
+ILUMINACIÓN Y MOOD (descrito en detalle porque NO se adjunta imagen de
+referencia, solo el casco — replicar por descripción, no por copia visual):
+- Es de noche, ambiente urbano. Temperatura de color general FRÍA/azulada
+  en las sombras y el fondo (tonos azul-teal oscuros, casi desaturados).
+- De fondo, luces de ciudad totalmente desenfocadas (bokeh): círculos de
+  luz borrosos en tonos cálidos — naranja, rojo, blanco cálido — contra el
+  azul oscuro del ambiente. Fondo completamente fuera de foco (profundidad
+  de campo muy baja), el casco es lo único nítido.
+- Iluminación de tipo "low-key" / dramática: mayormente sombras y negros
+  profundos, con un realce de luz (rim light / contraluz) marcando el
+  contorno superior y lateral del casco — una franja de luz más clara que
+  recorre la curvatura de la calota, dejando el resto en penumbra.
+- Como el casco es MATE (no glossy), ese realce de luz debe verse suave y
+  difuso sobre la superficie — no un reflejo especular nítido como tendría
+  una superficie brillante/carbono. Es un degradé de luz suave, no un brillo
+  puntual duro.
+- Visera: reflejo tenue y difuso de las luces de fondo (los bokeh de colores
+  se insinúan levemente en la superficie curva de la visera), sin perder su
+  transparencia real.
+- Sensación general: cinematográfica, moody, editorial, contemplativa — no
+  una foto de estudio de producto plana.
+
+Persona modelo: de perfil o 3/4, casco puesto, campera/hoodie oscura casual,
+sin rasgos específicos pedidos, iluminada de forma consistente con la
+descripción de arriba (mayormente en sombra, con el mismo realce de
+contorno que el casco).
+
+PROHIBIDO ABSOLUTO: no cambiar el casco a un acabado glossy/brillante ni
+textura de carbono — sigue siendo el casco real Hero, mate, con la
+geometría del checkpoint. No agregar logos, texto ni marca de agua.
+
+Orden de imágenes en el payload: SOLO la foto real del casco Hero
+(checkpoint, autoridad de geometría/color) — no se adjunta ninguna imagen
+de referencia de estilo, todo el mood/iluminación descrito arriba debe
+lograrse únicamente a partir de este texto.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué falló:** N/A (todavía no generado).
+
+**Qué hay que hacer:** correr el prompt, mandar el resultado para auditoría — prestar especial atención a si el mood nocturno/iluminación se logró solo con la descripción de texto, sin haber visto la foto de referencia.
+
 ---
 
 **Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación + adaptación de prompts), corridos en esta sesión a pedido explícito de auditar el tercer caso del catálogo (Hero). Sub-caso de foto lifestyle: intento 1 auditado con 4 defectos (formato, ángulo, degradé de color, forma de ventilación), intento 2 con prompt corregido listo para correr.
