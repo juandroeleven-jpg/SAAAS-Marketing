@@ -180,6 +180,16 @@ CRÍTICO — prohibiciones explícitas:
 
 **Cambios respecto al prompt original:** Prompt A — se quitó "liberación rápida del visor" (N/A), se completó con "preparado para anti empañante" (X, ya estaba en la ficha original), se corrigió la certificación. Prompt B — se quitaron "diseño modular" y "luz LED" (ambos incorrectos), se completó con 3 ítems técnicos confirmados con X.
 
+## Auditoría del resultado generado (Intento 1)
+
+**Prompt B (grid de íconos): ✅ Aprobado.** Los 6 ítems generados son exactamente los del prompt corregido (Canal para lentes, Hebilla micrométrica, Espacio para Bluetooth, Kit de mecanismo visor, Material exterior ABS, Interior EPS), sin duplicados, sin ítems extra. Los 6 coinciden con la columna Kratos del excel.
+
+**Prompt A (tarjeta HOMOLOGACIÓN): ⚠️ Falló — defecto de duplicación.** Los 6 ítems correctos SÍ están todos presentes y coinciden con el excel, pero "Sistema de emergencia de liberación rápida (ERS)" aparece **repetido dos veces** (posiciones 2 y 3), resultando en una lista de 7 líneas en vez de las 6 exactas pedidas. La certificación "DOT & ECE 22.06" salió correcta.
+
+**Qué falló:** duplicación de un ítem — no es un error de contenido/datos (los 6 correctos están ahí), es un error de generación que violó la instrucción "EXACTAMENTE 6 ítems, ni más ni menos".
+
+**Qué hay que hacer:** reintentar el Prompt A (1er reintento) con una instrucción reforzada contra duplicados — agregar explícitamente: "cada uno de los 6 ítems debe aparecer UNA SOLA VEZ, no repitas ningún ítem aunque el espacio vertical sobre o falte".
+
 ---
 
-**Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación) + Agente Generador (prompts corregidos), corridos en esta sesión a pedido explícito de auditar el primer caso del catálogo (Kratos) bajo el pipeline de orquestación en paralelo.
+**Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación) + Agente Generador (prompts corregidos) + auditoría del resultado generado (Intento 1: grid aprobado, homologación con duplicado a reintentar), corridos en esta sesión a pedido explícito de auditar el primer caso del catálogo (Kratos) bajo el pipeline de orquestación en paralelo.
