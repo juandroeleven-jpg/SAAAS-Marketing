@@ -1,16 +1,16 @@
-# Simulación 17 — Casco carbono/racing: 4 variantes de camuflaje militar (Tipo A, geometría intacta)
+# Simulación 17 — Casco carbono/racing: 4 variantes de color sobre el moteado real (Tipo A, geometría intacta)
 
 [← Volver al índice de mis pruebas](../mis-pruebas-claude-code.md) · [← Orquestación de agentes en paralelo](../orquestacion-agentes-paralelos.md)
 
-Sub-caso de variantes de color/patrón, mismo patrón que las 4 variantes de Stellar (`simulacion-14-stellar-verificacion.md`), pero con **patrón de camuflaje militar** en vez de color sólido. Casco de referencia: full face, textura de fibra de carbono, spoiler/aleta trasera puntiaguda, mecanismo de pivote de visera visible, borde inferior negro — **modelo sin nombre confirmado en esta sesión**, no asumir a qué caso del catálogo (Kratos/Vortex/Stellar/etc.) corresponde hasta que el usuario lo confirme.
+Sub-caso de variantes de color/patrón, mismo patrón que las 4 variantes de Stellar (`simulacion-14-stellar-verificacion.md`). Casco de referencia: full face, **fibra de carbono forjado (forged carbon)** — la superficie YA tiene una textura moteada/orgánica tipo mármol (manchas irregulares grises/negras, no un tejido de carbono liso), spoiler/aleta trasera puntiaguda, mecanismo de pivote de visera visible, borde inferior negro — **modelo sin nombre confirmado en esta sesión**, no asumir a qué caso del catálogo (Kratos/Vortex/Stellar/etc.) corresponde hasta que el usuario lo confirme.
 
 Hecho en primer plano (no en segundo plano) a pedido explícito de velocidad del usuario.
 
-### Corrección — mismo patrón en las 4 variantes, no inventar uno nuevo por variante
+### Corrección 2 — no es un camuflaje militar inventado, es el moteado REAL del carbono forjado, solo recoloreado
 
-El usuario probó la Variante 2 en Gemini y el resultado mostró un patrón de manchas genérico, inventado libremente por el generador. Corrección: **las 4 variantes tienen que usar el mismo patrón/distribución de manchas** (mismo tipo de camuflaje militar real y reconocible, mismo tamaño y forma de mancha) — lo único que cambia entre variantes es la paleta de color aplicada sobre ese patrón, nunca la forma de las manchas. Se agregó esta instrucción explícita a los 4 prompts.
+Primera corrección (descartada): pedí que el patrón "replique el estilo de un camuflaje militar real" — el usuario aclaró que eso también estaba mal interpretado. **Lo que pidió desde el principio es más simple y más estricto:** el casco real de la referencia YA tiene una textura moteada (el moteado natural de la fibra de carbono forjado — manchas orgánicas irregulares grises/negras que se ven en la foto). Las 4 "variantes de color" no son un camuflaje inventado — son ese MISMO moteado que ya existe en la foto real, con sus mismas manchas, mismo tamaño, misma distribución exacta, solo recoloreado con la paleta de cada variante. No se inventa ningún patrón nuevo, se toma el que ya está en el checkpoint y se le cambia el color.
 
-<details><summary>Prompt Variante 1 — Camuflaje gris + turquesa</summary>
+<details><summary>Prompt Variante 1 — Moteado real recoloreado en gris + turquesa</summary>
 
 ```
 Genera una imagen de producto del mismo casco de la referencia adjunta,
@@ -19,38 +19,34 @@ mismo ángulo y encuadre 3/4, mismo fondo.
 CRÍTICO — GEOMETRÍA INTACTA: no cambies ningún componente físico — misma
 forma de calota, mismo spoiler/aleta trasera, mismo mecanismo de pivote
 de la visera, misma ventilación superior, mismo borde inferior negro,
-misma silueta general. Es el mismo objeto 3D, solo cambia el
-patrón/color de la superficie de la carcasa.
+misma silueta general. Es el mismo objeto 3D, solo cambia el color del
+moteado de la superficie.
 
 CAMBIO DE SUPERFICIE — ÚNICO cambio permitido:
-- Reemplazá la textura de carbono de la carcasa por un PATRÓN
-  CAMUFLAJE MILITAR tipo disruptivo: manchas orgánicas irregulares
-  (no geométricas, no simétricas), en dos tonos: GRIS y TURQUESA,
-  distribuidas de forma natural sobre toda la calota, mentonera y
-  spoiler trasero.
-- CRÍTICO — patrón consistente: el patrón de manchas debe replicar el
-  ESTILO de un camuflaje militar real y reconocible (tipo woodland/
-  disruptivo clásico) — manchas de tamaño y forma consistente entre sí,
-  NO una composición abstracta o artística inventada libremente. Esta
-  MISMA distribución/forma de manchas se usa en las otras 3 variantes de
-  este casco (Variantes 2, 3 y 4) — la única diferencia entre las 4
-  variantes es la paleta de color aplicada sobre el mismo patrón base,
-  nunca la forma ni distribución de las manchas.
-- Las piezas que ya son negras en el original (borde inferior, detalle
-  de ventilación, acabado del spoiler) se mantienen negras, el patrón
-  no las cubre.
+- La carcasa YA tiene una textura moteada real (fibra de carbono forjado:
+  manchas orgánicas irregulares tipo mármol, grises y negras, visibles en
+  la foto de referencia). NO inventes un patrón nuevo ni un camuflaje
+  militar — usá EXACTAMENTE ese mismo moteado que ya existe en la
+  referencia: misma forma, mismo tamaño y misma distribución exacta de
+  cada mancha, calcada de la foto real.
+- Recoloreá ese moteado existente reemplazando sus tonos por GRIS y
+  TURQUESA (donde hoy hay gris/negro del carbono, va gris o turquesa,
+  respetando la forma exacta de cada mancha original).
+- Las piezas que ya son negras en el original y NO forman parte del
+  moteado (borde inferior, detalle de ventilación, acabado del spoiler)
+  se mantienen negras.
 - Visera: SIN CAMBIOS — transparente como en la referencia.
 - Herrajes/tornillos del pivote: sin cambios (metálicos).
 
 PROHIBIDO ABSOLUTO: no agregar logos, texto, gráficos figurativos ni
-cambiar forma/tamaño/posición de ningún componente. No inventes una
-distribución de manchas distinta a la de un camuflaje militar real. Solo
-el patrón camuflaje gris/turquesa sobre la carcasa. Visera intacta.
+cambiar forma/tamaño/posición de ningún componente. No inventes manchas
+nuevas ni un patrón distinto al moteado real de la foto — es el mismo
+moteado, solo con otro color. Visera intacta.
 ```
 
 </details>
 
-<details><summary>Prompt Variante 2 — Camuflaje gris + rojo</summary>
+<details><summary>Prompt Variante 2 — Moteado real recoloreado en gris + rojo</summary>
 
 ```
 Genera una imagen de producto del mismo casco de la referencia adjunta,
@@ -58,33 +54,31 @@ mismo ángulo, encuadre y fondo.
 
 CRÍTICO — GEOMETRÍA INTACTA: mismo spoiler trasero, mismo pivote, misma
 ventilación, misma silueta, mismo borde — ningún componente cambia de
-forma ni posición. Solo cambia el patrón/color de superficie.
+forma ni posición. Solo cambia el color del moteado de superficie.
 
 CAMBIO DE SUPERFICIE — ÚNICO cambio permitido:
-- Patrón camuflaje militar disruptivo (manchas orgánicas irregulares) en
-  dos tonos: GRIS y ROJO, sobre toda la carcasa (calota, mentonera,
-  spoiler trasero).
-- CRÍTICO — patrón consistente: el patrón de manchas debe replicar el
-  ESTILO de un camuflaje militar real y reconocible (tipo woodland/
-  disruptivo clásico) — manchas de tamaño y forma consistente entre sí,
-  NO una composición abstracta o artística inventada libremente. Esta
-  MISMA distribución/forma de manchas se usa en las otras 3 variantes de
-  este casco (Variantes 1, 3 y 4) — la única diferencia entre las 4
-  variantes es la paleta de color aplicada sobre el mismo patrón base,
-  nunca la forma ni distribución de las manchas.
-- Piezas ya negras del original se mantienen negras.
+- La carcasa YA tiene una textura moteada real (fibra de carbono forjado:
+  manchas orgánicas irregulares tipo mármol, grises y negras, visibles en
+  la foto de referencia). NO inventes un patrón nuevo ni un camuflaje
+  militar — usá EXACTAMENTE ese mismo moteado que ya existe en la
+  referencia: misma forma, mismo tamaño y misma distribución exacta de
+  cada mancha, calcada de la foto real.
+- Recoloreá ese moteado existente reemplazando sus tonos por GRIS y ROJO
+  (respetando la forma exacta de cada mancha original).
+- Piezas ya negras del original que no forman parte del moteado se
+  mantienen negras.
 - Visera: SIN CAMBIOS — transparente.
 - Herrajes del pivote: sin cambios.
 
 PROHIBIDO ABSOLUTO: no agregar logos, texto ni gráficos figurativos, no
-cambiar forma/tamaño/posición de ningún componente. No inventes una
-distribución de manchas distinta a la de un camuflaje militar real. Solo
-el patrón camuflaje gris/rojo. Visera intacta.
+cambiar forma/tamaño/posición de ningún componente. No inventes manchas
+nuevas ni un patrón distinto al moteado real de la foto — es el mismo
+moteado, solo con otro color. Visera intacta.
 ```
 
 </details>
 
-<details><summary>Prompt Variante 3 — Camuflaje blanco + negro</summary>
+<details><summary>Prompt Variante 3 — Moteado real recoloreado en blanco + negro</summary>
 
 ```
 Genera una imagen de producto del mismo casco de la referencia adjunta,
@@ -92,34 +86,32 @@ mismo ángulo, encuadre y fondo.
 
 CRÍTICO — GEOMETRÍA INTACTA: mismo spoiler, mismo pivote, misma
 ventilación, misma silueta, mismo borde — sin cambios de forma/posición
-en ningún componente. Solo cambia el patrón/color de superficie.
+en ningún componente. Solo cambia el color del moteado de superficie.
 
 CAMBIO DE SUPERFICIE — ÚNICO cambio permitido:
-- Patrón camuflaje militar disruptivo (manchas orgánicas irregulares) en
-  BLANCO y NEGRO, alto contraste, sobre toda la carcasa (calota,
-  mentonera, spoiler trasero).
-- CRÍTICO — patrón consistente: el patrón de manchas debe replicar el
-  ESTILO de un camuflaje militar real y reconocible (tipo woodland/
-  disruptivo clásico) — manchas de tamaño y forma consistente entre sí,
-  NO una composición abstracta o artística inventada libremente. Esta
-  MISMA distribución/forma de manchas se usa en las otras 3 variantes de
-  este casco (Variantes 1, 2 y 4) — la única diferencia entre las 4
-  variantes es la paleta de color aplicada sobre el mismo patrón base,
-  nunca la forma ni distribución de las manchas.
+- La carcasa YA tiene una textura moteada real (fibra de carbono forjado:
+  manchas orgánicas irregulares tipo mármol, grises y negras, visibles en
+  la foto de referencia). NO inventes un patrón nuevo ni un camuflaje
+  militar — usá EXACTAMENTE ese mismo moteado que ya existe en la
+  referencia: misma forma, mismo tamaño y misma distribución exacta de
+  cada mancha, calcada de la foto real.
+- Recoloreá ese moteado existente reemplazando sus tonos por BLANCO y
+  NEGRO, alto contraste (respetando la forma exacta de cada mancha
+  original).
 - El resto de piezas negras del casco (borde, detalles) se integran de
-  forma natural con el negro del patrón.
+  forma natural con el negro del moteado.
 - Visera: SIN CAMBIOS — transparente.
 - Herrajes del pivote: sin cambios.
 
 PROHIBIDO ABSOLUTO: no agregar logos, texto ni gráficos figurativos, no
-cambiar forma/tamaño/posición de ningún componente. No inventes una
-distribución de manchas distinta a la de un camuflaje militar real. Solo
-el patrón camuflaje blanco/negro. Visera intacta.
+cambiar forma/tamaño/posición de ningún componente. No inventes manchas
+nuevas ni un patrón distinto al moteado real de la foto — es el mismo
+moteado, solo con otro color. Visera intacta.
 ```
 
 </details>
 
-<details><summary>Prompt Variante 4 — Camuflaje monocromático azul claro/azul oscuro</summary>
+<details><summary>Prompt Variante 4 — Moteado real recoloreado en azul claro + azul oscuro</summary>
 
 ```
 Genera una imagen de producto del mismo casco de la referencia adjunta,
@@ -127,36 +119,34 @@ mismo ángulo, encuadre y fondo.
 
 CRÍTICO — GEOMETRÍA INTACTA: mismo spoiler, mismo pivote, misma
 ventilación, misma silueta, mismo borde — sin cambios de forma/posición
-en ningún componente. Solo cambia el patrón/color de superficie.
+en ningún componente. Solo cambia el color del moteado de superficie.
 
 CAMBIO DE SUPERFICIE — ÚNICO cambio permitido:
-- Patrón camuflaje militar disruptivo (manchas orgánicas irregulares),
-  monocromático en tonos AZULES: mezcla de AZUL CLARO y AZUL OSCURO
-  únicamente (sin gris, sin otro color), sobre toda la carcasa (calota,
-  mentonera, spoiler trasero).
-- CRÍTICO — patrón consistente: el patrón de manchas debe replicar el
-  ESTILO de un camuflaje militar real y reconocible (tipo woodland/
-  disruptivo clásico) — manchas de tamaño y forma consistente entre sí,
-  NO una composición abstracta o artística inventada libremente. Esta
-  MISMA distribución/forma de manchas se usa en las otras 3 variantes de
-  este casco (Variantes 1, 2 y 3) — la única diferencia entre las 4
-  variantes es la paleta de color aplicada sobre el mismo patrón base,
-  nunca la forma ni distribución de las manchas.
-- Piezas ya negras del original se mantienen negras.
+- La carcasa YA tiene una textura moteada real (fibra de carbono forjado:
+  manchas orgánicas irregulares tipo mármol, grises y negras, visibles en
+  la foto de referencia). NO inventes un patrón nuevo ni un camuflaje
+  militar — usá EXACTAMENTE ese mismo moteado que ya existe en la
+  referencia: misma forma, mismo tamaño y misma distribución exacta de
+  cada mancha, calcada de la foto real.
+- Recoloreá ese moteado existente reemplazando sus tonos por AZUL CLARO
+  y AZUL OSCURO únicamente (sin gris, sin otro color — respetando la
+  forma exacta de cada mancha original).
+- Piezas ya negras del original que no forman parte del moteado se
+  mantienen negras.
 - Visera: SIN CAMBIOS — transparente.
 - Herrajes del pivote: sin cambios.
 
 PROHIBIDO ABSOLUTO: no agregar logos, texto ni gráficos figurativos, no
-cambiar forma/tamaño/posición de ningún componente. No inventes una
-distribución de manchas distinta a la de un camuflaje militar real. Solo
-el patrón camuflaje azul claro/azul oscuro. Visera intacta.
+cambiar forma/tamaño/posición de ningún componente. No inventes manchas
+nuevas ni un patrón distinto al moteado real de la foto — es el mismo
+moteado, solo con otro color. Visera intacta.
 ```
 
 </details>
 
-**Estado:** 🔴 pendientes de generar/reintentar (los 4) — Variante 2 ya se corrió una vez en Gemini con el prompt viejo (sin la instrucción de patrón consistente), hay que reintentarla con el prompt corregido de arriba.
+**Estado:** 🔴 pendientes de generar/reintentar (los 4) — la Variante 2 ya se corrió una vez en Gemini con un prompt viejo que pedía "camuflaje militar" (mal interpretado, dos veces), hay que reintentarla con el prompt corregido de arriba, que pide replicar el moteado real de la foto.
 
-**Qué falló (Variante 2, intento 1):** el patrón de manchas salió inventado libremente por el generador, sin replicar un camuflaje militar real reconocible ni mantener consistencia con lo que se espera de las otras 3 variantes.
+**Qué falló (Variante 2, intentos anteriores):** los prompts anteriores pedían un "patrón camuflaje militar" inventado o basado en un estilo genérico, en vez de instruir explícitamente a replicar el moteado orgánico que YA tiene la fibra de carbono forjado en la foto real — resultado: el generador inventó su propio patrón de manchas, sin relación con la textura real del casco.
 
 **Qué hay que hacer:**
 1. Confirmar a qué modelo del catálogo corresponde este casco (no asumido en esta sesión).
@@ -220,4 +210,4 @@ físico del casco.
 
 ---
 
-**Última actualización:** 2026-07-28 · prompts armados en primer plano (sin agente) a pedido explícito de velocidad del usuario. Sub-caso de fondo degradado atardecer agregado el mismo día. Corrección de patrón camuflaje consistente entre las 4 variantes tras auditar el resultado real de la Variante 2 en Gemini.
+**Última actualización:** 2026-07-28 · prompts armados en primer plano (sin agente) a pedido explícito de velocidad del usuario. Sub-caso de fondo degradado atardecer agregado el mismo día. Corregido dos veces: primero se pensó que era un camuflaje militar inventado, después el usuario aclaró que el objetivo es replicar el moteado real de la fibra de carbono forjado que ya tiene la foto de referencia, solo recoloreado.
