@@ -28,6 +28,8 @@
 | 15 | [Shift — verificación ficha vs. excel maestro](simulaciones-cc/simulacion-15-shift-verificacion.md) | Etapa 3 — Catálogo | ⚠️ 9 de 13 claims coinciden; "hebilla micrométrica" N/A para este modelo (caso distinto a los demás); 4to caso seguido con rectángulo negro recurrente |
 | 16 | [Evolution 929 — verificación ficha vs. excel maestro](simulaciones-cc/simulacion-16-evolution929-verificacion.md) | Etapa 3 — Catálogo | ✅ 11 de 13 claims coinciden — mejor resultado del catálogo; primer caso con "Diseño modular" real (tipo Flip Up); primer caso de la marca EDGE (no EDGEPRO) |
 
+📚 **[Índice maestro de prompts del catálogo (Simulaciones 10-19)](simulaciones-cc/indice-prompts-catalogo.md)** — todos los prompts ya armados en las simulaciones 10 a 19 (incluye las 17, 18 y 19, sin fila propia en esta tabla), organizados por caso con estado y pendientes de confirmación, en un solo lugar.
+
 ---
 
 **Última actualización:** 2026-07-20 · registrado por Claude Code (sesión local VS Code), separado del índice de simulaciones original.

@@ -164,6 +164,8 @@ Esto corre en background — cuando termine te aviso con el resultado, no hace f
 
 ## 6. Registro de casos
 
+📚 **[Índice maestro de prompts del catálogo](simulaciones-cc/indice-prompts-catalogo.md)** — todos los prompts ya armados en los casos Kratos a Evolution 929 (Simulaciones 10-19), organizados por caso con estado (listo/bloqueado/con reintento) y con la lista completa de pendientes de confirmación del usuario en un solo lugar.
+
 | Caso | Tipo | Estado | Bloqueo |
 |---|---|---|---|
 | Dakota (diseño manga/samurái) | A | 🔴 Sin archivos | Esperando ilustración de referencia + checkpoints reales por vista |
