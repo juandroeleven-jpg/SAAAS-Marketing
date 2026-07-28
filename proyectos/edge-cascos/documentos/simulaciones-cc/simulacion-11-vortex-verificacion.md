@@ -249,12 +249,82 @@ del casco.
 
 </details>
 
+### Intento 1 — resultado auditado
+
+**Estado:** ⚠️ Falló — casco más alargado/puntiagudo que el real.
+
+**Qué falló:** comparando contra el checkpoint real (vista limpia), el casco generado sale con la **mentonera/mandíbula más alargada y puntiaguda** de lo que es en realidad — le da un aire más aerodinámico/racing que el casco real no tiene. El resto (color negro mate, visera transparente, ventilación) está bien; el problema es específicamente de proporción en esa zona.
+
+**Qué hay que hacer:** reintentar con una instrucción explícita de proporción de mentonera (Intento 2, abajo).
+
+### Intento 2 — prompt corregido con bloqueo de proporción de mentonera
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una fotografía de producto usando EXACTAMENTE la misma forma,
+dimensiones y todos los elementos del casco preservados al 100% — no
+cambiar ni tamaño ni dimensiones ni nada del casco. Tipo lifestyle
+editorial en 4K, formato vertical (relación aproximada 4:5), igual
+composición general que la imagen de referencia (persona en primer plano
+a la izquierda, moto deportiva desenfocada de fondo a la derecha, fondo
+neutro claro).
+
+CRÍTICO — el casco que aparece en la imagen debe ser EXACTAMENTE el casco
+real adjunto como autoridad (foto del modelo Vortex, checkpoint): full face,
+100% negro mate, visera clara/transparente (NO tintada, NO espejada, NO
+iridiscente/arcoíris — la visera de la referencia es solo para tomar la
+iluminación, no el color), ventilaciones y mecanismo de pivote de la visera
+en su posición y forma exacta del checkpoint. No cambies su geometría,
+forma, color ni ningún detalle físico.
+
+CRÍTICO — PROPORCIÓN DE LA MENTONERA/MANDÍBULA (defecto real detectado en
+el intento anterior, no lo repitas): el casco NO debe verse más alargado
+ni con el mentón más puntiagudo/aerodinámico de lo que es en el checkpoint
+real. Mantené la profundidad y longitud EXACTA de la mentonera tal cual la
+foto de referencia del casco — no la estires, no la alargues hacia
+adelante, no le des una punta más afilada/racing de la que tiene el casco
+real. Antes de finalizar, compará mentalmente la proporción mentón/calota
+con el checkpoint: deben verse igual de compactas, no más largas.
+
+MODELO: una mujer, con el casco puesto (rostro cubierto por el casco, como
+en la referencia), pelo suelto asomando por debajo del casco.
+
+VESTUARIO — CAMBIO EXPLÍCITO respecto a la referencia: campera/hoodie
+TOTALMENTE BLANCA (no negra), con el texto "STREET" impreso en letras
+NEGRAS en el pecho/espalda (reemplaza el texto/logo "Bend Bikelife Agency"
+de la referencia — no copiar ese texto ni ese logo, solo el concepto de
+hoodie con texto estampado).
+
+POSE — CAMBIO EXPLÍCITO respecto a la referencia: perfil COMPLETO (90°),
+cuerpo y cabeza totalmente de costado, mirando hacia un lado — más
+estricto que el ángulo 3/4 trasero de la referencia, que NO se debe copiar
+en el ángulo, solo en el mood/iluminación.
+
+ILUMINACIÓN Y FONDO (tomados de la referencia): luz lateral suave de
+atardecer/día nublado, cálida pero tenue, sombras suaves. Fondo neutro
+claro/gris, con una motocicleta deportiva desenfocada (bokeh fuerte) detrás,
+sugerida pero no protagonista — el casco y la persona son lo único nítido.
+
+PROHIBIDO ABSOLUTO: no copiar el casco de la referencia (visera iridiscente/
+arcoíris, textura distinta) bajo ninguna forma — el único casco permitido es
+el casco real adjunto (Vortex), negro mate, visera transparente, sin
+excepciones. No alargar la mentonera. No copiar el texto/logo de la campera
+de la referencia — el texto debe ser únicamente "STREET" en negro sobre
+campera blanca. No agregar logos, marca de agua ni texto adicional.
+
+Orden de imágenes en el payload: 1) foto de referencia de estilo/mood/pose
+de base, 2) foto real del casco Vortex (autoridad final de geometría y
+color, incluida la proporción de la mentonera) — la imagen del checkpoint
+manda sobre cualquier otro detalle físico del casco.
+```
+
+</details>
+
 **Estado:** 🔴 pendiente de generar.
 
-**Qué falló:** N/A (todavía no generado).
-
-**Qué hay que hacer:** correr el prompt en una sesión de generación aislada (no reusar el hilo de otro caso, ver hallazgo de contaminación cruzada más arriba) y mandar el resultado para auditoría.
+**Qué hay que hacer:** correr el prompt en una sesión de generación aislada (no reusar el hilo de otro caso, ver hallazgo de contaminación cruzada más arriba) y mandar el resultado para auditoría — prestar especial atención a la proporción de la mentonera esta vez.
 
 ---
 
-**Última actualización:** 2026-07-28 · verificación directa (sin subagente auditor separado, por pedido de velocidad) + Agente Generador confirmando los 2 prompts sin cambios, a pedido explícito de auditar el segundo caso del catálogo (Vortex).
+**Última actualización:** 2026-07-28 · verificación directa (sin subagente auditor separado, por pedido de velocidad) + Agente Generador confirmando los 2 prompts sin cambios, a pedido explícito de auditar el segundo caso del catálogo (Vortex). Sub-caso de foto lifestyle: intento 1 auditado (mentonera alargada), intento 2 con proporción bloqueada explícitamente.
