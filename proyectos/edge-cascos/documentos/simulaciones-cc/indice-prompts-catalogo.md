@@ -32,7 +32,7 @@ Todo lo que quedó abierto esperando respuesta del usuario o del fabricante, jun
 10. Confirmar si "FNVSS 510" (agregado en el bloque de certificación de la ficha Vortex) tiene respaldo en alguna fuente — el excel nunca escribe ese número, solo "DOT & ECE 22.06".
 
 ### Hero — [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md)
-11. Completar con el fabricante las 9 celdas "sin dato" del excel para Hero antes de generar cualquier imagen nueva de specs.
+11. Completar con el fabricante las 7 celdas "sin dato" restantes del excel para Hero (bajó de 9 a 7: "Cubre barbilla" y "Cubre nariz" se confirmaron con una captura de excel más completa) antes de generar la versión completa de 6 ítems.
 12. Resolver "Diseño modular" vs. "Open Face" confirmado en el excel — son categorías excluyentes, no solo falta de dato.
 13. Resolver el tipo de hebilla: la ficha dice "micrométrica", el excel confirma "doble D" — son piezas físicas distintas.
 14. Confirmar qué va en el rectángulo negro de la ficha Hero (mismo patrón que Vortex).
@@ -93,12 +93,12 @@ Todo lo que quedó abierto esperando respuesta del usuario o del fabricante, jun
 | Foto lifestyle — Intento 1 (mujer, campera blanca "STREET", perfil 90°) | Foto lifestyle | ⚠️ con reintento pendiente — casco salió con mentonera más alargada/puntiaguda que el real; superado por el Intento 2 | [`simulacion-11-vortex-verificacion.md`](simulacion-11-vortex-verificacion.md), sección `## Sub-caso — Foto lifestyle inspirada`, subsección `### Intento 1 — resultado auditado` |
 | Foto lifestyle — Intento 2 (mismo prompt + bloqueo de proporción de mentonera) | Foto lifestyle | ✅ listo para usar — corrige el defecto del Intento 1, todavía no corrido | [`simulacion-11-vortex-verificacion.md`](simulacion-11-vortex-verificacion.md), sección `## Sub-caso — Foto lifestyle inspirada`, subsección `### Intento 2 — prompt corregido con bloqueo de proporción de mentonera` |
 
-### Hero (Simulación 12) — Tipo C, ficha vs. excel (bloqueada) + foto lifestyle
+### Hero (Simulación 12) — Tipo C, ficha vs. excel (parcialmente desbloqueada) + foto lifestyle
 [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md)
 
 | Prompt / pieza | Tipo de pieza | Estado | Ubicación |
 |---|---|---|---|
-| Prompt A — Tarjeta HOMOLOGACIÓN | Homologación | 🔴 bloqueado — no llegó a escribirse texto de prompt; solo 1 de 6 ítems originales está confirmado con dato ("Liner desmontable y lavable"), los otros 5 están vacíos en el excel | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `### Cómo adaptar los 2 prompts de generación para Hero` |
+| Prompt A — Tarjeta HOMOLOGACIÓN, versión reducida 3 ítems (no 6) | Homologación | ✅ listo para usar — todavía no corrido — 3 de 6 ítems confirmados (Liner desmontable y lavable, Cubre barbilla, Cubre nariz; estos 2 últimos se desbloquearon con una captura de excel más completa). Los otros 3 (Visera anti scratch, ERS, Sistema de liberación rápida del visor) siguen sin dato | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `## Prompts del catálogo (Agente Generador) — A reducido a 3 ítems, B reducido a 4 ítems` |
 | Prompt B — Grid de íconos, versión reducida 2x2 (4 ítems, no 6) | Grid íconos | 🔴 bloqueado (parcial) — prompt completo y listo para los 4 ítems confirmados (Canal para lentes, Bluetooth, Kit de mecanismo visor, Hebilla doble D), pero la versión completa de 6 sigue bloqueada por falta de dato en el excel | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `## Prompts del catálogo (Agente Generador) — A bloqueado, B reducido a 4 ítems` |
 | Foto lifestyle — Intento 1 (contrapicado, inspirado en referencia ajena) | Foto lifestyle | ⚠️ con reintento pendiente — formato vertical en vez de horizontal, ángulo 3/4 en vez de perfil, degradé bronce/dorado inexistente en el casco real, ventilación con forma distinta | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `## Sub-caso — Foto lifestyle inspirada`, subsección `### Intento 1 — resultado auditado` |
 | Foto lifestyle — Intento 2 (perfil lateral, corrige color/ventilación) | Foto lifestyle | ✅ listo para usar — corrige los 4 defectos del Intento 1, todavía no corrido | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `### Intento 2 — prompt corregido` |
@@ -284,7 +284,7 @@ Primer molde de casco retro/redondo (estilo café racer, calota lisa, pivote cro
 |---|---|---|---|---|
 | Kratos | 2 | 1 | 1 | 0 |
 | Vortex | 4 | 2 | 2 | 0 |
-| Hero | 7 | 5 | 1 | 1 |
+| Hero | 8 | 7 | 1 | 0 |
 | Shanghai | 2 | 1 | 0 | 1 |
 | Stellar | 8 | 8 | 0 | 0 |
 | Shift | 2 | 2 | 0 | 0 |
@@ -299,7 +299,7 @@ Primer molde de casco retro/redondo (estilo café racer, calota lisa, pivote cro
 | Casco EDGE flip-up (quitar stickers) | 3 | 3 | 0 | 0 |
 | Carbex | 3 | 3 | 0 | 0 |
 | Casco retro/redondo | 2 | 2 | 0 | 0 |
-| **Total** | **64** | **50** | **10** | **4** |
+| **Total** | **65** | **51** | **10** | **3** |
 
 ---
 
