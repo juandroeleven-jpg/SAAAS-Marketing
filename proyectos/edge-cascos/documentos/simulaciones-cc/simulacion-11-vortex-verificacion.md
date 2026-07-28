@@ -163,6 +163,20 @@ PROHIBIDO ABSOLUTO:
 
 Ambos prompts pasaron la auditoría sin cambios (12/12 claims correctos) — listos para generar tal cual.
 
+## Auditoría del resultado generado (Intento 1)
+
+**Prompt A (tarjeta HOMOLOGACIÓN): ❌ Falló — se generó con la lista equivocada.** El resultado trae: VISERA ANTI SCRATCH, ERS, LINER DESMONTABLE Y LAVABLE, **PREPARADO PARA ANTI EMPAÑANTE**, CUBRE BARBILLA, CUBRE NARIZ. Ese es el listado corregido de **Kratos**, no el de Vortex — "Preparado para anti empañante" es N/A para Vortex en el excel, y falta **"Sistema de liberación rápida del visor"**, que sí está confirmado con X para Vortex y debía estar en la lista. No es un defecto menor de generación — se usó el prompt/caso equivocado.
+
+**Prompt B (grid de íconos): ⚠️ Falló parcialmente — contenido correcto, un ícono mal.** Los 6 ítems generados sí son los correctos para Vortex (Canal para lentes, Hebilla micrométrica, Espacio para Bluetooth, Kit de mecanismo visor, Material exterior ABS, Interior EPS), todos confirmados en el excel. Pero el ícono de "HEBILLA MICROMÉTRICA" salió con una **X roja tachándolo** (ni siquiera parece un ícono de hebilla) — el prompt pedía explícitamente "ícono de hebilla, SIN tachar, SIN la X roja" y no se respetó.
+
+**Qué falló:**
+- Prompt A: lista de ítems de otro caso (Kratos) en vez de la de Vortex.
+- Prompt B: ícono de hebilla micrométrica generado con tache/X roja, contradice la instrucción explícita del prompt.
+
+**Qué hay que hacer:**
+1. Reintentar el Prompt A **con el prompt de Vortex correcto** (ver arriba, sección "Prompts confirmados") — verificar antes de correrlo que no se esté reusando por error el prompt de otro caso.
+2. Reintentar el Prompt B agregando una instrucción reforzada: "el ícono de HEBILLA MICROMÉTRICA debe mostrar únicamente el broche/hebilla, sin ninguna marca de tache, X, prohibición ni símbolo de exclusión superpuesto — ícono limpio y positivo, no negativo."
+
 ---
 
 **Última actualización:** 2026-07-28 · verificación directa (sin subagente auditor separado, por pedido de velocidad) + Agente Generador confirmando los 2 prompts sin cambios, a pedido explícito de auditar el segundo caso del catálogo (Vortex).
