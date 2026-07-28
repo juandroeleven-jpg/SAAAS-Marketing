@@ -55,12 +55,12 @@ body {
      backdrop-filter tiene que rehacer el desenfoque cada vez que el fondo
      cambia, y el coste crece con el radio. 16 px sigue leyendo como vidrio
      con la varianza ya atenuada por el tinte. */
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.17);
   border: 1px solid rgba(255, 255, 255, 0.22);
   /* saturate ademas de blur: sin el, el color que se ve a traves del vidrio
      queda lavado y el panel parece gris sucio en vez de vidrio blanco. */
-  -webkit-backdrop-filter: blur(12px) saturate(165%);
-  backdrop-filter: blur(12px) saturate(165%);
+  -webkit-backdrop-filter: blur(8px) saturate(170%);
+  backdrop-filter: blur(8px) saturate(170%);
   /* Sombra exterior para despegarlo del fondo + linea interior clara arriba,
      que es lo que simula el canto iluminado de una lamina de vidrio. */
   box-shadow:
@@ -91,14 +91,17 @@ body {
    del seno que mueve el modelo en ModeloLaptop.tsx (2*PI / 0.72), asi que
    los dos movimientos van juntos -- es lo que hace leer que el objeto esta
    suspendido y no simplemente moviendose. */
+/* Solo opacity, sin scaleX. Escalar un elemento con `filter: blur()` obliga
+   al navegador a RE-RASTERIZAR el desenfoque en cada frame, porque el blur se
+   calcula sobre la capa ya rasterizada y al cambiar de tamano deja de servir.
+   La opacidad, en cambio, la aplica el compositor sobre la capa cacheada: es
+   practicamente gratis. El efecto de "la sombra respira" se conserva. */
 @keyframes sombra-flotante {
   0%,
   100% {
-    transform: scaleX(1);
     opacity: 0.95;
   }
   50% {
-    transform: scaleX(0.85);
     opacity: 0.55;
   }
 }
@@ -133,33 +136,39 @@ body {
   will-change: transform;
 }
 
+/* Solo TRASLACION, nunca escala, por el mismo motivo que la sombra: escalar
+   una capa con blur de 90 px la obliga a re-rasterizarse en cada frame, que
+   es de lo mas caro que se le puede pedir al compositor. Trasladarla es mover
+   una textura ya calculada. Se compensa la falta de escala con recorridos mas
+   largos y periodos distintos, que es lo que da la sensacion de que el color
+   cambia de sitio. */
 @keyframes aurora-1 {
   0%,
   100% {
-    transform: translate3d(0, 0, 0) scale(1);
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translate3d(12%, 8%, 0) scale(1.18);
+    transform: translate3d(18%, 12%, 0);
   }
 }
 
 @keyframes aurora-2 {
   0%,
   100% {
-    transform: translate3d(0, 0, 0) scale(1.1);
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translate3d(-14%, -10%, 0) scale(0.92);
+    transform: translate3d(-20%, -14%, 0);
   }
 }
 
 @keyframes aurora-3 {
   0%,
   100% {
-    transform: translate3d(0, 0, 0) scale(0.95);
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translate3d(9%, -12%, 0) scale(1.22);
+    transform: translate3d(14%, -16%, 0);
   }
 }
 

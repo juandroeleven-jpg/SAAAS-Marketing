@@ -135,8 +135,8 @@ const GIRO_ENTRADA = 0.14; // inclinacion que se endereza al llegar
 // ventana. Deliberadamente pequeno: es un guino de profundidad, no un control.
 // Si fuera grande, mover el raton por la pagina haria bailar el objeto y
 // competiria con la lectura del texto.
-const SEGUIMIENTO_Y = 0.16;
-const SEGUIMIENTO_X = 0.08;
+const SEGUIMIENTO_Y = 0.3;
+const SEGUIMIENTO_X = 0.13;
 // El giro no salta a su destino: se acerca un 6% por frame. Sin esta inercia
 // el objeto copiaria el temblor del raton.
 const INERCIA = 0.06;
@@ -230,10 +230,13 @@ function Panel({ quieto }: { quieto: boolean }) {
 }
 
 // Camara frontal. El objeto mide ALTO + 2*MARCO = 2.15 de alto; con fov 30 el
-// alto visible a distancia d es 2*d*tan(15) = 0.536*d, asi que a d = 4.0 entran
-// 2.144 unidades contra 1.95 del objeto (1.8 de pantalla + 0.15 de marco):
-// quedan 0.097 arriba y abajo, por encima de la flotacion de +-0.07.
-const DISTANCIA = 4.0;
+// alto visible a distancia d es 2*d*tan(15) = 0.536*d, asi que a d = 4.15
+// entran 2.224 unidades contra 1.95 del objeto (1.8 de pantalla + 0.15 de
+// marco): quedan 0.137 arriba y abajo. Ese margen tiene que cubrir DOS cosas
+// a la vez, no solo la flotacion: la de +-0.07 y el alto extra que anade
+// inclinar el objeto hacia el raton (~0.013 con SEGUIMIENTO_X). Quedan 0.054
+// de sobra.
+const DISTANCIA = 4.15;
 const POSICION_CAMARA = new THREE.Vector3(0, 0.18, DISTANCIA);
 
 // En contenedores angostos el fov vertical no cambia pero el ancho visible se

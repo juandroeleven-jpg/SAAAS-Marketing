@@ -45,6 +45,12 @@ export default function CursorEnergia() {
     const alMover = (e: PointerEvent) => {
       x = e.clientX;
       y = e.clientY;
+      // El nucleo se coloca aqui mismo, sin esperar al bucle: tiene que ir
+      // exacto donde esta el puntero para no perder precision al apuntar.
+      if (nucleo.current) {
+        nucleo.current.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
+      }
+      arrancar();
       if (!visible) {
         visible = true;
         hx = x;
@@ -59,9 +65,20 @@ export default function CursorEnergia() {
       if (halo.current) halo.current.style.opacity = "0";
     };
 
+    // El bucle se detiene cuando el halo ya alcanzo al nucleo y no llega
+    // ningun movimiento nuevo. Antes seguia corriendo a la tasa del monitor
+    // escribiendo estilos identicos aunque el raton estuviera quieto.
+    let corriendo = true;
     const paso = () => {
-      hx += (x - hx) * RETARDO;
-      hy += (y - hy) * RETARDO;
+      const dx = x - hx;
+      const dy = y - hy;
+      if (Math.abs(dx) < 0.05 && Math.abs(dy) < 0.05) {
+        corriendo = false;
+        id = 0;
+        return;
+      }
+      hx += dx * RETARDO;
+      hy += dy * RETARDO;
       // translate3d y no left/top: mover con transform lo compone la GPU sin
       // volver a calcular el layout de la pagina en cada movimiento del raton.
       if (nucleo.current) {
@@ -71,6 +88,13 @@ export default function CursorEnergia() {
         halo.current.style.transform = `translate3d(${hx}px, ${hy}px, 0) translate(-50%, -50%)`;
       }
       id = requestAnimationFrame(paso);
+    };
+
+    const arrancar = () => {
+      if (!corriendo) {
+        corriendo = true;
+        id = requestAnimationFrame(paso);
+      }
     };
     id = requestAnimationFrame(paso);
 
@@ -91,7 +115,10 @@ export default function CursorEnergia() {
       <div
         ref={halo}
         aria-hidden
-        className="pointer-events-none fixed left-0 top-0 z-[100] h-14 w-14 rounded-full opacity-0 mix-blend-screen transition-opacity duration-300"
+        // Sin mix-blend-mode: un modo de fusion obliga al compositor a re-mezclar
+        // todo lo que hay debajo del elemento cada vez que se mueve, y esto se
+        // mueve con el raton. El color ya es aditivo por si mismo.
+        className="pointer-events-none fixed left-0 top-0 z-[100] h-14 w-14 rounded-full opacity-0 transition-opacity duration-300"
         style={{
           background:
             "radial-gradient(circle, rgba(56,189,248,0.55) 0%, rgba(56,189,248,0.18) 45%, rgba(56,189,248,0) 70%)",
