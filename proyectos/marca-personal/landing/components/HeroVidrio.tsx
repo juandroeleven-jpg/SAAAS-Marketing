@@ -29,7 +29,7 @@ export default function HeroVidrio() {
   const quieto = usarMovimientoReducido();
 
   return (
-    <section className="fondo-azul relative isolate flex min-h-screen flex-col justify-center overflow-hidden px-4 pb-16 pt-16 sm:px-8 sm:pb-24 sm:pt-24">
+    <section className="fondo-azul relative isolate flex min-h-screen flex-col justify-center overflow-hidden px-4 pb-12 pt-14 sm:px-8 sm:pb-16 sm:pt-20">
       {/* Capa 1, al fondo: el campo de ondas de energia en 3D. */}
       <FondoOndas />
 
@@ -108,7 +108,7 @@ export default function HeroVidrio() {
             los costados del panel y el conjunto se leia apretado. El panel
             ademas paso a max-w-7xl, asi que en pixeles la pantalla apenas
             pierde tamano pero gana aire a los lados. */}
-        <div className="relative z-20 mx-auto mt-10 w-full sm:mt-12 sm:w-[68%] sm:-mb-[9%]">
+        <div className="relative z-20 mx-auto mt-10 w-full sm:mt-10 sm:w-[82%] sm:-mb-[13%]">
           {/* Luz LED detras de la pantalla. Es `filter: blur`, no
               backdrop-filter: se desenfoca a si misma y no lee lo que tiene
               detras, asi que no anade coste al vidrio. */}
