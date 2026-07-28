@@ -4,6 +4,7 @@ import { useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { usarMovimientoReducido } from "@/lib/movimiento";
+import { usarVisibilidad } from "@/lib/visibilidad";
 
 // Fondo 3D: un campo de ondas de energia que se pierde en el horizonte, con
 // la retícula de una red por encima. Cumple el mismo papel que el terreno
@@ -74,9 +75,18 @@ function Ondas({ quieto }: { quieto: boolean }) {
     return t;
   }, []);
 
+  // Con movimiento reducido la malla se escribe UNA vez y despues se sale
+  // temprano. Antes se recalculaban los ~37.500 senos y se resubian los dos
+  // buffers en cada frame para producir exactamente los mismos valores.
+  const yaCongelado = useRef(false);
+
   useFrame((state) => {
-    // Con movimiento reducido las ondas se dibujan congeladas en t=0: se
-    // conserva el relieve y la profundidad, desaparece la animacion.
+    if (quieto) {
+      if (yaCongelado.current) return;
+      yaCongelado.current = true;
+    } else {
+      yaCongelado.current = false;
+    }
     const t = quieto ? 0 : state.clock.getElapsedTime();
 
     const pos = geometria.getAttribute("position") as THREE.BufferAttribute;
@@ -124,10 +134,19 @@ function Ondas({ quieto }: { quieto: boolean }) {
 
 export default function FondoOndas() {
   const quieto = usarMovimientoReducido();
+  const [ref, visible] = usarVisibilidad<HTMLDivElement>();
 
   return (
-    <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+    <div
+      ref={ref}
+      aria-hidden
+      className="pointer-events-none absolute inset-0 -z-10"
+    >
       <Canvas
+        // Fuera de pantalla se apaga el bucle: rAF no se detiene solo al
+        // hacer scroll, asi que sin esto la escena seguiria trabajando
+        // mientras el usuario lee secciones que estan mucho mas abajo.
+        frameloop={visible ? "always" : "never"}
         camera={{ fov: 48, position: [0, 1.6, 12] }}
         // dpr 1 y sin antialias: capa difusa de fondo. Subirla no cambia lo
         // que se percibe y multiplica los pixeles a rasterizar.

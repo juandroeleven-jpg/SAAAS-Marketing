@@ -6,6 +6,8 @@ import { useGLTF, Center, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import { DISENO, dibujarFlujo } from "@/lib/flujo";
 import { dibujarAgentes } from "@/lib/agentes";
+import { usarMovimientoReducido } from "@/lib/movimiento";
+import { usarPunteroFino, usarVisibilidad } from "@/lib/visibilidad";
 
 // Que se ve en la pantalla del laptop. Las dos escenas comparten espacio de
 // diseno, asi que son intercambiables sin tocar el mapeo UV ni la geometria.
@@ -28,16 +30,19 @@ export type Escena = "flujo" | "agentes";
 // que hace de bisel.
 const PANTALLA_UV = { uMin: 0.038, uMax: 0.466, vMin: 0.522, vMax: 0.826 };
 
-function usarTexturaPantalla(escena: Escena) {
+function usarTexturaPantalla(escena: Escena, quieto: boolean) {
   const { gl } = useThree();
   const canvas = useMemo(() => {
     const c = document.createElement("canvas");
-    // La malla solo muestrea una fraccion del atlas: el rectangulo de
-    // pantalla se queda con ~0.43 x 0.30 del canvas. A 3072x1920 eso da
-    // ~1320x580 texeles reales para la pantalla, que es lo que hace falta
-    // para que no se vea pixelada al agrandar el objeto.
-    c.width = 3072;
-    c.height = 1920;
+    // La malla solo muestrea el 13% del atlas (PANTALLA_UV), asi que el
+    // resto son pixeles de bisel que no cambian nunca pero que se resubian
+    // enteros en cada actualizacion. A 3072x1920 eran 23,6 MB por redibujado
+    // (354 MB/s a 15 Hz) para refrescar un rectangulo negro constante.
+    // A 2048x1280 son 10,5 MB y quedan ~876x389 texeles utiles para la
+    // pantalla, que sigue siendo mas del doble de los ~300 px CSS que ocupa
+    // en cuadro.
+    c.width = 2048;
+    c.height = 1280;
     return c;
   }, []);
   const textura = useMemo(() => {
@@ -80,7 +85,8 @@ function usarTexturaPantalla(escena: Escena) {
   useFrame((state) => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    const t = state.clock.getElapsedTime();
+    const t = quieto ? 0 : state.clock.getElapsedTime();
+    if (quieto && ultimoDibujo.current > 0) return;
     // Cada redibujado sube ~23 MB de textura (3072x1920) a la GPU. A 24 por
     // segundo eran ~566 MB/s, suficiente para producir tirones en equipos
     // reales. A 15 baja a ~354 MB/s y el contenido de la pantalla igual se
@@ -140,10 +146,10 @@ function usarTexturaPantalla(escena: Escena) {
 // que la pantalla se vea casi de frente, con un angulo leve.
 const GIRO_Y = -0.58;
 
-function Laptop({ escena }: { escena: Escena }) {
+function Laptop({ escena, quieto }: { escena: Escena; quieto: boolean }) {
   const { scene } = useGLTF("/modelos-3d/macbook.glb");
   const pantallaRef = useRef<THREE.Mesh | null>(null);
-  const textura = usarTexturaPantalla(escena);
+  const textura = usarTexturaPantalla(escena, quieto);
 
   useEffect(() => {
     // "Ecran_6" es un nodo contenedor vacio; la malla real es su hijo
@@ -166,8 +172,13 @@ function Laptop({ escena }: { escena: Escena }) {
         // -- eso era lo que lavaba los colores contra la iluminacion de
         // la escena. Emissive puro = se ve igual sin importar la luz,
         // como una pantalla real que emite su propia imagen.
+        // toneMapped:false, igual que en PantallaFlotante. Sin esto la
+        // pantalla pasa por el tone mapping ACES del renderer y el mismo
+        // dibujo sale con colores distintos en cada superficie: el fondo
+        // #0D1117 se aplasta casi a negro y el blanco tope baja a #E2E2E2.
         const nuevoMaterial = new THREE.MeshBasicMaterial({
           map: textura,
+          toneMapped: false,
         });
         mesh.material = nuevoMaterial;
 
@@ -186,12 +197,23 @@ const DURACION_ENTRADA = 1.5; // segundos
 const DESPLAZAMIENTO_ENTRADA = 2.6; // unidades hacia la derecha
 const GIRO_ENTRADA = 0.4; // rad extra que se endereza al llegar
 
-function Flotacion({ children }: { children: React.ReactNode }) {
+function Flotacion({
+  children,
+  quieto,
+}: {
+  children: React.ReactNode;
+  quieto: boolean;
+}) {
   const grupo = useRef<THREE.Group>(null);
   const inicio = useRef<number | null>(null);
 
   useFrame((state) => {
     if (!grupo.current) return;
+    if (quieto) {
+      grupo.current.position.set(0, 0, 0);
+      grupo.current.rotation.set(0, 0, 0);
+      return;
+    }
     const t = state.clock.getElapsedTime();
     if (inicio.current === null) inicio.current = t;
     const transcurrido = t - inicio.current;
@@ -288,27 +310,46 @@ export default function ModeloLaptop({
 }: {
   escena?: Escena;
 }) {
+  const quieto = usarMovimientoReducido();
+  const fino = usarPunteroFino();
+  const [ref, visible] = usarVisibilidad<HTMLDivElement>();
+
   return (
     // Contenedor grande y con aire: el objeto entra completo y flota dentro,
     // sin recortarse contra los bordes. Sigue sangrando un poco fuera de su
     // columna en desktop para ganar tamano sin obligar a acercar la camara.
-    <div className="relative aspect-[5/3.9] w-full lg:-mr-[10vw] lg:w-[calc(100%+10vw)]">
+    <div
+      ref={ref}
+      className="relative aspect-[5/3.9] w-full lg:-mr-[10vw] lg:w-[calc(100%+10vw)]"
+      role="img"
+      aria-label={
+        escena === "agentes"
+          ? "Portátil mostrando un agente de IA que encadena cuatro pasos de razonamiento y después se conecta a Slack, Drive, Notion y Canva."
+          : "Portátil mostrando un flujo de automatización: un webhook y mensajes de Discord disparan un agente de ChatGPT, que notifica en Slack, archiva en Drive, registra en Notion y publica en Canva."
+      }
+    >
       {/* Sombra difusa debajo: es lo que vende el efecto de estar suspendido */}
       <div className="sombra-flotante pointer-events-none absolute inset-x-[18%] bottom-[8%] h-[10%] rounded-[50%] bg-cf-text/25 blur-2xl" />
       <div className="sombra-flotante pointer-events-none absolute inset-x-[10%] bottom-[4%] h-[18%] rounded-[50%] bg-cf-accent/25 blur-3xl" />
       <Canvas
+        // Apagado fuera de pantalla: rAF no se detiene por scroll.
+        frameloop={visible ? "always" : "never"}
         camera={{ fov: 36, position: POSICION_CAMARA.toArray() }}
         dpr={Math.min(3, typeof window !== "undefined" ? window.devicePixelRatio : 1)}
       >
         <CamaraFija />
         <Iluminacion />
-        <Flotacion>
+        <Flotacion quieto={quieto}>
           <Center scale={2.9}>
-            <Laptop escena={escena} />
+            <Laptop escena={escena} quieto={quieto} />
           </Center>
         </Flotacion>
-        {/* Orbita acotada. enableZoom={false} es critico: con la rueda activa
-            el canvas se comeria el scroll de la pagina al pasar el cursor. */}
+        {/* Orbita acotada, y solo con raton/trackpad: OrbitControls pone
+            touch-action:none en el canvas, asi que en un telefono el dedo
+            haria girar el objeto en vez de desplazar la pagina.
+            enableZoom={false} es critico: con la rueda activa el canvas se
+            comeria el scroll al pasar el cursor. */}
+        {fino && (
         <OrbitControls
           makeDefault
           target={[0, 0, 0]}
@@ -322,6 +363,7 @@ export default function ModeloLaptop({
           minAzimuthAngle={AZIMUT_INICIAL - MARGEN_AZIMUT}
           maxAzimuthAngle={AZIMUT_INICIAL + MARGEN_AZIMUT}
         />
+        )}
       </Canvas>
     </div>
   );
