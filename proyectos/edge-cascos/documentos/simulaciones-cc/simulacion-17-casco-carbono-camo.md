@@ -121,6 +121,61 @@ camuflaje azul claro/azul oscuro. Visera intacta.
 2. Correr los 4 prompts (idealmente en sesiones aisladas, ver hallazgo de contaminación cruzada documentado en `simulacion-11-vortex-verificacion.md`) y mandar los resultados para auditoría.
 3. Subir la foto de referencia real como adjunto para versionarla.
 
+## Sub-caso — Foto lifestyle con fondo degradado atardecer (Tipo A)
+
+Pedido del usuario: tomar el fondo (degradado violeta→naranja), la pose de perfil y la iluminación de una foto de referencia ajena (persona con casco integral distinto — franja naranja, visera roja/espejada, texto "revv one", campera con parche "SPEED THAT SELLS") — pero sin cambiar ningún elemento del casco real de carbono, y sin copiar el diseño/texto/branding de la referencia.
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una fotografía de producto tipo lifestyle editorial en 4K, formato
+vertical (relación aproximada 4:5), fondo con DEGRADADO DE COLOR ATARDECER
+(de arriba a abajo: violeta/púrpura grisáceo en la parte superior,
+transicionando a naranja/durazno cálido en la parte inferior), liso y
+suave, sin elementos ni texturas — mismo tipo de fondo que la imagen de
+referencia de estilo.
+
+CRÍTICO — el casco que aparece en la imagen debe ser EXACTAMENTE el casco
+real adjunto como autoridad (checkpoint): full face, textura de fibra de
+carbono en toda la carcasa, spoiler/aleta trasera puntiaguda, visera clara/
+transparente (NO roja, NO tintada — la visera roja es solo de la
+referencia de estilo, no se copia), mecanismo de pivote visible, borde
+inferior negro. No cambies su geometría, forma, color, textura ni ningún
+detalle físico — es el mismo objeto 3D, solo cambian el fondo, la
+iluminación y la pose.
+
+POSE Y ÁNGULO (tomados de la referencia): persona de PERFIL COMPLETO
+(costado), cabeza y casco ocupando la mitad superior del encuadre, cuerpo
+cortado a la altura del pecho/hombros, mirando hacia el lado, misma
+composición y encuadre que la referencia.
+
+ILUMINACIÓN (tomada de la referencia): luz de atardecer, contraluz/rim
+light suave marcando el contorno superior del casco con un tono cálido
+naranja, resto del casco en sombra suave, integrado con el degradé del
+fondo — mood cinematográfico, minimalista, editorial.
+
+Persona modelo: campera/chaqueta de cuero oscura, sin rasgos específicos
+pedidos, sin logos ni parches ni texto sobre la ropa (no copiar el parche
+"SPEED THAT SELLS" ni ningún branding de la referencia).
+
+PROHIBIDO ABSOLUTO: no copiar el diseño del casco de la referencia (franja
+naranja en la calota, visera roja/espejada, texto "revv one" en la
+mandíbula) bajo ninguna forma — el único casco permitido es el casco real
+de carbono adjunto, con su visera transparente. No copiar ningún texto,
+logo ni parche de la ropa de la referencia.
+
+Orden de imágenes en el payload: 1) foto de referencia de fondo/pose/luz,
+2) foto real del casco de carbono (autoridad final de geometría, textura
+y color) — la imagen del checkpoint manda sobre cualquier otro detalle
+físico del casco.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría.
+
 ---
 
-**Última actualización:** 2026-07-28 · prompts armados en primer plano (sin agente) a pedido explícito de velocidad del usuario.
+**Última actualización:** 2026-07-28 · prompts armados en primer plano (sin agente) a pedido explícito de velocidad del usuario. Sub-caso de fondo degradado atardecer agregado el mismo día.
