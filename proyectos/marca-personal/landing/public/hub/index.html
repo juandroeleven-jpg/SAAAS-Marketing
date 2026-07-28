@@ -1,0 +1,977 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Lead Hub — Calificación de prospectos</title>
+<!-- Esta pagina lleva nombres de empresas prospecto y mensajes sin enviar:
+     no debe indexarse aunque alguien filtre la URL. La proteccion de verdad
+     esta en middleware.ts; esto es la segunda linea. -->
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+</head>
+<body>
+<style>
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10161c; --surface: #161e26; --surface-2: #1c2530; --ink: #e7ecf1; --ink-dim: #93a1ae;
+      --line: #263241; --accent: #4fb8c4; --accent-ink: #06171a; --good: #5fbf7a; --good-bg: #14261b;
+      --warn: #e0ac4a; --warn-bg: #2b2210; --crit: #e2695f; --crit-bg: #2b1613; --mute: #7b8894; --mute-bg: #1c242c;
+    }
+  }
+  :root {
+    --bg: #eef1f4; --surface: #ffffff; --surface-2: #f6f8fa; --ink: #172431; --ink-dim: #5c6b7a;
+    --line: #dde3e9; --accent: #0e7c86; --accent-ink: #ffffff; --good: #2f9e44; --good-bg: #e8f6ea;
+    --warn: #b5790f; --warn-bg: #fbf1de; --crit: #c8433a; --crit-bg: #fbeae8; --mute: #667080; --mute-bg: #eef0f3;
+    --font-ui: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "SF Mono", "Cascadia Code", "Consolas", "Liberation Mono", monospace;
+  }
+  :root[data-theme="dark"] {
+    --bg: #10161c; --surface: #161e26; --surface-2: #1c2530; --ink: #e7ecf1; --ink-dim: #93a1ae;
+    --line: #263241; --accent: #4fb8c4; --accent-ink: #06171a; --good: #5fbf7a; --good-bg: #14261b;
+    --warn: #e0ac4a; --warn-bg: #2b2210; --crit: #e2695f; --crit-bg: #2b1613; --mute: #7b8894; --mute-bg: #1c242c;
+  }
+  :root[data-theme="light"] {
+    --bg: #eef1f4; --surface: #ffffff; --surface-2: #f6f8fa; --ink: #172431; --ink-dim: #5c6b7a;
+    --line: #dde3e9; --accent: #0e7c86; --accent-ink: #ffffff; --good: #2f9e44; --good-bg: #e8f6ea;
+    --warn: #b5790f; --warn-bg: #fbf1de; --crit: #c8433a; --crit-bg: #fbeae8; --mute: #667080; --mute-bg: #eef0f3;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-ui);
+    line-height: 1.5; display: grid; grid-template-columns: 220px 1fr; min-height: 100vh;
+  }
+  @media (max-width: 860px) {
+    body { grid-template-columns: 1fr; }
+    .sidebar { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--line); }
+  }
+
+  /* ---------------- sidebar (idéntico a Social Hub) ---------------- */
+  .sidebar {
+    position: sticky; top: 0; height: 100vh; background: var(--surface); border-right: 1px solid var(--line);
+    padding: 1.25rem 1rem; display: flex; flex-direction: column; gap: 1.75rem; overflow-y: auto;
+  }
+  .brand { display: flex; align-items: center; gap: 0.5rem; }
+  .brand-hamburger { font-size: 0.95rem; color: var(--ink-dim); }
+  .brand-mark {
+    width: 32px; height: 32px; border-radius: 8px; background: var(--accent); color: var(--accent-ink);
+    display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex: none;
+  }
+  .brand-name { font-weight: 700; font-size: 0.94rem; }
+  .brand-sub { font-size: 0.73rem; color: var(--ink-dim); }
+  nav.side-nav { display: flex; flex-direction: column; gap: 0.1rem; }
+  nav.side-nav a {
+    color: var(--ink-dim); text-decoration: none; font-size: 0.85rem; font-weight: 600;
+    padding: 0.5rem 0.55rem; border-radius: 6px; display: flex; flex-direction: column; gap: 0.05rem;
+  }
+  nav.side-nav a.active, nav.side-nav a:hover { background: var(--surface-2); color: var(--accent); }
+  nav.side-nav a span.sub { font-size: 0.71rem; font-weight: 400; color: var(--ink-dim); }
+  .sidebar-foot {
+    margin-top: auto; font-size: 0.73rem; color: var(--ink-dim); border-top: 1px solid var(--line);
+    padding-top: 0.8rem; display: flex; align-items: center; gap: 0.4rem;
+  }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--good); flex: none; }
+
+  /* ---------------- main ---------------- */
+  main { padding: 1.75rem 2.25rem 5rem; max-width: 1240px; }
+  .top-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+  .live-tag {
+    font-family: var(--font-mono); font-size: 0.71rem; letter-spacing: 0.07em; text-transform: uppercase;
+    color: var(--good); display: flex; align-items: center; gap: 0.4rem;
+  }
+  .live-tag .dot { background: var(--good); }
+  h1 { font-size: 1.55rem; font-weight: 700; margin: 0.3rem 0 0.15rem; text-wrap: balance; }
+  .subline { color: var(--ink-dim); font-size: 0.9rem; margin: 0; }
+  .data-source { text-align: right; font-size: 0.72rem; color: var(--ink-dim); }
+  .data-source b { display: block; color: var(--ink); font-size: 0.85rem; font-weight: 600; }
+
+  h2 { font-size: 1.05rem; font-weight: 700; margin: 0; scroll-margin-top: 1.5rem; }
+  .section-head { margin: 2.75rem 0 1.1rem; }
+  .section-head p { color: var(--ink-dim); font-size: 0.85rem; margin: 0.15rem 0 0; max-width: 66ch; }
+
+  /* ---------------- card chrome shared by every widget (idéntico a Social Hub) ---------------- */
+  .widget {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 0.9rem 1.05rem 1.05rem;
+  }
+  .widget-head { display: flex; align-items: flex-start; gap: 0.5rem; }
+  .drag-handle {
+    display: grid; grid-template-columns: repeat(2, 3px); grid-auto-rows: 3px; gap: 2.5px; margin-top: 0.35rem;
+    flex: none; opacity: 0.55;
+  }
+  .drag-handle i { width: 3px; height: 3px; border-radius: 50%; background: var(--ink-dim); }
+  .widget-title-block { flex: 1; }
+  .widget-title { font-size: 0.92rem; font-weight: 700; }
+  .widget-sub { font-size: 0.74rem; color: var(--ink-dim); margin-top: 0.1rem; }
+  .widget-icons { display: flex; gap: 0.35rem; flex: none; }
+  .icon-btn {
+    width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface-2);
+    color: var(--ink-dim); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; cursor: pointer;
+  }
+  .icon-btn:hover { color: var(--ink); }
+  .widget[data-hidden="true"] { display: none; }
+
+  /* KPI row */
+  .kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0.85rem; }
+  .kpi-metric-label { display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; margin-top: 0.65rem; }
+  .kpi-metric-label .dot { width: 8px; height: 8px; }
+  .kpi-value { font-family: var(--font-mono); font-size: 1.7rem; font-weight: 600; font-variant-numeric: tabular-nums; margin-top: 0.15rem; }
+  .kpi-note { font-size: 0.72rem; color: var(--ink-dim); margin-top: 0.2rem; }
+
+  /* chart row */
+  .chart-row { display: grid; grid-template-columns: 1.3fr 1fr; gap: 0.9rem; margin-top: 0.9rem; align-items: stretch; }
+  @media (max-width: 900px) { .chart-row { grid-template-columns: 1fr; } }
+  .legend { display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.76rem; color: var(--ink-dim); margin-top: 0.5rem; }
+  .legend-item { display: flex; align-items: center; gap: 0.35rem; }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+
+  /* methodology */
+  .method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 0.75rem; }
+  @media (max-width: 700px) { .method-grid { grid-template-columns: 1fr; } }
+  .method-grid h4 { margin: 0 0 0.4rem; font-size: 0.85rem; }
+  .method-grid ul { margin: 0; padding-left: 1.1rem; font-size: 0.84rem; color: var(--ink-dim); }
+  .method-grid li { margin-bottom: 0.3rem; }
+  .method-grid b { color: var(--ink); }
+  .method-formula {
+    font-family: var(--font-mono); font-size: 0.77rem; background: var(--surface-2); border-radius: 4px;
+    padding: 0.3rem 0.55rem; display: inline-block; margin-top: 0.5rem;
+  }
+
+  /* filters */
+  .filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.1rem; }
+  .filters button {
+    font: inherit; font-size: 0.79rem; font-weight: 600; color: var(--ink-dim); background: var(--surface);
+    border: 1px solid var(--line); border-radius: 999px; padding: 0.38rem 0.85rem; cursor: pointer;
+  }
+  .filters button.active { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .grid-count { font-size: 0.85rem; color: var(--ink-dim); margin: -0.5rem 0 1rem; }
+
+  /* -------- lead card grid (calca la grilla de Publicaciones) -------- */
+  .lead-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 1rem; }
+  .lead-card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+    cursor: pointer;
+  }
+  .lead-card[data-hidden="true"] { display: none; }
+  .lead-card > summary { list-style: none; }
+  .lead-card > summary::-webkit-details-marker { display: none; }
+  .card-top {
+    height: 84px; position: relative; display: flex; align-items: center; padding: 0 0.9rem;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 16%, var(--surface-2)), var(--surface-2));
+  }
+  .lead-grid .lead-card:nth-child(5n+1) .card-top { background: linear-gradient(135deg, color-mix(in srgb, #2f6fa8 22%, var(--surface-2)), var(--surface-2)); }
+  .lead-grid .lead-card:nth-child(5n+2) .card-top { background: linear-gradient(135deg, color-mix(in srgb, #8a5cb8 22%, var(--surface-2)), var(--surface-2)); }
+  .lead-grid .lead-card:nth-child(5n+3) .card-top { background: linear-gradient(135deg, color-mix(in srgb, #b8763a 22%, var(--surface-2)), var(--surface-2)); }
+  .lead-grid .lead-card:nth-child(5n+4) .card-top { background: linear-gradient(135deg, color-mix(in srgb, #4a9d6e 22%, var(--surface-2)), var(--surface-2)); }
+  .avatar {
+    width: 42px; height: 42px; border-radius: 8px; background: var(--accent); color: var(--accent-ink);
+    display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.05rem; flex: none;
+  }
+  .platform-chip {
+    position: absolute; top: 0.55rem; left: 0.55rem; width: 22px; height: 22px; border-radius: 50%;
+    background: #0a66c2; color: #fff; font-size: 0.6rem; font-weight: 700; display: flex; align-items: center; justify-content: center;
+    border: 2px solid rgba(255,255,255,0.85); box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  }
+  .status-tag {
+    position: absolute; top: 0.55rem; right: 0.55rem; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.03em;
+    text-transform: uppercase; padding: 0.18rem 0.5rem; border-radius: 4px; color: #fff;
+  }
+  .status-tag.st-good { background: var(--good); }
+  .status-tag.st-warn { background: var(--warn); }
+  .status-tag.st-crit { background: var(--crit); }
+  .status-tag.st-mute { background: var(--mute); }
+  .card-body { padding: 0.75rem 0.9rem 0.9rem; }
+  .card-name { font-weight: 700; font-size: 0.92rem; }
+  .card-meta { font-size: 0.74rem; color: var(--ink-dim); margin-top: 0.1rem; }
+  .card-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; margin-top: 0.7rem; padding-top: 0.6rem; border-top: 1px solid var(--line); }
+  .card-stat-label { font-size: 0.65rem; color: var(--ink-dim); text-transform: uppercase; letter-spacing: 0.03em; }
+  .card-stat-value { font-family: var(--font-mono); font-weight: 700; font-size: 1rem; font-variant-numeric: tabular-nums; }
+  .card-stat-value.good { color: var(--good); } .card-stat-value.warn { color: var(--warn); } .card-stat-value.crit { color: var(--crit); }
+  .card-foot { display: flex; justify-content: space-between; font-size: 0.68rem; color: var(--ink-dim); margin-top: 0.55rem; }
+  .chev-hint { font-size: 0.68rem; color: var(--accent); margin-top: 0.5rem; font-weight: 600; }
+  .lead-card[open] .chev-hint::after { content: " ▴ ver menos"; }
+  .lead-card:not([open]) .chev-hint::after { content: " ▾ ver detalle y mensaje"; }
+
+  .lead-detail { padding: 0 0.9rem 1rem; border-top: 1px dashed var(--line); margin-top: 0.6rem; }
+  .lead-detail > * + * { margin-top: 0.75rem; }
+  .message-box {
+    font-size: 0.84rem; background: var(--surface-2); border-left: 3px solid var(--accent);
+    border-radius: 0 4px 4px 0; padding: 0.6rem 0.8rem; font-style: italic;
+  }
+  .alert-box { font-size: 0.79rem; background: var(--warn-bg); color: var(--warn); border-radius: 4px; padding: 0.5rem 0.7rem; }
+  .chip-row { display: flex; flex-direction: column; gap: 0.28rem; }
+  .chip { display: flex; justify-content: space-between; gap: 0.5rem; font-size: 0.78rem; padding: 0.28rem 0.5rem; background: var(--surface-2); border-radius: 4px; }
+  .chip b { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  .meta-line { font-size: 0.76rem; color: var(--ink-dim); }
+  .meta-line a { color: var(--accent); }
+  h5.dbtitle { margin: 0 0 0.35rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-dim); }
+
+  /* -------- fuentes / "cuentas" style -------- */
+  .source-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.9rem; }
+  .source-card { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 0.9rem 1rem; }
+  .source-head { display: flex; align-items: center; gap: 0.6rem; }
+  .source-icon { width: 30px; height: 30px; border-radius: 7px; background: var(--surface-2); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex: none; }
+  .source-name { font-weight: 700; font-size: 0.86rem; flex: 1; }
+  .pill { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.03em; padding: 0.2rem 0.55rem; border-radius: 999px; }
+  .pill.good { color: var(--good); background: var(--good-bg); }
+  .pill.mute { color: var(--mute); background: var(--mute-bg); }
+  .source-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.75rem; }
+  .source-stats div span { display: block; font-size: 0.65rem; text-transform: uppercase; color: var(--ink-dim); letter-spacing: 0.03em; }
+  .source-stats div b { font-family: var(--font-mono); font-size: 0.95rem; }
+
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: 0.73rem; color: var(--ink-dim); }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+  /* ---------------- mobile overrides (van al final para ganar siempre la cascada) ---------------- */
+  @media (max-width: 860px) {
+    body { grid-template-columns: 1fr; }
+    .sidebar {
+      position: static; height: auto; width: 100%; border-right: none;
+      border-bottom: 1px solid var(--line); flex-direction: row; align-items: center;
+      flex-wrap: wrap; gap: 0.75rem 1.25rem; padding: 0.9rem 1rem;
+    }
+    .brand { flex: 1 1 auto; }
+    nav.side-nav { display: none; }
+    .sidebar-foot { margin-top: 0; border-top: none; padding-top: 0; flex: none; }
+    main { padding: 1.25rem 1rem 3rem; }
+    .top-row { flex-direction: column; }
+    .data-source { text-align: left; }
+    .kpi-row { grid-template-columns: repeat(2, 1fr); }
+    .chart-row { grid-template-columns: 1fr; }
+    .lead-grid { grid-template-columns: 1fr; }
+    .method-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 1.3rem; }
+  }
+  @media (max-width: 480px) {
+    .kpi-row { grid-template-columns: 1fr; }
+  }
+</style>
+
+<aside class="sidebar">
+  <div class="brand">
+    <span class="brand-hamburger" aria-hidden="true">&#9776;</span>
+    <div class="brand-mark">L</div>
+    <div>
+      <div class="brand-name">Lead Hub</div>
+      <div class="brand-sub">Calificación de prospectos</div>
+    </div>
+  </div>
+  <nav class="side-nav">
+    <a href="#panel" class="active"><span>Panel general</span><span class="sub">KPIs y mapa de prioridad</span></a>
+    <a href="#metodologia"><span>Metodología</span><span class="sub">Cómo se calcula cada puntaje</span></a>
+    <a href="#clasificacion"><span>Clasificación</span><span class="sub">15 prospectos, detalle completo</span></a>
+    <a href="#fuentes"><span>Fuentes</span><span class="sub">Conexiones y estado</span></a>
+  </nav>
+  <div class="sidebar-foot"><span class="dot"></span>15 de 15 prospectos calificados</div>
+</aside>
+
+<main>
+  <div class="top-row">
+    <div>
+      <div class="live-tag"><span class="dot"></span>Calificación en vivo</div>
+      <h1 id="panel">Panel de calificación de prospectos</h1>
+      <p class="subline">15 de 15 calificados · Rondas 1–3 · 24–25 jul 2026</p>
+    </div>
+    <div class="data-source">FUENTE<b>prospectos-linkedin-tracker.md</b></div>
+  </div>
+
+  <div class="section-head">
+    <h2>Constructor de KPIs</h2>
+    <p>Cada tarjeta se calcula igual que el resto del panel — sobre los 15 prospectos ya documentados, sin datos de relleno.</p>
+  </div>
+  <div class="kpi-row">
+    <div class="widget">
+      <div class="widget-head">
+        <div class="drag-handle"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="widget-title-block"><div class="widget-title">Prospectos</div><div class="widget-sub">Indicador KPI · 15 lead(s)</div></div>
+        <div class="widget-icons"><button class="icon-btn" title="ajustar">⚙</button><button class="icon-btn" title="cerrar">✕</button></div>
+      </div>
+      <div class="kpi-metric-label"><span class="dot" style="background:var(--accent)"></span>Total base</div>
+      <div class="kpi-value">15</div>
+      <div class="kpi-note">3 rondas · 24–25 jul 2026</div>
+    </div>
+    <div class="widget">
+      <div class="widget-head">
+        <div class="drag-handle"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="widget-title-block"><div class="widget-title">Listos</div><div class="widget-sub">Indicador KPI · sin alerta</div></div>
+        <div class="widget-icons"><button class="icon-btn" title="ajustar">⚙</button><button class="icon-btn" title="cerrar">✕</button></div>
+      </div>
+      <div class="kpi-metric-label"><span class="dot" style="background:var(--good)"></span>Enviar ya</div>
+      <div class="kpi-value">8</div>
+      <div class="kpi-note">Score lead ≥7 y mensaje ≥9</div>
+    </div>
+    <div class="widget">
+      <div class="widget-head">
+        <div class="drag-handle"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="widget-title-block"><div class="widget-title">Con alerta</div><div class="widget-sub">Indicador KPI · a confirmar</div></div>
+        <div class="widget-icons"><button class="icon-btn" title="ajustar">⚙</button><button class="icon-btn" title="cerrar">✕</button></div>
+      </div>
+      <div class="kpi-metric-label"><span class="dot" style="background:var(--warn)"></span>Requiere revisión</div>
+      <div class="kpi-value">5</div>
+      <div class="kpi-note">Propiedad, tamaño o dato incompleto</div>
+    </div>
+    <div class="widget">
+      <div class="widget-head">
+        <div class="drag-handle"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="widget-title-block"><div class="widget-title">Descartados</div><div class="widget-sub">Indicador KPI · fuera de ICP</div></div>
+        <div class="widget-icons"><button class="icon-btn" title="ajustar">⚙</button><button class="icon-btn" title="cerrar">✕</button></div>
+      </div>
+      <div class="kpi-metric-label"><span class="dot" style="background:var(--crit)"></span>No contactar</div>
+      <div class="kpi-value">2</div>
+      <div class="kpi-note">Endavant (ubicación) · Platinum (tamaño)</div>
+    </div>
+    <div class="widget">
+      <div class="widget-head">
+        <div class="drag-handle"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="widget-title-block"><div class="widget-title">Verificación</div><div class="widget-sub">Indicador KPI · directa en LinkedIn</div></div>
+        <div class="widget-icons"><button class="icon-btn" title="ajustar">⚙</button><button class="icon-btn" title="cerrar">✕</button></div>
+      </div>
+      <div class="kpi-metric-label"><span class="dot" style="background:var(--mute)"></span>Confirmados</div>
+      <div class="kpi-value">14/15</div>
+      <div class="kpi-note">Solo Productos Nevada sin verificar (captcha)</div>
+    </div>
+  </div>
+
+  <div class="chart-row">
+    <div class="widget">
+      <div class="widget-head">
+        <div class="drag-handle"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="widget-title-block"><div class="widget-title">Mapa de prioridad</div><div class="widget-sub">Gráfica de dispersión · 12 lead(s) con mensaje</div></div>
+        <div class="widget-icons"><button class="icon-btn" title="ajustar">⚙</button><button class="icon-btn" title="cerrar">✕</button></div>
+      </div>
+      <svg viewBox="0 0 620 400" role="img" aria-label="Dispersión de 12 prospectos por score de lead (eje X, 0 a 10) y score de mensaje (eje Y, 0 a 10)" style="width:100%;max-width:620px;height:auto;font-family:var(--font-ui);margin-top:0.5rem">
+        <rect x="310" y="20" width="270" height="204" fill="var(--good-bg)" opacity="0.55"></rect>
+        <g stroke="var(--line)" stroke-width="1">
+          <line x1="50" y1="20" x2="50" y2="330"></line>
+          <line x1="50" y1="330" x2="580" y2="330"></line>
+          <line x1="310" y1="20" x2="310" y2="330" stroke-dasharray="3 4"></line>
+          <line x1="50" y1="224" x2="580" y2="224" stroke-dasharray="3 4"></line>
+        </g>
+        <g font-size="10.5" fill="var(--ink-dim)">
+          <text x="50" y="345" text-anchor="middle">0</text>
+          <text x="310" y="345" text-anchor="middle">6</text>
+          <text x="580" y="345" text-anchor="middle">10</text>
+          <text x="315" y="12" text-anchor="middle" font-weight="700" fill="var(--ink)">Zona de acción inmediata</text>
+          <text x="40" y="330" text-anchor="end">0</text>
+          <text x="40" y="224" text-anchor="end">6</text>
+          <text x="40" y="24" text-anchor="end">10</text>
+        </g>
+        <g font-size="11" fill="var(--ink-dim)">
+          <text x="315" y="368" text-anchor="middle">Score Lead →</text>
+          <text x="0" y="0" text-anchor="middle" transform="translate(18,175) rotate(-90)">Score Mensaje →</text>
+        </g>
+        <circle cx="527" cy="24.6" r="6.5" fill="var(--good)"></circle><text x="527" y="14" text-anchor="middle" font-size="10" fill="var(--ink-dim)">Gatún</text>
+        <circle cx="500.5" cy="39.9" r="6.5" fill="var(--good)"></circle><text x="500.5" y="53" text-anchor="middle" font-size="10" fill="var(--ink-dim)">Bi Bank</text>
+        <circle cx="474" cy="39.9" r="6.5" fill="var(--good)"></circle><text x="474" y="65" text-anchor="middle" font-size="10" fill="var(--ink-dim)">P.Pago</text>
+        <circle cx="512" cy="41" r="6.5" fill="var(--good)"></circle><text x="512" y="55" text-anchor="middle" font-size="10" fill="var(--ink-dim)">LAC</text>
+        <circle cx="474" cy="55.2" r="6.5" fill="var(--good)"></circle><text x="474" y="80" text-anchor="middle" font-size="10" fill="var(--ink-dim)">Tántalo</text>
+        <circle cx="421" cy="39.9" r="6.5" fill="var(--good)"></circle><text x="421" y="30" text-anchor="middle" font-size="10" fill="var(--ink-dim)">UETA</text>
+        <circle cx="447.5" cy="69.9" r="6.5" fill="var(--good)"></circle><text x="447.5" y="93" text-anchor="middle" font-size="10" fill="var(--ink-dim)">CFE</text>
+        <circle cx="447.5" cy="55.2" r="6.5" fill="var(--warn)"></circle><text x="447.5" y="45" text-anchor="middle" font-size="10" fill="var(--ink-dim)">Barraza</text>
+        <circle cx="341.5" cy="55.2" r="6.5" fill="var(--warn)"></circle><text x="341.5" y="45" text-anchor="middle" font-size="10" fill="var(--ink-dim)">Dichter&amp;N.</text>
+        <circle cx="315" cy="116.4" r="6.5" fill="var(--mute)"></circle><text x="315" y="130" text-anchor="middle" font-size="10" fill="var(--ink-dim)">GVA</text>
+        <circle cx="262" cy="116.4" r="6.5" fill="var(--warn)"></circle><text x="262" y="130" text-anchor="middle" font-size="10" fill="var(--ink-dim)">Cerv. Nac.</text>
+        <circle cx="209" cy="131.7" r="6.5" fill="var(--warn)"></circle><text x="209" y="146" text-anchor="middle" font-size="10" fill="var(--ink-dim)">Mowat</text>
+      </svg>
+      <div class="legend">
+        <div class="legend-item"><span class="legend-dot" style="background:var(--good)"></span>Confirmado, sin alerta</div>
+        <div class="legend-item"><span class="legend-dot" style="background:var(--warn)"></span>Con alerta o salvedad</div>
+        <div class="legend-item"><span class="legend-dot" style="background:var(--mute)"></span>Investigación incompleta</div>
+      </div>
+    </div>
+    <div class="widget">
+      <div class="widget-head">
+        <div class="drag-handle"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="widget-title-block"><div class="widget-title">Score promedio por ronda</div><div class="widget-sub">Gráfica de barras · Score Lead</div></div>
+        <div class="widget-icons"><button class="icon-btn" title="ajustar">⚙</button><button class="icon-btn" title="cerrar">✕</button></div>
+      </div>
+      <svg viewBox="0 0 260 260" role="img" aria-label="Score de lead promedio por ronda: Ronda 1 4.6, Ronda 2 7.2, Ronda 3 6.5" style="width:100%;max-width:260px;height:auto;margin-top:0.75rem">
+        <g stroke="var(--line)"><line x1="30" y1="10" x2="30" y2="210"></line><line x1="30" y1="210" x2="240" y2="210"></line></g>
+        <g font-size="9.5" fill="var(--ink-dim)">
+          <text x="24" y="213" text-anchor="end">0</text>
+          <text x="24" y="112" text-anchor="end">5</text>
+          <text x="24" y="14" text-anchor="end">10</text>
+        </g>
+        <rect x="55" y="118.6" width="42" height="91.4" rx="3" fill="var(--accent)" opacity="0.55"></rect>
+        <text x="76" y="112" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)">4.6</text>
+        <text x="76" y="228" text-anchor="middle" font-size="10" fill="var(--ink-dim)">Ronda 1</text>
+        <rect x="129" y="65.6" width="42" height="144.4" rx="3" fill="var(--accent)"></rect>
+        <text x="150" y="59" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)">7.2</text>
+        <text x="150" y="228" text-anchor="middle" font-size="10" fill="var(--ink-dim)">Ronda 2</text>
+        <rect x="203" y="80.6" width="42" height="129.4" rx="3" fill="var(--accent)" opacity="0.78"></rect>
+        <text x="224" y="74" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)">6.5</text>
+        <text x="224" y="228" text-anchor="middle" font-size="10" fill="var(--ink-dim)">Ronda 3</text>
+      </svg>
+      <p class="meta-line" style="margin-top:0.5rem">La Ronda 2 (criterio ICP ya ajustado) tiene el mejor promedio de encaje — la Ronda 1 arrastra el promedio más bajo por los 2 descartes.</p>
+    </div>
+  </div>
+
+  <div class="section-head" id="metodologia">
+    <h2>Metodología</h2>
+    <p>Cada número sale de sumar/restar componentes concretos — nada de "se ve sólido".</p>
+  </div>
+  <div class="widget">
+    <div class="method-grid">
+      <div>
+        <h4>Score Lead (0–10) — ¿la empresa encaja?</h4>
+        <ul>
+          <li><b>Encaje ICP</b> (0–4): tamaño dentro de rango + presencia real en Panamá</li>
+          <li><b>Señal de necesidad</b> (0–3): qué tan fresca y específica es la vacante</li>
+          <li><b>Verificación independiente</b> (0–2): confirmado en LinkedIn, no solo indexado</li>
+          <li><b>Penalización por riesgo</b> (−0 a −3): propiedad extranjera, intermediario, dato sin cerrar</li>
+        </ul>
+        <span class="method-formula">Lead = ICP + Señal + Verificación − Riesgo</span>
+      </div>
+      <div>
+        <h4>Score Mensaje (0–10) — ¿el mensaje está bien escrito?</h4>
+        <ul>
+          <li><b>Personalización real</b> (0–3): cita la vacante/rol exacto</li>
+          <li><b>Prueba social concreta</b> (0–3): caso propio citado, con métrica si existe</li>
+          <li><b>Claridad del ask</b> (0–2): pide algo puntual (15 min), no vago</li>
+          <li><b>Ajuste de ángulo</b> (0–2): el pitch corresponde al rol real</li>
+        </ul>
+        <span class="method-formula">Mensaje = Personalización + Prueba social + Ask + Ajuste</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-head" id="clasificacion">
+    <h2>Clasificación · 15 prospectos</h2>
+    <p>Ordenado por ronda de búsqueda. Abrí cualquiera para ver el mensaje, la fuente y el cálculo exacto del puntaje.</p>
+  </div>
+  <div class="filters" id="round-filters">
+    <button class="active" data-round="all">Todas (15)</button>
+    <button data-round="1">Ronda 1 (5)</button>
+    <button data-round="2">Ronda 2 (6)</button>
+    <button data-round="3">Ronda 3 (4)</button>
+  </div>
+
+  <div class="lead-grid" id="lead-grid">
+
+    <details class="lead-card" data-round="1">
+      <summary>
+        <div class="card-top"><span class="platform-chip">in</span><span class="status-tag st-good">Enviar ya</span><div class="avatar">CF</div></div>
+        <div class="card-body">
+          <div class="card-name">Centro Financiero Empresarial</div>
+          <div class="card-meta">Financiera pyme · 135 emp · Panamá</div>
+          <div class="card-stats">
+            <div><div class="card-stat-label">Score Lead</div><div class="card-stat-value good">7.5</div></div>
+            <div><div class="card-stat-label">Score Msg.</div><div class="card-stat-value good">8.5</div></div>
+          </div>
+          
+          <div class="card-stats" style="margin-top:0.4rem;padding-top:0.5rem;"><div><div class="card-stat-label">✓ Verificación</div><div class="card-stat-value">2/2</div></div><div><div class="card-stat-label">⚖ Riesgo</div><div class="card-stat-value good">0</div></div></div>
+          <div class="card-foot"><span>Motor 2</span><span>Ronda 1</span></div>
+          <div class="chev-hint"></div>
+        </div>
+      </summary>
+      <div class="lead-detail">
+        <p class="meta-line">Vacante FP&amp;A vencida, pero portal de empleos propio sigue activo · <a href="https://cfe.hiringroom.com/jobs" target="_blank" rel="noopener">portal de empleos</a></p>
+        <div class="message-box">"Hola [Nombre], vi que en CFE han buscado antes perfiles de FP&amp;A — trabajo en automatización financiera con IA (Codeflow AI) y armé sistemas reales como un flujo de nómina multi-país que redujo el tiempo de procesamiento en 97%... ¿15 min esta semana?"</div>
+        <h5 class="dbtitle">Desglose Score Lead — 7.5/10</h5>
+        <div class="chip-row">
+          <div class="chip">Encaje ICP (135 emp, Panamá real) <b>4/4</b></div>
+          <div class="chip">Señal (vacante vencida, portal activo) <b>1.5/3</b></div>
+          <div class="chip">Verificación directa <b>2/2</b></div>
+          <div class="chip">Riesgo <b>0</b></div>
+        </div>
+        <h5 class="dbtitle">Desglose Score Mensaje — 8.5/10</h5>
+        <div class="chip-row">
+          <div class="chip">Personalización (rol FP&amp;A citado) <b>2/3</b></div>
+          <div class="chip">Prueba social (97% + caso real) <b>3/3</b></div>
+          <div class="chip">Claridad del ask <b>2/2</b></div>
+          <div class="chip">Ajuste de ángulo <b>1.5/2</b></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="lead-card" data-round="1">
+      <summary>
+        <div class="card-top"><span class="platform-chip">in</span><span class="status-tag st-mute">Incompleto</span><div class="avatar">GV</div></div>
+        <div class="card-body">
+          <div class="card-name">GVA Hospitality</div>
+          <div class="card-meta">Hotelería boutique · 27 emp · Panamá</div>
+          <div class="card-stats">
+            <div><div class="card-stat-label">Score Lead</div><div class="card-stat-value warn">5</div></div>
+            <div><div class="card-stat-label">Score Msg.</div><div class="card-stat-value warn">7</div></div>
+          </div>
+          
+          <div class="card-stats" style="margin-top:0.4rem;padding-top:0.5rem;"><div><div class="card-stat-label">✓ Verificación</div><div class="card-stat-value">2/2</div></div><div><div class="card-stat-label">⚖ Riesgo</div><div class="card-stat-value warn">−1</div></div></div>
+          <div class="card-foot"><span>Motor 1/2 sin decidir</span><span>Ronda 1</span></div>
+          <div class="chev-hint"></div>
+        </div>
+      </summary>
+      <div class="lead-detail">
+        <div class="alert-box">Mensaje condicional ("si se decide Motor 2 tras revisar contenido") — no confirmado para enviar todavía.</div>
+        <div class="message-box">"Hola [Nombre], veo que en GVA Hospitality siguen creciendo el equipo — trabajo en automatización de reporting y control de costos con IA (Codeflow AI)... ¿Charlamos 15 min?"</div>
+        <h5 class="dbtitle">Desglose Score Lead — 5/10</h5>
+        <div class="chip-row">
+          <div class="chip">Encaje ICP (27 emp, extremo chico) <b>3/4</b></div>
+          <div class="chip">Señal (vacante vencida, otras sin relación a datos) <b>1/3</b></div>
+          <div class="chip">Verificación directa <b>2/2</b></div>
+          <div class="chip">Riesgo (contenido sin revisar) <b>−1</b></div>
+        </div>
+        <h5 class="dbtitle">Desglose Score Mensaje — 7/10 (condicional)</h5>
+        <div class="chip-row">
+          <div class="chip">Personalización (genérica) <b>1.5/3</b></div>
+          <div class="chip">Prueba social (sin métrica) <b>2/3</b></div>
+          <div class="chip">Claridad del ask <b>2/2</b></div>
+          <div class="chip">Ajuste de ángulo (a confirmar) <b>1.5/2</b></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="lead-card" data-round="1">
+      <summary>
+        <div class="card-top"><span class="platform-chip">in</span><span class="status-tag st-crit">Descartado</span><div class="avatar">EN</div></div>
+        <div class="card-body">
+          <div class="card-name">Endavant</div>
+          <div class="card-meta">Marketing digital · sede real en Miami</div>
+          <div class="card-stats">
+            <div><div class="card-stat-label">Score Lead</div><div class="card-stat-value crit">4</div></div>
+            <div><div class="card-stat-label">Score Msg.</div><div class="card-stat-value crit">—</div></div>
+          </div>
+          
+          <div class="card-stats" style="margin-top:0.4rem;padding-top:0.5rem;"><div><div class="card-stat-label">✓ Verificación</div><div class="card-stat-value">2/2</div></div><div><div class="card-stat-label">⚖ Riesgo</div><div class="card-stat-value crit">−2</div></div></div>
+          <div class="card-foot"><span>No aplica</span><span>Ronda 1</span></div>
+          <div class="chev-hint"></div>
+        </div>
+      </summary>
+      <div class="lead-detail">
+        <p class="meta-line">La vacante era la más fresca y mejor alineada de la Ronda 1 (FP&amp;A, ~24 días) — pero la empresa no cumple "presencia real en Panamá".</p>
+        <h5 class="dbtitle">Desglose Score Lead — 4/10</h5>
+        <div class="chip-row">
+          <div class="chip">Encaje ICP (tamaño ok, ubicación no) <b>1/4</b></div>
+          <div class="chip">Señal (la más fresca de la ronda) <b>3/3</b></div>
+          <div class="chip">Verificación directa <b>2/2</b></div>
+          <div class="chip">Riesgo (sede real fuera de Panamá) <b>−2</b></div>
+        </div>
+        <p class="meta-line">Sin mensaje: el criterio de ubicación descalifica antes de esa etapa.</p>
+      </div>
+    </details>
+
+    <details class="lead-card" data-round="1">
+      <summary>
+        <div class="card-top"><span class="platform-chip">in</span><span class="status-tag st-crit">Revisar</span><div class="avatar">PB</div></div>
+        <div class="card-body">
+          <div class="card-name">Platinum Brands, S.A.</div>
+          <div class="card-meta">Franquicias KFC / Dairy Queen</div>
+          <div class="card-stats">
+            <div><div class="card-stat-label">Score Lead</div><div class="card-stat-value crit">—</div></div>
+            <div><div class="card-stat-label">Score Msg.</div><div class="card-stat-value crit">—</div></div>
+          </div>
+          
+          <div class="card-stats" style="margin-top:0.4rem;padding-top:0.5rem;"><div><div class="card-stat-label">✗ Verificación</div><div class="card-stat-value">—</div></div><div><div class="card-stat-label">⚖ Riesgo</div><div class="card-stat-value good">—</div></div></div>
+          <div class="card-foot"><span>1,500+ emp</span><span>Ronda 1</span></div>
+          <div class="chev-hint"></div>
+        </div>
+      </summary>
+      <div class="lead-detail">
+        <div class="alert-box">Descartado bajo el ICP original (20-200 emp). El criterio se ajustó después — pendiente re-evaluar contra el nuevo criterio.</div>
+      </div>
+    </details>
+
+    <details class="lead-card" data-round="1">
+      <summary>
+        <div class="card-top"><span class="platform-chip">in</span><span class="status-tag st-crit">No contactar</span><div class="avatar">PN</div></div>
+        <div class="card-body">
+          <div class="card-name">Productos Nevada (Dos Pinos)</div>
+          <div class="card-meta">Manufactura de lácteos · sin verificar</div>
+          <div class="card-stats">
+            <div><div class="card-stat-label">Score Lead</div><div class="card-stat-value crit">2</div></div>
+            <div><div class="card-stat-label">Score Msg.</div><div class="card-stat-value crit">—</div></div>
+          </div>
+          
+          <div class="card-stats" style="margin-top:0.4rem;padding-top:0.5rem;"><div><div class="card-stat-label">✗ Verificación</div><div class="card-stat-value">0/2</div></div><div><div class="card-stat-label">⚖ Riesgo</div><div class="card-stat-value warn">−1</div></div></div>
+          <div class="card-foot"><span>Bloqueado por captcha</span><span>Ronda 1</span></div>
+          <div class="chev-hint"></div>
+        </div>
+      </summary>
+      <div class="lead-detail">
+        <h5 class="dbtitle">Desglose Score Lead — 2/10</h5>
+        <div class="chip-row">
+          <div class="chip">Encaje ICP (probablemente fuera de rango) <b>1/4</b></div>
+          <div class="chip">Señal <b>0/3</b></div>
+          <div class="chip">Verificación directa (bloqueada) <b>0/2</b></div>
+          <div class="chip">Riesgo (tamaño no confirmado) <b>−1</b></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="lead-card" data-round="2">
+      <summary>
+        <div class="card-top"><span class="platform-chip">in</span><span class="status-tag st-good">Prioridad #1</span><div class="avatar">GG</div></div>
+        <div class="card-body">
+          <div class="card-name">Generadora Gatún</div>
+          <div class="card-meta">Energía eléctrica · 51-200 emp · Colón</div>
+          <div class="card-stats">
+            <div><div class="card-stat-label">Score Lead</div><div class="card-stat-value good">9</div></div>
+            <div><div class="card-stat-label">Score Msg.</div><div class="card-stat-value good">10</div></div>
+          </div>
+          
+          <div class="card-stats" style="margin-top:0.4rem;padding-top:0.5rem;"><div><div class="card-stat-label">✓ Verificación</div><div class="card-stat-value">2/2</div></div><div><div class="card-stat-label">⚖ Riesgo</div><div class="card-stat-value good">0</div></div></div>
+          <div class="card-foot"><span>Motor 2</span><span>Ronda 2</span></div>
+          <div class="chev-hint"></div>
+        </div>
+      </summary>
+      <div class="lead-detail">
+        <p class="meta-line">Vacante de Contralor/a hace 17 horas (69 solicitudes) — la señal más fresca de las 15.</p>
+        <div class="message-box">"Hola [Nombre], vi la búsqueda de Contralor/a en Generadora Gatún — trabajo en automatización financiera con IA (Codeflow AI)... ¿15 min esta semana?"</div>
+        <h5 class="dbtitle">Desglose Score Lead — 9/10</h5>
+        <div class="chip-row">
+          <div class="chip">Encaje ICP <b>4/4</b></div><div class="chip">Señal (17h, 69 postulantes) <b>3/3</b></div>
+          <div class="chip">Verificación directa <b>2/2</b></div><div class="chip">Riesgo <b>0</b></div>
+        </div>
+        <h5 class="dbtitle">Desglose Score Mensaje — 10/10</h5>
+        <div class="chip-row">
+          <div class="chip">Personalización <b>3/3</b></div><div class="chip">Prueba social <b>3/3</b></div>
+          <div class="chip">Claridad del ask <b>2/2</b></div><div class="chip">Ajuste de ángulo <b>2/2</b></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="lead-card" data-round="2">
+      <summary>
+        <div class="card-top"><span class="platform-chip">in</span><span class="status-tag st-good">Enviar ya</span><div class="avatar">BB</div></div>
+        <div class="card-body">
+          <div class="card-name">Bi Bank Panamá</div>
+          <div class="card-meta">Banca · Corporación Bi · 51-200 emp</div>
+          <div class="card-stats">
+            <div><div class="card-stat-label">Score Lead</div><div class="card-stat-value good">8.5</div></div>
+            <div><div class="card-stat-label">Score Msg.</div><div class="card-stat-value good">9.5</div></div>
+          </div>
+          
+          <div class="card-stats" style="margin-top:0.4rem;padding-top:0.5rem;"><div><div class="card-stat-label">✓ Verificación</div><div class="card-stat-value">2/2</div></div><div><div class="card-stat-label">⚖ Riesgo</div><div class="card-stat-value good">0</div></div></div>
+          <div class="card-foot"><span>Motor 2</span><span>Ronda 2</span></div>
+          <div class="chev-hint"></div>
+        </div>
+      </summary>
+      <div class="lead-detail">
+        <p class="meta-line">Vacante "Analista de Procesos y Proyectos Operativos" hace 2 días.</p>
+        <div class="message-box">"Hola [Nombre], vi la vacante de Analista de Procesos y Proyectos Operativos en Bi Bank — trabajo en automatización de procesos y reporting con IA (Codeflow AI)... ¿Charlamos 15 min?"</div>
+        <h5 class="dbtitle">Desglose Score Lead — 8.5/10</h5>
+        <div class="chip-row">
+          <div class="chip">Encaje ICP <b>4/4</b></div><div class="chip">Señal (2 días) <b>2.5/3</b></div>
+          <div class="chip">Verificación directa <b>2/2</b></div><div class="chip">Riesgo <b>0</b></div>
+        </div>
+        <h5 class="dbtitle">Desglose Score Mensaje — 9.5/10</h5>
+        <div class="chip-row">
+          <div class="chip">Personalización <b>3/3</b></div><div class="chip">Prueba social (sin métrica numérica) <b>2.5/3</b></div>
+          <div class="chip">Claridad del ask <b>2/2</b></div><div class="chip">Ajuste de ángulo <b>2/2</b></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="lead-card" data-round="2">
+      <summary>
+        <div class="card-top"><span class="platform-chip">in</span><span class="status-tag st-good">Enviar ya</span><div class="avatar">UE</div></div>
+        <div class="card-body">
+          <div class="card-name">UETA</div>
+          <div class="card-meta">Holding importación/retail · 201-500 emp</div>
+          <div class="card-stats">
+            <div><div class="card-stat-label">Score Lead</div><div class="card-stat-value good">7</div></div>
+            <div><div class="card-stat-label">Score Msg.</div><div class="card-stat-value good">9.5</div></div>
+          </div>
+          
+          <div class="card-stats" style="margin-top:0.4rem;padding-top:0.5rem;"><div><div class="card-stat-label">✓ Verificación</div><div class="card-stat-value">2/2</div></div><div><div class="card-stat-label">⚖ Riesgo</div><div class="card-stat-value warn">−0.5</div></div></div>
+          <div class="card-foot"><span>Motor 2</span><span>Ronda 2</span></div>
+          <div class="chev-hint"></div>
+        </div>
+      </summary>
+      <div class="lead-detail">
+        <p class="meta-line">Vacante "Contador (Panamá)" hace 5 días · criterio ICP ajustado (holding panameño real).</p>
+        <div class="message-box">"Hola [Nombre], vi que UETA está buscando un Contador — trabajo en automatización contable y financiera con IA (Codeflow AI)... ¿15 min esta semana?"</div>
+        <h5 class="dbtitle">Desglose Score Lead — 7/10</h5>
+        <div class="chip-row">
+          <div class="chip">Encaje ICP (sobre el techo original, ok ajustado) <b>3.5/4</b></div><div class="chip">Señal (5 días) <b>2/3</b></div>
+          <div class="chip">Verificación directa <b>2/2</b></div><div class="chip">Riesgo (tamaño grande) <b>−0.5</b></div>
+        </div>
+        <h5 class="dbtitle">Desglose Score Mensaje — 9.5/10</h5>
+        <div class="chip-row">
+          <div class="chip">Personalización <b>3/3</b></div><div class="chip">Prueba social <b>2.5/3</b></div>
+          <div class="chip">Claridad del ask <b>2/2</b></div><div class="chip">Ajuste de ángulo <b>2/2</b></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="lead-card" data-round="2">
+      <summary>
+        <div class="card-top"><span class="platform-chip">in</span><span class="status-tag st-good">Enviar ya</span><div class="avatar">TA</div></div>
+        <div class="card-body">
+          <div class="card-name">Tántalo Hotel Kitchen Roofbar</div>
+          <div class="card-meta">Hostelería boutique · Casco Viejo · 51-200 emp</div>
+          <div class="card-stats">
+            <div><div class="card-stat-label">Score Lead</div><div class="card-stat-value good">8</div></div>
+            <div><div class="card-stat-label">Score Msg.</div><div class="card-stat-value good">9</div></div>
+          </div>
+          
+          <div class="card-stats" style="margin-top:0.4rem;padding-top:0.5rem;"><div><div class="card-stat-label">✓ Verificación</div><div class="card-stat-value">2/2</div></div><div><div class="card-stat-label">⚖ Riesgo</div><div class="card-stat-value good">0</div></div></div>
+          <div class="card-foot"><span>Motor 2</span><span>Ronda 2</span></div>
+          <div class="chev-hint"></div>
+        </div>
+      </summary>
+      <div class="lead-detail">
+        <p class="meta-line">Vacante "Gerente de operaciones", vista recientemente.</p>
+        <div class="message-box">"Hola [Nombre], vi la búsqueda de Gerente de Operaciones en Tántalo Group — trabajo en automatización de reporting y control operativo con IA (Codeflow AI)... ¿Charlamos 15 min?"</div>
+        <h5 class="dbtitle">Desglose Score Lead — 8/10</h5>
+        <div class="chip-row">
+          <div class="chip">Encaje ICP <b>4/4</b></div><div class="chip">Señal (sin fecha exacta) <b>2/3</b></div>
+          <div class="chip">Verificación directa <b>2/2</b></div><div class="chip">Riesgo <b>0</b></div>
+        </div>
+        <h5 class="dbtitle">Desglose Score Mensaje — 9/10</h5>
+        <div class="chip-row">
+          <div class="chip">Personalización <b>2.5/3</b></div><div class="chip">Prueba social <b>2.5/3</b></div>
+          <div class="chip">Claridad del ask <b>2/2</b></div><div class="chip">Ajuste de ángulo <b>2/2</b></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="lead-card" data-round="2">
+      <summary>
+        <div class="card-top"><span class="platform-chip">in</span><span class="status-tag st-warn">Enviar, con salvedad</span><div class="avatar">BA</div></div>
+        <div class="card-body">
+          <div class="card-name">Barraza y Cia, S.A.</div>
+          <div class="card-meta">Manufactura detergentes · 1,000-5,000 emp</div>
+          <div class="card-stats">
+            <div><div class="card-stat-label">Score Lead</div><div class="card-stat-value warn">7.5</div></div>
+            <div><div class="card-stat-label">Score Msg.</div><div class="card-stat-value good">9</div></div>
+          </div>
+          
+          <div class="card-stats" style="margin-top:0.4rem;padding-top:0.5rem;"><div><div class="card-stat-label">✓ Verificación</div><div class="card-stat-value">2/2</div></div><div><div class="card-stat-label">⚖ Riesgo</div><div class="card-stat-value warn">−0.5</div></div></div>
+          <div class="card-foot"><span>Motor 2</span><span>Ronda 2</span></div>
+          <div class="chev-hint"></div>
+        </div>
+      </summary>
+      <div class="lead-detail">
+        <p class="meta-line">Vacante "Jefe de producción" hace &lt;1 hora — la más fresca de las 15.</p>
+        <div class="alert-box">Rol operativo/planta, no financiero — el mensaje ya está correctamente ajustado a ese ángulo, no al pitch financiero por defecto.</div>
+        <div class="message-box">"Hola [Nombre], vi la búsqueda de Jefe de Producción en Barraza y Cia — trabajo en automatización de reporting de planta con IA (Codeflow AI)... ¿15 min esta semana?"</div>
+        <h5 class="dbtitle">Desglose Score Lead — 7.5/10</h5>
+        <div class="chip-row">
+          <div class="chip">Encaje ICP (grande, aprobado por el usuario) <b>3/4</b></div><div class="chip">Señal (&lt;1h) <b>3/3</b></div>
+          <div class="chip">Verificación directa <b>2/2</b></div><div class="chip">Riesgo (tamaño extremo) <b>−0.5</b></div>
+        </div>
+        <h5 class="dbtitle">Desglose Score Mensaje — 9/10</h5>
+        <div class="chip-row">
+          <div class="chip">Personalización <b>3/3</b></div><div class="chip">Prueba social <b>2/3</b></div>
+          <div class="chip">Claridad del ask <b>2/2</b></div><div class="chip">Ajuste de ángulo (operativo, no financiero) <b>2/2</b></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="lead-card" data-round="2">
+      <summary>
+        <div class="card-top"><span class="platform-chip">in</span><span class="status-tag st-warn">Calificar antes</span><div class="avatar">MW</div></div>
+        <div class="card-body">
+          <div class="card-name">Mowat Corporation</div>
+          <div class="card-meta">"Tecnología" registrada · 2-10 emp</div>
+          <div class="card-stats">
+            <div><div class="card-stat-label">Score Lead</div><div class="card-stat-value warn">3</div></div>
+            <div><div class="card-stat-label">Score Msg.</div><div class="card-stat-value warn">6.5</div></div>
+          </div>
+          
+          <div class="card-stats" style="margin-top:0.4rem;padding-top:0.5rem;"><div><div class="card-stat-label">⚠ Verificación</div><div class="card-stat-value">1/2</div></div><div><div class="card-stat-label">⚖ Riesgo</div><div class="card-stat-value crit">−2</div></div></div>
+          <div class="card-foot"><span>Motor 2, con alerta</span><span>Ronda 2</span></div>
+          <div class="chev-hint"></div>
+        </div>
+      </summary>
+      <div class="lead-detail">
+        <p class="meta-line">Vacante "Controller / Encargado de Finanzas" hace 18h, 21 solicitudes.</p>
+        <div class="alert-box">Discrepancia entre rubro (Tecnología, 2-10 emp) y vacante (Controller de Finanzas) — señal clásica de intermediario/agencia. El mensaje ya pregunta esto antes de vender.</div>
+        <div class="message-box">"Hola [Nombre], vi la vacante de Controller / Encargado de Finanzas que publicaron — ¿la posición es para operar dentro de Mowat directamente o es para un cliente suyo?"</div>
+        <h5 class="dbtitle">Desglose Score Lead — 3/10</h5>
+        <div class="chip-row">
+          <div class="chip">Encaje ICP (muy chico, posible intermediario) <b>2/4</b></div><div class="chip">Señal (18h, pero mismatch de rol) <b>2/3</b></div>
+          <div class="chip">Verificación directa (parcial) <b>1/2</b></div><div class="chip">Riesgo (alerta fuerte) <b>−2</b></div>
+        </div>
+        <h5 class="dbtitle">Desglose Score Mensaje — 6.5/10</h5>
+        <div class="chip-row">
+          <div class="chip">Personalización (pregunta calificadora) <b>2/3</b></div><div class="chip">Prueba social (diferida a propósito) <b>1/3</b></div>
+          <div class="chip">Claridad del ask (pregunta, no CTA directo) <b>1.5/2</b></div><div class="chip">Ajuste de ángulo (cauteloso) <b>2/2</b></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="lead-card" data-round="3">
+      <summary>
+        <div class="card-top"><span class="platform-chip">in</span><span class="status-tag st-good">Enviar ya</span><div class="avatar">PP</div></div>
+        <div class="card-body">
+          <div class="card-name">Punto Pago Panamá</div>
+          <div class="card-meta">Fintech — SuperApp de pagos · 51-200 emp</div>
+          <div class="card-stats">
+            <div><div class="card-stat-label">Score Lead</div><div class="card-stat-value good">8</div></div>
+            <div><div class="card-stat-label">Score Msg.</div><div class="card-stat-value good">9.5</div></div>
+          </div>
+          
+          <div class="card-stats" style="margin-top:0.4rem;padding-top:0.5rem;"><div><div class="card-stat-label">✓ Verificación</div><div class="card-stat-value">2/2</div></div><div><div class="card-stat-label">⚖ Riesgo</div><div class="card-stat-value good">0</div></div></div>
+          <div class="card-foot"><span>Motor 2</span><span>Ronda 3</span></div>
+          <div class="chev-hint"></div>
+        </div>
+      </summary>
+      <div class="lead-detail">
+        <p class="meta-line">Vacante "Collections &amp; Recovery Manager".</p>
+        <div class="message-box">"Hola [Nombre], vi la búsqueda de Collections &amp; Recovery Manager en Punto Pago — trabajo en automatización de reporting y cobranza con IA (Codeflow AI)... ¿15 min esta semana?"</div>
+        <h5 class="dbtitle">Desglose Score Lead — 8/10</h5>
+        <div class="chip-row">
+          <div class="chip">Encaje ICP <b>4/4</b></div><div class="chip">Señal (sin fecha exacta) <b>2/3</b></div>
+          <div class="chip">Verificación directa <b>2/2</b></div><div class="chip">Riesgo <b>0</b></div>
+        </div>
+        <h5 class="dbtitle">Desglose Score Mensaje — 9.5/10</h5>
+        <div class="chip-row">
+          <div class="chip">Personalización <b>3/3</b></div><div class="chip">Prueba social <b>2.5/3</b></div>
+          <div class="chip">Claridad del ask <b>2/2</b></div><div class="chip">Ajuste de ángulo (fintech ↔ cobranza) <b>2/2</b></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="lead-card" data-round="3">
+      <summary>
+        <div class="card-top"><span class="platform-chip">in</span><span class="status-tag st-warn">Confirmar antes</span><div class="avatar">CN</div></div>
+        <div class="card-body">
+          <div class="card-name">Cervecería Nacional</div>
+          <div class="card-meta">Bebidas — propiedad de AB InBev · 1,000-5,000 emp</div>
+          <div class="card-stats">
+            <div><div class="card-stat-label">Score Lead</div><div class="card-stat-value warn">4</div></div>
+            <div><div class="card-stat-label">Score Msg.</div><div class="card-stat-value warn">7</div></div>
+          </div>
+          
+          <div class="card-stats" style="margin-top:0.4rem;padding-top:0.5rem;"><div><div class="card-stat-label">✓ Verificación</div><div class="card-stat-value">2/2</div></div><div><div class="card-stat-label">⚖ Riesgo</div><div class="card-stat-value crit">−2</div></div></div>
+          <div class="card-foot"><span>Motor 2</span><span>Ronda 3</span></div>
+          <div class="chev-hint"></div>
+        </div>
+      </summary>
+      <div class="lead-detail">
+        <div class="alert-box">Propiedad de AB InBev (multinacional con sede fuera de Panamá) — el mismo criterio que descartó a Endavant. Falta tu decisión sobre si pesa más la operación real en Panamá o la propiedad extranjera.</div>
+        <div class="message-box">"Hola [Nombre], vi que Cervecería Nacional está en búsqueda activa de talento — trabajo en automatización de reporting operativo y financiero con IA (Codeflow AI)... ¿Charlamos 15 min?"</div>
+        <h5 class="dbtitle">Desglose Score Lead — 4/10</h5>
+        <div class="chip-row">
+          <div class="chip">Encaje ICP (tamaño ok, criterio ajustado) <b>2.5/4</b></div><div class="chip">Señal (sin rol específico) <b>1.5/3</b></div>
+          <div class="chip">Verificación directa <b>2/2</b></div><div class="chip">Riesgo (propiedad multinacional) <b>−2</b></div>
+        </div>
+        <h5 class="dbtitle">Desglose Score Mensaje — 7/10</h5>
+        <div class="chip-row">
+          <div class="chip">Personalización (genérica, sin rol) <b>1.5/3</b></div><div class="chip">Prueba social <b>2/3</b></div>
+          <div class="chip">Claridad del ask <b>2/2</b></div><div class="chip">Ajuste de ángulo <b>1.5/2</b></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="lead-card" data-round="3">
+      <summary>
+        <div class="card-top"><span class="platform-chip">in</span><span class="status-tag st-warn">Enviar, con nota</span><div class="avatar">DN</div></div>
+        <div class="card-body">
+          <div class="card-name">Dichter &amp; Neira Research</div>
+          <div class="card-meta">Investigación de mercado · firma regional · 501-1,000</div>
+          <div class="card-stats">
+            <div><div class="card-stat-label">Score Lead</div><div class="card-stat-value warn">5.5</div></div>
+            <div><div class="card-stat-label">Score Msg.</div><div class="card-stat-value good">9</div></div>
+          </div>
+          
+          <div class="card-stats" style="margin-top:0.4rem;padding-top:0.5rem;"><div><div class="card-stat-label">✓ Verificación</div><div class="card-stat-value">1.5/2</div></div><div><div class="card-stat-label">⚖ Riesgo</div><div class="card-stat-value warn">−1.5</div></div></div>
+          <div class="card-foot"><span>Motor 2</span><span>Ronda 3</span></div>
+          <div class="chev-hint"></div>
+        </div>
+      </summary>
+      <div class="lead-detail">
+        <p class="meta-line">Vacante "Ingeniero de Datos (Backend)".</p>
+        <div class="alert-box">Firma con operación regional (no 100% panameña de origen), distinta del caso Miami/Endavant, pero vale la nota para no tratarla igual que una 100% local.</div>
+        <div class="message-box">"Hola [Nombre], vi la búsqueda de Ingeniero de Datos (Backend) en Dichter &amp; Neira — trabajo en automatización de procesamiento y reporting de datos con IA (Codeflow AI)... ¿15 min esta semana?"</div>
+        <h5 class="dbtitle">Desglose Score Lead — 5.5/10</h5>
+        <div class="chip-row">
+          <div class="chip">Encaje ICP (grande, firma regional) <b>3/4</b></div><div class="chip">Señal (rol de datos, buen fit) <b>2.5/3</b></div>
+          <div class="chip">Verificación directa (parcial) <b>1.5/2</b></div><div class="chip">Riesgo (origen no 100% panameño) <b>−1.5</b></div>
+        </div>
+        <h5 class="dbtitle">Desglose Score Mensaje — 9/10</h5>
+        <div class="chip-row">
+          <div class="chip">Personalización (rol exacto) <b>3/3</b></div><div class="chip">Prueba social <b>2/3</b></div>
+          <div class="chip">Claridad del ask <b>2/2</b></div><div class="chip">Ajuste de ángulo <b>2/2</b></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="lead-card" data-round="3">
+      <summary>
+        <div class="card-top"><span class="platform-chip">in</span><span class="status-tag st-good">Enviar ya</span><div class="avatar">LA</div></div>
+        <div class="card-body">
+          <div class="card-name">LAC Legal</div>
+          <div class="card-meta">Servicios legales · Tower Financial Center · 11-50</div>
+          <div class="card-stats">
+            <div><div class="card-stat-label">Score Lead</div><div class="card-stat-value good">8.5</div></div>
+            <div><div class="card-stat-label">Score Msg.</div><div class="card-stat-value good">9.5</div></div>
+          </div>
+          
+          <div class="card-stats" style="margin-top:0.4rem;padding-top:0.5rem;"><div><div class="card-stat-label">✓ Verificación</div><div class="card-stat-value">2/2</div></div><div><div class="card-stat-label">⚖ Riesgo</div><div class="card-stat-value good">0</div></div></div>
+          <div class="card-foot"><span>Motor 2</span><span>Ronda 3</span></div>
+          <div class="chev-hint"></div>
+        </div>
+      </summary>
+      <div class="lead-detail">
+        <p class="meta-line">Vacantes "Gerente Contable de Outsourcing" y "Asistente Contable".</p>
+        <div class="message-box">"Hola [Nombre], vi las búsquedas de Gerente Contable de Outsourcing y Asistente Contable en LAC Legal — trabajo en automatización contable y de reporting con IA (Codeflow AI)... ¿Charlamos 15 min?"</div>
+        <h5 class="dbtitle">Desglose Score Lead — 8.5/10</h5>
+        <div class="chip-row">
+          <div class="chip">Encaje ICP (11-50, ideal) <b>4/4</b></div><div class="chip">Señal (2 vacantes contables) <b>2.5/3</b></div>
+          <div class="chip">Verificación directa <b>2/2</b></div><div class="chip">Riesgo <b>0</b></div>
+        </div>
+        <h5 class="dbtitle">Desglose Score Mensaje — 9.5/10</h5>
+        <div class="chip-row">
+          <div class="chip">Personalización (cita ambas vacantes) <b>3/3</b></div><div class="chip">Prueba social <b>2.5/3</b></div>
+          <div class="chip">Claridad del ask <b>2/2</b></div><div class="chip">Ajuste de ángulo <b>2/2</b></div>
+        </div>
+      </div>
+    </details>
+
+  </div>
+
+  <div class="section-head" id="fuentes">
+    <h2>Fuentes · Conexiones y estado</h2>
+    <p>Estado real de cada documento rastreado. Nada de lo calificado arriba sale de otro lado.</p>
+  </div>
+  <div class="source-grid">
+    <div class="source-card">
+      <div class="source-head"><div class="source-icon">📄</div><div class="source-name">prospectos-linkedin-tracker.md</div><span class="pill good">VERIFICADO</span></div>
+      <div class="source-stats">
+        <div><span>Prospectos</span><b>15</b></div>
+        <div><span>Última actualización</span><b>25 jul</b></div>
+      </div>
+    </div>
+    <div class="source-card">
+      <div class="source-head"><div class="source-icon">📄</div><div class="source-name">gestion-pm.md</div><span class="pill mute">REFERENCIA</span></div>
+      <div class="source-stats">
+        <div><span>Pendientes</span><b>22</b></div>
+        <div><span>Última actualización</span><b>20 jul</b></div>
+      </div>
+      <p class="meta-line" style="margin-top:0.55rem">No alimenta puntajes de esta página — solo cruza contexto de pendientes generales del proyecto.</p>
+    </div>
+    <div class="source-card">
+      <div class="source-head"><div class="source-icon">📄</div><div class="source-name">linkedin-networking.md</div><span class="pill mute">REFERENCIA</span></div>
+      <div class="source-stats">
+        <div><span>Enviados reales</span><b>1/15</b></div>
+        <div><span>Última actualización</span><b>20 jul</b></div>
+      </div>
+      <p class="meta-line" style="margin-top:0.55rem">No alimenta puntajes de esta página — solo cruza contexto de envíos ya realizados.</p>
+    </div>
+  </div>
+
+  <footer>lead-hub · calificación derivada de prospectos-linkedin-tracker.md · sin envíos automáticos</footer>
+</main>
+
+<script>
+  var buttons = document.querySelectorAll('#round-filters button');
+  var cards = document.querySelectorAll('.lead-card');
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      buttons.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var round = btn.getAttribute('data-round');
+      cards.forEach(function (card) {
+        var show = round === 'all' || card.getAttribute('data-round') === round;
+        if (show) { card.removeAttribute('data-hidden'); } else { card.setAttribute('data-hidden', 'true'); }
+      });
+    });
+  });
+  document.querySelectorAll('.kpi-row .icon-btn, .chart-row .icon-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () { btn.closest('.widget').setAttribute('data-hidden', 'true'); });
+  });
+</script>
+
+</body></html>
