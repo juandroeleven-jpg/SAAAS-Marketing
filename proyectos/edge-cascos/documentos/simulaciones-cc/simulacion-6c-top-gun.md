@@ -438,6 +438,99 @@ tamaño de ningún componente físico del casco.
 4. Subir las imágenes de referencia (molde azul, arte Top Gun, resultado Intento 2) como adjuntos para versionarlas.
 5. Cuando el usuario mande el primer caso de Marvel/DC/Paramount, crear el archivo de caso correspondiente siguiendo esta misma estructura y sumarlo al índice maestro de prompts.
 
+### Resultado del Intento 4 — auditado: la forma real del casco se corrió, no se ciñó al molde real
+
+**Estado:** ❌ Falló — problema nuevo y más grave que los anteriores: la geometría del casco (no el diseño gráfico) se alejó del molde real.
+
+**Qué falló (comparando el resultado contra la foto real del molde azul, pieza por pieza):**
+- **Pico frontal:** en el molde real es una punta larga, fina y muy angulada hacia abajo. En el resultado salió más corto, más romo, con otro ángulo.
+- **Ranuras de ventilación:** el molde real tiene 3 aletas/cuchillas separadas y verticales. En el resultado ya no se distinguen como 3 piezas iguales — la forma y el agrupamiento cambiaron.
+- **Carcasa del mecanismo de pivote:** en el molde real es una pieza angular, ajustada, con un tornillo/tuerca chico y visible. En el resultado la carcasa del pivote salió más grande, más redondeada, con un mecanismo tipo engranaje sobredimensionado.
+- **Mentonera/zona inferior delantera:** líneas más angulosas y rectas en el molde real; en el resultado salieron más curvas/redondeadas.
+- **Curvatura general de la calota:** más llena/redondeada en el resultado que en el molde real, que es más aerodinámico y afilado.
+
+**Causa raíz probable:** el casco que aparece en la imagen de estilo (el arte Top Gun) fue diseñado sobre OTRO molde de casco, con proporciones distintas a las del molde azul real (ver nota al inicio de este documento). El generador parece estar mezclando la FORMA de ese casco de estilo con la forma real, en vez de usar la imagen de estilo únicamente para extraer el diseño gráfico 2D (colores, íconos, textos) y tomar la forma exclusivamente de la foto del molde real. Este es un hallazgo nuevo y generalizable para toda la línea de licencias de marca (Marvel/DC/Paramount): cuando el arte de referencia está aplicado sobre un casco de forma distinta al molde real que se va a usar, hay que separar explícitamente "fuente de forma" (molde real, única autoridad) de "fuente de diseño gráfico" (arte de estilo, solo colores/íconos/texto, su forma se ignora por completo). Se agrega esta regla al checklist Tipo A de `orquestacion-agentes-paralelos.md`.
+
+### Intento 5 — prompt con "fuente de forma" y "fuente de diseño" separadas explícitamente
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una imagen de producto de un casco, mismo ángulo, encuadre y
+fondo blanco.
+
+REGLA MÁS IMPORTANTE DE TODO ESTE PROMPT — DOS FUENTES, DOS ROLES QUE
+NUNCA SE MEZCLAN:
+- La PRIMERA imagen de referencia (molde azul real, foto de producto
+  lisa) es la ÚNICA autoridad de FORMA. Toda la geometría del
+  resultado sale de ahí, punto por punto, sin excepción.
+- La SEGUNDA imagen de referencia (arte Top Gun) es SOLO una fuente de
+  DISEÑO GRÁFICO — colores, íconos, textos, textura. La forma del
+  casco que aparece en esa segunda imagen NO se usa para nada, ni
+  siquiera parcialmente. Ignorá por completo el pico frontal, las
+  ventilaciones, el pivote y la curvatura de calota de la segunda
+  imagen — son de OTRO casco, no del que estás generando.
+
+CRÍTICO — GEOMETRÍA EXACTA DEL MOLDE REAL (primera imagen), verificá
+cada punto antes de terminar:
+- Pico frontal: LARGO, FINO, muy angulado hacia abajo y adelante —
+  no cortarlo ni redondearlo.
+- Ranuras de ventilación lateral: EXACTAMENTE 3 aletas/cuchillas
+  separadas, verticales, del mismo tamaño entre sí.
+- Carcasa del mecanismo de pivote junto al visor: pieza angular y
+  ajustada (NO redondeada ni sobredimensionada), con un tornillo/tuerca
+  chico y visible, del mismo tamaño relativo que en la foto real.
+- Mentonera y zona inferior delantera: líneas angulosas y rectas, no
+  curvas.
+- Curvatura general de la calota: aerodinámica y afilada, NO
+  redondeada ni "llena".
+- Spoiler/borde trasero: misma forma y proporción que en la foto real.
+- Visor: CLARO Y TRANSPARENTE, igual que en la foto real del molde —
+  sin tinte oscuro ni ahumado.
+
+DISEÑO GRÁFICO A TRANSFERIR (tomado SOLO del contenido visual de la
+segunda imagen, nunca de su forma) — EXACTAMENTE 7 ELEMENTOS:
+1. Avión de combate estilizado — zona delantera superior de la calota.
+2. Escudo circular con estrella de 5 puntas — zona central superior,
+   al lado del avión.
+3. Un par de naipes (ases de pique) — sobre el pico frontal.
+4. Franjas diagonales tipo chevron — sobre la mentonera/parte inferior
+   delantera.
+5. Logotipo "TOP GUN MAVERICK": recuadro angosto inclinado con "TOP
+   GUN" arriba (más grande) y "MAVERICK" abajo (más chico, itálica),
+   con cola tipo flecha — junto a las ranuras de ventilación.
+   OBLIGATORIO, no se puede omitir ni simplificar.
+6. Texto grande "MAVERICK" en mayúsculas — zona trasera inferior,
+   cerca del spoiler.
+7. 3 estrellas de 5 puntas alineadas — debajo del texto "MAVERICK".
+
+PALETA: dorado/mostaza envejecido (elementos gráficos) sobre azul mate
+(mismo tono exacto del molde real).
+
+ADAPTACIÓN: reposicioná y escalá cada elemento gráfico para que
+respete los límites reales de los paneles del molde real (no del
+casco de la imagen de estilo) — ningún elemento cortado de forma rara
+ni superpuesto sobre las ranuras de ventilación o el pivote.
+
+PROHIBIDO ABSOLUTO: no copiar la forma, proporción ni silueta del
+casco de la segunda imagen (arte Top Gun) bajo ningún concepto. No
+redondear ni agrandar el pico frontal, el pivote ni la calota. No
+cambiar la cantidad ni forma de las ventilaciones. No oscurecer el
+visor. No omitir ni simplificar el logotipo "TOP GUN MAVERICK". No
+agregar elementos fuera de la lista de 7.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:**
+1. Correr el prompt (en sesión aislada, adjuntando molde real + arte Top Gun) y mandar el resultado para auditoría, comparando pieza por pieza contra el molde real.
+2. Si la geometría por fin queda fiel al molde real, retomar desde ahí el ajuste fino de layout/logo (usando el mejor resultado de layout — Intento 2 — como referencia adicional si hace falta).
+3. Confirmar si este molde azul es el casco físico real de la marca licenciante o solo una referencia — sigue siendo la misma pregunta abierta de este caso.
+4. Subir las imágenes de referencia como adjuntos para versionarlas.
+5. Cuando el usuario mande el primer caso de Marvel/DC/Paramount, aplicar desde el arranque la regla de "fuente de forma vs. fuente de diseño" (ya que es esperable que los mockups de esas marcas también estén diseñados sobre cascos genéricos de forma distinta al molde real).
+
 ---
 
-**Última actualización:** 2026-07-28 · Intento 4 agregado tras auditar el Intento 3 (visor arreglado, pero el logo se rehizo mal y varios elementos se corrieron de posición al no tener el Intento 2 como referencia visual) — línea de licencias de marca (Marvel/DC/Paramount), a pedido de velocidad del usuario.
+**Última actualización:** 2026-07-28 · Intento 5 agregado tras auditar el Intento 4 (la geometría del casco se alejó del molde real — pico frontal, ventilaciones, pivote y curvatura de calota cambiaron, probablemente por mezclar la forma del casco de la imagen de estilo) — nuevo hallazgo generalizable sobre separar "fuente de forma" de "fuente de diseño gráfico", agregado también al checklist Tipo A.
