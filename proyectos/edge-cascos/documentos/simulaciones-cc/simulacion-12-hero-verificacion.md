@@ -464,6 +464,89 @@ lograrse únicamente a partir de este texto.
 
 **Qué hay que hacer:** correr el prompt, mandar el resultado para auditoría — prestar especial atención a si el mood nocturno/iluminación se logró solo con la descripción de texto, sin haber visto la foto de referencia.
 
+### Intento 5 — variante diurna del Intento 4 (mismo prompt, cambia solo iluminación de noche a día)
+
+El usuario confirmó que el prompt del Intento 4 (nocturno) quedó muy bien y pidió una variante idéntica pero de día — mismo casco, misma pose de perfil, misma advertencia de geometría intacta, solo cambia el bloque de iluminación/mood de nocturno-frío a diurno-cálido.
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una fotografía de producto tipo lifestyle/photoshoot editorial en 4K,
+formato vertical (relación aproximada 2:3), escena DIURNA urbana (variante
+de día del prompt nocturno — mismo concepto, mismo casco, misma pose,
+distinta hora del día).
+
+ADVERTENCIA MÁXIMA — LEER PRIMERO: el casco NO CAMBIA ABSOLUTAMENTE NADA.
+Ni su geometría, ni su forma, ni su tamaño, ni sus proporciones, ni su
+color, ni su textura/acabado, ni la posición de ningún elemento físico
+(ventilación, tornillos, hebilla, correa, mecanismo de la visera,
+acolchado). El casco de esta imagen tiene que ser una réplica exacta,
+pixel a pixel en cuanto a diseño, del casco real adjunto (checkpoint Hero).
+Lo único que cambia en esta imagen es el ENTORNO, la ILUMINACIÓN y la
+PERSONA — el casco en sí queda 100% intacto, como si fuera un objeto 3D
+fijo que solo se está re-iluminando y fotografiando en un escenario nuevo,
+nunca rediseñando.
+
+CRÍTICO — el casco que aparece en la imagen debe ser EXACTAMENTE el casco
+real adjunto como autoridad (foto del modelo Hero, checkpoint): open face /
+tipo jet, 100% negro MATE (no glossy, no carbono, no textura de fibra —
+mate uniforme), visera clara/transparente abatible con mecanismo de pivote
+visible, ventilación superior con la forma exacta del checkpoint, correa
+con hebilla roja, acolchado interior negro con costura roja. No cambies su
+geometría, forma, color, textura ni ningún detalle físico.
+
+ÁNGULO DE CÁMARA: PERFIL LATERAL (de costado), mismo ángulo que en la
+versión nocturna de este prompt — NO 3/4, NO frontal, NO trasero.
+
+ILUMINACIÓN Y MOOD — VARIANTE DIURNA (mismo concepto que la versión
+nocturna, adaptado a luz de día):
+- Es de DÍA, ambiente urbano, cielo despejado o parcialmente nublado.
+  Temperatura de color general CÁLIDA/natural en las luces, con sombras
+  suaves y algo de tono neutro-azulado solo en las zonas de sombra
+  profunda (no en toda la imagen, como sí pasaba de noche).
+- De fondo, la misma idea de ciudad totalmente desenfocada (bokeh), pero
+  ahora con luces de día: reflejos de vidrio, follaje o tránsito borroso,
+  en tonos cálidos y neutros (no luces artificiales de noche). Fondo
+  completamente fuera de foco, el casco es lo único nítido.
+- Iluminación de tipo "high-key" suave / luz natural de día — más
+  luminosidad general que la versión nocturna, pero manteniendo el mismo
+  recurso compositivo: un realce de luz (rim light natural, por ejemplo
+  contraluz de sol) marcando el contorno superior y lateral del casco,
+  con el resto del casco en luz suave difusa (no en penumbra oscura como
+  de noche, pero sí con ese mismo contraste de contorno iluminado).
+- Como el casco es MATE (no glossy), ese realce de luz debe verse suave y
+  difuso sobre la superficie — no un reflejo especular nítido. Mismo
+  criterio que en la versión nocturna, adaptado a luz de sol.
+- Visera: reflejo tenue y difuso del entorno diurno (cielo, luces
+  ambientales), sin perder su transparencia real.
+- Sensación general: cinematográfica, editorial, la misma que la versión
+  nocturna pero en clave luminosa/diurna — no una foto de estudio plana.
+
+Persona modelo: de perfil (mismo criterio que la versión nocturna), casco
+puesto, campera/hoodie oscura casual, sin rasgos específicos pedidos,
+iluminada de forma consistente con la descripción de arriba.
+
+PROHIBIDO ABSOLUTO: no cambiar el casco a un acabado glossy/brillante ni
+textura de carbono — sigue siendo el casco real Hero, mate, con la
+geometría del checkpoint. No agregar logos, texto ni marca de agua.
+
+RECORDATORIO FINAL: el casco es el ÚNICO elemento de esta imagen que debe
+permanecer 100% sin alteraciones respecto al checkpoint adjunto — cero
+cambios de diseño, cero reinterpretación creativa del objeto. Todo lo
+demás (luz, fondo, persona, ropa) sí es libre de generar según lo descrito.
+
+Orden de imágenes en el payload: SOLO la foto real del casco Hero
+(checkpoint, autoridad de geometría/color) — no se adjunta ninguna imagen
+de referencia de estilo, todo el mood/iluminación descrito arriba debe
+lograrse únicamente a partir de este texto.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría.
+
 ---
 
-**Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación + adaptación de prompts), corridos en esta sesión a pedido explícito de auditar el tercer caso del catálogo (Hero). Sub-caso de foto lifestyle: intento 1 auditado con 4 defectos (formato, ángulo, degradé de color, forma de ventilación), intento 2 con prompt corregido listo para correr.
+**Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación + adaptación de prompts), corridos en esta sesión a pedido explícito de auditar el tercer caso del catálogo (Hero). Sub-caso de foto lifestyle: intento 1 auditado con 4 defectos (formato, ángulo, degradé de color, forma de ventilación), intento 2 con prompt corregido, intento 4 nocturno confirmado por el usuario como muy bueno, intento 5 variante diurna del mismo prompt.

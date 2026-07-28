@@ -256,6 +256,50 @@ brillante). Visera intacta.
 
 **Qué hay que hacer:** correr los 4 prompts (en sesiones aisladas cada uno, ver hallazgo de contaminación cruzada en el caso Vortex) y mandar los resultados para auditoría — verificar especialmente que el pivote cromado y la geometría no cambien entre variantes.
 
+## Sub-caso — Foto lifestyle en la playa, ultra realista, luz cálida
+
+Pedido del usuario: foto lifestyle de una persona con el casco puesto en la playa, sin referencia de estilo adicional (brief directo) — ultra realista, iluminación cálida (golden hour).
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una fotografía de producto tipo lifestyle, ULTRA REALISTA (foto de
+cámara real, no ilustración ni render 3D-look), formato vertical (relación
+aproximada 4:5).
+
+CRÍTICO — el casco que aparece en la imagen debe ser EXACTAMENTE el casco
+real adjunto como autoridad (checkpoint): full face, 100% negro mate,
+visera clara/transparente, pivote cromado en su posición y forma exacta,
+ventilación lateral y borde inferior idénticos al checkpoint. No cambies
+su geometría, forma, color, textura ni ningún detalle físico — es el
+mismo objeto 3D, solo cambia la escena alrededor.
+
+ESCENA: una persona con el casco puesto, en la PLAYA — arena, mar de
+fondo, cielo despejado o con algunas nubes. Encuadre de medio cuerpo o
+primer plano, casco bien visible y nítido.
+
+ILUMINACIÓN: CÁLIDA — luz de golden hour (atardecer/amanecer), tonos
+dorados/naranjas suaves, sombras largas y suaves, reflejos cálidos en la
+visera transparente del casco (sin perder su transparencia real).
+
+ESTILO FOTOGRÁFICO: ultra realista, como una foto real tomada con cámara
+profesional — profundidad de campo natural, grano/nitidez de foto real,
+nada de aspecto ilustrado, pintado ni renderizado en 3D genérico.
+
+Persona modelo: sin rasgos específicos pedidos, ropa casual de playa,
+casco puesto con el rostro cubierto (visera hacia adelante).
+
+PROHIBIDO ABSOLUTO: no cambiar geometría, color ni textura del casco. No
+agregar logos, gráficos ni texto sobre el casco. No usar iluminación fría
+ni de estudio — tiene que ser cálida, de exterior, playa real.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría.
+
 ---
 
-**Última actualización:** 2026-07-28 · Agente Auditor + Generador independiente, corridos en esta sesión a pedido explícito de auditar el quinto caso del catálogo (Stellar) y adaptar los 2 prompts. Sub-caso de 4 variantes de color agregado el mismo día a pedido del usuario.
+**Última actualización:** 2026-07-28 · Agente Auditor + Generador independiente, corridos en esta sesión a pedido explícito de auditar el quinto caso del catálogo (Stellar) y adaptar los 2 prompts. Sub-caso de 4 variantes de color agregado el mismo día a pedido del usuario. Sub-caso de foto de playa agregado el mismo día.
