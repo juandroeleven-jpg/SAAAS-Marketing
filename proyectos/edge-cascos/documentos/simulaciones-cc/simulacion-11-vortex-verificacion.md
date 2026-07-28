@@ -87,7 +87,7 @@ flowchart TD
 | B5 | Material exterior alta resistencia | Material exterior ABS alta resistencia | X | ✅ MATCH |
 | B6 | Interior EPS de alta resistencia | Interior EPS de alta resistencia | X | ✅ MATCH |
 
-**Certificación:** ficha dice "DOT FNVSS 510 & ECE 22.06", excel dice "DOT & ECE 22.06" para Vortex — consistente (la ficha solo agrega el número de norma DOT, pero incluye "& ECE 22.06" que sí coincide). A diferencia de Kratos, acá **no** falta la parte de ECE 22.06.
+**Certificación:** ficha dice "DOT FNVSS 510 & ECE 22.06", excel dice "DOT & ECE 22.06" para Vortex — la parte "& ECE 22.06" sí coincide (a diferencia de Kratos, que la omitía), pero una auditoría posterior más estricta señala que **"FNVSS 510" es una adición sin respaldo explícito en el excel** — el excel nunca escribe ese número, solo "DOT & ECE 22.06". No es tan grave como el caso Kratos (que omitía datos confirmados), pero es un dato agregado que debería confirmarse contra otra fuente antes de darlo por bueno, no asumir que es correcto solo porque no contradice al excel.
 
 **Exclusiones correctas verificadas** (cosas que la ficha NO reclama y el excel confirma que no debería reclamar):
 - "Preparado para anti empañante" — excel N/A para Vortex ✅ correcto que no esté en la lista de homologación.
