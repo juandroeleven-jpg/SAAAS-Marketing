@@ -195,6 +195,66 @@ Ambos prompts pasaron la auditoría sin cambios (12/12 claims correctos) — lis
 3. Reintentar el Prompt B agregando: "el ícono de HEBILLA MICROMÉTRICA debe mostrar únicamente el broche/hebilla, sin ninguna marca de tache, X, prohibición ni símbolo de exclusión superpuesto — ícono limpio y positivo, no negativo." y "el texto de cada etiqueta debe reproducirse COMPLETO, tal cual está escrito en la lista — no lo acortes ni le quites palabras (ej. 'MATERIAL EXTERIOR ABS ALTA RESISTENCIA' completo, no 'MATERIAL EXTERIOR ABS' solo)."
 4. Aplicar esta misma precaución (aislar sesión de generación por caso) a Kratos y a los casos que sigan — ver nota agregada en `orquestacion-agentes-paralelos.md`.
 
+## Sub-caso — Foto lifestyle inspirada (Tipo A, distinto de la ficha de specs de arriba)
+
+Pedido del usuario: foto lifestyle inspirada en una referencia (mujer con casco integral de visera espejada/iridiscente arcoíris, campera negra con texto "Bend Bikelife Agency", moto deportiva púrpura desenfocada de fondo, luz de atardecer lateral suave) — pero con 3 cambios explícitos: (1) el casco real es el checkpoint de Vortex (matte negro, full face, visera transparente — no la de la referencia), (2) el modelo es una mujer, (3) la campera es totalmente blanca con el texto "STREET" en negro (reemplaza el texto/campera negra de la referencia), y (4) pose de perfil completo (más estricto que el 3/4 trasero de la referencia).
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una fotografía de producto tipo lifestyle editorial en 4K, formato
+vertical (relación aproximada 4:5), igual composición general que la imagen
+de referencia (persona en primer plano a la izquierda, moto deportiva
+desenfocada de fondo a la derecha, fondo neutro claro).
+
+CRÍTICO — el casco que aparece en la imagen debe ser EXACTAMENTE el casco
+real adjunto como autoridad (foto del modelo Vortex, checkpoint): full face,
+100% negro mate, visera clara/transparente (NO tintada, NO espejada, NO
+iridiscente/arcoíris — la visera de la referencia es solo para tomar la
+iluminación, no el color), ventilaciones y mecanismo de pivote de la visera
+en su posición y forma exacta del checkpoint. No cambies su geometría,
+forma, color ni ningún detalle físico.
+
+MODELO: una mujer, con el casco puesto (rostro cubierto por el casco, como
+en la referencia), pelo suelto asomando por debajo del casco.
+
+VESTUARIO — CAMBIO EXPLÍCITO respecto a la referencia: campera/hoodie
+TOTALMENTE BLANCA (no negra), con el texto "STREET" impreso en letras
+NEGRAS en el pecho/espalda (reemplaza el texto/logo "Bend Bikelife Agency"
+de la referencia — no copiar ese texto ni ese logo, solo el concepto de
+hoodie con texto estampado).
+
+POSE — CAMBIO EXPLÍCITO respecto a la referencia: perfil COMPLETO (90°),
+cuerpo y cabeza totalmente de costado, mirando hacia un lado — más
+estricto que el ángulo 3/4 trasero de la referencia, que NO se debe copiar
+en el ángulo, solo en el mood/iluminación.
+
+ILUMINACIÓN Y FONDO (tomados de la referencia): luz lateral suave de
+atardecer/día nublado, cálida pero tenue, sombras suaves. Fondo neutro
+claro/gris, con una motocicleta deportiva desenfocada (bokeh fuerte) detrás,
+sugerida pero no protagonista — el casco y la persona son lo único nítido.
+
+PROHIBIDO ABSOLUTO: no copiar el casco de la referencia (visera iridiscente/
+arcoíris, textura distinta) bajo ninguna forma — el único casco permitido es
+el casco real adjunto (Vortex), negro mate, visera transparente, sin
+excepciones. No copiar el texto/logo de la campera de la referencia — el
+texto debe ser únicamente "STREET" en negro sobre campera blanca. No agregar
+logos, marca de agua ni texto adicional.
+
+Orden de imágenes en el payload: 1) foto de referencia de estilo/mood/pose
+de base, 2) foto real del casco Vortex (autoridad final de geometría y
+color) — la imagen del checkpoint manda sobre cualquier otro detalle físico
+del casco.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué falló:** N/A (todavía no generado).
+
+**Qué hay que hacer:** correr el prompt en una sesión de generación aislada (no reusar el hilo de otro caso, ver hallazgo de contaminación cruzada más arriba) y mandar el resultado para auditoría.
+
 ---
 
 **Última actualización:** 2026-07-28 · verificación directa (sin subagente auditor separado, por pedido de velocidad) + Agente Generador confirmando los 2 prompts sin cambios, a pedido explícito de auditar el segundo caso del catálogo (Vortex).
