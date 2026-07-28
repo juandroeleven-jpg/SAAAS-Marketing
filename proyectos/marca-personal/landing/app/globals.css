@@ -284,3 +284,35 @@ body {
     0 2px 6px rgba(15, 43, 96, 0.06),
     0 30px 70px -20px rgba(15, 43, 96, 0.28);
 }
+
+/* ---------------------------------------------------------------------------
+   Mientras la pagina se desplaza se apaga lo mas caro.
+
+   `backdrop-filter` se recalcula en cada frame de scroll, porque lo que hay
+   detras del panel se mueve respecto al panel. Es la operacion mas cara de la
+   pagina y ocurre justo cuando el detalle no se aprecia -- el contenido esta
+   pasando por delante de los ojos. Al soltar, vuelve.
+
+   El tinte propio sube al mismo tiempo para que el panel no parpadee: sin esa
+   compensacion, quitar el desenfoque lo dejaria de golpe mas transparente.
+   --------------------------------------------------------------------------- */
+.desplazando .vidrio {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background: rgba(23, 44, 88, 0.55);
+}
+
+.desplazando .vidrio-claro {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+/* Las animaciones de ambiente tambien se pausan: durante el scroll nadie las
+   mira y cada una es una capa mas que componer. */
+.desplazando .aurora-1,
+.desplazando .aurora-2,
+.desplazando .aurora-3,
+.desplazando .sombra-flotante {
+  animation-play-state: paused;
+}

@@ -8,6 +8,7 @@ import { DISENO, dibujarFlujo } from "@/lib/flujo";
 import { dibujarAgentes } from "@/lib/agentes";
 import { usarMovimientoReducido } from "@/lib/movimiento";
 import { usarPunteroFino, usarVisibilidad } from "@/lib/visibilidad";
+import { usarDesplazando } from "@/lib/desplazamiento";
 import { usarPuntero } from "@/lib/puntero";
 
 // Que se ve en la pantalla del laptop. Las dos escenas comparten espacio de
@@ -335,6 +336,7 @@ export default function ModeloLaptop({
   const quieto = usarMovimientoReducido();
   const fino = usarPunteroFino();
   const [ref, visible] = usarVisibilidad<HTMLDivElement>();
+  const desplazando = usarDesplazando();
 
   return (
     // Contenedor grande y con aire: el objeto entra completo y flota dentro,
@@ -355,7 +357,9 @@ export default function ModeloLaptop({
       <div className="sombra-flotante sombra-difusa-color pointer-events-none absolute inset-x-[8%] bottom-[2%] h-[22%]" />
       <Canvas
         // Apagado fuera de pantalla: rAF no se detiene por scroll.
-        frameloop={visible ? "always" : "never"}
+        // Durante el scroll la escena no se dibuja. Se retoma al parar, y
+        // como el reloj sigue corriendo, la animacion no da un salto.
+        frameloop={visible && !desplazando ? "always" : "never"}
         camera={{ fov: 36, position: POSICION_CAMARA.toArray() }}
         // dpr tope 2, no 3: en un movil de dpr 3 se rasterizarian 2,25 veces
         // mas pixeles por un detalle que no se percibe a esa densidad.

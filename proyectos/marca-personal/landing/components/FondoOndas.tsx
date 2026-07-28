@@ -5,6 +5,7 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { usarMovimientoReducido } from "@/lib/movimiento";
 import { usarVisibilidad } from "@/lib/visibilidad";
+import { usarDesplazando } from "@/lib/desplazamiento";
 
 // Fondo 3D: un campo de ondas de energia que se pierde en el horizonte, con
 // la retícula de una red por encima. Cumple el mismo papel que el terreno
@@ -163,6 +164,7 @@ function Ondas({ quieto }: { quieto: boolean }) {
 export default function FondoOndas() {
   const quieto = usarMovimientoReducido();
   const [ref, visible] = usarVisibilidad<HTMLDivElement>();
+  const desplazando = usarDesplazando();
 
   return (
     <div
@@ -174,7 +176,9 @@ export default function FondoOndas() {
         // Fuera de pantalla se apaga el bucle: rAF no se detiene solo al
         // hacer scroll, asi que sin esto la escena seguiria trabajando
         // mientras el usuario lee secciones que estan mucho mas abajo.
-        frameloop={visible ? "demand" : "never"}
+        // Durante el scroll la escena no se dibuja: cada frame suyo obliga
+        // ademas a rehacer el desenfoque del panel que tiene delante.
+        frameloop={visible && !desplazando ? "demand" : "never"}
         camera={{ fov: 48, position: [0, 1.6, 12] }}
         // dpr 1 y sin antialias: capa difusa de fondo. Subirla no cambia lo
         // que se percibe y multiplica los pixeles a rasterizar.
