@@ -248,10 +248,13 @@ body {
    sube el blanco propio y oscurece apenas el borde para que el canto se vea
    contra un fondo claro. */
 .vidrio-claro {
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.62);
   border: 1px solid rgba(255, 255, 255, 0.9);
-  -webkit-backdrop-filter: blur(18px) saturate(150%);
-  backdrop-filter: blur(18px) saturate(150%);
+  /* 10 px y no 18: este es el panel mas grande de la pagina y el coste de
+     backdrop-filter crece con el radio. Se compensa con mas blanco propio,
+     que ademas no depende de lo que haya detras. */
+  -webkit-backdrop-filter: blur(10px) saturate(155%);
+  backdrop-filter: blur(10px) saturate(155%);
   box-shadow:
     0 24px 60px rgba(15, 43, 96, 0.14),
     inset 0 1px 0 rgba(255, 255, 255, 0.85);
