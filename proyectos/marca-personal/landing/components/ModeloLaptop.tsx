@@ -199,8 +199,8 @@ function Laptop({ escena, quieto }: { escena: Escena; quieto: boolean }) {
 // apenas, para que se lea suspendido en el aire y no apoyado en el borde.
 // Cuanto gira el laptop siguiendo al raton, en radianes en cada extremo de la
 // ventana, con inercia para que no copie el temblor del puntero.
-const SEGUIMIENTO_Y = 0.16;
-const SEGUIMIENTO_X = 0.07;
+const SEGUIMIENTO_Y = 0.3;
+const SEGUIMIENTO_X = 0.1;
 const INERCIA = 0.06;
 
 const DURACION_ENTRADA = 1.5; // segundos
@@ -253,7 +253,7 @@ function Flotacion({
     giro.current.x += (objX - giro.current.x) * INERCIA;
 
     grupo.current.position.y =
-      Math.sin(tFlot * 0.72) * 0.06 + restante * 0.22;
+      Math.sin(tFlot * 0.72) * 0.045 + restante * 0.22;
     grupo.current.rotation.y = restante * GIRO_ENTRADA + giro.current.y;
     // Balanceo leve, con otro periodo para que no se sienta mecanico.
     grupo.current.rotation.z = Math.sin(tFlot * 0.46) * 0.022;
@@ -288,17 +288,18 @@ const DIRECCION_CAMARA = new THREE.Vector3(-0.16, 0.22, -1.5);
 // completo, con aire alrededor, para que se lea flotando en vez de cortado.
 // El objeto mide ~1.04 unidades de alto ya escalado. Con fov 36 el alto
 // visible a distancia d es 2*d*tan(18deg) = 0.65*d, o sea 0.9909*ACERCAMIENTO.
-// A 1.20 el alto visible es 1.189 y sobran (1.189-1.04)/2 = 0.0745 por lado.
-// Por eso la flotacion baja a +-0.06: con la amplitud anterior el teclado se
-// saldria del cuadro en el punto bajo del ciclo. Acercar la camara y bajar la
-// amplitud van juntos, no son dos ajustes independientes. Margen real que
-// queda: 0.0145 unidades. A 1.28 la distancia era
+// A 1.30 el alto visible es 1.288 y sobran (1.288-1.04)/2 = 0.124 por lado.
+// Ese margen ya no solo tiene que cubrir la flotacion: desde que el objeto se
+// inclina hacia el raton, girar sobre X sube la altura proyectada en
+// ~0.05 unidades (media profundidad del laptop por el seno de SEGUIMIENTO_X).
+// Con flotacion de +-0.045 el consumo total es 0.095 y quedan 0.029 de sobra.
+// Antes, a 1.20 y sin contar el giro, el teclado se cortaba por abajo. A 1.28 la distancia era
 // 1.94 y el alto visible 1.26: sobraban 0.11 arriba y abajo, que la
 // flotacion de +-0.12 se comia -- en el punto bajo del ciclo el teclado se
 // salia del cuadro. A 1.45 la distancia es 2.20 y el alto visible 1.43, o
 // sea 0.075 de margen POR ENCIMA de la flotacion. Pantalla y teclado quedan
 // siempre completos.
-const ACERCAMIENTO = 1.20;
+const ACERCAMIENTO = 1.30;
 const POSICION_CAMARA = DIRECCION_CAMARA.clone().multiplyScalar(ACERCAMIENTO);
 
 // Angulos esfericos del encuadre inicial, usados para acotar la orbita.
