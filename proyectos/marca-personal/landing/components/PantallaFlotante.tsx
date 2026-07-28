@@ -8,6 +8,7 @@ import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment
 import { DISENO, dibujarFlujo } from "@/lib/flujo";
 import { usarMovimientoReducido } from "@/lib/movimiento";
 import { usarPunteroFino, usarVisibilidad } from "@/lib/visibilidad";
+import { usarPuntero } from "@/lib/puntero";
 
 // Pantalla suelta (sin teclado ni cuerpo) para el hero.
 //
@@ -129,6 +130,16 @@ const DURACION_ENTRADA = 1.8;
 // inferior del panel de vidrio y tiene que leerse como que EMERGE de ahi.
 const DESPLAZAMIENTO_ENTRADA = 1.9; // unidades hacia abajo
 const GIRO_ENTRADA = 0.14; // inclinacion que se endereza al llegar
+
+// Cuanto gira el objeto siguiendo al raton, en radianes en cada extremo de la
+// ventana. Deliberadamente pequeno: es un guino de profundidad, no un control.
+// Si fuera grande, mover el raton por la pagina haria bailar el objeto y
+// competiria con la lectura del texto.
+const SEGUIMIENTO_Y = 0.16;
+const SEGUIMIENTO_X = 0.08;
+// El giro no salta a su destino: se acerca un 6% por frame. Sin esta inercia
+// el objeto copiaria el temblor del raton.
+const INERCIA = 0.06;
 function Flotacion({
   children,
   quieto,
@@ -138,6 +149,8 @@ function Flotacion({
 }) {
   const grupo = useRef<THREE.Group>(null);
   const inicio = useRef<number | null>(null);
+  const puntero = usarPuntero();
+  const giro = useRef({ x: 0, y: 0 });
 
   useFrame((state) => {
     if (!grupo.current) return;
@@ -158,12 +171,20 @@ function Flotacion({
     const restante = 1 - suave;
     const tFlot = Math.max(0, transcurrido - DURACION_ENTRADA);
 
+    // Objetivo de giro segun donde este el raton, con inercia.
+    const raton = puntero.current;
+    const objY = raton.activo ? raton.x * SEGUIMIENTO_Y : 0;
+    const objX = raton.activo ? raton.y * SEGUIMIENTO_X : 0;
+    giro.current.y += (objY - giro.current.y) * INERCIA;
+    giro.current.x += (objX - giro.current.x) * INERCIA;
+
     grupo.current.position.x = 0;
     grupo.current.position.y =
       Math.sin(tFlot * 0.72) * 0.07 - DESPLAZAMIENTO_ENTRADA * restante;
-    grupo.current.rotation.y = Math.sin(tFlot * 0.4) * 0.02;
+    grupo.current.rotation.y = Math.sin(tFlot * 0.4) * 0.02 + giro.current.y;
     grupo.current.rotation.z = Math.sin(tFlot * 0.46) * 0.016;
-    grupo.current.rotation.x = restante * GIRO_ENTRADA + Math.sin(tFlot * 0.36) * 0.012;
+    grupo.current.rotation.x =
+      restante * GIRO_ENTRADA + Math.sin(tFlot * 0.36) * 0.012 + giro.current.x;
   });
 
   return <group ref={grupo}>{children}</group>;

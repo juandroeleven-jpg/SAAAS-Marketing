@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo, useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { useEffect, useMemo, useRef } from "react";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { usarMovimientoReducido } from "@/lib/movimiento";
 import { usarVisibilidad } from "@/lib/visibilidad";
@@ -43,6 +43,26 @@ function altura(x: number, z: number, t: number): number {
   // Las crestas crecen hacia el frente y se aplanan en el horizonte: es lo
   // que da la lectura de distancia sin necesitar niebla fuerte.
   return y * (0.35 + 0.65 * (1 - Math.min(1, Math.abs(z) / FONDO)));
+}
+
+// Marcapasos del fondo. Con frameloop="demand" la escena solo se dibuja
+// cuando se llama a invalidate(): antes se limitaba el CALCULO de las olas a
+// 30 Hz, pero el render de la escena seguia ocurriendo en cada frame del
+// monitor. Y ese render es justo lo que invalida el backdrop-filter del panel
+// de vidrio que tiene delante, obligando al navegador a rehacer el desenfoque.
+// Pasando el render a 30 Hz, esa invalidacion ocurre la mitad de veces en un
+// monitor de 60 Hz y la cuarta parte en uno de 120.
+function Marcapasos({ quieto }: { quieto: boolean }) {
+  const invalidar = useThree((s) => s.invalidate);
+  useEffect(() => {
+    if (quieto) {
+      invalidar();
+      return;
+    }
+    const id = setInterval(invalidar, 1000 / HZ_OLAS);
+    return () => clearInterval(id);
+  }, [invalidar, quieto]);
+  return null;
 }
 
 function Ondas({ quieto }: { quieto: boolean }) {
@@ -87,7 +107,6 @@ function Ondas({ quieto }: { quieto: boolean }) {
   // temprano. Antes se recalculaban los ~37.500 senos y se resubian los dos
   // buffers en cada frame para producir exactamente los mismos valores.
   const yaCongelado = useRef(false);
-  const ultimo = useRef(-1);
 
   useFrame((state) => {
     if (quieto) {
@@ -97,10 +116,6 @@ function Ondas({ quieto }: { quieto: boolean }) {
       yaCongelado.current = false;
     }
     const t = quieto ? 0 : state.clock.getElapsedTime();
-    if (!quieto) {
-      if (ultimo.current >= 0 && t - ultimo.current < 1 / HZ_OLAS) return;
-      ultimo.current = t;
-    }
 
     const pos = geometria.getAttribute("position") as THREE.BufferAttribute;
     const arr = pos.array as Float32Array;
@@ -159,7 +174,7 @@ export default function FondoOndas() {
         // Fuera de pantalla se apaga el bucle: rAF no se detiene solo al
         // hacer scroll, asi que sin esto la escena seguiria trabajando
         // mientras el usuario lee secciones que estan mucho mas abajo.
-        frameloop={visible ? "always" : "never"}
+        frameloop={visible ? "demand" : "never"}
         camera={{ fov: 48, position: [0, 1.6, 12] }}
         // dpr 1 y sin antialias: capa difusa de fondo. Subirla no cambia lo
         // que se percibe y multiplica los pixeles a rasterizar.
@@ -169,6 +184,7 @@ export default function FondoOndas() {
         {/* Niebla del color del fondo: funde las ondas lejanas con el
             degradado CSS y evita el corte duro del borde de la geometria. */}
         <fog attach="fog" args={["#071634", 14, 34]} />
+        <Marcapasos quieto={quieto} />
         <Ondas quieto={quieto} />
       </Canvas>
     </div>
