@@ -102,6 +102,30 @@ simulacion-N-nombre-caso/
 
 Cuando subas fotos por el chat, decime a qué caso y a qué carpeta (`referencias/` o `checkpoints/`) corresponden y las guardo ahí.
 
+### 4.1 Formato de subpágina por vista/pieza
+
+Cada vista o pieza de un caso tiene su propia subpágina `.md` dentro de la carpeta del caso (ej. `simulacion-N-dakota/vista-lateral.md`), con este formato fijo — imagen arriba, prompt en desplegable, y si algo falló, qué falló y qué falta hacer:
+
+```markdown
+### <Nombre de la vista/pieza> — <caso>
+
+![<descripción>](../checkpoints/<archivo>.png)
+
+<details><summary>Prompt usado</summary>
+
+<prompt completo, texto plano, tal cual se mandó al generador>
+
+</details>
+
+**Estado:** ✅ aprobado · ⚠️ falló · 🔴 pendiente de generar
+
+**Qué falló:** <descripción concreta del defecto — geometría, texto corrupto, aspect ratio roto, etc. "Ninguno" si aprobado>
+
+**Qué hay que hacer:** <siguiente paso concreto y accionable — reintentar con X ajuste, escalar a humano porque Y, esperar foto real de Z>
+```
+
+Esta es la unidad mínima de trabajo del Agente Auditor: revisa la imagen, llena "Qué falló" y "Qué hay que hacer", y decide el estado. Si el Auditor aprueba, el registro de la sección 6 se actualiza en la misma pasada.
+
 ---
 
 ## 5. Cómo se ejecuta con agentes en paralelo
