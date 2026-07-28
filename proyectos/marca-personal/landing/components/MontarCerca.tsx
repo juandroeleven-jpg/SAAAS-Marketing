@@ -23,12 +23,15 @@ export default function MontarCerca({
   children,
   proporcion,
   margen = "300px",
+  esperaMaxima = 2500,
   className = "",
 }: {
   children: React.ReactNode;
   /** Proporcion del hueco reservado, p. ej. "5 / 3.9". */
   proporcion: string;
   margen?: string;
+  /** Ms tras la carga despues de los cuales se monta aunque no se haya visto. */
+  esperaMaxima?: number;
   className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -64,12 +67,23 @@ export default function MontarCerca({
       obs.observe(ref.current);
     };
 
+    // Ademas del observador, un plazo maximo. Es lo que evita el tiron AL
+    // DESPLAZARSE: si el montaje solo dependiera de entrar en pantalla, crear
+    // el contexto WebGL, compilar shaders y parsear el modelo ocurriria
+    // exactamente durante el scroll, que es cuando mas se nota. Montando
+    // pasado ese plazo -- con el visitante quieto en el hero y el navegador
+    // ya sin trabajo -- para cuando baja, la escena esta lista.
+    let plazo = 0;
+
     const enReposo = () => {
       if (typeof window.requestIdleCallback === "function") {
         window.requestIdleCallback(observar, { timeout: 1200 });
       } else {
         window.setTimeout(observar, 400);
       }
+      plazo = window.setTimeout(() => {
+        if (!cancelado) setMontar(true);
+      }, esperaMaxima);
     };
 
     if (document.readyState === "complete") enReposo();
@@ -78,9 +92,10 @@ export default function MontarCerca({
     return () => {
       cancelado = true;
       obs?.disconnect();
+      clearTimeout(plazo);
       window.removeEventListener("load", enReposo);
     };
-  }, [margen]);
+  }, [margen, esperaMaxima]);
 
   return (
     <div

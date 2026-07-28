@@ -47,7 +47,11 @@ export default function SeccionTarjetas() {
       {/* El fondo 3D de esta seccion tampoco se inicializa en la carga: es el
           ultimo tramo de la pagina y crear su contexto WebGL al principio solo
           le quita recursos al hero. */}
-      <MontarCerca proporcion="1 / 1" className="absolute inset-0 -z-10">
+      <MontarCerca
+        proporcion="1 / 1"
+        esperaMaxima={4000}
+        className="absolute inset-0 -z-10"
+      >
         <FondoOndas />
       </MontarCerca>
 

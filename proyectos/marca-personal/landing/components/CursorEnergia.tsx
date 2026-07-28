@@ -122,6 +122,10 @@ export default function CursorEnergia() {
         style={{
           background:
             "radial-gradient(circle, rgba(56,189,248,0.55) 0%, rgba(56,189,248,0.18) 45%, rgba(56,189,248,0) 70%)",
+          // Capa propia. Sin promocionarlo, mover este elemento por encima de
+          // un panel con backdrop-filter puede obligar al navegador a repintar
+          // la zona que queda debajo en cada movimiento del raton.
+          willChange: "transform",
         }}
       />
       <div
@@ -132,6 +136,7 @@ export default function CursorEnergia() {
           background:
             "radial-gradient(circle, #ffffff 0%, #7DD3FC 55%, rgba(56,189,248,0.6) 100%)",
           boxShadow: "0 0 12px rgba(125,211,252,0.9)",
+          willChange: "transform",
         }}
       />
     </>
