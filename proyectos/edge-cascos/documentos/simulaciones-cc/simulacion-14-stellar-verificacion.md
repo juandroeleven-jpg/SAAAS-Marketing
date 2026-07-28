@@ -143,6 +143,71 @@ PROHIBIDO ABSOLUTO:
 
 </details>
 
+**Estado:** ⚠️ Falló — no respetó forma, estructura ni tamaño de la imagen de referencia.
+
+**Qué falló:** el Intento 2 solo daba una instrucción genérica ("mismo formato vertical angosto 4K que la referencia") sin describir la estructura visual real de la ficha, y el resultado no coincidió en forma, estructura ni tamaño con la imagen de referencia. La ficha real tiene una estructura de 3 bloques bien definida que el prompt anterior no describía: (1) título "HOMOLOGACIÓN" solo, en una franja angosta arriba; (2) un banner NEGRO rectangular grande con el texto "DOT" en letras blancas enormes tipo insignia, y debajo "FNVSS 510" (acá corregido a "& ECE 22.06") en letras blancas más chicas; (3) recién debajo de ese banner negro arranca la zona gris con los 6 ítems. El prompt anterior trataba todo el título como una sola línea de texto ("HOMOLOGACIÓN — DOT & ECE 22.06"), sin ese banner negro ni esa jerarquía visual — por eso no coincidió la estructura.
+
+### Intento 3 — prompt corregido con estructura de 3 bloques descrita explícitamente
+
+<details><summary>Prompt usado</summary>
+
+```
+Diseñá una tarjeta de HOMOLOGACIÓN para el casco EDGEPRO STELLAR,
+EXACTAMENTE con la misma forma, estructura y tamaño que la imagen de
+referencia adjunta — el lienzo final tiene que tener el mismo ancho y
+alto en píxeles que la referencia (formato vertical angosto), sin
+recortar ni estirar ni cambiar la proporción.
+
+CRÍTICO — ESTRUCTURA DE 3 BLOQUES, igual que la referencia (un intento
+anterior falló acá por describir todo como una sola línea de texto —
+no lo repitas, tiene que ser exactamente esta estructura de 3 partes
+apiladas):
+
+BLOQUE 1 — Título (franja angosta arriba, fondo gris claro):
+- Texto "HOMOLOGACIÓN" en mayúsculas, negro, bold, centrado. Nada más
+  en este bloque.
+
+BLOQUE 2 — Banner negro (rectángulo sólido negro, ancho completo del
+lienzo, ocupa aproximadamente el 20-25% del alto total de la tarjeta):
+- Texto "DOT" en letras BLANCAS enormes, bold, centrado, ocupando la
+  mayor parte del banner (como una insignia/logo, letras muy grandes).
+- Debajo de "DOT", en el mismo banner negro, texto blanco más chico:
+  "& ECE 22.06" (usar exactamente este texto — NO "FNVSS 510").
+
+BLOQUE 3 — Lista de ítems (zona gris clara, el resto del alto de la
+tarjeta, debajo del banner negro):
+Lista de EXACTAMENTE 6 ítems, en este orden, cada uno en mayúsculas,
+negro, bold, centrado, separados por una línea horizontal fina gris
+entre cada ítem:
+1. VISERA ANTI SCRATCH
+2. PREPARADO PARA ANTI EMPAÑANTE
+3. SISTEMA DE EMERGENCIA DE LIBERACIÓN RÁPIDA (ERS)
+4. LINER DESMONTABLE Y LAVABLE
+5. CUBRE BARBILLA
+6. CUBRE NARIZ
+
+CRÍTICO — ESPACIADO UNIFORME (defecto real detectado en un intento
+anterior, no lo repitas): el espacio vertical entre cada uno de los 6
+ítems del Bloque 3 debe ser EXACTAMENTE IGUAL entre todos los pares
+consecutivos. Distribuí la zona gris completa de forma pareja entre
+los 6 ítems, sin huecos irregulares.
+
+CRÍTICO — TEXTO COMPLETO: los 6 ítems deben tener su texto visible y
+legible, ninguno puede quedar en blanco, cortado ni con solo la línea
+separadora sin texto arriba.
+
+PROHIBIDO ABSOLUTO:
+- NO incluir "Sistema de liberación rápida del visor" — N/A para
+  Stellar.
+- No mostrar "DOT FNVSS 510" — la certificación correcta es "DOT & ECE
+  22.06", repartida en el Bloque 2 como se describió arriba.
+- No dejar ningún espacio vacío entre ítems más grande que los demás.
+- No cambiar la estructura de 3 bloques ni el tamaño/proporción del
+  lienzo respecto a la referencia.
+```
+
+</details>
+
 **Estado:** 🔴 pendiente de generar.
 
 **Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría.
