@@ -927,6 +927,77 @@ absoluta sobre el diseño.
 2. Si este intento también falla en el mismo punto geométrico, sería la 4ta vez con generación completa — en ese punto la recomendación pasa de "sugerida" a directa: usar el Intento 8 (edición puntual) o edición manual fuera de la IA.
 3. Confirmar si este molde azul es el casco físico real de la marca licenciante o solo una referencia — sigue siendo la misma pregunta abierta de este caso.
 
+### Resultado del Intento 10 — auditado: sigue sin diferenciar las 2 imágenes de referencia
+
+**Estado:** ❌ Falló — mismo problema de fondo que los intentos anteriores: el generador sigue sin separar bien "casco sin dibujos = forma real" de "casco con dibujos = solo diseño".
+
+**Diagnóstico del usuario (clave para el siguiente intento):** hasta ahora los prompts identificaban las 2 imágenes como "primera imagen" / "segunda imagen" o "molde real" / "arte de estilo" — etiquetas abstractas. El usuario señala que hace falta ser más concreto y anclar la diferencia en algo directamente visible en las imágenes: la primera imagen NO TIENE NINGÚN DIBUJO (es el casco liso, sin gráficos), la segunda SÍ TIENE DIBUJOS (el arte Top Gun ya aplicado). Describir la diferencia así, en vez de con etiquetas abstractas, es más concreto para que el generador no mezcle las formas.
+
+### Intento 11 — la diferencia entre imágenes se describe por presencia/ausencia de dibujos, no por etiquetas abstractas
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una imagen de producto de un casco, mismo ángulo, encuadre y
+fondo blanco.
+
+DOS IMÁGENES DE REFERENCIA, DIFERENCIADAS POR SI TIENEN DIBUJOS O NO
+(esta es la forma más clara de distinguirlas, prestá atención):
+
+- La imagen que muestra el casco LISO, SIN NINGÚN DIBUJO NI GRÁFICO
+  ENCIMA (superficie azul mate limpia, sin avión, sin estrellas, sin
+  texto) es el casco REAL — su FORMA exacta (pico frontal, cantidad y
+  forma de ventilaciones, tamaño y forma de la carcasa del pivote,
+  mentonera, calota, spoiler, visor) es la ÚNICA que se puede usar en
+  el resultado. Copiala tal cual, sin ninguna variación.
+
+- La imagen que SÍ TIENE DIBUJOS ENCIMA (avión, estrellas, naipes,
+  texto "TOP GUN MAVERICK", etc., ya aplicados sobre otro casco) se
+  usa ÚNICAMENTE para copiar esos dibujos — nunca la forma del casco
+  que se ve debajo de esos dibujos en esa imagen. Ese casco con
+  dibujos tiene una forma DISTINTA a la del casco liso (pico más corto,
+  ventilaciones distintas, pivote distinto) — esa forma NO se copia
+  bajo ningún concepto, ni parcialmente.
+
+PASO 1 — FORMA: reproducí exactamente la forma del casco SIN DIBUJOS
+(pico largo y fino, EXACTAMENTE 3 ventilaciones tipo cuchilla iguales
+entre sí, carcasa del pivote chica y angular con tornillo chico,
+mentonera angulosa, calota afilada no redondeada, spoiler igual,
+visor claro). Confirmá esta forma antes de seguir al paso 2.
+
+PASO 2 — DISEÑO: sobre esa forma ya fijada, agregá ÚNICAMENTE los
+dibujos que aparecen en la imagen CON dibujos — nunca su forma de
+casco. Los dibujos van solo sobre la superficie azul pintada, nunca
+sobre piezas negras (ventilaciones, mentonera, spoiler, pivote). 8
+elementos:
+1. Avión — arriba adelante.
+2. Escudo con estrella — arriba centro.
+3. Barras verticales azul claro/grisáceo (no doradas) — junto al
+   escudo.
+4. Naipes — sobre el pico frontal.
+5. Chevrones dorados — mentonera, sobre azul.
+6. Logo "TOP GUN" / "MAVERICK" en recuadro inclinado — junto a las
+   ventilaciones, con espacio libre entre el logo y la mentonera, sin
+   tocarla.
+7. "MAVERICK" grande — atrás abajo, sobre azul.
+8. 3 estrellas — debajo del texto "MAVERICK".
+Paleta: dorado/mostaza envejecido para todo excepto el elemento 3
+(azul claro/grisáceo).
+
+CHEQUEO FINAL: comparé el resultado contra la imagen SIN dibujos —
+¿la forma es idéntica (ventilaciones, pivote, pico, calota)? Si hay
+cualquier diferencia, es un error, corregila antes de entregar.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:**
+1. Correr el prompt y mandar el resultado para auditoría, prestando especial atención a si esta vez sí se logra separar la forma del casco liso del diseño del casco con dibujos.
+2. Si vuelve a fallar en el mismo punto, sería la 5ta vez con generación completa — en ese punto ya no tiene sentido seguir iterando el prompt: pasar directo al Intento 8 (edición puntual) o a edición manual fuera de la IA.
+3. Confirmar si este molde azul es el casco físico real de la marca licenciante o solo una referencia — sigue siendo la misma pregunta abierta de este caso.
+
 ---
 
-**Última actualización:** 2026-07-28 · Intento 10 agregado a pedido del usuario de seguir mejorando el prompt — nueva estrategia: acortar la descripción del diseño gráfico y secuenciar explícitamente "forma primero, diseño después", en vez de seguir sumando más reglas de geometría (ya no alcanzó en el Intento 9) — línea de licencias de marca (Marvel/DC/Paramount).
+**Última actualización:** 2026-07-28 · Intento 11 agregado tras el diagnóstico del usuario: los prompts anteriores diferenciaban las 2 imágenes con etiquetas abstractas ("primera/segunda imagen", "molde real/arte de estilo"), que no bastaron — este intento las diferencia por un rasgo directamente visible (con dibujos / sin dibujos) — línea de licencias de marca (Marvel/DC/Paramount).
