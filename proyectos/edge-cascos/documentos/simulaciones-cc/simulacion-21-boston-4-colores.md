@@ -1,8 +1,8 @@
-# Simulación 21 — Boston (EDGE): 4 variantes de color + visor (Tipo A, geometría intacta)
+# Simulación 21 — Boston 4.0 (EDGE): 4 variantes de color + visor (Tipo A, geometría intacta)
 
 [← Volver al índice de mis pruebas](../mis-pruebas-claude-code.md) · [← Orquestación de agentes en paralelo](../orquestacion-agentes-paralelos.md) · [← Índice maestro de prompts](indice-prompts-catalogo.md)
 
-Primer caso con **nombre de modelo confirmado por el usuario: Boston** (marca EDGE, ya mencionado en el excel del tab EDGE junto a "BOSTON 4.0" — confirmar si esta referencia es Boston o Boston 4.0, no se puede determinar solo por la imagen). Casco de referencia: full face, negro mate, panel lateral glossy negro con luces LED rojas de freno, cover de fibra de carbono en el pivote de la visera, visor ahumado.
+**Confirmado:** el modelo es **Boston 4.0**, no "Boston" a secas — el usuario mandó el logo/título real de la ficha ("BOSTON 4.0", ver `simulacion-25-carbex-verificacion.md`, sub-caso de logo), que despeja la duda que había quedado abierta. Casco de referencia: full face, negro mate, panel lateral glossy negro con luces LED rojas de freno, cover de fibra de carbono en el pivote de la visera, visor ahumado.
 
 Pedido explícito del usuario: 4 variantes de color de carcasa + tinte de visor. El panel lateral glossy con LEDs y el cover de carbono del pivote se asumieron como piezas de acabado fijo (no cambian de color en ninguna variante) — asunción a confirmar.
 
@@ -119,7 +119,7 @@ mate) + tinte de visor (rojo).
 **Estado:** 🔴 pendientes de generar (los 4).
 
 **Qué hay que hacer:**
-1. Confirmar si esta referencia es "Boston" o "Boston 4.0" (ambos están en el excel de marca EDGE, no se puede determinar solo por la foto).
+1. ✅ Resuelto — confirmado que es Boston 4.0.
 2. Confirmar si el panel lateral glossy negro con LEDs y el cover de carbono del pivote deben cambiar de color en alguna variante, o quedan siempre negros como se asumió.
 3. Correr los 4 prompts (idealmente en sesiones aisladas cada uno) y mandar los resultados para auditoría.
 4. Subir la foto de referencia real como adjunto para versionarla.

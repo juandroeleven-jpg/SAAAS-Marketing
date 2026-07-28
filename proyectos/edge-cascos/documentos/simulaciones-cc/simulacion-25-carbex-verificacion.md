@@ -110,6 +110,48 @@ PROHIBIDO ABSOLUTO:
 2. Considerar si vale la pena hacer una segunda pieza o versión que sí incluya "Preparado para anti empañante" y "Con Pinlock", dado que Carbex tiene tantas features confirmadas sin usar.
 3. Subir la ficha real y el excel como adjunto para versionarlos.
 
+## Sub-caso — Logo/título de marca "BOSTON 4.0" → "CARBEX"
+
+Nota importante: la imagen de logo mostrada por el usuario confirma que el casco negro con panel de LEDs usado en la Simulación 21 es específicamente **"Boston 4.0"**, no "Boston" a secas (quedaba como pendiente sin confirmar en esa simulación).
+
+Pedido: mismo diseño de logo/título (ícono tipo abanico/espiral, barra roja divisoria, tipografía condensada itálica con contorno blanco, fondo con textura diagonal), reemplazando el texto "BOSTON 4.0" por "CARBEX", mismas dimensiones exactas.
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una imagen del mismo logo/título de marca de la referencia
+adjunta, EXACTAMENTE en las mismas dimensiones y tamaño de lienzo (mismo
+ancho x alto en píxeles, mismo aspect ratio, sin recortar ni estirar).
+
+CRÍTICO — TODO IGUAL, SIN EXCEPCIÓN:
+- Ícono gráfico a la izquierda (la forma tipo abanico/espiral en blanco
+  y negro): EXACTAMENTE igual, mismo diseño, mismo tamaño, misma
+  posición.
+- Barra vertical roja divisoria: igual, mismo color, mismo grosor,
+  misma posición.
+- Tipografía: misma familia condensada/itálica bold, mismo efecto de
+  contorno blanco sobre el texto negro, mismo tamaño de letra relativo
+  al lienzo.
+- Fondo: mismo fondo gris claro con textura diagonal a rayas, igual.
+- Composición general: mismo layout, mismo espaciado entre el ícono, la
+  barra y el texto.
+
+ÚNICO CAMBIO PERMITIDO: el texto "BOSTON 4.0" se reemplaza por "CARBEX"
+— mismo estilo tipográfico, mismo tamaño de letra, centrado
+verticalmente igual que el original respecto al ícono y la barra roja.
+
+PROHIBIDO ABSOLUTO: no agregar el número "4.0" ni ningún otro texto
+adicional a "CARBEX". No cambiar el ícono, la barra roja, la tipografía,
+el fondo, ni las dimensiones del lienzo. Alta calidad, texto nítido y
+legible.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría. Actualizar `simulacion-21-boston-4-colores.md` con la confirmación de que el modelo es "Boston 4.0".
+
 ---
 
 **Última actualización:** 2026-07-28 · verificación directa (sin agente auditor separado, por pedido de velocidad del usuario) del octavo caso del catálogo (Carbex).

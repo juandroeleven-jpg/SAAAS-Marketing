@@ -191,11 +191,11 @@ Doble visera (externa iridiscente dorada/violeta + interna ahumada), color origi
 
 ---
 
-## Boston (EDGE) — Simulación 21
+## Boston 4.0 (EDGE) — Simulación 21
 
-Primer caso con **nombre de modelo confirmado por el usuario**. Full face, negro mate, panel lateral glossy con LEDs rojas de freno, cover de carbono en el pivote. 4 variantes de color + tinte de visor.
+Primer caso con **nombre de modelo confirmado por el usuario** (confirmado como "Boston 4.0" vía logo real, ver sub-caso de logo en Simulación 25). Full face, negro mate, panel lateral glossy con LEDs rojas de freno, cover de carbono en el pivote. 4 variantes de color + tinte de visor.
 
-[`simulacion-21-boston-4-colores.md`](simulacion-21-boston-4-colores.md) — ⚠️ confirmar si es Boston o Boston 4.0, y si el panel LED/cover de carbono cambia de color
+[`simulacion-21-boston-4-colores.md`](simulacion-21-boston-4-colores.md) — ⚠️ confirmar si el panel LED/cover de carbono cambia de color en alguna variante
 
 | Prompt / pieza | Tipo de pieza | Estado | Ubicación |
 |---|---|---|---|
@@ -260,6 +260,7 @@ Octavo caso EDGEPRO, el con más features confirmadas del catálogo (17). Prompt
 |---|---|---|---|
 | Prompt A — Homologación (6/6) | Tipo B/C | ✅ listo para usar — todavía no corrido | `simulacion-25-carbex-verificacion.md` |
 | Prompt B — Grid (6/6, hebilla doble D) | Tipo B/C | ✅ listo para usar — todavía no corrido | `simulacion-25-carbex-verificacion.md` |
+| Sub-caso — Logo "BOSTON 4.0" → "CARBEX" (mismas dimensiones) | Tipo A (logo/título) | ✅ listo para usar — todavía no corrido | `simulacion-25-carbex-verificacion.md` |
 
 ---
 
@@ -278,12 +279,12 @@ Octavo caso EDGEPRO, el con más features confirmadas del catálogo (17). Prompt
 | Casco flip-up | 4 | 4 | 0 | 0 |
 | Casco carbono glossy | 4 | 2 | 0 | 2 |
 | Casco adventure (blanco→negro) | 4 | 4 | 0 | 0 |
-| Boston | 4 | 4 | 0 | 0 |
+| Boston 4.0 | 4 | 4 | 0 | 0 |
 | Casco dorado iridiscente | 4 | 2 | 2 | 0 |
 | Casco adventure con pico | 4 | 1 | 3 | 0 |
 | Casco EDGE flip-up (quitar stickers) | 3 | 3 | 0 | 0 |
-| Carbex | 2 | 2 | 0 | 0 |
-| **Total** | **60** | **46** | **10** | **4** |
+| Carbex | 3 | 3 | 0 | 0 |
+| **Total** | **61** | **47** | **10** | **4** |
 
 ---
 
