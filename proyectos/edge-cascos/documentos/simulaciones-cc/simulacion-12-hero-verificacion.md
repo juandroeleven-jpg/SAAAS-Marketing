@@ -402,6 +402,12 @@ visible, ventilación superior con la forma exacta del checkpoint, correa
 con hebilla roja, acolchado interior negro con costura roja. No cambies su
 geometría, forma, color, textura ni ningún detalle físico.
 
+ÁNGULO DE CÁMARA: PERFIL LATERAL (de costado), el mismo ángulo exacto de
+la foto de referencia de estilo (no adjunta, pero su composición era de
+perfil) — NO 3/4, NO frontal, NO trasero. La cámara está al costado de la
+persona, mostrando el perfil lateral completo de la cabeza/casco y la
+silueta del rostro/mandíbula de lado, igual que en la referencia.
+
 ILUMINACIÓN Y MOOD (descrito en detalle porque NO se adjunta imagen de
 referencia, solo el casco — replicar por descripción, no por copia visual):
 - Es de noche, ambiente urbano. Temperatura de color general FRÍA/azulada
@@ -424,10 +430,10 @@ referencia, solo el casco — replicar por descripción, no por copia visual):
 - Sensación general: cinematográfica, moody, editorial, contemplativa — no
   una foto de estudio de producto plana.
 
-Persona modelo: de perfil o 3/4, casco puesto, campera/hoodie oscura casual,
-sin rasgos específicos pedidos, iluminada de forma consistente con la
-descripción de arriba (mayormente en sombra, con el mismo realce de
-contorno que el casco).
+Persona modelo: DE PERFIL (no 3/4, no frontal), casco puesto, campera/hoodie
+oscura casual, sin rasgos específicos pedidos, iluminada de forma
+consistente con la descripción de arriba (mayormente en sombra, con el
+mismo realce de contorno que el casco).
 
 PROHIBIDO ABSOLUTO: no cambiar el casco a un acabado glossy/brillante ni
 textura de carbono — sigue siendo el casco real Hero, mate, con la
