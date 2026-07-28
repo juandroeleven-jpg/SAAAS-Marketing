@@ -176,6 +176,21 @@ Todo lo que quedó abierto esperando respuesta del usuario o del fabricante, jun
 
 ---
 
+## Casco adventure/dual-sport (blanco → negro mate) — Simulación 20
+
+Doble visera (externa iridiscente dorada/violeta + interna ahumada), color original blanco perla, logo EDGE. **Modelo sin nombre confirmado.** 4 prompts, uno por vista, tarea única cada uno: solo cambia blanco→negro mate, todo lo demás (ambas viseras, ventilaciones, logo, geometría) 100% intacto.
+
+[`simulacion-20-casco-adventure-blanco-a-negro.md`](simulacion-20-casco-adventure-blanco-a-negro.md) — ⚠️ modelo sin confirmar (ver pendientes)
+
+| Prompt / pieza | Tipo de pieza | Estado | Ubicación |
+|---|---|---|---|
+| Prompt 1 — Vista 3/4 abierta (visera externa levantada) | Recolor por vista | ✅ listo para usar — todavía no corrido | `simulacion-20-casco-adventure-blanco-a-negro.md` |
+| Prompt 2 — Vista 3/4 lateral (casco cerrado) | Recolor por vista | ✅ listo para usar — todavía no corrido | `simulacion-20-casco-adventure-blanco-a-negro.md` |
+| Prompt 3 — Vista superior | Recolor por vista | ✅ listo para usar — todavía no corrido | `simulacion-20-casco-adventure-blanco-a-negro.md` |
+| Prompt 4 — Vista frontal | Recolor por vista | ✅ listo para usar — todavía no corrido | `simulacion-20-casco-adventure-blanco-a-negro.md` |
+
+---
+
 ## Resumen numérico
 
 | Caso | Prompts indexados | ✅ Listo | ⚠️ Con reintento | 🔴 Bloqueado |
@@ -190,7 +205,8 @@ Todo lo que quedó abierto esperando respuesta del usuario o del fabricante, jun
 | Casco carbono/camo | 5 | 4 | 1 | 0 |
 | Casco flip-up | 4 | 4 | 0 | 0 |
 | Casco carbono glossy | 4 | 2 | 0 | 2 |
-| **Total** | **39** | **30** | **5** | **4** |
+| Casco adventure (blanco→negro) | 4 | 4 | 0 | 0 |
+| **Total** | **43** | **34** | **5** | **4** |
 
 ---
 
