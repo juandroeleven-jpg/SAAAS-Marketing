@@ -8,7 +8,7 @@ import { usarMovimientoReducido } from "@/lib/movimiento";
 // Las dos capas WebGL solo en cliente: montan contexto grafico y no tienen
 // nada que renderizar en el servidor. El texto del hero llega en el HTML
 // inicial y pinta de una, sin esperar a ninguna de las dos.
-const PantallaFlotante = dynamic(() => import("./PantallaFlotante"), {
+const FlujoFlotante = dynamic(() => import("./FlujoFlotante"), {
   ssr: false,
 });
 const FondoOndas = dynamic(() => import("./FondoOndas"), { ssr: false });
@@ -131,8 +131,8 @@ export default function HeroVidrio() {
             src="/posters/pantalla.webp"
             alt=""
             aria-hidden
-            width={1912}
-            height={1075}
+            width={1400}
+            height={786}
             className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-700 ${
               listo ? "opacity-0" : "opacity-100"
             }`}
@@ -142,7 +142,7 @@ export default function HeroVidrio() {
               listo ? "opacity-100" : "opacity-0"
             }`}
           >
-            <PantallaFlotante onListo={() => setListo(true)} />
+            <FlujoFlotante onListo={() => setListo(true)} />
           </div>
         </div>
       </motion.div>
