@@ -245,6 +245,83 @@ ASPECTO Y SALIDA: relación 1:1 o 4:3 (consistente con el resto de la ficha),
 
 </details>
 
+### Intento 1 — resultado auditado (Prompt B)
+
+**Estado:** ⚠️ Falló — grid de 6 celdas (2x3) en vez de 4 (2x2), con 2 ítems duplicados.
+
+**Qué falló:** el resultado real salió como un grid de 6 celdas (2 columnas x 3 filas), no las 4 pedidas. Fila 1: "Canal para lentes" y "Espacio para Bluetooth", cada uno 1 sola vez, como correspondía. Fila 2: "Kit de mecanismo visor" y "Hebilla doble D", primera aparición de cada uno. Fila 3: "Kit de mecanismo visor" otra vez, pero con un ícono completamente distinto al de la fila 2 (esta vez con aspecto de mecanismo/engranaje con tornillos y palanca, estilo herramienta), y "Hebilla doble D" otra vez, también con un ícono ligeramente distinto (correa rellena con un rectángulo punteado). Es decir, "Kit de mecanismo visor" y "Hebilla doble D" quedaron duplicados, cada uno con arte distinto en cada aparición, generando 6 celdas en vez de 4 — a pesar de que el prompt ya decía explícitamente "EXACTAMENTE 2 columnas x 2 filas = 4 celdas... contá las celdas antes de terminar, ninguna repetida". Es el mismo patrón de "grid con celdas de más y contenido duplicado" que el propio Prompt B ya advertía como riesgo conocido de otros casos del catálogo, y la advertencia no alcanzó para evitarlo esta vez.
+
+**Qué hay que hacer:** reintentar con el prompt reforzado (Intento 2, abajo), que nombra explícitamente los 2 ítems que se duplicaron.
+
+### Intento 2 — prompt corregido, nombrando los ítems que se duplicaron
+
+<details><summary>Prompt usado</summary>
+
+```
+Diseña una tarjeta de especificaciones técnicas en formato GRID DE ÍCONOS 2x2
+(dos columnas, dos filas), resolución 4K, fondo transparente o blanco liso,
+para el casco EDGE modelo HERO (open face / jet).
+
+NOTA: Esta es una versión de 4 ítems, no de 6. Solo 4 características de
+Hero están confirmadas con dato verificado en el excel maestro. NO se
+incluyen "Material exterior ABS alta resistencia" ni "Interior EPS de alta
+resistencia" (sin dato para Hero). Tampoco se incluye "Hebilla micrométrica"
+(el excel confirma hebilla doble D en su lugar para Hero).
+
+CRÍTICO — DIMENSIONES Y LAYOUT EXACTOS (un intento anterior de este mismo
+caso falló acá: produjo un grid de 2x3 = 6 celdas en vez de 2x2 = 4,
+duplicando "Kit de mecanismo visor" y "Hebilla doble D" con un ícono
+distinto en cada repetición — máxima atención, no lo repitas):
+- El grid debe tener EXACTAMENTE 2 columnas x 2 filas = 4 celdas en total.
+  NUNCA 2x3, NUNCA 6 celdas, NUNCA una fila de más "por si acaso".
+- Cada uno de los 4 ítems aparece en UNA sola celda, UNA sola vez. En
+  particular: "KIT DE MECANISMO VISOR" aparece UNA sola vez, no dos. Y
+  "HEBILLA DOBLE D" aparece UNA sola vez, no dos. No generes una segunda
+  versión de ninguno de estos 2 ítems con un ícono distinto para rellenar
+  una fila extra.
+- El lienzo final debe tener EXACTAMENTE el mismo ancho y alto en píxeles
+  (mismo aspect ratio) que la imagen de referencia adjunta.
+- Antes de terminar, contá las celdas una por una: tienen que ser 4, ni una
+  más, ninguna con un ítem repetido aunque el ícono se vea distinto.
+
+ESTILO DE ÍCONO — mantener consistencia con las demás piezas de esta ficha:
+- Estilo lineal, trazo uniforme, sin relleno sólido salvo detalles mínimos.
+- Color principal rojo/bordo (tono EDGE), sobre octágono de fondo.
+- Mismo grosor de trazo, mismo tamaño de octágono y misma paleta en los 4
+  íconos.
+
+LOS 4 ÍTEMS A REPRESENTAR (en este orden, cada uno EXACTAMENTE 1 vez):
+1. CANAL PARA LENTES
+2. ESPACIO PARA BLUETOOTH
+3. KIT DE MECANISMO VISOR
+4. HEBILLA DOBLE D
+
+CRÍTICO — íconos nuevos, no reciclados de la referencia:
+- Diseñá un ícono lineal NUEVO específico para cada ítem, especialmente
+  "HEBILLA DOBLE D" — no copies el ícono de "hebilla micrométrica" de la
+  referencia (broche físicamente distinto), y si tiene tache/X, esa marca
+  no pasa a este grid.
+- No reutilices el dibujo de ningún ícono de la referencia que corresponda
+  a un ítem que no está en esta lista de 4.
+
+PROHIBIDO ABSOLUTO:
+- No agregar un 5° o 6° ítem para "completar" el grid.
+- No incluir "Hebilla micrométrica" (no confirmada; el dato correcto es
+  doble D).
+- No incluir "Material exterior ABS" ni "Interior EPS" (sin dato
+  confirmado para Hero).
+- No duplicar "Kit de mecanismo visor" ni "Hebilla doble D" en ninguna
+  celda adicional, aunque el ícono sea distinto — cada ítem va en UNA sola
+  celda.
+- No dejar celdas vacías decorativas ni forzar un layout 2x3 con huecos.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría.
+
 ---
 
 ## Sub-caso — Foto lifestyle inspirada (Tipo A, distinto del catálogo de specs de arriba)
@@ -606,4 +683,4 @@ lograrse únicamente a partir de este texto.
 
 ---
 
-**Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación + adaptación de prompts), corridos en esta sesión a pedido explícito de auditar el tercer caso del catálogo (Hero). Sub-caso de foto lifestyle: intento 1 auditado con 4 defectos (formato, ángulo, degradé de color, forma de ventilación), intento 2 con prompt corregido, intento 4 nocturno confirmado por el usuario como muy bueno, intento 5 variante diurna del mismo prompt. Actualización posterior: una captura de excel más completa confirmó "Cubre barbilla" y "Cubre nariz" para Hero (antes SIN DATO por columna cortada en la captura original) — caso parcialmente desbloqueado, Prompt A reducido a 3/6 ítems agregado con la estructura de 3 bloques aprendida en Stellar.
+**Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación + adaptación de prompts), corridos en esta sesión a pedido explícito de auditar el tercer caso del catálogo (Hero). Sub-caso de foto lifestyle: intento 1 auditado con 4 defectos (formato, ángulo, degradé de color, forma de ventilación), intento 2 con prompt corregido, intento 4 nocturno confirmado por el usuario como muy bueno, intento 5 variante diurna del mismo prompt. Actualización posterior: una captura de excel más completa confirmó "Cubre barbilla" y "Cubre nariz" para Hero (antes SIN DATO por columna cortada en la captura original) — caso parcialmente desbloqueado, Prompt A reducido a 3/6 ítems agregado con la estructura de 3 bloques aprendida en Stellar. Nueva actualización: el Prompt B (grid de íconos, 4 ítems) se corrió y falló — salió un grid de 6 celdas (2x3) con "Kit de mecanismo visor" y "Hebilla doble D" duplicados con ícono distinto en cada repetición, a pesar de la advertencia explícita del prompt. Se documentó como Intento 1 y se agregó el Intento 2 con el prompt reforzado, nombrando explícitamente los 2 ítems que se duplicaron, pendiente de correr.

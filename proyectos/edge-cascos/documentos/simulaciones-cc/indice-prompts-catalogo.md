@@ -99,7 +99,8 @@ Todo lo que quedó abierto esperando respuesta del usuario o del fabricante, jun
 | Prompt / pieza | Tipo de pieza | Estado | Ubicación |
 |---|---|---|---|
 | Prompt A — Tarjeta HOMOLOGACIÓN, versión reducida 3 ítems (no 6) | Homologación | ✅ listo para usar — todavía no corrido — 3 de 6 ítems confirmados (Liner desmontable y lavable, Cubre barbilla, Cubre nariz; estos 2 últimos se desbloquearon con una captura de excel más completa). Los otros 3 (Visera anti scratch, ERS, Sistema de liberación rápida del visor) siguen sin dato | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `## Prompts del catálogo (Agente Generador) — A reducido a 3 ítems, B reducido a 4 ítems` |
-| Prompt B — Grid de íconos, versión reducida 2x2 (4 ítems, no 6) | Grid íconos | 🔴 bloqueado (parcial) — prompt completo y listo para los 4 ítems confirmados (Canal para lentes, Bluetooth, Kit de mecanismo visor, Hebilla doble D), pero la versión completa de 6 sigue bloqueada por falta de dato en el excel | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `## Prompts del catálogo (Agente Generador) — A bloqueado, B reducido a 4 ítems` |
+| Prompt B — Grid Hero, Intento 2 (corregido, nombra los ítems duplicados) | Grid íconos | ✅ listo para usar — todavía no corrido | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `### Intento 2 — prompt corregido, nombrando los ítems que se duplicaron` |
+| Prompt B — Grid de íconos, versión reducida 2x2 (4 ítems, no 6) | Grid íconos | ⚠️ con reintento pendiente — Intento 1 salió con 6 celdas (2x3) en vez de 4 (2x2), duplicando "Kit de mecanismo visor" y "Hebilla doble D" con ícono distinto en cada repetición; ver Intento 2 arriba con el prompt corregido | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `## Prompts del catálogo (Agente Generador) — A reducido a 3 ítems, B reducido a 4 ítems` |
 | Foto lifestyle — Intento 1 (contrapicado, inspirado en referencia ajena) | Foto lifestyle | ⚠️ con reintento pendiente — formato vertical en vez de horizontal, ángulo 3/4 en vez de perfil, degradé bronce/dorado inexistente en el casco real, ventilación con forma distinta | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `## Sub-caso — Foto lifestyle inspirada`, subsección `### Intento 1 — resultado auditado` |
 | Foto lifestyle — Intento 2 (perfil lateral, corrige color/ventilación) | Foto lifestyle | ✅ listo para usar — corrige los 4 defectos del Intento 1, todavía no corrido | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `### Intento 2 — prompt corregido` |
 | Foto lifestyle — Intento 3 (nueva referencia de estilo, mood urbano) | Foto lifestyle | ✅ listo para usar — mismo casco, cambia solo la referencia de mood/vestuario tomada | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `### Intento 3 — mismo casco, nueva referencia de estilo (moody urbano)` |
@@ -284,7 +285,7 @@ Primer molde de casco retro/redondo (estilo café racer, calota lisa, pivote cro
 |---|---|---|---|---|
 | Kratos | 2 | 1 | 1 | 0 |
 | Vortex | 4 | 2 | 2 | 0 |
-| Hero | 8 | 7 | 1 | 0 |
+| Hero | 9 | 8 | 1 | 0 |
 | Shanghai | 2 | 1 | 0 | 1 |
 | Stellar | 8 | 8 | 0 | 0 |
 | Shift | 2 | 2 | 0 | 0 |
@@ -299,7 +300,7 @@ Primer molde de casco retro/redondo (estilo café racer, calota lisa, pivote cro
 | Casco EDGE flip-up (quitar stickers) | 3 | 3 | 0 | 0 |
 | Carbex | 3 | 3 | 0 | 0 |
 | Casco retro/redondo | 2 | 2 | 0 | 0 |
-| **Total** | **65** | **51** | **10** | **3** |
+| **Total** | **66** | **52** | **10** | **3** |
 
 ---
 
