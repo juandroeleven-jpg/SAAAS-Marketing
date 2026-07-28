@@ -1,0 +1,318 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5f8ff;
+  color: #0f1b2d;
+}
+
+/* ---------------------------------------------------------------------------
+   Hero de vidrio sobre azul con textura.
+
+   Orden de capas, que NO es decorativo sino de rendimiento: el fondo (.fondo-azul
+   y su grano) es completamente ESTATICO y va detras; el panel .vidrio va encima
+   con backdrop-filter; y el canvas WebGL animado va DENTRO del panel, o sea por
+   delante. backdrop-filter desenfoca lo que quedo pintado DETRAS del elemento:
+   si el canvas animado estuviera ahi, el navegador recalcularia el desenfoque en
+   cada frame y la pagina se arrastraria. Con el canvas por delante, el desenfoque
+   se calcula una sola vez.
+   --------------------------------------------------------------------------- */
+
+.fondo-azul {
+  /* Varios radial-gradient superpuestos en vez de un solo linear: es lo que da
+     la profundidad tipo "aurora" en vez de una rampa plana de color. */
+  background-color: #071634;
+  background-image:
+    radial-gradient(90% 60% at 15% 10%, rgba(59, 130, 246, 0.5) 0%, transparent 60%),
+    radial-gradient(70% 55% at 85% 5%, rgba(129, 140, 248, 0.42) 0%, transparent 62%),
+    radial-gradient(80% 70% at 70% 95%, rgba(14, 165, 233, 0.34) 0%, transparent 65%),
+    linear-gradient(160deg, #0A1B3D 0%, #071634 45%, #050F26 100%);
+}
+
+/* Grano procedural con feTurbulence como data-URI: sin peticiones de red y sin
+   imagen que licenciar. Ademas cumple una funcion tecnica y no solo estetica --
+   rompe el banding, que es el defecto tipico de un degradado azul a pantalla
+   completa en paneles de 8 bits. */
+.fondo-azul::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.22;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.vidrio {
+  /* El tinte propio sube de 0.10 a 0.14 y el blur BAJA de 28 a 16 px, que
+     van juntos: cuanto mas aporta el tinte, menos depende el panel de lo que
+     tiene detras. Y eso importa aca porque detras hay un canvas 3D animado --
+     backdrop-filter tiene que rehacer el desenfoque cada vez que el fondo
+     cambia, y el coste crece con el radio. 16 px sigue leyendo como vidrio
+     con la varianza ya atenuada por el tinte. */
+  background: rgba(255, 255, 255, 0.17);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  /* saturate ademas de blur: sin el, el color que se ve a traves del vidrio
+     queda lavado y el panel parece gris sucio en vez de vidrio blanco. */
+  -webkit-backdrop-filter: blur(8px) saturate(170%);
+  backdrop-filter: blur(8px) saturate(170%);
+  /* Sombra exterior para despegarlo del fondo + linea interior clara arriba,
+     que es lo que simula el canto iluminado de una lamina de vidrio. */
+  box-shadow:
+    0 24px 70px rgba(3, 10, 26, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* Sin soporte de backdrop-filter (Firefox con la flag desactivada, navegadores
+   viejos) el panel quedaria casi transparente y el texto ilegible: se compensa
+   subiendo la opacidad del fondo propio. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .vidrio {
+    background: rgba(17, 32, 63, 0.72);
+  }
+}
+
+/* Quien pide menos transparencia en el sistema recibe un panel solido. */
+@media (prefers-reduced-transparency: reduce) {
+  .vidrio {
+    background: rgba(10, 24, 51, 0.92);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+/* Sombra del objeto 3D flotante: se encoge y se aclara cuando el objeto
+   sube, y vuelve a crecer cuando baja. El periodo (8.73s) coincide con el
+   del seno que mueve el modelo en ModeloLaptop.tsx (2*PI / 0.72), asi que
+   los dos movimientos van juntos -- es lo que hace leer que el objeto esta
+   suspendido y no simplemente moviendose. */
+/* La sombra vuelve a ENSANCHARSE ademas de aclararse, que es lo que da la
+   lectura de profundidad: se estrecha cuando el objeto sube y se abre cuando
+   baja. Solo la opacidad no transmitia eso.
+
+   Se puede volver a escalar porque la suavidad ya NO viene de `filter: blur()`
+   sino de un radial-gradient. La diferencia es la clave: escalar un elemento
+   con blur obliga a rehacer la convolucion del desenfoque en cada frame,
+   mientras que un degradado se pinta una vez en su capa y el compositor la
+   escala como una textura. Mismo resultado visual, sin el coste. */
+@keyframes sombra-flotante {
+  0%,
+  100% {
+    transform: scaleX(1);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scaleX(0.82);
+    opacity: 0.5;
+  }
+}
+
+.sombra-flotante {
+  will-change: transform, opacity;
+  animation: sombra-flotante 8.73s ease-in-out infinite;
+}
+
+/* Sombra difusa sin filtro: la suavidad la da el propio degradado. */
+.sombra-difusa {
+  background: radial-gradient(
+    closest-side,
+    rgba(2, 8, 23, 0.55) 0%,
+    rgba(2, 8, 23, 0.28) 45%,
+    rgba(2, 8, 23, 0) 100%
+  );
+}
+
+.sombra-difusa-color {
+  background: radial-gradient(
+    closest-side,
+    rgba(37, 99, 235, 0.4) 0%,
+    rgba(37, 99, 235, 0.16) 50%,
+    rgba(37, 99, 235, 0) 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sombra-flotante {
+    animation: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Aurora clara: fondo de la seccion de agentes.
+
+   Son manchas de color muy desenfocadas que se mueven con `transform`, no un
+   `background-position` animado. La diferencia importa: transform lo compone
+   la GPU sin repintar, mientras que animar la posicion de un degradado obliga
+   a rasterizar el fondo entero en cada frame. Y como no hay WebGL aqui, la
+   seccion no anade un tercer contexto grafico a la pagina.
+   --------------------------------------------------------------------------- */
+.aurora-clara {
+  background: linear-gradient(165deg, #ffffff 0%, #eaf1ff 42%, #cddffc 100%);
+}
+
+.aurora-mancha {
+  position: absolute;
+  /* Sin `filter: blur()`: la suavidad la da el radial-gradient de cada mancha.
+     Con blur, cualquier cambio de tamano obliga a rehacer la convolucion sobre
+     una capa a pantalla completa -- lo mas caro de toda la pagina. Sin el, la
+     capa se pinta una vez y el compositor la mueve y la escala como textura. */
+  will-change: transform;
+}
+
+.mancha-cian {
+  background: radial-gradient(
+    closest-side,
+    rgba(125, 211, 252, 0.95) 0%,
+    rgba(125, 211, 252, 0.4) 50%,
+    rgba(125, 211, 252, 0) 100%
+  );
+}
+
+.mancha-indigo {
+  background: radial-gradient(
+    closest-side,
+    rgba(165, 180, 252, 0.85) 0%,
+    rgba(165, 180, 252, 0.34) 50%,
+    rgba(165, 180, 252, 0) 100%
+  );
+}
+
+.mancha-azul {
+  background: radial-gradient(
+    closest-side,
+    rgba(59, 130, 246, 0.6) 0%,
+    rgba(59, 130, 246, 0.22) 50%,
+    rgba(59, 130, 246, 0) 100%
+  );
+}
+
+/* Vuelven a escalar ademas de trasladarse: sin la escala, el color solo se
+   deslizaba y se notaba mecanico. Es seguro hacerlo ahora que las manchas no
+   llevan `filter: blur()` -- el compositor escala una textura ya pintada en
+   vez de recalcular un desenfoque de 90 px a pantalla completa. */
+@keyframes aurora-1 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(16%, 10%, 0) scale(1.15);
+  }
+}
+
+@keyframes aurora-2 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.08);
+  }
+  50% {
+    transform: translate3d(-18%, -12%, 0) scale(0.94);
+  }
+}
+
+@keyframes aurora-3 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(0.96);
+  }
+  50% {
+    transform: translate3d(12%, -14%, 0) scale(1.18);
+  }
+}
+
+.aurora-1 {
+  animation: aurora-1 19s ease-in-out infinite;
+}
+.aurora-2 {
+  animation: aurora-2 25s ease-in-out infinite;
+}
+.aurora-3 {
+  animation: aurora-3 31s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-1,
+  .aurora-2,
+  .aurora-3 {
+    animation: none;
+  }
+}
+
+/* Vidrio sobre fondo CLARO: el de arriba (.vidrio) esta calibrado para texto
+   blanco sobre azul profundo y aqui dejaria el texto oscuro ilegible. Este
+   sube el blanco propio y oscurece apenas el borde para que el canto se vea
+   contra un fondo claro. */
+.vidrio-claro {
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  /* 10 px y no 18: este es el panel mas grande de la pagina y el coste de
+     backdrop-filter crece con el radio. Se compensa con mas blanco propio,
+     que ademas no depende de lo que haya detras. */
+  -webkit-backdrop-filter: blur(10px) saturate(155%);
+  backdrop-filter: blur(10px) saturate(155%);
+  box-shadow:
+    0 24px 60px rgba(15, 43, 96, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .vidrio-claro {
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .vidrio-claro {
+    background: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+/* Tarjeta blanca solida, sin vidrio: para la tercera seccion. La sombra es en
+   dos capas -- una corta y densa que da el contacto, otra larga y suave que
+   da la altura. Una sola sombra grande se lee como mancha, no como objeto
+   levantado. */
+.tarjeta-blanca {
+  background: #ffffff;
+  box-shadow:
+    0 2px 6px rgba(15, 43, 96, 0.06),
+    0 30px 70px -20px rgba(15, 43, 96, 0.28);
+}
+
+/* ---------------------------------------------------------------------------
+   Mientras la pagina se desplaza se apaga lo mas caro.
+
+   `backdrop-filter` se recalcula en cada frame de scroll, porque lo que hay
+   detras del panel se mueve respecto al panel. Es la operacion mas cara de la
+   pagina y ocurre justo cuando el detalle no se aprecia -- el contenido esta
+   pasando por delante de los ojos. Al soltar, vuelve.
+
+   El tinte propio sube al mismo tiempo para que el panel no parpadee: sin esa
+   compensacion, quitar el desenfoque lo dejaria de golpe mas transparente.
+   --------------------------------------------------------------------------- */
+.desplazando .vidrio {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background: rgba(23, 44, 88, 0.55);
+}
+
+.desplazando .vidrio-claro {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+/* Las animaciones de ambiente tambien se pausan: durante el scroll nadie las
+   mira y cada una es una capa mas que componer. */
+.desplazando .aurora-1,
+.desplazando .aurora-2,
+.desplazando .aurora-3,
+.desplazando .sombra-flotante {
+  animation-play-state: paused;
+}
