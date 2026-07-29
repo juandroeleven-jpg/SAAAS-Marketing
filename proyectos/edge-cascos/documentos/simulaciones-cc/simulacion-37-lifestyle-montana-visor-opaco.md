@@ -26,17 +26,17 @@ Es un caso **Tipo A** con la variante de **traslado de escena** que ya se venía
 | **Escenas** | **2** — (1) montaña de día, conduciendo · (2) estudio oscuro con contraluz LED rojo y azul |
 | **Prompts** | **3** — Escena 1: 1 prompt (bloque de vehículo aislado) · Escena 2: 2 prompts, (A) casco solo *(principal)* y (B) con persona *(variante)* |
 | **Requisitos duros del usuario** | casco intacto · visor opaco · rostro no visible |
-| **Ambigüedades abiertas** | 🟡 **Escena 1: moto vs. bici** · 🟡 **Escena 2: casco solo (A) vs. con persona (B)** — las dos **pendientes de confirmación del usuario** |
+| **Ambigüedades abiertas** | 🟡 **Escena 2: casco solo (A) vs. con persona (B)** — pendiente de confirmación del usuario · *(la de la Escena 1, moto vs. bici, quedó ✅ cerrada el 2026-07-29)* |
 
-### 🟡 AMBIGÜEDAD DE LA ESCENA 1 (MONTAÑA) — PENDIENTE DE CONFIRMACIÓN DEL USUARIO
+### ✅ AMBIGÜEDAD DE LA ESCENA 1 (MONTAÑA) — CERRADA (2026-07-29, confirmada por el usuario): es MOTO
 
-> **El usuario escribió *"como si manejara bici en una montaña"*. El prompt se escribió para una MOTOCICLETA en un camino de montaña. Nadie confirmó todavía que sea eso.**
+> **Respuesta textual del usuario:** *"moto en la montaña."*
 >
-> **Por qué se eligió moto:** este es un **casco integral modular / flip-up de motocicleta**, no un casco de ciclismo. Un casco así sobre una bicicleta es incoherente con el producto, y además las tres piezas más distintivas del checkpoint —la **mentonera abatible**, el **visor** y la **luz LED roja del spoiler**— son piezas de casco de moto. Una foto lifestyle con este casco en una bici comunicaría el producto equivocado.
+> Queda confirmada **la lectura con la que el prompt ya estaba escrito**: la persona va **conduciendo una MOTOCICLETA** por un camino de montaña. **El prompt de la Escena 1 no cambia.**
 >
-> **Esto NO es una decisión del usuario, es una decisión provisoria de redacción.** Si el usuario confirma que efectivamente quería bicicleta —por ejemplo, para una pieza de campaña deliberadamente fuera de contexto— **se cambia únicamente el `BLOQUE DE VEHÍCULO`** del prompt (está aislado a propósito, es un solo párrafo): moto → bicicleta de montaña, ruta asfaltada → sendero de tierra, y se saca la referencia al manubrio/tanque. **Todo el resto del prompt queda igual.**
+> Se descarta la lectura literal de la frase original (*"como si manejara bici en una montaña"*). La razón por la que se había elegido moto queda confirmada por el usuario: este es un **casco integral modular / flip-up de motocicleta**, y sus tres piezas más distintivas —la **mentonera abatible**, el **visor** y la **luz LED roja del spoiler**— son piezas de casco de moto; en una bicicleta comunicaría el producto equivocado.
 >
-> **Antes de dar por bueno un resultado hay que preguntar.**
+> *(El `BLOQUE DE VEHÍCULO` sigue aislado en un solo párrafo, pero ya no como preparación para un posible cambio: queda así por prolijidad.)*
 
 ### 🟡 AMBIGÜEDAD DE LA ESCENA 2 (ESTUDIO OSCURO CON LED) — PENDIENTE DE CONFIRMACIÓN DEL USUARIO
 
@@ -324,12 +324,11 @@ de arriba.
 
 </details>
 
-**Estado:** 🔴 pendiente de generar · 🟡 vehículo (moto) pendiente de confirmación del usuario.
+**Estado:** 🔴 pendiente de generar. **Sin bloqueos:** el vehículo quedó ✅ confirmado como **moto** por el usuario el 2026-07-29 (*"moto en la montaña"*) y **el prompt no cambió** — ya estaba escrito con esa lectura.
 
 **Qué hay que hacer:**
-1. Confirmar con el usuario si el vehículo es **moto** (lo que dice el prompt, por coherencia con el producto) o **bicicleta** (lo que escribió literalmente). Si es bici, se reemplaza **solo el `BLOQUE DE VEHÍCULO`**.
-2. Correr el prompt y auditar el resultado con los **8 chequeos de la verificación final**.
-3. Subir la foto real del casco como adjunto del repo para versionarla.
+1. Correr el prompt y auditar el resultado con los **8 chequeos de la verificación final**.
+2. Subir la foto real del casco como adjunto del repo para versionarla.
 
 ---
 
@@ -906,6 +905,6 @@ Las otras dos que este caso pone en juego ya están escritas en el checklist **T
 
 ---
 
-**Última actualización:** 2026-07-29 · caso creado desde cero a partir del pedido de foto lifestyle en la montaña. **1 prompt** escrito con la estructura del [Intento 4 de la Simulación 12](simulacion-12-hero-verificacion.md) (el prompt lifestyle que el usuario confirmó como el mejor del repo): advertencia máxima de entrada, autoridad de forma pieza por pieza, bloques temáticos en MAYÚSCULAS, prohibido absoluto y verificación final. Los **tres requisitos duros** del usuario —casco intacto, visor opaco, rostro no visible— tienen cada uno su bloque propio, y los dos últimos están **declarados en positivo** antes de prohibir nada. Queda **1 ambigüedad abierta y pendiente de confirmación del usuario**: el usuario escribió *"como si manejara bici"* pero el producto es un casco integral modular de moto, así que el prompt se escribió para **motocicleta** y el `BLOQUE DE VEHÍCULO` quedó **aislado en un solo párrafo** para poder cambiarlo sin tocar el resto si el usuario confirma que quería bicicleta — **nadie eligió todavía**. **De la Escena 1 no salen lecciones nuevas al checklist**: la de los reflejos de la escena nueva ya la registró la [Simulación 34](simulacion-34-lifestyle-cafeteria-casco-negro.md) y este caso queda como su **segunda aparición** (con el matiz de que también aplica a superficies negras pulidas, no solo a espejos evidentes), y la de "opaco no es plano" ya está cubierta como el reverso del ítem de las Simulaciones 31 y 32. La **lección nueva del caso la trae la Escena 2** (ver la segunda pasada, abajo).
+**Última actualización:** 2026-07-29 · caso creado desde cero a partir del pedido de foto lifestyle en la montaña. **1 prompt** escrito con la estructura del [Intento 4 de la Simulación 12](simulacion-12-hero-verificacion.md) (el prompt lifestyle que el usuario confirmó como el mejor del repo): advertencia máxima de entrada, autoridad de forma pieza por pieza, bloques temáticos en MAYÚSCULAS, prohibido absoluto y verificación final. Los **tres requisitos duros** del usuario —casco intacto, visor opaco, rostro no visible— tienen cada uno su bloque propio, y los dos últimos están **declarados en positivo** antes de prohibir nada. Quedaba **1 ambigüedad abierta** —el usuario escribió *"como si manejara bici"* pero el producto es un casco integral modular de moto, así que el prompt se escribió para **motocicleta** y el `BLOQUE DE VEHÍCULO` quedó **aislado en un solo párrafo** por si había que cambiarlo—: **✅ cerrada el mismo día (2026-07-29), confirmada por el usuario: *"moto en la montaña"*. El prompt no cambió.** **De la Escena 1 no salen lecciones nuevas al checklist**: la de los reflejos de la escena nueva ya la registró la [Simulación 34](simulacion-34-lifestyle-cafeteria-casco-negro.md) y este caso queda como su **segunda aparición** (con el matiz de que también aplica a superficies negras pulidas, no solo a espejos evidentes), y la de "opaco no es plano" ya está cubierta como el reverso del ítem de las Simulaciones 31 y 32. La **lección nueva del caso la trae la Escena 2** (ver la segunda pasada, abajo).
 
 **2026-07-29 (segunda pasada) —** el usuario pidió una **SEGUNDA foto lifestyle** del mismo casco: *"en fondo de tipo sesión de fotos, con colores LED rojo y azul detrás, pero en un cuarto negro. Que sea la misma posición y todo, pero que el visor siga opaco."* Se agregó la **Escena 2** con **2 prompts** —(A) **el casco solo**, principal, y (B) **con una persona**, variante— y la **ambigüedad registrada y pendiente de confirmación del usuario**: el usuario dijo "lifestyle" pero describió un set de estudio y además pidió "la misma posición y todo", y (A) queda como principal solo porque es la única lectura que permite conservar **literalmente** la vista lateral de la foto de producto; en (B) el ángulo pasa a depender de la pose de la cabeza. **Nadie eligió todavía.** Los dos prompts reusan sin cambios el bloque de autoridad de forma pieza por pieza, el bloque del visor opaco declarado en positivo, el contraste mate/brillante, la limpieza de artefactos de maquetación y el realismo fotográfico; (B) suma además el bloque de "no se ve el rostro" de la Escena 1. Lo **nuevo y propio de esta escena** es el bloque `LA LUZ LED ROJA DEL SPOILER ES UNA PIEZA DEL CASCO, NO UN EFECTO DE LA ILUMINACIÓN DE LA ESCENA`: como el set tiene luces LED rojas propias, hubo que declarar que la del spoiler es una **pieza física** —tres puntos, encendida, en foco y adherida al spoiler— y que se **distingue** de los halos difusos y fuera de foco del fondo. De ahí sale la **lección nueva** para el checklist Tipo A: cuando la escena nueva contiene un elemento del mismo tipo que una pieza del producto, hay que declarar la pieza como pieza o el generador la absorbe en la escena. Se sumaron además 2 chequeos propios a la verificación final de cada prompt (la LED del spoiler contra las LED de la escena, y los reflejos correspondiendo al cuarto oscuro con LED rojo y azul).

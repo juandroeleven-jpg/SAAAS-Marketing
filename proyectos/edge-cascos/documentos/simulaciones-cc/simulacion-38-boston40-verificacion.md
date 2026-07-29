@@ -4,13 +4,17 @@
 
 Pipeline **Tipo C**. Modelo **BOSTON 4.0**, marca **EDGE** (no EDGEPRO), hoja **"FICHA DE CASCOS"** del excel — la misma hoja que Boston, no la de EDGEPRO. Ver [`simulacion-33-boston-verificacion.md`](simulacion-33-boston-verificacion.md) para el hallazgo de las dos hojas con sets de filas distintos.
 
-> ⚠️ **Boston 4.0 NO es Boston.** Son dos columnas distintas del excel y difieren en tres filas: certificación, canal para lentes y quick visor release. Ver la comparación más abajo — es la diferencia que decide todo el caso.
+> ⚠️ **Boston 4.0 NO es Boston.** Son dos columnas distintas del excel y difieren en cinco filas: certificación, canal para lentes, quick visor release, N° de ventilaciones y estilo. Ver la comparación más abajo — es la diferencia que decide todo el caso.
+>
+> ✅ **Y son también DOS FICHAS distintas (2026-07-29, confirmado por el usuario).** Textual: *"yo te mandé a hacer 2 diferentes, una del Boston y la otra del Boston 4.0."* O sea que **este archivo audita la ficha del Boston 4.0** contra la columna **Boston 4.0**, y [`simulacion-33-boston-verificacion.md`](simulacion-33-boston-verificacion.md) audita **otra pieza, la del Boston**, contra la columna **Boston**. **Ya no hay ninguna ambigüedad sobre a cuál columna corresponde cada pieza.**
+>
+> 🔎 **Lo que queda como hallazgo de método, no como duda:** las dos fichas son **visualmente idénticas** —misma plantilla genérica de 13 claims— y **el veredicto cambia según el modelo**: **13/13 acá, 11/13 en el Boston**. Dos piezas indistinguibles a ojo que auditan distinto **refuerzan el pedido de que cada pieza lleve el nombre del modelo visible**; sin eso, ni la pieza ni el excel alcanzan para saber cuál es cuál.
 
 ## Estado general del caso
 
 | Objeto | Veredicto de datos | Estado del prompt |
 |---|---|---|
-| Tarjeta de homologación (7 ítems) | ✅ **7 de 7 MATCH** | ✅ Prompt A listo — solo corrige título y certificación |
+| Tarjeta de homologación (7 ítems) | ✅ **7 de 7 MATCH** | ✅ Prompt A listo — solo corrige el título y el número de norma ("FNVSS 510" → **"FMVSS 218"**) |
 | Grid de íconos (6 celdas) | ✅ **6 de 6 MATCH** | ✅ Prompt B listo — solo saca el tache |
 
 **Veredicto: 13 de 13 claims coinciden. Es la primera ficha del catálogo que da 13/13.** No hay que reemplazar ningún ítem: los 13 son correctos para este modelo. Lo único que se corrige son **3 defectos de arte y de texto**, ninguno de ellos de contenido.
@@ -108,7 +112,7 @@ La plantilla de ficha reclama 13 features. Boston 4.0 es el **único modelo del 
 
 Conclusión de proceso: **la plantilla no estaba mal diseñada, estaba mal asignada.** Fue escrita para un casco con este perfil de features —un flip up completo, con LED y liberación rápida de visor— y después se copió sobre modelos que no lo tienen. Eso explica de una sola vez casi todos los mismatches acumulados del catálogo.
 
-### Boston 4.0 vs. Boston — 3 filas de diferencia
+### Boston 4.0 vs. Boston — 5 filas de diferencia
 
 | Fila | Boston | Boston 4.0 |
 |---|---|---|
@@ -118,7 +122,7 @@ Conclusión de proceso: **la plantilla no estaba mal diseñada, estaba mal asign
 | N° Air Vent System | 4 | 6 |
 | Estilo de casco | MODERNO | AGRESIVO |
 
-Las dos primeras son las que importan para la ficha: con la columna de **Boston** esta misma pieza da **11/13**, con la de **Boston 4.0** da **13/13**. Es el mismo patrón de fichas casi indistinguibles que ya se registró entre Vortex y Kratos, y ahora entre Carbex y Shift. **Refuerza el pedido de que cada pieza lleve el nombre del modelo visible**: dos modelos con nombres casi iguales, misma plantilla, y el veredicto cambia según a cuál se la atribuya.
+Las dos primeras son las que importan para la ficha: con la columna de **Boston** la misma plantilla de 13 claims da **11/13**, con la de **Boston 4.0** da **13/13**. Es el mismo patrón de fichas casi indistinguibles que ya se registró entre Vortex y Kratos, y ahora entre Carbex y Shift, pero **llevado al extremo: acá las dos piezas son la misma imagen** y solo el nombre del modelo las separa. **Refuerza el pedido de que cada pieza lleve el nombre del modelo visible**: dos modelos con nombres casi iguales, misma plantilla, y el veredicto cambia según a cuál se la atribuya. *(Que son dos fichas separadas, una por modelo, quedó confirmado por el usuario el 2026-07-29 — ver el encabezado.)*
 
 ## Los 3 defectos a corregir — ninguno es de contenido
 
@@ -126,11 +130,17 @@ Las dos primeras son las que importan para la ficha: con la columna de **Boston*
 
    Con este ya son **cuatro apariciones** del mismo arte heredado, y el patrón queda confirmado: en **Stellar** el tache es falso (X), en **Shift** es correcto (N/A), en **Boston** es falso (X), en **Boston 4.0** es falso (X). El tache **no se decide por modelo**: viene de la plantilla y acierta por casualidad cuando acierta. Ver [`simulacion-14`](simulacion-14-stellar-verificacion.md), [`simulacion-15`](simulacion-15-shift-verificacion.md) y [`simulacion-33`](simulacion-33-boston-verificacion.md).
 
-2. **🔴 El encabezado "FNVSS 510".** El excel dice **"DOT"** a secas para este modelo. "FNVSS 510" no aparece en ninguna celda de ninguna de las dos hojas.
+2. **✅ El encabezado "FNVSS 510" → "FMVSS 218" — CERRADO (2026-07-29, confirmado por el usuario).** Textual del usuario: ***"dot fmvss"***.
 
-   **Y hay evidencia fotográfica directa de que además está mal escrito.** Los stickers de certificación pegados en los cascos físicos de esta misma marca —visibles en las fotos de producto del catálogo, tanto en el visor como en la nuca— dicen **"DOT · FMVSS NO. 218 · CERTIFIED"**. O sea que "FNVSS 510" está equivocado por partida doble: las letras (**FMVSS**, no FNVSS) y el número (**218**, no 510). No es una discrepancia entre dos fuentes: es un dato que no existe en ninguna.
+   **"FNVSS 510" está equivocado por partida doble:** las **letras** (es **FMVSS**, *Federal Motor Vehicle Safety Standard*, no "FNVSS") y el **número** (es **218**, la norma de cascos de motociclismo, no "510"). No es una discrepancia entre dos fuentes: es un dato que **no existe en ninguna** — no aparece en ninguna celda de ninguna de las dos hojas del excel.
 
-   > 🟡 **Pendiente de confirmación del usuario.** El Prompt A de abajo pone **"DOT"** solo, que es literalmente lo que dice el excel. Si se quiere conservar la segunda línea del banner, el valor correcto según los stickers físicos sería **"FMVSS 218"** — pero eso hay que confirmarlo con el fabricante antes de imprimirlo, porque es un claim de homologación.
+   **La evidencia es fotográfica y directa:** los **stickers de certificación pegados en los cascos físicos** de esta misma marca —visibles en las **fotos de producto del propio catálogo**, tanto en el visor como en la nuca— dicen **"DOT · FMVSS NO. 218 · CERTIFIED"**.
+
+   **Qué cambia en el Prompt A:** la versión anterior **eliminaba** la segunda línea del banner y dejaba solo "DOT". Ya no: el banner lleva **"DOT"** grande y debajo, más chico, **"FMVSS 218"**.
+
+   ⚠️ **Lo que NO cambia:** el **valor de la primera línea** se sigue leyendo de la fila *Certificación* de la columna de cada modelo, y para el **Boston 4.0** esa celda dice **"DOT"** a secas. **No se le agrega "& ECE"**, que el excel no dice para este modelo — eso sería inventar un claim de homologación. *(En el [Boston](simulacion-33-boston-verificacion.md), en cambio, la celda sí dice "DOT & ECE" y por eso su banner lleva las dos cosas.)*
+
+   🔁 **Alcance: TEMPLATE MAESTRO, no este caso.** "FNVSS 510" viene de la **plantilla genérica de marketing** y ya apareció en Kratos, Vortex, Shanghai, Hero, Shift, Carbex, Evolution 929, Boston y Boston 4.0 — en **las dos hojas y las dos líneas de producto**. La corrección **"FNVSS 510" → "FMVSS 218" se aplica de una sola vez en el template maestro del catálogo**, igual que la falta "HOMOLOGACÓN" y el tache heredado de la hebilla micrométrica. Corregirlo ficha por ficha es repetir nueve veces el mismo parche.
 
 3. **🔤 La falta de ortografía "HOMOLOGACÓN".** Falta la **I**: lo correcto es **HOMOLOGACIÓN**. Viene de la ficha original del cliente, no del generador. Ya está registrada en [`simulacion-12`](simulacion-12-hero-verificacion.md) como pendiente de corregir en el **template maestro**; esta es una aparición más que la confirma.
 
@@ -171,11 +181,23 @@ BLOQUE 1 — FRANJA DE TÍTULO (angosta, fondo gris claro):
 BLOQUE 2 — BANNER NEGRO (rectángulo sólido negro, ancho completo,
 ocupa aproximadamente el 15 % del alto total de la tarjeta):
 - Texto "DOT" en letras BLANCAS grandes, bold, centrado.
-- CRÍTICO: la imagen de referencia dice "FNVSS 510" debajo del DOT.
-  Ese texto NO se copia y NO se reemplaza por ningún otro número: se
-  ELIMINA. La certificación de este modelo, según el excel maestro,
-  es "DOT" a secas. El banner queda solo con la palabra "DOT",
-  centrada vertical y horizontalmente en el rectángulo negro.
+- Debajo de "DOT", dentro del mismo banner negro, en blanco y en
+  cuerpo bastante más chico, con las letras espaciadas: "FMVSS 218"
+- CRÍTICO — LA NORMA SE CORRIGE, NO SE ELIMINA: la imagen de
+  referencia dice "FNVSS 510" debajo del DOT. Ese texto está MAL POR
+  PARTIDA DOBLE —las letras y el número— y NO se copia. La norma real
+  es "FMVSS 218": con M (FMVSS, no FNVSS) y con 218 (no 510). Es lo
+  que dicen los stickers de certificación pegados en los cascos
+  físicos de esta marca ("DOT · FMVSS NO. 218 · CERTIFIED").
+  Escribí exactamente "FMVSS 218". NO escribas "FNVSS", NO escribas
+  "510".
+- CRÍTICO — LA CERTIFICACIÓN DE ESTE MODELO ES "DOT" A SECAS: según
+  el excel maestro, la celda de certificación de este casco dice
+  "DOT" y nada más. NO agregues "& ECE" ni "ECE 22.06" ni "22.06":
+  para este modelo serían datos inventados. La primera línea del
+  banner es exactamente "DOT".
+- Las dos líneas conviven: "DOT" grande arriba y "FMVSS 218" más
+  chico debajo, las dos centradas dentro del rectángulo negro.
 
 BLOQUE 3 — LISTA (zona gris clara, el resto del alto):
 Los MISMOS 7 ítems de la referencia, en el MISMO orden, en
@@ -213,7 +235,10 @@ blanco sobre el negro, texto negro sobre el gris. Paleta: negro,
 gris claro y blanco. Sin cambios.
 
 PROHIBIDO ABSOLUTO:
-- No mostrar "FNVSS 510" ni ningún otro número de norma.
+- No mostrar "FNVSS 510": la norma se escribe "FMVSS 218", con M y
+  con 218. No inventar ningún otro número de norma.
+- No agregar "& ECE", "ECE 22.06" ni "22.06" a la primera línea: este
+  modelo está certificado como "DOT" a secas.
 - No escribir "HOMOLOGACÓN" sin la I.
 - No agregar, quitar, reemplazar ni reordenar ningún ítem de la lista.
 - No agregar íconos, logos ni gráficos: esta tarjeta es solo texto.
@@ -226,8 +251,8 @@ VERIFICACIÓN FINAL — cinco chequeos antes de entregar:
 1. ¿El alto dividido el ancho da aproximadamente 2, igual que la
    referencia?
 2. ¿El título dice "HOMOLOGACIÓN" completo, con la I?
-3. ¿El banner negro dice solo "DOT", sin "FNVSS 510" ni ningún otro
-   número?
+3. ¿El banner negro dice "DOT" grande y "FMVSS 218" debajo —con M y
+   con 218—, sin rastro de "FNVSS", de "510" ni de "& ECE"/"22.06"?
 4. ¿Los separadores son guiones finos, cortos y centrados, y NO
    bandas de ancho completo?
 5. ¿Hay exactamente 7 ítems y ningún elemento decorativo que no esté
@@ -322,9 +347,13 @@ VERIFICACIÓN FINAL — cuatro chequeos antes de entregar:
 ## Qué hay que hacer
 
 1. Correr los 2 prompts en sesiones aisladas y mandar los resultados para auditoría.
-2. **Confirmar la segunda línea del banner de certificación** — hoy el Prompt A la elimina y deja solo "DOT". Si se quiere conservar, el valor candidato es "FMVSS 218" (el que dicen los stickers físicos del casco), pero hay que validarlo con el fabricante antes de imprimir un claim de homologación.
-3. **Corregir el template maestro**, no ficha por ficha: la falta "HOMOLOGACÓN", el "FNVSS 510" y el tache heredado sobre la hebilla micrométrica son defectos de plantilla que se replican en todo el catálogo.
-4. Pendiente de índices: falta agregar la fila de este caso en `mis-pruebas-claude-code.md` y la sección en `indice-prompts-catalogo.md` — no se tocaron en este commit porque hay varios agentes escribiendo esos archivos en paralelo.
+2. ✅ **CERRADO (2026-07-29, confirmado por el usuario):** ~~confirmar la segunda línea del banner de certificación~~ — *"dot fmvss"*. El banner lleva **"DOT"** grande y **"FMVSS 218"** debajo; ya está aplicado en el Prompt A. La primera línea sigue siendo "DOT" a secas, que es lo que dice la columna Boston 4.0.
+3. **Corregir el template maestro**, no ficha por ficha: la falta "HOMOLOGACÓN", el **"FNVSS 510" → "FMVSS 218"** (✅ confirmado) y el tache heredado sobre la hebilla micrométrica son defectos de plantilla que se replican en todo el catálogo.
+4. ✅ **Hecho (2026-07-29):** este caso ya tiene su fila en `mis-pruebas-claude-code.md` y su sección en `indice-prompts-catalogo.md`.
+
+---
+
+**2026-07-29 (cierre de decisiones del usuario) —** se resolvieron los 2 puntos que este archivo tenía abiertos. **(1) Boston y Boston 4.0 son DOS fichas distintas**, una por modelo (*"yo te mandé a hacer 2 diferentes, una del Boston y la otra del Boston 4.0"*): este archivo queda como la ficha del **Boston 4.0**, **13 MATCH / 0 MISMATCH**, con sus 2 prompts **sin reemplazos de contenido**; la del **Boston** vive en [`simulacion-33`](simulacion-33-boston-verificacion.md) con **11/13** y 2 ítems reemplazados. Se sacó el bloque de "cuál de las dos columnas es" y **queda como hallazgo de método** —no como duda— que las dos fichas son **visualmente idénticas** y que el veredicto cambia según el modelo, lo que **refuerza el pedido de que cada pieza lleve el nombre del modelo visible**. **(2) La certificación va "DOT / FMVSS 218"** (*"dot fmvss"*): "FNVSS 510" estaba mal por las **letras** y por el **número**, y el Prompt A —que antes **eliminaba** la segunda línea del banner— ahora lleva **"DOT"** grande y **"FMVSS 218"** debajo. La evidencia son los **stickers de certificación de los cascos físicos**, visibles en las fotos de producto del propio catálogo. La primera línea **no cambia**: sigue leyéndose de la columna de cada modelo y para el Boston 4.0 es **"DOT"** a secas, sin "& ECE". La corrección del número **vale para el template maestro de todo el catálogo**.
 
 ---
 

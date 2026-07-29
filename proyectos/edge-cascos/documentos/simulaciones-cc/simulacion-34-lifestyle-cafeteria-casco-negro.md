@@ -26,201 +26,27 @@ Foto de producto de catálogo, casco **integral (full face)**, sobre fondo claro
 
 ---
 
-## 🟡 AMBIGÜEDAD DEL PEDIDO — PENDIENTE DE CONFIRMACIÓN DEL USUARIO
+## ✅ AMBIGÜEDAD DEL PEDIDO — CERRADA (2026-07-29, confirmada por el usuario): el casco va PUESTO
 
-> **"Sentado con este casco" admite dos lecturas, y no se elige ninguna por cuenta propia — se escriben las dos y el usuario confirma.**
->
-> - **(A) El casco apoyado sobre la mesa**, junto al hombre sentado. → **Prompt principal.**
-> - **(B) El hombre con el casco puesto**, sentado. → **Prompt variante.**
->
-> **Por qué (A) queda como principal:** el usuario pidió explícitamente *"exactamente en la misma posición, el mismo ángulo y todo"*, y (A) es la única lectura que permite conservar **literalmente** el 3/4 delantero desde arriba de la foto de producto — el casco sigue siendo un objeto apoyado sobre una superficie, fotografiado desde la altura de una persona parada o sentada enfrente, exactamente como en el catálogo. Además es la única que **deja ver el visor dorado levantado y el interior**, que con una cabeza adentro se pierden.
->
-> En (B) el ángulo del casco pasa a depender de la pose de la cabeza del modelo, que es justo lo que hace difícil que coincida con la referencia.
->
-> **Nadie confirmó todavía cuál de las dos es. Antes de dar por bueno un resultado hay que preguntar.**
+**Respuesta textual del usuario:** *"el casco en la cafetería es sobre una persona."*
 
----
+"Sentado con este casco" admitía dos lecturas y se habían escrito las dos. **Gana la (B): un hombre sentado con el casco PUESTO.** Queda como **único prompt del caso**.
 
-## Prompt principal — Lectura (A): el casco apoyado sobre la mesa, junto al hombre sentado
+**La variante (A) —el casco apoyado sobre la mesa— queda ELIMINADA de este documento**, no archivada como alternativa: la decisión está tomada y dejarla escrita solo invita a correr el prompt equivocado.
 
-<details><summary>Prompt usado — (A) casco sobre la mesa</summary>
+### ⚠️ Consecuencia de la decisión, y por qué hay que dejarla escrita
 
-```
-Genera una FOTOGRAFÍA REAL tipo lifestyle en 4K, ultra nítida, formato
-horizontal o 4:5, de un hombre sentado en la vereda/terraza de una
-cafetería, con el casco de la foto adjunta apoyado sobre la mesa junto
-a él.
+**(A) era la lectura que conservaba LITERALMENTE el ángulo de la foto de producto.** Con el casco apoyado sobre una mesa, el 3/4 delantero desde arriba se sostiene solo: el objeto está quieto sobre una superficie y la cámara lo mira desde la altura de una persona sentada enfrente, igual que en el catálogo. Al ponerle el casco a una persona, **el ángulo pasa a depender de la pose de la cabeza**, que es exactamente el punto donde el pedido del usuario (*"exactamente en la misma posición, el mismo ángulo y todo"*) se puede romper.
 
-AUTORIDAD DE FORMA — LA FOTO ADJUNTA DEL CASCO ES LA ÚNICA FUENTE DE
-GEOMETRÍA, COLOR Y ACABADO. Nada de la escena nueva, ni de tu propio
-criterio sobre "cómo suele ser un casco", puede modificar el objeto.
-El casco de esta imagen tiene que ser una copia EXACTA, pieza por
-pieza, del casco de la foto adjunta. Enumerado explícito de lo que NO
-puede cambiar:
-- CALOTA: negro MATE uniforme, absolutamente lisa. Sin gráficos, sin
-  logos, sin texto, sin franjas, sin degradés, sin textura de fibra de
-  carbono, sin brillo glossy. Mate y lisa, punto.
-- VISOR PRINCIPAL: espejado DORADO / IRIDISCENTE, con reflejos que van
-  del dorado al violeta según el ángulo. LEVANTADO, en posición
-  abierta (ver bloque siguiente).
-- FILA DE AGUJERITOS DE VENTILACIÓN en el borde inferior del visor
-  dorado, y PESTAÑA / LENGÜETA para levantarlo con el dedo en su
-  extremo delantero-izquierdo. Las dos cosas están y se ven.
-- SEGUNDO VISOR INTERNO SOLAR: tintado oscuro, BAJADO, visible a
-  través de la abertura de los ojos por debajo del dorado.
-- MECANISMO DE PIVOTE LATERAL: placa oscura con un tornillo visible y
-  un deslizador de ventilación al lado, en su posición exacta.
-- PIEZAS NEGRAS BRILLANTES que contrastan con el mate de la calota: el
-  panel lateral trasero / spoiler y la zona del pivote. Ese contraste
-  mate vs. brillante se conserva.
-- VENTILACIONES: extractores en la parte alta-trasera de la calota; en
-  la MENTONERA, una toma de aire central prominente con rejilla de
-  listones horizontales, más tomas laterales a los costados.
-- BORDE INFERIOR: goma negra perimetral, con el acolchado interior
-  gris/negro visible por dentro.
-No inventes, no "mejores", no agregues ni quites ninguna pieza, ni un
-tornillo, ni una ranura, ni un borde. Si dudás de cómo se ve un
-detalle, copiá exactamente lo que se ve en la foto adjunta, no lo que
-"normalmente" tendría un casco de este estilo.
+**Cómo se resuelve:** con la regla ya establecida en el repo — **el ángulo del casco lo define la foto de producto, no la pose del modelo**. O sea que **primero se fija el ángulo del casco según la referencia, y después se construye la pose de la persona alrededor**. Nunca al revés. Ese bloque ya existía en el prompt y **se reforzó**, porque con esta decisión pasa a ser **el punto de riesgo principal de todo el caso**.
 
-CRÍTICO — DOS VISORES, DOS PIEZAS DISTINTAS: EL DORADO ARRIBA Y
-LEVANTADO, EL OSCURO ADENTRO Y BAJADO. Declarado en positivo, porque
-es el punto donde este tipo de casco falla siempre (defecto real ya
-vivido en el caso Turtles, `simulacion-29-tmnt-lifestyle.md`, donde el
-generador primero agregó un segundo visor que no existía y después no
-respetó la opacidad pedida — acá el problema es el simétrico: los dos
-visores SÍ existen y hay que mantenerlos separados):
-- El VISOR PRINCIPAL es una pieza espejada DORADA/IRIDISCENTE que está
-  LEVANTADA, elevada POR ENCIMA de la calota, con la abertura de los
-  ojos despejada debajo de él. Sigue levantado en la imagen final.
-- El VISOR INTERNO SOLAR es una SEGUNDA pieza, distinta, tintada
-  OSCURA, que está BAJADA y se ve a través de la abertura de los ojos,
-  por debajo del dorado.
-- Son DOS piezas separadas, con dos posiciones distintas y dos
-  materiales distintos. Se ven las dos al mismo tiempo.
-Prohibido fusionarlas en una sola. Prohibido bajar el visor dorado.
-Prohibido eliminar el visor interno oscuro. Prohibido cambiar el
-dorado por transparente, por ahumado, por negro o por cualquier otro
-color. Prohibido cambiar el interno oscuro por dorado. Prohibido
-agregar un TERCER visor.
-
-CRÍTICO — ÁNGULO DEL CASCO: EL MISMO EXACTO DE LA FOTO DE PRODUCTO. El
-casco se ve en 3/4 DELANTERO, LIGERAMENTE DESDE ARRIBA, mirando hacia
-la IZQUIERDA del encuadre — el mismo punto de vista, la misma altura
-de cámara y el mismo grado de rotación de la foto adjunta. El usuario
-pidió "exactamente la misma posición, el mismo ángulo y todo": no lo
-gires para "mostrar mejor" otro lado, no lo pongas de perfil, no lo
-pongas de frente, no lo mires desde abajo. Como el casco está apoyado
-sobre la mesa y la cámara está a la altura de una persona sentada o
-parada enfrente, ese ángulo se conserva de forma natural.
-"Parecido" no alcanza: tiene que ser verificable comparando lado a
-lado con la foto adjunta.
-
-ESCENA: la vereda o terraza de una cafetería, de día. Un HOMBRE
-SENTADO en una silla, junto a una mesa; el casco apoyado sobre la mesa
-a su lado, bien visible y nítido, en primer plano. Ambiente urbano
-alrededor: fachada de la cafetería, otras mesas, gente y calle al
-fondo. El hombre puede tener una taza de café en la mesa y estar en
-una actitud relajada y natural.
-- ILUMINACIÓN: luz natural de día, suave, sin sol duro que queme las
-  altas luces.
-- El FONDO va DESENFOCADO (profundidad de campo baja, bokeh suave) y
-  no compite con el casco: el casco es el elemento nítido y el punto
-  de atención de la foto.
-- Sin logos de marcas reales, sin carteles con texto legible, sin
-  texto superpuesto, sin marca de agua.
-
-LIMPIEZA DE LA REFERENCIA — LO QUE ES MAQUETACIÓN NO EXISTE EN LA
-ESCENA NUEVA. La foto adjunta del casco es un archivo de maquetación y
-trae elementos que NO son parte del producto:
-- una LÍNEA GUÍA PUNTEADA VERTICAL sobre el margen izquierdo,
-- FORMAS DIAGONALES DE FONDO decorativas,
-- el FONDO CLARO DE ESTUDIO.
-Ninguno de los tres aparece en la imagen final. No hay ninguna línea
-punteada, ninguna guía, ninguna marca de recorte, ninguna forma
-geométrica decorativa flotando y ningún resto del fondo de estudio.
-El fondo de esta imagen es la cafetería y nada más.
-
-REALISMO — FOTOGRAFÍA REAL, Y EL VISOR ESPEJADO REFLEJA LA CAFETERÍA.
-El resultado es una FOTOGRAFÍA real tomada con cámara, no una
-ilustración, no un render 3D, no un collage, no un recorte pegado
-sobre un fondo. El casco es un OBJETO FÍSICO que está dentro de la
-escena:
-- recibe la MISMA luz natural que el hombre, la mesa y el resto de la
-  escena, con la misma dirección y la misma temperatura de color;
-- APOYA sobre la mesa y PROYECTA SU SOMBRA sobre ella, con contacto
-  real entre la goma del borde inferior y la superficie;
-- la calota MATE devuelve un realce de luz suave y difuso siguiendo su
-  curvatura, nunca un brillo especular duro (es mate, no glossy);
-- las piezas NEGRAS BRILLANTES sí devuelven reflejos especulares
-  nítidos, y ese contraste con el mate es parte del objeto;
-- y el punto que decide si la foto se lee como real o como un pegote:
-  el VISOR DORADO ESPEJADO REFLEJA EL ENTORNO DE LA CAFETERÍA — la
-  mesa, la fachada, los toldos, la calle, el cielo, la silueta de las
-  personas alrededor — NO el fondo claro del estudio de la foto de
-  producto, y NO un reflejo genérico. Es un espejo dorado/iridiscente:
-  lo que se ve adentro es esta escena, deformada por su curvatura.
-  Mismo criterio, más tenue, para el visor interno oscuro.
-Si el visor sigue reflejando un fondo de estudio liso, el casco se lee
-como un recorte pegado por más que su forma sea perfecta.
-
-PROHIBIDO ABSOLUTO:
-- Cambiar la geometría, el color, el acabado o cualquier detalle
-  físico del casco respecto de la foto adjunta, por más chico que sea.
-- Agregar gráficos, logos, texto, franjas, degradés, stickers o
-  textura de carbono sobre la calota — es negra mate y lisa.
-- Cambiar el mate de la calota por brillante/glossy.
-- Bajar el visor dorado, quitarlo, volverlo transparente, ahumado o
-  negro, o cambiarle el color iridiscente.
-- Eliminar el visor interno oscuro, subirlo, o fusionarlo con el
-  dorado en una sola pieza.
-- Omitir la fila de agujeritos del borde inferior del visor dorado o
-  la pestaña/lengüeta.
-- Cambiar el ángulo del casco respecto de la foto adjunta, ni
-  "aproximarlo".
-- Dibujar la línea punteada de maquetación, las formas diagonales
-  decorativas o el fondo de estudio.
-- Poner logos de marcas reales, carteles con texto legible, texto
-  superpuesto o marca de agua.
-- Entregar una ilustración, un render 3D o un casco flotando/recortado
-  sin sombra de contacto sobre la mesa.
-
-VERIFICACIÓN FINAL — ANTES DE ENTREGAR, CHEQUEÁ ESTAS 8 COSAS:
-1. ¿El visor principal sigue LEVANTADO y sigue siendo ESPEJADO
-   DORADO/IRIDISCENTE? ¿Se le ven la fila de agujeritos y la pestaña?
-2. ¿El segundo visor interno sigue BAJADO y sigue siendo OSCURO, y se
-   distingue como una pieza SEPARADA del dorado?
-3. ¿La calota sigue siendo NEGRA MATE y LISA, sin ningún gráfico,
-   logo, texto, franja ni degradé?
-4. ¿El ángulo del casco es 3/4 delantero, ligeramente desde arriba,
-   mirando a la izquierda — el mismo de la foto adjunta?
-5. ¿Están el pivote con su tornillo y su deslizador, los extractores
-   traseros, la toma de aire de la mentonera con sus listones
-   horizontales y la goma negra del borde inferior?
-6. ¿Aparece algún ARTEFACTO DE MAQUETACIÓN (línea punteada, guía,
-   formas diagonales, fondo de estudio)? No debe haber ninguno.
-7. ¿El reflejo del visor dorado corresponde a la ESCENA NUEVA (mesa,
-   fachada, calle, cielo de la cafetería) y no al fondo del estudio?
-8. ¿El casco apoya sobre la mesa con su sombra de contacto, iluminado
-   por la misma luz que el resto de la escena?
-
-Orden de imágenes en el payload: la foto real del casco (checkpoint,
-autoridad final de geometría, color, acabado y ángulo) — manda sobre
-cualquier otro detalle. Toda la escena de la cafetería se genera a
-partir del texto de arriba.
-```
-
-</details>
-
-**Estado:** 🔴 pendiente de generar · 🟡 lectura (A) pendiente de confirmación del usuario.
-
-**Qué hay que hacer:** confirmar con el usuario que la lectura correcta es (A), correr el prompt y mandar el resultado para auditoría usando los 8 chequeos de la verificación final.
+**Segunda consecuencia, menor pero real:** con una cabeza adentro se pierde la vista del interior del casco que (A) sí dejaba ver. El **visor dorado levantado sí se sigue viendo** —es la pieza que más importa comunicar— y por la abertura de los ojos se ve el **visor interno oscuro bajado**, que además es lo que resuelve el requisito de rostro no visible.
 
 ---
 
-## Prompt variante — Lectura (B): el hombre con el casco puesto, sentado
+## Prompt definitivo — el hombre con el casco PUESTO, sentado en la cafetería
 
-<details><summary>Prompt usado — (B) casco puesto</summary>
+<details><summary>Prompt definitivo — hombre sentado con el casco puesto (copiar/pegar en Nano Banana Pro)</summary>
 
 ```
 Genera una FOTOGRAFÍA REAL tipo lifestyle en 4K, ultra nítida, formato
@@ -279,17 +105,55 @@ abertura de los ojos se ve el VISOR INTERNO OSCURO BAJADO — o sea que
 la cara del hombre queda cubierta por ese visor oscuro, no visible. No
 dibujes ojos ni rasgos a través del visor interno.
 
-CRÍTICO — EL ÁNGULO DEL CASCO LO DEFINE LA FOTO DE PRODUCTO, NO LA
-POSE DEL MODELO. El casco se ve en 3/4 DELANTERO, LIGERAMENTE DESDE
-ARRIBA, mirando hacia la IZQUIERDA del encuadre — el mismo punto de
-vista, la misma altura de cámara y el mismo grado de rotación de la
-foto adjunta. El usuario pidió "exactamente la misma posición, el
-mismo ángulo y todo". La pose de la cabeza y del cuerpo del hombre se
-ACOMODAN para que ese ángulo se cumpla: primero se fija el ángulo del
-casco según la foto adjunta, y después se construye la pose del modelo
-alrededor. NO al revés. No elijas una pose "más natural" o "más
-fotogénica" que cambie el ángulo del casco. "Parecido" no alcanza:
-tiene que ser verificable comparando lado a lado con la foto adjunta.
+CRÍTICO — ESTE ES EL PUNTO MÁS IMPORTANTE DE TODO EL PROMPT: EL
+ÁNGULO DEL CASCO LO DEFINE LA FOTO DE PRODUCTO, NO LA POSE DEL
+MODELO. Leelo dos veces antes de componer la imagen.
+- EL ÁNGULO ES LA CONSTANTE, LA POSE ES LA VARIABLE. El orden de
+  construcción de la imagen es este y no otro:
+  PASO 1 — fijar el casco en el ángulo EXACTO de la foto adjunta:
+    3/4 DELANTERO, LIGERAMENTE DESDE ARRIBA, mirando hacia la
+    IZQUIERDA del encuadre, con el mismo punto de vista, la misma
+    altura de cámara y el mismo grado de rotación.
+  PASO 2 — recién después, construir alrededor de ese casco la pose
+    de la cabeza, el cuello, los hombros y el cuerpo del hombre, y la
+    posición de la cámara, para que ese ángulo se cumpla.
+  NUNCA al revés. NO elijas primero una pose "natural", "cómoda",
+  "relajada" o "fotogénica" y después acomodes el casco encima: eso
+  cambia el ángulo y rompe el pedido.
+- POR QUÉ ESTE BLOQUE ES CRÍTICO ACÁ: el usuario pidió "exactamente
+  la misma posición, el mismo ángulo y todo", y como el casco va
+  PUESTO SOBRE UNA PERSONA, el ángulo deja de estar garantizado por
+  el objeto —que en una foto de producto está simplemente apoyado— y
+  pasa a depender de cómo esté la cabeza del modelo. Es el ÚNICO
+  punto del caso donde la escena nueva puede arrastrar al objeto.
+- La cabeza puede quedar en una posición poco habitual para una foto
+  lifestyle (levemente girada, levemente inclinada, mirando hacia un
+  costado): ESO ESTÁ BIEN Y ES LO PEDIDO. La naturalidad de la pose
+  se sacrifica antes que el ángulo del casco, no al revés.
+- "Parecido" no alcanza: tiene que ser verificable comparando lado a
+  lado con la foto adjunta, superponiendo mentalmente las dos
+  siluetas del casco.
+
+CRÍTICO — NO SE VE EL ROSTRO DEL HOMBRE. Declarado EN POSITIVO
+primero, y recién después en negativo:
+- EN POSITIVO: el hombre lleva el casco PUESTO, con el visor dorado
+  LEVANTADO y el visor interno solar OSCURO BAJADO. Por lo tanto, lo
+  que se ve en la abertura de los ojos es LA SUPERFICIE OSCURA DEL
+  VISOR INTERNO y NADA MÁS: una superficie tintada, curva, con los
+  reflejos tenues de la cafetería. El casco con el visor interno
+  bajado es lo que resuelve el encuadre — no hace falta ningún
+  recurso extra: ni recortar la cabeza, ni tapar con un objeto, ni
+  desenfocar la cara, ni poner al hombre a contraluz.
+- EN NEGATIVO, como refuerzo: está PROHIBIDO que aparezca cualquier
+  rasgo facial, ojos, cejas, nariz, piel visible de la cara, una
+  silueta o sombra de rostro insinuada por detrás del visor interno,
+  o un reflejo con forma de rostro sobre cualquiera de los dos
+  visores. Ninguna de esas cosas existe en esta imagen.
+- La MENTONERA del casco es una pieza sólida y cubre la zona de la
+  boca y el mentón: por debajo de la línea del visor no asoma nada de
+  la cara.
+Defecto real ya vivido: `simulacion-29-tmnt-lifestyle.md`, Intento 1 —
+el visor salió transparente y se alcanzaba a ver a la persona adentro.
 
 ESCENA: la vereda o terraza de una cafetería, de día. Un HOMBRE
 SENTADO en una silla, junto a una mesa, con el casco puesto, en
@@ -363,25 +227,32 @@ PROHIBIDO ABSOLUTO:
   superpuesto o marca de agua.
 - Entregar una ilustración o un render 3D.
 
-VERIFICACIÓN FINAL — ANTES DE ENTREGAR, CHEQUEÁ ESTAS 8 COSAS:
-1. ¿El visor principal sigue LEVANTADO y sigue siendo ESPEJADO
+VERIFICACIÓN FINAL — ANTES DE ENTREGAR, CHEQUEÁ ESTAS 9 COSAS. LA 1
+ES LA MÁS IMPORTANTE Y VA PRIMERO A PROPÓSITO:
+1. ¿El ÁNGULO del casco es 3/4 delantero, ligeramente desde arriba,
+   mirando a la izquierda — el MISMO de la foto adjunta — y NO uno
+   que salió de elegir primero una pose cómoda para el modelo? Poné
+   las dos imágenes lado a lado y compará la silueta del casco. Si el
+   ángulo no coincide, la imagen está MAL aunque todo lo demás esté
+   bien: rehacela acomodando la pose del hombre, no el casco.
+2. ¿El visor principal sigue LEVANTADO y sigue siendo ESPEJADO
    DORADO/IRIDISCENTE? ¿Se le ven la fila de agujeritos y la pestaña?
-2. ¿El segundo visor interno sigue BAJADO y sigue siendo OSCURO, y se
-   distingue como una pieza SEPARADA del dorado? ¿Tapa la cara?
-3. ¿La calota sigue siendo NEGRA MATE y LISA, sin ningún gráfico,
+3. ¿El segundo visor interno sigue BAJADO y sigue siendo OSCURO, y se
+   distingue como una pieza SEPARADA del dorado?
+4. ¿Se ve algún rasgo de CARA —ojos, cejas, nariz, piel, silueta
+   insinuada detrás del visor interno o reflejo con forma de rostro
+   sobre alguno de los dos visores—? No debe haber ninguno.
+5. ¿La calota sigue siendo NEGRA MATE y LISA, sin ningún gráfico,
    logo, texto, franja ni degradé?
-4. ¿El ángulo del casco es 3/4 delantero, ligeramente desde arriba,
-   mirando a la izquierda — el mismo de la foto adjunta — y NO uno que
-   salió de elegir primero la pose del modelo?
-5. ¿Están el pivote con su tornillo y su deslizador, los extractores
+6. ¿Están el pivote con su tornillo y su deslizador, los extractores
    traseros, la toma de aire de la mentonera con sus listones
    horizontales y la goma negra del borde inferior?
-6. ¿Aparece algún ARTEFACTO DE MAQUETACIÓN (línea punteada, guía,
+7. ¿Aparece algún ARTEFACTO DE MAQUETACIÓN (línea punteada, guía,
    formas diagonales, fondo de estudio)? No debe haber ninguno.
-7. ¿El reflejo del visor dorado corresponde a la ESCENA NUEVA (mesa,
+8. ¿El reflejo del visor dorado corresponde a la ESCENA NUEVA (mesa,
    fachada, calle, cielo de la cafetería) y no al fondo del estudio?
-8. ¿La proporción de la calota es la misma de la foto adjunta, sin
-   estirar ni achatar?
+9. ¿La proporción de la calota es la misma de la foto adjunta, sin
+   estirar ni achatar para que "entre" en la cabeza del modelo?
 
 Orden de imágenes en el payload: la foto real del casco (checkpoint,
 autoridad final de geometría, color, acabado y ángulo) — manda sobre
@@ -391,9 +262,9 @@ la cafetería se genera a partir del texto de arriba.
 
 </details>
 
-**Estado:** 🔴 pendiente de generar · 🟡 variante, solo si el usuario confirma la lectura (B).
+**Estado:** 🔴 pendiente de generar. **Sin bloqueos:** la lectura quedó confirmada por el usuario el 2026-07-29 (*"el casco en la cafetería es sobre una persona"*) y este es el prompt definitivo del caso.
 
-**Qué hay que hacer:** no correrlo por default. Si el usuario confirma que quería el casco puesto, correr este y auditar con especial atención al chequeo 4 (que el ángulo no lo haya definido la pose) y al 8 (proporción de la calota, defecto real del caso Turtles, Intento 4).
+**Qué hay que hacer:** correrlo en sesión aislada y auditar con los **9 chequeos** de la verificación final, con atención máxima al **1** (que el ángulo no lo haya definido la pose — es el punto de riesgo principal del caso desde que el casco va puesto), al **4** (rostro no visible) y al **9** (proporción de la calota, defecto real del caso Turtles, Intento 4).
 
 ---
 
@@ -401,13 +272,14 @@ la cafetería se genera a partir del texto de arriba.
 
 | Riesgo | De dónde viene | Chequeo que lo cubre |
 |---|---|---|
-| El generador baja el visor dorado "porque un casco se usa así" | Defecto de posición de pieza; el prior del modelo pesa más que la foto | Verificación 1 |
-| Fusiona los dos visores en uno solo, o elimina el interno | `simulacion-29-tmnt-lifestyle.md` (agregó un visor que no iba; después no respetó la opacidad) | Verificación 2 |
-| Agrega gráficos/franjas sobre la calota negra lisa | Toda superficie grande y vacía invita a rellenar — mismo mecanismo que los adornos inventados del Tipo B | Verificación 3 |
-| El ángulo se corre para "mejorar" la composición | `simulacion-29`, Intentos 3 y 4; `simulacion-12`, Intento 1 | Verificación 4 |
-| Aparece la línea punteada o las formas diagonales de maquetación | `simulacion-31` y `simulacion-32` | Verificación 6 |
-| El visor sigue reflejando el fondo de estudio → el casco se lee como recorte pegado | **Riesgo nuevo de este caso** — ver lección abajo | Verificación 7 |
-| La calota sale estirada/alargada (solo en la variante B) | `simulacion-29`, Intento 4, defecto 2 | Verificación 8 (variante B) |
+| **El ángulo del casco lo termina definiendo la pose del modelo** — riesgo #1 del caso desde que se confirmó que el casco va PUESTO | `simulacion-29`, Intentos 3 y 4; `simulacion-12`, Intento 1. Con el casco apoyado (variante descartada) el ángulo se sostenía solo; con el casco puesto depende de la cabeza | **Verificación 1** |
+| El generador baja el visor dorado "porque un casco se usa así" | Defecto de posición de pieza; el prior del modelo pesa más que la foto | Verificación 2 |
+| Fusiona los dos visores en uno solo, o elimina el interno | `simulacion-29-tmnt-lifestyle.md` (agregó un visor que no iba; después no respetó la opacidad) | Verificación 3 |
+| Se ve la cara / una silueta a través del visor interno oscuro | `simulacion-29`, Intento 1 | Verificación 4 |
+| Agrega gráficos/franjas sobre la calota negra lisa | Toda superficie grande y vacía invita a rellenar — mismo mecanismo que los adornos inventados del Tipo B | Verificación 5 |
+| Aparece la línea punteada o las formas diagonales de maquetación | `simulacion-31` y `simulacion-32` | Verificación 7 |
+| El visor sigue reflejando el fondo de estudio → el casco se lee como recorte pegado | **Riesgo nuevo de este caso** — ver lección abajo | Verificación 8 |
+| La calota sale estirada/alargada al ponerla sobre una cabeza | `simulacion-29`, Intento 4, defecto 2 | Verificación 9 |
 
 ---
 
@@ -419,4 +291,6 @@ No estaba cubierta por el eje de *estilo de render y realismo de material* del c
 
 ---
 
-**Última actualización:** 2026-07-29 · caso creado desde cero a partir del pedido de foto lifestyle en una cafetería. Se escribieron **2 prompts** —(A) casco apoyado sobre la mesa, principal, y (B) casco puesto, variante— con la **ambigüedad del pedido registrada y pendiente de confirmación del usuario**: nadie eligió todavía cuál de las dos lecturas es la correcta, y (A) queda como principal solo porque es la única que permite conservar literalmente el ángulo de 3/4 delantero desde arriba que el usuario pidió ("el mismo ángulo y todo"), además de ser la única que deja ver el visor dorado levantado y el interior. Los dos prompts comparten el bloque de autoridad de forma pieza por pieza, el bloque de los dos visores declarado **en positivo** (dorado levantado + interno oscuro bajado, referenciando los defectos de visor ya vividos en `simulacion-29-tmnt-lifestyle.md`), el bloque de limpieza de artefactos de maquetación (`simulacion-31` / `simulacion-32`) y el bloque de realismo con el reflejo de la escena nueva sobre el visor espejado. Deja **1 lección nueva** para el checklist Tipo A: las superficies reflectantes de un objeto trasladado reflejan la escena nueva, no el estudio de origen.
+**Última actualización:** 2026-07-29 · caso creado desde cero a partir del pedido de foto lifestyle en una cafetería. Se escribieron **2 prompts** —(A) casco apoyado sobre la mesa y (B) casco puesto— con la ambigüedad del pedido registrada, porque "sentado con este casco" admitía las dos lecturas. Los dos compartían el bloque de autoridad de forma pieza por pieza, el bloque de los dos visores declarado **en positivo** (dorado levantado + interno oscuro bajado, referenciando los defectos de visor ya vividos en `simulacion-29-tmnt-lifestyle.md`), el bloque de limpieza de artefactos de maquetación (`simulacion-31` / `simulacion-32`) y el bloque de realismo con el reflejo de la escena nueva sobre el visor espejado. Deja **1 lección nueva** para el checklist Tipo A: las superficies reflectantes de un objeto trasladado reflejan la escena nueva, no el estudio de origen.
+
+**2026-07-29 (segunda pasada — respuesta del usuario) — ✅ decidido: el casco va PUESTO.** Textual: *"el casco en la cafetería es sobre una persona."* Gana la lectura **(B)**, que pasa a ser el **prompt definitivo y único del caso**; la variante **(A) —casco apoyado sobre la mesa— se eliminó del documento**, no se archivó como alternativa. El caso sale del estado 🟡. **Consecuencia que quedó escrita, porque es la parte cara de la decisión:** (A) era la lectura que conservaba **literalmente** el 3/4 delantero desde arriba de la foto de producto —un objeto apoyado mantiene su ángulo solo—, mientras que con el casco puesto **el ángulo pasa a depender de la pose de la cabeza del modelo**. Se resolvió aplicando la regla ya establecida en el repo —**el ángulo del casco lo define la foto de producto, no la pose del modelo**— y **reforzando ese bloque del prompt**: ahora declara el orden de construcción en dos pasos (primero se fija el casco, después se construye la pose alrededor), avisa explícitamente que una pose poco habitual es aceptable si eso es lo que hace falta para respetar el ángulo, y su chequeo pasó a ser **el número 1** de la verificación final, con comparación lado a lado. Se sumó además el bloque de **rostro no visible** declarado en positivo, coherente con la decisión del centro comercial de la [Simulación 39](simulacion-39-lifestyle-avenida-y-centro-comercial.md): lo que se ve en la abertura de los ojos es la superficie del visor interno oscuro bajado y nada más.

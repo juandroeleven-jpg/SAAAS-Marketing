@@ -1,4 +1,4 @@
-# Simulación 31 — Casco jet arte Bob Esponja: visor ahumado → transparente + quitar la línea punteada (edición puntual, 2 cambios)
+# Simulación 31 — Casco jet arte Bob Esponja: visor ahumado → transparente + quitar "el palo" que se ve dentro del visor (edición puntual, 2 cambios integrados)
 
 [← Volver al índice de mis pruebas](../mis-pruebas-claude-code.md) · [← Orquestación de agentes en paralelo](../orquestacion-agentes-paralelos.md) · [← Índice maestro de prompts](indice-prompts-catalogo.md) · [← Caso hermano: Simulación 6a Bob Esponja](simulacion-6a-bob-esponja.md)
 
@@ -22,24 +22,36 @@ Foto de producto, **vista frontal**, casco **open face / tipo jet** (sin mentone
 | **Visor** | Grande, de una sola pieza, curvo, cubre todo el frente desde la altura de la ceja hasta debajo del mentón. **Hoy está OSCURO / AHUMADO (tintado)**: no se ve nada del interior, se lee como una superficie negra translúcida con reflejos blancos de estudio en la parte baja. |
 | **Piezas negras** | Mecanismo de pivote a cada lado, y en la base la correa con un detalle rojo del lado derecho. |
 | **Fondo** | Blanco/gris claro liso, con **formas geométricas grises angulares muy tenues** en las esquinas (arriba izquierda, medio izquierda, abajo derecha) — son decoración de plantilla, parte del fondo, **no se tocan**. |
-| **"El palo"** | Cruzando la imagen de **arriba abajo**, en el sector **derecho**, una **línea vertical de puntos/guiones blanca** que recorre toda la altura de la foto y pasa por encima del casco. Es una **guía de maquetación** que quedó pegada en la imagen — no es parte del casco ni del fondo. |
+| **"El palo"** | ✅ **Confirmado por el usuario (2026-07-29):** *"el palo es lo que se ve dentro del visor del casco."* Es un **elemento con forma de vara / palo que se ve DENTRO del visor**, o sea en la zona que queda visible **a través** de la superficie del visor. No es una pieza del casco, no es parte del arte de la calota y no es parte del fondo. |
+| Guía punteada de maquetación | Cruzando la imagen de **arriba abajo**, en el sector **derecho**, una **línea vertical de puntos/guiones blanca**. Es una guía de maquetación que quedó pegada en la imagen. **No es "el palo"** y **no forma parte de esta edición**: queda como está. Si más adelante se la quiere sacar, es un pedido aparte. |
 
 ### Los 2 cambios pedidos
 
 1. **El visor pasa de ahumado/tintado a transparente.**
-2. **Se elimina la línea vertical punteada** ("el palo").
+2. **Se elimina el elemento con forma de vara que se ve DENTRO del visor.**
 
 Nada más. El usuario fue explícito: *"que no invente ni cambie nada"*.
 
 ---
 
-## 🟡 Nota de ambigüedad — qué es "el palo" (pendiente de confirmación del usuario)
+## ✅ Ambigüedad de "el palo" — CERRADA (2026-07-29, confirmada por el usuario)
 
-**"El palo" es una descripción corta y no está confirmada.** La lectura que se usó para armar el prompt es la **línea vertical punteada del sector derecho**, porque es **lo único de la imagen con forma de palo que claramente NO pertenece al producto**: no es una pieza del casco, no es parte del arte grafiti y no es parte del fondo de plantilla — es una guía de maquetación pegada encima. Con esa lectura, el pedido "quitarle el palo" y el pedido "que no invente ni cambie nada" son coherentes entre sí: se saca algo que sobra, no se modifica el producto.
+**Respuesta textual del usuario:** *"el palo es lo que se ve dentro del visor del casco."*
 
-**Alternativa posible, no descartada:** que "el palo" sea **algún elemento con forma de vara dentro del arte grafiti de la calota** (una línea, un trazo alargado, un elemento tipo skate o similar). Si fuera eso, el prompt de abajo **no sirve tal cual** y hay que rehacer el Cambio 2 nombrando ese elemento concreto — y además dejaría de ser una limpieza de imagen para pasar a ser una **modificación del arte**, que es exactamente lo que el usuario dijo que no quería.
+**Queda descartada** la lectura que se había usado para armar la primera versión del prompt —la **línea vertical punteada de maquetación** del sector derecho—. Esa guía **no es "el palo"** y no se toca.
 
-**Qué hay que preguntarle al usuario antes de dar el resultado por bueno:** *"cuando decís 'el palo', ¿te referís a la línea vertical de puntos blancos que cruza la foto de arriba abajo del lado derecho (una guía de maquetación que quedó pegada), o a algo dentro del dibujo del casco?"*. Mientras no esté contestado, este caso queda 🟡 **con interpretación pendiente**, no aprobado.
+**Lectura confirmada:** hay que eliminar un **objeto con forma de vara / palo** que se ve **dentro del visor**, es decir en la zona del casco que queda visible a través de él.
+
+### 🔎 Hallazgo de método — la ambigüedad se resolvió sola al INTEGRAR los dos cambios, en vez de tratarlos por separado
+
+Los dos cambios del pedido **no eran independientes, y ahí estaba la respuesta**:
+
+- El **Cambio 1** vuelve el visor de ahumado a transparente. Como al destintarlo aparece una zona que la foto original nunca capturó, el prompt ya estaba obligado a **declarar en positivo qué se ve a través del visor**: interior de casco **vacío** —acolchado negro, calota interna en penumbra, abertura del mentón vacía— **y nada más**.
+- El **Cambio 2** pide eliminar un objeto que está **exactamente en esa zona**.
+
+O sea que **el palo es una de las cosas que ya no debían aparecer ahí**: la declaración positiva del Cambio 1 lo excluye por definición, junto con la cara, la cabeza, la persona y el maniquí. Los dos cambios se resuelven **en un solo bloque**, no en dos: el visor se vuelve transparente **y** lo que se ve detrás es el interior vacío declarado, sin ningún objeto con forma de vara. El palo se suma a la lista de prohibiciones de esa zona.
+
+**Por qué esto es un argumento a favor de un método, y no solo una anécdota del caso:** si el prompt hubiera ido prohibiendo objeto por objeto en vez de **declarar el contenido de la zona en positivo**, la ambigüedad seguiría abierta — habría hecho falta saber exactamente qué objeto era para poder prohibirlo. Al declarar en positivo qué debe verse, **cualquier objeto que no esté en esa declaración queda excluido sin necesidad de nombrarlo**, incluido uno que no se sabía identificar. Es la misma lección que este archivo ya deja para el checklist Tipo A (*"cuando una edición destapa una zona hay que declarar en positivo qué se ve debajo, no alcanza con prohibir lo que no debe aparecer"*, ver el cierre del documento): **este caso la confirma con un beneficio que no se había anticipado — la declaración positiva también resuelve ambigüedades del pedido, no solo evita invenciones del generador.** No se registra como lección nueva porque el ítem ya existe; se referencia.
 
 ---
 
@@ -54,15 +66,17 @@ Por eso el prompt **declara en positivo qué se ve a través del visor**, y no s
 - el **acolchado interior negro/gris oscuro**,
 - la **superficie interna de la calota en penumbra**,
 - la **abertura del mentón vacía** por abajo,
-- y **nada más**: sin cabeza, sin cara, sin persona, sin maniquí, sin ojos.
+- y **nada más**: sin cabeza, sin cara, sin persona, sin maniquí, sin ojos **y sin ningún objeto con forma de vara o palo**.
 
 Y el segundo blindaje: **el visor sigue existiendo como pieza física**. No se borra ni se quita. Se conservan su forma, su borde, su curvatura, su espesor, el brillo de su superficie y **los reflejos especulares de estudio** que tiene hoy en la parte baja — un visor de policarbonato transparente sigue teniendo reflejos, no es un agujero. Pasar de ahumado a transparente es un **cambio de opacidad del material**, no la eliminación de la pieza.
 
-Para el Cambio 2 se aplica la lección ya registrada de que **un borrado son dos tareas**: eliminar sin dejar resto **y** reconstruir lo que hay debajo — que acá cambia según el tramo (fondo / calota con arte / visor), con **cobertura completa de punta a punta** de la línea.
+**Y acá es donde los dos cambios se cruzan, que es la clave del caso:** el objeto a eliminar (Cambio 2) está **dentro de esa misma zona**. Por eso los dos cambios **no se tratan por separado**: el visor se vuelve transparente **y** lo que queda detrás es el interior vacío declarado arriba, sin ningún objeto con forma de vara. El palo no necesita un bloque de borrado propio con reconstrucción por tramos — necesita estar en la **lista de cosas que no existen en esa zona**, junto a la cara, la cabeza, la persona y el maniquí. La declaración positiva del Cambio 1 hace el trabajo del Cambio 2.
+
+*(La lección de que **un borrado son dos tareas** —eliminar sin dejar resto y reconstruir lo que hay debajo— sigue vigente para el catálogo, pero acá **no aplica como bloque separado**: lo que va debajo del palo ya está declarado en positivo como parte del Cambio 1, así que no hay un "debajo" que reconstruir aparte.)*
 
 ---
 
-<details><summary>Prompt — Edición puntual: visor transparente + quitar la línea punteada (2 cambios)</summary>
+<details><summary>Prompt — Edición puntual: visor transparente + quitar el palo que se ve dentro del visor (2 cambios integrados)</summary>
 
 ```
 Esto es una EDICIÓN PUNTUAL sobre la imagen adjunta, NO una
@@ -92,11 +106,25 @@ TODO ESTO NO SE TOCA — QUEDA PIXEL POR PIXEL IGUAL:
   izquierda, en el medio a la izquierda, abajo a la derecha): son
   parte del fondo de la plantilla y se conservan tal cual, con su
   misma posición y su misma transparencia.
+- La LÍNEA VERTICAL DE PUNTOS / GUIONES BLANCA del sector derecho,
+  que cruza la foto de arriba abajo: es una guía de maquetación y en
+  esta edición NO SE TOCA. Se queda exactamente donde está, con su
+  mismo recorrido, su mismo espaciado y su mismo color. No la borres,
+  no la muevas, no la completes y no la reinterpretes.
 - El ángulo de cámara, el encuadre y el recorte.
 - La iluminación de estudio, las sombras suaves, los reflejos
   especulares y la microtextura del material. La imagen sigue
   siendo la MISMA FOTOGRAFÍA, con exactamente el mismo tratamiento
   fotográfico.
+
+LOS DOS CAMBIOS VAN JUNTOS, NO SEPARADOS:
+El CAMBIO 1 (el visor pasa de ahumado a transparente) y el CAMBIO 2
+(eliminar el palo que se ve dentro del visor) ocurren en LA MISMA
+ZONA de la imagen: la zona que queda visible a través del visor.
+Se resuelven de una sola vez: el visor se vuelve transparente Y lo
+que se ve detrás es el interior vacío del casco descrito abajo, en el
+que NO hay ningún objeto con forma de vara. Leelos como una sola
+instrucción sobre esa zona.
 
 CAMBIO 1 — EL VISOR PASA DE AHUMADO A TRANSPARENTE:
 El visor grande de una sola pieza que cubre todo el frente del
@@ -134,51 +162,50 @@ dibujes una cara. NO dibujes una persona, un piloto, un modelo ni
 un maniquí. NO dibujes ojos, nariz, boca, piel, pelo, barba,
 anteojos ni ninguna figura humana o animal. NO dibujes un rostro
 "insinuado", ni una silueta, ni un reflejo con forma de cara. NO
-inventes un interior fantasioso, ni pantallas, ni luces, ni
+dibujes NINGÚN OBJETO CON FORMA DE VARA, PALO, BASTÓN, TUBO, CAÑO,
+BARRA, ANTENA, SOPORTE, MANGO NI POSTE, ni entero ni parcial, ni
+vertical ni inclinado, ni en foco ni desenfocado (ver el CAMBIO 2).
+NO inventes un interior fantasioso, ni pantallas, ni luces, ni
 gráficos, ni electrónica, ni el arte grafiti repetido adentro. NO
 dejes ver el fondo de la foto a través del casco como si fuera un
 vidrio hueco. ES UN CASCO VACÍO EN UNA FOTO DE PRODUCTO: adentro
-no hay nadie.
+no hay nadie y no hay nada.
 
-CAMBIO 2 — ELIMINAR LA LÍNEA VERTICAL PUNTEADA:
-En el SECTOR DERECHO de la imagen hay una LÍNEA VERTICAL DE PUNTOS
-/ GUIONES BLANCA que recorre TODA LA ALTURA de la foto, de arriba
-abajo, y PASA POR ENCIMA DEL CASCO. Es una GUÍA DE MAQUETACIÓN que
-quedó pegada en la imagen: no es parte del casco, no es parte del
-arte y no es parte del fondo. Hay que ELIMINARLA POR COMPLETO.
+CAMBIO 2 — ELIMINAR "EL PALO" QUE SE VE DENTRO DEL VISOR:
+En la imagen adjunta, DENTRO DEL VISOR —o sea en la zona del casco
+que queda visible a través de la superficie del visor— se ve un
+ELEMENTO CON FORMA DE VARA / PALO: un objeto alargado y angosto,
+tipo barra, que NO es parte del casco, NO es parte de su interior y
+NO es parte del arte de la calota. HAY QUE ELIMINARLO POR COMPLETO.
 
-Son DOS TAREAS, no una: (a) eliminar la línea sin dejar NINGÚN
-resto —ni un guion suelto, ni un tramo, ni un fantasma, ni un halo,
-ni una sombra, ni un contorno, ni una interrupción, ni una
-diferencia de brillo donde estaba—; y (b) RECONSTRUIR LO QUE VA
-DEBAJO, que cambia según el tramo:
-- DONDE CRUZA EL FONDO: fondo blanco/gris claro liso y continuo,
-  con su mismo degradé y su misma tonalidad, sin costura ni parche.
-  Si en ese tramo el fondo tiene una de las formas geométricas
-  grises tenues, esa forma se completa por debajo tal cual es.
-- DONDE CRUZA EL CASCO: el arte grafiti y el amarillo lima de la
-  calota CONTINÚAN por debajo, sin costura, sin parche y sin
-  reinterpretación. Un trazo del dibujo que entra por un lado de
-  la línea tiene que SALIR POR EL OTRO alineado, con el mismo
-  grosor, el mismo color y el mismo recorrido, como si la línea
-  nunca hubiera estado ahí.
-- DONDE CRUZA EL VISOR: la superficie del visor continúa, con su
-  mismo material, su mismo brillo y sus mismos reflejos.
+Este cambio NO es independiente del CAMBIO 1: es la MISMA ZONA. Ya
+está declarado arriba, en positivo, qué tiene que verse a través del
+visor —acolchado interior negro/gris oscuro, calota interna en
+penumbra, abertura del mentón vacía y nada más—. EL PALO ES
+JUSTAMENTE UNA DE LAS COSAS QUE NO ESTÁN EN ESA LISTA, así que su
+eliminación se resuelve cumpliendo esa declaración: donde estaba el
+palo va lo que corresponda de ese interior vacío, con su misma
+penumbra, su mismo tono y su misma continuidad.
 
-COBERTURA COMPLETA: la línea desaparece DE PUNTA A PUNTA, en toda
-su altura y en los tres tramos. No puede quedar un pedazo arriba,
-ni un pedazo abajo, ni el tramo que cruza el casco, ni un guion
-aislado en ninguna parte.
+- NO tiene que quedar NINGÚN resto: ni un tramo, ni una punta, ni un
+  fantasma, ni un halo, ni una sombra, ni un contorno, ni una
+  diferencia de brillo donde estaba.
+- Lo que queda en su lugar es INTERIOR DE CASCO VACÍO, continuo y
+  sin costura, no un parche de color plano ni un objeto de reemplazo.
+- COBERTURA COMPLETA: el palo desaparece DE PUNTA A PUNTA, en toda
+  su extensión, incluida cualquier parte que asome cerca del borde
+  del visor.
+- Y NO lo reemplaces por otra cosa: ni por una cara, ni por una
+  cabeza, ni por un maniquí, ni por otro objeto.
 
 CRÍTICO — LAS ZONAS EDITADAS TAMPOCO SE REDIBUJAN:
 Que una zona esté en la lista de cambios NO es permiso para
-rehacerla. En la franja donde estaba la línea punteada, lo ÚNICO
-que cambia es que la línea ya no está: todo el dibujo de esa franja
-—el arte grafiti, sus colores, sus trazos, el fondo, sus formas
-tenues— se conserva IDÉNTICO. Y en el visor, lo ÚNICO que cambia es
-la opacidad del material: su forma, su borde y sus reflejos siguen
-iguales. No se rediseña, no se simplifica y no se reinterpreta
-nada.
+rehacerla. En el visor, lo ÚNICO que cambia es la opacidad del
+material y la desaparición del palo: su forma, su borde, su
+curvatura y sus reflejos siguen iguales. El arte grafiti de la
+calota, el fondo y sus formas tenues NO forman parte de ningún
+cambio y se conservan IDÉNTICOS. No se rediseña, no se simplifica y
+no se reinterpreta nada.
 
 PROHIBIDO ABSOLUTO — NO TOQUES NADA MÁS:
 - No redibujes el arte grafiti de la calota ni ninguna de sus
@@ -199,6 +226,9 @@ PROHIBIDO ABSOLUTO — NO TOQUES NADA MÁS:
 - No agregues logos, texto, sellos, firmas ni marcas de agua.
 - No borres el visor: el visor sigue estando como pieza física, se
   vuelve transparente pero NO desaparece.
+- No borres, no muevas y no modifiques la línea vertical punteada de
+  maquetación del sector derecho: esa NO es "el palo" y en esta
+  edición no se toca.
 
 VERIFICACIÓN FINAL ANTES DE ENTREGAR:
 Compará tu resultado contra la imagen adjunta, al lado, y contestá:
@@ -209,12 +239,13 @@ Compará tu resultado contra la imagen adjunta, al lado, y contestá:
 2. ¿El visor CONSERVA su forma, su contorno, su borde, su
    curvatura y sus reflejos especulares de estudio, y lo único que
    cambió fue que dejó de ser oscuro?
-3. ¿La línea vertical punteada DESAPARECIÓ POR COMPLETO, en los
-   TRES tramos (fondo, casco y visor), sin ningún guion suelto,
-   fantasma ni sombra, y con lo que va debajo reconstruido SIN
-   COSTURA (fondo continuo, arte grafiti continuado trazo por
-   trazo, superficie del visor continua)?
-4. ¿Algún trazo del arte grafiti cambió de forma, de posición, de
+3. ¿DESAPARECIÓ POR COMPLETO el objeto con forma de VARA / PALO que
+   se veía dentro del visor, de punta a punta, sin ningún tramo,
+   punta, fantasma, halo ni sombra — y en su lugar quedó interior de
+   casco vacío continuo, no un parche plano ni otro objeto?
+4. ¿Sigue estando la línea vertical punteada del sector derecho,
+   igual que en la imagen adjunta? (Esa NO se toca.)
+5. ¿Algún trazo del arte grafiti cambió de forma, de posición, de
    grosor o de color? ¿Falta alguna salpicadura, alguna forma rosa
    o celeste, algún detalle chico?
 Cualquier diferencia que no sean los 2 cambios pedidos es un
@@ -225,14 +256,15 @@ ERROR: corregila antes de entregar.
 
 ---
 
-**Estado:** 🔴 pendiente de generar · 🟡 interpretación de "el palo" pendiente de confirmación del usuario.
+**Estado:** ✅ **prompt definitivo, sin bloqueos** — la interpretación de "el palo" quedó confirmada por el usuario el 2026-07-29 y el prompt ya está reescrito con ella. Solo falta correrlo.
 
 **Qué hay que hacer:**
-1. **Confirmar con el usuario qué es "el palo"** (ver la nota de ambigüedad de arriba) — antes de dar por bueno cualquier resultado.
-2. Correr el prompt como **edición** sobre la imagen adjunta (no como generación nueva), en sesión aislada.
-3. Auditar el resultado con los 4 chequeos de la verificación final, prestando atención especial al riesgo #1 (cara/figura inventada dentro del visor), que es el modo de falla más probable de este caso.
-4. Subir la imagen original como adjunto real para versionarla en `imagenes-bob-esponja/` (o en una carpeta propia de este caso) — hoy solo está descrita en texto.
+1. Correr el prompt como **edición** sobre la imagen adjunta (no como generación nueva), en sesión aislada.
+2. Auditar el resultado con los 5 chequeos de la verificación final, prestando atención especial al riesgo #1 (cara/figura inventada dentro del visor), que es el modo de falla más probable de este caso, y al chequeo 3 (que el palo haya desaparecido de punta a punta).
+3. Subir la imagen original como adjunto real para versionarla en `imagenes-bob-esponja/` (o en una carpeta propia de este caso) — hoy solo está descrita en texto.
 
 ---
 
 **Última actualización:** 2026-07-29 · primer registro del caso. Deja lección nueva para el checklist Tipo A de `orquestacion-agentes-paralelos.md`: **hacer transparente algo opaco no es un cambio de color, es revelar contenido que no existe en la imagen de partida — cuando una edición destapa una zona hay que DECLARAR EN POSITIVO qué se ve debajo, no alcanza con prohibir lo que no debe aparecer.**
+
+**2026-07-29 (segunda pasada — respuesta del usuario) —** quedó **confirmado qué es "el palo"**: *"el palo es lo que se ve dentro del visor del casco."* Se **descartó** la lectura de la línea vertical punteada de maquetación —que ahora queda explícitamente en la lista de lo que **no se toca**— y se **reescribió el `CAMBIO 2`**: lo que hay que eliminar es un **objeto con forma de vara / palo que se ve DENTRO del visor**. El caso sale de 🟡 y de 🔴 bloqueado: el prompt queda definitivo. **Lo interesante es cómo se resolvió:** el `CAMBIO 2` **no se trató por separado del `CAMBIO 1`**, porque los dos ocurren en la misma zona — el bloque `QUÉ SE VE A TRAVÉS DEL VISOR` ya declaraba en positivo que ahí va **interior de casco vacío y nada más**, así que el palo es **una de las cosas que esa declaración ya excluía**. Se lo sumó a la lista de prohibiciones de esa zona, junto a cara / cabeza / persona / maniquí, y los dos cambios quedaron integrados en una sola instrucción. **Hallazgo de método:** la ambigüedad del pedido **se resolvió sola al integrar los dos cambios** — un objeto que no se sabía identificar quedó excluido sin necesidad de nombrarlo, porque la zona estaba declarada en positivo. Es un argumento a favor de **declarar el contenido de una zona en positivo antes que ir prohibiendo objeto por objeto**, y **no se registra como lección nueva** porque el ítem de transparencia de este mismo archivo ya lo cubre: se referencia como un beneficio adicional de esa misma regla, que no se había anticipado.
