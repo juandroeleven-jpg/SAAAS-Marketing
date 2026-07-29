@@ -30,6 +30,7 @@
 | 26 | [Casco retro/redondo — goma del borde inferior a negro](simulaciones-cc/simulacion-26-casco-retro-goma-negra.md) | Etapa 1 — Ilustración | 🔴 pendientes de generar (2 coloways) — primer molde de casco retro/redondo del catálogo |
 | 27 | [Casco blanco glossy con detalles tostados — goma del borde inferior a negro](simulaciones-cc/simulacion-27-casco-blanco-glossy-goma-negra.md) | Etapa 1 — Ilustración | 🔴 pendiente de generar — primer caso donde se aplica la regla general de goma del borde inferior a negro |
 | 28 | [Banner de marca "Diseñado para superar tus límites"](simulaciones-cc/simulacion-28-banner-superar-limites.md) | Etapa 1 — Ilustración | 🔴 pendiente de generar — mejora de calidad/nitidez, Tipo B |
+| 29 | [Casco Teenage Mutant Ninja Turtles — foto lifestyle photoshoot](simulaciones-cc/simulacion-29-tmnt-lifestyle.md) | Etapa 1 — Ilustración | 🔴 pendiente de generar — primer registro de este caso, línea de licencias de marca |
 
 📚 **[Índice maestro de prompts del catálogo (Simulaciones 10-19)](simulaciones-cc/indice-prompts-catalogo.md)** — todos los prompts ya armados en las simulaciones 10 a 19 (incluye las 17, 18 y 19, sin fila propia en esta tabla), organizados por caso con estado y pendientes de confirmación, en un solo lugar.
 
