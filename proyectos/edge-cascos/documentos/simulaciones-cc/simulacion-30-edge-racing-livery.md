@@ -655,10 +655,12 @@ No reemplazar las etiquetas "X40" por trazos rojos genéricos.
 
 **Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría — verificar en especial que la **separación spoiler/carcasa** se vea claramente (borde y pieza elevada distinguibles, panel rojo sin desbordarse sobre el spoiler) y que la **zona superior de la calota** tenga todos los elementos: malla triangular con su extensión e intensidad reales, acentos rojos tipo chevron en las esquinas superiores, líneas grises con todas sus capas y las etiquetas "X40" con forma y detalle.
 
-**Estado:** 🔴 pendientes de generar (los 4 prompts armados hasta ahora). Faltan las 3 imágenes restantes que el usuario va a mandar (probablemente un 3er colorway) para completar el set.
+## Estado general del caso
+
+**Estado:** 🟡 en curso — de los 4 prompts armados hasta ahora, 4 se corrieron y se auditaron: Colorway 1 lateral (⚠️ → Intento 2 ❌ → Intento 3 🔴 pendiente), Colorway 1 trasera (⚠️ → Intento 2 🔴 pendiente), Colorway 2 lateral (✅ **aprobada**, con 3 puntos a verificar con zoom) y Colorway 2 trasera (⚠️ → Intento 2 🔴 pendiente). Faltan las 3 imágenes restantes que el usuario va a mandar (probablemente un 3er colorway) para completar el set.
 
 **Qué hay que hacer:**
-1. Correr los 4 prompts (en sesiones aisladas cada uno) y mandar los resultados para auditoría.
+1. Correr los prompts correctivos pendientes (en sesiones aisladas cada uno) y mandar los resultados para auditoría.
 2. Confirmar si el visor tintado/oscuro es un cambio de diseño intencional de esta línea de carreras o debe quedar transparente como el checkpoint.
 3. Sumar el/los colorway(s) restante(s) cuando lleguen las 3 imágenes pendientes.
 4. Subir las imágenes de referencia (checkpoint + diseños) como adjuntos reales para versionarlas.
