@@ -57,8 +57,8 @@ flowchart TD
 | Material exterior ABS alta resistencia | (vacío — inusual, es la única columna sin dato en esta fila; todas las demás marcas tienen X) |
 | Interior EPS de alta resistencia | (vacío) |
 | Liner desmontable y lavable | X |
-| Cubre barbilla | X (confirmado en captura de excel más completa, ver nota abajo) |
-| Cubre nariz | X (confirmado en captura de excel más completa, ver nota abajo) |
+| Cubre barbilla | (vacío) |
+| Cubre nariz | (vacío) |
 | Emergency Quick Release System (ERS) | (vacío) |
 | Canal para lentes (Glasses Fit System) | X |
 | N° Air Vent System | (vacío) |
@@ -80,8 +80,8 @@ flowchart TD
 | 3 | Sistema de emergencia de liberación rápida (ERS) | Emergency Quick Release System (ERS) | (vacío) | ⚪ SIN DATO |
 | 4 | Liner desmontable y lavable | Liner desmontable y lavable | X | ✅ MATCH |
 | 5 | Sistema de liberación rápida del visor | Quick Visor Release System | (vacío) | ⚪ SIN DATO |
-| 6 | Cubre barbilla | Cubre barbilla (Chin Curtain) | X | ✅ MATCH |
-| 7 | Cubre nariz | Cubre nariz (Anti-Fog Nose Guard) | X | ✅ MATCH |
+| 6 | Cubre barbilla | Cubre barbilla (Chin Curtain) | (vacío) | ⚪ SIN DATO |
+| 7 | Cubre nariz | Cubre nariz (Anti-Fog Nose Guard) | (vacío) | ⚪ SIN DATO |
 | 8 | Diseño modular | Full Face-Flip Up-Open Face-Adventure | OPEN FACE | ❌ MISMATCH |
 | 9 | Con luz LED | Con luz LED | (vacío) | ⚪ SIN DATO |
 | 10 | Canal para lentes | Canal para lentes (Glasses Fit System) | X | ✅ MATCH |
@@ -89,9 +89,9 @@ flowchart TD
 | 12 | Doble visera | Doble visera | (vacío) | ⚪ SIN DATO |
 | 13 | Espacio para Bluetooth | Espacio para Bluetooth | X | ✅ MATCH |
 
-**Veredicto:** 5 MATCH · 1 MISMATCH · 7 SIN DATO. Ninguna de las 7 celdas vacías restantes se interpreta como "no lo tiene" — es información ausente en el excel, no un descarte confirmado.
+**Veredicto:** 3 MATCH · 1 MISMATCH · 9 SIN DATO. Ninguna de las 9 celdas vacías se interpreta como "no lo tiene" — es información ausente en el excel, no un descarte confirmado.
 
-**Actualización:** una captura más completa del mismo excel (columna Hero visible hasta el final, la captura original la tenía cortada en el borde de la pantalla) reveló que "Cubre barbilla" y "Cubre nariz" sí tienen dato confirmado (X) — antes figuraban como SIN DATO por no verse esa parte de la columna. Se corrigen acá de SIN DATO a MATCH. El resto de las celdas vacías (Visera anti scratch, Preparado anti empañante, Con Pinlock, Hebilla micrométrica, Con luz LED, Doble visera, ERS, N° Air Vent, Estilo de casco, Peso, Quick Visor Release System, Material ABS, Interior EPS, Con maletín de lujo) se re-chequearon contra la misma captura y siguen sin verse con dato — pueden seguir vacías en el excel real, o estar fuera del borde visible; recomendado confirmar con una captura que muestre la columna Hero completa sin cortar antes de asumir que son SIN DATO definitivo.
+**⚠️ Corrección de una lectura errónea (registrada a propósito, para no repetirla):** en un momento de esta sesión se marcaron "Cubre barbilla" y "Cubre nariz" como X confirmado para Hero, a partir de una captura de excel de baja resolución donde la columna Hero quedaba cerca del borde. Una captura posterior, más clara y completa, mostró que **ambas celdas están vacías para Hero** — la lectura anterior fue un error de interpretación visual, no un dato nuevo. Se revierte a SIN DATO y el veredicto vuelve a 3 MATCH · 1 MISMATCH · 9 SIN DATO. **Lección de método:** cuando un dato del excel se lee de una captura de pantalla (no del archivo original), y sobre todo cuando la columna está cerca del borde o en baja resolución, el dato tiene que marcarse como provisorio hasta confirmarlo con una segunda captura nítida — nunca escribirlo directo como confirmado. La columna Hero tiene exactamente **5 celdas con X**: Kit de mecanismo visor, Hebilla doble D, Espacio para Bluetooth, Liner desmontable y lavable, y Canal para lentes. Todo el resto está vacío.
 
 ### Hallazgos estructurales (no son solo discrepancias de dato)
 
@@ -106,8 +106,8 @@ flowchart TD
 **Conclusión: ninguno de los dos prompts sirve tal cual** (a diferencia de Vortex, donde sí servían sin cambios).
 
 **Prompt A — tarjeta HOMOLOGACIÓN (6 ítems originales: visera anti scratch / ERS / liner / liberación rápida visor / cubre barbilla / cubre nariz):**
-- Ahora **3 de 6** quedan confirmados por el excel: *Liner desmontable y lavable, Cubre barbilla, Cubre nariz* (las 2 últimas se sumaron con la captura de excel más completa, ver nota de actualización arriba).
-- Los otros 3 (Visera anti scratch, Preparado para anti empañante/ERS, Sistema de liberación rápida del visor) siguen sin dato — se pueden generar una tarjeta reducida de 3 ítems (mismo criterio que ya se usó para el Prompt B, reducido de 6 a 4), o esperar a que el fabricante complete el excel para armar la de 6 completa.
+- Solo **1 de 6** queda confirmado por el excel: *Liner desmontable y lavable*. (Corrección: "Cubre barbilla" y "Cubre nariz" habían sido marcados como confirmados por una lectura errónea de una captura de baja resolución — ver la nota de corrección arriba. Están vacíos para Hero.)
+- Los otros 5 (Visera anti scratch, ERS, Sistema de liberación rápida del visor, Cubre barbilla, Cubre nariz) siguen sin dato. **Con un solo ítem confirmado no hay tarjeta posible** — el Prompt A vuelve a quedar 🔴 bloqueado hasta que el fabricante complete el excel. La versión de 3 ítems que se armó más abajo quedó basada en el dato erróneo y NO debe correrse tal cual.
 
 **Prompt B — grid 2x3 de íconos (6 ítems originales: canal para lentes / hebilla micrométrica / bluetooth / kit mecanismo visor / material ABS / interior EPS):**
 - **3 de 6** quedan confirmados tal cual: *Canal para lentes, Espacio para Bluetooth, Kit de mecanismo visor*.
@@ -115,17 +115,17 @@ flowchart TD
 - *Material exterior ABS* e *Interior EPS* quedan sin dato — no hay más ítems confirmados en el excel para completar el grid a 6.
 - Resultado: **el grid B solo se puede armar hoy con 4 ítems confirmados** (Canal para lentes, Bluetooth, Kit de mecanismo visor, Hebilla doble D). Faltan 2 para llegar a 6.
 
-### Estado: ⚠️ Parcialmente desbloqueado — se pueden generar versiones reducidas de los 2 prompts, la versión completa de 6 ítems sigue esperando datos del fabricante
+### Estado: 🔴 Prompt A bloqueado (1 solo ítem confirmado) · ⚠️ Prompt B generable en versión reducida de 4 ítems
 
 **Qué falló:** "Diseño modular" contradice el tipo de casco confirmado (open face); "hebilla micrométrica" probablemente sea el tipo de hebilla equivocado (el excel confirma doble D).
 
 **Qué hay que hacer:**
-1. Completar con el fabricante las 7 celdas restantes "sin dato" del excel para Hero (ver lista abajo) antes de poder armar las versiones completas de 6 ítems.
+1. Completar con el fabricante las 9 celdas "sin dato" del excel para Hero antes de poder armar la tarjeta de homologación — hoy solo hay 1 ítem confirmado de los 6 que necesita.
 2. Resolver explícitamente "diseño modular" vs. "open face" en el excel maestro — no es un vacío, es una contradicción activa.
 3. Confirmar qué va en el rectángulo negro de la ficha (mismo pendiente que Vortex).
-4. Mientras tanto, usar las versiones reducidas de abajo (Prompt A con 3/6, Prompt B con 4/6) si se necesita generar algo ya.
+4. Mientras tanto, solo el Prompt B (4/6 ítems confirmados) es generable. El Prompt A no.
 
-## Prompts del catálogo (Agente Generador) — A reducido a 3 ítems, B reducido a 4 ítems
+## Prompts del catálogo (Agente Generador) — A bloqueado, B reducido a 4 ítems
 
 **Prompt A — datos que hacen falta pedirle al fabricante** para completar la tarjeta a 6 (celdas todavía vacías en el excel, columna Hero, bloque de homologación):
 1. Visera anti scratch — ¿el visor tiene tratamiento anti-rayado?
@@ -133,7 +133,9 @@ flowchart TD
 3. Sistema de emergencia de liberación rápida (ERS) — ¿el liner tiene ERS?
 4. Sistema de liberación rápida del visor — ¿el mecanismo permite desmontaje rápido sin herramientas?
 
-<details><summary>Prompt A — Homologación Hero (3 ítems confirmados, versión reducida — NO 6)</summary>
+<details><summary>⚠️ OBSOLETO — Prompt A de 3 ítems (armado sobre un dato erróneo, NO usar)</summary>
+
+**No correr este prompt.** Se armó cuando "Cubre barbilla" y "Cubre nariz" figuraban por error como confirmados para Hero. Con el dato corregido, solo *Liner desmontable y lavable* está confirmado, así que esta tarjeta de 3 ítems afirmaría 2 features sin respaldo. Se conserva únicamente como registro del error.
 
 ```
 Diseñá una tarjeta de HOMOLOGACIÓN para el casco EDGEPRO HERO (open
@@ -683,4 +685,4 @@ lograrse únicamente a partir de este texto.
 
 ---
 
-**Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación + adaptación de prompts), corridos en esta sesión a pedido explícito de auditar el tercer caso del catálogo (Hero). Sub-caso de foto lifestyle: intento 1 auditado con 4 defectos (formato, ángulo, degradé de color, forma de ventilación), intento 2 con prompt corregido, intento 4 nocturno confirmado por el usuario como muy bueno, intento 5 variante diurna del mismo prompt. Actualización posterior: una captura de excel más completa confirmó "Cubre barbilla" y "Cubre nariz" para Hero (antes SIN DATO por columna cortada en la captura original) — caso parcialmente desbloqueado, Prompt A reducido a 3/6 ítems agregado con la estructura de 3 bloques aprendida en Stellar. Nueva actualización: el Prompt B (grid de íconos, 4 ítems) se corrió y falló — salió un grid de 6 celdas (2x3) con "Kit de mecanismo visor" y "Hebilla doble D" duplicados con ícono distinto en cada repetición, a pesar de la advertencia explícita del prompt. Se documentó como Intento 1 y se agregó el Intento 2 con el prompt reforzado, nombrando explícitamente los 2 ítems que se duplicaron, pendiente de correr.
+**Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación + adaptación de prompts), corridos en esta sesión a pedido explícito de auditar el tercer caso del catálogo (Hero). Sub-caso de foto lifestyle: intento 1 auditado con 4 defectos (formato, ángulo, degradé de color, forma de ventilación), intento 2 con prompt corregido, intento 4 nocturno confirmado por el usuario como muy bueno, intento 5 variante diurna del mismo prompt. Corrección posterior: una lectura errónea de una captura de excel de baja resolución había marcado "Cubre barbilla" y "Cubre nariz" como confirmados para Hero; una captura nítida posterior mostró que ambas celdas están vacías — se revirtió a SIN DATO (veredicto de vuelta en 3 MATCH · 1 MISMATCH · 9 SIN DATO), el Prompt A vuelve a quedar bloqueado y su versión de 3 ítems quedó marcada como obsoleta. Nueva actualización: el Prompt B (grid de íconos, 4 ítems) se corrió y falló — salió un grid de 6 celdas (2x3) con "Kit de mecanismo visor" y "Hebilla doble D" duplicados con ícono distinto en cada repetición, a pesar de la advertencia explícita del prompt. Se documentó como Intento 1 y se agregó el Intento 2 con el prompt reforzado, nombrando explícitamente los 2 ítems que se duplicaron, pendiente de correr.

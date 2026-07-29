@@ -32,7 +32,7 @@ Todo lo que quedó abierto esperando respuesta del usuario o del fabricante, jun
 10. Confirmar si "FNVSS 510" (agregado en el bloque de certificación de la ficha Vortex) tiene respaldo en alguna fuente — el excel nunca escribe ese número, solo "DOT & ECE 22.06".
 
 ### Hero — [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md)
-11. Completar con el fabricante las 7 celdas "sin dato" restantes del excel para Hero (bajó de 9 a 7: "Cubre barbilla" y "Cubre nariz" se confirmaron con una captura de excel más completa) antes de generar la versión completa de 6 ítems.
+11. Completar con el fabricante las 9 celdas "sin dato" del excel para Hero antes de generar la tarjeta de homologación. (Nota: durante la sesión se creyó por un momento que "Cubre barbilla" y "Cubre nariz" estaban confirmadas, por una lectura errónea de una captura de baja resolución; una captura nítida posterior mostró que están vacías — ver la corrección en el archivo del caso.)
 12. Resolver "Diseño modular" vs. "Open Face" confirmado en el excel — son categorías excluyentes, no solo falta de dato.
 13. Resolver el tipo de hebilla: la ficha dice "micrométrica", el excel confirma "doble D" — son piezas físicas distintas.
 14. Confirmar qué va en el rectángulo negro de la ficha Hero (mismo patrón que Vortex).
@@ -93,14 +93,14 @@ Todo lo que quedó abierto esperando respuesta del usuario o del fabricante, jun
 | Foto lifestyle — Intento 1 (mujer, campera blanca "STREET", perfil 90°) | Foto lifestyle | ⚠️ con reintento pendiente — casco salió con mentonera más alargada/puntiaguda que el real; superado por el Intento 2 | [`simulacion-11-vortex-verificacion.md`](simulacion-11-vortex-verificacion.md), sección `## Sub-caso — Foto lifestyle inspirada`, subsección `### Intento 1 — resultado auditado` |
 | Foto lifestyle — Intento 2 (mismo prompt + bloqueo de proporción de mentonera) | Foto lifestyle | ✅ listo para usar — corrige el defecto del Intento 1, todavía no corrido | [`simulacion-11-vortex-verificacion.md`](simulacion-11-vortex-verificacion.md), sección `## Sub-caso — Foto lifestyle inspirada`, subsección `### Intento 2 — prompt corregido con bloqueo de proporción de mentonera` |
 
-### Hero (Simulación 12) — Tipo C, ficha vs. excel (parcialmente desbloqueada) + foto lifestyle
+### Hero (Simulación 12) — Tipo C, ficha vs. excel (Prompt A bloqueado, B reducido) + foto lifestyle
 [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md)
 
 | Prompt / pieza | Tipo de pieza | Estado | Ubicación |
 |---|---|---|---|
-| Prompt A — Tarjeta HOMOLOGACIÓN, versión reducida 3 ítems (no 6) | Homologación | ✅ listo para usar — todavía no corrido — 3 de 6 ítems confirmados (Liner desmontable y lavable, Cubre barbilla, Cubre nariz; estos 2 últimos se desbloquearon con una captura de excel más completa). Los otros 3 (Visera anti scratch, ERS, Sistema de liberación rápida del visor) siguen sin dato | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `## Prompts del catálogo (Agente Generador) — A reducido a 3 ítems, B reducido a 4 ítems` |
+| Prompt A — Tarjeta HOMOLOGACIÓN | Homologación | 🔴 bloqueado — solo 1 de 6 ítems confirmado (Liner desmontable y lavable). La versión de 3 ítems que se llegó a escribir quedó marcada como OBSOLETA: se armó sobre una lectura errónea que daba "Cubre barbilla" y "Cubre nariz" como confirmadas, cuando están vacías para Hero | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `## Prompts del catálogo (Agente Generador) — A bloqueado, B reducido a 4 ítems` |
 | Prompt B — Grid Hero, Intento 2 (corregido, nombra los ítems duplicados) | Grid íconos | ✅ listo para usar — todavía no corrido | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `### Intento 2 — prompt corregido, nombrando los ítems que se duplicaron` |
-| Prompt B — Grid de íconos, versión reducida 2x2 (4 ítems, no 6) | Grid íconos | ⚠️ con reintento pendiente — Intento 1 salió con 6 celdas (2x3) en vez de 4 (2x2), duplicando "Kit de mecanismo visor" y "Hebilla doble D" con ícono distinto en cada repetición; ver Intento 2 arriba con el prompt corregido | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `## Prompts del catálogo (Agente Generador) — A reducido a 3 ítems, B reducido a 4 ítems` |
+| Prompt B — Grid de íconos, versión reducida 2x2 (4 ítems, no 6) | Grid íconos | ⚠️ con reintento pendiente — Intento 1 salió con 6 celdas (2x3) en vez de 4 (2x2), duplicando "Kit de mecanismo visor" y "Hebilla doble D" con ícono distinto en cada repetición; ver Intento 2 arriba con el prompt corregido | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `## Prompts del catálogo (Agente Generador) — A bloqueado, B reducido a 4 ítems` |
 | Foto lifestyle — Intento 1 (contrapicado, inspirado en referencia ajena) | Foto lifestyle | ⚠️ con reintento pendiente — formato vertical en vez de horizontal, ángulo 3/4 en vez de perfil, degradé bronce/dorado inexistente en el casco real, ventilación con forma distinta | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `## Sub-caso — Foto lifestyle inspirada`, subsección `### Intento 1 — resultado auditado` |
 | Foto lifestyle — Intento 2 (perfil lateral, corrige color/ventilación) | Foto lifestyle | ✅ listo para usar — corrige los 4 defectos del Intento 1, todavía no corrido | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `### Intento 2 — prompt corregido` |
 | Foto lifestyle — Intento 3 (nueva referencia de estilo, mood urbano) | Foto lifestyle | ✅ listo para usar — mismo casco, cambia solo la referencia de mood/vestuario tomada | [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md), sección `### Intento 3 — mismo casco, nueva referencia de estilo (moody urbano)` |
@@ -309,7 +309,7 @@ Pieza de marketing/marca (no casco): banner con comilla roja, texto "DISEÑADO P
 |---|---|---|---|---|
 | Kratos | 2 | 1 | 1 | 0 |
 | Vortex | 4 | 2 | 2 | 0 |
-| Hero | 9 | 8 | 1 | 0 |
+| Hero | 9 | 7 | 1 | 1 |
 | Shanghai | 2 | 1 | 0 | 1 |
 | Stellar | 8 | 8 | 0 | 0 |
 | Shift | 2 | 2 | 0 | 0 |
@@ -326,7 +326,7 @@ Pieza de marketing/marca (no casco): banner con comilla roja, texto "DISEÑADO P
 | Casco retro/redondo | 2 | 2 | 0 | 0 |
 | Casco blanco glossy (goma negra) | 1 | 1 | 0 | 0 |
 | Banner "Superar tus límites" | 1 | 1 | 0 | 0 |
-| **Total** | **68** | **54** | **10** | **3** |
+| **Total** | **68** | **53** | **10** | **4** |
 
 ---
 
