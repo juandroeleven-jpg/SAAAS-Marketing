@@ -92,6 +92,8 @@ Todo lo que quedó abierto esperando respuesta del usuario o del fabricante, jun
 | Prompt B — Grid de íconos (confirmado, sin cambios) | Grid íconos | ⚠️ con reintento pendiente — Intento 1: ícono de "Hebilla micrométrica" salió tachado con X roja + 2 etiquetas de texto truncadas ("alta resistencia" faltante) | [`simulacion-11-vortex-verificacion.md`](simulacion-11-vortex-verificacion.md), sección `## Prompts confirmados (sin cambios — ya pasaron la auditoría)` |
 | Foto lifestyle — Intento 1 (mujer, campera blanca "STREET", perfil 90°) | Foto lifestyle | ⚠️ con reintento pendiente — casco salió con mentonera más alargada/puntiaguda que el real; superado por el Intento 2 | [`simulacion-11-vortex-verificacion.md`](simulacion-11-vortex-verificacion.md), sección `## Sub-caso — Foto lifestyle inspirada`, subsección `### Intento 1 — resultado auditado` |
 | Foto lifestyle — Intento 2 (mismo prompt + bloqueo de proporción de mentonera) | Foto lifestyle | ✅ listo para usar — corrige el defecto del Intento 1, todavía no corrido | [`simulacion-11-vortex-verificacion.md`](simulacion-11-vortex-verificacion.md), sección `## Sub-caso — Foto lifestyle inspirada`, subsección `### Intento 2 — prompt corregido con bloqueo de proporción de mentonera` |
+| Prompt A — Homologación Vortex 6/6 (estructura de 3 bloques, corrige las 2 piezas circulantes) | Homologación | ✅ listo para usar — todavía no corrido | [`simulacion-11-vortex-verificacion.md`](simulacion-11-vortex-verificacion.md), sección `## Prompts corregidos para Vortex (12/12 confirmados)` |
+| Prompt B — Grid Vortex 6/6 (2x3, hebilla micrométrica sin tache) | Grid íconos | ✅ listo para usar — todavía no corrido | [`simulacion-11-vortex-verificacion.md`](simulacion-11-vortex-verificacion.md), sección `## Prompts corregidos para Vortex (12/12 confirmados)` |
 
 ### Hero (Simulación 12) — Tipo C, ficha vs. excel (Prompt A bloqueado, B reducido) + foto lifestyle
 [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md)
@@ -308,7 +310,7 @@ Pieza de marketing/marca (no casco): banner con comilla roja, texto "DISEÑADO P
 | Caso | Prompts indexados | ✅ Listo | ⚠️ Con reintento | 🔴 Bloqueado |
 |---|---|---|---|---|
 | Kratos | 2 | 1 | 1 | 0 |
-| Vortex | 4 | 2 | 2 | 0 |
+| Vortex | 6 | 4 | 2 | 0 |
 | Hero | 9 | 7 | 1 | 1 |
 | Shanghai | 2 | 1 | 0 | 1 |
 | Stellar | 8 | 8 | 0 | 0 |
@@ -326,7 +328,7 @@ Pieza de marketing/marca (no casco): banner con comilla roja, texto "DISEÑADO P
 | Casco retro/redondo | 2 | 2 | 0 | 0 |
 | Casco blanco glossy (goma negra) | 1 | 1 | 0 | 0 |
 | Banner "Superar tus límites" | 1 | 1 | 0 | 0 |
-| **Total** | **68** | **53** | **10** | **4** |
+| **Total** | **70** | **55** | **10** | **4** |
 
 ---
 

@@ -325,6 +325,221 @@ manda sobre cualquier otro detalle físico del casco.
 
 **Qué hay que hacer:** correr el prompt en una sesión de generación aislada (no reusar el hilo de otro caso, ver hallazgo de contaminación cruzada más arriba) y mandar el resultado para auditoría — prestar especial atención a la proporción de la mentonera esta vez.
 
+## Auditoría de 2 piezas de ficha circulantes atribuidas a Vortex
+
+El usuario mandó **2 piezas reales de ficha** que pueden estar circulando como si fueran de Vortex, y pidió los prompts corregidos para rehacerlas específicamente para este modelo. Ambas se cruzaron contra la columna Vortex del excel maestro (la misma transcripción del bloque de arriba). Ninguna de las dos es la ficha correcta de Vortex, pero **la Pieza 2 está a un solo ítem de serlo**.
+
+Recordatorio de la base contra la que se audita — **features confirmadas con X para Vortex (12)**: Kit de mecanismo visor, Visera anti scratch, Hebilla micrométrica, Espacio para Bluetooth, Material exterior ABS alta resistencia, Interior EPS de alta resistencia, Liner desmontable y lavable, Cubre barbilla, Cubre nariz, Emergency Quick Release System (ERS), Canal para lentes, Quick Visor Release System. Empaque confirmado: Master Box, Inner Box. Otros datos: N° Air Vent System = 8, Estilo de casco = MODERNO, Certificación = DOT & ECE 22.06, Tipo = FULL FACE, Marca = EDGEPRO.
+**N/A confirmados (no se pueden reclamar):** Con luz LED, Doble visera, Preparado para anti empañante, Con Pinlock, Hebilla doble D, Con maletín de lujo.
+
+### Pieza 1 — encabezado "DOT / FNVSS 510", 7 ítems + grid de 6 íconos
+
+Contenido: bloque de homologación de **7 ítems** (Visera anti scratch, Preparado para anti empañante, Sistema de emergencia de liberación rápida, Liner desmontable y lavable, Sistema de liberación rápida del visor, Cubre barbilla, Cubre nariz) + grid de 6 íconos (Diseño modular, Con luz LED, Canal para lentes, Hebilla micrométrica —con una X roja tachándola—, Doble visera, Espacio para Bluetooth).
+
+**Resultado del cruce: 9 MATCH / 4 MISMATCH (9 de 13).**
+
+| # | Claim de la Pieza 1 | Fila del excel usada | Valor Vortex en excel | Resultado |
+|---|---|---|---|---|
+| P1-A1 | Visera anti scratch | Visera anti scratch | X | ✅ MATCH |
+| P1-A2 | Preparado para anti empañante | Preparado para anti empañante | **N/A** | ❌ MISMATCH |
+| P1-A3 | Sistema de emergencia de liberación rápida | Emergency Quick Release System (ERS) | X | ✅ MATCH |
+| P1-A4 | Liner desmontable y lavable | Liner desmontable y lavable | X | ✅ MATCH |
+| P1-A5 | Sistema de liberación rápida del visor | Quick Visor Release System | X | ✅ MATCH |
+| P1-A6 | Cubre barbilla | Cubre barbilla | X | ✅ MATCH |
+| P1-A7 | Cubre nariz | Cubre nariz | X | ✅ MATCH |
+| P1-B1 | Diseño modular | Full Face-Flip Up-Open Face-Adventure | **FULL FACE** | ❌ MISMATCH |
+| P1-B2 | Con luz LED | Con luz LED | **N/A** | ❌ MISMATCH |
+| P1-B3 | Canal para lentes | Canal para lentes (Glasses Fit System) | X | ✅ MATCH |
+| P1-B4 | Hebilla micrométrica (ícono tachado con X roja) | Hebilla micrométrica | X | ✅ MATCH de dato / ⚠️ tache incorrecto |
+| P1-B5 | Doble visera | Doble visera | **N/A** | ❌ MISMATCH |
+| P1-B6 | Espacio para Bluetooth | Espacio para Bluetooth | X | ✅ MATCH |
+
+**Problema de certificación:** el encabezado dice **"DOT / FNVSS 510"**, cuando el excel dice **"DOT & ECE 22.06"** para Vortex. No es solo un número agregado sin respaldo (como ya se señaló más arriba en este mismo archivo): acá directamente **falta el "& ECE 22.06"** confirmado en el excel — se omite una certificación real y se muestra un número que el excel nunca escribe.
+
+**Ícono tachado incorrecto:** el ícono de **hebilla micrométrica aparece tachado con una X roja**, o sea comunicando "no disponible". Para Vortex esa feature **SÍ está confirmada con X en el excel** — el tache es incorrecto y comunica lo opuesto al dato real. Es exactamente el mismo defecto que ya se documentó en el Intento 1 del Prompt B más arriba, lo que refuerza que viene de la plantilla y no de una generación puntual.
+
+### Pieza 2 — encabezado "DOT / DOT & ECE 22.06", 6 ítems + grid de 6 íconos
+
+Contenido: bloque de homologación de **6 ítems** (Visera anti scratch, Preparado para anti empañante, Sistema de emergencia de liberación rápida (ERS), Liner desmontable y lavable, Cubre barbilla, Cubre nariz) + grid de 6 íconos (Canal para lentes, Hebilla micrométrica, Espacio para Bluetooth, Kit de mecanismo visor, Material exterior ABS alta resistencia, Interior EPS de alta resistencia).
+
+**Resultado del cruce: 11 MATCH / 1 MISMATCH (11 de 12).**
+
+| # | Claim de la Pieza 2 | Fila del excel usada | Valor Vortex en excel | Resultado |
+|---|---|---|---|---|
+| P2-A1 | Visera anti scratch | Visera anti scratch | X | ✅ MATCH |
+| P2-A2 | Preparado para anti empañante | Preparado para anti empañante | **N/A** | ❌ MISMATCH (único) |
+| P2-A3 | Sistema de emergencia de liberación rápida (ERS) | Emergency Quick Release System (ERS) | X | ✅ MATCH |
+| P2-A4 | Liner desmontable y lavable | Liner desmontable y lavable | X | ✅ MATCH |
+| P2-A5 | Cubre barbilla | Cubre barbilla | X | ✅ MATCH |
+| P2-A6 | Cubre nariz | Cubre nariz | X | ✅ MATCH |
+| P2-B1 | Canal para lentes | Canal para lentes (Glasses Fit System) | X | ✅ MATCH |
+| P2-B2 | Hebilla micrométrica | Hebilla micrométrica | X | ✅ MATCH |
+| P2-B3 | Espacio para Bluetooth | Espacio para Bluetooth | X | ✅ MATCH |
+| P2-B4 | Kit de mecanismo visor | Kit de mecanismo visor | X | ✅ MATCH |
+| P2-B5 | Material exterior ABS alta resistencia | Material exterior ABS alta resistencia | X | ✅ MATCH |
+| P2-B6 | Interior EPS de alta resistencia | Interior EPS de alta resistencia | X | ✅ MATCH |
+
+**Certificación:** el encabezado dice **"DOT & ECE 22.06"** — coincide exactamente con el excel. Acá **sí es correcta**, a diferencia de la Pieza 1.
+
+**Grid:** el grid de 6 íconos de la Pieza 2 es **100% válido para Vortex, sin ningún cambio** — los 6 ítems están confirmados con X y ninguno duplica un ítem del bloque de homologación.
+
+### Comparación de las 2 piezas
+
+| | Pieza 1 | Pieza 2 |
+|---|---|---|
+| Ítems auditados | 13 (7 homologación + 6 grid) | 12 (6 homologación + 6 grid) |
+| MATCH | 9 | 11 |
+| MISMATCH | 4 | 1 |
+| Mismatches concretos | Preparado para anti empañante (N/A), Diseño modular (Vortex es FULL FACE), Con luz LED (N/A), Doble visera (N/A) | Preparado para anti empañante (N/A) |
+| Certificación | ❌ "DOT FNVSS 510" — falta "& ECE 22.06" | ✅ "DOT & ECE 22.06", correcta |
+| Ícono tachado | ⚠️ Hebilla micrométrica con X roja, siendo feature confirmada | — sin taches |
+| Grid utilizable tal cual | ❌ no (3 de 6 ítems inválidos) | ✅ sí, 6/6 |
+
+### Conclusión
+
+**Ninguna de las 2 piezas es la ficha correcta de Vortex.** La Pieza 1 acumula 4 claims sin respaldo, una certificación incompleta y un ícono tachado que contradice el excel — no es recuperable con un retoque puntual. La Pieza 2, en cambio, **está a un solo ítem de ser correcta**: su grid ya es 6/6 y su certificación es la buena; el único problema es "Preparado para anti empañante" en el bloque de homologación.
+
+**La corrección:** reemplazar "Preparado para anti empañante" por **"Sistema de liberación rápida del visor"** (Quick Visor Release System), que para Vortex **sí está confirmado con X** y **no está usado en el grid** (por lo que no genera duplicado). Con ese único cambio la tarjeta de homologación queda **6/6 confirmados** y el grid **6/6 confirmados**: **12 de 12, sin ningún claim sin respaldo**.
+
+**Nota interesante a registrar:** esa lista de 6 ítems corregida **coincide exactamente con la ficha de Vortex ya transcrita y auditada al principio de este mismo archivo como 12/12**. O sea: la versión correcta de la ficha Vortex **ya existía y ya estaba aprobada acá**, y estas 2 piezas nuevas son **variantes de plantilla que se desviaron de ella** — la Pieza 1 bastante (4 claims), la Pieza 2 apenas (1 claim). Refuerza la hipótesis de que el problema es de reciclado de plantilla entre modelos, no de falta de datos.
+
 ---
 
-**Última actualización:** 2026-07-28 · verificación directa (sin subagente auditor separado, por pedido de velocidad) + Agente Generador confirmando los 2 prompts sin cambios, a pedido explícito de auditar el segundo caso del catálogo (Vortex). Sub-caso de foto lifestyle: intento 1 auditado (mentonera alargada), intento 2 con proporción bloqueada explícitamente.
+## Prompts corregidos para Vortex (12/12 confirmados)
+
+<details><summary>Prompt A — Tarjeta de HOMOLOGACIÓN Vortex (6/6 confirmados, estructura de 3 bloques)</summary>
+
+```
+Diseñá una tarjeta de HOMOLOGACIÓN para el casco EDGEPRO VORTEX,
+EXACTAMENTE con la misma forma, estructura y tamaño que la imagen de
+referencia adjunta — el lienzo final tiene que tener el mismo ancho y
+alto en píxeles que la referencia (formato vertical angosto), sin
+recortar ni estirar ni cambiar la proporción.
+
+CRÍTICO — ESTRUCTURA DE 3 BLOQUES, igual que la referencia (un intento
+anterior en otro caso del catálogo falló acá por describir todo como
+una sola línea de texto — no lo repitas, tiene que ser exactamente
+esta estructura de 3 partes apiladas):
+
+BLOQUE 1 — Título (franja angosta arriba, fondo gris claro):
+- Texto "HOMOLOGACIÓN" en mayúsculas, negro, bold, centrado. Nada más
+  en este bloque.
+
+BLOQUE 2 — Banner negro (rectángulo sólido negro, ancho completo del
+lienzo, ocupa aproximadamente el 20-25% del alto total de la tarjeta):
+- Texto "DOT" en letras BLANCAS enormes, bold, centrado, ocupando la
+  mayor parte del banner (como una insignia/logo, letras muy grandes).
+- Debajo de "DOT", en el mismo banner negro, texto blanco más chico:
+  "& ECE 22.06" (usar exactamente este texto — NO "FNVSS 510").
+
+BLOQUE 3 — Lista de ítems (zona gris clara, el resto del alto de la
+tarjeta, debajo del banner negro):
+Lista de EXACTAMENTE 6 ítems, en este orden, cada uno en mayúsculas,
+negro, bold, centrado, separados por una línea horizontal fina gris
+entre cada ítem:
+1. VISERA ANTI SCRATCH
+2. SISTEMA DE EMERGENCIA DE LIBERACIÓN RÁPIDA (ERS)
+3. LINER DESMONTABLE Y LAVABLE
+4. SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR
+5. CUBRE BARBILLA
+6. CUBRE NARIZ
+
+CRÍTICO — ESPACIADO UNIFORME (defecto real detectado en intentos
+anteriores del catálogo, no lo repitas): el espacio vertical entre
+cada uno de los 6 ítems del Bloque 3 debe ser EXACTAMENTE IGUAL entre
+todos los pares consecutivos. Distribuí la zona gris completa de forma
+pareja entre los 6 ítems, sin huecos irregulares.
+
+CRÍTICO — TEXTO COMPLETO: los 6 ítems deben tener su texto visible y
+legible, ninguno puede quedar en blanco, cortado ni con solo la línea
+separadora sin texto arriba.
+
+PROHIBIDO ABSOLUTO:
+- NO incluir "Preparado para anti empañante" — N/A para Vortex, es el
+  único mismatch de la pieza de ficha que circula hoy; su lugar lo
+  ocupa "SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR".
+- No mostrar "DOT FNVSS 510" — la certificación correcta es "DOT & ECE
+  22.06", repartida en el Bloque 2 como se describió arriba.
+- No usar rectángulos negros sólidos como placeholder en ninguna parte
+  de la tarjeta fuera del banner del Bloque 2.
+- No dejar ningún espacio vacío entre ítems más grande que los demás.
+- No agregar un 7° ítem — son exactamente 6.
+- No cambiar la estructura de 3 bloques ni el tamaño/proporción del
+  lienzo respecto a la referencia.
+```
+
+</details>
+
+<details><summary>Prompt B — Grid de íconos Vortex 2x3 (6/6 confirmados)</summary>
+
+```
+Diseñá un grid de íconos 2x3 para el casco EDGEPRO VORTEX, resolución
+4K, mismo aspect ratio y mismas dimensiones en píxeles que la imagen
+de referencia adjunta. Fondo gris claro uniforme, íconos lineales
+rojo/bordo dentro de un octágono, mismo estilo gráfico que la
+referencia.
+
+CRÍTICO — DIMENSIONES Y CONTEO DE CELDAS (hallazgo real del catálogo:
+un generador produjo un grid con filas de más y contenido duplicado —
+prestar máxima atención acá):
+- El grid debe tener EXACTAMENTE 2 columnas x 3 filas = 6 celdas en
+  total. NUNCA 2x4, NUNCA 8 celdas, NUNCA una fila o columna de más.
+- Cada uno de los 6 ítems aparece en UNA sola celda, UNA sola vez — no
+  dupliques ningún ítem para rellenar una fila extra.
+- El lienzo final debe tener EXACTAMENTE el mismo ancho y alto en
+  píxeles que la imagen de referencia.
+- Antes de terminar, contá las celdas: deben ser 6, ni una más ni una
+  menos, ninguna repetida.
+
+LISTA DE ÍTEMS (exactamente 6, en este orden, uno por celda):
+1. CANAL PARA LENTES
+2. HEBILLA MICROMÉTRICA
+3. ESPACIO PARA BLUETOOTH
+4. KIT DE MECANISMO VISOR
+5. MATERIAL EXTERIOR ABS ALTA RESISTENCIA
+6. INTERIOR EPS DE ALTA RESISTENCIA
+
+CRÍTICO — ÍCONO DE HEBILLA MICROMÉTRICA (defecto real observado en una
+de las piezas que circulan hoy): "HEBILLA MICROMÉTRICA" está
+CONFIRMADA con X en el excel para Vortex, así que su ícono va limpio y
+en positivo — debe mostrar únicamente el broche/hebilla, sin ninguna
+marca de tache, X roja, prohibición ni símbolo de exclusión
+superpuesto. Si la imagen de referencia muestra ese ícono con una X
+roja tachándolo, esa marca NO debe pasar al resultado: es un defecto
+de la referencia, no un dato del producto.
+
+CRÍTICO — ÍCONOS NUEVOS, NO RECICLADOS:
+- Diseñá un pictograma propio, específico y correcto para cada uno de
+  los 6 ítems de la lista.
+- No copies el dibujo interno de un ícono de la referencia que
+  corresponda a un ítem distinto del de esta lista.
+- De la referencia tomá SOLO el estilo visual (línea, grosor, color
+  rojo/bordo, octágono, tipografía) — nunca un defecto, una marca de
+  exclusión ni el pictograma de otro ítem.
+
+CRÍTICO — TEXTO COMPLETO: la etiqueta de cada celda debe reproducirse
+COMPLETA, tal cual está escrita en la lista — no la acortes ni le
+quites palabras (ej. "MATERIAL EXTERIOR ABS ALTA RESISTENCIA"
+completo, no "MATERIAL EXTERIOR ABS" solo; "INTERIOR EPS DE ALTA
+RESISTENCIA" completo, no "INTERIOR EPS").
+
+PROHIBIDO ABSOLUTO:
+- NO incluir "Diseño modular" — Vortex es FULL FACE, no modular.
+- NO incluir "Con luz LED" — N/A para Vortex.
+- NO incluir "Doble visera" — N/A para Vortex.
+- NO incluir "Preparado para anti empañante" — N/A para Vortex.
+- No tachar ningún ícono, con ninguna marca, en ninguna celda.
+- No duplicar ítems ni repetir un ícono en dos celdas.
+- No usar rectángulos negros sólidos como placeholder en ninguna parte
+  de la pieza.
+```
+
+</details>
+
+**Estado:** 🔴 pendientes de generar (los 2). Con estos 2 prompts, las 12 features reclamadas quedan todas respaldadas por el excel — es la única combinación 12/12 posible hoy para Vortex.
+
+**Qué hay que hacer:** correr los 2 prompts (en sesiones aisladas, ver el hallazgo de contaminación cruzada del catálogo) y mandar los resultados para auditoría.
+
+---
+
+**Última actualización:** 2026-07-28 · verificación directa (sin subagente auditor separado, por pedido de velocidad) + Agente Generador confirmando los 2 prompts sin cambios, a pedido explícito de auditar el segundo caso del catálogo (Vortex). Sub-caso de foto lifestyle: intento 1 auditado (mentonera alargada), intento 2 con proporción bloqueada explícitamente. Agregadas la auditoría de las 2 piezas de ficha circulantes atribuidas a Vortex (9/13 y 11/12 contra el excel, con el detalle de mismatches, certificación e ícono tachado) y los 2 prompts corregidos 12/12 (tarjeta de homologación con estructura de 3 bloques + grid de íconos 2x3), pendientes de generar.
