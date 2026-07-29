@@ -220,6 +220,28 @@ El usuario mandó la ficha Kratos completa (con logo EDGE, renders, foto lifesty
 
 **Estado: ⚠️ Contenido de texto correcto, pero NO aprobable como versión final** hasta resolver el rectángulo negro, confirmar visualmente el ícono de hebilla micrométrica, y decidir si se incorporan las 4 oportunidades no usadas (especialmente el maletín de lujo).
 
+## ✅ Resultado generado y verificado — Kratos 12/12
+
+Se generó una ficha nueva para Kratos con la lista corregida y el resultado **verifica 12 de 12 contra la columna Kratos del excel**, cerrando de una vez los 4 mismatches y la discrepancia de certificación que arrastraba la ficha original auditada más arriba.
+
+| Bloque | Ítems | Resultado |
+|---|---|---|
+| Homologación (6) | Visera anti scratch · Preparado para anti empañante · ERS · Liner desmontable y lavable · Cubre barbilla · Cubre nariz | 6/6 ✅ |
+| Grid de íconos (6) | Canal para lentes · Hebilla micrométrica · Espacio para Bluetooth · Kit de mecanismo visor · Material exterior ABS alta resistencia · Interior EPS de alta resistencia | 6/6 ✅ |
+| Certificación | "DOT & ECE 22.06" | ✅ corregida (antes "DOT FNVSS 510") |
+
+**Qué se resolvió respecto de la ficha original:**
+- Salió "Diseño modular" — Kratos es FULL FACE.
+- Salió "Con luz LED" — N/A para Kratos.
+- Salió "Doble visera" — N/A para Kratos.
+- Salió "Sistema de liberación rápida del visor" — N/A para Kratos (ese ítem es el que sí corresponde a Vortex).
+- La certificación pasó de "DOT FNVSS 510" a "DOT & ECE 22.06", que es lo que confirma el excel.
+- El ícono de hebilla micrométrica quedó limpio, sin tache — correcto, porque para Kratos esa feature está confirmada con X.
+
+**Hallazgo cruzado:** la ficha correcta de Kratos y la de Vortex se diferencian en **un solo renglón** del bloque de homologación (Kratos lleva "Preparado para anti empañante", Vortex lleva "Sistema de liberación rápida del visor"); el grid de 6 íconos es idéntico para los dos. El detalle completo está en `simulacion-11-vortex-verificacion.md`.
+
+**Sigue pendiente (no es un error de la ficha, es una oportunidad):** Kratos tiene 4 features confirmadas con X en el excel que la ficha nunca comunica — Con Pinlock, Master Box, Inner Box y, sobre todo, **Con maletín de lujo**, que es la de mayor valor comercial.
+
 ---
 
 **Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación) + Agente Generador (prompts corregidos) + auditoría del resultado generado (Intento 1) + re-auditoría súper crítica de la ficha completa corregida (corrida en segundo plano), corridos en esta sesión a pedido explícito de auditar el primer caso del catálogo (Kratos) bajo el pipeline de orquestación en paralelo.

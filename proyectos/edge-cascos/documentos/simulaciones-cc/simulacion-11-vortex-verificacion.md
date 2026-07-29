@@ -540,6 +540,33 @@ PROHIBIDO ABSOLUTO:
 
 **Qué hay que hacer:** correr los 2 prompts (en sesiones aisladas, ver el hallazgo de contaminación cruzada del catálogo) y mandar los resultados para auditoría.
 
+## ✅ Resultado generado y verificado — Vortex 12/12
+
+Se corrieron los 2 prompts corregidos y el resultado **verifica 12 de 12 contra la columna Vortex del excel, sin un solo claim sin respaldo**. Es la primera pieza de todo el catálogo que llega a 12/12 limpio — todas las auditadas antes tenían al menos un mismatch.
+
+| Bloque | Ítems | Resultado |
+|---|---|---|
+| Homologación (6) | Visera anti scratch · Sistema de liberación rápida del visor · ERS · Liner desmontable y lavable · Cubre barbilla · Cubre nariz | 6/6 ✅ |
+| Grid de íconos (6) | Canal para lentes · Hebilla micrométrica · Espacio para Bluetooth · Kit de mecanismo visor · Material exterior ABS alta resistencia · Interior EPS de alta resistencia | 6/6 ✅ |
+| Certificación | "DOT & ECE 22.06" | ✅ exacta |
+
+**Los 3 defectos recurrentes del catálogo tampoco aparecen:** el ícono de hebilla micrométrica salió limpio, sin la X roja que arrastraban otras piezas; los textos largos ("MATERIAL EXTERIOR ABS ALTA RESISTENCIA" e "INTERIOR EPS DE ALTA RESISTENCIA") salieron completos, sin truncar; y no hay ningún rectángulo negro de placeholder — el único bloque negro es el banner de certificación, que corresponde al diseño.
+
+**Pendiente menor (cosmético, no de dato):** el espaciado vertical del bloque de homologación no quedó del todo parejo — los 2 últimos ítems (Cubre barbilla y Cubre nariz) tienen más aire entre sí que los primeros 4. Es el mismo tipo de irregularidad ya documentada en Stellar (`simulacion-14-stellar-verificacion.md`, Intento 1). Se resuelve con una edición puntual de espaciado si se quiere dejar prolijo antes de publicar.
+
+## Hallazgo — la ficha correcta de Kratos y la de Vortex se diferencian en UN solo renglón
+
+Al verificar la misma pieza contra Kratos apareció un dato útil para todo el catálogo: **la única diferencia entre la ficha correcta de Vortex y la correcta de Kratos es el renglón 2 del bloque de homologación.**
+
+| Modelo | Renglón 2 del bloque de homologación | Resultado |
+|---|---|---|
+| **Vortex** | SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR (Quick Visor Release System = X) | 12/12 ✅ |
+| **Kratos** | PREPARADO PARA ANTI EMPAÑANTE (X confirmado) | 12/12 ✅ |
+
+Los dos ítems son mutuamente excluyentes entre estos 2 modelos: "Quick Visor Release System" es X solo para Vortex y Carbex (N/A para Kratos, Stellar, Xpro y Shift), mientras que "Preparado para anti empañante" es X para Kratos, Stellar, Carbex y Shift (N/A para Vortex y Xpro). **El grid de 6 íconos sirve idéntico para ambos** — los 6 ítems son X tanto para Kratos como para Vortex, no hay que tocar nada ahí.
+
+Esto explica de raíz el problema que veníamos viendo en todo el catálogo: la plantilla se comparte entre modelos y ese único renglón se arrastra sin verificar, generando un mismatch distinto en cada modelo. La versión de Kratos con ese renglón corregido también se verificó y da **12/12**, cerrando además los 4 mismatches y la discrepancia de certificación que arrastraba su ficha original (ver `simulacion-10-kratos-verificacion.md`).
+
 ---
 
-**Última actualización:** 2026-07-28 · verificación directa (sin subagente auditor separado, por pedido de velocidad) + Agente Generador confirmando los 2 prompts sin cambios, a pedido explícito de auditar el segundo caso del catálogo (Vortex). Sub-caso de foto lifestyle: intento 1 auditado (mentonera alargada), intento 2 con proporción bloqueada explícitamente. Agregadas la auditoría de las 2 piezas de ficha circulantes atribuidas a Vortex (9/13 y 11/12 contra el excel, con el detalle de mismatches, certificación e ícono tachado) y los 2 prompts corregidos 12/12 (tarjeta de homologación con estructura de 3 bloques + grid de íconos 2x3), pendientes de generar.
+**Última actualización:** 2026-07-28 · verificación directa (sin subagente auditor separado, por pedido de velocidad) + Agente Generador confirmando los 2 prompts sin cambios, a pedido explícito de auditar el segundo caso del catálogo (Vortex). Sub-caso de foto lifestyle: intento 1 auditado (mentonera alargada), intento 2 con proporción bloqueada explícitamente. Agregadas la auditoría de las 2 piezas de ficha circulantes atribuidas a Vortex (9/13 y 11/12 contra el excel, con el detalle de mismatches, certificación e ícono tachado) y los 2 prompts corregidos 12/12 (tarjeta de homologación con estructura de 3 bloques + grid de íconos 2x3). Verificación posterior del resultado real: la pieza generada da 12/12 contra el excel, sin claims sin respaldo, sin ícono tachado, sin textos truncados y sin rectángulo negro — primera pieza del catálogo en lograrlo; queda pendiente solo un ajuste cosmético de espaciado. Se registra además el hallazgo de que la ficha correcta de Vortex y la de Kratos se diferencian en un único renglón del bloque de homologación.
