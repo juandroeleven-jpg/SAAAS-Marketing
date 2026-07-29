@@ -205,6 +205,88 @@ distinta. No agregar elementos gráficos fuera de la lista de arriba.
 
 </details>
 
+### Intento 1 — Colorway 1 vista trasera, resultado auditado
+
+**Estado:** ⚠️ Casi perfecta — geometría respetada al 100%, 2 defectos de aplicación del gráfico.
+
+**Qué salió bien:** la forma trasera del molde real se respetó por completo — silueta de la calota vista desde atrás, la ventilación superior / extractor, el borde inferior con el acolchado interior negro y las correas visibles quedaron tal cual el checkpoint negro liso. El usuario lo describió como "casi casi perfecta, respetó 100% la geometría". El wordmark "EDGE" salió bien centrado sobre la banda blanca inferior, el sticker "DOT" apareció correctamente y las franjas geométricas rojas, azules y blancas de la banda inferior se aplicaron bien, incluyendo unas pequeñas etiquetas "X40" a los costados.
+
+**Qué falló (2 defectos):**
+1. **La parte superior de la calota quedó en azul liso, sin ninguno de los elementos gráficos de la ilustración.** Toda la zona alta de la calota trasera salió en azul sólido plano, sin nada encima, cuando en la ilustración de diseño de referencia esa zona sí lleva diseño — y son tres elementos distintos, ninguno de los cuales se aplicó:
+   - (a) líneas verticales blancas y azul oscuro tipo rayas/chevrones que suben desde la banda inferior hacia la parte alta de la calota;
+   - (b) un patrón de textura fina tipo malla / triángulos entrelazados en blanco sobre los costados superiores;
+   - (c) formas geométricas angulares blancas y azul oscuro en la zona alta.
+2. **La zona inferior quedó incompleta porque el generador confundió el spoiler trasero con la carcasa del casco.** El diseño de la banda inferior no baja lo suficiente y queda cortado: el generador interpretó mal dónde termina el spoiler trasero (la pieza aerodinámica que sobresale) y dónde empieza la carcasa propiamente dicha. En la ilustración de diseño el patrón geométrico de la banda inferior cubre completa la zona baja de la carcasa, incluyendo los laterales inferiores, que en el resultado quedaron sin completar.
+
+**Qué hay que hacer:** reintentar con el prompt corregido (Intento 2, abajo).
+
+### Intento 2 — Colorway 1 vista trasera, calota superior con diseño y zona baja completa
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una imagen de producto del mismo casco full-face de la
+referencia adjunta (molde real, vista trasera), mismo ángulo,
+encuadre y fondo.
+
+REGLA MÁS IMPORTANTE — DOS FUENTES, DOS ROLES QUE NUNCA SE MEZCLAN:
+- La imagen del casco NEGRO LISO vista trasera es la ÚNICA autoridad
+  de FORMA — silueta de la calota desde atrás, borde inferior, tal
+  cual está en esa foto.
+- La imagen de diseño azul/blanco/rojo vista trasera es SOLO fuente
+  de diseño gráfico, nunca de forma.
+
+PASO 1 — FORMA: reproducí exactamente la forma trasera del casco
+negro liso antes de aplicar cualquier gráfico.
+
+PASO 2 — DISEÑO: sobre esa forma ya fijada, aplicá el diseño de
+carreras del colorway azul/blanco/rojo:
+- PARTE SUPERIOR DE LA CALOTA — LLEVA DISEÑO, NO ES AZUL LISO (un
+  intento anterior dejó toda esta zona en azul sólido plano, sin
+  ningún gráfico encima — eso es un ERROR, no lo repitas). El azul es
+  solo la BASE: el diseño va ENCIMA y tiene que CUBRIR la zona
+  superior, no dejarla vacía. Son TRES elementos, todos obligatorios
+  y todos con el mismo nivel de detalle que la ilustración de diseño:
+  (a) Líneas verticales blancas y azul oscuro tipo rayas / chevrones
+      que SUBEN desde la banda inferior hacia la parte alta de la
+      calota, recorriendo la zona superior en toda su altura.
+  (b) Patrón de textura fina tipo malla / triángulos entrelazados en
+      blanco sobre los costados superiores de la calota, con la misma
+      extensión y la misma intensidad que en la ilustración — NO una
+      versión tenue ni reducida a una franja chica.
+  (c) Formas geométricas angulares en blanco y azul oscuro en la zona
+      alta de la calota, con todas sus capas tal como aparecen en la
+      ilustración.
+- ZONA INFERIOR — EL PATRÓN CUBRE COMPLETA LA CARCASA (un intento
+  anterior falló exactamente acá). El spoiler trasero (la pieza
+  aerodinámica que sobresale) y la carcasa del casco son PIEZAS
+  DISTINTAS: no las confundas al decidir hasta dónde llega el diseño.
+  El patrón geométrico de la banda inferior tiene que cubrir COMPLETA
+  la zona baja de la carcasa, incluyendo los LATERALES INFERIORES,
+  sin cortarse ni dejar zonas sin diseño.
+- Banda inferior: patrón geométrico blanco/rojo/azul con franjas tipo
+  chevron.
+- Wordmark "EDGE" en blanco, centrado, sobre la banda inferior.
+- Sticker "DOT" pequeño en la parte más baja, centrado.
+
+CRÍTICO — MISMO ÁNGULO EXACTO que la foto del molde negro liso vista
+trasera.
+
+PROHIBIDO ABSOLUTO: no cambiar la forma ni la silueta trasera del
+molde real. No copiar la forma del casco de la imagen de diseño si es
+distinta. No agregar elementos gráficos fuera de la lista de arriba.
+No dejar la parte superior de la calota en azul liso sin diseño. No
+cortar ni dejar incompleto el patrón de la zona inferior. No
+confundir el spoiler trasero con la carcasa del casco al decidir
+hasta dónde llega el diseño.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría — verificar en especial que la zona superior de la calota tenga el diseño completo (no azul liso) y que el patrón de la banda inferior cubra toda la zona baja sin cortarse.
+
 <details><summary>Prompt — Colorway 2 (rojo/negro/gris), vista lateral</summary>
 
 ```
@@ -294,4 +376,4 @@ distinta. No agregar elementos gráficos fuera de la lista de arriba.
 
 ---
 
-**Última actualización:** 2026-07-28 · primer registro de este caso (livery de carreras EDGE, 2 colorways recibidos, 3 imágenes más en camino) — Tipo A, múltiples vistas. Se corrió el prompt del Colorway 1 vista lateral y el resultado quedó casi impecable (geometría del molde y grueso del livery correctos), con 2 defectos puntuales: la zona superior de la calota salió incompleta/simplificada (malla de triángulos tenue, líneas concéntricas con menos capas, texto chico del marco ausente) y la mentonera salió en gris liso en vez de continuar el patrón geométrico — ambos corregidos en el prompt del Intento 2.
+**Última actualización:** 2026-07-28 · primer registro de este caso (livery de carreras EDGE, 2 colorways recibidos, 3 imágenes más en camino) — Tipo A, múltiples vistas. Se corrió el prompt del Colorway 1 vista lateral y el resultado quedó casi impecable (geometría del molde y grueso del livery correctos), con 2 defectos puntuales: la zona superior de la calota salió incompleta/simplificada (malla de triángulos tenue, líneas concéntricas con menos capas, texto chico del marco ausente) y la mentonera salió en gris liso en vez de continuar el patrón geométrico — ambos corregidos en el prompt del Intento 2. También se corrió el prompt del Colorway 1 vista trasera: geometría del molde respetada al 100% (silueta trasera, extractor, borde inferior con acolchado y correas) y wordmark "EDGE", sticker "DOT" y franjas de la banda inferior correctos, con 2 defectos — la parte superior de la calota quedó en azul liso sin ninguno de los elementos gráficos de la ilustración (rayas/chevrones verticales, malla de triángulos en los costados, formas angulares de la zona alta) y la zona baja quedó incompleta porque el generador confundió el spoiler trasero con la carcasa y cortó el patrón — ambos corregidos en su propio Intento 2.
