@@ -162,13 +162,98 @@ visor.
 
 </details>
 
+**Estado:** ⚠️ Corregido en el Intento 3 — el pedido de "doble visor" del Intento 2 estaba mal, era al revés.
+
+**Qué hay que hacer:** ver Intento 3, abajo.
+
+### Resultado del Intento 2 — auditado: muy buen resultado, pero el pedido de "doble visor" era un error
+
+**Estado:** ✅ El usuario calificó el resultado de "hermoso" — el visor opaco funcionó bien. ❌ Pero la instrucción de "doble visor" que se agregó en este Intento 2 estaba equivocada.
+
+**Corrección del usuario:** el casco real **NO tiene doble visor** — es UN SOLO visor. La instrucción del Intento 2 estaba al revés de lo que hacía falta: en vez de pedir que se agregue un segundo visor, el prompt tiene que decir explícitamente que **NO** hay que agregar un segundo visor por dentro. El visor opaco/negro sigue siendo correcto y hay que mantenerlo — nada se debe ver por dentro del casco.
+
+### Intento 3 — un solo visor (corregido), completamente opaco, sin agregar un segundo visor interno
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una fotografía de producto tipo lifestyle/photoshoot editorial
+en 4K, ultra nítida, formato vertical o 4:5 (consistente con una
+sesión de fotos profesional de estudio).
+
+CRÍTICO — el casco que aparece en la imagen debe ser EXACTAMENTE el
+casco real adjunto como autoridad (checkpoint): full face, negro
+mate, con el diseño gráfico COMPLETO de "Teenage Mutant Ninja
+Turtles" ya aplicado tal cual está en la referencia — los personajes
+ilustrados en blanco/negro/escala de grises sobre la textura tipo
+camuflaje oscuro de la calota, la pieza roja en la mentonera, los
+textos "TEENAGE MUTANT NINJA TURTLES" y "TURTLES" en su tamaño y
+posición exactos. No cambies absolutamente nada del diseño gráfico,
+la geometría, el color ni la textura del casco — es el mismo objeto
+3D exacto, solo cambia la escena alrededor.
+
+CRÍTICO — UN SOLO VISOR, NO DOBLE (un intento anterior agregó por
+error un segundo visor/mecanismo interno — no lo repitas): el casco
+tiene UN ÚNICO visor, sin ningún segundo visor ni mecanismo adicional
+por dentro. No agregues una segunda línea de visor, un visor interno
+abatible ni ningún elemento extra cerca del visor que no esté en la
+foto real del checkpoint.
+
+CRÍTICO — VISOR COMPLETAMENTE OPACO (cambio pedido para esta foto,
+distinto del checkpoint que es transparente): el único visor debe
+verse completamente OPACO y NEGRO — no se debe poder ver absolutamente
+nada por dentro del casco, ni rostro, ni sombra, ni reflejo que deje
+intuir una persona adentro. Tratalo como un visor ahumado/opaco al
+100%, sin ninguna transparencia.
+
+CRÍTICO — MISMO ÁNGULO EXACTO QUE LA FOTO DE REFERENCIA: la persona
+con el casco puesto tiene que estar fotografiada desde EXACTAMENTE el
+mismo ángulo de cámara que la imagen de referencia del casco
+(checkpoint) — mismo punto de vista, misma altura de cámara, mismo
+grado de rotación lateral. NO cambies el ángulo para "mejorar" la
+composición ni para mostrar otro lado del casco.
+
+ESCENA: una persona con el casco puesto, en un set de estudio
+fotográfico tipo sesión de fotos profesional (photoshoot) — fondo con
+HUMO/NIEBLA en tonos BLANCO Y GRIS, difuminado y con volumen,
+iluminación de estudio dramática que recorta la silueta de la persona
+contra el humo de fondo. Encuadre de medio cuerpo o busto, casco bien
+visible y nítido en primer plano.
+
+ILUMINACIÓN: iluminación de estudio controlada (no luz natural
+exterior), con contraluz o luz lateral que hace que el humo se vea
+volumétrico e iluminado, contraste marcado entre el casco nítido y el
+fondo difuminado de humo.
+
+ESTILO FOTOGRÁFICO: ultra realista, como una foto real de campaña
+publicitaria/editorial de producto — profundidad de campo con el
+casco en foco total y el humo de fondo con leve desenfoque,
+composición tipo sesión de fotos de marca, no ilustración ni render
+3D genérico.
+
+Persona modelo: sin rasgos específicos pedidos, casco puesto con el
+diseño de Turtles bien visible, rostro completamente oculto por el
+visor opaco.
+
+PROHIBIDO ABSOLUTO: no cambiar geometría, color, textura ni ningún
+detalle del diseño gráfico de Turtles ya aplicado en el casco real. No
+agregar logos, gráficos ni texto adicional sobre el casco. No usar
+fondo de cielo, playa, ciudad ni ningún entorno que no sea el humo
+blanco/gris de estudio. No cambiar el ángulo de cámara respecto a la
+foto de referencia del casco. No dejar el visor transparente ni dejar
+ver absolutamente nada por dentro. No agregar un segundo visor ni
+ningún mecanismo interno adicional — es un solo visor, punto.
+```
+
+</details>
+
 **Estado:** 🔴 pendiente de generar.
 
 **Qué hay que hacer:**
-1. Correr el prompt y mandar el resultado para auditoría — verificar en especial que el visor quede completamente opaco y que el doble visor esté presente.
+1. Correr el prompt y mandar el resultado para auditoría — verificar que quede UN SOLO visor, completamente opaco, sin nada visible por dentro.
 2. Subir la foto real del casco Turtles como adjunto para versionarla.
 3. Confirmar si este molde es el casco físico real de la marca licenciante o solo una referencia — misma pregunta abierta que en otros casos de esta línea.
 
 ---
 
-**Última actualización:** 2026-07-28 · Intento 2 agregado tras el Intento 1 ("espectacular", sin drift de geometría/diseño) — se pide visor completamente opaco (cambio de estética) y se agrega el sistema de doble visor que faltaba en la descripción — línea de licencias de marca (Marvel/DC/Paramount).
+**Última actualización:** 2026-07-28 · Intento 3 agregado tras corrección del usuario: el casco NO tiene doble visor (el Intento 2 lo había pedido al revés) — se corrige a un solo visor, manteniendo la opacidad total pedida — línea de licencias de marca (Marvel/DC/Paramount).
