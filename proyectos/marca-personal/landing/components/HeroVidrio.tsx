@@ -21,7 +21,7 @@ export default function HeroVidrio() {
   const [listo, setListo] = useState(false);
 
   return (
-    <section className="fondo-claro relative isolate flex min-h-screen items-center overflow-hidden p-3 sm:p-5 lg:p-7">
+    <section className="fondo-claro relative isolate flex min-h-screen items-center overflow-hidden p-4 sm:p-8 lg:p-14 xl:p-20">
       {/* Manchas del FONDO, detras del panel de cristal. Son `radial-gradient`
           sobre un div y no `filter: blur`: el degradado ya nace suave, asi que
           la GPU lo compone como una textura y moverlo no obliga a rasterizar
