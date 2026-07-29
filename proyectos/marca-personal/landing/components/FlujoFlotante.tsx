@@ -450,9 +450,14 @@ const DISTANCIA = 4.0;
 const ANCHO_GRAFO = 3.02;
 
 // En vertical el grafo mide 2.16 de ancho (cuatro salidas separadas 0.72) por
-// 3.28 de alto, mas la etiqueta que cuelga de la ultima esfera. A fov 30 el
-// alto visible es 0.536*d, asi que 7.2 deja 3.86 contra los ~3.6 que ocupa.
-const DISTANCIA_V = 7.2;
+// unos 3.6 de alto contando la etiqueta que cuelga de la ultima esfera.
+//
+// 10.2 y no el 7.2 que lo encuadraba justo: el conjunto se reduce a dos
+// tercios y queda aire alrededor. Se aleja la CAMARA en vez de encoger las
+// esferas porque asi no hay que recalcular separaciones ni tamanios de
+// etiqueta -- el grafo entero se escala igual y las proporciones internas,
+// que estan ajustadas para que las etiquetas no se monten, no cambian.
+const DISTANCIA_V = 10.2;
 const ANCHO_GRAFO_V = 2.86;
 
 function CamaraResponsiva({ vertical }: { vertical: boolean }) {

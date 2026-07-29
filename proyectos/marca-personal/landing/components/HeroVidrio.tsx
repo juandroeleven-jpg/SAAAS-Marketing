@@ -36,7 +36,7 @@ export default function HeroVidrio() {
       {/* El panel de cristal: contiene TODA la portada, como en la referencia.
           `overflow-hidden` para que la mancha irisada se recorte con las
           esquinas redondeadas en vez de desbordar. */}
-      <div className="panel-hero relative mx-auto w-full max-w-[1400px] overflow-hidden rounded-[28px] px-5 py-6 sm:rounded-[36px] sm:px-8 sm:py-9 lg:px-10 lg:py-10">
+      <div className="panel-hero relative mx-auto w-full max-w-[1400px] overflow-hidden rounded-[28px] px-6 py-7 sm:rounded-[36px] sm:px-12 sm:py-11 lg:px-20 lg:py-16">
         <div aria-hidden className="iris pointer-events-none" />
         {/* Barra flotante: marca a la izquierda, accion a la derecha. */}
         <nav className="relative z-10 flex items-center justify-between gap-4 rounded-full bg-white/85 px-5 py-3 shadow-[0_10px_40px_-16px_rgba(15,27,45,0.28)] ring-1 ring-white/70 sm:px-7 sm:py-4">
@@ -57,12 +57,11 @@ export default function HeroVidrio() {
         {/* Dos columnas desde lg. Por debajo el objeto 3D va DESPUES del texto
             en el flujo normal: superpuesto taparia el texto, que es lo primero
             que hay que poder leer en un telefono. */}
-        <div className="relative z-10 mt-9 grid grid-cols-1 items-center gap-8 sm:mt-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.92fr)] lg:gap-4">
+        <div className="relative z-10 mt-10 grid grid-cols-1 items-center gap-8 sm:mt-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.92fr)] lg:gap-4">
           <motion.div
             initial={quieto ? false : { opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: quieto ? 0 : 0.7, ease: "easeOut" }}
-            className="lg:pl-4"
           >
             <span className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-cf-accent ring-1 ring-cf-border">
               <span className="h-2 w-2 rounded-full bg-cf-accent" />
