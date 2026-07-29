@@ -1,0 +1,619 @@
+# Simulación 33 — Boston: verificación ficha de marketing vs. excel maestro de specs (Etapa 3 — Catálogo)
+
+[← Volver al índice de mis pruebas](../mis-pruebas-claude-code.md) · [← Orquestación de agentes en paralelo](../orquestacion-agentes-paralelos.md) · [← Índice maestro de prompts](indice-prompts-catalogo.md) · [🎨 Boston 4.0 — 4 variantes de color (Simulación 21)](simulacion-21-boston-4-colores.md) · [🔎 Boston 4.0 — verificación de la otra columna (Simulación 38)](simulacion-38-boston40-verificacion.md)
+
+Noveno caso del catálogo con pipeline **Tipo C**. Mismo método que [Vortex (Sim. 11)](simulacion-11-vortex-verificacion.md) y [Kratos (Sim. 10)](simulacion-10-kratos-verificacion.md), de donde se copian estructura y vocabulario de los 2 prompts corregidos.
+
+**Este caso es distinto de todos los anteriores en un punto de fondo: no se audita contra la misma hoja del excel.** Ver el bloque `## 🧭 Hallazgo estructural` — es un hallazgo de nivel catálogo, no un detalle de este modelo.
+
+> ⚠️ **Lectura obligatoria antes de usar este archivo — hay una columna "BOSTON 4.0" y NO es la misma que "BOSTON".** Este caso audita la columna **Boston** contra los datos que se transcribieron acá (8 columnas visibles). En paralelo, [`simulacion-38-boston40-verificacion.md`](simulacion-38-boston40-verificacion.md) auditó la columna **Boston 4.0** de la **misma hoja** y confirmó que son **dos columnas distintas que difieren en 5 filas** (certificación, canal para lentes, Quick Visor Release System, N° de ventilaciones y estilo). **Con la misma pieza de ficha, la columna Boston da 11/13 y la columna Boston 4.0 da 13/13.** O sea: la huella digital identifica sin ambigüedad a la **familia Boston** (ver sección 1), pero **de las dos columnas, la que explica la pieza sin ningún mismatch es Boston 4.0**. Todo lo que sigue vale como auditoría de la columna **Boston**; si la pieza es del **Boston 4.0** —lo más probable, porque cierra 13/13— sus 2 mismatches desaparecen y **no hay que reemplazar ningún ítem**: usar los prompts de la Simulación 38. Los dos archivos se dejan separados a propósito, uno por columna, en vez de fusionarlos: **cuál es la ficha vigente de cuál modelo es una pregunta para el usuario, no una que se resuelva desde el excel.**
+
+> 🎨 **Caso hermano, mismo modelo, otro tema:** [`simulacion-21-boston-4-colores.md`](simulacion-21-boston-4-colores.md) trabaja el **Boston 4.0** por el lado de los colorways (Tipo A, geometría intacta: 4 variantes de color de carcasa + tinte de visor). Este archivo (Sim. 33) es la **auditoría de datos** de la ficha de marketing del mismo modelo. Los dos se referencian entre sí y **no se pisan**: uno habla de píxeles del casco, el otro de claims de specs.
+
+---
+
+## 🧭 Hallazgo estructural — la ficha del Boston se audita contra OTRA hoja del excel
+
+Hasta este caso, **todo el catálogo se venía verificando contra una sola tabla**: la de la marca **EDGEPRO** (Stellar, Kratos, Xpro, Vortex, Carbex, Shift, Hero) — casos [10](simulacion-10-kratos-verificacion.md), [11](simulacion-11-vortex-verificacion.md), [12](simulacion-12-hero-verificacion.md), [14](simulacion-14-stellar-verificacion.md), [15](simulacion-15-shift-verificacion.md) y [25](simulacion-25-carbex-verificacion.md).
+
+**El Boston no está en esa tabla.** Pertenece a otra hoja, titulada **"FICHA DE CASCOS"**, de la marca **EDGE** (sin "PRO"), con otros 8 modelos: **Power, Sport, Kova, Monaco, Shanghai, GX7, X5A 2.0, Boston**. Los casos [13 (Shanghai)](simulacion-13-shanghai-verificacion.md) y [16 (Evolution 929)](simulacion-16-evolution929-verificacion.md) ya habían tocado esta hoja y habían dejado escrito "no mezclar las dos fuentes", pero **ninguno de los dos comparó las dos tablas fila por fila**. Acá sí, y la diferencia es mayor de lo que se suponía.
+
+### Las dos hojas NO tienen el mismo set de filas
+
+| Fila | Hoja **EDGEPRO** | Hoja **EDGE** ("FICHA DE CASCOS") | Verificado contra |
+|---|---|---|---|
+| **PRECIO** | ❌ no existe | ✅ **existe** (vacía para Boston) | Transcripciones EDGEPRO de Vortex, Stellar, Shift y Hero: ninguna tiene fila de precio |
+| **KIT DE MECANISMO VISOR** | ✅ existe (X en Vortex, Stellar, Shift, Carbex) | ❌ **no existe** | Ya observado en [Shanghai (Sim. 13)](simulacion-13-shanghai-verificacion.md): *"este tab no tiene fila 'Kit de mecanismo visor'"*. Confirmado ahora también en Boston y en [Evolution 929](simulacion-16-evolution929-verificacion.md) |
+| **CON MALETÍN DE LUJO** | ✅ existe (X en Stellar y Shift, N/A en Vortex) | ❌ **no existe** | Hallazgo nuevo de este caso: ninguna transcripción de la hoja EDGE (Shanghai, Evolution 929, Boston) la tiene |
+| **Certificación** | Uniforme por marca: **"DOT & ECE 22.06"** en todas las columnas | **Una por modelo**: solo "DOT" en Power, Sport, Kova, Monaco y GX7; **"DOT & ECE"** en Shanghai, X5A 2.0 y **Boston** | Transcripciones de las 8 columnas EDGE |
+
+**Detalle fino de la certificación que hay que respetar:** la hoja EDGE **nunca escribe el número "22.06"**. Para Boston la celda dice exactamente **"DOT & ECE"**, no "DOT & ECE 22.06". Copiar la cadena de la hoja EDGEPRO sería inventar un dato — el mismo error de fondo que ya se documentó con "FNVSS 510", que ninguna de las dos hojas escribe nunca.
+
+### Conclusión de proceso (esto es lo importante, no el detalle del Boston)
+
+**La misma plantilla de ficha de marketing se está aplicando a dos líneas de producto con sets de specs distintos.** Los 13 claims de la plantilla genérica se diseñaron sobre un conjunto de filas que solo existe completo en una de las dos hojas. Eso explica de raíz por qué **los mismos claims fallan una y otra vez en modelos distintos**: no es que cada modelo tenga un error propio, es que la pieza afirma cosas que en su hoja ni siquiera son una fila.
+
+Tres consecuencias operativas concretas:
+
+1. **Antes de auditar hay que declarar contra qué hoja se audita.** Auditar el Boston contra la hoja EDGEPRO habría producido un "SIN DATO" falso en PRECIO y un mismatch inexistente por buscar "Kit de mecanismo visor".
+2. **El relleno estándar del grid ya no sirve para los modelos EDGE.** En Vortex, Kratos, Stellar y Shift, la celda que sobraba se completaba con *"Kit de mecanismo visor"* — feature que en la hoja EDGE **no existe como fila**. Es exactamente el callejón sin salida contra el que chocó Shanghai, cuyo grid quedó en 4 de 6 ítems.
+3. **La certificación no se puede heredar por marca.** En EDGEPRO alcanzaba con saber la marca; en EDGE hay que ir columna por columna, porque conviven "DOT" y "DOT & ECE" en la misma hoja.
+
+### 🟡 Punto abierto que deja este hallazgo
+
+La hoja "FICHA DE CASCOS" que se transcribió acá tiene **8 columnas** (Power, Sport, Kova, Monaco, Shanghai, GX7, X5A 2.0, Boston) y **no incluye ni "Evolution 929" ni "Boston 4.0"**. Pero la [Simulación 16](simulacion-16-evolution929-verificacion.md) auditó al Evolution 929 declarando que pertenece al tab EDGE, y la [Simulación 21](simulacion-21-boston-4-colores.md) confirmó por logo real que el modelo comercial se llama **"Boston 4.0"**, no "Boston" a secas.
+
+✅ **Resuelto en parte, la misma jornada:** la auditoría paralela [`simulacion-38-boston40-verificacion.md`](simulacion-38-boston40-verificacion.md) trabajó sobre una captura de la **misma hoja** que **sí incluye la columna "BOSTON 4.0"** (y cuenta **9 modelos**, no 8). O sea que **"Boston" y "Boston 4.0" son dos columnas distintas y coexisten en la misma hoja** — la lectura correcta era "la captura de este caso no mostraba todas las columnas", no "viven en otra hoja". **Sigue abierto** el punto de **Evolution 929**: ninguna de las dos capturas lo muestra como columna de esta hoja, pese a que la Simulación 16 lo audita como tal. No se asume ninguna lectura.
+
+---
+
+## Datos de entrada
+
+<details><summary>Ficha de marketing atribuida al Boston — transcripción de los 2 objetos</summary>
+
+Es **la misma plantilla genérica** que ya apareció en las fichas del [Hero](simulacion-12-hero-verificacion.md) y del [Shift](simulacion-15-shift-verificacion.md), con los mismos **13 claims**.
+
+**Objeto 1 — tarjeta de homologación** (3 bloques: franja de título / banner negro / lista sobre gris claro):
+- Franja de título gris: **"HOMOLOGACÓN"** — con esa falta de ortografía (le falta la **I**).
+- Banner negro: **"DOT"** en grande y debajo **"FNVSS 510"**.
+- Lista de **7 ítems** sobre fondo gris claro:
+  1. VISERA ANTI SCRATCH
+  2. PREPARADO PARA ANTI EMPAÑANTE
+  3. SISTEMA DE EMERGENCIA DE LIBERACIÓN RÁPIDA
+  4. LINER DESMONTABLE Y LAVABLE
+  5. SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR
+  6. CUBRE BARBILLA
+  7. CUBRE NARIZ
+
+**Objeto 2 — grid de íconos 2 columnas x 3 filas = 6 celdas**, íconos lineales rojo/bordo dentro de octágonos:
+- Fila 1: **DISEÑO MODULAR** · **CON LUZ LED**
+- Fila 2: **CANAL PARA LENTES** · **HEBILLA MICROMÉTRICA**
+- Fila 3: **DOBLE VISERA** · **ESPACIO PARA BLUETOOTH**
+- ⚠️ El ícono de **HEBILLA MICROMÉTRICA lleva una X / tache ROJO grande encima** — la pieza afirma en negativo que el casco **NO** la tiene.
+
+</details>
+
+<details><summary>Excel, hoja "FICHA DE CASCOS" (marca EDGE) — columna Boston, transcripción completa</summary>
+
+| Fila | Valor Boston |
+|---|---|
+| Marca | **EDGE** (no EDGEPRO) |
+| Certificación | **DOT & ECE** (sin el "22.06" que sí usa la hoja EDGEPRO) |
+| **Precio** | (vacío) → **SIN DATO** — *fila que solo existe en esta hoja* |
+| Full Face-Flip Up-Open Face-Adventure | **Flip Up** |
+| Con luz LED | **X** ← uno de los 2 únicos modelos del catálogo con esto confirmado (el otro es **Boston 4.0**, ver `simulacion-38`) |
+| Doble visera | X |
+| Mica night vision/PC/etc | (vacío) → **SIN DATO** |
+| Preparado para anti empañante | X |
+| Con Pinlock | N/A |
+| Visera anti scratch | X |
+| Hebilla micrométrica | **X** |
+| Hebilla doble D | N/A |
+| Espacio para Bluetooth | X |
+| Material exterior ABS alta resistencia | X |
+| Interior EPS de alta resistencia | X |
+| Liner desmontable y lavable | X |
+| Cubre barbilla | X |
+| Cubre nariz | X |
+| Emergency Quick Release System (ERS) | X |
+| Canal para lentes (Glasses Fit System) | **N/A** |
+| N° Air Vent System | 4 |
+| Estilo de casco | MODERNO |
+| Peso | (vacío) → **SIN DATO** |
+| **Quick Visor Release System** | **N/A** |
+| Master Box | X |
+| Inner Box-bolsa protectora | X |
+
+*(Esta hoja **no tiene** las filas "Kit de mecanismo visor" ni "Con maletín de lujo", que sí existen en la hoja EDGEPRO — ver el hallazgo estructural.)*
+
+*Recordatorio de método Tipo C: una celda **vacía** es SIN DATO (no se puede confirmar ni descartar); una celda con **N/A** es un **descarte confirmado**. Las tres vacías de esta columna (Precio, Mica night vision, Peso) no son claim de ninguna de las 2 piezas, así que no entran en el conteo.*
+
+</details>
+
+---
+
+## 1. Identificación por huella digital — ¿la ficha es realmente del Boston?
+
+Método: probar los **13 claims de la pieza contra las 8 columnas** de la hoja EDGE y ver cuál explica mejor el contenido. Como es la **plantilla genérica** del catálogo, no se espera que cierre perfecto con ninguna columna — lo que importa es cuál queda mejor y, sobre todo, **qué claim funciona como discriminador**.
+
+### Matriz de los 13 claims contra las 8 columnas EDGE
+
+| # | Claim de la pieza | Power | Sport | Kova | Monaco | Shanghai | GX7 | X5A 2.0 | **Boston** |
+|---|---|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| 1 | Visera anti scratch | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 2 | Preparado para anti empañante | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 3 | Sist. de emergencia de liberación rápida (ERS) | ❌ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ |
+| 4 | Liner desmontable y lavable | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 5 | Sist. de liberación rápida del visor (QVR) | ✅ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| 6 | Cubre barbilla | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 7 | Cubre nariz | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 8 | **Diseño modular** (fila de tipo) | ❌ FF | ❌ FF | ❌ FF | ❌ FF | ❌ FF | ✅ Flip Up | ✅ Flip Up | ✅ **Flip Up** |
+| 9 | **Con luz LED** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ **X** |
+| 10 | Canal para lentes | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ |
+| 11 | Hebilla micrométrica | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 12 | Doble visera | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ | ✅ |
+| 13 | Espacio para Bluetooth | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| | **Total MATCH** | 7 | 10 | 10 | **11** | 8 | 10 | **11** | **11** |
+
+### Veredicto de identificación: ✅ **es la ficha del Boston**, con dos evidencias independientes
+
+**Evidencia 1 — el par (Flip Up + LED) es único del Boston.** Tres columnas empatan en 11 MATCH (Monaco, X5A 2.0 y Boston), así que el puntaje solo no alcanza. Lo que desempata es **qué** falla en cada una:
+
+| Columna | Los 2 claims que fallan | ¿Puede ser esta ficha? |
+|---|---|---|
+| Monaco | **Diseño modular** (es Full Face) + **Con luz LED** (N/A) | ❌ La pieza reclama las dos y las dos son falsas |
+| X5A 2.0 | Liberación rápida del visor (N/A) + **Con luz LED** (N/A) | ❌ Reclama LED, que es falso |
+| **Boston** | Liberación rápida del visor (N/A) + Canal para lentes (N/A) | ✅ **Los 2 claims más raros de la plantilla —"Diseño modular" y "Con luz LED"— son ciertos los dos** |
+
+**Boston es la única columna de las 8 transcritas acá donde "Diseño modular" y "Con luz LED" dan MATCH simultáneamente.** Solo 3 modelos de esas 8 son Flip Up (GX7, X5A 2.0, Boston) y de esos **solo el Boston tiene LED en X**, así que el par identifica la columna sin ambigüedad dentro de este set. Y el alcance es mayor todavía: **"Con luz LED" está en N/A en las otras 7 columnas de la hoja EDGE y en las 7 columnas de la hoja EDGEPRO** — o sea que el LED, por sí solo, ya descarta 14 de los 15 modelos conocidos. Verificado y confirmado tal como se anticipó.
+
+⚠️ **Corrección posterior, misma jornada — hay una 9ª columna y el LED no es exclusivo del Boston.** La auditoría paralela [`simulacion-38-boston40-verificacion.md`](simulacion-38-boston40-verificacion.md) muestra que la hoja tiene además una columna **BOSTON 4.0**, que **también** es Flip Up y **también** tiene **LED en X**. Lo que hay que corregir de la afirmación de arriba, y lo que se sostiene:
+
+- ❌ **No se sostiene:** "el Boston es el único modelo de todo el catálogo con LED confirmado". Son **dos**: Boston y Boston 4.0 — los únicos 2 de 16 columnas conocidas.
+- ✅ **Se sostiene, y es lo que importa:** el par (Flip Up + LED) **identifica la familia Boston sin ambigüedad** y descarta las otras 14 columnas del catálogo. La pieza es de un Boston.
+- ⚠️ **Se afina:** para **desempatar entre las dos columnas Boston** el LED no sirve (las dos lo tienen). Los discriminadores son los **otros 2 claims**: `CANAL PARA LENTES` y `SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR`, ambos **N/A en Boston** y ambos **X en Boston 4.0**. Como la pieza reclama los dos, **la columna que la explica sin mismatches es Boston 4.0 (13/13)**, contra 11/13 de Boston.
+
+**Conclusión de identificación, redactada con la precisión que el dato permite:** la ficha es **de la familia Boston, con certeza**; **entre las dos columnas, Boston 4.0 la explica mejor**. No se resuelve cuál es la ficha vigente de cuál modelo desde el excel — eso lo confirma el usuario. Es exactamente el mismo patrón de "dos fichas casi indistinguibles" que ya se registró entre Vortex y Kratos (que se diferencian en **un solo renglón**) y entre Carbex y Shift, y **refuerza el pedido de que cada pieza lleve el nombre del modelo visible**.
+
+**Evidencia 2 — corroboración física, independiente del excel.** La [Simulación 21](simulacion-21-boston-4-colores.md) describe la foto real del Boston 4.0 como *"panel lateral glossy negro con **luces LED rojas de freno**"*. O sea que la feature más discriminante del excel **se ve en la foto del producto**. Es el mismo tipo de evidencia dura que ya se usó para cerrar el naming del modelo (logo real > silueta), aplicado ahora a una spec.
+
+**No hace falta la advertencia:** la huella **no** da otro modelo. Si hubiera dado Monaco o X5A 2.0, iría en negrita al principio del resumen; no es el caso.
+
+---
+
+## 2. Auditoría Tipo C — los 13 claims, uno por uno
+
+**Objeto 1 — tarjeta de homologación (7 claims)**
+
+| # | Claim de la pieza | Fila del excel usada | Valor Boston | Veredicto |
+|---|---|---|---|---|
+| A1 | VISERA ANTI SCRATCH | Visera anti scratch | X | ✅ MATCH |
+| A2 | PREPARADO PARA ANTI EMPAÑANTE | Preparado para anti empañante | X | ✅ MATCH |
+| A3 | SISTEMA DE EMERGENCIA DE LIBERACIÓN RÁPIDA | Emergency Quick Release System (ERS) | X | ✅ MATCH |
+| A4 | LINER DESMONTABLE Y LAVABLE | Liner desmontable y lavable | X | ✅ MATCH |
+| A5 | SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR | **Quick Visor Release System** | **N/A** | ❌ **MISMATCH duro** |
+| A6 | CUBRE BARBILLA | Cubre barbilla | X | ✅ MATCH |
+| A7 | CUBRE NARIZ | Cubre nariz | X | ✅ MATCH |
+
+**Objeto 2 — grid de íconos (6 claims)**
+
+| # | Claim de la pieza | Fila del excel usada | Valor Boston | Veredicto |
+|---|---|---|---|---|
+| B1 | DISEÑO MODULAR | Full Face-Flip Up-Open Face-Adventure | **Flip Up** | ✅ **MATCH** *(ver abajo)* |
+| B2 | CON LUZ LED | Con luz LED | **X** | ✅ **MATCH** *(ver abajo)* |
+| B3 | CANAL PARA LENTES | Canal para lentes (Glasses Fit System) | **N/A** | ❌ **MISMATCH duro** |
+| B4 | HEBILLA MICROMÉTRICA | Hebilla micrométrica | **X** | ✅ MATCH *(el dato es correcto — **el tache miente**, ver defecto de arte)* |
+| B5 | DOBLE VISERA | Doble visera | X | ✅ MATCH |
+| B6 | ESPACIO PARA BLUETOOTH | Espacio para Bluetooth | X | ✅ MATCH |
+
+### Veredicto final: **11 MATCH · 2 MISMATCH · 0 SIN DATO** (11 de 13)
+
+Empata con [Evolution 929](simulacion-16-evolution929-verificacion.md) (11/13) como el **mejor resultado del catálogo sobre la plantilla genérica de 13 claims** — por encima de Shift (9/13), Shanghai (8/13) y Kratos (9/13). *(Vortex y Stellar llegaron a 12/12, pero sobre piezas de 12 claims, no sobre esta plantilla de 13.)*
+
+### Validación de la lectura previa — los 5 puntos verificados uno por uno
+
+Se pidió expresamente **no dar por buena** la lectura de entrada. Se verificó cada punto de forma independiente contra la columna Boston:
+
+| Punto a validar | Verificación propia | Resultado |
+|---|---|---|
+| `DISEÑO MODULAR` → Flip Up **no** es mismatch | La fila de tipo dice **Flip Up**, y "flip up" *es* el diseño modular (mentonera abatible). Es exactamente el criterio que fijó [Evolution 929 (Sim. 16)](simulacion-16-evolution929-verificacion.md), **primer caso del catálogo con "Diseño modular" real**, donde se dejó escrito que **no se puede aplicar "modular = error" de forma automática** | ✅ **Confirmado — MATCH** |
+| `CON LUZ LED` → MATCH y primer caso del catálogo | Celda en **X**. Se recorrieron las otras 7 columnas EDGE (todas N/A) y las 7 EDGEPRO (todas N/A) | ✅ **Confirmado — MATCH, y único en todo el catálogo** |
+| `CANAL PARA LENTES` → MISMATCH duro | Celda en **N/A** = descarte confirmado, no celda vacía. No es SIN DATO | ✅ **Confirmado — MISMATCH** |
+| `SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR` → MISMATCH duro | *Quick Visor Release System* en **N/A**. Ojo con la trampa de naming ya advertida en el checklist Tipo C: **no** se confunde con "Kit de mecanismo visor", que además **no existe como fila en esta hoja** | ✅ **Confirmado — MISMATCH** |
+| Tache de `HEBILLA MICROMÉTRICA` → el ítem está bien, el tache miente | Celda en **X**: el Boston **sí** la tiene. El texto del claim es correcto → MATCH de dato. Lo que niega es el **arte** | ✅ **Confirmado — defecto de arte, fuera del conteo** |
+| Los otros 8 claims dan MATCH | Verificados uno por uno en las tablas de arriba: A1, A2, A3, A4, A6, A7, B5, B6 — los 8 con **X** en su fila | ✅ **Confirmado — 8/8** |
+
+### 🏆 Dos primeras veces que deja este caso
+
+1. **`DISEÑO MODULAR` es cierto — y es la primera vez que este claim, que venía siendo falso en todos los demás casos, resulta verdadero en la plantilla de 13 claims.** En Kratos, Vortex, Stellar, Shift, Shanghai y Hero el claim fue siempre un error (Full Face u Open Face confirmados). El precedente que habilita leerlo como MATCH es Evolution 929, pero allá la pieza auditada era otra; **acá es la primera vez que la plantilla genérica de 13 claims acierta con este ítem.**
+2. **`CON LUZ LED` es el primer LED confirmado del catálogo.** Seis fichas lo venían reclamando y en todas las columnas auditadas hasta hoy estaba en N/A. El Boston es el primero en aparecer con **X** — y por eso mismo el claim **se queda** en el grid. *(Corrección posterior: **no es el único** — la columna **Boston 4.0** también lo tiene en X, ver `simulacion-38`. Son los 2 únicos de 16 columnas conocidas, los dos de la familia Boston, lo cual **no debilita la identificación**: el LED sigue descartando a los otros 14 modelos.)*
+
+### Certificación — MISMATCH duro (se reporta aparte de los 13 claims)
+
+| Fuente | Qué dice |
+|---|---|
+| Encabezado de la pieza | Banner negro: **"DOT"** + **"FNVSS 510"** |
+| Excel, columna Boston | **"DOT & ECE"** |
+
+Dos problemas a la vez, los dos ya documentados en el catálogo:
+- **Falta "& ECE"**, que el excel confirma → se omite una certificación real. Mismo patrón que en [Kratos](simulacion-10-kratos-verificacion.md), [Shift](simulacion-15-shift-verificacion.md) y la Pieza 1 de [Vortex](simulacion-11-vortex-verificacion.md).
+- **Sobra "FNVSS 510"**, número que **ninguna de las dos hojas escribe nunca**. Ya señalado en Vortex (pendiente #10 del índice) y en [Evolution 929](simulacion-16-evolution929-verificacion.md) (pendiente #27).
+
+⚠️ **Cuidado específico de este caso:** la cadena correcta **no** es la de la hoja EDGEPRO. Para el Boston es exactamente **"DOT & ECE"**, **sin "22.06"** — la hoja EDGE nunca escribe ese número. Escribir "DOT & ECE 22.06" acá sería copiar el dato de la otra línea de producto y volver a cometer, en otra forma, el error de "FNVSS 510".
+
+### Falta de ortografía — "HOMOLOGACÓN" (defecto de plantilla, ya documentado)
+
+La franja de título dice **"HOMOLOGACÓN"**, sin la **I**. Lo correcto es **"HOMOLOGACIÓN"**.
+
+**No se duplica el análisis:** está resuelto en [`simulacion-12-hero-verificacion.md`](simulacion-12-hero-verificacion.md) (Prompt A, Intento 1, defecto 5), donde se estableció que **el error no es del generador sino de la pieza original del cliente**, y que la causa raíz del prompt fue **no describir el Bloque 1 (la franja de título)**, que quedó sin instrucción y se replicó tal cual. Ahí mismo quedó anotado que era "muy probable que la misma falta esté replicada en las fichas de todos los demás modelos del catálogo".
+
+**Este caso lo confirma en una segunda línea de producto.** Recuento de apariciones verificadas: **Hero (EDGEPRO) + Boston (EDGE) = 2 confirmadas**, en las **dos hojas**. Ya no es una hipótesis sobre "el template de un tab": el defecto viaja con la plantilla de marketing, que es común a EDGEPRO y EDGE. Se sigue pidiendo la revisión modelo por modelo del pendiente ya abierto en el índice.
+
+### Datos confirmados en el excel y no reclamados en ninguna de las 2 piezas
+
+No son errores: son oportunidades comerciales sin usar. **Material exterior ABS alta resistencia** (X), **Interior EPS de alta resistencia** (X), **N° Air Vent System = 4**, **Estilo de casco = MODERNO**, **Master Box** (X), **Inner Box-bolsa protectora** (X). Dos de ellos se usan más abajo para tapar los 2 mismatches.
+
+### Exclusiones correctas verificadas
+
+Cosas que la pieza **no** reclama y el excel confirma que **no** debería reclamar: **Con Pinlock** (N/A) ✅ · **Hebilla doble D** (N/A) ✅ · **Canal para lentes** — bueno, esta **sí** la reclama, y por eso es MISMATCH.
+
+---
+
+## 3. Defecto de arte — el tache sobre HEBILLA MICROMÉTRICA (fuera del conteo formal)
+
+**No es un MISMATCH y por eso está fuera de la tabla de 13.** El ítem está bien elegido, el texto es correcto y el excel lo confirma con **X**: el Boston **sí tiene hebilla micrométrica**. Lo que está mal es el **arte** — el ícono lleva una **X / tache rojo grande encima**, que es la convención visual de "no disponible". La pieza dice en texto "hebilla micrométrica" y dibuja "no tiene hebilla micrométrica". Es **un defecto de arte, no de dato**, exactamente el mismo que se documentó en el [Stellar](simulacion-14-stellar-verificacion.md).
+
+Aplica el ítem del checklist Tipo C ya vigente: *"el veredicto valida el TEXTO del claim, no su representación gráfica"* — una auditoría leída solo sobre el texto da MATCH y **no ve el problema**.
+
+### 🔒 Cierre del caso a nivel catálogo — el tache viene de la plantilla, no se decide por modelo
+
+Con el Boston ya son **tres apariciones del mismo arte heredado, sobre el mismo ícono, con veredictos distintos**:
+
+| Modelo | Hoja | Hebilla micrométrica en el excel | ¿El tache es correcto? | Fuente |
+|---|---|---|---|---|
+| **Stellar** | EDGEPRO | **X** (la tiene) | ❌ **Falso** — niega una feature real | [`simulacion-14`](simulacion-14-stellar-verificacion.md) |
+| **Shift** | EDGEPRO | **N/A** (no la tiene) | ✅ **Correcto** — por coincidencia | [`simulacion-15`](simulacion-15-shift-verificacion.md) |
+| **Boston** | **EDGE** | **X** (la tiene) | ❌ **Falso** — niega una feature real | este caso |
+
+**Conclusión, y con esto el caso se cierra como hallazgo:** el mismo ícono tachado aparece en modelos donde el dato es X y en modelos donde el dato es N/A, en **las dos hojas** y en **las dos líneas de producto**. Si el tache se decidiera modelo por modelo, no podría estar presente en los tres. **El tache viene de la plantilla maestra y se arrastra sin verificar; que en Shift acierte es una coincidencia, no una decisión.** El caso Shift deja de ser una "duda abierta" (pendiente #24 del índice): con el Boston queda claro que **no hay evidencia de que nadie lo haya decidido nunca por modelo**.
+
+Sumando las apariciones previas del mismo defecto sobre el mismo ícono —la Pieza 1 circulante de [Vortex](simulacion-11-vortex-verificacion.md) (X confirmada, tache falso), el Intento 1 de su Prompt B (el generador lo reprodujo pese a la prohibición) y la sospecha nunca verificada de Kratos—, son **cinco modelos tocados por el mismo arte**.
+
+**Qué hay que hacer, y es trabajo de a uno:** revisar el ícono **modelo por modelo en las dos hojas** y decidir por dato, no por plantilla. En cada ficha, el ícono va **limpio** si su celda dice X, y solo lleva marca de negación si la celda dice **N/A** — y aun así conviene preguntarse si tiene sentido comunicar en una pieza de marketing algo que el producto no tiene, en vez de simplemente no ponerlo. Hoy el único caso del catálogo con el ícono confirmado limpio es la pieza regenerada de Vortex, y solo porque el prompt lo prohibió en cuatro líneas distintas.
+
+---
+
+## 4. Elección de los 2 ítems de reemplazo
+
+Los 2 MISMATCH duros (`SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR` en el Objeto 1 y `CANAL PARA LENTES` en el Objeto 2) tienen que salir. Quedan **2 slots libres**, uno en cada objeto, y hay que llenarlos con datos **confirmados con X para Boston** que **todavía no estén en ninguno de los dos objetos**.
+
+**Regla dura que se respeta:** [ya establecida en Hero](simulacion-12-hero-verificacion.md) (*"ningún ítem aparece en las dos tarjetas; la ficha original tampoco repite — sus 7 ítems de lista y sus 6 íconos son conjuntos disjuntos"*) y en el checklist Tipo B (*"sin duplicados entre piezas de un mismo set"*). **Ningún ítem aparece en los dos objetos a la vez.**
+
+| Candidato | Excel Boston | Decisión |
+|---|---|---|
+| **Interior EPS de alta resistencia** | **X** | ✅ **Elegido para el Objeto 1** (reemplaza a "Sistema de liberación rápida del visor"). Es el candidato **temáticamente correcto para una tarjeta de HOMOLOGACIÓN**: el EPS es el material que absorbe el impacto, o sea el argumento de seguridad que esa tarjeta comunica, junto al resto de sus ítems. No está en el grid, así que no duplica |
+| **Material exterior ABS alta resistencia** | **X** | ✅ **Elegido para el Objeto 2** (reemplaza a "Canal para lentes"). Es una **feature física del casco** (no empaque, no dato numérico) y es **exactamente el ítem que ya ocupa una celda en los grids del catálogo que cerraron bien** — Vortex y Kratos en 12/12, y el grid definitivo del Stellar. Mantener la misma plantilla de grid entre modelos es lo que baja el riesgo de reciclado sin verificar. No está en la tarjeta de homologación, así que no duplica |
+| N° Air Vent System = 4 ("4 VENTILACIONES") | 4 | ⛔ **Descartado**, mismo criterio que ya se aplicó en el [Stellar](simulacion-14-stellar-verificacion.md): es un **dato numérico duro y verificable a ojo** — si el arte del casco no muestra exactamente 4 ventilaciones, la pieza se contradice sola y se abre un mismatch nuevo que hoy no existe; y **ninguna otra pieza del catálogo comunica un número**, así que rompería la plantilla. Se deja como **suplente** si el usuario prefiere un dato duro y valida el conteo contra la foto real |
+| Master Box / Inner Box-bolsa protectora | X | ⛔ **Descartados** por el criterio ya aplicado en Kratos y Shanghai: son **ítems de empaque/logística**, no features del casco, y desentonan en una pieza de producto |
+| Estilo de casco = MODERNO | MODERNO | ⛔ **Descartado**: no es una feature, es una categoría de diseño interna; no se comunica en ninguna pieza del catálogo |
+| Kit de mecanismo visor | — | ⛔ **Imposible**: es el relleno estándar de los grids EDGEPRO, pero **esa fila no existe en la hoja EDGE**. Es la consecuencia directa del hallazgo estructural |
+
+**Resultado del reparto:** Objeto 1 queda con **7 ítems, 7/7 confirmados**; Objeto 2 con **6 celdas, 6/6 confirmadas**. **13 de 13 claims respaldados por el excel, sin un solo claim sin respaldo.**
+
+**Nota de layout, importante para los prompts:** las dos piezas **conservan la misma cantidad de elementos que la referencia** (7 ítems y 6 celdas). O sea que **este caso no cae** en el modo de falla del Hero (bajar de 7 ítems a 3 y estirar el lienzo) — pero los bloques de lienzo constante y conteo forzado van igual, porque el defecto ya se vivió y sale barato blindarlo.
+
+---
+
+## 5. Prompts corregidos — listos para copiar/pegar en Nano Banana Pro
+
+Estructura y vocabulario copiados de los prompts ya validados de **[Vortex](simulacion-11-vortex-verificacion.md)** (sección "Prompts corregidos para Vortex (12/12 confirmados)") y **[Kratos](simulacion-10-kratos-verificacion.md)**, más los bloques de blindaje que dejó el **[Hero](simulacion-12-hero-verificacion.md)** (lienzo constante en números, geometría de separadores, conteo forzado, prohibición de adornos, 3 bloques descritos por separado). No se inventa formato nuevo.
+
+<details><summary>Prompt A — Tarjeta de homologación Boston (7/7 confirmados)</summary>
+
+```
+Diseñá una tarjeta de HOMOLOGACIÓN para el casco EDGE BOSTON (tipo FLIP
+UP / modular), EXACTAMENTE con la misma forma, estructura y tamaño que
+la imagen de referencia adjunta — el lienzo final tiene que tener el
+mismo ancho y el mismo alto en píxeles que la referencia, sin recortar,
+sin estirar y sin cambiar la proporción.
+
+Es una reproducción de un layout fijo: lo ÚNICO que cambia respecto de
+la referencia es QUÉ DICE un renglón de la lista y QUÉ DICE la línea de
+certificación. Todo lo demás —dimensiones, proporciones, tipografía,
+paleta, separadores— se reproduce igual.
+
+CRÍTICO — EL LIENZO ES UNA CONSTANTE, NO SE ESTIRA:
+- La referencia es un rectángulo VERTICAL ANGOSTO cuya relación de
+  aspecto es de aproximadamente 1 : 2, es decir, EL ALTO ES
+  APROXIMADAMENTE EL DOBLE DEL ANCHO (alto ÷ ancho ≈ 2). Medí la
+  referencia adjunta y reproducí EXACTAMENTE su ancho y su alto en
+  píxeles.
+- ESTA TARJETA TIENE 7 ÍTEMS, IGUAL QUE LA REFERENCIA. La cantidad de
+  ítems NO CAMBIA LAS DIMENSIONES DEL LIENZO. El alto total es el
+  mismo con 7 ítems que con 6 o con 3: lo único que cambiaría es
+  cuánto aire hay entre ellos dentro de ese mismo alto.
+- Pensalo así: el lienzo es una CONSTANTE, el reparto interno es la
+  VARIABLE. NO conserves el alto de bloque por ítem y hagas crecer el
+  lienzo. Hacé exactamente lo contrario: conservá el alto del lienzo y
+  repartí adentro.
+- ATENCIÓN, ESTE ERROR YA PASÓ EN OTRA TARJETA DE ESTE MISMO CATÁLOGO:
+  el resultado salió de aproximadamente 415 x 1024 px, o sea una
+  relación de 1 : 2,47 en vez de 1 : 2 — una tarjeta claramente
+  ESTIRADA hacia abajo, más alta y más angosta que la referencia. NO LO
+  REPITAS.
+
+ESTRUCTURA — 3 BLOQUES APILADOS, DE ARRIBA HACIA ABAJO (los tres van
+descritos por separado a propósito: en un intento anterior de este
+catálogo el prompt describía solo 2 bloques y se saltaba la franja de
+título, así que el generador la copió tal cual de la referencia CON UNA
+FALTA DE ORTOGRAFÍA ADENTRO):
+
+BLOQUE 1 — FRANJA DE TÍTULO (arriba de todo, angosta, fondo GRIS CLARO):
+- Una sola línea de texto: "HOMOLOGACIÓN", en negro, bold, MAYÚSCULAS,
+  centrada. Nada más en este bloque.
+- OJO CON LA ORTOGRAFÍA: la palabra correcta es "HOMOLOGACIÓN", con la
+  letra I entre la C y la O finales, y con tilde en la O:
+  H-O-M-O-L-O-G-A-C-I-Ó-N. La imagen de referencia adjunta tiene una
+  FALTA DE ORTOGRAFÍA en esa palabra (le falta la I y dice
+  "HOMOLOGACÓN"): NO copies esa falta, escribila bien.
+- Es una franja angosta: ocupa poco alto, solo lo necesario para el
+  texto más un margen chico arriba y abajo.
+
+BLOQUE 2 — BANNER NEGRO (debajo del título, ancho completo del lienzo):
+- Rectángulo sólido NEGRO que ocupa TODO el ancho del lienzo, de borde
+  a borde, y aproximadamente el 15-20 % DEL ALTO TOTAL de la tarjeta.
+- Adentro, texto "DOT" en BLANCO, muy grande y bold, centrado, como una
+  insignia.
+- Debajo de "DOT", dentro del mismo banner negro, en blanco, en cuerpo
+  bastante más chico y con las letras espaciadas: "& ECE"
+- CRÍTICO — CERTIFICACIÓN EXACTA: la imagen de referencia dice
+  "FNVSS 510" debajo del DOT. Ese texto NO se copia. La certificación
+  correcta de este casco, según la fuente de datos, es "DOT & ECE".
+  Reemplazalo. Escribí exactamente "& ECE": SIN el número "22.06" y SIN
+  "FNVSS 510". Ese "22.06" pertenece a otra línea de producto y para
+  este modelo sería un dato inventado.
+
+BLOQUE 3 — LISTA DE ÍTEMS (fondo GRIS CLARO, todo el alto restante):
+Lista de EXACTAMENTE 7 ítems, en este orden, en MAYÚSCULAS, negro,
+bold, centrados horizontalmente:
+1. VISERA ANTI SCRATCH
+2. PREPARADO PARA ANTI EMPAÑANTE
+3. SISTEMA DE EMERGENCIA DE LIBERACIÓN RÁPIDA
+4. LINER DESMONTABLE Y LAVABLE
+5. INTERIOR EPS DE ALTA RESISTENCIA
+6. CUBRE BARBILLA
+7. CUBRE NARIZ
+
+CRÍTICO — CONTEO FORZADO DE ÍTEMS (defecto real de este catálogo: un
+generador devolvió una lista con un ítem DUPLICADO y otra pieza salió
+con celdas de más):
+- Son EXACTAMENTE 7 ítems, ni uno más ni uno menos.
+- Cada ítem aparece UNA sola vez. Ninguno se repite, ni siquiera con
+  otra redacción.
+- ANTES DE ENTREGAR, CONTÁ LOS RENGLONES DE LA LISTA UNO POR UNO: tienen
+  que ser 7, ninguno repetido, ninguno vacío.
+
+CRÍTICO — LOS SEPARADORES SON LÍNEAS FINAS, NO BANDAS (defecto real de
+este catálogo, no lo repitas). Entre un ítem y el siguiente va un
+separador, con esta geometría exacta:
+- Es un GUION / LÍNEA HORIZONTAL de 1 a 2 PÍXELES de grosor. Fino como
+  un trazo de lápiz, no como una barra.
+- Es de color GRIS medio, apenas más oscuro que el fondo gris claro,
+  solo lo suficiente para que se vea.
+- Es CORTO: ocupa aproximadamente entre un 15 % y un 25 % del ancho de
+  la tarjeta, NO MÁS. NO llega a los bordes laterales: queda mucho
+  espacio gris vacío a su izquierda y a su derecha.
+- Va CENTRADO horizontalmente, en el eje vertical de la tarjeta,
+  alineado con el centrado del texto.
+- Son EXACTAMENTE 6 separadores: uno entre cada par de ítems
+  consecutivos. NO va separador arriba del ítem 1 ni debajo del ítem 7.
+- PROHIBIDO convertirlos en bandas o franjas horizontales de ancho
+  completo, en barras gruesas, en divisores de sección, o en bloques de
+  fondo de un tono de gris distinto al del resto de la zona gris. El
+  separador es un DETALLE DISCRETO dentro de un fondo gris continuo, no
+  un elemento que parta la tarjeta en secciones. En un intento anterior
+  de este catálogo volvieron como bandas grises de ancho completo que
+  partían la tarjeta en bloques macizos: eso está MAL.
+- El fondo gris claro del Bloque 3 es UNO SOLO y CONTINUO de arriba
+  abajo: los separadores se dibujan encima, no lo dividen en zonas de
+  distinto tono.
+
+CRÍTICO — ESPACIADO UNIFORME Y TEXTO COMPLETO:
+- El espacio vertical entre cada par de ítems consecutivos tiene que ser
+  EXACTAMENTE IGUAL entre todos los pares. Distribuí la zona gris de
+  forma pareja, sin huecos irregulares.
+- Los 7 ítems tienen que tener su texto visible, legible y COMPLETO:
+  ninguno puede quedar en blanco, cortado ni acortado. "INTERIOR EPS DE
+  ALTA RESISTENCIA" va completo, no "INTERIOR EPS".
+
+QUÉ SE CONSERVA IDÉNTICO A LA REFERENCIA: tipografía sans serif
+condensada en mayúsculas y bold, paleta NEGRO / GRIS CLARO / BLANCO y
+nada más, centrado del texto, márgenes laterales, y el orden y la
+proporción relativa de los 3 bloques.
+
+PROHIBIDO ABSOLUTO:
+- NO incluir "SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR" (Quick Visor
+  Release System): la fuente de datos lo marca como NO disponible para
+  este modelo. Su lugar lo ocupa "INTERIOR EPS DE ALTA RESISTENCIA".
+- NO incluir "CANAL PARA LENTES": tampoco está disponible en este
+  modelo, y además no corresponde a esta pieza.
+- NO incluir "DISEÑO MODULAR", "CON LUZ LED", "DOBLE VISERA",
+  "HEBILLA MICROMÉTRICA", "ESPACIO PARA BLUETOOTH" ni "MATERIAL
+  EXTERIOR ABS ALTA RESISTENCIA": esos 6 van en la OTRA pieza (el grid
+  de íconos) y las 2 piezas NUNCA comparten ítems.
+- NO escribir "HOMOLOGACÓN" (sin la I). Se escribe "HOMOLOGACIÓN".
+- NO mostrar "FNVSS 510" en ninguna parte. NO agregar "22.06".
+- NO agregar un 8° ítem ni quitar ninguno de los 7.
+- NO cambiar la relación de aspecto del lienzo ni estirarlo.
+- NO convertir los separadores en bandas horizontales de ancho completo.
+- NO agregar destellos, estrellas, brillos, sparkles, chispas, líneas
+  decorativas, degradés, sombras, texturas, marcos, íconos, logos ni
+  NINGÚN elemento gráfico que no esté en la imagen de referencia. En un
+  intento anterior de este catálogo apareció una estrella blanca de
+  cuatro puntas abajo a la derecha, sobre el gris: eso NO existe en la
+  referencia y NO debe aparecer. Esta tarjeta es SOLO texto sobre
+  bloques de color plano.
+- NO usar rectángulos negros sólidos como placeholder en ninguna parte
+  de la tarjeta fuera del banner del Bloque 2.
+
+VERIFICACIÓN FINAL — ANTES DE ENTREGAR, CHEQUEÁ ESTAS 6 COSAS:
+1. ¿El ALTO dividido el ANCHO del lienzo da aproximadamente 2, igual que
+   la referencia? Si da 2,4 o más, la tarjeta está ESTIRADA: rehacela.
+2. ¿Conté los ítems uno por uno y son EXACTAMENTE 7, ninguno repetido,
+   ninguno vacío?
+3. ¿Los separadores son GUIONES FINOS, CORTOS Y CENTRADOS que no llegan
+   a los bordes — y no bandas horizontales de ancho completo? ¿Son 6?
+4. ¿El título dice "HOMOLOGACIÓN" completo, con la I y con la tilde?
+5. ¿El banner negro dice "DOT" y "& ECE", y en ninguna parte de la
+   tarjeta aparece "FNVSS 510" ni "22.06"?
+6. ¿Hay algún elemento decorativo (destello, estrella, brillo, marco)
+   que NO esté en la imagen de referencia? Si lo hay, sacalo.
+```
+
+</details>
+
+<details><summary>Prompt B — Grid de íconos Boston 2x3 (6/6 confirmados, SIN tache)</summary>
+
+```
+Diseñá un grid de íconos 2x3 para el casco EDGE BOSTON (tipo FLIP UP /
+modular), resolución 4K, con el mismo aspect ratio y las mismas
+dimensiones en píxeles que la imagen de referencia adjunta. Fondo gris
+claro uniforme, íconos lineales rojo/bordo dentro de un octágono, mismo
+estilo gráfico que la referencia, con el texto de cada ítem en
+mayúsculas, bold, centrado debajo de su ícono.
+
+CRÍTICO — EL LIENZO ES UNA CONSTANTE, NO SE ESTIRA NI SE INFLA:
+- Medí la imagen de referencia adjunta y reproducí EXACTAMENTE su ancho
+  y su alto en píxeles. Declaralo como número y respetalo: si la
+  referencia mide W x H, el resultado mide W x H.
+- Este grid tiene 6 celdas, IGUAL que la referencia. La cantidad de
+  celdas NO CAMBIA LAS DIMENSIONES DEL LIENZO: el ancho, los márgenes,
+  el tamaño de cada celda y el alto total son los mismos.
+- PROHIBIDO estirar el lienzo, cambiar su relación de aspecto, o inflar
+  los íconos o el texto para "rellenar" espacio. En un intento anterior
+  de este catálogo una pieza volvió estirada a 1 : 2,47 cuando la
+  referencia era 1 : 2: no lo repitas.
+
+CRÍTICO — DIMENSIONES Y CONTEO FORZADO DE CELDAS (hallazgo real del
+catálogo: con un prompt que solo decía "2x3" una vez, un generador
+devolvió un grid con filas de más e ítems DUPLICADOS, dibujando encima
+un arte distinto en cada repetición del mismo ítem — prestar máxima
+atención acá):
+- El grid tiene EXACTAMENTE 2 columnas x 3 filas = 6 celdas en total.
+  NUNCA 2x4, NUNCA 8 celdas, NUNCA una fila o columna de más, NUNCA una
+  celda vacía de relleno.
+- Cada uno de los 6 ítems aparece en UNA sola celda, UNA sola vez — no
+  dupliques ningún ítem para rellenar una fila extra, ni aunque sobre
+  espacio.
+- Ningún pictograma puede repetirse en dos celdas: los 6 dibujos son
+  distintos entre sí, igual que los 6 textos.
+- ANTES DE TERMINAR, CONTÁ LAS CELDAS UNA POR UNA: deben ser 6, ni una
+  más ni una menos, ninguna repetida, ninguna vacía.
+
+LISTA DE ÍTEMS (exactamente 6, en este orden, uno por celda, leyendo de
+izquierda a derecha y de arriba a abajo):
+1. DISEÑO MODULAR
+2. CON LUZ LED
+3. MATERIAL EXTERIOR ABS ALTA RESISTENCIA
+4. HEBILLA MICROMÉTRICA
+5. DOBLE VISERA
+6. ESPACIO PARA BLUETOOTH
+
+CRÍTICO — NINGÚN ÍCONO TACHADO, EN NINGUNA CELDA (defecto real de la
+pieza que circula hoy para este modelo, y defecto recurrente de la
+plantilla de este catálogo — no lo copies):
+- NO pongas ninguna X, tache, cruz, barra diagonal, círculo con línea,
+  símbolo de prohibición ni ninguna otra marca de negación encima de
+  ningún ícono, en ninguna celda, de ningún color y de ningún tamaño.
+- Los 6 ítems de la lista están TODOS confirmados como presentes en este
+  casco: los 6 íconos se dibujan en positivo, limpios, sin marcas
+  superpuestas.
+- ATENCIÓN ESPECIAL CON "HEBILLA MICROMÉTRICA": LA IMAGEN DE REFERENCIA
+  ADJUNTA MUESTRA ESE ÍCONO CON UNA X ROJA GRANDE TACHÁNDOLO. Esa marca
+  es un DEFECTO DE ARTE de la referencia, no un dato del producto — el
+  Boston SÍ TIENE hebilla micrométrica, confirmada en la fuente de
+  datos. Su ícono debe mostrar únicamente el broche/hebilla, limpio y en
+  positivo, SIN la X roja y sin ninguna otra marca encima. No la copies.
+
+CASO ESPECIAL — "DISEÑO MODULAR" ES UN DATO REAL ACÁ:
+A diferencia de la mayoría de los modelos de este catálogo, donde este
+claim era un error porque el casco era Full Face, el Boston SÍ es FLIP
+UP (modular). El ícono tiene que representar correctamente un casco
+flip-up real: mentonera abatible visible y línea de articulación /
+bisagra a la altura de la sien. No lo excluyas ni lo dibujes como un
+casco Full Face genérico.
+
+CASO ESPECIAL — "CON LUZ LED" TAMBIÉN ES UN DATO REAL ACÁ:
+Este modelo tiene luz LED confirmada (es el único del catálogo). El
+ícono debe representarla de forma positiva y clara (idea: la silueta
+trasera del casco con una luz/led emitiendo). No lo excluyas ni lo
+taches.
+
+CRÍTICO — ÍCONOS NUEVOS, NO RECICLADOS:
+- Diseñá un pictograma propio, específico y correcto para cada uno de
+  los 6 ítems de la lista.
+- "MATERIAL EXTERIOR ABS ALTA RESISTENCIA" probablemente no exista en la
+  referencia: creá su pictograma desde cero (idea: la calota del casco
+  con un símbolo de escudo o de impacto que sugiera resistencia del
+  material exterior).
+- No copies el dibujo interno de un ícono de la referencia que
+  corresponda a un ítem distinto del de esta lista — en particular, NO
+  reutilices el ícono que en la referencia corresponde a "CANAL PARA
+  LENTES", porque ese ítem no va en esta pieza.
+- De la referencia tomá SOLO el estilo visual (línea, grosor, color
+  rojo/bordo, forma de octágono, tipografía) — nunca un defecto, una
+  marca de exclusión ni el pictograma de otro ítem.
+
+CRÍTICO — TEXTO COMPLETO: la etiqueta de cada celda se reproduce
+COMPLETA, tal cual está escrita en la lista — no la acortes ni le quites
+palabras (ej. "MATERIAL EXTERIOR ABS ALTA RESISTENCIA" completo, no
+"MATERIAL EXTERIOR ABS" solo).
+
+PROHIBIDO ABSOLUTO:
+- NO incluir "CANAL PARA LENTES": la fuente de datos lo marca como NO
+  disponible para este modelo. Su celda la ocupa "MATERIAL EXTERIOR ABS
+  ALTA RESISTENCIA".
+- NO incluir "SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR": tampoco está
+  disponible en este modelo.
+- NO incluir "CON PINLOCK" ni "HEBILLA DOBLE D": no disponibles en este
+  modelo (la hebilla de este casco es la micrométrica).
+- NO incluir "KIT DE MECANISMO VISOR": no es una spec de esta línea de
+  producto.
+- NO incluir "VISERA ANTI SCRATCH", "PREPARADO PARA ANTI EMPAÑANTE",
+  "SISTEMA DE EMERGENCIA DE LIBERACIÓN RÁPIDA", "LINER DESMONTABLE Y
+  LAVABLE", "INTERIOR EPS DE ALTA RESISTENCIA", "CUBRE BARBILLA" ni
+  "CUBRE NARIZ": esos 7 ya van en la tarjeta de homologación (Prompt A)
+  y las 2 piezas NUNCA comparten ítems.
+- No tachar ningún ícono, con ninguna marca, en ninguna celda.
+- No duplicar ítems ni repetir un pictograma en dos celdas.
+- NO agregar destellos, estrellas, brillos, sparkles, degradés, marcos,
+  sombras ni ningún adorno gráfico que no esté en la referencia.
+- No usar rectángulos negros sólidos como placeholder en ninguna parte
+  de la pieza.
+
+VERIFICACIÓN FINAL — ANTES DE ENTREGAR, CHEQUEÁ ESTAS 5 COSAS:
+1. ¿Conté las celdas una por una y son EXACTAMENTE 6 (2 columnas x 3
+   filas), ninguna repetida, ninguna vacía?
+2. ¿El lienzo tiene el mismo ancho y alto en píxeles que la referencia,
+   sin estirar y sin inflar íconos ni texto?
+3. ¿Hay alguna X, tache, cruz o marca de negación sobre ALGÚN ícono,
+   especialmente el de "HEBILLA MICROMÉTRICA"? Si la hay, sacala.
+4. ¿Las 6 etiquetas están completas, sin palabras faltantes?
+5. ¿Aparece algún adorno (destello, estrella, marco) que no esté en la
+   referencia? Si aparece, sacalo.
+```
+
+</details>
+
+**Estado de los 2 prompts:** 🔴 pendientes de generar. Con estos dos, los **13 claims publicados** (7 en la tarjeta + 6 en el grid) quedan respaldados al 100 % por el excel, sin ningún claim sin respaldo, sin taches, con la certificación correcta de la hoja EDGE y con el título bien escrito.
+
+**Qué hay que hacer:** correr los 2 prompts en **sesiones de generación aisladas** (una por pieza, no en el mismo hilo — ver el hallazgo de contaminación cruzada entre generaciones del [caso Vortex](simulacion-11-vortex-verificacion.md)) y mandar los resultados para auditoría, chequeando puntualmente: relación de aspecto, conteo de ítems y de celdas, ausencia total de taches, "HOMOLOGACIÓN" bien escrito, banner "DOT" + "& ECE" sin "22.06" ni "FNVSS 510", y que la etiqueta larga de "MATERIAL EXTERIOR ABS ALTA RESISTENCIA" no salga truncada.
+
+---
+
+## Estado: ⚠️ Falló — 2 de 13 claims no coinciden + certificación + falta de ortografía; los 2 prompts corregidos quedan completos (7/7 y 6/6)
+
+### 🔴 Pendiente de tu parte
+
+```mermaid
+flowchart TD
+    T0["❓ DECIDIR A CUÁL DE LAS DOS COLUMNAS BOSTON<br/>pertenece esta ficha: con 'Boston' da 11/13,<br/>con 'Boston 4.0' da 13/13 — el excel no lo<br/>resuelve, hace falta el nombre en la pieza"]
+    T1["📄 Confirmar si 'Evolution 929' es columna de la<br/>hoja 'FICHA DE CASCOS': ninguna de las 2 capturas<br/>lo muestra, pero la Simulación 16 lo audita<br/>como parte de este tab"]
+    T2["🎨 Sacar el tache/X rojo del ícono de HEBILLA<br/>MICROMÉTRICA — defecto de arte, el excel<br/>confirma la feature con X para Boston"]
+    T3["🔁 Revisar el ícono de hebilla micrométrica MODELO<br/>POR MODELO en las DOS hojas — el tache viene<br/>de la plantilla, no se decidió nunca por modelo"]
+    T4["⚖️ Corregir la certificación de la pieza:<br/>dice 'DOT / FNVSS 510', el excel dice<br/>'DOT & ECE' (sin el 22.06 de la otra hoja)"]
+    T5["🔤 Corregir 'HOMOLOGACÓN' → 'HOMOLOGACIÓN'<br/>— 2da aparición confirmada, ahora en la hoja EDGE"]
+    T6["📎 Subir la ficha real del Boston y la hoja<br/>'FICHA DE CASCOS' como adjunto real<br/>para versionarlas"]
+```
+
+**Qué hay que hacer:**
+1. Sacar "SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR" de la tarjeta de homologación y "CANAL PARA LENTES" del grid antes de reimprimir — los dos están en N/A confirmado.
+2. Corregir la certificación a **"DOT & ECE"** exacto (sin "22.06", sin "FNVSS 510").
+3. Corregir **"HOMOLOGACÓN" → "HOMOLOGACIÓN"** y propagar la corrección al template maestro, no solo a esta ficha.
+4. Sacar el tache del ícono de hebilla micrométrica y abrir la revisión modelo por modelo en las dos hojas.
+5. Confirmar los 2 ítems de reemplazo elegidos (Interior EPS en la tarjeta, Material exterior ABS en el grid; suplente: "4 VENTILACIONES").
+6. **Decidir a cuál de las dos columnas Boston pertenece esta ficha** (con "Boston" da 11/13 y hay 2 ítems que reemplazar; con "Boston 4.0" da 13/13 y no hay nada que reemplazar — ver [`simulacion-38`](simulacion-38-boston40-verificacion.md)). Y confirmar si **Evolution 929** es o no una columna de esta hoja.
+
+---
+
+**Última actualización:** 2026-07-29 · verificación Tipo C del noveno caso del catálogo (Boston), **primer caso auditado explícitamente contra la hoja "FICHA DE CASCOS" de la marca EDGE** con comparación fila por fila contra la hoja EDGEPRO. Identificación por huella digital de los 13 claims contra las 8 columnas de la hoja: **la ficha es del Boston**, confirmado por el par único (Flip Up + LED en X) y corroborado por la foto real del producto de la [Simulación 21](simulacion-21-boston-4-colores.md). Veredicto **11 MATCH / 2 MISMATCH / 0 SIN DATO**, con "Diseño modular" y "Con luz LED" como MATCH reales (primer LED confirmado del catálogo). Se registran el **hallazgo estructural de las dos hojas** (fila PRECIO de más; filas KIT DE MECANISMO VISOR y CON MALETÍN DE LUJO de menos; certificación por modelo y no por marca) y su conclusión de proceso, el **cierre del caso del tache de hebilla micrométrica a nivel catálogo** (Stellar falso / Shift correcto por coincidencia / Boston falso → viene de la plantilla) y la segunda aparición confirmada de **"HOMOLOGACÓN"**. Se armaron los 2 prompts corregidos (7/7 y 6/6) con los blindajes del caso Hero: lienzo constante en números, geometría de separadores, conteo forzado, prohibición de adornos, los 3 bloques de la tarjeta descritos por separado y prohibición explícita del tache. **Corrección de la misma jornada, por la auditoría paralela de [`simulacion-38-boston40-verificacion.md`](simulacion-38-boston40-verificacion.md):** la hoja tiene **9 columnas, no 8** — existe una columna **BOSTON 4.0** distinta de **BOSTON**, que difiere en 5 filas y que **también tiene LED en X**. Con esa columna la misma pieza da **13/13**. Se corrigieron en consecuencia la afirmación de "único modelo con LED" (son 2, los dos de la familia Boston) y la conclusión de identificación, que pasa a ser: **la ficha es de la familia Boston con certeza, y entre las dos columnas la que la explica sin mismatches es Boston 4.0**; el desempate no lo da el excel sino el nombre en la pieza. Queda abierto solo el punto de si Evolution 929 pertenece o no a esta hoja.

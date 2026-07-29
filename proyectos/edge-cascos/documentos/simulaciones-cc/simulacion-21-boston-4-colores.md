@@ -1,6 +1,8 @@
 # Simulación 21 — Boston 4.0 (EDGE): 4 variantes de color + visor (Tipo A, geometría intacta)
 
-[← Volver al índice de mis pruebas](../mis-pruebas-claude-code.md) · [← Orquestación de agentes en paralelo](../orquestacion-agentes-paralelos.md) · [← Índice maestro de prompts](indice-prompts-catalogo.md)
+[← Volver al índice de mis pruebas](../mis-pruebas-claude-code.md) · [← Orquestación de agentes en paralelo](../orquestacion-agentes-paralelos.md) · [← Índice maestro de prompts](indice-prompts-catalogo.md) · [🔍 Boston — verificación ficha vs. excel (Simulación 33)](simulacion-33-boston-verificacion.md)
+
+> 🔍 **Caso hermano, mismo modelo, otro tema:** [`simulacion-33-boston-verificacion.md`](simulacion-33-boston-verificacion.md) audita la **ficha de marketing** del Boston contra el excel (Tipo C, 11 MATCH / 2 MISMATCH). Dos datos de ese caso importan acá: (1) el excel confirma **"Con luz LED: X"** para el Boston — es el **único modelo de todo el catálogo** con LED confirmado, y las **luces LED rojas de freno del panel lateral** que estos 4 prompts preservan son justamente esa feature, o sea que el excel respalda tratarlas como pieza real del producto y no como detalle decorativo; y (2) el Boston se audita contra **otra hoja del excel** ("FICHA DE CASCOS", marca **EDGE**, no EDGEPRO), con un set de filas distinto.
 
 **Confirmado:** el modelo es **Boston 4.0**, no "Boston" a secas — el usuario mandó el logo/título real de la ficha ("BOSTON 4.0", ver `simulacion-25-carbex-verificacion.md`, sub-caso de logo), que despeja la duda que había quedado abierta. Casco de referencia: full face, negro mate, panel lateral glossy negro con luces LED rojas de freno, cover de fibra de carbono en el pivote de la visera, visor ahumado.
 
