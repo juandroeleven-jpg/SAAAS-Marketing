@@ -340,6 +340,103 @@ VERIFICACIÓN FINAL — respondé estos siete chequeos antes de entregar:
 
 ---
 
+## Instancia 4.1-planB — Trasplante del casco sobre la escena ya generada (dos pasos)
+
+**Contexto (29/07/2026):** tercer intento de generación en un solo paso, tercera falla igual — el diseño no se copió y la escala falló, aun con la v2 (casco primero, prioridad absoluta). Conclusión operativa: **la generación single-shot no puede copiar el arte de este casco**; se activa el plan B de dos pasos. El paso 1 (la escena con la mujer bajándose de la moto, casco genérico) ya salió bien; este prompt es el paso 2: swap tipo Familia 2 que trasplanta el casco real sobre la escena y corrige la escala.
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la escena generada (mujer bajándose de la moto frente al local), (2) la foto de estudio del casco jet samurái sobre fondo blanco.
+
+```
+Esto es un REEMPLAZO DE CASCO dentro de una imagen ya existente, no
+una imagen nueva. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ESCENA (la mujer bajándose de la moto en la calle):
+  es la BASE. La escena está bien y se conserva TODA, salvo el casco.
+- IMAGEN 2 — LA FOTO DE ESTUDIO DEL CASCO REAL: es la ÚNICA
+  AUTORIDAD DEL CASCO. El casco del resultado es ESTE, copiado, no
+  uno parecido.
+
+EL RESULTADO ES: la misma escena de la IMAGEN 1, con la misma mujer,
+la misma pose, la misma moto y la misma calle, pero llevando puesto
+el casco de la IMAGEN 2, a escala real.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ EN LA IMAGEN 1:
+- El rostro de la mujer, su mirada y su expresión.
+- Su pose completa: bajándose de la moto con la pierna extendida
+  hacia atrás, las manos en el manubrio.
+- La campera de cuero envejecido, los guantes, el jean negro y las
+  botas.
+- La moto completa: faro, tanque gris, espejos, ruedas, cada
+  reflejo.
+- La calle, la vereda, las vidrieras, las bicicletas del fondo, la
+  luz natural y la profundidad de campo.
+- El encuadre y el recorte de la foto.
+
+EL CASCO — SE REEMPLAZA POR EL DE LA IMAGEN 2:
+El casco que la mujer lleva en la IMAGEN 1 (un jet con manchas
+difusas) desaparece por completo. En su lugar va el casco de la
+IMAGEN 2, copiado como objeto real:
+- Casco ABIERTO tipo JET, sin mentonera, con DOBLE VISOR: el externo
+  grande transparente que baja hasta el mentón, con su pivote
+  lateral negro, y el interno que asoma detrás.
+- El ARTE COMPLETO del lateral, copiado de la foto: el GUERRERO
+  SAMURÁI en tinta en la parte alta, la pincelada gruesa BLANCA y
+  ROJA que cruza la calota, las VIÑETAS DE COMBATE en tinta negra
+  sobre blanco, las salpicaduras, y los CARACTERES JAPONESES
+  verticales copiados TRAZO A TRAZO — prohibido inventar letras.
+- La goma negra del borde inferior y la correa con su detalle rojo.
+- La calota es negra BRILLANTE con el arte encima, como en la foto.
+
+REORIENTACIÓN Y ESCALA:
+- El casco nuevo se adapta al ángulo de la cabeza de la mujer en la
+  escena. El lateral visible del casco lleva el arte tal como se ve
+  en la foto de producto: samurái arriba, viñetas y caracteres en el
+  lateral.
+- LA ESCALA SE CORRIGE: el casco de la IMAGEN 1 está demasiado
+  grande. El casco nuevo va a escala real — apenas más grande que la
+  cabeza, unos centímetros de carcasa alrededor del cráneo. Los
+  HOMBROS de la mujer quedan MÁS ANCHOS que el casco. Ella podría
+  sacárselo con las dos manos.
+- El visor externo queda BAJADO y TRANSPARENTE, con el rostro de la
+  mujer visible a través, igual que ahora.
+- La zona que el casco viejo (más grande) tapaba y el nuevo (más
+  chico) ya no tapa se completa con escena coherente: la calle, el
+  fondo, su pelo si corresponde.
+
+INTEGRACIÓN DE LUZ:
+El casco nuevo se ilumina con la luz de la escena: reflejos
+coherentes de la calle sobre la calota brillante y el visor. La luz
+nunca borra el arte: samurái, viñetas, pinceladas rojas y caracteres
+quedan visibles.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido conservar el casco viejo o partes de él.
+- Prohibido un casco "parecido": es el de la IMAGEN 2 o está mal.
+- Prohibido omitir alguno de los cuatro componentes del arte:
+  samurái, viñetas, pinceladas rojas, caracteres japoneses.
+- Prohibido inventar o alterar los caracteres japoneses.
+- Prohibido dejar el casco en tamaño gigante: hombros más anchos que
+  el casco, siempre.
+- Prohibido tintar el visor o tapar el rostro.
+- Prohibido cambiar CUALQUIER otra cosa de la escena: mujer, pose,
+  ropa, moto, calle, luz, encuadre.
+- Prohibido traer el fondo blanco del estudio a la escena.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. Poné el casco del resultado al lado de la IMAGEN 2: ¿es EL MISMO
+   casco, con los cuatro componentes del arte visibles?
+2. ¿Los caracteres japoneses son los de la foto, trazo a trazo?
+3. ¿El casco quedó a escala real — más angosto que los hombros?
+4. ¿El visor está transparente y el rostro se ve claro?
+5. ¿La mujer, la pose, la ropa, la moto y la calle quedaron
+   idénticas a la IMAGEN 1?
+6. ¿La zona que el casco viejo tapaba quedó completada sin manchas
+   ni huecos?
+```
+
+---
+
 ## Instancia 4.2 — Hombre de smoking al aire libre con el casco modular (visor negro opaco)
 
 **Casco (imagen adjunta):** modular negro mate ENTERO, generado por IA, en 3/4 lateral mirando a la derecha, sobre fondo blanco, con el visor ahumado oscuro bajado. Piezas: spoiler trasero, extractor superior con insertos, tomas de aire laterales, ventilación central de la mentonera, placa del pivote del visor y goma negra del borde inferior. La imagen trae la watermark "豆包AI生成" abajo a la derecha — no pasa a la escena.
