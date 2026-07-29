@@ -1023,7 +1023,13 @@ No reemplazar las etiquetas "X40" por trazos rojos genéricos.
 
 ## Estado general del caso
 
-**Estado:** 🟡 en curso — de los 4 prompts armados hasta ahora, 4 se corrieron y se auditaron: Colorway 1 lateral (⚠️ → Intento 2 ❌ → Intento 3 🔴 pendiente), Colorway 1 trasera (⚠️ → Intento 2 🔴 pendiente), Colorway 2 lateral (✅ **aprobada**, con 3 puntos a verificar con zoom) y Colorway 2 trasera (⚠️ → Intento 2 🔴 pendiente). Faltan las 3 imágenes restantes que el usuario va a mandar (probablemente un 3er colorway) para completar el set.
+**Estado:** 🟡 en curso — las 4 vistas armadas hasta ahora se corrieron y auditaron, algunas varias veces:
+- **Colorway 1 lateral** — Intento 1 ⚠️ → Intento 2 ❌ (salió ilustración plana) → Intento 3 ⚠️ (realismo y livery resueltos, pero spoiler duplicado/con forma del mockup, sin su azul sólido, y una pieza negra inventada) → **Intento 4 🔴 pendiente de generar**.
+- **Colorway 1 trasera** — Intento 1 ⚠️ → Intento 2 ⚠️ (geometría inventada y spoiler sin azul) → **Intento 3 🔴 pendiente de generar**.
+- **Colorway 2 lateral** — Intento 1 ✅ **aprobada** (3 puntos a verificar con zoom) → **Intento 2 🔴 pendiente**, edición puntual para 2 ajustes finos (interior del rombo a negro, rojo del spoiler más intenso).
+- **Colorway 2 trasera** — Intento 1 ⚠️ (spoiler fusionado con la carcasa, detalles faltantes) → **Intento 2 🔴 pendiente de generar**.
+
+Patrón que se repite en las 4 vistas: el **spoiler** es la pieza que más falla — pierde su color propio, se le contamina la forma con la del mockup, se fusiona con la carcasa o se duplica. Faltan las imágenes restantes que el usuario va a mandar para completar el set.
 
 **Qué hay que hacer:**
 1. Correr los prompts correctivos pendientes (en sesiones aisladas cada uno) y mandar los resultados para auditoría.
