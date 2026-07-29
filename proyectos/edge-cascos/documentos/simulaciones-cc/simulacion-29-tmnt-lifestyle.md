@@ -27,6 +27,16 @@ posición exactos. No cambies absolutamente nada del diseño gráfico,
 la geometría, el color ni la textura del casco — es el mismo objeto
 3D exacto, solo cambia la escena alrededor.
 
+CRÍTICO — MISMO ÁNGULO EXACTO QUE LA FOTO DE REFERENCIA: la persona
+con el casco puesto tiene que estar fotografiada desde EXACTAMENTE el
+mismo ángulo de cámara que la imagen de referencia del casco
+(checkpoint) — mismo punto de vista, misma altura de cámara, mismo
+grado de rotación lateral. NO cambies el ángulo para "mejorar" la
+composición ni para mostrar otro lado del casco: un ángulo distinto
+al de la referencia puede hacer que se agreguen o se pierdan
+elementos del diseño o de la geometría que no se ven igual desde otro
+punto de vista. El ángulo de la referencia manda, sin excepciones.
+
 ESCENA: una persona con el casco puesto, en un set de estudio
 fotográfico tipo sesión de fotos profesional (photoshoot) — fondo con
 HUMO/NIEBLA en tonos BLANCO Y GRIS, difuminado y con volumen,
@@ -54,7 +64,10 @@ detalle del diseño gráfico de Turtles ya aplicado en el casco real. No
 agregar logos, gráficos ni texto adicional sobre el casco. No usar
 fondo de cielo, playa, ciudad ni ningún entorno que no sea el humo
 blanco/gris de estudio. No usar iluminación plana de catálogo — tiene
-que verse como una foto de sesión/photoshoot con volumen de humo.
+que verse como una foto de sesión/photoshoot con volumen de humo. No
+cambiar el ángulo de cámara respecto a la foto de referencia del
+casco, ni agregar ni quitar ningún elemento del casco por haber
+elegido un ángulo distinto.
 ```
 
 </details>
