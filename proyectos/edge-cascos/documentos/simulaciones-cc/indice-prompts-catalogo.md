@@ -313,6 +313,18 @@ Pieza de marketing/marca (no casco): banner con comilla roja, texto "DISEÑADO P
 
 ---
 
+## Casco jet arte Bob Esponja — visor transparente + quitar la línea punteada — Simulación 31
+
+Casco abierto/jet, vista frontal, calota amarillo lima con arte grafiti tipo Bob Esponja, visor grande ahumado y fondo de plantilla con formas geométricas grises tenues. Edición puntual de **2 cambios** sobre una foto ya aprobada: el visor pasa de ahumado a transparente (revelando el interior del casco **vacío**) y se elimina una guía de maquetación punteada vertical que cruza toda la imagen. Tipo A (edición puntual) con componente Tipo D (limpieza). Caso hermano de la Simulación 6a, en un archivo propio porque aquella es una auditoría de Etapa 1 y esta es una edición.
+
+[`simulacion-31-casco-bob-esponja-visor-transparente.md`](simulacion-31-casco-bob-esponja-visor-transparente.md)
+
+| Prompt / pieza | Tipo de pieza | Estado | Ubicación |
+|---|---|---|---|
+| Edición puntual — visor ahumado → transparente + quitar la línea punteada | Tipo A (edición puntual) + D (limpieza) | 🔴 bloqueado — falta confirmar qué es "el palo" antes de dar por bueno el resultado (el texto del prompt ya está listo para correr) | `simulacion-31-casco-bob-esponja-visor-transparente.md` |
+
+---
+
 ## Resumen numérico
 
 | Caso | Prompts indexados | ✅ Listo | ⚠️ Con reintento | 🔴 Bloqueado |
@@ -336,7 +348,8 @@ Pieza de marketing/marca (no casco): banner con comilla roja, texto "DISEÑADO P
 | Casco retro/redondo | 2 | 2 | 0 | 0 |
 | Casco blanco glossy (goma negra) | 1 | 1 | 0 | 0 |
 | Banner "Superar tus límites" | 1 | 1 | 0 | 0 |
-| **Total** | **72** | **55** | **10** | **4** |
+| Casco jet Bob Esponja (visor transparente) | 1 | 0 | 0 | 1 |
+| **Total** | **73** | **55** | **10** | **5** |
 
 ---
 
@@ -344,5 +357,5 @@ Pieza de marketing/marca (no casco): banner con comilla roja, texto "DISEÑADO P
 
 ---
 
-**Última actualización:** 2026-07-29 · **Stellar (Simulación 14) actualizado tras la revisión con captura nítida**: el veredicto Tipo C pasó de 10/13 a **12 MATCH / 0 MISMATCH / 0 SIN DATO** porque la pieza auditada en la primera pasada no era la ficha vigente; se reemplazaron los Prompts A y B por sus versiones definitivas (A de reproducción fiel; B sin "doble visera", sin taches y con "Material exterior ABS alta resistencia" en la 6ª celda), se marcaron los 2 anteriores como ⛔ SUPERADOS, se cerró el pendiente de certificación (#19), se agregaron 3 pendientes nuevos (tache de arte, confirmación del ítem de reemplazo, subida de archivos) y se registró en un bloque aparte la **decisión de negocio de no comunicar "doble visera"** para que una auditoría posterior no la devuelva creyendo que es un olvido.
+**Última actualización:** 2026-07-29 · agregada la sección de la **Simulación 31** (casco jet con arte grafiti tipo Bob Esponja: edición puntual de 2 cambios — visor ahumado → transparente y quitar la guía de maquetación punteada), con su prompt marcado 🔴 bloqueado hasta confirmar con el usuario qué es "el palo"; el total pasa de 72 a 73 prompts indexados. · **Stellar (Simulación 14) actualizado tras la revisión con captura nítida**: el veredicto Tipo C pasó de 10/13 a **12 MATCH / 0 MISMATCH / 0 SIN DATO** porque la pieza auditada en la primera pasada no era la ficha vigente; se reemplazaron los Prompts A y B por sus versiones definitivas (A de reproducción fiel; B sin "doble visera", sin taches y con "Material exterior ABS alta resistencia" en la 6ª celda), se marcaron los 2 anteriores como ⛔ SUPERADOS, se cerró el pendiente de certificación (#19), se agregaron 3 pendientes nuevos (tache de arte, confirmación del ítem de reemplazo, subida de archivos) y se registró en un bloque aparte la **decisión de negocio de no comunicar "doble visera"** para que una auditoría posterior no la devuelva creyendo que es un olvido.
 · *(2026-07-28, registro previo)* índice maestro armado a pedido explícito del usuario para organizar todos los prompts de las Simulaciones 10-19 en un único punto de entrada, sin modificar el contenido de ninguno de los 10 archivos originales · agregadas las secciones de Simulación 27 (casco blanco glossy, goma del borde inferior a negro) y Simulación 28 (banner de marca "Diseñado para superar tus límites").

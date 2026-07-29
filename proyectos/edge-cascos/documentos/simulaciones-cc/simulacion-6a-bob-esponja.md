@@ -4,6 +4,8 @@
 
 Caso concreto dentro del proyecto de adaptación 2D: casco EDGE (mismo molde abierto/jet usado en varios casos) con diseño tipo grafiti "Bob Esponja" (Krabby Patty, ojos inyectados, cerebro expuesto) aplicado por capas sobre la geometría real del casco.
 
+> **Caso hermano:** [Simulación 31 — visor transparente + quitar la línea punteada](simulacion-31-casco-bob-esponja-visor-transparente.md). Mismo universo gráfico (casco jet con arte grafiti tipo Bob Esponja), pero **otro tipo de trabajo**: allá es una **edición puntual de 2 cambios** sobre una foto de producto ya aprobada, y la imagen de partida **no es ninguna de las 9 inventariadas acá** (trae fondo de plantilla con formas geométricas grises y una guía de maquetación punteada). Este archivo sigue siendo la auditoría de Etapa 1 (molde vs. resultado, comparación contra el PDF hero).
+
 ### 🔴 Pendiente de tu parte
 
 ```mermaid

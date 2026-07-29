@@ -32,6 +32,7 @@
 | 28 | [Banner de marca "Diseñado para superar tus límites"](simulaciones-cc/simulacion-28-banner-superar-limites.md) | Etapa 1 — Ilustración | 🔴 pendiente de generar — mejora de calidad/nitidez, Tipo B |
 | 29 | [Casco Teenage Mutant Ninja Turtles — foto lifestyle photoshoot](simulaciones-cc/simulacion-29-tmnt-lifestyle.md) | Etapa 1 — Ilustración | 🔴 pendiente de generar — primer registro de este caso, línea de licencias de marca |
 | 30 | [Livery de carreras EDGE "Temporada 2026" — múltiples colorways](simulaciones-cc/simulacion-30-edge-racing-livery.md) | Etapa 1 — Ilustración | 🔴 pendientes de generar — molde real + colorway azul/blanco/rojo; colorways adicionales en archivos `simulacion-30b/c/d` |
+| 31 | [Casco jet arte Bob Esponja — visor transparente + quitar la línea punteada](simulaciones-cc/simulacion-31-casco-bob-esponja-visor-transparente.md) | Etapa 1 — Ilustración | 🔴 pendiente de generar · 🟡 falta confirmar qué es "el palo" — edición puntual de 2 cambios (Tipo A + D); deja lección nueva sobre revelar contenido inexistente al volver transparente una pieza |
 
 📚 **[Índice maestro de prompts del catálogo (Simulaciones 10-19)](simulaciones-cc/indice-prompts-catalogo.md)** — todos los prompts ya armados en las simulaciones 10 a 19 (incluye las 17, 18 y 19, sin fila propia en esta tabla), organizados por caso con estado y pendientes de confirmación, en un solo lugar.
 
