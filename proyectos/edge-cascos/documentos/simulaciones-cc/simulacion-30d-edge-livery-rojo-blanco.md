@@ -10,7 +10,7 @@ Caso de adaptación de diseño (Tipo A) siguiendo el mismo pipeline Agente 0 →
 - Vista lateral/3-4: casco full-face negro mate, pico frontal puntiagudo, visor transparente, correa roja, mentonera y ventilaciones en el mismo tono negro mate que la calota (sin piezas de plástico crudo visible como en otros moldes del catálogo).
 - Vista trasera: calota negra mate, borde inferior negro, sin gráficos.
 
-**Colorway — Rojo/blanco/negro EDGE:** carcasa con base roja en la parte superior de la calota y en el pico frontal, panel geométrico blanco/negro tipo hexágono en la zona central, líneas geométricas negras y blancas formando patrones angulares en la parte inferior delantera, wordmark "EDGE" en negro, tipografía bold itálica, sobre el panel blanco, visor tintado/oscuro (a diferencia del checkpoint, que tiene visor transparente — mismo cambio intencional confirmado en otros colorways de esta línea, ver `simulacion-30-edge-racing-livery.md`), textura fina tipo malla/triángulos negra en la esquina superior, pequeños acentos rojos/negros puntuales cerca de la ventilación. Vista trasera: parte superior de la calota roja, banda inferior con patrón geométrico diagonal blanco/negro, wordmark "EDGE" centrado en negro, sticker "DOT" pequeño en la parte más baja centrado.
+**Colorway — Rojo/blanco/negro EDGE:** carcasa con base roja en la parte superior de la calota y en el pico frontal, panel geométrico blanco/negro tipo hexágono en la zona central, líneas geométricas negras y blancas formando patrones angulares en la parte inferior delantera, wordmark "EDGE" en negro, tipografía bold itálica, sobre el panel blanco, visor tintado/oscuro (a diferencia del checkpoint, que tiene visor transparente — mismo cambio intencional confirmado en otros colorways de esta línea, ver `simulacion-30-edge-racing-livery.md`), textura fina tipo malla/triángulos negra en la esquina superior, pequeños acentos rojos/negros puntuales cerca de la ventilación. Vista trasera: parte superior de la calota roja, banda inferior con patrón geométrico diagonal blanco/negro, wordmark "EDGE" centrado en negro, ~~sticker "DOT" pequeño en la parte más baja centrado~~ (**eliminado por regla de negocio del caso, ver `simulacion-30-edge-racing-livery.md`**).
 
 <details><summary>Prompt — Colorway rojo/blanco/negro, vista lateral</summary>
 
@@ -48,9 +48,10 @@ carreras del colorway rojo/blanco/negro:
   blanco (mismo estilo que en la referencia de diseño).
 - Pequeños acentos rojos/negros puntuales cerca de la zona de
   ventilación.
-- Sticker "DOT" en la parte trasera inferior (se agrega en la vista
-  trasera, no en esta vista lateral si no es visible desde este
-  ángulo).
+- SIN sticker "DOT" y SIN ninguna otra marca de certificación u
+  homologación (DOT, ECE, SNELL, etiquetas normativas): regla de
+  negocio del caso, ningún render de este livery las lleva. Si la
+  ilustración de diseño muestra alguna, se omite.
 
 VISOR: tintado/oscuro, igual que en la imagen de diseño de referencia
 (cambio intencional de este colorway, confirmado como parte del
@@ -92,7 +93,10 @@ carreras del colorway rojo/blanco/negro:
 - Parte superior de la calota: roja sólida.
 - Banda inferior: patrón geométrico diagonal blanco/negro.
 - Wordmark "EDGE" en negro, centrado, sobre la banda inferior.
-- Sticker "DOT" pequeño en la parte más baja, centrado.
+- SIN sticker "DOT" y SIN ninguna otra marca de certificación u
+  homologación (DOT, ECE, SNELL, etiquetas normativas): regla de
+  negocio del caso, ningún render de este livery las lleva. Si la
+  ilustración de diseño muestra alguna, se omite.
 
 CRÍTICO — MISMO ÁNGULO EXACTO que la foto del molde negro liso vista
 trasera.
@@ -112,6 +116,8 @@ adicionales que no estén descriptos).
 
 ---
 
-**Última actualización:** 2026-07-28 · colorway rojo/blanco/negro agregado como archivo separado del caso de livery EDGE "Temporada 2026" (ver `simulacion-30-edge-racing-livery.md` para el molde real y los demás colorways). Se agrega la advertencia de abajo: los 2 prompts de este archivo todavía no tienen el "tercer eje" de realismo fotográfico.
+**Última actualización:** 2026-07-28 · colorway rojo/blanco/negro agregado como archivo separado del caso de livery EDGE "Temporada 2026" (ver `simulacion-30-edge-racing-livery.md` para el molde real y los demás colorways). Se agrega la advertencia de abajo: los 2 prompts de este archivo todavía no tienen el "tercer eje" de realismo fotográfico. Se aplica además la regla de negocio nueva del caso: sin sticker "DOT" ni marcas de certificación en ningún render (los 2 prompts de este archivo ya quedaron reescritos).
 
 > ⚠️ **Antes de correr estos prompts:** les falta el "tercer eje" de realismo fotográfico (forma / contenido gráfico / estilo de render), que se descubrió después de escribirlos. Sin él, el generador devuelve una ilustración plana y arrastra la forma del mockup en vez de la del molde real — defecto real documentado en `simulacion-30-edge-racing-livery.md` (Colorway 1, Intentos 2→3 de la lateral y 3→4 de la trasera). Antes de usarlos, copiales el bloque `CRÍTICO — EL RESULTADO ES UNA FOTOGRAFÍA, NO UNA ILUSTRACIÓN` y la versión de "DOS FUENTES, TRES ROLES" de los prompts corregidos de ese archivo.
+
+> ✅ **Regla de negocio aplicada (sticker "DOT"):** los 2 prompts de este archivo **ya fueron reescritos** — se sacó la línea `Sticker "DOT"…` de sus listas de elementos y se la reemplazó por la instrucción en negativo `SIN sticker "DOT" y SIN ninguna otra marca de certificación u homologación…`. Por decisión del usuario, **ningún render del caso de livery EDGE lleva marcas de certificación DOT/ECE/SNELL**; el wordmark "EDGE" y las etiquetas tipo "X40" **sí** se conservan. Regla completa en `simulacion-30-edge-racing-livery.md`, sección *"Regla de negocio — ningún render de este caso lleva sticker \"DOT\" ni marcas de certificación"*.

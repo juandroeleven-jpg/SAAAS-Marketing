@@ -14,6 +14,7 @@ flowchart TD
     T2["⚖️ Resolver 'Diseño modular' vs. 'Open Face'<br/>confirmado en el excel — son categorías<br/>excluyentes, no es solo falta de dato"]
     T3["🔩 Resolver el tipo de hebilla: la ficha dice<br/>'micrométrica', el excel confirma 'doble D'<br/>para Hero — son piezas físicas distintas"]
     T4["⬛ Confirmar qué va en el rectángulo negro<br/>de la ficha (mismo patrón que Vortex)"]
+    T5["🔤 Corregir 'HOMOLOGACÓN' → 'HOMOLOGACIÓN'<br/>en la ficha original del cliente y revisar si la<br/>misma falta está en las fichas de los demás modelos"]
 ```
 
 <details><summary>Claims transcritos de la ficha Hero</summary>
@@ -355,7 +356,9 @@ Los 6 datos confirmados de la columna Hero son:
 2. **"HEBILLA MICROMÉTRICA" → "HEBILLA DOBLE D".** El excel deja micrométrica vacía y confirma doble D con X. Además, en la ficha actual el ícono de hebilla micrométrica viene con una **X/tache encima** — o sea que la pieza afirma en negativo algo que tampoco está confirmado. Se saca el tache: doble D es una característica que el casco **sí** tiene.
 3. **"DOT FNVSS 510" → "DOT & ECE 22.06".** El excel dice "DOT & ECE 22.06" para toda la marca. "FNVSS 510" no aparece en ninguna parte del excel.
 
-<details><summary>Prompt A — Tarjeta de homologación Hero (3 ítems, certificación corregida)</summary>
+> ⚠️ **Falta de ortografía en la pieza original del cliente:** el título de la tarjeta de homologación de la ficha Hero dice **"HOMOLOGACÓN"**, sin la **I** — lo correcto es **"HOMOLOGACIÓN"**. El error **no es del generador**: viene de la imagen de referencia original, y el generador se limitó a copiarla fielmente (ver Intento 1, defecto 5). Ya quedó corregido en el Prompt A del Intento 2. **Pendiente de revisar:** como estas fichas se arman sobre un template maestro compartido, es muy probable que la misma falta esté replicada en las fichas de **todos los demás modelos del catálogo** (Kratos, Vortex, Shanghai, Stellar, Shift, Evolution 929, Carbex...) — hay que revisarlas una por una y corregir el template, no solo la ficha de Hero. Es el mismo tipo de defecto sistémico que el rectángulo negro recurrente.
+
+<details><summary>Prompt A — Intento 1 (corrido, falló en layout — reemplazado por el Intento 2 de abajo)</summary>
 
 ```
 Diseñá la tarjeta de HOMOLOGACIÓN del casco EDGEPRO HERO (open face /
@@ -416,13 +419,222 @@ PROHIBIDO ABSOLUTO:
 
 </details>
 
-<details><summary>Prompt B — Grid de íconos Hero (3 ítems, 1 fila x 3 columnas)</summary>
+### Prompt A — Intento 1 — resultado auditado
+
+**Estado:** ⚠️ Falló — **el contenido salió perfecto, falló exclusivamente el LAYOUT.**
+
+**Qué salió bien (y no es poco — el objetivo de datos se cumplió al 100%):**
+
+- **Certificación corregida.** El banner negro dice **"DOT"** en grande y debajo **"& ECE 22.06"**. **"FNVSS 510" no aparece en ninguna parte** de la pieza. El bloque `CRÍTICO` que ordenaba reemplazar el texto de la referencia funcionó — es el error duro más importante de los 3 y quedó resuelto.
+- **Los 3 ítems son los correctos y en el orden pedido:** LINER DESMONTABLE Y LAVABLE / KIT DE MECANISMO VISOR / CANAL PARA LENTES.
+- **No inventó ítems de más.** No apareció ningún 4°, 5°, 6° ni 7° ítem para "completar" la tarjeta — ni siquiera reciclando alguno de los 4 de la referencia que el prompt prohibía. El bloque `CRÍTICO — SON 3 ÍTEMS, NO 7` funcionó.
+- **Paleta respetada:** negro / gris claro / blanco, sin colores agregados.
+- **Estructura general correcta:** franja de título arriba, banner negro debajo, zona gris con la lista abajo.
+- **Sin rectángulos negros de relleno** fuera del banner de certificación, y sin íconos ni logos (la tarjeta es solo texto, como se pidió).
+
+O sea: los ejes de **dato**, **contenido de texto** y **paleta** están resueltos. Lo que falló es **cómo se dispone ese contenido sobre el lienzo**.
+
+**Qué falló (5 defectos):**
+
+| # | Defecto | Qué se ve en el resultado | Qué debería verse (imagen de referencia) | Causa raíz |
+|---|---|---|---|---|
+| 1 | 🔴 **Cambió la relación de aspecto — la tarjeta salió estirada** | Lienzo de aprox. **415 × 1024 px**, relación cercana a **1 : 2,47**. La tarjeta quedó notoriamente más alta y angosta que el original. | Lienzo vertical angosto de aprox. **264 × 527 px**, relación aproximada **1 : 2**. | **Es el defecto principal y la causa raíz de los defectos 2 y 3.** El prompt declaraba la fidelidad de lienzo **solo en palabras** ("el MISMO ancho y alto en píxeles que la referencia", "sin estirar y sin cambiar la relación de aspecto") pero **nunca en números**, y al mismo tiempo le daba **permiso explícito para redistribuir**: *"Redistribuí la zona gris completa entre los 3 ítems"*. Con **menos ítems que la referencia** (3 en vez de 7), esas dos instrucciones entran en conflicto y el generador resolvió el conflicto **conservando el alto de bloque por ítem** y **haciendo crecer el lienzo**, en vez de conservar el alto del lienzo y hacer crecer el aire por ítem. Nunca se le dijo lo único que desambigua: **el lienzo es una CONSTANTE y el reparto es la VARIABLE** — bajar la cantidad de ítems no cambia las dimensiones de la tarjeta. |
+| 2 | 🔴 **Los separadores dejaron de ser líneas y se volvieron bandas** | Entre ítem e ítem hay **bandas horizontales gruesas de ancho completo**, de un gris apenas distinto al del fondo, que cortan la tarjeta en tres bloques macizos. Cambió el elemento gráfico: de "separador discreto" a "divisor de sección". | Un **guion / línea horizontal muy fina, gris, CORTA y CENTRADA**, que ocupa solo una fracción chica del ancho de la tarjeta y **no llega a los bordes**. Es casi un guion largo, no una barra. | El prompt describía el elemento **solo con un adjetivo**: *"línea horizontal fina gris"*. **Un elemento gráfico chico descrito solo con adjetivos no sobrevive** a la generación: "fina" es relativo y no dice nada del **largo**, ni de la **posición**, ni de si toca o no los bordes. Sin geometría declarada (grosor en px, largo como fracción del ancho, centrado, sin llegar a los bordes), el generador lo reinterpretó como el elemento que le resultaba más natural dado el nuevo lienzo estirado: un divisor de sección de ancho completo. Es pariente de la lección de la flecha roja fina de [`simulacion-30`](simulacion-30-edge-racing-livery.md) (un detalle fino necesita declarar contra qué contrasta), pero acá el eje que faltó no es el **contraste de color** sino la **geometría**. |
+| 3 | 🔴 **Espaciado desmesurado — la tarjeta se lee vacía** | Cada ítem queda **flotando en el centro de un bloque enorme de gris vacío**. El aire entre ítems es varias veces mayor que en la referencia. La pieza se lee como 3 secciones casi vacías, no como una lista. | Ritmo vertical **compacto**: los 7 ítems llenan la zona gris con poco aire entre uno y otro, agrupados como una lista. | Derivado del defecto 1, pero con su propio agujero de texto. El prompt pedía *"espaciado uniforme"* y *"redistribuí la zona gris completa entre los 3 ítems"*, y el generador **cumplió eso al pie de la letra** — el espaciado *es* uniforme. El problema es que "uniforme" solo fija que los huecos sean **iguales entre sí**, y **no pone ningún techo**: nunca se dijo cuánto aire es demasiado, ni contra qué medirlo. Faltaba una **referencia concreta de densidad** (por ejemplo, que el bloque de los 3 ítems ocupe una proporción del alto parecida a la que ocupan los 7 de la referencia, con los ítems agrupados y el aire repartido, en vez de un ítem por bloque). |
+| 4 | 🔴 **Artefacto decorativo espurio** | Abajo a la derecha, sobre la zona gris, aparece un **destello / estrella blanca de cuatro puntas** que no existe en la referencia ni fue pedido en ninguna parte. | Zona gris limpia, sin ningún elemento decorativo. | El `PROHIBIDO ABSOLUTO` del prompt enumeraba prohibiciones **de contenido** (no agregar ítems, no mostrar "FNVSS 510", no poner rectángulos negros, no agregar íconos ni logos) pero **no cubría los adornos gráficos genéricos** — destellos, estrellas, brillos, sparkles. Es un relleno decorativo típico de generador cuando le queda **superficie vacía** que llenar: el defecto 3 le creó el espacio y la falta de prohibición explícita le dio permiso. Se combate igual que el conteo forzado de celdas del Tipo B: nombrando el elemento prohibido, no confiando en que "no se pidió" alcance. |
+| 5 | 🟡 **Falta de ortografía heredada: "HOMOLOGACÓN"** | El título de la franja superior dice **"HOMOLOGACÓN"**, sin la **I**. | **"HOMOLOGACIÓN"**, completo. | **El error no es del generador: viene de la imagen de referencia original del cliente**, y el generador la copió fielmente — lo cual, en sí mismo, es el comportamiento correcto para una pieza Tipo B. El agujero del prompt es otro: **el Bloque 1 (la franja de título) nunca se describió**. El prompt declaraba *"la estructura de 2 bloques apilados"* (banner negro + zona gris) y se saltaba la franja de título de arriba, así que sobre ese bloque el generador no tenía ninguna instrucción y lo replicó tal cual, con la falta incluida. Esto viola el ítem del checklist Tipo B *"cada bloque jerárquico de la pieza descrito por separado"*, que ya existía y no se aplicó a este prompt. **Ver la advertencia sobre la falta en la pieza original, arriba de esta sección.** |
+
+**Diagnóstico general del intento:** este intento separa con una claridad poco común los dos ejes de una pieza Tipo B. El eje de **contenido** —qué dice la tarjeta, con qué datos, con qué correcciones respecto de la ficha original— salió **impecable**: los bloques `CRÍTICO` que hablaban de texto (la certificación, los 3 ítems, la prohibición de inventar ítems) funcionaron todos. El eje de **layout** falló entero, y falló por una razón común a los 3 defectos duros: **el prompt describió el lienzo y sus elementos con adjetivos en vez de con números y geometría**. "Mismo ancho y alto en píxeles", "línea fina gris", "espaciado uniforme" son formulaciones que suenan precisas pero no lo son: ninguna sobrevive al momento en que el generador tiene que decidir **cuánto** exactamente. Y encima el prompt contenía una **contradicción activa** —fidelidad de lienzo + permiso de redistribución— que, en una pieza con **menos elementos que la referencia**, obliga al generador a elegir cuál de las dos gana; eligió mal porque nunca se le dijo cuál era la constante. Se registran **dos lecciones generalizables** en el checklist Tipo B de [`orquestacion-agentes-paralelos.md`](../orquestacion-agentes-paralelos.md): (a) cuando una pieza reproduce un layout fijo con **menos elementos** que la referencia, hay que declarar que el **lienzo es una constante y el reparto es la variable**; (b) **un elemento gráfico chico descrito solo con adjetivos no sobrevive** — hay que darle grosor, largo relativo y posición.
+
+**Qué hay que hacer:** correr el **Intento 2** de abajo, que conserva palabra por palabra todo lo que funcionó (certificación, 3 ítems, prohibiciones de contenido) y reescribe entero el tratamiento del lienzo, los separadores y el ritmo vertical.
+
+### Prompt A — Intento 2 — layout declarado en números y geometría
+
+<details><summary>Prompt A corregido — Tarjeta de homologación Hero (listo para copiar/pegar en Nano Banana Pro)</summary>
+
+```
+Diseñá la tarjeta de HOMOLOGACIÓN del casco EDGEPRO HERO (open face /
+tipo jet), reproduciendo el layout de la imagen de referencia adjunta.
+Es una reproducción de un layout fijo: lo ÚNICO que cambia respecto de
+la referencia es QUÉ DICE la lista y CUÁNTOS ítems tiene. Todo lo demás
+—dimensiones, proporciones, tipografía, paleta, separadores— se
+reproduce igual.
+
+CRÍTICO — EL LIENZO ES UNA CONSTANTE, NO SE ESTIRA:
+- El lienzo final tiene que tener EXACTAMENTE el mismo ancho y el mismo
+  alto en píxeles que la imagen de referencia adjunta. La referencia es
+  un rectángulo vertical angosto con una relación de aspecto de
+  aproximadamente 1 : 2 (el alto es aproximadamente el DOBLE del ancho:
+  del orden de 264 px de ancho por 527 px de alto). El resultado tiene
+  que dar esa misma relación: alto ÷ ancho ≈ 2.
+- ESTA TARJETA TIENE 3 ÍTEMS Y LA REFERENCIA TIENE 7. BAJAR DE 7 ÍTEMS
+  A 3 NO AGRANDA LA TARJETA. El alto total del lienzo es EXACTAMENTE EL
+  MISMO con 7 ítems que con 3. Lo único que cambia al haber menos ítems
+  es CUÁNTO AIRE HAY ENTRE ELLOS dentro de ese mismo alto — nunca el
+  tamaño del lienzo.
+- Pensalo así: el lienzo es una CONSTANTE, el reparto interno es la
+  VARIABLE. NO conserves el alto de bloque por ítem de la referencia y
+  hagas crecer el lienzo. Hacé exactamente lo contrario: conservá el
+  alto del lienzo y repartí adentro.
+- ATENCIÓN, ESTE ERROR YA PASÓ EN UN INTENTO ANTERIOR DE ESTA MISMA
+  TARJETA: el resultado salió de aproximadamente 415 x 1024 px, o sea
+  una relación de 1 : 2,47 en vez de 1 : 2 — una tarjeta claramente
+  ESTIRADA hacia abajo, más alta y más angosta que la referencia. NO LO
+  REPITAS.
+
+PROPORCIONES INTERNAS — 3 BLOQUES APILADOS, DE ARRIBA HACIA ABAJO:
+
+BLOQUE 1 — FRANJA DE TÍTULO (arriba de todo, angosta, fondo GRIS CLARO):
+- Una sola línea de texto: "HOMOLOGACIÓN", en negro, bold, MAYÚSCULAS,
+  centrada.
+- OJO CON LA ORTOGRAFÍA: la palabra correcta es "HOMOLOGACIÓN", con
+  la letra I entre la C y la O finales, y con tilde en la O.
+  H-O-M-O-L-O-G-A-C-I-Ó-N. La imagen de referencia adjunta tiene una
+  FALTA DE ORTOGRAFÍA en esa palabra (le falta la I y dice
+  "HOMOLOGACÓN"): NO copies esa falta, escribila bien.
+- Es una franja angosta: ocupa poco alto, solo lo necesario para el
+  texto más un margen chico arriba y abajo.
+
+BLOQUE 2 — BANNER NEGRO (debajo del título, ancho completo del lienzo):
+- Rectángulo sólido NEGRO que ocupa TODO el ancho del lienzo, de borde
+  a borde, y aproximadamente el 15 % DEL ALTO TOTAL de la tarjeta.
+- Adentro, texto "DOT" en BLANCO, muy grande y bold, centrado.
+- Debajo de "DOT", dentro del mismo banner negro, en blanco, en cuerpo
+  bastante más chico y con las letras espaciadas: "& ECE 22.06".
+- CRÍTICO: la imagen de referencia dice "FNVSS 510" debajo del DOT. Ese
+  texto NO se copia. La certificación correcta de este casco, según el
+  excel maestro, es "DOT & ECE 22.06". Reemplazalo.
+
+BLOQUE 3 — LISTA DE ÍTEMS (fondo GRIS CLARO, todo el alto restante):
+Lista de EXACTAMENTE 3 ítems, en este orden, en MAYÚSCULAS, negro,
+bold, centrados horizontalmente, cada uno en una o dos líneas de texto:
+1. LINER DESMONTABLE Y LAVABLE
+2. KIT DE MECANISMO VISOR
+3. CANAL PARA LENTES
+
+CRÍTICO — LOS SEPARADORES SON LÍNEAS FINAS, NO BANDAS:
+Entre un ítem y el siguiente va un separador. Su geometría exacta:
+- Es un GUION / LÍNEA HORIZONTAL de 1 a 2 PÍXELES de grosor. Fino como
+  un trazo de lápiz, no como una barra.
+- Es de color GRIS medio, apenas más oscuro que el fondo gris claro,
+  solo lo suficiente para que se vea.
+- Es CORTO: ocupa aproximadamente entre un 15 % y un 25 % del ancho de
+  la tarjeta, NO MÁS. NO llega a los bordes laterales: queda mucho
+  espacio gris vacío a su izquierda y a su derecha.
+- Va CENTRADO horizontalmente, exactamente en el eje vertical de la
+  tarjeta, alineado con el centrado del texto.
+- Son EXACTAMENTE 2 separadores: uno entre el ítem 1 y el 2, y otro
+  entre el ítem 2 y el 3. No va separador arriba del ítem 1 ni debajo
+  del ítem 3.
+- PROHIBIDO convertirlos en bandas o franjas horizontales de ancho
+  completo, en barras gruesas, en divisores de sección, o en bloques de
+  fondo de un tono de gris distinto al del resto de la zona gris. El
+  separador es un DETALLE DISCRETO dentro de un fondo gris continuo, no
+  un elemento que parta la tarjeta en secciones.
+- El fondo gris claro del Bloque 3 es UNO SOLO y CONTINUO de arriba
+  abajo: los separadores se dibujan encima, no lo dividen en zonas de
+  distinto tono.
+
+CRÍTICO — RITMO VERTICAL: AIRE PAREJO PERO ACOTADO:
+- El espacio vertical entre los 3 ítems tiene que ser EXACTAMENTE IGUAL
+  entre el par 1-2 y el par 2-3, y los márgenes superior e inferior de
+  la lista también parejos entre sí.
+- PERO ACOTADO: la tarjeta NO puede leerse VACÍA. Medilo contra la
+  referencia: en la referencia, el bloque que va desde el primer ítem
+  hasta el último ocupa casi toda la zona gris, con los 7 ítems
+  agrupados y compactos. Acá tiene que pasar lo mismo: los 3 ítems
+  forman un GRUPO compacto que ocupa una proporción parecida de la zona
+  gris, con el aire repartido entre ellos.
+- LO QUE NO QUIERO: cada ítem flotando solo en el centro de un bloque
+  enorme de gris vacío, como si la tarjeta estuviera dividida en 3
+  secciones casi vacías. Eso ya pasó en un intento anterior y está mal.
+- Es una LISTA, se tiene que leer como una lista: 3 renglones cercanos
+  entre sí, separados por su guion fino, no 3 secciones independientes.
+
+QUÉ SE CONSERVA IDÉNTICO A LA REFERENCIA:
+- La tipografía: sans serif condensada, MAYÚSCULAS, bold, texto blanco
+  sobre el negro y texto negro sobre el gris.
+- La paleta: NEGRO / GRIS CLARO / BLANCO, nada más.
+- El centrado del texto y los márgenes laterales.
+- El orden de los 3 bloques apilados y su proporción relativa.
+
+CRÍTICO — SON 3 ÍTEMS, NO 7:
+La referencia tiene 7 ítems. Esta tarjeta tiene 3. Los otros de la
+referencia (VISERA ANTI SCRATCH, PREPARADO PARA ANTI EMPAÑANTE, SISTEMA
+DE EMERGENCIA DE LIBERACIÓN RÁPIDA, SISTEMA DE LIBERACIÓN RÁPIDA DEL
+VISOR, CUBRE BARBILLA, CUBRE NARIZ) NO se incluyen porque no están
+confirmados para este modelo. No los agregues, no los reemplaces por
+otros, no rellenes con ítems inventados.
+
+PROHIBIDO ABSOLUTO:
+- NO cambiar la relación de aspecto del lienzo. Nada de estirar hacia
+  abajo, nada de agrandar la tarjeta porque tiene menos ítems.
+- NO convertir los separadores en bandas horizontales de ancho
+  completo, barras gruesas ni bloques de fondo de otro tono.
+- NO dejar la tarjeta vacía: nada de un ítem flotando por bloque con
+  huecos enormes de gris.
+- NO agregar destellos, estrellas, brillos, sparkles, chispas, líneas
+  decorativas, degradés, sombras, texturas, marcos, íconos, logos ni
+  NINGÚN elemento gráfico que no esté en la imagen de referencia. En un
+  intento anterior apareció una estrella blanca de cuatro puntas abajo
+  a la derecha, sobre el gris: eso NO existe en la referencia y NO debe
+  aparecer. Esta tarjeta es SOLO texto sobre bloques de color plano.
+- NO escribir "HOMOLOGACÓN" (sin la I). Se escribe "HOMOLOGACIÓN".
+- NO mostrar "FNVSS 510" en ninguna parte.
+- NO agregar un 4°, 5°, 6° ni 7° ítem para "completar" la tarjeta.
+- NO usar rectángulos negros sólidos como relleno en ningún lugar fuera
+  del banner de certificación.
+- NO cambiar la paleta (negro / gris claro / blanco).
+
+VERIFICACIÓN FINAL — ANTES DE ENTREGAR, CHEQUEÁ ESTAS 6 COSAS:
+1. ¿El ALTO dividido el ANCHO del lienzo da aproximadamente 2, igual
+   que la referencia? Si da 2,4 o más, la tarjeta está ESTIRADA:
+   rehacela con el alto correcto.
+2. ¿Los separadores son GUIONES FINOS, CORTOS Y CENTRADOS, que no
+   llegan a los bordes — y no bandas horizontales de ancho completo?
+3. ¿Hay algún elemento decorativo (destello, estrella, brillo, línea,
+   marco) que NO esté en la imagen de referencia? Si lo hay, sacalo.
+4. ¿El título dice "HOMOLOGACIÓN" completo, con la I y con la tilde?
+5. ¿El banner negro dice "DOT" y "& ECE 22.06", y en ninguna parte de
+   la tarjeta aparece "FNVSS 510"?
+6. ¿Los 3 ítems se leen como una LISTA compacta y no como 3 secciones
+   separadas por huecos vacíos?
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría, chequeando en este orden: (1) relación de aspecto ≈ 1 : 2; (2) separadores como guiones finos centrados; (3) ausencia de adornos inventados; (4) "HOMOLOGACIÓN" bien escrito; (5) que no se haya perdido nada de lo que el Intento 1 ya había logrado bien (certificación, 3 ítems correctos, paleta).
+
+<details><summary>Prompt B — Grid de íconos Hero (3 ítems, 1 fila x 3 columnas) — corregido por analogía con el Intento 2 del Prompt A</summary>
 
 ```
 Diseñá una tarjeta de especificaciones técnicas en formato GRID DE
 ÍCONOS de UNA FILA x TRES COLUMNAS (3 celdas en total), resolución 4K,
 fondo blanco liso o transparente, para el casco EDGEPRO HERO
 (open face / tipo jet).
+
+CRÍTICO — EL LIENZO NO SE ESTIRA NI SE INFLA POR TENER MENOS CELDAS:
+- Esta pieza tiene 3 celdas y la referencia tiene 6. BAJAR DE 6 CELDAS
+  A 3 NO AGRANDA LA PIEZA NI AGRANDA LAS CELDAS.
+- El ANCHO del lienzo es el MISMO que el de la imagen de referencia
+  adjunta, en píxeles, con los MISMOS márgenes laterales.
+- Cada celda conserva el MISMO tamaño y las MISMAS proporciones que una
+  celda de la referencia: mismo tamaño de octágono, mismo grosor de
+  trazo, mismo cuerpo de texto. Las celdas NO se agrandan para
+  "aprovechar" el espacio que dejaron las que no están.
+- Como la referencia tiene 3 filas y esta pieza tiene 1 sola, el lienzo
+  resulta PROPORCIONALMENTE MÁS BAJO que el de la referencia
+  (aproximadamente el alto de una fila más los márgenes superior e
+  inferior de la referencia), NUNCA más alto y NUNCA estirado.
+- PROHIBIDO conservar el alto completo de la referencia y dejar la
+  única fila flotando en el medio rodeada de vacío. PROHIBIDO estirar
+  el lienzo en cualquier dirección. PROHIBIDO agrandar los íconos o el
+  texto para rellenar superficie sobrante.
+- El lienzo es una CONSTANTE derivada de la referencia; lo único que
+  cambia por tener menos celdas es CUÁNTAS FILAS hay, no el tamaño de
+  la pieza ni el de sus elementos.
 
 CRÍTICO — SON 3 CELDAS, NI UNA MÁS:
 La imagen de referencia adjunta tiene un grid de 6 celdas (2 columnas
@@ -480,13 +692,30 @@ PROHIBIDO ABSOLUTO:
   las 3 celdas son características que el casco SÍ tiene.
 - No dejar celdas decorativas vacías ni forzar el layout 2x3 de la
   referencia con huecos.
+- No estirar el lienzo ni agrandar celdas, íconos o texto porque hay
+  menos ítems que en la referencia.
+- No agregar destellos, estrellas, brillos, degradés, marcos ni ningún
+  elemento decorativo que no esté en la imagen de referencia.
+
+VERIFICACIÓN FINAL — ANTES DE ENTREGAR, CHEQUEÁ ESTAS 4 COSAS:
+1. ¿Hay EXACTAMENTE 3 celdas, en 1 sola fila, sin ninguna repetida?
+2. ¿El ancho del lienzo y los márgenes laterales coinciden con los de
+   la referencia, y el alto es el de UNA fila (no el de tres, ni un
+   lienzo estirado)?
+3. ¿Los octágonos, los trazos y el cuerpo de texto tienen el mismo
+   tamaño que en la referencia, sin haberse agrandado para rellenar?
+4. ¿Hay algún elemento decorativo o alguna X/tache que no corresponda?
 ```
 
 </details>
 
-**Estado:** 🔴 los 2 prompts listos, pendientes de generar.
+**Corrección preventiva del Prompt B, por analogía con el fallo del Prompt A (2026-07-29):** el Prompt B **todavía no se corrió en esta versión**, pero tenía **exactamente el mismo agujero** que hizo fallar al Prompt A: baja la cantidad de elementos respecto de la referencia (de 6 celdas a 3) y **no declaraba nada sobre el lienzo** — ni ancho, ni alto, ni qué pasa con las dimensiones cuando sobran celdas. Aplicando el ítem *"toda regla nueva se propaga en el acto a los prompts de TODAS las vistas y piezas del mismo caso"* del checklist Tipo A de [`orquestacion-agentes-paralelos.md`](../orquestacion-agentes-paralelos.md), se le agregó **antes de que falle** un bloque `CRÍTICO — EL LIENZO NO SE ESTIRA NI SE INFLA POR TENER MENOS CELDAS`, dos prohibiciones nuevas en el `PROHIBIDO ABSOLUTO` (no estirar/agrandar por tener menos ítems, no agregar decoración inventada) y un bloque de `VERIFICACIÓN FINAL` de 4 chequeos.
 
-**Qué hay que hacer:** correr los dos y mandar los resultados para auditoría. Chequeos concretos al recibirlos: (a) que el banner diga "DOT & ECE 22.06" y en ningún lado "FNVSS 510"; (b) que la lista tenga 3 ítems con espaciado parejo y sin hueco vacío abajo; (c) que el grid tenga 3 celdas y ninguna repetida; (d) que el ícono de tipo de casco muestre un jet sin mentonera; (e) que el ícono de hebilla sea de dos anillas en D y **sin tache**.
+**Diferencia importante entre las dos piezas, que el bloque tiene en cuenta:** en la **tarjeta A** el lienzo es literalmente una constante — es la misma lista vertical con menos renglones, así que ancho y alto no se mueven y lo único que cambia es el aire entre ítems. En el **grid B** la grilla sí cambia de forma (2x3 → 1x3), así que la constante es el **ancho del lienzo**, los **márgenes** y el **tamaño de cada celda**, y el alto baja proporcionalmente al pasar de 3 filas a 1. Lo que está prohibido en los dos casos es lo mismo: **estirar el lienzo o inflar los elementos porque hay menos contenido**.
+
+**Estado:** 🔴 los 2 prompts listos, pendientes de generar — el Prompt A en su **Intento 2** (el Intento 1 se corrió y falló solo en layout, ver auditoría arriba), el Prompt B en su versión corregida por analogía, nunca corrido.
+
+**Qué hay que hacer:** correr los dos y mandar los resultados para auditoría. Chequeos concretos al recibirlos: (a) que el banner diga "DOT & ECE 22.06" y en ningún lado "FNVSS 510"; (b) que la tarjeta A dé **alto ÷ ancho ≈ 2** y no salga estirada; (c) que los separadores de la tarjeta A sean **guiones finos, cortos y centrados**, no bandas de ancho completo; (d) que la lista tenga 3 ítems agrupados como lista, sin bloques enormes de gris vacío; (e) que el título diga **"HOMOLOGACIÓN"** completo, con la I; (f) que no haya **ningún destello, estrella ni adorno** que no esté en la referencia, en ninguna de las dos piezas; (g) que el grid tenga 3 celdas en 1 fila, ninguna repetida, con el ancho y el tamaño de celda de la referencia; (h) que el ícono de tipo de casco muestre un jet sin mentonera; (i) que el ícono de hebilla sea de dos anillas en D y **sin tache**.
 
 **Lo que desbloquea tarjetas más completas:** los 5 datos que hay que pedirle al fabricante siguen siendo los mismos (visera anti scratch, preparado para anti empañante, ERS, sistema de liberación rápida del visor, cubre barbilla / cubre nariz). Con esos cargados en el excel, la lista vuelve a 6-7 ítems y el grid a 2x3.
 
@@ -854,3 +1083,5 @@ lograrse únicamente a partir de este texto.
 **Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación + adaptación de prompts), corridos en esta sesión a pedido explícito de auditar el tercer caso del catálogo (Hero). Sub-caso de foto lifestyle: intento 1 auditado con 4 defectos (formato, ángulo, degradé de color, forma de ventilación), intento 2 con prompt corregido, intento 4 nocturno confirmado por el usuario como muy bueno, intento 5 variante diurna del mismo prompt. Corrección posterior: una lectura errónea de una captura de excel de baja resolución había marcado "Cubre barbilla" y "Cubre nariz" como confirmados para Hero; una captura nítida posterior mostró que ambas celdas están vacías — se revirtió a SIN DATO (veredicto de vuelta en 3 MATCH · 1 MISMATCH · 9 SIN DATO), el Prompt A vuelve a quedar bloqueado y su versión de 3 ítems quedó marcada como obsoleta. Nueva actualización: el Prompt B (grid de íconos, 4 ítems) se corrió y falló — salió un grid de 6 celdas (2x3) con "Kit de mecanismo visor" y "Hebilla doble D" duplicados con ícono distinto en cada repetición, a pesar de la advertencia explícita del prompt. Se documentó como Intento 1 y se agregó el Intento 2 con el prompt reforzado, nombrando explícitamente los 2 ítems que se duplicaron, pendiente de correr.
 
 **2026-07-29 —** a pedido explícito del usuario ("los dos prompts para arreglar esos dos objetos del Hero") se armó la **versión definitiva de las 2 tarjetas con reparto 3 + 3**, que destraba el Prompt A sin afirmar nada sin respaldo: en vez de tratar cada tarjeta por separado (lo que dejaba a la lista con 1 solo ítem confirmado), se reparten los 6 datos confirmados de la columna Hero entre las dos, sin repetir ninguno — igual que la ficha original, cuyos dos bloques son conjuntos disjuntos. Lista: liner desmontable y lavable / kit de mecanismo visor / canal para lentes. Grid: open face / espacio para Bluetooth / hebilla doble D. Se corrigen los 3 errores duros: "diseño modular" → "open face", "hebilla micrométrica" (con tache) → "hebilla doble D" (sin tache), "DOT FNVSS 510" → "DOT & ECE 22.06". Quedan obsoletos el Prompt A de 3 ítems (dato erróneo) y el Prompt B de 4 ítems (repetía ítems de la lista). Además se corrigió la transcripción del excel: **Master Box e Inner Box están vacías para Hero**, no con X — la columna Hero tiene exactamente 5 celdas con X, como ya decía la nota de corrección, y la tabla de transcripción se había quedado desalineada con ese conteo.
+
+**2026-07-29 (segunda pasada) —** se corrió el **Prompt A definitivo** (tarjeta de homologación, 3 ítems) y **falló, pero solo en el layout**. Todo el eje de contenido salió impecable: el banner dice "DOT" + "& ECE 22.06" y **"FNVSS 510" no aparece en ninguna parte** (la corrección de certificación, que era el error duro más importante, quedó resuelta), los 3 ítems son los correctos y en el orden pedido, no se inventó ningún ítem de más y la paleta negro / gris claro / blanco se respetó. Lo que falló fueron **5 defectos de layout**: (1) **la relación de aspecto cambió** — salió de aprox. 415 x 1024 px, o sea 1 : 2,47, contra el 1 : 2 de la referencia (aprox. 264 x 527 px): la tarjeta quedó estirada verticalmente; (2) **los separadores dejaron de ser líneas finas** y se convirtieron en bandas horizontales gruesas de ancho completo que parten la tarjeta en tres bloques macizos, cuando en la referencia son un guion gris fino, corto, centrado y que no llega a los bordes; (3) **espaciado desmesurado** — cada ítem quedó flotando en el centro de un bloque enorme de gris vacío y la tarjeta se lee vacía; (4) **artefacto espurio** — apareció un destello / estrella blanca de cuatro puntas abajo a la derecha, que no existe en la referencia ni fue pedido; (5) **falta de ortografía heredada** — el título dice "HOMOLOGACÓN", sin la I. La **causa raíz del defecto principal** es que el prompt declaraba la fidelidad de lienzo **en palabras pero no en números** ("el MISMO ancho y alto en píxeles que la referencia") y al mismo tiempo le daba **permiso explícito para redistribuir** ("redistribuí la zona gris completa entre los 3 ítems"): con menos ítems que la referencia, esas dos instrucciones se contradicen, y el generador resolvió el conflicto **conservando el alto de bloque por ítem y estirando el lienzo**, en vez de conservar el alto del lienzo y repartir el aire adentro. Nunca se le dijo que **el lienzo es una constante y el reparto es la variable**. La **causa raíz del defecto 2** es distinta y vale por sí sola: un **elemento gráfico chico descrito solo con un adjetivo** ("línea horizontal fina gris") **no sobrevive** — hace falta declarar su geometría (grosor en px, largo como fracción del ancho, centrado, que no llega a los bordes). El **defecto 5 no es del generador**: la falta viene de la **imagen de referencia original del cliente**, que el generador copió fielmente; el agujero del prompt fue no describir el Bloque 1 (la franja de título), que quedó sin instrucción y se replicó tal cual. Se escribió el **Intento 2 del Prompt A**, con bloques nuevos `CRÍTICO — EL LIENZO ES UNA CONSTANTE, NO SE ESTIRA` (relación 1 : 2 declarada en números, "bajar de 7 ítems a 3 NO agranda la tarjeta", y el defecto real nombrado), `CRÍTICO — LOS SEPARADORES SON LÍNEAS FINAS, NO BANDAS` (guion de 1-2 px, 15-25 % del ancho, centrado, sin llegar a los bordes, exactamente 2), proporciones internas con los 3 bloques descritos por separado (franja de título con "HOMOLOGACIÓN" bien escrito / banner negro al 15 % del alto / zona gris con la lista), `CRÍTICO — RITMO VERTICAL: AIRE PAREJO PERO ACOTADO` (medido contra la densidad de los 7 ítems de la referencia), un `PROHIBIDO ABSOLUTO` ampliado (nada de destellos, estrellas ni adornos; nada de "HOMOLOGACÓN"; nada de cambiar la relación de aspecto) y una `VERIFICACIÓN FINAL` de 6 chequeos concretos. Se corrigió además el **Prompt B por analogía y antes de que falle**: baja de 6 celdas a 3 y no declaraba nada sobre el lienzo, así que se le agregó su propio bloque `CRÍTICO — EL LIENZO NO SE ESTIRA NI SE INFLA POR TENER MENOS CELDAS` (ancho, márgenes y tamaño de celda constantes; el alto baja proporcionalmente al pasar de 3 filas a 1; prohibido inflar íconos o texto para rellenar), dos prohibiciones nuevas y una `VERIFICACIÓN FINAL` de 4 chequeos. Las **2 lecciones generalizables** —el lienzo como constante cuando hay menos elementos que la referencia, y la geometría obligatoria de los elementos gráficos chicos— se registran como ítems nuevos del checklist **Tipo B** en `orquestacion-agentes-paralelos.md`. Queda además un **pendiente nuevo para el usuario**: la falta de ortografía "HOMOLOGACÓN" está en la **pieza original del cliente**, así que muy probablemente esté replicada en las fichas de todos los demás modelos del catálogo — hay que revisarlas y corregir el template maestro, igual que con el rectángulo negro recurrente.
