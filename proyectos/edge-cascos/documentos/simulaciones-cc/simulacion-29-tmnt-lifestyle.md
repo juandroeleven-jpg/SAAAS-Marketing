@@ -254,6 +254,87 @@ ningún mecanismo interno adicional — es un solo visor, punto.
 2. Subir la foto real del casco Turtles como adjunto para versionarla.
 3. Confirmar si este molde es el casco físico real de la marca licenciante o solo una referencia — misma pregunta abierta que en otros casos de esta línea.
 
+### Resultado del Intento 3 — auditado: el ángulo y algunos detalles chicos del casco se desvían levemente
+
+**Estado:** ⚠️ El usuario reporta que el generador sigue tomándose "libertades" — el ángulo sale un poco distinto al de la referencia, y algunas piezas chicas del casco (no todas, solo algunas, muy puntuales) también se desvían levemente. Pedido explícito: cero libertad creativa, ni en el ángulo ni en ningún detalle del casco, por chico que sea.
+
+### Intento 4 — cero tolerancia a desvíos, ángulo y detalles chicos verificados explícitamente
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una fotografía de producto tipo lifestyle/photoshoot editorial
+en 4K, ultra nítida, formato vertical o 4:5.
+
+CRÍTICO — CERO LIBERTAD CREATIVA CON EL CASCO (defecto real detectado
+en intentos anteriores: el ángulo salió levemente distinto al de la
+referencia, y algunas piezas chicas del casco se desviaron un poco —
+no lo repitas): el casco de esta imagen tiene que ser una copia
+EXACTA, pixel a pixel en cuanto a diseño y forma, de la foto de
+referencia adjunta (checkpoint). No está permitido "interpretar",
+aproximar ni ajustar NINGÚN detalle del casco, por más chico que
+parezca — ni un tornillo, ni el borde de una pieza, ni la curvatura
+de una línea. Si tenés dudas sobre cómo se ve un detalle puntual,
+copiá exactamente lo que se ve en la foto de referencia, no lo que
+"normalmente" tendría un casco de este estilo.
+
+CRÍTICO — el casco que aparece en la imagen debe ser EXACTAMENTE el
+casco real adjunto como autoridad (checkpoint): full face, negro
+mate, con el diseño gráfico COMPLETO de "Teenage Mutant Ninja
+Turtles" ya aplicado tal cual está en la referencia. No cambies
+absolutamente nada del diseño gráfico, la geometría, el color ni la
+textura del casco.
+
+CRÍTICO — UN SOLO VISOR, NO DOBLE: el casco tiene UN ÚNICO visor, sin
+ningún segundo visor ni mecanismo adicional por dentro.
+
+CRÍTICO — VISOR COMPLETAMENTE OPACO: el único visor debe verse
+completamente OPACO y NEGRO — no se debe poder ver absolutamente nada
+por dentro del casco.
+
+CRÍTICO — ÁNGULO EXACTO, NO APROXIMADO (defecto real detectado: el
+ángulo salió "un poco" distinto, no idéntico — esto cuenta como
+error): la persona con el casco puesto tiene que estar fotografiada
+desde EXACTAMENTE el mismo ángulo de cámara que la imagen de
+referencia del casco — mismo punto de vista, misma altura de cámara,
+mismo grado de rotación lateral, mismo encuadre relativo del casco
+dentro del cuadro. "Parecido" o "similar" no alcanza — tiene que ser
+el mismo ángulo, verificable comparando lado a lado con la
+referencia. Antes de entregar el resultado, comparate mentalmente
+contra la referencia: si el ángulo o cualquier detalle del casco no
+coincide exactamente, corregilo.
+
+ESCENA: una persona con el casco puesto, en un set de estudio
+fotográfico tipo sesión de fotos profesional (photoshoot) — fondo con
+HUMO/NIEBLA en tonos BLANCO Y GRIS, difuminado y con volumen,
+iluminación de estudio dramática. Encuadre de medio cuerpo o busto,
+casco bien visible y nítido en primer plano.
+
+ILUMINACIÓN: iluminación de estudio controlada, contraluz o luz
+lateral que hace que el humo se vea volumétrico.
+
+ESTILO FOTOGRÁFICO: ultra realista, como una foto real de campaña
+publicitaria/editorial de producto.
+
+Persona modelo: sin rasgos específicos pedidos, casco puesto con el
+diseño de Turtles bien visible, rostro completamente oculto por el
+visor opaco.
+
+PROHIBIDO ABSOLUTO: no cambiar geometría, color, textura ni ningún
+detalle del diseño gráfico de Turtles, por más chico que sea. No
+"mejorar" ni "interpretar" ninguna pieza del casco a criterio propio.
+No agregar logos, gráficos ni texto adicional. No usar fondo de
+cielo, playa, ciudad. No cambiar el ángulo de cámara ni aproximarlo —
+tiene que ser el mismo exacto. No dejar el visor transparente ni
+dejar ver nada por dentro. No agregar un segundo visor.
+```
+
+</details>
+
+**Estado:** 🔴 pendiente de generar.
+
+**Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría — comparar lado a lado con la referencia el ángulo exacto y cada pieza chica del casco (tornillos, bordes, curvatura), no solo una revisión general.
+
 ---
 
-**Última actualización:** 2026-07-28 · Intento 3 agregado tras corrección del usuario: el casco NO tiene doble visor (el Intento 2 lo había pedido al revés) — se corrige a un solo visor, manteniendo la opacidad total pedida — línea de licencias de marca (Marvel/DC/Paramount).
+**Última actualización:** 2026-07-28 · Intento 4 agregado tras reporte del usuario de que el ángulo y algunos detalles chicos del casco se desviaban levemente pese al Intento 3 — se refuerza con lenguaje de "cero libertad creativa" y verificación explícita antes de entregar — línea de licencias de marca (Marvel/DC/Paramount).
