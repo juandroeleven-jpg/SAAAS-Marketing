@@ -44,32 +44,36 @@ Todo lo que quedó abierto esperando respuesta del usuario o del fabricante, jun
 18. Decidir si el grid de íconos de Shanghai queda en 4 ítems o se completa con un ítem de empaque (Master Box / Inner Box) — no hay más features físicas confirmadas disponibles.
 
 ### Stellar — [`simulacion-14-stellar-verificacion.md`](simulacion-14-stellar-verificacion.md)
-19. Completar la certificación en la ficha Stellar — falta "& ECE 22.06", solo dice "DOT FNVSS 510".
-20. Subir la ficha Stellar real y confirmar los 2 prompts corregidos antes de generar.
+19. ~~Completar la certificación en la ficha Stellar — falta "& ECE 22.06", solo dice "DOT FNVSS 510".~~ ✅ **CERRADO en la Revisión 2026-07-29**: la captura nítida muestra que la ficha vigente ya tiene el banner "DOT" + "& ECE 22.06", exactamente como el excel. La pieza con "DOT FNVSS 510" que se auditó en la primera pasada no era la ficha vigente.
+20. Sacar el **tache/X rojo del ícono de "hebilla micrométrica"** del grid del Stellar — es un defecto de **arte**, no de dato: el excel confirma la feature con X y el texto del ítem es correcto. Mismo defecto ya documentado en Vortex (Pieza 1 e Intento 1 del Prompt B) y sospechado en Kratos (#4) y Shift (#24) — **con Stellar ya son 4 modelos, tratarlo como defecto de la plantilla maestra, no de cada ficha**.
+21. Confirmar el reemplazo elegido para la 6ª celda del grid del Stellar: **"Material exterior ABS alta resistencia"** (suplente inmediato: "Interior EPS de alta resistencia"), que ocupa el lugar de la "doble visera" retirada.
+22. Subir la ficha Stellar real y el excel como adjunto real y confirmar los 2 prompts de la Revisión 2026-07-29 antes de generar.
+
+> 🟦 **Decisión de negocio registrada (Stellar) — no es un pendiente ni un mismatch:** el usuario pidió que **"DOBLE VISERA" no se comunique**, ni en la lista de homologación ni en el grid de íconos. El excel **sí la confirma con X** para este modelo, así que **no la devuelvas al grid** en una auditoría posterior creyendo que es una oportunidad no usada o un olvido: es una decisión comercial explícita. Si alguien la quiere reponer, preguntar al usuario primero.
 
 ### Shift — [`simulacion-15-shift-verificacion.md`](simulacion-15-shift-verificacion.md)
-21. Completar la certificación en la ficha Shift — falta "& ECE 22.06", solo dice "DOT FNVSS 510".
-22. Confirmar si el ícono tachado de "hebilla micrométrica" en la ficha real de Shift es intencional (comunicar "no disponible") o un reciclado de plantilla sin verificar el dato.
-23. Revisar el rectángulo negro a nivel de proceso/template — ya es el 4to caso seguido (Vortex, Hero, Shanghai, Shift), no un caso aislado.
+23. Completar la certificación en la ficha Shift — falta "& ECE 22.06", solo dice "DOT FNVSS 510".
+24. Confirmar si el ícono tachado de "hebilla micrométrica" en la ficha real de Shift es intencional (comunicar "no disponible") o un reciclado de plantilla sin verificar el dato. **Ojo — para Shift el caso es distinto del de Stellar: acá el excel marca la hebilla micrométrica como N/A, así que el tache podría ser correcto; en Stellar está confirmada con X y el tache es un defecto seguro (ver #20).**
+25. Revisar el rectángulo negro a nivel de proceso/template — ya es el 4to caso seguido (Vortex, Hero, Shanghai, Shift), no un caso aislado.
 
 ### Evolution 929 — [`simulacion-16-evolution929-verificacion.md`](simulacion-16-evolution929-verificacion.md)
-24. Subir la ficha real de Evolution 929 y el excel (tab EDGE) como adjunto real.
-25. Confirmar con el fabricante el número de norma "FNVSS 510" — el excel solo confirma "DOT", sin número específico ni ECE.
+26. Subir la ficha real de Evolution 929 y el excel (tab EDGE) como adjunto real.
+27. Confirmar con el fabricante el número de norma "FNVSS 510" — el excel solo confirma "DOT", sin número específico ni ECE.
 
 ### Casco carbono/camo sin nombre confirmado — [`simulacion-17-casco-carbono-camo.md`](simulacion-17-casco-carbono-camo.md)
-26. **Confirmar a qué modelo del catálogo corresponde este casco** — no asumido en ninguna parte de esta simulación.
-27. Subir la foto de referencia real del casco de carbono forjado como adjunto real.
+28. **Confirmar a qué modelo del catálogo corresponde este casco** — no asumido en ninguna parte de esta simulación.
+29. Subir la foto de referencia real del casco de carbono forjado como adjunto real.
 
 ### Casco flip-up 4 colores sin nombre confirmado — [`simulacion-18-casco-flipup-4-colores.md`](simulacion-18-casco-flipup-4-colores.md)
-28. **Confirmar a qué modelo del catálogo corresponde este casco** — no asumido en ninguna parte de esta simulación.
-29. Subir la foto de referencia real del casco flip-up como adjunto real.
+30. **Confirmar a qué modelo del catálogo corresponde este casco** — no asumido en ninguna parte de esta simulación.
+31. Subir la foto de referencia real del casco flip-up como adjunto real.
 
 ### Casco carbono glossy 4 colores sin nombre confirmado — [`simulacion-19-casco-carbono-glossy-4-colores.md`](simulacion-19-casco-carbono-glossy-4-colores.md)
-30. Confirmar la división de color en las 2 variantes de dos tonos (Variante 2 beige/chocolate y Variante 4 blanco/gris) — se asumió calota arriba / mentonera abajo, sin confirmación explícita del usuario.
-31. **Confirmar a qué modelo del catálogo corresponde este casco** — no asumido en ninguna parte de esta simulación.
-32. Subir la foto de referencia real del casco carbono glossy como adjunto real.
+32. Confirmar la división de color en las 2 variantes de dos tonos (Variante 2 beige/chocolate y Variante 4 blanco/gris) — se asumió calota arriba / mentonera abajo, sin confirmación explícita del usuario.
+33. **Confirmar a qué modelo del catálogo corresponde este casco** — no asumido en ninguna parte de esta simulación.
+34. Subir la foto de referencia real del casco carbono glossy como adjunto real.
 
-**Total: 32 puntos pendientes de confirmación** repartidos en los 10 casos (el detalle completo de cada uno está en la sección "🔴 Pendiente de tu parte" / "Qué hay que hacer" del archivo correspondiente).
+**Total: 34 puntos pendientes de confirmación** (33 abiertos + el #19 ya cerrado en la Revisión 2026-07-29 del Stellar) repartidos en los 10 casos (el detalle completo de cada uno está en la sección "🔴 Pendiente de tu parte" / "Qué hay que hacer" del archivo correspondiente).
 
 ---
 
@@ -120,12 +124,14 @@ Todo lo que quedó abierto esperando respuesta del usuario o del fabricante, jun
 | Prompt B — Grid de íconos Shanghai (2x2, 4/6 ítems) | Grid íconos | 🔴 bloqueado (parcial) — solo 4 de 6 ítems tienen feature física confirmada; falta decidir si se completa con un ítem de empaque o queda en 4 (ver pendiente #18) | [`simulacion-13-shanghai-verificacion.md`](simulacion-13-shanghai-verificacion.md), sección `### Prompts corregidos` |
 
 ### Stellar (Simulación 14) — Tipo C, ficha vs. excel + 4 variantes de color + foto playa
-[`simulacion-14-stellar-verificacion.md`](simulacion-14-stellar-verificacion.md)
+[`simulacion-14-stellar-verificacion.md`](simulacion-14-stellar-verificacion.md) — ✅ **12/12 tras la Revisión 2026-07-29 con captura nítida** (antes 10/13; la pieza de la 1ª pasada no era la ficha vigente)
 
 | Prompt / pieza | Tipo de pieza | Estado | Ubicación |
 |---|---|---|---|
-| Prompt A — Homologación Stellar (6/6, completo) | Homologación | ✅ listo para usar — todavía no corrido | [`simulacion-14-stellar-verificacion.md`](simulacion-14-stellar-verificacion.md), sección `### Prompts corregidos` |
-| Prompt B — Grid de íconos Stellar (2x3, 6/6, incluye "Doble visera" real) | Grid íconos | ✅ listo para usar — todavía no corrido | [`simulacion-14-stellar-verificacion.md`](simulacion-14-stellar-verificacion.md), sección `### Prompts corregidos` |
+| **Prompt A definitivo — Tarjeta de homologación Stellar (6/6, reproducción fiel)** | Homologación (Tipo B) | ✅ listo para usar — todavía no corrido. Los 6 ítems vigentes son 6/6 MATCH y la certificación del banner ya es exacta, así que **no cambia el contenido**: solo agrega los blindajes de generación (mismo lienzo en píxeles, banner negro "DOT" + "& ECE 22.06", espaciado uniforme, texto completo y **conteo forzado de 6 ítems**) | [`simulacion-14-stellar-verificacion.md`](simulacion-14-stellar-verificacion.md), sección `# Revisión 2026-07-29`, subsección `### Prompt A` |
+| **Prompt B definitivo — Grid de íconos Stellar (2x3, 6/6, sin doble visera, sin taches)** | Grid íconos (Tipo B) | ✅ listo para usar — todavía no corrido. Saca **"Doble visera"** (decisión comercial del usuario, no mismatch) y el **tache rojo del ícono de "Hebilla micrométrica"** (defecto de arte); la celda libre la ocupa **"Material exterior ABS alta resistencia"**. Incluye conteo forzado de celdas y prohibición explícita de cualquier X/tache/marca de negación sobre los íconos | [`simulacion-14-stellar-verificacion.md`](simulacion-14-stellar-verificacion.md), sección `# Revisión 2026-07-29`, subsección `### Prompt B` |
+| Prompt A — Homologación Stellar (6/6, versión 2026-07-28, hasta Intento 3) | Homologación | ⛔ SUPERADO — armado sobre la pieza equivocada (7 ítems y certificación "DOT FNVSS 510"); sus 3 intentos quedan como registro histórico del defecto de espaciado y del de estructura de bloques. Reemplazado por el Prompt A definitivo | [`simulacion-14-stellar-verificacion.md`](simulacion-14-stellar-verificacion.md), sección `### Prompts corregidos (🕘 históricos…)` |
+| Prompt B — Grid de íconos Stellar (2x3, incluía "Doble visera") | Grid íconos | ⛔ SUPERADO — incluía "Doble visera", que el usuario decidió no comunicar, y no prohibía las marcas de negación sobre los íconos. Reemplazado por el Prompt B definitivo | [`simulacion-14-stellar-verificacion.md`](simulacion-14-stellar-verificacion.md), sección `### Prompts corregidos (🕘 históricos…)` |
 | Variante 1 — Blanco + azul oscuro, visera sin cambios | Variantes de color | ✅ listo para usar — todavía no corrido | [`simulacion-14-stellar-verificacion.md`](simulacion-14-stellar-verificacion.md), sección `## Sub-caso — 4 variantes de color` |
 | Variante 2 — Gris total, visera ahumada azul | Variantes de color | ✅ listo para usar — todavía no corrido | [`simulacion-14-stellar-verificacion.md`](simulacion-14-stellar-verificacion.md), sección `## Sub-caso — 4 variantes de color` |
 | Variante 3 — Morado pastel + detalles rosados | Variantes de color | ✅ listo para usar — todavía no corrido | [`simulacion-14-stellar-verificacion.md`](simulacion-14-stellar-verificacion.md), sección `## Sub-caso — 4 variantes de color` |
@@ -315,7 +321,7 @@ Pieza de marketing/marca (no casco): banner con comilla roja, texto "DISEÑADO P
 | Vortex | 6 | 4 | 2 | 0 |
 | Hero | 9 | 7 | 1 | 1 |
 | Shanghai | 2 | 1 | 0 | 1 |
-| Stellar | 8 | 8 | 0 | 0 |
+| Stellar | 10 | 8 | 0 | 0 |
 | Shift | 2 | 2 | 0 | 0 |
 | Evolution 929 | 2 | 2 | 0 | 0 |
 | Casco carbono/camo | 5 | 4 | 1 | 0 |
@@ -330,8 +336,13 @@ Pieza de marketing/marca (no casco): banner con comilla roja, texto "DISEÑADO P
 | Casco retro/redondo | 2 | 2 | 0 | 0 |
 | Casco blanco glossy (goma negra) | 1 | 1 | 0 | 0 |
 | Banner "Superar tus límites" | 1 | 1 | 0 | 0 |
-| **Total** | **70** | **55** | **10** | **4** |
+| **Total** | **72** | **55** | **10** | **4** |
 
 ---
 
-**Última actualización:** 2026-07-28 · índice maestro armado a pedido explícito del usuario para organizar todos los prompts de las Simulaciones 10-19 en un único punto de entrada, sin modificar el contenido de ninguno de los 10 archivos originales · agregadas las secciones de Simulación 27 (casco blanco glossy, goma del borde inferior a negro) y Simulación 28 (banner de marca "Diseñado para superar tus límites").
+*(los 2 prompts ⛔ SUPERADOS del Stellar se cuentan en la columna "Prompts indexados" pero no en ✅/⚠️/🔴, mismo criterio que los ⛔ de Hero.)*
+
+---
+
+**Última actualización:** 2026-07-29 · **Stellar (Simulación 14) actualizado tras la revisión con captura nítida**: el veredicto Tipo C pasó de 10/13 a **12 MATCH / 0 MISMATCH / 0 SIN DATO** porque la pieza auditada en la primera pasada no era la ficha vigente; se reemplazaron los Prompts A y B por sus versiones definitivas (A de reproducción fiel; B sin "doble visera", sin taches y con "Material exterior ABS alta resistencia" en la 6ª celda), se marcaron los 2 anteriores como ⛔ SUPERADOS, se cerró el pendiente de certificación (#19), se agregaron 3 pendientes nuevos (tache de arte, confirmación del ítem de reemplazo, subida de archivos) y se registró en un bloque aparte la **decisión de negocio de no comunicar "doble visera"** para que una auditoría posterior no la devuelva creyendo que es un olvido.
+· *(2026-07-28, registro previo)* índice maestro armado a pedido explícito del usuario para organizar todos los prompts de las Simulaciones 10-19 en un único punto de entrada, sin modificar el contenido de ninguno de los 10 archivos originales · agregadas las secciones de Simulación 27 (casco blanco glossy, goma del borde inferior a negro) y Simulación 28 (banner de marca "Diseñado para superar tus límites").
