@@ -424,9 +424,107 @@ hasta dónde llega el diseño.
 
 </details>
 
+**Estado:** ✅ generado — ver la auditoría del resultado justo abajo.
+
+### Intento 2 — Colorway 1 vista trasera, resultado auditado
+
+**Estado:** ⚠️ Muy cerca — el usuario lo calificó de "casi perfecto". Quedan 2 defectos puntuales.
+
+**Qué salió bien:** los 2 defectos del Intento 1 quedaron resueltos. La zona superior de la calota ya no está en azul liso: tiene las líneas verticales blancas y azul oscuro subiendo hacia la parte alta, el patrón de malla de triángulos con buena extensión e intensidad, y las formas geométricas angulares. El patrón de la banda inferior ahora cubre completa la zona baja, incluidos los laterales inferiores, sin cortarse. El wordmark "EDGE", el sticker "DOT" y las etiquetas chicas "X40" a los costados están presentes. El resultado es una fotografía real, no una ilustración plana, y el ángulo coincide con el checkpoint.
+
+**Qué falló (2 defectos):**
+1. **Se inventó geometría que no existe en el molde real.** Aparecen piezas/elementos elevados en la parte alta de la calota trasera que NO están en la foto del casco negro liso. El molde real, visto de atrás, tiene una superficie limpia con el extractor de ventilación superior y el labio del spoiler — nada más. El generador agregó estructuras extra (aletas/paneles elevados a los costados de la zona alta), probablemente por interpretar como relieve físico lo que en la ilustración de diseño son solo formas gráficas planas. Es el mismo tipo de error que el checklist Tipo A ya cubre como "textura/relieve real vs. pintura/decal plano".
+2. **El spoiler no quedó azul.** En la ilustración de diseño, el spoiler trasero es una pieza en AZUL SÓLIDO, claramente diferenciada del resto. En el resultado quedó con el mismo patrón blanco/azul de la calota, sin el azul sólido que le corresponde.
+
+**Qué hay que hacer:** reintentar con el prompt corregido (Intento 3, abajo).
+
+### Intento 3 — Colorway 1 vista trasera, sin geometría inventada y spoiler en azul sólido
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una imagen de producto del mismo casco full-face de la
+referencia adjunta (molde real, vista trasera), mismo ángulo,
+encuadre y fondo.
+
+REGLA MÁS IMPORTANTE — DOS FUENTES, DOS ROLES QUE NUNCA SE MEZCLAN:
+- La imagen del casco NEGRO LISO vista trasera es la ÚNICA autoridad
+  de FORMA — silueta de la calota desde atrás, borde inferior, tal
+  cual está en esa foto.
+- La imagen de diseño azul/blanco/rojo vista trasera es SOLO fuente
+  de diseño gráfico, nunca de forma.
+
+CRÍTICO — NO INVENTES NINGUNA PIEZA FÍSICA (defecto real de un intento
+anterior: aparecieron aletas y paneles elevados en la parte alta de la
+calota que NO existen en el molde real — no lo repitas): el casco
+visto de atrás tiene EXACTAMENTE las piezas que se ven en la foto del
+molde negro liso, ni una más: la superficie limpia y redondeada de la
+calota, el extractor de ventilación superior, el labio del spoiler
+trasero y el borde inferior con el acolchado y las correas. TODO lo
+demás que aparece en la ilustración de diseño son GRÁFICOS PLANOS
+PINTADOS, no relieves ni piezas: las líneas, los chevrones, las formas
+angulares y el patrón de malla son PINTURA SOBRE UNA SUPERFICIE LISA.
+No los conviertas en aletas, paneles, salientes ni ningún volumen
+físico. Si en la ilustración una forma parece una pieza en relieve,
+igual va como pintura plana.
+
+PASO 1 — FORMA: reproducí exactamente la forma trasera del casco
+negro liso antes de aplicar cualquier gráfico.
+
+PASO 2 — DISEÑO: sobre esa forma ya fijada, aplicá el diseño de
+carreras del colorway azul/blanco/rojo:
+- SPOILER TRASERO — AZUL SÓLIDO (defecto real de un intento anterior:
+  el spoiler quedó con el mismo patrón blanco/azul de la calota, sin
+  su color propio — no lo repitas). En la ilustración de diseño, el
+  spoiler es una pieza en AZUL SÓLIDO, uniforme, claramente
+  diferenciada del resto del casco: sin patrón de malla, sin líneas
+  blancas, sin chevrones encima. Pintalo de azul sólido y que se
+  distinga a simple vista del patrón que lo rodea.
+- PARTE SUPERIOR DE LA CALOTA — LLEVA DISEÑO, NO ES AZUL LISO. El azul
+  es solo la BASE: el diseño va ENCIMA y tiene que CUBRIR la zona
+  superior. Son TRES elementos, todos obligatorios y todos con el
+  mismo nivel de detalle que la ilustración de diseño:
+  (a) Líneas verticales blancas y azul oscuro tipo rayas / chevrones
+      que SUBEN desde la banda inferior hacia la parte alta de la
+      calota, recorriendo la zona superior en toda su altura.
+  (b) Patrón de textura fina tipo malla / triángulos entrelazados en
+      blanco sobre los costados superiores de la calota, con la misma
+      extensión y la misma intensidad que en la ilustración.
+  (c) Formas geométricas angulares en blanco y azul oscuro en la zona
+      alta de la calota, con todas sus capas tal como aparecen en la
+      ilustración. Van PINTADAS, planas — nunca como piezas en
+      relieve.
+- ZONA INFERIOR — EL PATRÓN CUBRE COMPLETA LA CARCASA. El spoiler
+  trasero y la carcasa del casco son PIEZAS DISTINTAS: no las
+  confundas al decidir hasta dónde llega cada cosa. El patrón
+  geométrico de la banda inferior tiene que cubrir COMPLETA la zona
+  baja de la carcasa, incluyendo los LATERALES INFERIORES, sin
+  cortarse ni dejar zonas sin diseño.
+- Banda inferior: patrón geométrico blanco/rojo/azul con franjas tipo
+  chevron.
+- Wordmark "EDGE" en blanco, centrado, sobre la banda inferior.
+- Sticker "DOT" pequeño en la parte más baja, centrado.
+- Etiquetas chicas "X40" a ambos lados de la banda inferior.
+
+CRÍTICO — MISMO ÁNGULO EXACTO que la foto del molde negro liso vista
+trasera.
+
+PROHIBIDO ABSOLUTO: no cambiar la forma ni la silueta trasera del
+molde real. No agregar NINGUNA pieza, aleta, panel, saliente ni
+relieve que no esté en la foto del molde negro liso — todo elemento
+del diseño es pintura plana. No dejar el spoiler con el patrón de la
+calota: va en azul sólido. No copiar la forma del casco de la imagen
+de diseño si es distinta. No agregar elementos gráficos fuera de la
+lista de arriba. No dejar la parte superior de la calota en azul liso
+sin diseño. No cortar ni dejar incompleto el patrón de la zona
+inferior.
+```
+
+</details>
+
 **Estado:** 🔴 pendiente de generar.
 
-**Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría — verificar en especial que la zona superior de la calota tenga el diseño completo (no azul liso) y que el patrón de la banda inferior cubra toda la zona baja sin cortarse.
+**Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría — verificar que no aparezca ninguna pieza/relieve que no esté en el molde negro liso, y que el spoiler quede en azul sólido diferenciado del patrón que lo rodea.
 
 <details><summary>Prompt — Colorway 2 (rojo/negro/gris), vista lateral</summary>
 
