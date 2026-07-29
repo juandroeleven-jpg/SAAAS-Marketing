@@ -280,14 +280,15 @@ Octavo caso EDGEPRO, el con más features confirmadas del catálogo (17). Prompt
 
 ## Casco retro/redondo — Simulación 26
 
-Primer molde de casco retro/redondo (estilo café racer, calota lisa, pivote cromado) del catálogo. Pedido puntual: cambiar solo la goma del borde inferior a negro, sin tocar nada más de la imagen.
+Primer molde de casco retro/redondo (estilo café racer, calota lisa, pivote cromado) del catálogo. Pedido puntual: cambiar solo la goma del borde inferior a negro, sin tocar nada más de la imagen. **Prompts v2 (2026-07-29): edición puntual, no regeneración**, con bloque propio de desambiguación entre las dos piezas del mismo color de cada casco (contorno de la abertura del visor, que conserva su color, vs. goma del borde inferior, que pasa a negro).
 
 [`simulacion-26-casco-retro-goma-negra.md`](simulacion-26-casco-retro-goma-negra.md)
 
 | Prompt / pieza | Tipo de pieza | Estado | Ubicación |
 |---|---|---|---|
-| Variante lila/rosa — goma inferior a negro | Tipo A (cambio puntual de color) | ✅ listo para usar — todavía no corrido | `simulacion-26-casco-retro-goma-negra.md` |
-| Variante blanco/azul marino — goma inferior a negro | Tipo A (cambio puntual de color) | ✅ listo para usar — todavía no corrido | `simulacion-26-casco-retro-goma-negra.md` |
+| Casco 1 lila/rosa — goma inferior a negro (v2, edición) | Tipo A (edición puntual de color) | ✅ listo para usar — todavía no corrido | `simulacion-26-casco-retro-goma-negra.md` |
+| Casco 2 blanco/azul marino — goma inferior a negro (v2, edición) | Tipo A (edición puntual de color) | ✅ listo para usar — todavía no corrido | `simulacion-26-casco-retro-goma-negra.md` |
+| Limpieza de artefactos de la captura (título, líneas violetas, guía punteada, avatar "J", banda negra + miniaturas) | Tipo D (limpieza) | 🟡 opcional — decisión abierta, el usuario no lo pidió | `simulacion-26-casco-retro-goma-negra.md` |
 
 ---
 
