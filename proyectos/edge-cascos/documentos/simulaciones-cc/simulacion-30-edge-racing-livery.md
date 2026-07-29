@@ -637,9 +637,437 @@ color corrido— es un ERROR: corregila antes de entregar.
 
 </details>
 
-**Estado:** 🔴 pendiente de generar.
+**Estado:** ✅ generado — se corrió como edición de la imagen aprobada del Intento 4 y devolvió **3 imágenes de resultado**. Ver la auditoría justo abajo.
 
-**Qué hay que hacer:** correr el prompt como EDICIÓN de la imagen aprobada del Intento 4 (adjuntando SOLO esa imagen) y mandar el resultado para auditoría — verificar que los 2 elementos eliminados no dejen hueco ni marca, que las 3 "X" estén integradas como pintura sobre la superficie, y que nada más de la imagen haya cambiado.
+**Qué hay que hacer:** auditar las 3 imágenes con el checklist del bloque siguiente — verificar que los 2 elementos eliminados no dejen hueco ni marca, que las 3 "X" estén integradas como pintura sobre la superficie, y que nada más de la imagen haya cambiado.
+
+### Intento 5 — resultado auditado (edición de 3 cambios)
+
+**Estado:** 🟡 **auditoría preparada, veredicto pendiente del usuario.** Este bloque se escribió **sin haber visto las imágenes**: el agente que lo preparó no tiene acceso a los píxeles del resultado. Todo lo que sigue es **material de auditoría** —qué preguntar, qué riesgo esperar y qué prompt correctivo corresponde según el escenario—, no un dictamen sobre el resultado real. **Nada de lo de abajo afirma que un defecto ocurrió**: las casillas de veredicto están vacías a propósito y las completa quien mire las imágenes.
+
+**Regla de método para estas 3 imágenes:** el generador **no es determinístico** (ítem ya registrado en el checklist Tipo A). Las 3 imágenes salieron del **mismo prompt, sin cambiarle una letra**, así que las diferencias entre ellas son variación del generador y no efecto del texto. En consecuencia: **auditar las 3 por separado, con el mismo checklist, y elegir la mejor** — no promediar impresiones ni juzgar el prompt por la peor de las tres. Si las 3 fallan en el mismo punto, ahí sí el problema es del prompt y corresponde el correctivo del escenario que aplique. Si falla 1 de 3, alcanza con quedarse con una de las buenas.
+
+#### Checklist de verificación — cambio por cambio
+
+Cada pregunta se contesta **sí / no** mirando el resultado **al lado de la imagen aprobada del Intento 4** (comparación pareada, no de memoria).
+
+**CAMBIO 1 — Eliminar la pieza negra tipo toma de aire del lateral** (zona media-baja del lateral, justo encima del wordmark "EDGE"):
+
+1. ¿Desapareció **por completo** la pieza negra rectangular tipo toma de aire, o queda todavía un pedazo de ella (un borde, la ranura horizontal, una esquina)?
+2. ¿Quedó alguna **sombra, contorno, halo, relieve residual o marca tenue** con la silueta de la pieza en el lugar donde estaba?
+3. En su lugar, ¿hay **superficie pintada con el livery que corresponde a esa zona** (colores, líneas y franjas del patrón), o quedó un **parche de color plano** —azul liso, gris, negro— tapando el hueco?
+4. ¿Las líneas y las franjas del livery **continúan de un lado al otro** de la zona reconstruida? Concretamente: una línea que entra por el borde izquierdo del área, ¿sale por el derecho **alineada y con el mismo grosor**, o se corta, se desalinea o cambia de ángulo?
+5. ¿La zona reconstruida tiene la **misma iluminación, los mismos reflejos y la misma microtextura de pintura mate** que la superficie vecina, o se lee como un parche más liso, más brillante o más plano (una "curita" visible)?
+6. ¿Apareció **alguna otra pieza física** en su lugar o cerca —otra toma de aire, un panel, una ranura, un saliente, un relieve— que no esté en la foto del molde negro liso?
+
+**CAMBIO 2 — Eliminar el sticker "DOT"** (borde inferior trasero del casco):
+
+7. ¿Desapareció **por completo** la etiqueta blanca "DOT", **incluidas las líneas de texto chico que tenía debajo**, o sobrevive parte del sticker?
+8. ¿Quedó un **fantasma**: un rectángulo más claro o más oscuro, un borde, un halo o restos de texto ilegible donde estaba?
+9. Debajo, ¿quedó la **superficie pintada limpia y continua** con el livery de esa zona, o un parche de color plano?
+10. ¿Se eliminó **solo el "DOT"** y no otros textos ni etiquetas chicas del livery? Verificar puntualmente que sigan presentes: la etiqueta chica **"X40"**, el **texto chico dentro del marco geométrico superior** y el wordmark **"EDGE"**.
+
+**CAMBIO 3 — Agregar las 3 marcas en "X" de la mentonera** (parte baja de la mentonera, zona inferior delantera, cerca del borde inferior):
+
+11. **Contarlas:** ¿hay **exactamente TRES**? No dos, no cuatro, no un bloque continuo que se lee como una sola forma.
+12. ¿Están **alineadas horizontalmente entre sí**, a la misma altura y con la misma separación entre una y otra?
+13. ¿Están en la **parte baja de la mentonera**, cerca del borde inferior — y no corridas hacia el lateral, hacia la ventilación, hacia el visor o encima del wordmark "EDGE"?
+14. ¿Son **iguales entre sí** en forma y tamaño, y el tamaño relativo es el del "XXX" del mockup —ni miniaturas casi invisibles, ni marcas desproporcionadamente grandes?
+15. ¿Están en **blanco sobre el fondo azul oscuro** del livery, o salieron de otro color / con contorno / con relleno distinto?
+16. ¿Se leen como **pintura sobre la superficie física** —siguen la curvatura de la mentonera, se deforman en perspectiva y reciben la misma luz y las mismas sombras que el resto—, o como una **calcomanía plana pegada encima**, un **relieve** o una **muesca tallada** en el plástico?
+
+**REQUISITO 4 — Nada más cambió** (lo que el prompt exigía congelar):
+
+17. **Spoiler / pico frontal** — es la pieza que falla en **todas** las vistas de este caso: ¿sigue habiendo **UNO SOLO**, con la forma **puntiaguda, compacta y angulada hacia atrás-arriba** del molde real, del mismo tamaño, y en **azul sólido** sin patrón de malla, sin blanco y sin líneas encima?
+18. **Visor** — ¿mismo tono tintado/oscuro, mismo material, sin aclararse, sin oscurecerse y sin reflejos nuevos?
+19. **Zona superior de la calota** — ¿el patrón de malla de triángulos conserva la **misma densidad y la misma extensión**? ¿Las líneas geométricas concéntricas tipo chevron conservan **todas sus capas y la misma cantidad de líneas**? ¿El **texto chico dentro del marco geométrico** sigue presente y del mismo tamaño?
+20. **Wordmark "EDGE"** — es el vecino inmediato de la zona del Cambio 1 y por eso el más expuesto: ¿misma posición, mismo tamaño, misma tipografía bold itálica, sin desplazarse ni cambiar de grosor?
+21. **Mentonera** — más allá de las 3 "X" agregadas, ¿el patrón del livery sigue **bajando hasta el borde inferior**, sin ninguna zona en gris liso ni en color de relleno genérico?
+22. **Piezas del molde real** — ¿siguen iguales el mecanismo de pivote con su **textura de fibra de carbono**, la **correa roja** con su trama de tela y la **goma del borde inferior negra**?
+23. **Realismo fotográfico** — ¿sigue siendo una **fotografía de producto**, con la misma iluminación de estudio, las mismas sombras suaves, los mismos reflejos especulares y el mismo bevel/relieve de la carcasa? ¿O el resultado se aplanó hacia **ilustración, render plano o mockup**?
+24. **Encuadre** — ¿mismo ángulo de cámara, misma altura, misma rotación, mismo fondo, mismo encuadre y misma proporción de imagen?
+25. **Chequeo global final** — poniendo las dos imágenes una al lado de la otra: ¿las **únicas 3 diferencias perceptibles** son las pedidas? Cualquier cuarta diferencia —una línea que falta, un patrón menos denso, un texto ausente, una forma distinta, un color corrido— es un defecto.
+
+#### Riesgo anticipado por cambio
+
+Ninguno de estos riesgos es una predicción sobre este resultado: son los **modos de falla que este caso ya tuvo documentados**, y se listan para saber dónde mirar primero.
+
+| Cambio | Riesgo anticipado | De dónde sale (precedente real del caso) |
+|---|---|---|
+| **1 — Quitar la pieza negra** | **Redibujado de la zona en vez de borrado.** Nombrar una zona como "la que hay que cambiar" le da licencia al generador para rehacerla entera y devolverla **simplificada**: menos líneas, patrón menos denso, textos chicos perdidos. | Intento 2→3 del **Colorway 2 lateral**: un pedido de recolorear un rombo volvió con toda la zona alta redibujada (marco concéntrico reemplazado por un hexágono con menos líneas, malla reducida, texto chico eliminado). |
+| **1 — Quitar la pieza negra** | **Borrado incompleto / cobertura parcial**: queda un resto de la pieza (un borde, la ranura) o un parche de color plano en lugar del livery reconstruido. El borrado no es una tarea sino dos —**eliminar** y **reconstruir el dibujo que va debajo**—, y la segunda es la que se saltea. | Intento 3→4 del **Colorway 2 lateral**: el recoloreo se aplicó a la mayor parte de la zona pero un grupo de barras de la parte baja-izquierda quedó con el color viejo. |
+| **1 — Quitar la pieza negra** | **Al borrar una pieza, el generador inventa otra en su lugar** (otra toma de aire, un panel, un relieve), porque interpreta las formas angulares del livery como volúmenes físicos. | Ítem Tipo A *"todo lo que está en el mockup es pintura plana, nunca una pieza física nueva"* — activado ya **tres veces** en este caso: aletas y paneles en la trasera CW1, panel negro alargado en el Intento 3 lateral CW1, y la propia toma de aire del Intento 4. |
+| **2 — Quitar el sticker "DOT"** | **Fantasma del sticker**: rectángulo más claro, halo, borde o restos de texto ilegible donde estaba, en vez de superficie limpia. | Checklist **Tipo D**, ítems *"sin restos fantasma"* y *"no inventar textura nueva en el área limpiada"*. |
+| **2 — Quitar el sticker "DOT"** | **Borrado de más**: el generador se lleva puestos otros textos chicos cercanos —"X40", el texto del marco geométrico superior— por asociación ("son todos textos chicos"). | Modo de falla de simplificación ya visto: en el Intento 2 del CW2 lateral el **texto chico desapareció** sin que nadie lo pidiera. |
+| **3 — Agregar las 3 "X"** | **Cantidad incorrecta**: salen 2, 4, o un bloque continuo que se lee como una sola marca. Un elemento repetido sin **conteo forzado** sale en la cantidad que el generador quiera. | Ítem **Tipo B** *"dimensiones y cantidad de celdas con conteo forzado"* (caso Kratos: un grid 2x3 salió 2x4). Mismo mecanismo, otro tipo de prompt. |
+| **3 — Agregar las 3 "X"** | **Posición o tamaño incorrectos**: corridas hacia el lateral o hacia el visor, desalineadas entre sí, o desproporcionadas — porque la posición se describió por zona ("la parte baja de la mentonera") sin anclarla a una referencia física concreta. | Mismo mecanismo que el defecto de **descripción global de zona** que dejó islas sin recolorear en el Intento 3 del CW2 lateral. |
+| **3 — Agregar las 3 "X"** | **Materializadas como relieve o como calcomanía** en vez de como pintura sobre la superficie curva. | Ítem Tipo A de pintura plana vs. pieza física, y el eje de **realismo de material** del Intento 3. |
+| **Transversal** | **El spoiler se altera aunque nadie lo tocó.** Es la pieza que falla en **las 4 vistas** del caso, por 4 razones distintas: pierde su color, se duplica, se fusiona con la carcasa y se hibrida con la forma del mockup. Cualquier corrida que toque esta imagen lo pone en riesgo. | Intento 3 lateral CW1 (duplicado + forma del mockup), Intento 2 trasera CW1 (sin azul), Intento 1 trasera CW2 (fusionado), Intento 4 trasera CW1 (híbrido). |
+| **Transversal** | **Caída del realismo fotográfico**: la imagen vuelve a leerse como ilustración vectorial plana o render, perdiendo microtextura, reflejos y bevel. | Intento 2 lateral CW1 e Intento 3 trasera CW1, las dos veces que este caso devolvió un dibujo en vez de una foto. |
+| **Transversal** | **Variación entre las 3 corridas**: que una imagen salga bien y otra mal **no prueba nada sobre el prompt**. | Ítem Tipo A sobre **no determinismo** del generador (re-corrida del Intento 6 del caso Top Gun; y el CW2 lateral, que logró el realismo sin las instrucciones del tercer eje). |
+
+#### Veredicto real — a completar por el usuario / el agente principal
+
+Marcar por imagen: ✅ correcto · ⚠️ parcial o con defecto menor · 🔴 falló.
+
+| # | Verificación | Imagen 1 | Imagen 2 | Imagen 3 |
+|---|---|---|---|---|
+| 1 | **Cambio 1** — la pieza negra tipo toma de aire desapareció por completo, sin resto ni sombra | _(completar)_ | _(completar)_ | _(completar)_ |
+| 2 | **Cambio 1** — debajo quedó el livery reconstruido y continuo, sin parche plano ni corte de líneas | _(completar)_ | _(completar)_ | _(completar)_ |
+| 3 | **Cambio 1** — no apareció ninguna pieza física nueva en su lugar | _(completar)_ | _(completar)_ | _(completar)_ |
+| 4 | **Cambio 2** — el sticker "DOT" y su texto chico desaparecieron, sin fantasma | _(completar)_ | _(completar)_ | _(completar)_ |
+| 5 | **Cambio 2** — no se borró ningún otro texto del livery ("X40", texto del marco superior, "EDGE") | _(completar)_ | _(completar)_ | _(completar)_ |
+| 6 | **Cambio 3** — hay exactamente 3 "X", alineadas, en la parte baja de la mentonera | _(completar)_ | _(completar)_ | _(completar)_ |
+| 7 | **Cambio 3** — tamaño, color y estilo correctos, integradas como pintura sobre la superficie curva | _(completar)_ | _(completar)_ | _(completar)_ |
+| 8 | **Nada más cambió** — spoiler (uno solo, forma del molde real, azul sólido) | _(completar)_ | _(completar)_ | _(completar)_ |
+| 9 | **Nada más cambió** — visor, patrones de la calota superior, wordmark "EDGE", mentonera | _(completar)_ | _(completar)_ | _(completar)_ |
+| 10 | **Nada más cambió** — realismo fotográfico, ángulo, encuadre y fondo | _(completar)_ | _(completar)_ | _(completar)_ |
+
+**Veredicto global:** _(completar: ✅ aprobado / ⚠️ reintentar con el Escenario A / ⚠️ reintentar con el Escenario B / 🔴 escalar)_
+
+**Imagen elegida de las 3:** _(completar)_
+
+**Qué falló, concretamente:** _(completar — describir el resto que quedó, la cantidad de "X" que salió, o qué se alteró de más; ese texto es exactamente lo que hay que pegar en el placeholder del prompt correctivo)_
+
+#### Prompt correctivo "Intento 6" — según el escenario
+
+Los dos escenarios de abajo cubren los **dos modos de falla más probables** de esta edición. Son **excluyentes**: se elige uno según el veredicto, no se corren los dos.
+
+- **Escenario A — cobertura parcial:** uno o más de los 3 cambios se aplicó **a medias** (quedó un resto de la pieza negra, un fantasma del "DOT", o salieron menos/más de 3 "X"), pero **todo lo demás quedó bien**. Se sigue editando **sobre el resultado del Intento 5**, terminando lo que quedó a medias.
+- **Escenario B — la edición redibujó de más:** la zona editada **cambió más de lo pedido** (se alteró el livery, el spoiler, el visor o el estilo de render). Se **descarta el resultado del Intento 5** y se vuelve a partir de la **imagen aprobada del Intento 4**, con la regla de borrado/agregado puro reforzada.
+
+Si el resultado falla por los **dos** motivos a la vez, correr el **Escenario B** (que reparte de la base buena), no el A.
+
+<details><summary>Intento 6 — Escenario A: cobertura parcial (adjuntar SOLO la imagen del Intento 5)</summary>
+
+```
+Esto es una EDICIÓN PUNTUAL sobre la imagen adjunta, NO una
+generación nueva desde cero. La imagen adjunta es el resultado de una
+edición anterior que quedó BIEN en casi todo: su forma, su realismo,
+su perspectiva, su livery y su estilo fotográfico están correctos tal
+cual están. El único problema es que un cambio quedó APLICADO A
+MEDIAS, y lo que hay que hacer es TERMINAR DE APLICARLO. Se devuelve
+la MISMA imagen, IDÉNTICA, salvo por eso. Ninguna otra línea, forma,
+textura, color ni detalle cambia en ninguna parte de la imagen.
+
+TODO ESTO NO SE TOCA — QUEDA PIXEL POR PIXEL IGUAL:
+- La forma y la geometría completa del casco: el pico frontal /
+  spoiler con su forma exacta y su azul sólido, la silueta de la
+  calota, la mentonera, las ventilaciones reales del molde, el
+  mecanismo de pivote del visor con su textura de fibra de carbono,
+  la correa roja y la goma del borde inferior negra.
+- El visor tintado/oscuro, con su mismo material y su mismo tono.
+- El realismo fotográfico completo: iluminación de estudio, sombras
+  suaves, reflejos especulares sobre las superficies curvas,
+  microtextura de pintura mate, y el volumen y el relieve/bevel de
+  la carcasa. La imagen sigue siendo una fotografía de producto, con
+  exactamente el mismo tratamiento fotográfico.
+- El fondo, el encuadre y el ángulo de cámara.
+- El wordmark "EDGE".
+- Todos los elementos del livery: el patrón de malla triangular de
+  la calota superior, las líneas geométricas concéntricas tipo
+  chevron con TODAS sus capas, el texto chico dentro del marco
+  geométrico superior, la etiqueta chica "X40", las franjas rojas y
+  blancas y el patrón de la mentonera bajando hasta el borde
+  inferior.
+- Todo lo que la edición anterior YA resolvió bien: eso ya está
+  terminado y no se vuelve a tocar.
+
+CRÍTICO — COBERTURA COMPLETA DEL CAMBIO (defecto real de la edición
+anterior — no lo repitas):
+El cambio NO es parcial ni aproximado: tiene que quedar aplicado
+ENTERO, de punta a punta de la zona indicada.
+- Un BORRADO no está terminado mientras quede CUALQUIER rastro del
+  elemento eliminado dentro de esa zona: ni un pedazo, ni un borde,
+  ni una ranura, ni un contorno, ni una sombra, ni un relieve, ni un
+  halo, ni un parche de color distinto donde estaba.
+- Un AGREGADO no está terminado mientras la CANTIDAD, la POSICIÓN,
+  la ALINEACIÓN y el TAMAÑO no sean EXACTAMENTE los pedidos. Contá
+  los elementos antes de entregar.
+- Recorré TODA la zona indicada y confirmá que no quedó ninguna
+  isla, ningún bloque ni ningún grupo de elementos con el estado
+  anterior. No alcanza con resolver la parte dominante de la zona.
+La edición anterior aplicó el cambio SOLO EN PARTE. Esto es
+exactamente lo que quedó sin resolver, y es lo único que hay que
+completar:
+[ACÁ VA LA DESCRIPCIÓN EXACTA DEL RESTO QUE QUEDÓ — copiarla del
+campo "Qué falló, concretamente" de la auditoría, con su UBICACIÓN
+precisa y su DESCRIPCIÓN física. Ejemplos de cómo redactarlo:
+ · "en el BORDE IZQUIERDO de donde estaba la pieza negra tipo toma
+   de aire quedó una FRANJA NEGRA VERTICAL angosta con textura de
+   plástico, de unos pocos milímetros de ancho, que también hay que
+   eliminar reconstruyendo el livery por debajo";
+ · "donde estaba el sticker DOT quedó un RECTÁNGULO MÁS CLARO, más
+   liso y sin la microtextura de la pintura mate, con la silueta
+   exacta del sticker: hay que eliminar ese fantasma y dejar la
+   superficie pintada continua";
+ · "en la parte baja de la mentonera salieron SOLO DOS marcas en X
+   en vez de TRES: falta la tercera, a la derecha de las dos que ya
+   están, alineada con ellas y con la misma separación, del mismo
+   tamaño, la misma forma y el mismo blanco";
+ · "en la parte baja de la mentonera salieron CUATRO marcas en X en
+   vez de TRES: hay que eliminar la cuarta (la de más a la derecha)
+   y dejar las tres restantes exactamente como están".]
+Prestale atención especial a ese resto, y barré igual toda la zona
+por si quedó algún otro rastro que no esté nombrado arriba.
+
+QUÉ VA DEBAJO DE LO QUE SE BORRA:
+Donde se elimina un resto, NO va un color plano ni un parche liso:
+va la SUPERFICIE PINTADA CON EL LIVERY QUE CORRESPONDE A ESA ZONA,
+como si el elemento eliminado nunca hubiera estado ahí.
+- El patrón geométrico que rodea el área se COMPLETA POR DEBAJO
+  siguiendo la curvatura del casco y la lógica del diseño, con las
+  MISMAS líneas, los MISMOS colores y el MISMO trazado que traen las
+  zonas contiguas: una línea que entra por un lado del área tiene
+  que SALIR POR EL OTRO alineada y con el mismo grosor.
+- Con la misma iluminación, los mismos reflejos y el mismo material
+  (pintura mate con su microtextura) que el resto de la superficie.
+- No dejes ningún hueco, ningún parche, ninguna sombra residual,
+  ningún contorno ni ninguna costura visible de dónde estaba.
+
+CRÍTICO — LA ZONA EDITADA TAMPOCO SE REDIBUJA (defecto real de un
+intento anterior de edición en este mismo caso — no lo repitas):
+En la zona que se toca, lo ÚNICO que cambia es completar lo que
+quedó a medias. TODO el resto del dibujo de esa zona se conserva
+IDÉNTICO — las líneas, los patrones, las franjas, las capas, las
+texturas, los colores y cada trazo en su misma posición exacta. Que
+una zona esté en la lista de cambios NO es permiso para rehacerla.
+Un intento anterior de edición en este mismo caso interpretó "cambiá
+esta zona" como licencia para REDIBUJAR LA ZONA ENTERA, y la
+devolvió simplificada: el marco geométrico reemplazado por una forma
+más limpia con menos líneas, el patrón de malla reducido en densidad
+y en superficie, el texto chico eliminado y varias capas de líneas
+perdidas. ESO ESTÁ PROHIBIDO. No se rediseña, no se simplifica, no
+se reinterpreta: se termina de aplicar un cambio que quedó a medias.
+
+PROHIBIDO ABSOLUTO — NO TOQUES NADA MÁS:
+- No redibujes el casco ni ninguna de sus partes.
+- No cambies la geometría, el spoiler, la silueta ni las
+  proporciones. El spoiler sigue siendo UNO SOLO, con la forma
+  puntiaguda y compacta del molde real, en AZUL SÓLIDO y sin patrón
+  de malla encima.
+- No toques el visor tintado: mismo tono, mismo material.
+- No vuelvas a renderizar el realismo fotográfico: la iluminación,
+  las sombras, los reflejos y las texturas de la imagen adjunta se
+  conservan tal cual.
+- No muevas, redimensiones, agregues ni elimines ningún otro
+  elemento del livery, y no borres ningún texto chico: la etiqueta
+  "X40", el texto del marco geométrico superior y el wordmark
+  "EDGE" siguen todos presentes.
+- No cambies el ángulo de cámara, el encuadre ni el fondo.
+- No conviertas la imagen en una ilustración, un render plano ni un
+  mockup: sigue siendo la misma fotografía.
+- No agregues ninguna pieza física, panel, saliente, relieve ni toma
+  de aire que no esté en el molde real.
+
+VERIFICACIÓN FINAL ANTES DE ENTREGAR — DOS CHEQUEOS, LOS DOS
+OBLIGATORIOS:
+1) DIBUJO INTACTO: compará tu resultado contra la imagen adjunta y
+   confirmá que NINGÚN dibujo cambió — ni una línea que falte, ni un
+   texto ausente, ni un patrón menos denso, ni una forma distinta,
+   ni un trazo corrido de lugar, ni el spoiler alterado.
+2) COBERTURA COMPLETA: volvé a la zona indicada y confirmá que NO
+   QUEDA NINGÚN RASTRO de lo que había que eliminar, y que lo que
+   había que agregar está en la CANTIDAD, la POSICIÓN y el TAMAÑO
+   exactos pedidos. Contalo.
+Si cualquiera de los dos chequeos falla, corregilo antes de
+entregar.
+```
+
+</details>
+
+<details><summary>Intento 6 — Escenario B: la edición redibujó de más (adjuntar SOLO la imagen APROBADA del Intento 4)</summary>
+
+**Importante:** en este escenario el resultado del Intento 5 **se descarta** y se vuelve a partir de la **imagen aprobada del Intento 4** — la base buena. Adjuntar esa imagen y **solo esa**.
+
+```
+Esto es un BORRADO Y AGREGADO PUROS sobre la imagen adjunta, NO una
+edición de diseño y NO una generación nueva. La imagen adjunta es un
+resultado YA APROBADO —el usuario lo calificó de "espectacular"— y se
+devuelve IDÉNTICA salvo por TRES cambios puntuales: se eliminan 2
+elementos y se agrega 1. Ninguna línea, ninguna forma, ningún texto,
+ninguna textura y ningún color cambian en ninguna parte de la imagen
+— INCLUIDAS las zonas que se editan.
+
+TODO ESTO NO SE TOCA — QUEDA PIXEL POR PIXEL IGUAL:
+- La forma y la geometría completa del casco: el pico frontal /
+  spoiler, la silueta de la calota, la mentonera, las ventilaciones
+  reales del molde, el mecanismo de pivote del visor con su textura
+  de fibra de carbono, la correa roja y la goma del borde inferior
+  negra.
+- El visor tintado/oscuro, con su mismo material y su mismo tono.
+- El realismo fotográfico completo: iluminación de estudio, sombras
+  suaves, reflejos especulares sobre las superficies curvas,
+  microtextura de pintura mate, y el volumen y el relieve/bevel de
+  la carcasa.
+- El fondo, el encuadre y el ángulo de cámara.
+- El wordmark "EDGE".
+- Todos los elementos del livery: el patrón de malla triangular de
+  la calota superior, las líneas geométricas concéntricas tipo
+  chevron con TODAS sus capas, el texto chico dentro del marco
+  geométrico superior, la etiqueta chica "X40", las franjas rojas y
+  blancas y el patrón de la mentonera bajando hasta el borde
+  inferior.
+
+CRÍTICO — LAS ZONAS EDITADAS TAMPOCO SE REDIBUJAN: DENTRO DE LA ZONA
+EDITADA LO ÚNICO QUE CAMBIA ES EL ELEMENTO INDICADO (defecto real de
+un intento anterior de edición en este mismo caso — no lo repitas):
+En las 3 zonas que se tocan, lo ÚNICO que cambia es lo indicado:
+sacar la pieza negra, sacar el sticker "DOT" y agregar las 3 "X".
+TODO el resto del dibujo de esas zonas se conserva IDÉNTICO — las
+líneas, los patrones, las franjas, las capas, las texturas, los
+colores y cada trazo en su misma posición exacta, con la misma
+cantidad de líneas y el mismo grosor.
+Es exactamente equivalente a SELECCIONAR ese elemento en un editor de
+imagen, BORRARLO, y dejar intactas todas las demás capas de dibujo
+que están alrededor y por debajo. No se rediseña, no se simplifica,
+no se reinterpreta, no se "mejora": se quitan dos elementos y se
+agrega uno.
+Que una zona esté nombrada en la lista de cambios NO es permiso para
+rehacerla. Un intento anterior de edición en este mismo caso
+interpretó "cambiá esta zona" como licencia para REDIBUJAR LA ZONA
+ENTERA y la devolvió simplificada: el marco geométrico reemplazado
+por una forma más limpia con menos líneas, el patrón de malla
+reducido en densidad y en superficie, el texto chico eliminado y
+varias capas de líneas perdidas. ESO ESTÁ PROHIBIDO.
+
+CRÍTICO — EL SPOILER NO SE TOCA (es la pieza que más falla en este
+caso — no la pongas en juego): el pico frontal / spoiler de la imagen
+adjunta ya está RESUELTO y CORRECTO. Es UNO SOLO, con la forma
+PUNTIAGUDA, COMPACTA y ANGULADA HACIA ATRÁS-ARRIBA del molde real, y
+está en AZUL SÓLIDO uniforme.
+- No lo redibujes, no lo agrandes, no lo aplanes, no le cambies el
+  perfil, el borde ni el ángulo.
+- No dibujes un segundo spoiler ni superpongas dos formas.
+- No le pongas el patrón de malla de triángulos, ni blanco, ni
+  líneas, ni chevrones encima: sigue en azul sólido.
+- No lo hibrides con ninguna otra forma de spoiler: la de la imagen
+  adjunta es la única válida.
+
+CRÍTICO — EL VISOR NO SE TOCA: el visor tintado/oscuro de la imagen
+adjunta conserva su MISMO TONO, su MISMO material y sus MISMOS
+reflejos. No lo aclares, no lo oscurezcas, no le cambies el tinte, no
+le agregues reflejos nuevos y no le apliques ningún gráfico encima.
+
+CRÍTICO — EL ESTILO FOTOGRÁFICO NO SE TOCA: la imagen adjunta es una
+FOTOGRAFÍA DE PRODUCTO REAL y el resultado tiene que seguir siéndolo,
+con exactamente el mismo tratamiento: la misma iluminación de
+estudio, las mismas sombras suaves, los mismos reflejos especulares
+sobre las superficies curvas, la misma microtextura de pintura mate,
+la misma textura de fibra de carbono en el pivote, la misma trama de
+tela de la correa roja y el mismo volumen y relieve/bevel de la
+carcasa.
+- PROHIBIDO devolver una ilustración, un dibujo vectorial, un render
+  plano o un mockup.
+- PROHIBIDO aplanar el material, quitar los reflejos, quitar las
+  sombras o reemplazar la pintura con color plano digital.
+- Un intento anterior de este mismo caso devolvió un dibujo vectorial
+  plano en vez de una foto. No lo repitas.
+
+CAMBIO 1 — ELIMINAR LA PIEZA NEGRA TIPO TOMA DE AIRE DEL LATERAL:
+En la zona MEDIA-BAJA DEL LATERAL del casco, JUSTO ENCIMA del
+wordmark "EDGE", hay montada una PIEZA RECTANGULAR NEGRA tipo toma
+de aire / ventilación, con una ranura horizontal y textura de
+plástico rugoso, aplicada encima del livery azul/blanco/rojo. Esa
+pieza NO EXISTE en el molde real del casco: es una invención, y hay
+que ELIMINARLA POR COMPLETO — entera, sin dejar ni un borde, ni la
+ranura, ni una esquina, ni un contorno, ni una sombra, ni un relieve.
+En su lugar va la superficie del casco con el LIVERY CONTINUO, como
+si esa pieza nunca hubiera estado ahí:
+- el patrón geométrico que la rodea se COMPLETA POR DEBAJO,
+  siguiendo la curvatura del casco y la lógica del diseño, con las
+  MISMAS líneas, los MISMOS colores y el MISMO trazado que traen las
+  zonas contiguas: una línea que entra por un borde del área tiene
+  que SALIR POR EL OTRO alineada y con el mismo grosor;
+- con la misma iluminación, los mismos reflejos y el mismo material
+  (pintura mate con su microtextura) que el resto de la superficie.
+No dejes ningún hueco, ningún parche de color plano, ninguna costura,
+ninguna sombra residual, ningún contorno ni ninguna marca de dónde
+estaba la pieza. Y NO pongas ninguna otra pieza física en su lugar.
+
+CAMBIO 2 — ELIMINAR EL STICKER "DOT":
+En el BORDE INFERIOR TRASERO del casco hay una ETIQUETA / STICKER
+BLANCO con el texto "DOT" y unas líneas de texto chico debajo. En
+esta vista lateral ese sticker NO CORRESPONDE (el sticker DOT va en
+la vista trasera). Eliminalo POR COMPLETO —el "DOT" y también las
+líneas de texto chico de abajo— con el mismo criterio que el cambio
+1: en su lugar va la superficie del casco con el livery continuo,
+siguiendo la curvatura, con la misma luz y el mismo material, sin
+hueco, sin parche, sin rectángulo más claro, sin halo, sin sombra
+residual y sin ninguna marca de dónde estaba.
+Se elimina SOLO ese sticker: la etiqueta chica "X40", el texto chico
+del marco geométrico superior y el wordmark "EDGE" NO se tocan y
+tienen que seguir presentes, iguales y en su lugar.
+
+CAMBIO 3 — AGREGAR LAS 3 MARCAS EN "X" DE LA MENTONERA:
+En la ZONA INFERIOR DELANTERA del casco (la parte baja de la
+mentonera, cerca del borde inferior), sobre el fondo AZUL OSCURO del
+livery, faltan TRES MARCAS EN FORMA DE "X" / CHEVRONES. Agregalas:
+- son EXACTAMENTE TRES, ni dos ni cuatro. Contalas antes de
+  entregar;
+- IGUALES ENTRE SÍ en forma y tamaño, ALINEADAS HORIZONTALMENTE a la
+  misma altura y con la MISMA SEPARACIÓN entre una y otra;
+- en BLANCO sobre el fondo azul oscuro;
+- en la PARTE BAJA DE LA MENTONERA, cerca del borde inferior — no
+  sobre el lateral, no sobre la ventilación, no cerca del visor y no
+  encima del wordmark "EDGE";
+- con el MISMO ESTILO GRÁFICO y el MISMO TAMAÑO RELATIVO que en la
+  ilustración de diseño, donde ese detalle aparece como "XXX".
+Tienen que verse como PINTURA sobre la superficie física del casco:
+siguen la curvatura de la mentonera, se deforman con ella en
+perspectiva, y reciben exactamente la misma luz y las mismas sombras
+que el resto de la superficie. NUNCA como una calcomanía plana
+pegada encima, NUNCA como un elemento en relieve, una pieza o un
+saliente, y NUNCA como una muesca tallada en el plástico.
+Agregar estas 3 marcas NO es permiso para redibujar la mentonera: el
+patrón del livery de esa zona, con sus franjas y sus líneas, se
+conserva idéntico y sigue bajando hasta el borde inferior.
+
+PROHIBIDO ABSOLUTO — NO TOQUES NADA MÁS:
+- No redibujes el casco ni ninguna de sus partes.
+- No simplifiques, no reduzcas ni rehagas el dibujo de las zonas
+  editadas.
+- No elimines ningún texto chico ni ninguna línea del marco
+  geométrico superior.
+- No reduzcas la densidad ni la extensión del patrón de malla
+  triangular.
+- No cambies la geometría, la silueta ni las proporciones.
+- No toques el spoiler, el visor ni el estilo fotográfico.
+- No vuelvas a renderizar el realismo: la iluminación, las sombras,
+  los reflejos y las texturas de la imagen adjunta se conservan tal
+  cual.
+- No muevas, redimensiones, agregues ni elimines ningún otro
+  elemento del livery.
+- No cambies el ángulo de cámara, el encuadre ni el fondo.
+- No conviertas la imagen en una ilustración, un render plano ni un
+  mockup: sigue siendo la misma fotografía.
+- No dejes ningún hueco, parche ni contorno visible donde estaban
+  los 2 elementos eliminados.
+- No agregues ninguna otra pieza física, panel, saliente, relieve ni
+  toma de aire que no esté en el molde real.
+Si al terminar alguna línea, algún texto o algún detalle de la imagen
+no está exactamente donde estaba y exactamente como estaba, la
+edición está MAL.
+
+VERIFICACIÓN FINAL ANTES DE ENTREGAR — DOS CHEQUEOS, LOS DOS
+OBLIGATORIOS:
+1) SOLO 3 DIFERENCIAS: compará tu resultado contra la imagen adjunta
+   y confirmá que las ÚNICAS diferencias entre las dos sean las 3
+   indicadas — la pieza negra tipo toma de aire ya no está, el
+   sticker "DOT" ya no está y las 3 marcas en "X" aparecen en la
+   parte baja de la mentonera. Cualquier otra diferencia —una línea
+   que falta, un patrón menos denso, un texto ausente, una forma
+   distinta, un color corrido, el spoiler alterado, el visor con
+   otro tono, el render más plano— es un ERROR.
+2) COBERTURA COMPLETA: confirmá que los 2 elementos eliminados NO
+   dejaron NINGÚN rastro (ni resto, ni borde, ni fantasma, ni
+   parche) y que las marcas en "X" son EXACTAMENTE TRES, alineadas,
+   del mismo tamaño y en la posición pedida. Contalas.
+Si cualquiera de los dos chequeos falla, corregilo antes de
+entregar.
+```
+
+</details>
 
 <details><summary>Prompt — Colorway 1 (azul/blanco/rojo), vista trasera</summary>
 
@@ -1685,9 +2113,207 @@ entregar.
 
 </details>
 
+**Estado:** ✅ generado — ver la auditoría del resultado justo abajo.
+
+### Intento 4 — Colorway 2 vista lateral, resultado auditado (exceso de rojo y pérdida de la flecha fina)
+
+**Estado:** ⚠️ Bien en lo general, con 2 defectos de color de la misma familia. El veredicto textual del usuario: **"se excedió mucho el tono rojo"** y **"la flecha delgada y roja de la referencia del dibujo no sale bien"**.
+
+**Qué salió bien:** todo lo que este colorway venía sosteniendo intento tras intento se mantuvo, y la edición no rompió nada de la base:
+
+- **Realismo fotográfico** — sigue siendo una fotografía de producto sobre fondo blanco de estudio, con microtextura de pintura mate, sombras suaves e iluminación coherente. No hubo caída hacia la ilustración vectorial plana.
+- **Forma y geometría del molde real** — silueta de la calota, pico frontal/spoiler, mentonera y ventilaciones intactas, en el mismo ángulo y encuadre.
+- **Visor tintado/oscuro** — mismo material y mismo tono, sin drift.
+- **Mecanismo de pivote del visor** — presente con su textura real de fibra de carbono.
+- **Correa roja** — en su lugar, con su trama de tela.
+- **Goma del borde inferior negra** — cumple la regla de negocio de la sección 9 de `orquestacion-agentes-paralelos.md`.
+- **Wordmark "EDGE"** — presente, en su posición y con su tipografía bold itálica.
+- **Chevrones "XXX" de la mentonera** — presentes en la zona inferior delantera.
+
+O sea: los ejes de forma, realismo y contenido gráfico están resueltos. Lo que falló es **cómo se reparte el color sobre esa base**.
+
+**Qué falló (2 defectos):**
+
+| # | Defecto | Qué se ve en el resultado | Qué debería verse (referencia de diseño) | Causa raíz |
+|---|---|---|---|---|
+| 1 | **Exceso de superficie roja — figura y fondo invertidos** | Toda la calota superior y el pico frontal forman una **masa roja sólida y continua** que ocupa aproximadamente el **tercio superior del casco entero**, y sobre esa masa roja quedan dibujados los chevrons en gris oscuro. | En el mockup de diseño la calota roja es **mucho más acotada** y el **cuerpo central del lateral es NEGRO / gris muy oscuro**, con el rombo/marco geométrico oscuro y las líneas grises finas; el rojo aparece como **acento** (líneas, cuñas, chevrons finos) más el pico/spoiler rojo sólido. La superficie roja total es claramente **menor**. | El prompt trabajaba a nivel de *"cambiá el color de esta zona"* pero **nunca declaró la PROPORCIÓN de color ni la relación FIGURA/FONDO del diseño**. La regla "el rojo queda únicamente en la flecha/chevron" estaba **acotada al sector del rombo**, no al lateral completo; fuera de ese sector el generador no tenía ningún techo de superficie roja. Y el `CAMBIO 2` pedía "subir la saturación y la intensidad del rojo" del pico sin declarar **hasta dónde llega el rojo**: el generador leyó "más rojo" como **más superficie roja**, no solo como más saturación. La lista de congelado ("TODO ESTO NO SE TOCA") enumeraba elementos a preservar —"paneles diagonales rojos", "acentos rojos cerca de la ventilación"— pero preservar esos elementos es perfectamente compatible con **expandirlos hasta cubrir la calota entera**, porque nunca se dijo cuánta superficie les corresponde. |
+| 2 | **La flecha roja delgada no se lee** | La flecha/chevron roja fina característica del grupo de chevrons **no se distingue**: se disolvió dentro de la masa roja. No hay contraste posible entre un trazo rojo fino y un fondo rojo. | En la ilustración de referencia, sobre fondo gris oscuro/negro mate hay un grupo de **chevrons concéntricos anidados de trazo FINO en gris oscuro**, y entre ellos **UNA sola flecha/chevron ROJA, también de trazo delgado**, que resalta por contraste contra el gris. Es un **acento fino, no una masa**. | El prompt nombraba la flecha **solo como excepción** del recoloreo ("conserva su rojo, su forma y su posición") — o sea, **definida en negativo**: por lo que *no* cambia. Nunca la describió **en positivo**: que es un **trazo fino**, que vive dentro de un grupo de chevrons concéntricos grises, y sobre todo **contra qué fondo tiene que contrastar**. Un detalle fino de un color **solo se lee si el prompt declara el fondo sobre el que se apoya**; al perderse el fondo oscuro (defecto 1), el elemento dejó de existir visualmente aunque estuviera dibujado. Los dos defectos son **el mismo problema visto dos veces**: sin jerarquía figura/fondo declarada, el color de acento se expande y el detalle fino desaparece. |
+
+**Diagnóstico general del intento:** el enfoque de **recoloreo puro con cobertura completa** —que era lo que se venía corrigiendo desde el Intento 2— siguió funcionando: el dibujo no se redibujó y la base fotográfica se mantuvo. Pero el prompt seguía razonando **zona por zona** ("el interior del rombo", "el pico frontal") y **nunca describió el diseño como un sistema con jerarquía de color**. Ese es el agujero nuevo: los ítems del checklist Tipo A ya cubrían *no redibujar la zona editada*, *cobertura completa del recoloreo con excepciones nombradas* y *separación de roles a nivel de pieza*, pero **ninguno exige declarar la proporción de color ni cuál es la superficie dominante y cuál el acento**. Sin esa declaración, cada instrucción local de color es correcta por separado y el resultado global igual queda mal repartido — el generador es libre de expandir el rojo a superficies enteras e **invertir figura y fondo**. Se registra como ítem nuevo del checklist Tipo A en `orquestacion-agentes-paralelos.md`.
+
+**Qué hay que hacer:** corregirlo por **edición puntual sobre este resultado** (Intento 5, abajo), **no por regeneración** — aplica el ítem del checklist Tipo A *"Ajuste puntual sobre un resultado ya aprobado = edición, no regeneración completa"*. La forma, el realismo, el visor, el pivote, la correa, la goma negra, el wordmark y los chevrones "XXX" ya están bien y costaron cuatro intentos: regenerar los pondría de nuevo en juego para arreglar un problema que es **solo de reparto de color**.
+
+### Intento 5 — Colorway 2 vista lateral, edición puntual: bajar la superficie roja y recuperar la flecha fina
+
+<details><summary>Prompt usado (edición puntual de color, no generación)</summary>
+
+```
+Esto es una EDICIÓN PUNTUAL DE COLOR sobre la imagen adjunta, NO una
+generación nueva desde cero y NO un rediseño. La imagen adjunta es
+una fotografía de producto YA LOGRADA: su forma, su realismo, su
+perspectiva, su iluminación y todo su dibujo están bien tal cual
+están. Se devuelve la MISMA fotografía, con la MISMA geometría y el
+MISMO dibujo, cambiando ÚNICAMENTE cómo se reparte el color entre el
+negro y el rojo en el lateral del casco.
+
+TODO ESTO NO SE TOCA — QUEDA PIXEL POR PIXEL IGUAL:
+- La forma y la geometría completa del casco: silueta de la calota,
+  pico frontal / spoiler, mentonera, ventilaciones y todas las
+  piezas físicas del molde real, sin agregar ni quitar ninguna.
+- El visor tintado/oscuro, con su mismo material y su mismo tono.
+- El mecanismo de pivote del visor, con su textura real de FIBRA DE
+  CARBONO.
+- La correa roja, con su color y su trama de tela.
+- La goma negra del borde inferior de la calota.
+- El wordmark "EDGE", con su tipografía, su tamaño y su posición.
+- Los chevrones "XXX" de la zona inferior delantera de la mentonera.
+- El ángulo de cámara, el encuadre y el fondo blanco de estudio.
+- El realismo fotográfico completo: iluminación de estudio, sombras
+  suaves, reflejos especulares sobre las superficies curvas y
+  microtextura de pintura mate. La imagen SIGUE SIENDO LA MISMA
+  FOTOGRAFÍA DE PRODUCTO, con exactamente el mismo tratamiento
+  fotográfico.
+- Todo el DIBUJO del livery: el rombo / marco geométrico angular
+  concéntrico con sus líneas, el patrón de malla triangular con su
+  densidad y su extensión, el texto chico dentro del marco, los
+  grupos de chevrons concéntricos, las líneas grises finas y cada
+  trazo en su misma posición exacta.
+
+PROPORCIÓN DE COLOR — EL FONDO ES OSCURO, EL ROJO ES ACENTO (este
+es el corazón de la corrección: hoy la proporción está invertida):
+- La SUPERFICIE DOMINANTE del lateral del casco es NEGRO / GRIS MUY
+  OSCURO MATE. El cuerpo central del lateral —donde vive el rombo,
+  el marco geométrico y los grupos de chevrons— es OSCURO. Ese es el
+  fondo del diseño.
+- El ROJO es un color de ACENTO MINORITARIO. Aparece SOLO en estos
+  cuatro lugares, y en ningún otro:
+  (a) el PICO FRONTAL / SPOILER, que sí es una pieza de rojo sólido
+      brillante, con su borde limpio contra la zona oscura;
+  (b) una FRANJA ACOTADA de la calota superior — acotada, no la
+      calota entera;
+  (c) LÍNEAS, CUÑAS y CHEVRONS FINOS de acento, de trazo delgado,
+      apoyados sobre el fondo oscuro;
+  (d) la CORREA, que ya es roja y queda como está.
+- Sumado todo, el rojo ocupa MUCHO MENOS superficie que el negro /
+  gris oscuro. Si al mirar la imagen terminada el rojo se lee como
+  el color principal del casco, la edición está MAL.
+- PROHIBIDO EXPANDIR EL ROJO A SUPERFICIES COMPLETAS: el rojo no
+  puede cubrir la calota superior entera, ni el cuerpo central del
+  lateral, ni fundirse con el pico frontal formando una sola masa
+  roja continua. Hoy la calota superior y el pico forman una masa
+  roja sólida que ocupa aproximadamente el tercio superior del
+  casco: ESO ES EL DEFECTO QUE HAY QUE CORREGIR.
+- PROHIBIDO INVERTIR FIGURA Y FONDO: en el diseño de referencia el
+  FONDO es oscuro y las LÍNEAS ROJAS FINAS van encima. Hoy pasó al
+  revés —fondo rojo con líneas oscuras encima— y hay que darlo
+  vuelta: el fondo vuelve a ser oscuro y el rojo vuelve a ser el
+  trazo que se apoya sobre él.
+
+CAMBIO 1 — DEVOLVER EL CUERPO CENTRAL DEL LATERAL A NEGRO:
+Toda la superficie roja que hoy cubre la calota superior y el cuerpo
+central del lateral vuelve a NEGRO / GRIS MUY OSCURO MATE, igual que
+la base de la carcasa, dejando el rojo solo donde lo permite el
+bloque de PROPORCIÓN DE COLOR de arriba.
+- Es un cambio de VALOR DE COLOR del fondo, nada más: equivale a
+  seleccionar esas superficies en un editor de imagen y cambiarles
+  el relleno, sin tocar ninguna de las capas de dibujo que están
+  encima.
+- Los chevrons, líneas, marcos y el patrón de malla que hoy están
+  dibujados sobre ese fondo SIGUEN AHÍ, en la misma posición, con
+  el mismo grosor y la misma cantidad: lo único que cambia es el
+  color de la superficie sobre la que se apoyan.
+- El pico frontal / spoiler CONSERVA su rojo sólido brillante y su
+  borde limpio: esa pieza no se toca, solo deja de fundirse con la
+  calota.
+
+CRÍTICO — LA FLECHA ROJA DELGADA ES UN TRAZO FINO SOBRE FONDO
+OSCURO (defecto real de un intento anterior: la flecha se perdió —
+no lo repitas):
+En la ilustración de diseño de referencia, sobre un fondo GRIS
+OSCURO / NEGRO MATE, hay un grupo de CHEVRONS (flechas en "V"
+acostada, apuntando hacia adelante) ANIDADOS Y CONCÉNTRICOS:
+- la MAYORÍA de esos chevrons son de GRIS OSCURO y de TRAZO FINO;
+- entre ellos hay UNA SOLA FLECHA / CHEVRON ROJA, también de TRAZO
+  DELGADO, que resalta por CONTRASTE contra el gris.
+Esa flecha roja es un ACENTO FINO, NO UNA MASA. Su legibilidad
+depende por completo de que el FONDO sobre el que se apoya sea
+OSCURO: un trazo rojo fino sobre fondo rojo es invisible, y eso es
+exactamente lo que pasó en el intento anterior.
+- Dibujá esa flecha roja delgada de modo que se DISTINGA CLARAMENTE
+  contra el fondo oscuro y contra los chevrons grises que la rodean.
+- PROHIBIDO ENGROSARLA: mantiene el mismo trazo fino que los
+  chevrons grises vecinos.
+- PROHIBIDO DUPLICARLA: es UNA SOLA flecha roja en ese grupo, ni
+  dos, ni tres.
+- PROHIBIDO CONVERTIRLA EN UNA MASA, en un panel, en una cuña
+  gruesa o en una superficie rellena.
+- PROHIBIDO APOYARLA SOBRE FONDO ROJO: si el fondo de ese sector
+  quedó rojo, la flecha no se puede leer y la edición está MAL.
+- Sigue siendo PINTURA sobre la superficie física del casco:
+  acompaña la curvatura, se deforma en perspectiva y recibe la misma
+  luz y las mismas sombras que el resto. Nunca una calcomanía plana
+  ni un relieve.
+
+CRÍTICO — LAS ZONAS EDITADAS TAMPOCO SE REDIBUJAN (defecto real de
+un intento anterior de edición en este mismo caso — no lo repitas):
+Que una zona esté en la lista de cambios NO es permiso para
+rehacerla. En las zonas que se tocan, lo ÚNICO que cambia es el
+COLOR: qué superficie va en negro y qué trazo va en rojo. TODO el
+resto del dibujo de esas zonas se conserva IDÉNTICO — las líneas
+concéntricas del marco con su misma cantidad y su mismo grosor, el
+patrón de malla triangular con su misma densidad y su misma
+extensión, el texto chico en su misma posición y con su mismo
+tamaño, los grupos de chevrons con la misma cantidad de líneas, y
+cada trazo donde estaba. No se rediseña, no se simplifica, no se
+reinterpreta: se recolorea.
+
+NADA MÁS CAMBIA — PROHIBIDO ABSOLUTO:
+- No redibujes el casco ni ninguna de sus partes.
+- No cambies la forma, la geometría, la silueta ni las proporciones.
+- No toques el visor tintado, el mecanismo de pivote con su fibra de
+  carbono, la correa roja, la goma negra del borde inferior, el
+  wordmark "EDGE" ni los chevrones "XXX" de la mentonera.
+- No cambies el ángulo de cámara, el encuadre ni el fondo.
+- No vuelvas a renderizar el realismo fotográfico: la iluminación,
+  las sombras, los reflejos y la microtextura de pintura mate de la
+  imagen adjunta se conservan tal cual.
+- No agregues, no muevas, no redimensiones ni elimines ningún
+  elemento gráfico del livery.
+- No simplifiques ni reduzcas la densidad de ningún patrón, ni
+  elimines el texto chico, ni saques líneas de ningún marco.
+- No agregues ninguna pieza física, panel, aleta ni relieve que no
+  esté en la imagen adjunta: todo elemento del diseño es pintura
+  plana sobre la superficie.
+- No conviertas la imagen en una ilustración, un dibujo vectorial,
+  un render plano ni un mockup: SIGUE SIENDO LA MISMA FOTOGRAFÍA DE
+  PRODUCTO.
+
+VERIFICACIÓN FINAL ANTES DE ENTREGAR — TRES CHEQUEOS, LOS TRES
+OBLIGATORIOS:
+1) PROPORCIÓN: ¿la superficie roja total BAJÓ respecto de la imagen
+   adjunta, y el CUERPO CENTRAL DEL LATERAL quedó OSCURO (negro /
+   gris muy oscuro)? ¿El rojo se lee como ACENTO y no como el color
+   principal del casco? ¿Desapareció la masa roja continua que
+   cubría el tercio superior?
+2) FLECHA FINA: ¿se distingue CLARAMENTE la flecha roja DELGADA
+   contra un fondo OSCURO, entre los chevrons grises concéntricos?
+   ¿Sigue siendo UN SOLO trazo FINO, sin engrosar, sin duplicar y
+   sin convertirse en masa?
+3) NADA MÁS CAMBIÓ: compará contra la imagen adjunta y confirmá que
+   FUERA de esas 2 zonas no cambió absolutamente nada — ni la forma,
+   ni el visor, ni el pivote, ni la correa, ni la goma negra, ni el
+   wordmark "EDGE", ni los chevrones "XXX", ni el ángulo, ni el
+   fondo, ni la iluminación, ni las sombras, ni los reflejos, ni la
+   microtextura mate, ni ninguna línea, texto o patrón del dibujo.
+Si cualquiera de los tres chequeos falla, corregilo antes de
+entregar.
+```
+
+</details>
+
 **Estado:** 🔴 pendiente de generar.
 
-**Qué hay que hacer:** correr el prompt como edición de la imagen del Intento 3 (adjuntando SOLO esa imagen) y mandar el resultado para auditoría — verificar que dentro de la zona del rombo no quede ningún rastro de rojo salvo la flecha/chevron, y que el dibujo de esa zona siga intacto.
+**Qué hay que hacer:** correr el prompt como edición de la imagen del Intento 4 (adjuntando SOLO esa imagen) y mandar el resultado para auditoría — verificar los 3 chequeos: que la superficie roja total haya bajado y el cuerpo central del lateral sea oscuro, que la flecha roja fina se distinga contra ese fondo oscuro sin engrosarse ni duplicarse, y que fuera de esas 2 zonas no haya cambiado nada.
 
 <details><summary>Prompt — Colorway 2 (rojo/negro/gris), vista trasera</summary>
 
@@ -1823,12 +2449,16 @@ No reemplazar las etiquetas "X40" por trazos rojos genéricos.
 ## Estado general del caso
 
 **Estado:** 🟡 en curso — las 4 vistas armadas hasta ahora se corrieron y auditaron, algunas varias veces:
-- **Colorway 1 lateral** — Intento 1 ⚠️ → Intento 2 ❌ (salió ilustración plana) → Intento 3 ⚠️ (realismo y livery resueltos, pero spoiler duplicado/con forma del mockup, sin su azul sólido, y una pieza negra inventada) → Intento 4 ✅ **aprobado en lo esencial** (el usuario lo calificó de "espectacular": bevel/relieve, detalles, colores y perspectiva excelentes; spoiler resuelto —uno solo, forma del molde real, azul sólido— y patrones completos con el texto chico presente), con 3 ajustes puntuales pendientes: una pieza negra tipo toma de aire inventada sobre el lateral, el sticker "DOT" que no corresponde a esta vista y las 3 marcas en "X" de la mentonera que faltan → **Intento 5 🔴 pendiente de generar**, planteado como edición puntual y no como regeneración.
+- **Colorway 1 lateral** — Intento 1 ⚠️ → Intento 2 ❌ (salió ilustración plana) → Intento 3 ⚠️ (realismo y livery resueltos, pero spoiler duplicado/con forma del mockup, sin su azul sólido, y una pieza negra inventada) → Intento 4 ✅ **aprobado en lo esencial** (el usuario lo calificó de "espectacular": bevel/relieve, detalles, colores y perspectiva excelentes; spoiler resuelto —uno solo, forma del molde real, azul sólido— y patrones completos con el texto chico presente), con 3 ajustes puntuales pendientes: una pieza negra tipo toma de aire inventada sobre el lateral, el sticker "DOT" que no corresponde a esta vista y las 3 marcas en "X" de la mentonera que faltan → **Intento 5 ✅ generado** como edición puntual (no regeneración), con los 3 cambios pedidos y **3 imágenes de resultado** → **auditoría 🟡 preparada, veredicto pendiente del usuario**: el bloque *"Intento 5 — resultado auditado (edición de 3 cambios)"* deja el **checklist de verificación cambio por cambio** (25 preguntas concretas), el **riesgo anticipado por cambio** cruzado contra los modos de falla ya documentados del caso, una **tabla de veredicto vacía para completar por imagen** y los **dos prompts correctivos "Intento 6"** listos para copiar/pegar — **Escenario A (cobertura parcial)**, que sigue editando sobre el resultado del Intento 5 nombrando el resto que quedó, y **Escenario B (la edición redibujó de más)**, que descarta ese resultado, vuelve a partir de la imagen aprobada del Intento 4 y refuerza el borrado/agregado puro blindando explícitamente spoiler, visor y estilo fotográfico. Como las 3 imágenes salieron del mismo prompt sin cambiarle una letra, se auditan **por separado** y se elige la mejor (regla de no determinismo del generador).
 - **Colorway 1 trasera** — Intento 1 ⚠️ → Intento 2 ⚠️ (geometría inventada y spoiler sin azul) → Intento 3 ❌ (regresión: volvió a salir ilustración plana y la silueta trasera se contaminó con la del mockup, porque el tercer eje de realismo nunca se propagó de la vista lateral a esta) → Intento 4 ⚠️ **gran avance** (el usuario dijo que "lo demás lo hizo excelente": realismo fotográfico logrado —la propagación del tercer eje funcionó—, silueta trasera recuperada con el extractor y el borde inferior del molde real, livery completo en la calota superior y en la banda inferior, y sin las aletas ni los paneles inventados de antes), con **1 defecto**: el **spoiler salió híbrido** — tomó el azul sólido del mockup (correcto) pero también su forma y su tamaño de ala prominente, en vez del labio bajo e integrado del molde real → **Intento 5 🔴 pendiente de generar**, que desglosa la separación de roles **a nivel de la pieza** (forma del molde / color del mockup / prohibido promediar).
-- **Colorway 2 lateral** — Intento 1 ✅ **aprobada** (3 puntos a verificar con zoom) → Intento 2 ❌ (la edición puntual terminó siendo un rediseño: el generador redibujó y simplificó toda la zona alta del lateral en vez de recolorearla, y encima el color no cambió) → Intento 3 ✅ **casi perfecto** (el recoloreo puro funcionó: el generador **no redibujó** la zona, todo el dibujo se conservó —marco concéntrico, malla con su densidad, texto chico, capas de líneas— y el rojo del pico frontal subió bien; el usuario dijo que quedó "increíble"), con **1 defecto**: el recoloreo quedó **incompleto** —un grupo de barras/franjas horizontales cortas en la parte baja-izquierda del sector siguió en rojo en vez de pasar a negro— → **Intento 4 🔴 pendiente de generar**, que agrega la exigencia de **cobertura completa del recoloreo, sin islas del color viejo**.
+- **Colorway 2 lateral** — Intento 1 ✅ **aprobada** (3 puntos a verificar con zoom) → Intento 2 ❌ (la edición puntual terminó siendo un rediseño: el generador redibujó y simplificó toda la zona alta del lateral en vez de recolorearla, y encima el color no cambió) → Intento 3 ✅ **casi perfecto** (el recoloreo puro funcionó: el generador **no redibujó** la zona, todo el dibujo se conservó —marco concéntrico, malla con su densidad, texto chico, capas de líneas— y el rojo del pico frontal subió bien; el usuario dijo que quedó "increíble"), con **1 defecto**: el recoloreo quedó **incompleto** —un grupo de barras/franjas horizontales cortas en la parte baja-izquierda del sector siguió en rojo en vez de pasar a negro— → Intento 4 ⚠️ **bien en lo general, con 2 defectos de color** (el usuario: **"se excedió mucho el tono rojo"** y **"la flecha delgada y roja de la referencia del dibujo no sale bien"**): se sostuvieron realismo, forma, visor, pivote de fibra de carbono, correa roja, goma negra, wordmark "EDGE" y chevrones "XXX", pero la calota superior y el pico frontal quedaron como una **masa roja continua** que ocupa el tercio superior del casco —**figura y fondo invertidos** respecto del mockup, donde el cuerpo central del lateral es oscuro y el rojo es acento— y la **flecha roja delgada se perdió** dentro de esa masa por falta de contraste → **Intento 5 🔴 pendiente de generar**, planteado como **edición puntual de color** (no regeneración), con un bloque de **proporción de color y relación figura/fondo** y otro que describe la **flecha fina como trazo delgado sobre fondo oscuro**.
 - **Colorway 2 trasera** — Intento 1 ⚠️ (spoiler fusionado con la carcasa, detalles faltantes) → **Intento 2 🔴 pendiente de generar**.
 
 Patrón que se repite en las 4 vistas: el **spoiler** es la pieza que más falla — pierde su color propio, se le contamina la forma con la del mockup, se fusiona con la carcasa o se duplica. Primera vez que se cierra: el Intento 4 del Colorway 1 lateral lo resolvió dándole **una instrucción propia de forma y un punto propio de color**, y el enfoque queda como receta a copiar en las vistas que todavía lo arrastran. Y con el Intento 4 de la trasera del Colorway 1 el spoiler suma **una razón de falla nueva**: quedó **híbrido entre las dos fuentes** — la forma del ala prominente del mockup mezclada con el labio bajo del molde real, arrastrada junto con el color azul que sí correspondía copiar. O sea que el spoiler sigue siendo la pieza que más falla en todas las vistas del livery, ahora también por promedio de fuentes. Faltan las imágenes restantes que el usuario va a mandar para completar el set.
+
+Sexto patrón, visible al preparar la auditoría del Intento 5 del Colorway 1 lateral: **la regla de "cobertura completa del cambio dentro de la zona" no es exclusiva de los recoloreos — vale igual para los BORRADOS y para los AGREGADOS**, y en cada caso significa algo distinto. En un **borrado** la cobertura completa son dos tareas, no una: *eliminar* el elemento sin dejar resto, borde, ranura, halo ni sombra, **y** *reconstruir el dibujo que va debajo* — que acá no es superficie lisa sino **livery con patrón**, así que el prompt tiene que declarar explícitamente qué dibujo va en su lugar (las líneas y los colores de las zonas contiguas, con la continuidad exigida trazo por trazo: una línea que entra por un borde del área sale por el otro alineada), o el generador tapa el hueco con un parche de color plano. En un **agregado** la cobertura completa es **cantidad, alineación, posición y tamaño exactos**, con conteo forzado —el mismo mecanismo que en Tipo A no estaba escrito pero en Tipo B ya existía como "conteo forzado de celdas del grid"—, porque un elemento repetido descrito solo por su zona ("tres marcas en la parte baja de la mentonera") sale en la cantidad y el lugar que el generador quiera. Es la generalización natural del patrón que el Colorway 2 lateral dejó para el recoloreo, aplicada a los otros dos tipos de cambio que puede pedir una edición puntual.
+
+Quinto patrón, descubierto con el Intento 4 de la lateral del Colorway 2: **hay que declarar la PROPORCIÓN de color y la relación FIGURA/FONDO del diseño, no solo qué colores lo componen**. Todos los prompts de edición de este caso venían razonando **zona por zona** ("el interior del rombo", "el pico frontal"), y cada instrucción local era correcta por separado — pero ninguna decía cuál es la **superficie dominante** y cuál el **acento minoritario**. Sin ese techo declarado, el generador expandió el rojo hasta cubrir la calota superior y el pico como una sola masa continua e **invirtió figura y fondo**: en el mockup el fondo es oscuro con líneas rojas finas encima, y en el resultado quedó fondo rojo con líneas oscuras encima. El corolario es la segunda mitad del mismo patrón: **un detalle fino de un color solo sobrevive si el prompt declara contra qué fondo tiene que contrastar**. La flecha roja delgada estaba definida en el prompt únicamente **en negativo**, como excepción del recoloreo ("conserva su rojo"), nunca en positivo —trazo fino, dentro de un grupo de chevrons concéntricos grises, apoyada sobre fondo oscuro—, así que al desaparecer el fondo oscuro el elemento dejó de existir visualmente. Los dos defectos son el mismo problema visto dos veces.
 
 Cuarto patrón, descubierto con el Intento 4 de la trasera del Colorway 1: **la separación de roles tiene que bajar al nivel de la pieza, no quedarse a nivel de la imagen completa**. El prompt separaba bien los 3 roles para el casco entero y eso funcionó para toda la vista, pero el spoiler es la única pieza que toma **color de una fuente** (azul sólido del mockup) y **forma de otra** (labio bajo del molde real): al recibir instrucciones de las dos a la vez sobre el mismo elemento, el generador las **promedió**. Cuando una pieza concreta cruza las dos fuentes hay que decir explícitamente **qué atributo sale de cada imagen**, **prohibir el híbrido con esas palabras** y **describir la forma real de la pieza con detalle** (cuánto sobresale, qué perfil, cómo es su borde) en vez de solo nombrarla.
 

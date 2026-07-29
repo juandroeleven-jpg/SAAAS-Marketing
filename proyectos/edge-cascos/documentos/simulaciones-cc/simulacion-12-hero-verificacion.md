@@ -65,8 +65,8 @@ flowchart TD
 | Estilo de casco | (vacío) |
 | Peso | (vacío) |
 | Quick Visor Release System | (vacío) |
-| Master Box | X |
-| Inner Box-bolsa protectora | X |
+| Master Box | (vacío) — corregido: una transcripción anterior lo tenía como X |
+| Inner Box-bolsa protectora | (vacío) — corregido: una transcripción anterior lo tenía como X |
 | Con maletín de lujo | (vacío) |
 
 </details>
@@ -115,7 +115,9 @@ flowchart TD
 - *Material exterior ABS* e *Interior EPS* quedan sin dato — no hay más ítems confirmados en el excel para completar el grid a 6.
 - Resultado: **el grid B solo se puede armar hoy con 4 ítems confirmados** (Canal para lentes, Bluetooth, Kit de mecanismo visor, Hebilla doble D). Faltan 2 para llegar a 6.
 
-### Estado: 🔴 Prompt A bloqueado (1 solo ítem confirmado) · ⚠️ Prompt B generable en versión reducida de 4 ítems
+### Estado: ✅ los 2 prompts definitivos están armados — reparto 3 + 3 (ver [sección de abajo](#-versión-definitiva-de-las-2-tarjetas-de-hero--reparto-3--3-sin-ítems-repetidos))
+
+> **Nota:** durante un tramo de esta sesión el Prompt A quedó 🔴 bloqueado por tener un solo ítem confirmado *dentro de su bloque original*. Se destrabó al repartir los 6 datos confirmados de Hero entre las dos tarjetas (3 y 3) en vez de tratarlas por separado. El análisis de abajo sobre "1 de 6" y "4 de 6" queda como registro de cómo se llegó ahí.
 
 **Qué falló:** "Diseño modular" contradice el tipo de casco confirmado (open face); "hebilla micrométrica" probablemente sea el tipo de hebilla equivocado (el excel confirma doble D).
 
@@ -323,6 +325,170 @@ PROHIBIDO ABSOLUTO:
 **Estado:** 🔴 pendiente de generar.
 
 **Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría.
+
+---
+
+## ✅ Versión definitiva de las 2 tarjetas de Hero — reparto 3 + 3, sin ítems repetidos
+
+Pedido explícito del usuario: los **dos** prompts para rehacer los **dos objetos** de la ficha Hero (la tarjeta de homologación con el banner DOT, y el grid de íconos). Se entregan ambos, con la advertencia dicha de frente: **el excel maestro confirma hoy solo 6 datos para Hero**, así que las dos tarjetas no se pueden "arreglar" conservando su tamaño — bajan de 7 + 6 = 13 claims a **3 + 3 = 6 claims**, todos con respaldo.
+
+### Por qué 3 + 3 y no 4 + 2
+
+Los 6 datos confirmados de la columna Hero son:
+
+| Dato confirmado | Fuente en el excel | A qué tarjeta va |
+|---|---|---|
+| OPEN FACE | fila "Full Face-Flip Up-Open Face-Adventure" | Grid de íconos |
+| Espacio para Bluetooth | X | Grid de íconos |
+| Hebilla doble D | X | Grid de íconos |
+| Liner desmontable y lavable | X | Lista de homologación |
+| Kit de mecanismo visor | X | Lista de homologación |
+| Canal para lentes | X | Lista de homologación |
+
+**Regla aplicada:** ningún ítem aparece en las dos tarjetas. La ficha original tampoco repite — sus 7 ítems de lista y sus 6 íconos son conjuntos disjuntos. Por eso el reparto es 3 + 3 y no 4 + 2: es el único corte balanceado que usa los 6 datos confirmados sin duplicar ninguno y sin afirmar nada sin respaldo.
+
+**Esto reemplaza** al *Prompt A de 3 ítems* marcado como ⚠️ OBSOLETO más arriba (estaba armado sobre el dato erróneo de cubre barbilla / cubre nariz) y a la *versión de 4 ítems* del Prompt B (que repetía "Canal para lentes" y "Kit de mecanismo visor", ya presentes en la lista).
+
+### Los 3 errores duros que se corrigen
+
+1. **"DISEÑO MODULAR" → "OPEN FACE".** El excel confirma OPEN FACE. Modular, full face y open face son categorías mutuamente excluyentes: no es un dato faltante, es un claim falso.
+2. **"HEBILLA MICROMÉTRICA" → "HEBILLA DOBLE D".** El excel deja micrométrica vacía y confirma doble D con X. Además, en la ficha actual el ícono de hebilla micrométrica viene con una **X/tache encima** — o sea que la pieza afirma en negativo algo que tampoco está confirmado. Se saca el tache: doble D es una característica que el casco **sí** tiene.
+3. **"DOT FNVSS 510" → "DOT & ECE 22.06".** El excel dice "DOT & ECE 22.06" para toda la marca. "FNVSS 510" no aparece en ninguna parte del excel.
+
+<details><summary>Prompt A — Tarjeta de homologación Hero (3 ítems, certificación corregida)</summary>
+
+```
+Diseñá la tarjeta de HOMOLOGACIÓN del casco EDGEPRO HERO (open face /
+tipo jet), reproduciendo EXACTAMENTE la forma, la estructura, la
+proporción y el tamaño de la imagen de referencia adjunta: el lienzo
+final tiene que tener el MISMO ancho y alto en píxeles que la
+referencia (formato vertical angosto), sin recortar, sin estirar y
+sin cambiar la relación de aspecto.
+
+QUÉ SE CONSERVA IDÉNTICO A LA REFERENCIA:
+- La estructura de 2 bloques apilados: arriba un banner NEGRO sólido
+  de ancho completo, abajo una zona de fondo GRIS CLARO con la lista.
+- La tipografía: sans serif condensada, mayúsculas, bold, texto blanco
+  sobre el negro y texto negro sobre el gris.
+- Las líneas horizontales finas grises que separan un ítem del
+  siguiente.
+- El centrado del texto y los márgenes laterales.
+
+BLOQUE 1 — BANNER NEGRO (arriba, ancho completo):
+- Texto "DOT" en letras BLANCAS grandes, bold, centrado.
+- Debajo, dentro del mismo banner negro, en blanco y en cuerpo más
+  chico: "& ECE 22.06".
+- CRÍTICO: la imagen de referencia dice "FNVSS 510" debajo del DOT.
+  Ese texto NO se copia. La certificación correcta de este casco,
+  según el excel maestro, es "DOT & ECE 22.06". Reemplazalo.
+
+BLOQUE 2 — LISTA (zona gris clara, el resto del alto):
+Lista de EXACTAMENTE 3 ítems, en este orden, en mayúsculas, negro,
+bold, centrados, separados entre sí por una línea horizontal fina
+gris:
+1. LINER DESMONTABLE Y LAVABLE
+2. KIT DE MECANISMO VISOR
+3. CANAL PARA LENTES
+
+CRÍTICO — SON 3 ÍTEMS, NO 7:
+La referencia tiene 7 ítems. Esta tarjeta tiene 3. Los otros 4 de la
+referencia (VISERA ANTI SCRATCH, PREPARADO PARA ANTI EMPAÑANTE,
+SISTEMA DE EMERGENCIA DE LIBERACIÓN RÁPIDA, SISTEMA DE LIBERACIÓN
+RÁPIDA DEL VISOR, CUBRE BARBILLA, CUBRE NARIZ) NO se incluyen porque
+no están confirmados para este modelo. No los agregues, no los
+reemplaces por otros, no rellenes con ítems inventados.
+
+CRÍTICO — ESPACIADO UNIFORME:
+El espacio vertical entre los 3 ítems tiene que ser EXACTAMENTE IGUAL
+entre todos los pares consecutivos, y el margen superior e inferior de
+la lista también parejo. Redistribuí la zona gris completa entre los 3
+ítems — NO conserves el espaciado de una tarjeta de 7 ítems dejando
+huecos vacíos abajo.
+
+PROHIBIDO ABSOLUTO:
+- No mostrar "FNVSS 510" en ninguna parte.
+- No agregar un 4°, 5°, 6° ni 7° ítem para "completar" la tarjeta.
+- No dejar rectángulos negros sólidos como relleno en ningún lugar
+  fuera del banner de certificación.
+- No agregar íconos, logos ni gráficos: esta tarjeta es solo texto.
+- No cambiar la paleta (negro / gris claro / blanco).
+```
+
+</details>
+
+<details><summary>Prompt B — Grid de íconos Hero (3 ítems, 1 fila x 3 columnas)</summary>
+
+```
+Diseñá una tarjeta de especificaciones técnicas en formato GRID DE
+ÍCONOS de UNA FILA x TRES COLUMNAS (3 celdas en total), resolución 4K,
+fondo blanco liso o transparente, para el casco EDGEPRO HERO
+(open face / tipo jet).
+
+CRÍTICO — SON 3 CELDAS, NI UNA MÁS:
+La imagen de referencia adjunta tiene un grid de 6 celdas (2 columnas
+x 3 filas). Esta tarjeta tiene EXACTAMENTE 3 celdas, en UNA sola fila
+horizontal. Solo 3 características de este modelo están confirmadas en
+el excel maestro.
+- En un intento anterior de este mismo caso, el generador devolvió un
+  grid con FILAS DE MÁS y con ítems DUPLICADOS, cada repetición con un
+  ícono distinto. NO lo repitas.
+- Cada uno de los 3 ítems aparece en UNA sola celda, UNA sola vez.
+- Antes de terminar, contá las celdas una por una: tienen que ser 3.
+  Ninguna repetida, ninguna vacía, ninguna fila extra "por si acaso".
+
+LOS 3 ÍTEMS A REPRESENTAR (en este orden, izquierda a derecha):
+1. OPEN FACE
+2. ESPACIO PARA BLUETOOTH
+3. HEBILLA DOBLE D
+
+LAYOUT: 3 celdas de igual ancho, distribución uniforme y simétrica,
+mismo espaciado entre celdas y márgenes iguales en los 4 bordes. Cada
+celda: ícono centrado arriba, texto del ítem en mayúsculas centrado
+debajo, MISMO tamaño de fuente en las 3 celdas.
+
+ESTILO DE ÍCONO — consistente con la referencia adjunta:
+- Estilo lineal, trazo uniforme, sin relleno sólido salvo detalles
+  mínimos.
+- Color principal rojo/bordo (tono EDGE), cada ícono dentro de un
+  octágono de contorno, igual que en la referencia.
+- Mismo grosor de trazo, mismo tamaño de octágono y misma paleta en
+  los 3 íconos.
+
+CRÍTICO — TRES ÍCONOS NUEVOS, NINGUNO RECICLADO DE LA REFERENCIA:
+- "OPEN FACE": dibujá un casco de perfil de tipo JET / open face —
+  SIN mentonera, mentón y boca expuestos, con visera abatible. NO
+  copies el ícono de "DISEÑO MODULAR" de la referencia (ese muestra
+  un casco con mentonera abatible, que es otro tipo de casco). Modular
+  y open face son categorías excluyentes y este casco es open face.
+- "HEBILLA DOBLE D": dibujá desde cero un broche de dos anillas en
+  "D" con la correa pasando entre ellas. NO copies el ícono de
+  "HEBILLA MICROMÉTRICA" de la referencia, que además viene con una
+  X/tache encima: ese tache NO pasa a esta tarjeta. Este casco SÍ
+  tiene hebilla, es de otro tipo.
+- "ESPACIO PARA BLUETOOTH": puede mantener el mismo concepto visual
+  que en la referencia, redibujado limpio y al mismo trazo que los
+  otros dos.
+
+PROHIBIDO ABSOLUTO:
+- No incluir "DISEÑO MODULAR" — este casco es OPEN FACE.
+- No incluir "HEBILLA MICROMÉTRICA" — el dato confirmado es doble D.
+- No incluir "CON LUZ LED", "DOBLE VISERA", "CANAL PARA LENTES",
+  "MATERIAL EXTERIOR ABS" ni "INTERIOR EPS": o no están confirmados
+  para este modelo, o ya van en la otra tarjeta de la ficha.
+- No agregar un 4°, 5° ni 6° ítem para "completar" el grid.
+- No poner ninguna X, tache ni marca de negación sobre ningún ícono:
+  las 3 celdas son características que el casco SÍ tiene.
+- No dejar celdas decorativas vacías ni forzar el layout 2x3 de la
+  referencia con huecos.
+```
+
+</details>
+
+**Estado:** 🔴 los 2 prompts listos, pendientes de generar.
+
+**Qué hay que hacer:** correr los dos y mandar los resultados para auditoría. Chequeos concretos al recibirlos: (a) que el banner diga "DOT & ECE 22.06" y en ningún lado "FNVSS 510"; (b) que la lista tenga 3 ítems con espaciado parejo y sin hueco vacío abajo; (c) que el grid tenga 3 celdas y ninguna repetida; (d) que el ícono de tipo de casco muestre un jet sin mentonera; (e) que el ícono de hebilla sea de dos anillas en D y **sin tache**.
+
+**Lo que desbloquea tarjetas más completas:** los 5 datos que hay que pedirle al fabricante siguen siendo los mismos (visera anti scratch, preparado para anti empañante, ERS, sistema de liberación rápida del visor, cubre barbilla / cubre nariz). Con esos cargados en el excel, la lista vuelve a 6-7 ítems y el grid a 2x3.
 
 ---
 
@@ -686,3 +852,5 @@ lograrse únicamente a partir de este texto.
 ---
 
 **Última actualización:** 2026-07-28 · Agente 0 (transcripción) + Agente Auditor independiente (verificación + adaptación de prompts), corridos en esta sesión a pedido explícito de auditar el tercer caso del catálogo (Hero). Sub-caso de foto lifestyle: intento 1 auditado con 4 defectos (formato, ángulo, degradé de color, forma de ventilación), intento 2 con prompt corregido, intento 4 nocturno confirmado por el usuario como muy bueno, intento 5 variante diurna del mismo prompt. Corrección posterior: una lectura errónea de una captura de excel de baja resolución había marcado "Cubre barbilla" y "Cubre nariz" como confirmados para Hero; una captura nítida posterior mostró que ambas celdas están vacías — se revirtió a SIN DATO (veredicto de vuelta en 3 MATCH · 1 MISMATCH · 9 SIN DATO), el Prompt A vuelve a quedar bloqueado y su versión de 3 ítems quedó marcada como obsoleta. Nueva actualización: el Prompt B (grid de íconos, 4 ítems) se corrió y falló — salió un grid de 6 celdas (2x3) con "Kit de mecanismo visor" y "Hebilla doble D" duplicados con ícono distinto en cada repetición, a pesar de la advertencia explícita del prompt. Se documentó como Intento 1 y se agregó el Intento 2 con el prompt reforzado, nombrando explícitamente los 2 ítems que se duplicaron, pendiente de correr.
+
+**2026-07-29 —** a pedido explícito del usuario ("los dos prompts para arreglar esos dos objetos del Hero") se armó la **versión definitiva de las 2 tarjetas con reparto 3 + 3**, que destraba el Prompt A sin afirmar nada sin respaldo: en vez de tratar cada tarjeta por separado (lo que dejaba a la lista con 1 solo ítem confirmado), se reparten los 6 datos confirmados de la columna Hero entre las dos, sin repetir ninguno — igual que la ficha original, cuyos dos bloques son conjuntos disjuntos. Lista: liner desmontable y lavable / kit de mecanismo visor / canal para lentes. Grid: open face / espacio para Bluetooth / hebilla doble D. Se corrigen los 3 errores duros: "diseño modular" → "open face", "hebilla micrométrica" (con tache) → "hebilla doble D" (sin tache), "DOT FNVSS 510" → "DOT & ECE 22.06". Quedan obsoletos el Prompt A de 3 ítems (dato erróneo) y el Prompt B de 4 ítems (repetía ítems de la lista). Además se corrigió la transcripción del excel: **Master Box e Inner Box están vacías para Hero**, no con X — la columna Hero tiene exactamente 5 celdas con X, como ya decía la nota de corrección, y la tabla de transcripción se había quedado desalineada con ese conteo.
