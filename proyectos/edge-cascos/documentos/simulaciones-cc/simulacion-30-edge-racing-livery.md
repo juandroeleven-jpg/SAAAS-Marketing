@@ -712,9 +712,167 @@ inferior.
 
 </details>
 
+**Estado:** ✅ generado — ver la auditoría del resultado justo abajo.
+
+### Intento 3 — Colorway 1 vista trasera, resultado auditado
+
+**Estado:** ❌ Falló — regresión: volvió a salir ilustración plana y perdió la silueta real del molde.
+
+**Qué falló:** el resultado volvió a salir como una **ILUSTRACIÓN / dibujo vectorial plano**, no como una fotografía de producto — colores planos, sin microtextura de pintura, sin reflejos especulares ni sombras de estudio, con bordes de software de diseño. Y al copiar ese estilo se llevó puesta también la forma: **la silueta trasera del casco pasó a seguir la del mockup de diseño** (más plana, más "dibujada") en vez de la de la foto del casco negro liso. Es una **regresión**: los intentos anteriores de esta misma vista sí habían entregado una fotografía real y sí habían respetado la silueta del molde (el Intento 1 llegó a calificarse de "geometría respetada al 100%" y el Intento 2 seguía siendo una foto). O sea, no es un defecto nuevo del caso: es un defecto ya conocido que volvió.
+
+**Causa raíz — descuido de propagación entre vistas:** el **tercer eje** (forma / contenido gráfico / **estilo de render y realismo de material**) se descubrió y se agregó en la **vista LATERAL de este mismo colorway** — ver su Intento 3, donde entraron el bloque `CRÍTICO — EL RESULTADO ES UNA FOTOGRAFÍA, NO UNA ILUSTRACIÓN` y la regla ampliada de **"DOS FUENTES, TRES ROLES"** — pero **nunca se copió a los prompts de la vista TRASERA**. Los prompts de la trasera siguieron con la regla vieja de **"DOS FUENTES, DOS ROLES"** y sin ningún bloque de realismo fotográfico. Sin ese eje declarado explícitamente, el generador toma de la ilustración de diseño no solo el contenido gráfico sino también su **estilo de render plano**, y al copiar el estilo arrastra la **forma** del mockup. Dicho de otro modo: el defecto de la trasera no es un hallazgo nuevo — es exactamente el mismo que ya se había diagnosticado y resuelto en la lateral, reapareciendo porque la corrección no se propagó a todas las vistas del caso.
+
+**La lección, para que no vuelva a pasar:** cuando se descubre una regla nueva y se corrige el prompt de UNA vista, hay que **propagarla de inmediato a los prompts de TODAS las demás vistas y colorways del mismo caso**. Si no, el mismo defecto reaparece vista por vista, se gasta una corrida entera en redescubrirlo y se pierde tiempo rehaciendo un diagnóstico que ya estaba escrito unas líneas más arriba en el mismo documento.
+
+**Qué hay que hacer:** reintentar con el prompt corregido (Intento 4, abajo), que propaga el tercer eje de realismo a esta vista.
+
+### Intento 4 — Colorway 1 vista trasera, con el tercer eje de realismo fotográfico propagado
+
+<details><summary>Prompt usado</summary>
+
+```
+Genera una imagen de producto del mismo casco full-face de la
+referencia adjunta (molde real, vista trasera), mismo ángulo,
+encuadre y fondo.
+
+REGLA MÁS IMPORTANTE — DOS FUENTES, TRES ROLES QUE NUNCA SE MEZCLAN:
+- La FOTO del casco NEGRO LISO vista trasera es la ÚNICA autoridad de
+  FORMA — silueta de la calota desde atrás, extractor de ventilación
+  superior, labio del spoiler, borde inferior con el acolchado y las
+  correas, todo tal cual está en esa foto. Copiala sin ninguna
+  variación.
+- Esa MISMA foto del casco negro liso es también la ÚNICA autoridad
+  de ESTILO DE RENDER Y REALISMO DE MATERIAL — es una fotografía de
+  producto real, y el resultado tiene que ser una fotografía igual de
+  real: mismo tipo de iluminación, mismos reflejos, misma textura de
+  pintura, mismo volumen tridimensional.
+- La imagen de diseño azul/blanco/rojo vista trasera es SOLO fuente
+  de CONTENIDO GRÁFICO — qué formas, qué colores y dónde va cada
+  elemento, el wordmark "EDGE", los patrones geométricos. NUNCA su
+  forma de casco y NUNCA su estilo de render. Esa imagen de diseño es
+  una ILUSTRACIÓN VECTORIAL 2D PLANA: el resultado final NO debe
+  verse como esa ilustración. Si esa imagen muestra una forma de
+  casco distinta a la del molde negro liso, ignorá esa forma por
+  completo.
+
+CRÍTICO — EL RESULTADO ES UNA FOTOGRAFÍA, NO UNA ILUSTRACIÓN (defecto
+real de un intento anterior de esta misma vista, que devolvió un
+dibujo vectorial plano en vez de una foto — no lo repitas):
+- La salida tiene que ser una FOTOGRAFÍA DE PRODUCTO FOTORREALISTA del
+  casco físico real, con exactamente el mismo tratamiento fotográfico
+  que la foto del molde negro liso:
+  - misma iluminación de estudio, con sus luces y sus sombras suaves;
+  - mismos reflejos especulares sutiles sobre la superficie curva de
+    la calota vista desde atrás;
+  - misma microtextura de pintura mate real (no color plano digital);
+  - mismo acolchado interior y mismas correas en el borde inferior,
+    con su textura de tela real;
+  - mismo volumen y misma profundidad tridimensional.
+- El livery se aplica como PINTURA REAL sobre la superficie física del
+  casco: sigue la curvatura de la carcasa, se deforma con ella en
+  perspectiva, y recibe la luz y las sombras de la escena igual que el
+  resto del casco. NO es un dibujo plano pegado encima ni una calcomanía
+  digital superpuesta.
+- PROHIBIDO en cuanto a estilo: colores planos sin gradiente, ausencia
+  de reflejos, bordes vectoriales de software de diseño, aspecto de
+  mockup o de render 2D. Si el resultado se parece a la ilustración de
+  diseño en su acabado, está mal.
+
+CRÍTICO — NO INVENTES NINGUNA PIEZA FÍSICA (defecto real de un intento
+anterior: aparecieron aletas y paneles elevados en la parte alta de la
+calota que NO existen en el molde real — no lo repitas): el casco
+visto de atrás tiene EXACTAMENTE las piezas que se ven en la foto del
+molde negro liso, ni una más: la superficie limpia y redondeada de la
+calota, el extractor de ventilación superior, el labio del spoiler
+trasero y el borde inferior con el acolchado y las correas. TODO lo
+demás que aparece en la ilustración de diseño son GRÁFICOS PLANOS
+PINTADOS, no relieves ni piezas: las líneas, los chevrones, las formas
+angulares y el patrón de malla son PINTURA SOBRE UNA SUPERFICIE LISA.
+No los conviertas en aletas, paneles, salientes ni ningún volumen
+físico. Si en la ilustración una forma parece una pieza en relieve,
+igual va como pintura plana.
+
+PASO 1 — FORMA: reproducí exactamente la forma trasera del casco
+negro liso antes de aplicar cualquier gráfico.
+
+CRÍTICO — LA SILUETA TRASERA ES LA DEL MOLDE REAL, NO LA DEL MOCKUP
+(defecto real de un intento anterior de esta misma vista: la silueta
+se contaminó con la del mockup y salió más plana y más "dibujada" — no
+lo repitas). En la foto del casco negro liso vista de atrás:
+- la calota es REDONDEADA Y COMPACTA, con su curvatura real;
+- el extractor de ventilación superior está en su posición y con su
+  forma exactas;
+- el labio del spoiler trasero tiene su relieve real, con el volumen
+  que muestra la foto;
+- el borde inferior muestra el acolchado interior y las correas
+  visibles, tal como en la foto.
+Esa silueta sale SIEMPRE de la foto del molde negro liso, nunca del
+mockup de diseño, que tiene una forma de casco distinta. Si las dos
+imágenes no coinciden en la forma, gana la foto del molde real.
+
+PASO 2 — DISEÑO: sobre esa forma ya fijada, aplicá el diseño de
+carreras del colorway azul/blanco/rojo:
+- SPOILER TRASERO — AZUL SÓLIDO (defecto real de un intento anterior:
+  el spoiler quedó con el mismo patrón blanco/azul de la calota, sin
+  su color propio — no lo repitas). En la ilustración de diseño, el
+  spoiler es una pieza en AZUL SÓLIDO, uniforme, claramente
+  diferenciada del resto del casco: sin patrón de malla, sin líneas
+  blancas, sin chevrones encima. Pintalo de azul sólido y que se
+  distinga a simple vista del patrón que lo rodea.
+- PARTE SUPERIOR DE LA CALOTA — LLEVA DISEÑO, NO ES AZUL LISO. El azul
+  es solo la BASE: el diseño va ENCIMA y tiene que CUBRIR la zona
+  superior. Son TRES elementos, todos obligatorios y todos con el
+  mismo nivel de detalle que la ilustración de diseño:
+  (a) Líneas verticales blancas y azul oscuro tipo rayas / chevrones
+      que SUBEN desde la banda inferior hacia la parte alta de la
+      calota, recorriendo la zona superior en toda su altura.
+  (b) Patrón de textura fina tipo malla / triángulos entrelazados en
+      blanco sobre los costados superiores de la calota, con la misma
+      extensión y la misma intensidad que en la ilustración.
+  (c) Formas geométricas angulares en blanco y azul oscuro en la zona
+      alta de la calota, con todas sus capas tal como aparecen en la
+      ilustración. Van PINTADAS, planas — nunca como piezas en
+      relieve.
+- ZONA INFERIOR — EL PATRÓN CUBRE COMPLETA LA CARCASA. El spoiler
+  trasero y la carcasa del casco son PIEZAS DISTINTAS: no las
+  confundas al decidir hasta dónde llega cada cosa. El patrón
+  geométrico de la banda inferior tiene que cubrir COMPLETA la zona
+  baja de la carcasa, incluyendo los LATERALES INFERIORES, sin
+  cortarse ni dejar zonas sin diseño.
+- Banda inferior: patrón geométrico blanco/rojo/azul con franjas tipo
+  chevron.
+- Wordmark "EDGE" en blanco, centrado, sobre la banda inferior.
+- Sticker "DOT" pequeño en la parte más baja, centrado.
+- Etiquetas chicas "X40" a ambos lados de la banda inferior.
+
+CRÍTICO — MISMO ÁNGULO EXACTO que la foto del molde negro liso vista
+trasera.
+
+PROHIBIDO ABSOLUTO: no cambiar la forma ni la silueta trasera del
+molde real. No agregar NINGUNA pieza, aleta, panel, saliente ni
+relieve que no esté en la foto del molde negro liso — todo elemento
+del diseño es pintura plana. No dejar el spoiler con el patrón de la
+calota: va en azul sólido. No copiar la forma del casco de la imagen
+de diseño si es distinta. No agregar elementos gráficos fuera de la
+lista de arriba. No dejar la parte superior de la calota en azul liso
+sin diseño. No cortar ni dejar incompleto el patrón de la zona
+inferior. No entregar una ilustración, un dibujo vectorial, un render
+plano ni un mockup de diseño — tiene que ser una fotografía
+fotorrealista del casco físico real. No copiar el estilo de render de
+la imagen de diseño (de esa imagen se toma SOLO el contenido gráfico).
+No aplanar el material del casco ni eliminar los reflejos, las sombras
+ni las texturas reales (pintura mate de la calota, tela del acolchado
+y de las correas del borde inferior). No contaminar la silueta trasera
+con la forma del mockup: la calota redondeada y compacta, el extractor
+superior, el labio del spoiler y el borde inferior son los de la foto
+del molde real.
+```
+
+</details>
+
 **Estado:** 🔴 pendiente de generar.
 
-**Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría — verificar que no aparezca ninguna pieza/relieve que no esté en el molde negro liso, y que el spoiler quede en azul sólido diferenciado del patrón que lo rodea.
+**Qué hay que hacer:** correr el prompt y mandar el resultado para auditoría — verificar primero que sea una FOTOGRAFÍA (con material, reflejos y sombras reales) y que la silueta trasera coincida con la del molde negro liso; recién después revisar el contenido del livery.
 
 <details><summary>Prompt — Colorway 2 (rojo/negro/gris), vista lateral</summary>
 
@@ -1148,11 +1306,13 @@ No reemplazar las etiquetas "X40" por trazos rojos genéricos.
 
 **Estado:** 🟡 en curso — las 4 vistas armadas hasta ahora se corrieron y auditaron, algunas varias veces:
 - **Colorway 1 lateral** — Intento 1 ⚠️ → Intento 2 ❌ (salió ilustración plana) → Intento 3 ⚠️ (realismo y livery resueltos, pero spoiler duplicado/con forma del mockup, sin su azul sólido, y una pieza negra inventada) → **Intento 4 🔴 pendiente de generar**.
-- **Colorway 1 trasera** — Intento 1 ⚠️ → Intento 2 ⚠️ (geometría inventada y spoiler sin azul) → **Intento 3 🔴 pendiente de generar**.
+- **Colorway 1 trasera** — Intento 1 ⚠️ → Intento 2 ⚠️ (geometría inventada y spoiler sin azul) → Intento 3 ❌ (regresión: volvió a salir ilustración plana y la silueta trasera se contaminó con la del mockup, porque el tercer eje de realismo nunca se propagó de la vista lateral a esta) → **Intento 4 🔴 pendiente de generar**.
 - **Colorway 2 lateral** — Intento 1 ✅ **aprobada** (3 puntos a verificar con zoom) → Intento 2 ❌ (la edición puntual terminó siendo un rediseño: el generador redibujó y simplificó toda la zona alta del lateral en vez de recolorearla, y encima el color no cambió) → **Intento 3 🔴 pendiente de generar**, replanteado como recoloreo puro.
 - **Colorway 2 trasera** — Intento 1 ⚠️ (spoiler fusionado con la carcasa, detalles faltantes) → **Intento 2 🔴 pendiente de generar**.
 
 Patrón que se repite en las 4 vistas: el **spoiler** es la pieza que más falla — pierde su color propio, se le contamina la forma con la del mockup, se fusiona con la carcasa o se duplica. Faltan las imágenes restantes que el usuario va a mandar para completar el set.
+
+Segundo patrón, descubierto con el Intento 3 de la trasera del Colorway 1: los defectos **no se propagan solos entre vistas, pero las correcciones tampoco**. El tercer eje de realismo fotográfico se agregó solo al prompt de la vista lateral y la trasera, que quedó con la regla vieja de "DOS FUENTES, DOS ROLES", volvió a devolver una ilustración plana con la silueta del mockup. Cada regla nueva que se descubre hay que copiarla en el acto a **todas** las vistas y colorways del caso — incluidos los archivos hermanos `simulacion-30b`, `simulacion-30c` y `simulacion-30d`, cuyos prompts todavía no tienen el tercer eje (ya quedaron marcados con una advertencia al pie de cada archivo).
 
 **Qué hay que hacer:**
 1. Correr los prompts correctivos pendientes (en sesiones aisladas cada uno) y mandar los resultados para auditoría.
@@ -1163,4 +1323,4 @@ Patrón que se repite en las 4 vistas: el **spoiler** es la pieza que más falla
 
 ---
 
-**Última actualización:** 2026-07-28 · primer registro de este caso (livery de carreras EDGE, 2 colorways recibidos, 3 imágenes más en camino) — Tipo A, múltiples vistas. Se corrió el prompt del Colorway 1 vista lateral y el resultado quedó casi impecable (geometría del molde y grueso del livery correctos), con 2 defectos puntuales: la zona superior de la calota salió incompleta/simplificada (malla de triángulos tenue, líneas concéntricas con menos capas, texto chico del marco ausente) y la mentonera salió en gris liso en vez de continuar el patrón geométrico — ambos corregidos en el prompt del Intento 2. También se corrió el prompt del Colorway 1 vista trasera: geometría del molde respetada al 100% (silueta trasera, extractor, borde inferior con acolchado y correas) y wordmark "EDGE", sticker "DOT" y franjas de la banda inferior correctos, con 2 defectos — la parte superior de la calota quedó en azul liso sin ninguno de los elementos gráficos de la ilustración (rayas/chevrones verticales, malla de triángulos en los costados, formas angulares de la zona alta) y la zona baja quedó incompleta porque el generador confundió el spoiler trasero con la carcasa y cortó el patrón — ambos corregidos en su propio Intento 2. Se corrió después el prompt del Intento 2 del Colorway 1 vista lateral: corrigió los dos defectos gráficos anteriores (zona superior completa con la malla de triángulos extendida, las líneas concéntricas con todas sus capas y el texto "FOR BLAZING RUNNERS" presente, y la mentonera con el livery bajando hasta el borde), pero falló por un motivo nuevo y más de fondo — devolvió una ILUSTRACIÓN VECTORIAL PLANA en vez de una fotografía del casco real (colores planos, sin microtextura de pintura, sin reflejos especulares ni sombras de estudio, bordes de software de diseño, y contaminación de la forma del pico frontal/spoiler hacia la del mockup), porque el prompt separaba forma vs. diseño gráfico pero nunca prohibía copiar el ESTILO DE RENDER de la ilustración. Se agrega ese tercer eje de realismo fotográfico/material como regla explícita en el Intento 3 y se registra como ítem nuevo del checklist Tipo A en `orquestacion-agentes-paralelos.md`. Se corrieron después los dos prompts del **Colorway 2 (rojo/negro/gris)**: la **vista lateral quedó APROBADA** —el usuario la calificó de "espectacular"— con auditoría formal objetivo por objetivo guardada en un desplegable (geometría del molde coincidente pieza por pieza incluyendo el pivote con su fibra de carbono y la goma inferior negra según la regla de negocio de la sección 9, realismo fotográfico real y livery completo), dejando 3 puntos pendientes de verificar con zoom que no bloquean: si el pico frontal va glossy o mate, si hay gráficos grises cayendo sobre las piezas de plástico negro de la ventilación y si la etiqueta chica "X40" está presente; el dato más relevante de esa auditoría es que este colorway logró el realismo fotográfico **sin** las instrucciones del tercer eje que sí hicieron falta en el Colorway 1, lo que suma evidencia directa al ítem del checklist Tipo A sobre que el generador **no es determinístico** y que un solo resultado no alcanza para juzgar un prompt. La **vista trasera del Colorway 2 en cambio falló**: el spoiler quedó fusionado con la carcasa (la zona roja central absorbió el área del spoiler, sin separación visible entre pieza y calota, y el panel rojo perdió el borde superior definido del mockup) —exactamente el mismo defecto ya visto en la trasera del Colorway 1— y faltaron detalles de la zona superior de la calota (malla triangular apenas insinuada, acentos rojos tipo chevron de las esquinas ausentes, líneas geométricas grises con menos densidad y capas, y etiquetas "X40" reducidas a trazos rojos); ambos defectos quedan corregidos en su Intento 2, que declara el spoiler como pieza física distinta de la carcasa, exige el diseño completo sobre la base negra de la calota superior y lo refuerza en el "PROHIBIDO ABSOLUTO". Por último, revisando con zoom la vista lateral del Colorway 2 ya aprobada aparecieron **2 correcciones finas** —el interior de la forma tipo rombo de la zona alta-central quedó mayormente rojo cuando debía ser negro con el rojo limitado a la flecha/chevron que lo acompaña, y el rojo del pico frontal/spoiler quedó un poco apagado respecto del de la ilustración de diseño— que se resuelven por **edición puntual sobre el resultado ya aprobado y no por regeneración completa**, aplicando el ítem del checklist Tipo A "Ajuste puntual sobre un resultado ya aprobado = edición, no regeneración completa": se adjunta solo la imagen aprobada del Intento 1 y se piden esos dos cambios con todo lo demás congelado pixel por pixel, para no volver a poner en juego la geometría ni el realismo fotográfico que ya se lograron. Se corrió después el **Intento 3 del Colorway 1 vista lateral** y el resultado trae dos avances grandes —el **realismo fotográfico quedó resuelto** (es una fotografía de producto real, con microtextura de pintura mate, sombras de estudio, reflejos especulares, fibra de carbono en el pivote y la trama de la correa roja: el tercer eje agregado en ese prompt funcionó) y el **livery quedó completo** (malla de triángulos extendida, líneas concéntricas con sus capas, "FOR BLAZING RUNNERS" presente, wordmark "EDGE", franjas rojas y blancas, chevrones "XXX", etiqueta "X40" y la mentonera con el patrón bajando hasta el borde)— pero con **3 defectos concentrados en la zona del spoiler / parte alta**: el spoiler salió **duplicado** (dos formas superpuestas) y con la **forma y la proporción del mockup** en vez de la pieza puntiaguda y compacta del molde real, quedó **blanco con patrón de malla en vez de azul sólido** —exactamente el mismo defecto ya visto en la vista trasera de este mismo colorway, o sea un patrón de falla del caso y no un accidente aislado— y apareció una **pieza negra alargada inventada en la parte alta de la calota** que no existe en el molde, otra materialización de una forma gráfica del mockup como si fuera relieve físico; los tres quedan corregidos en el **Intento 4**, que le da al spoiler una instrucción propia de forma ("uno solo, con la forma y el tamaño del molde real, sin mezclar ni superponer la del mockup"), un punto propio de color ("AZUL SÓLIDO, sin malla, sin blanco, sin líneas encima") y un bloque de "no inventes ninguna pieza física", todo reforzado además en el "PROHIBIDO ABSOLUTO". Se corrió por último el **Intento 2 del Colorway 2 vista lateral** (el de edición puntual) y **falló por un motivo nuevo**: la edición terminó siendo un **rediseño de la zona**. El generador, en vez de recolorear el interior del rombo, **redibujó de cero toda la zona alta-central del lateral** y la devolvió simplificada —el marco geométrico angular con sus varias líneas concéntricas reemplazado por una forma hexagonal más limpia y más grande con menos líneas, el patrón de malla triangular muy reducido en densidad y extensión, el texto chico del marco eliminado y varias capas de líneas grises y rojas perdidas— y encima el cambio de color pedido tampoco se logró (la zona sigue leyéndose predominantemente roja). La causa raíz es que el prompt protegía con mucho detalle lo que NO se toca, pero **nunca declaró que dentro de la zona que SÍ se edita lo único que cambia es el atributo puntual indicado**: al nombrar el rombo como "la zona a cambiar", el generador tomó eso como licencia para rehacerla entera. El **Intento 3** replantea el pedido como un **RECOLOREO PURO** —la imagen se devuelve idéntica salvo el valor de color de 2 zonas, incluidas las zonas recoloreadas— con un bloque crítico nuevo que enumera todo lo que la zona del rombo conserva idéntico (líneas concéntricas con su cantidad y grosor, malla con su densidad y extensión, texto chico, capas de líneas, cada trazo en su posición), la analogía de "seleccionar el área en un editor y cambiarle el relleno sin tocar las capas de dibujo de encima", un "PROHIBIDO ABSOLUTO" ampliado y una instrucción de verificación final que exige comparar contra la imagen adjunta y confirmar que la única diferencia perceptible sea el color de esas 2 zonas. La lección se registra además como ítem nuevo del checklist Tipo A en `orquestacion-agentes-paralelos.md`.
+**Última actualización:** 2026-07-28 · primer registro de este caso (livery de carreras EDGE, 2 colorways recibidos, 3 imágenes más en camino) — Tipo A, múltiples vistas. Se corrió el prompt del Colorway 1 vista lateral y el resultado quedó casi impecable (geometría del molde y grueso del livery correctos), con 2 defectos puntuales: la zona superior de la calota salió incompleta/simplificada (malla de triángulos tenue, líneas concéntricas con menos capas, texto chico del marco ausente) y la mentonera salió en gris liso en vez de continuar el patrón geométrico — ambos corregidos en el prompt del Intento 2. También se corrió el prompt del Colorway 1 vista trasera: geometría del molde respetada al 100% (silueta trasera, extractor, borde inferior con acolchado y correas) y wordmark "EDGE", sticker "DOT" y franjas de la banda inferior correctos, con 2 defectos — la parte superior de la calota quedó en azul liso sin ninguno de los elementos gráficos de la ilustración (rayas/chevrones verticales, malla de triángulos en los costados, formas angulares de la zona alta) y la zona baja quedó incompleta porque el generador confundió el spoiler trasero con la carcasa y cortó el patrón — ambos corregidos en su propio Intento 2. Se corrió después el prompt del Intento 2 del Colorway 1 vista lateral: corrigió los dos defectos gráficos anteriores (zona superior completa con la malla de triángulos extendida, las líneas concéntricas con todas sus capas y el texto "FOR BLAZING RUNNERS" presente, y la mentonera con el livery bajando hasta el borde), pero falló por un motivo nuevo y más de fondo — devolvió una ILUSTRACIÓN VECTORIAL PLANA en vez de una fotografía del casco real (colores planos, sin microtextura de pintura, sin reflejos especulares ni sombras de estudio, bordes de software de diseño, y contaminación de la forma del pico frontal/spoiler hacia la del mockup), porque el prompt separaba forma vs. diseño gráfico pero nunca prohibía copiar el ESTILO DE RENDER de la ilustración. Se agrega ese tercer eje de realismo fotográfico/material como regla explícita en el Intento 3 y se registra como ítem nuevo del checklist Tipo A en `orquestacion-agentes-paralelos.md`. Se corrieron después los dos prompts del **Colorway 2 (rojo/negro/gris)**: la **vista lateral quedó APROBADA** —el usuario la calificó de "espectacular"— con auditoría formal objetivo por objetivo guardada en un desplegable (geometría del molde coincidente pieza por pieza incluyendo el pivote con su fibra de carbono y la goma inferior negra según la regla de negocio de la sección 9, realismo fotográfico real y livery completo), dejando 3 puntos pendientes de verificar con zoom que no bloquean: si el pico frontal va glossy o mate, si hay gráficos grises cayendo sobre las piezas de plástico negro de la ventilación y si la etiqueta chica "X40" está presente; el dato más relevante de esa auditoría es que este colorway logró el realismo fotográfico **sin** las instrucciones del tercer eje que sí hicieron falta en el Colorway 1, lo que suma evidencia directa al ítem del checklist Tipo A sobre que el generador **no es determinístico** y que un solo resultado no alcanza para juzgar un prompt. La **vista trasera del Colorway 2 en cambio falló**: el spoiler quedó fusionado con la carcasa (la zona roja central absorbió el área del spoiler, sin separación visible entre pieza y calota, y el panel rojo perdió el borde superior definido del mockup) —exactamente el mismo defecto ya visto en la trasera del Colorway 1— y faltaron detalles de la zona superior de la calota (malla triangular apenas insinuada, acentos rojos tipo chevron de las esquinas ausentes, líneas geométricas grises con menos densidad y capas, y etiquetas "X40" reducidas a trazos rojos); ambos defectos quedan corregidos en su Intento 2, que declara el spoiler como pieza física distinta de la carcasa, exige el diseño completo sobre la base negra de la calota superior y lo refuerza en el "PROHIBIDO ABSOLUTO". Por último, revisando con zoom la vista lateral del Colorway 2 ya aprobada aparecieron **2 correcciones finas** —el interior de la forma tipo rombo de la zona alta-central quedó mayormente rojo cuando debía ser negro con el rojo limitado a la flecha/chevron que lo acompaña, y el rojo del pico frontal/spoiler quedó un poco apagado respecto del de la ilustración de diseño— que se resuelven por **edición puntual sobre el resultado ya aprobado y no por regeneración completa**, aplicando el ítem del checklist Tipo A "Ajuste puntual sobre un resultado ya aprobado = edición, no regeneración completa": se adjunta solo la imagen aprobada del Intento 1 y se piden esos dos cambios con todo lo demás congelado pixel por pixel, para no volver a poner en juego la geometría ni el realismo fotográfico que ya se lograron. Se corrió después el **Intento 3 del Colorway 1 vista lateral** y el resultado trae dos avances grandes —el **realismo fotográfico quedó resuelto** (es una fotografía de producto real, con microtextura de pintura mate, sombras de estudio, reflejos especulares, fibra de carbono en el pivote y la trama de la correa roja: el tercer eje agregado en ese prompt funcionó) y el **livery quedó completo** (malla de triángulos extendida, líneas concéntricas con sus capas, "FOR BLAZING RUNNERS" presente, wordmark "EDGE", franjas rojas y blancas, chevrones "XXX", etiqueta "X40" y la mentonera con el patrón bajando hasta el borde)— pero con **3 defectos concentrados en la zona del spoiler / parte alta**: el spoiler salió **duplicado** (dos formas superpuestas) y con la **forma y la proporción del mockup** en vez de la pieza puntiaguda y compacta del molde real, quedó **blanco con patrón de malla en vez de azul sólido** —exactamente el mismo defecto ya visto en la vista trasera de este mismo colorway, o sea un patrón de falla del caso y no un accidente aislado— y apareció una **pieza negra alargada inventada en la parte alta de la calota** que no existe en el molde, otra materialización de una forma gráfica del mockup como si fuera relieve físico; los tres quedan corregidos en el **Intento 4**, que le da al spoiler una instrucción propia de forma ("uno solo, con la forma y el tamaño del molde real, sin mezclar ni superponer la del mockup"), un punto propio de color ("AZUL SÓLIDO, sin malla, sin blanco, sin líneas encima") y un bloque de "no inventes ninguna pieza física", todo reforzado además en el "PROHIBIDO ABSOLUTO". Se corrió por último el **Intento 2 del Colorway 2 vista lateral** (el de edición puntual) y **falló por un motivo nuevo**: la edición terminó siendo un **rediseño de la zona**. El generador, en vez de recolorear el interior del rombo, **redibujó de cero toda la zona alta-central del lateral** y la devolvió simplificada —el marco geométrico angular con sus varias líneas concéntricas reemplazado por una forma hexagonal más limpia y más grande con menos líneas, el patrón de malla triangular muy reducido en densidad y extensión, el texto chico del marco eliminado y varias capas de líneas grises y rojas perdidas— y encima el cambio de color pedido tampoco se logró (la zona sigue leyéndose predominantemente roja). La causa raíz es que el prompt protegía con mucho detalle lo que NO se toca, pero **nunca declaró que dentro de la zona que SÍ se edita lo único que cambia es el atributo puntual indicado**: al nombrar el rombo como "la zona a cambiar", el generador tomó eso como licencia para rehacerla entera. El **Intento 3** replantea el pedido como un **RECOLOREO PURO** —la imagen se devuelve idéntica salvo el valor de color de 2 zonas, incluidas las zonas recoloreadas— con un bloque crítico nuevo que enumera todo lo que la zona del rombo conserva idéntico (líneas concéntricas con su cantidad y grosor, malla con su densidad y extensión, texto chico, capas de líneas, cada trazo en su posición), la analogía de "seleccionar el área en un editor y cambiarle el relleno sin tocar las capas de dibujo de encima", un "PROHIBIDO ABSOLUTO" ampliado y una instrucción de verificación final que exige comparar contra la imagen adjunta y confirmar que la única diferencia perceptible sea el color de esas 2 zonas. La lección se registra además como ítem nuevo del checklist Tipo A en `orquestacion-agentes-paralelos.md`. Se corrió por último el **Intento 3 del Colorway 1 vista trasera** y el resultado es una **regresión**: volvió a salir una **ILUSTRACIÓN VECTORIAL PLANA** en vez de una fotografía de producto y, al copiar ese estilo, la **silueta trasera se contaminó con la del mockup de diseño** (más plana, más "dibujada") en vez de seguir la de la foto del molde negro liso — dos cosas que los intentos anteriores de esta misma vista sí habían logrado. La causa raíz no es un defecto nuevo del generador sino un **descuido de propagación entre vistas**: el **tercer eje** (forma / contenido gráfico / **estilo de render y realismo de material**) se descubrió y se agregó en el Intento 3 de la vista **lateral** de este mismo colorway —con el bloque `CRÍTICO — EL RESULTADO ES UNA FOTOGRAFÍA, NO UNA ILUSTRACIÓN` y la regla ampliada de "DOS FUENTES, TRES ROLES"— pero **nunca se copió a los prompts de la vista trasera**, que siguieron con la regla vieja de "DOS FUENTES, DOS ROLES" y sin ningún bloque de realismo; sin ese eje declarado, el generador copia también el estilo plano de la ilustración y arrastra con él su forma. El **Intento 4** de la trasera propaga el tercer eje a esta vista (regla de TRES ROLES, bloque de fotografía adaptado a la trasera con su acolchado y correas, PASO 1 reforzado con el detalle explícito de la silueta trasera del molde —calota redondeada y compacta, extractor superior, labio del spoiler, borde inferior— y "PROHIBIDO ABSOLUTO" ampliado contra la ilustración, el aplanado del material y la contaminación de silueta). La lección generalizable —**una regla nueva se propaga de inmediato a los prompts de TODAS las vistas y colorways del mismo caso, o el mismo defecto reaparece vista por vista**— se registra como ítem nuevo del checklist Tipo A en `orquestacion-agentes-paralelos.md`, y los archivos hermanos `simulacion-30b`, `simulacion-30c` y `simulacion-30d` quedan marcados con una advertencia al pie porque sus prompts (lateral y trasera) todavía no tienen el tercer eje.

@@ -112,4 +112,6 @@ adicionales que no estén descriptos).
 
 ---
 
-**Última actualización:** 2026-07-28 · colorway rojo/blanco/negro agregado como archivo separado del caso de livery EDGE "Temporada 2026" (ver `simulacion-30-edge-racing-livery.md` para el molde real y los demás colorways).
+**Última actualización:** 2026-07-28 · colorway rojo/blanco/negro agregado como archivo separado del caso de livery EDGE "Temporada 2026" (ver `simulacion-30-edge-racing-livery.md` para el molde real y los demás colorways). Se agrega la advertencia de abajo: los 2 prompts de este archivo todavía no tienen el "tercer eje" de realismo fotográfico.
+
+> ⚠️ **Antes de correr estos prompts:** les falta el "tercer eje" de realismo fotográfico (forma / contenido gráfico / estilo de render), que se descubrió después de escribirlos. Sin él, el generador devuelve una ilustración plana y arrastra la forma del mockup en vez de la del molde real — defecto real documentado en `simulacion-30-edge-racing-livery.md` (Colorway 1, Intentos 2→3 de la lateral y 3→4 de la trasera). Antes de usarlos, copiales el bloque `CRÍTICO — EL RESULTADO ES UNA FOTOGRAFÍA, NO UNA ILUSTRACIÓN` y la versión de "DOS FUENTES, TRES ROLES" de los prompts corregidos de ese archivo.
