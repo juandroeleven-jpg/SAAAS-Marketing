@@ -225,6 +225,121 @@ VERIFICACIÓN FINAL — respondé estos cinco chequeos antes de entregar:
 
 ---
 
+## Instancia 4.1-v2 — Reescritura de cero tras la segunda falla real
+
+**Contexto (29/07/2026):** el segundo intento de la 4.1 falló en lo esencial — el generador no copió el diseño (perdió el samurái, las viñetas, los caracteres japoneses y las pinceladas rojas), mostró el lado equivocado, deformó el visor y el tamaño quedó mal. El propio generador admitió las fallas en su respuesta. Diagnóstico: (1) el prompt ponía la ESCENA primero y el casco después — el modelo priorizó la escena; (2) la fuente era la captura web sucia y ahora existe una foto de estudio limpia; (3) la captura vieja mostraba el casco mirando a la IZQUIERDA pero la foto de estudio lo muestra mirando a la DERECHA — el prompt viejo pedía un lado que contradecía la nueva fuente.
+
+**Cambios de la v2:** el casco va PRIMERO y se declara prioridad absoluta; regla central "se copia, no se redibuja"; ángulo y escala como dos anclas duras juntas; fuente = foto de estudio con fondo blanco; lado corregido (derecha).
+
+**Se adjunta UNA imagen:** la foto de estudio del casco jet samurái (fondo blanco, casco mirando a la derecha).
+
+**Plan B si la v2 también falla en el diseño:** dos pasos — (1) generar la escena con un casco jet blanco/negro cualquiera, (2) usar un prompt de la Familia 2 (swap con dos imágenes) para trasplantar el casco exacto desde la foto de estudio. Los modelos copian mejor desde referencia en un paso de edición que en la generación inicial.
+
+```
+LA PRIORIDAD NÚMERO UNO DE ESTA TAREA ES EL CASCO. Recibís UNA
+imagen: la foto de estudio de un casco REAL sobre fondo blanco. Esa
+foto es la ÚNICA AUTORIDAD DEL CASCO. Vas a generar una escena nueva
+alrededor de ese casco, pero si en algún punto la escena y la
+fidelidad del casco entran en conflicto, GANA EL CASCO. Una escena
+hermosa con un casco parecido es un RESULTADO FALLIDO.
+
+REGLA CENTRAL — EL CASCO NO SE REDIBUJA, SE COPIA:
+Tratá el casco de la foto como un objeto físico ya fabricado que
+ahora se fotografía dentro de una escena: mismo objeto, mismo diseño
+pintado, misma forma, mismo ángulo de vista. NO lo reinterpretes, NO
+lo simplifiques, NO hagas "algo del mismo estilo". Copiá exactamente:
+- La CALOTA negra brillante con el arte manga/samurái en tinta: el
+  GUERRERO SAMURÁI dibujado en la parte alta, la pincelada gruesa
+  BLANCA y ROJA que cruza la calota, las VIÑETAS DE COMBATE en tinta
+  negra sobre fondo blanco del lateral, y las salpicaduras de tinta.
+- Los CARACTERES JAPONESES verticales del lateral: mismos trazos,
+  misma posición diagonal, mismo tamaño relativo. Se copian
+  visualmente trazo a trazo de la foto. PROHIBIDO inventar
+  caracteres, letras occidentales o garabatos que "parezcan japonés".
+- La forma: casco ABIERTO tipo JET, SIN mentonera. PROHIBIDO
+  convertirlo en integral o modular.
+- El DOBLE VISOR: el externo grande, TRANSPARENTE e incoloro, que
+  baja envolvente hasta la zona del mentón, con su pivote/tornillo
+  lateral negro; y el visor interno que asoma detrás. La forma del
+  visor externo es LA DE LA FOTO, no otra.
+- La goma negra del borde inferior y la correa con su detalle rojo.
+
+DOS ANCLAS DURAS — ÁNGULO Y ESCALA:
+1. ÁNGULO: la foto muestra el casco en 3/4 lateral MIRANDO A LA
+   DERECHA del encuadre, con el samurái, las viñetas y los
+   caracteres visibles de ese lado. La escena se compone para ver
+   ESE MISMO LADO del casco, en un ángulo equivalente al de la foto.
+   PROHIBIDO mostrar el otro lado (no está en la foto y no se
+   inventa) y PROHIBIDO el frente completo.
+2. ESCALA: el casco es un objeto real sobre una cabeza real. Es
+   apenas más grande que la cabeza: unos centímetros de carcasa
+   alrededor del cráneo. Los HOMBROS de la mujer se ven MÁS ANCHOS
+   que el casco — si el casco sale más ancho que los hombros, está
+   mal. La cabeza con casco mide más o menos un séptimo de la altura
+   del cuerpo. Ella podría sacárselo con las dos manos.
+
+LA ESCENA — SE GENERA ALREDEDOR DEL CASCO:
+Fotografía fotorrealista, estilo lifestyle/editorial de moto, de una
+MUJER bajándose de una motocicleta:
+- La moto está detenida; ella está bajándose: pasando la pierna por
+  encima del asiento o apoyando el pie en el piso, con una mano en
+  el manubrio, en una postura natural y creíble.
+- Ropa de motociclista urbana (campera, jeans/pantalón de moto,
+  guantes) en colores neutros — negro, blanco, algún acento rojo —
+  que no le roben protagonismo al casco.
+- Ambiente urbano realista (calle, frente de un local), luz natural
+  de tarde, profundidad de campo editorial: la mujer y el casco
+  nítidos, el fondo levemente desenfocado.
+- Fotorrealista: nada de ilustración ni estética de render.
+
+EL VISOR — TRANSPARENTE Y EL ROSTRO VISIBLE:
+- El visor externo va BAJADO y COMPLETAMENTE TRANSPARENTE e
+  incoloro: ni tintado, ni ahumado, ni espejado.
+- A través del visor se ve CLARAMENTE el rostro de la mujer: ojos,
+  nariz y boca nítidos, con apenas un reflejo leve que no tape la
+  cara.
+
+INTEGRACIÓN DE LUZ:
+El casco se ilumina con la luz de la escena: reflejos coherentes
+sobre la calota brillante y el visor. Pero la luz NUNCA justifica
+cambiar el diseño: el negro sigue negro, el blanco sigue blanco, el
+rojo sigue rojo, y ningún elemento del arte desaparece "por el
+reflejo".
+
+PROHIBIDO ABSOLUTO:
+- Prohibido entregar un casco "parecido": es el de la foto o está
+  mal.
+- Prohibido perder u omitir cualquiera de estos cuatro componentes
+  del arte: samurái, viñetas de combate, pinceladas rojas,
+  caracteres japoneses. Los cuatro tienen que estar visibles.
+- Prohibido inventar o alterar los caracteres japoneses.
+- Prohibido cambiar la forma del casco o del visor, o agregarle
+  mentonera.
+- Prohibido tintar u oscurecer el visor: rostro visible.
+- Prohibido mostrar el lado del casco que no está en la foto.
+- Prohibido el casco gigante: hombros siempre más anchos que el
+  casco.
+- Prohibido agregar logos, textos o gráficos nuevos.
+- Prohibido que la pose, el pelo o la escena tapen el casco.
+
+VERIFICACIÓN FINAL — respondé estos siete chequeos antes de entregar:
+1. Mirá el casco de tu resultado al lado de la foto adjunta: ¿es EL
+   MISMO casco, con el MISMO arte? ¿Están los CUATRO componentes:
+   samurái, viñetas, pinceladas rojas y caracteres japoneses?
+2. ¿Los caracteres japoneses son los de la foto, trazo a trazo, sin
+   inventos?
+3. ¿El casco está en 3/4 mirando a la DERECHA, el mismo lado de la
+   foto?
+4. ¿El casco quedó a escala real — más angosto que los hombros de la
+   mujer?
+5. ¿Es un jet abierto sin mentonera, con el doble visor de la foto?
+6. ¿El visor está transparente y el rostro de la mujer se ve claro?
+7. ¿La mujer está bajándose de la moto con una postura natural, en
+   una escena urbana fotorrealista?
+```
+
+---
+
 ## Instancia 4.2 — Hombre de smoking al aire libre con el casco modular (visor negro opaco)
 
 **Casco (imagen adjunta):** modular negro mate ENTERO, generado por IA, en 3/4 lateral mirando a la derecha, sobre fondo blanco, con el visor ahumado oscuro bajado. Piezas: spoiler trasero, extractor superior con insertos, tomas de aire laterales, ventilación central de la mentonera, placa del pivote del visor y goma negra del borde inferior. La imagen trae la watermark "豆包AI生成" abajo a la derecha — no pasa a la escena.
