@@ -1,14 +1,11 @@
 # Prompt A — Tarjeta de HOMOLOGACIÓN — EDGEPRO BOSTON (2026-07-29)
 
-⚠️ PENDIENTE ANTES DE GENERAR LA PIEZA FINAL: la certificación. La ficha
-dice "DOT — FNVSS 510", pero "FNVSS 510" no es un estándar real (el
-estándar DOT de cascos es FMVSS 218) y Boston no tiene columna en el
-Excel maestro para confirmar si lleva "& ECE 22.06". El prompt usa
-"[CERTIFICACIÓN]" como marcador: reemplazalo por el texto confirmado
-antes de usar el prompt.
-
-Fuente de los ítems: la ficha técnica del Boston (no hay columna Boston
-en el Excel — ver verificacion-fichas/boston.md).
+ACTUALIZACIÓN 2026-07-29: se encontró la columna Boston en la sección
+EDGE del Excel (hoja FICHAS). Certificación confirmada: "DOT & ECE"
+(se usa "& ECE 22.06"; confirmar si la versión es otra). El marcador
+[CERTIFICACIÓN] fue reemplazado. La ficha del Boston verifica bien
+contra su columna — ver verificacion-fichas/boston.md y
+evolution-929.md.
 
 ---
 
@@ -59,10 +56,10 @@ BLOQUE 2 — BANNER NEGRO (debajo del título, ancho completo del lienzo):
 - Adentro, el texto "DOT" en letras BLANCAS enormes, bold, centrado,
   ocupando la mayor parte del banner (como una insignia/logo).
 - Debajo de "DOT", dentro del mismo banner negro, en blanco, en cuerpo
-  bastante más chico y centrado: "[CERTIFICACIÓN]".
-  (⚠️ Reemplazar el marcador por el texto confirmado antes de usar
-  este prompt. NO usar "FNVSS 510": ese texto de la referencia no está
-  confirmado en la fuente de datos.)
+  bastante más chico y centrado: "& ECE 22.06".
+- CRÍTICO: la referencia dice "FNVSS 510" debajo del DOT. Ese texto NO
+  se copia: la certificación correcta según el excel maestro es
+  "DOT & ECE 22.06". Reemplazalo.
 
 BLOQUE 3 — LISTA DE ÍTEMS (fondo GRIS CLARO, todo el alto restante):
 Lista de EXACTAMENTE 7 ítems, en este orden, en MAYÚSCULAS, negro,
