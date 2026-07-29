@@ -14,6 +14,21 @@ Noveno caso del catálogo con pipeline **Tipo C**. Mismo método que [Vortex (Si
 
 ---
 
+## Estado general del caso
+
+**Actualizado 2026-07-29 — los 2 prompts SE CORRIERON y la pieza resultante llegó para auditar.** Ya no es un caso "pendiente de generar": lo que se auditó en esta última pasada **no es la ficha original del cliente**, es **el resultado generado por los Prompts A y B de este mismo archivo**.
+
+| Objeto | Veredicto de datos (contra la columna **Boston**) | Estado del prompt |
+|---|---|---|
+| Tarjeta de homologación (7 ítems) | ✅ **7 de 7 MATCH** — incluye el reemplazo *INTERIOR EPS DE ALTA RESISTENCIA* | 🟠 **Corrido — corrección de contenido aplicada, corrección de certificación NO aplicada.** Hay que volver a correrlo |
+| Grid de íconos (6 celdas) | ✅ **6 de 6 MATCH** — incluye el reemplazo *MATERIAL EXTERIOR ABS ALTA RESISTENCIA* | ✅ **Corrido — contenido correcto.** Pendiente solo la verificación visual del tache |
+
+**Veredicto de la pieza generada: 13 MATCH · 0 MISMATCH · 0 SIN DATO.** La pieza pasó de **11/13 (ficha original) a 13/13 (pieza regenerada)**: los 2 reemplazos elegidos en la sección 4 funcionaron y taparon los 2 mismatches duros.
+
+**Único defecto de contenido que queda:** el banner sigue diciendo **"DOT / FNVSS 510"** en lugar de **"DOT & ECE / FMVSS 218"**. La corrección de contenido se aplicó y la de certificación no — ver el bloque `## 6` más abajo.
+
+---
+
 ## 🧭 Hallazgo estructural — la ficha del Boston se audita contra OTRA hoja del excel
 
 Hasta este caso, **todo el catálogo se venía verificando contra una sola tabla**: la de la marca **EDGEPRO** (Stellar, Kratos, Xpro, Vortex, Carbex, Shift, Hero) — casos [10](simulacion-10-kratos-verificacion.md), [11](simulacion-11-vortex-verificacion.md), [12](simulacion-12-hero-verificacion.md), [14](simulacion-14-stellar-verificacion.md), [15](simulacion-15-shift-verificacion.md) y [25](simulacion-25-carbex-verificacion.md).
@@ -614,33 +629,133 @@ VERIFICACIÓN FINAL — ANTES DE ENTREGAR, CHEQUEÁ ESTAS 5 COSAS:
 
 </details>
 
-**Estado de los 2 prompts:** 🔴 pendientes de generar. Con estos dos, los **13 claims publicados** (7 en la tarjeta + 6 en el grid) quedan respaldados al 100 % por el excel, sin ningún claim sin respaldo, sin taches, con la certificación correcta de la hoja EDGE y con el título bien escrito.
+**Estado de los 2 prompts:** ✅ **corridos (2026-07-29).** El resultado llegó y está auditado en la sección 6. Con estos dos, los **13 claims publicados** (7 en la tarjeta + 6 en el grid) quedan respaldados al 100 % por el excel, sin ningún claim sin respaldo, con la certificación correcta de la hoja EDGE y con el título bien escrito — **y eso es exactamente lo que se cumplió a medias**: el contenido salió al 100 %, la certificación no.
 
-**Qué hay que hacer:** correr los 2 prompts en **sesiones de generación aisladas** (una por pieza, no en el mismo hilo — ver el hallazgo de contaminación cruzada entre generaciones del [caso Vortex](simulacion-11-vortex-verificacion.md)) y mandar los resultados para auditoría, chequeando puntualmente: relación de aspecto, conteo de ítems y de celdas, ausencia total de taches, "HOMOLOGACIÓN" bien escrito, banner "DOT" + "& ECE" + "FMVSS 218" sin "22.06" ni "FNVSS 510", y que la etiqueta larga de "MATERIAL EXTERIOR ABS ALTA RESISTENCIA" no salga truncada.
+**Qué había que hacer:** correr los 2 prompts en **sesiones de generación aisladas** (una por pieza, no en el mismo hilo — ver el hallazgo de contaminación cruzada entre generaciones del [caso Vortex](simulacion-11-vortex-verificacion.md)) y mandar los resultados para auditoría, chequeando puntualmente: relación de aspecto, conteo de ítems y de celdas, ausencia total de taches, "HOMOLOGACIÓN" bien escrito, banner "DOT" + "& ECE" + "FMVSS 218" sin "22.06" ni "FNVSS 510", y que la etiqueta larga de "MATERIAL EXTERIOR ABS ALTA RESISTENCIA" no salga truncada. **Hecho — resultado abajo.**
 
 ---
 
-## Estado: ⚠️ Falló — 2 de 13 claims no coinciden + certificación + falta de ortografía; los 2 prompts corregidos quedan completos (7/7 y 6/6)
+## 6. Auditoría de la PIEZA GENERADA (2026-07-29) — el resultado de los prompts, no la ficha original
+
+El usuario mandó una pieza y preguntó si corresponde al Boston. La respuesta tiene dos partes, y la segunda es la importante.
+
+### 6.1 Sí es del Boston — y además NO es la ficha original, es el resultado de los prompts de este archivo
+
+La evidencia no es de huella digital estadística como en la sección 1: es **literal**. Los dos ítems que aparecen en la pieza son **exactamente los 2 reemplazos que este caso inventó en la sección 4**, y **no existen en la plantilla genérica original** de 13 claims que circula en todo el catálogo (Hero, Shift, Boston, Boston 4.0):
+
+| Objeto | Ítem de la pieza recibida | ¿Está en la plantilla genérica original? | ¿Está en el prompt de este archivo? |
+|---|---|---|---|
+| Tarjeta (ítem 5) | **INTERIOR EPS DE ALTA RESISTENCIA** | ❌ **No.** La original dice *SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR* | ✅ Sí — **Prompt A, ítem 5**, elegido en la sección 4 para tapar el MISMATCH de *Quick Visor Release System* (N/A) |
+| Grid (celda 3) | **MATERIAL EXTERIOR ABS ALTA RESISTENCIA** | ❌ **No.** La original dice *CANAL PARA LENTES* | ✅ Sí — **Prompt B, ítem 3**, elegido en la sección 4 para tapar el MISMATCH de *Canal para lentes* (N/A) |
+
+**Conclusión:** los 2 ítems que la pieza tiene de más son **los 2 reemplazos**, y los 2 que la ficha original tenía **desaparecieron los dos**. Eso no puede pasar por casualidad: **la pieza recibida es el resultado generado de los Prompts A y B de este caso**, no la ficha original del cliente.
+
+**Y descarta también al Boston 4.0 de forma directa:** la ficha del [Boston 4.0](simulacion-38-boston40-verificacion.md) **sí lleva** *SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR* en la tarjeta y *CANAL PARA LENTES* en el grid (sus dos celdas son X en esa columna, ver `simulacion-38`). La pieza recibida **no tiene ninguno de los dos**, así que no es esa ficha ni el resultado de esos prompts.
+
+### 6.2 Auditoría Tipo C de los 13 claims de la pieza generada contra la columna Boston
+
+**Objeto 1 — tarjeta de homologación (7 claims)**
+
+| # | Claim de la pieza | Fila del excel usada | Valor Boston | Veredicto |
+|---|---|---|---|---|
+| A1 | VISERA ANTI SCRATCH | Visera anti scratch | X | ✅ MATCH |
+| A2 | PREPARADO PARA ANTI EMPAÑANTE | Preparado para anti empañante | X | ✅ MATCH |
+| A3 | SISTEMA DE EMERGENCIA DE LIBERACIÓN RÁPIDA | Emergency Quick Release System (ERS) | X | ✅ MATCH |
+| A4 | LINER DESMONTABLE Y LAVABLE | Liner desmontable y lavable | X | ✅ MATCH |
+| A5 | **INTERIOR EPS DE ALTA RESISTENCIA** | Interior EPS de alta resistencia | **X** | ✅ **MATCH — era el MISMATCH duro, quedó tapado por el reemplazo** |
+| A6 | CUBRE BARBILLA | Cubre barbilla | X | ✅ MATCH |
+| A7 | CUBRE NARIZ | Cubre nariz | X | ✅ MATCH |
+
+**Objeto 2 — grid de íconos (6 claims)**
+
+| # | Claim de la pieza | Fila del excel usada | Valor Boston | Veredicto |
+|---|---|---|---|---|
+| B1 | DISEÑO MODULAR | Full Face-Flip Up-Open Face-Adventure | **Flip Up** | ✅ MATCH |
+| B2 | CON LUZ LED | Con luz LED | **X** | ✅ MATCH |
+| B3 | **MATERIAL EXTERIOR ABS ALTA RESISTENCIA** | Material exterior ABS alta resistencia | **X** | ✅ **MATCH — era el MISMATCH duro, quedó tapado por el reemplazo** |
+| B4 | DOBLE VISERA | Doble visera | X | ✅ MATCH |
+| B5 | HEBILLA MICROMÉTRICA | Hebilla micrométrica | **X** | ✅ MATCH *(el dato es correcto; el arte queda pendiente de verificación visual, ver 6.4)* |
+| B6 | ESPACIO PARA BLUETOOTH | Espacio para Bluetooth | X | ✅ MATCH |
+
+### 🏁 Veredicto de la pieza generada: **13 MATCH · 0 MISMATCH · 0 SIN DATO (13 de 13)**
+
+**Antes y después, registrado:**
+
+| | Ficha original (auditada en la sección 2) | Pieza generada (esta auditoría) |
+|---|---|---|
+| Tarjeta de homologación | 6 de 7 — *SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR* en **N/A** | ✅ **7 de 7** |
+| Grid de íconos | 5 de 6 — *CANAL PARA LENTES* en **N/A** | ✅ **6 de 6** |
+| **Total** | **11 MATCH / 2 MISMATCH** | ✅ **13 MATCH / 0 MISMATCH** |
+
+**Los 2 reemplazos funcionaron.** La sección 2 de este archivo queda como la auditoría de la **ficha original** (11/13) y esta sección 6 como la de la **pieza regenerada** (13/13); las dos se conservan porque el antes y el después es el valor del registro. Con esto el Boston se suma al [Boston 4.0](simulacion-38-boston40-verificacion.md) como **segunda pieza 13/13 del catálogo** — con la diferencia de que aquella lo era de origen y esta **lo consiguió por corrección**, que es el primer caso del catálogo donde una ficha con mismatches se regenera y cierra al 100 %.
+
+### 6.3 ❌ El defecto que SÍ queda — la certificación no se corrigió
+
+| Fuente | Qué dice |
+|---|---|
+| **Banner de la pieza generada** | **"DOT"** grande + **"FNVSS 510"** debajo |
+| Lo que pedía el **Prompt A** | **"DOT"** grande + **"& ECE"** debajo + **"FMVSS 218"** abajo de todo |
+| Excel, columna **Boston** | Certificación = **"DOT & ECE"** |
+| Stickers de los cascos físicos (confirmado por el usuario) | **"DOT · FMVSS NO. 218 · CERTIFIED"** |
+
+**O sea que el mismo Prompt A aplicó una corrección y se salteó la otra:** cambió el **contenido de la lista** (metió el reemplazo de la sección 4, que era el cambio "nuevo" del prompt) y **no tocó el banner**, que lo copió tal cual de la imagen de referencia — con las dos mitades equivocadas: **"FNVSS" en lugar de "FMVSS"**, **"510" en lugar de "218"**, y **sin el "& ECE"** que el excel confirma para el Boston. El Prompt A dedicaba a esto un bloque `CRÍTICO — CERTIFICACIÓN EXACTA, SON DOS CORRECCIONES DISTINTAS` y un chequeo propio en la verificación final, y aun así el generador reprodujo el texto de la referencia.
+
+**Este es el único defecto pendiente de esta pieza.** No es un MISMATCH de los 13 claims (la certificación siempre se reportó aparte, ver la sección 2), pero es **el más grave de los que quedan**: es un dato regulatorio, y es el único que sigue contradiciendo la fuente.
+
+**Qué hay que hacer, en una línea:** 🔁 **volver a correr el Prompt A tal como está** — ya contempla la corrección completa ("DOT" + "& ECE" + "FMVSS 218", sin "22.06" y sin "FNVSS 510"), no hay que reescribirlo; lo que falló fue la aplicación, no la instrucción. El **Prompt B no hay que volver a correrlo** por este motivo.
+
+### 6.4 Dos puntos que esta captura NO permite verificar — no se dan por buenos ni por malos
+
+1. **🔤 La franja de título ("HOMOLOGACIÓN" vs. "HOMOLOGACÓN") — NO VERIFICABLE EN ESTA CAPTURA.** El recorte recibido **no muestra la franja de título** de arriba, así que no se puede confirmar si el generador corrigió la falta de ortografía o la copió de la referencia. **No se registra como corregido ni como fallado.** Dado que el mismo prompt ya falló en la otra corrección de texto de plantilla (el banner), **hay motivo concreto para sospechar** que esta también se saltó — pero sospechar no es verificar. Queda como **pendiente de verificación visual del usuario**.
+   - ❓ **Pregunta concreta para el usuario:** *en la franja gris de arriba de la tarjeta, ¿dice **"HOMOLOGACIÓN"** (con la I, bien escrito) o **"HOMOLOGACÓN"** (sin la I, como la referencia)?*
+2. **⚠️ El tache sobre el ícono de HEBILLA MICROMÉTRICA — PENDIENTE DE VERIFICACIÓN VISUAL DEL USUARIO.** A la resolución de esta captura **no se distingue con certeza** si el ícono conserva la X roja o si salió limpio. **No se afirma ni que está ni que no está.** El Prompt B prohibía el tache en cuatro lugares distintos (bloque `CRÍTICO — NINGÚN ÍCONO TACHADO`, atención especial sobre ese ícono, `PROHIBIDO ABSOLUTO` y chequeo 3 de la verificación final), así que si el tache sigue ahí es un hallazgo de peso — el mismo defecto ya se reprodujo pese a la prohibición en el Intento 1 del Prompt B del [Vortex](simulacion-11-vortex-verificacion.md).
+   - ❓ **Pregunta concreta para el usuario:** *en la celda de **HEBILLA MICROMÉTRICA** del grid, ¿el ícono tiene encima una **X / tache rojo grande**, o está limpio?* El excel confirma la feature con **X** para el Boston, así que el ícono **tiene que estar limpio**; si la X está, hay que volver a correr el Prompt B.
+
+### 6.5 Observación menor — el orden de las celdas del grid no es el del prompt
+
+Los **6 ítems son los correctos** y son los 6 del Prompt B, pero **dos celdas salieron intercambiadas** respecto del orden pedido:
+
+| Posición | Prompt B pedía | La pieza tiene |
+|---|---|---|
+| 1 y 2 | DISEÑO MODULAR · CON LUZ LED | ✅ igual |
+| 3 y 4 | MATERIAL EXTERIOR ABS ALTA RESISTENCIA · **HEBILLA MICROMÉTRICA** | MATERIAL EXTERIOR ABS ALTA RESISTENCIA · **DOBLE VISERA** |
+| 5 y 6 | **DOBLE VISERA** · ESPACIO PARA BLUETOOTH | **HEBILLA MICROMÉTRICA** · ESPACIO PARA BLUETOOTH |
+
+**No es un mismatch de datos** (el conjunto de 6 es exacto, ninguno repetido, ninguno faltante, ninguno inventado) y **no cambia el veredicto 13/13**. Se registra igual porque el prompt sí declaraba el orden explícitamente ("en este orden, uno por celda, leyendo de izquierda a derecha y de arriba a abajo") y no se respetó: es el mismo tipo de instrucción que el conteo forzado, cumplida a medias. Si el orden importa comercialmente, hay que decirlo en la próxima corrida; si no, se deja como está.
+
+**Lo que sí se registra como cumplido en el Objeto 2:** el conteo de **6 celdas exactas en 2x3** (sin la fila extra ni los duplicados del defecto histórico del catálogo), la etiqueta larga **"MATERIAL EXTERIOR ABS ALTA RESISTENCIA" completa y sin truncar** —que era un riesgo explícito del prompt—, el estilo de ícono lineal rojo/bordo en octágonos sobre gris claro, y **ningún ítem compartido entre los dos objetos** (la regla de conjuntos disjuntos del Hero se respetó).
+
+### 6.6 Lo que NO es la pieza — la maquetación de la lámina
+
+La pieza llegó **dentro de una maquetación de catálogo**: foto lifestyle a la izquierda (motociclista de espaldas en una ruta de montaña), líneas guía punteadas, un marco violeta y una fila de cascos de colores abajo. **Nada de eso es la pieza auditada** y nada de eso entra en el veredicto — son elementos de la lámina que la contiene. Aplica el mismo criterio ya establecido en el checklist Tipo D sobre guías de maquetación: se identifican, se declaran y **no se tocan salvo pedido explícito**.
+
+---
+
+## Estado: 🟠 Contenido resuelto (13/13) — queda la certificación sin corregir
+
+**Cambió el estado del caso el 2026-07-29 con la pieza generada.** La ficha original fallaba 2 de 13 claims; **la pieza regenerada con los prompts de este archivo da 13 de 13** y los 2 reemplazos elegidos en la sección 4 quedaron confirmados en la práctica. **Lo que queda pendiente ya no es de datos:** el banner de certificación sigue diciendo **"DOT / FNVSS 510"**, o sea que el Prompt A **aplicó la corrección de contenido y se salteó la de certificación**. Ver la sección 6.
 
 ### 🔴 Pendiente de tu parte
 
 ```mermaid
 flowchart TD
+    T0["🔁 VOLVER A CORRER EL PROMPT A — el banner salió<br/>'DOT / FNVSS 510'. El prompt ya contempla la<br/>corrección completa ('DOT' + '&amp; ECE' + 'FMVSS 218'):<br/>falló la aplicación, no la instrucción. NO reescribirlo"]
+    T7["👁️ VERIFICAR A OJO EN LA PIEZA GENERADA:<br/>(a) ¿el ícono de HEBILLA MICROMÉTRICA tiene la X roja<br/>o está limpio? · (b) ¿la franja de título dice<br/>'HOMOLOGACIÓN' o 'HOMOLOGACÓN'? — la captura<br/>recibida no permite confirmar ninguno de los dos"]
     T1["📄 Confirmar si 'Evolution 929' es columna de la<br/>hoja 'FICHA DE CASCOS': ninguna de las 2 capturas<br/>lo muestra, pero la Simulación 16 lo audita<br/>como parte de este tab"]
-    T2["🎨 Sacar el tache/X rojo del ícono de HEBILLA<br/>MICROMÉTRICA — defecto de arte, el excel<br/>confirma la feature con X para Boston"]
     T3["🔁 Revisar el ícono de hebilla micrométrica MODELO<br/>POR MODELO en las DOS hojas — el tache viene<br/>de la plantilla, no se decidió nunca por modelo"]
-    T4["⚖️ Corregir la certificación en el TEMPLATE MAESTRO:<br/>'FNVSS 510' → 'FMVSS 218' (✅ confirmado por el<br/>usuario) y sumar el '& ECE' que el excel confirma<br/>para el Boston, sin el 22.06 de la otra hoja"]
-    T5["🔤 Corregir 'HOMOLOGACÓN' → 'HOMOLOGACIÓN'<br/>— 2da aparición confirmada, ahora en la hoja EDGE"]
-    T6["📎 Subir la ficha real del Boston y la hoja<br/>'FICHA DE CASCOS' como adjunto real<br/>para versionarlas"]
+    T4["⚖️ Corregir la certificación en el TEMPLATE MAESTRO:<br/>'FNVSS 510' → 'FMVSS 218' (✅ confirmado por el<br/>usuario) y sumar el '&amp; ECE' que el excel confirma<br/>para el Boston, sin el 22.06 de la otra hoja"]
+    T6["📎 Subir la ficha real del Boston, la pieza generada<br/>y la hoja 'FICHA DE CASCOS' como adjunto real<br/>para versionarlas"]
 ```
 
 **Qué hay que hacer:**
-1. Sacar "SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR" de la tarjeta de homologación y "CANAL PARA LENTES" del grid antes de reimprimir — los dos están en N/A confirmado.
-2. Corregir la certificación: primera línea **"DOT & ECE"** exacto (sin "22.06") y segunda línea **"FMVSS 218"** en lugar de "FNVSS 510" — ✅ **confirmado por el usuario el 2026-07-29**, y **la corrección del número va al template maestro de todo el catálogo**, no a esta ficha sola.
-3. Corregir **"HOMOLOGACÓN" → "HOMOLOGACIÓN"** y propagar la corrección al template maestro, no solo a esta ficha.
-4. Sacar el tache del ícono de hebilla micrométrica y abrir la revisión modelo por modelo en las dos hojas.
-5. Confirmar los 2 ítems de reemplazo elegidos (Interior EPS en la tarjeta, Material exterior ABS en el grid; suplente: "4 VENTILACIONES").
-6. ✅ **CERRADO (2026-07-29, confirmado por el usuario):** ~~decidir a cuál de las dos columnas Boston pertenece esta ficha~~ — *"yo te mandé a hacer 2 diferentes, una del Boston y la otra del Boston 4.0"*. Son **dos fichas distintas**: esta es la del **Boston** (11/13, con sus 2 reemplazos) y la del **Boston 4.0** está en [`simulacion-38`](simulacion-38-boston40-verificacion.md) (13/13, sin reemplazos). **Sigue abierto, aparte:** confirmar si **Evolution 929** es o no una columna de esta hoja.
+1. 🔁 **Volver a correr el Prompt A** — es lo único bloqueante. El banner salió **"DOT / FNVSS 510"** en lugar de **"DOT" + "& ECE" + "FMVSS 218"**. El prompt **ya está escrito con la corrección completa**, no hay que tocarlo: falló la aplicación, no la instrucción. **El Prompt B no hay que volver a correrlo por este motivo.**
+2. 👁️ **Verificar a ojo dos cosas que la captura recibida no permite confirmar** (ver 6.4): **(a)** si el ícono de **HEBILLA MICROMÉTRICA** conserva la X roja o salió limpio —el excel confirma la feature con **X**, así que tiene que estar limpio; si la X está, se vuelve a correr el Prompt B—; y **(b)** si la franja de título dice **"HOMOLOGACIÓN"** o **"HOMOLOGACÓN"**. Ninguno de los dos se da por bueno ni por malo hasta esa verificación.
+3. ✅ **CUMPLIDO (2026-07-29):** ~~Sacar "SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR" de la tarjeta de homologación y "CANAL PARA LENTES" del grid~~ — la pieza generada **ya no los tiene**: los reemplazaron *INTERIOR EPS DE ALTA RESISTENCIA* y *MATERIAL EXTERIOR ABS ALTA RESISTENCIA*. Los 2 MISMATCH duros están cerrados.
+4. ✅ **CUMPLIDO (2026-07-29):** ~~confirmar los 2 ítems de reemplazo elegidos~~ — quedaron confirmados en la práctica: la pieza generada los lleva y con ellos da **13/13**. *(El suplente "4 VENTILACIONES" queda descartado y ya no hace falta.)*
+5. ⚖️ Corregir la certificación en el **template maestro** de todo el catálogo, no solo acá: **"FNVSS 510" → "FMVSS 218"** (✅ confirmado por el usuario el 2026-07-29) y, para el Boston, primera línea **"DOT & ECE"** exacta, sin "22.06".
+6. 🔤 Corregir **"HOMOLOGACÓN" → "HOMOLOGACIÓN"** en el template maestro, no solo en esta ficha.
+7. 🔁 Abrir la revisión del ícono de hebilla micrométrica **modelo por modelo en las dos hojas** — el tache viene de la plantilla y no se decidió nunca por modelo.
+8. ✅ **CERRADO (2026-07-29, confirmado por el usuario):** ~~decidir a cuál de las dos columnas Boston pertenece esta ficha~~ — *"yo te mandé a hacer 2 diferentes, una del Boston y la otra del Boston 4.0"*. Son **dos fichas distintas**: esta es la del **Boston** y la del **Boston 4.0** está en [`simulacion-38`](simulacion-38-boston40-verificacion.md) (13/13, sin reemplazos). **Sigue abierto, aparte:** confirmar si **Evolution 929** es o no una columna de esta hoja.
 
 ---
 
@@ -652,3 +767,7 @@ flowchart TD
 2. **La certificación va "DOT / FMVSS 218".** Textual: *"dot fmvss"*. "FNVSS 510" estaba mal por las **letras** y por el **número**; la norma real es **FMVSS 218**, la que dicen los **stickers de certificación pegados en los cascos físicos**, visibles en las fotos de producto del propio catálogo. El Prompt A pasa a llevar **"DOT"** grande, **"& ECE"** debajo (valor de la columna Boston, sin "22.06") y **"FMVSS 218"** abajo. La corrección del número **vale para el template maestro de todo el catálogo**, no solo para este caso: el "FNVSS 510" viene de la plantilla y ya apareció en las dos hojas y las dos líneas de producto.
 
 Queda abierto solo el punto de si **Evolution 929** pertenece o no a esta hoja.
+
+---
+
+**2026-07-29 (tercera pasada del día — LLEGÓ LA PIEZA GENERADA) —** el usuario mandó una pieza y preguntó si corresponde al Boston. **Sí corresponde, y además no es la ficha original: es el resultado generado de los Prompts A y B de este archivo.** La evidencia es literal, no estadística: los 2 ítems que la pieza tiene —**INTERIOR EPS DE ALTA RESISTENCIA** en la tarjeta y **MATERIAL EXTERIOR ABS ALTA RESISTENCIA** en el grid— son **exactamente los 2 reemplazos que la sección 4 de este archivo inventó**, y **no existen en la plantilla genérica original**; los 2 ítems que la original tenía en esos lugares (*Sistema de liberación rápida del visor* y *Canal para lentes*, ambos **N/A** para el Boston) **desaparecieron los dos**. Eso descarta también la ficha del Boston 4.0, que sí lleva esos dos. **Auditoría Tipo C de los 13 claims contra la columna Boston: 13 MATCH · 0 MISMATCH · 0 SIN DATO.** La pieza pasó de **11/13 a 13/13**: los 2 reemplazos funcionaron, y el Boston queda como **el primer caso del catálogo donde una ficha con mismatches se regenera y cierra al 100 %**. **El único defecto que queda es la certificación:** el banner sigue diciendo **"DOT / FNVSS 510"** cuando para el Boston tiene que decir **"DOT & ECE"** (excel) y **"FMVSS 218"** (stickers de los cascos físicos, confirmado por el usuario). O sea que **el mismo Prompt A aplicó la corrección de contenido y se salteó la de certificación**, pese a tener un bloque `CRÍTICO` propio y un chequeo dedicado en la verificación final — **hay que volver a correr el Prompt A tal como está, que ya la contempla; falló la aplicación, no la instrucción.** **Dos puntos quedan pendientes de verificación visual del usuario, y no se dan por buenos ni por malos:** **(a)** si el ícono de **hebilla micrométrica** conserva la X roja (a esta resolución no se distingue) y **(b)** si la franja de título dice **"HOMOLOGACIÓN"** o **"HOMOLOGACÓN"** (el recorte no la muestra). Se registra además una **observación menor**: los 6 ítems del grid son los correctos pero **las celdas 4 y 5 salieron intercambiadas** respecto del orden que pedía el Prompt B — no cambia el veredicto. Deja **1 lección nueva** al checklist Tipo B, registrada en `orquestacion-agentes-paralelos.md`: **cuando un prompt corrige varias cosas heterogéneas a la vez, el resultado puede aplicar unas y saltearse otras — la auditoría del resultado va corrección por corrección, no se dan por aplicadas todas porque el contenido principal salió bien.**
