@@ -11,7 +11,8 @@
 | 1 — Colorway sobre molde | Cambio de color sobre foto de producto de un molde real (forma intocable) | [familia-1-colorway-molde.md](familia-1-colorway-molde.md) | 3 (gris/rojo, beige/chocolate, blanco/negro) |
 | 2 — Swap de casco en escena | Reemplazo del casco dentro de una foto lifestyle real (escena intocable) | [familia-2-swap-escena.md](familia-2-swap-escena.md) | 1 (moto + rosas → casco spoiler visor dorado) |
 | 3 — Goma inferior a negro | Corrección mínima de una sola pieza: la goma perimetral de la base pasa a negro, nada más cambia | [familia-3-goma-negra.md](familia-3-goma-negra.md) | 4 (dual-sport rojo, gris/azul, blanco/beige, verde/marrón) |
-| 4 — Escena generada alrededor de un casco real | Generación de una escena lifestyle nueva desde cero con el casco exacto de una foto de producto | [familia-4-escena-generada.md](familia-4-escena-generada.md) | 1 (mujer bajándose de la moto, jet samurái, visor transparente) |
+| 4 — Escena generada alrededor de un casco real | Generación de una escena lifestyle nueva desde cero con el casco exacto de una foto de producto | [familia-4-escena-generada.md](familia-4-escena-generada.md) | 1 (mujer bajándose de la moto, jet samurái, visor transparente) + 1 fix |
+| 5 — Limpieza de foto real de producto | Quitar logos/adhesivos, corregir iluminación a estudio y fondo blanco puro sobre fotos reales | [familia-5-limpieza-producto.md](familia-5-limpieza-producto.md) | 4 (frontal, trasera, lateral, superior del EDGE negro mate) |
 
 ## Anatomía común de todas las familias
 
@@ -34,4 +35,4 @@ Todos los prompts comparten la misma espina, derivada de las fallas reales docum
 
 ---
 
-**Última actualización:** 2026-07-29 — creado el catálogo con las Familias 1 y 2; agregadas la Familia 3 (goma inferior a negro, 4 instancias del molde dual-sport) y la Familia 4 (escena generada alrededor de un casco real).
+**Última actualización:** 2026-07-29 — creado el catálogo con las Familias 1 y 2; agregadas la Familia 3 (goma inferior a negro, 4 instancias del molde dual-sport) la Familia 4 (escena generada alrededor de un casco real) y la Familia 5 (limpieza de foto real de producto, 4 vistas del EDGE negro mate).
