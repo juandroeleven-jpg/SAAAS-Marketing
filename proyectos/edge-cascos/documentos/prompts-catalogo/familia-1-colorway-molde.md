@@ -979,3 +979,280 @@ VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
 6. ¿Quedó la marca de agua "豆包AI生成" o algún resto de ella? No
    debe quedar nada.
 ```
+
+---
+
+# Molde C — modular gunmetal en primer plano (foto sobre busto)
+
+**Molde de estas instancias:** casco modular gris grafito mate en PRIMER PLANO (encuadre cerrado 3/4), con VISOR NEGRO AHUMADO bajado, apoyado sobre un busto/maniquí, fondo oscuro con un brillo rojizo abajo y el fragmento de otro casco asomando en el borde izquierdo. Regla del usuario: el casco se preserva 100% y el visor queda NEGRO en las 4 variantes. Solo cambia el color de la calota; las piezas funcionales oscuras y la goma quedan como están.
+
+| Instancia | Calota | Piezas funcionales | Goma | Visor |
+|---|---|---|---|---|
+| 1.9 | Blanco perla mate | Negras (quedan) | Negra | Negro (queda) |
+| 1.10 | Rojo mate | Negras (quedan) | Negra | Negro (queda) |
+| 1.11 | Azul racing mate | Negras (quedan) | Negra | Negro (queda) |
+| 1.12 | Verde militar mate | Negras (quedan) | Negra | Negro (queda) |
+
+*Los colores de calota son intercambiables: para otra variante se reemplaza solo la línea del color en el prompt.*
+
+---
+
+## Instancia 1.9 — Calota blanco perla (visor negro)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo y el mismo encuadre, solo pintado de otro color. El
+casco original se preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta del casco modular: mismo objeto 3D, mismas
+  proporciones, mismas líneas y aristas de la calota.
+- La geometría de TODAS las piezas: ventilaciones y sus insertos,
+  tomas de aire de la mentonera, línea de separación de la mentonera,
+  contorno del visor. Ninguna cambia de forma, tamaño ni posición.
+- EL VISOR: queda NEGRO AHUMADO OSCURO, bajado, exactamente como en
+  la foto, con sus mismos reflejos. NO se aclara, NO se cambia de
+  color, NO se vuelve transparente.
+- El encuadre en primer plano, el ángulo 3/4 y el recorte.
+- El busto/maniquí sobre el que está apoyado el casco.
+- El fondo oscuro, la iluminación tenue, el brillo rojizo de abajo y
+  el fragmento de otro casco que asoma en el borde izquierdo: todo
+  queda como está.
+- El acabado MATE: la pintura nueva sigue siendo mate.
+
+EL CAMBIO DE COLOR — TRES CATEGORÍAS:
+1. LA CALOTA — toda la superficie pintada del casco, incluida la
+   mentonera y la zona del mecanismo modular. Pasa a BLANCO PERLA
+   MATE: un blanco limpio, apenas cálido, sin brillo.
+2. LAS PIEZAS FUNCIONALES OSCURAS — los insertos de las
+   ventilaciones, las rejillas y las piezas plásticas oscuras:
+   QUEDAN NEGRAS / OSCURAS como están. No toman el color nuevo.
+3. LA GOMA / EL BORDE INFERIOR — queda NEGRO, con su mismo acabado.
+
+CRÍTICO — EL VISOR QUEDA NEGRO:
+El visor NO se toca: sigue negro ahumado, bajado, con sus reflejos.
+Si el visor cambia de color o se aclara, el resultado está mal.
+
+COBERTURA COMPLETA:
+La calota queda BLANCO PERLA en TODA su superficie visible, sin
+ninguna isla ni parche del gris viejo. El límite entre el blanco y
+cada pieza negra es nítido y sigue el borde físico real de la pieza.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar el color del visor o aclararlo.
+- Prohibido pintar de blanco las piezas funcionales oscuras o la
+  goma del borde.
+- Prohibido dejar tramos de la calota con el gris viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el encuadre, el ángulo, el fondo o el busto.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó BLANCO PERLA MATE completa, sin tramos grises?
+2. ¿Las piezas funcionales oscuras y la goma siguen negras?
+3. ¿El visor sigue NEGRO ahumado, igual que en la foto?
+4. ¿La forma del casco quedó idéntica, sin deformarse?
+5. ¿El encuadre, el fondo, el busto y el fragmento del borde
+   izquierdo quedaron como estaban?
+6. ¿Se agregó algo que no estaba? No debe haberse agregado nada.
+```
+
+---
+
+## Instancia 1.10 — Calota rojo mate (visor negro)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo y el mismo encuadre, solo pintado de otro color. El
+casco original se preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta del casco modular: mismo objeto 3D, mismas
+  proporciones, mismas líneas y aristas de la calota.
+- La geometría de TODAS las piezas: ventilaciones y sus insertos,
+  tomas de aire de la mentonera, línea de separación de la mentonera,
+  contorno del visor. Ninguna cambia de forma, tamaño ni posición.
+- EL VISOR: queda NEGRO AHUMADO OSCURO, bajado, exactamente como en
+  la foto, con sus mismos reflejos. NO se aclara, NO se cambia de
+  color, NO se vuelve transparente.
+- El encuadre en primer plano, el ángulo 3/4 y el recorte.
+- El busto/maniquí sobre el que está apoyado el casco.
+- El fondo oscuro, la iluminación tenue, el brillo rojizo de abajo y
+  el fragmento de otro casco que asoma en el borde izquierdo: todo
+  queda como está.
+- El acabado MATE: la pintura nueva sigue siendo mate.
+
+EL CAMBIO DE COLOR — TRES CATEGORÍAS:
+1. LA CALOTA — toda la superficie pintada del casco, incluida la
+   mentonera y la zona del mecanismo modular. Pasa a ROJO MATE: un
+   rojo pleno y franco, mate, ni brillante ni bordó.
+2. LAS PIEZAS FUNCIONALES OSCURAS — los insertos de las
+   ventilaciones, las rejillas y las piezas plásticas oscuras:
+   QUEDAN NEGRAS / OSCURAS como están. No toman el color nuevo.
+3. LA GOMA / EL BORDE INFERIOR — queda NEGRO, con su mismo acabado.
+
+CRÍTICO — EL VISOR QUEDA NEGRO:
+El visor NO se toca: sigue negro ahumado, bajado, con sus reflejos.
+Si el visor cambia de color o se aclara, el resultado está mal.
+
+COBERTURA COMPLETA:
+La calota queda ROJO MATE en TODA su superficie visible, sin ninguna
+isla ni parche del gris viejo. El límite entre el rojo y cada pieza
+negra es nítido y sigue el borde físico real de la pieza.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar el color del visor o aclararlo.
+- Prohibido pintar de rojo las piezas funcionales oscuras o la goma
+  del borde.
+- Prohibido usar un rojo brillante o un bordó: es rojo pleno MATE.
+- Prohibido dejar tramos de la calota con el gris viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el encuadre, el ángulo, el fondo o el busto.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó ROJO MATE completa, sin tramos grises?
+2. ¿Las piezas funcionales oscuras y la goma siguen negras?
+3. ¿El visor sigue NEGRO ahumado, igual que en la foto?
+4. ¿La forma del casco quedó idéntica, sin deformarse?
+5. ¿El encuadre, el fondo, el busto y el fragmento del borde
+   izquierdo quedaron como estaban?
+6. ¿Se agregó algo que no estaba? No debe haberse agregado nada.
+```
+
+---
+
+## Instancia 1.11 — Calota azul racing (visor negro)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo y el mismo encuadre, solo pintado de otro color. El
+casco original se preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta del casco modular: mismo objeto 3D, mismas
+  proporciones, mismas líneas y aristas de la calota.
+- La geometría de TODAS las piezas: ventilaciones y sus insertos,
+  tomas de aire de la mentonera, línea de separación de la mentonera,
+  contorno del visor. Ninguna cambia de forma, tamaño ni posición.
+- EL VISOR: queda NEGRO AHUMADO OSCURO, bajado, exactamente como en
+  la foto, con sus mismos reflejos. NO se aclara, NO se cambia de
+  color, NO se vuelve transparente.
+- El encuadre en primer plano, el ángulo 3/4 y el recorte.
+- El busto/maniquí sobre el que está apoyado el casco.
+- El fondo oscuro, la iluminación tenue, el brillo rojizo de abajo y
+  el fragmento de otro casco que asoma en el borde izquierdo: todo
+  queda como está.
+- El acabado MATE: la pintura nueva sigue siendo mate.
+
+EL CAMBIO DE COLOR — TRES CATEGORÍAS:
+1. LA CALOTA — toda la superficie pintada del casco, incluida la
+   mentonera y la zona del mecanismo modular. Pasa a AZUL RACING
+   MATE: un azul medio saturado, ni celeste ni azul marino casi
+   negro.
+2. LAS PIEZAS FUNCIONALES OSCURAS — los insertos de las
+   ventilaciones, las rejillas y las piezas plásticas oscuras:
+   QUEDAN NEGRAS / OSCURAS como están. No toman el color nuevo.
+3. LA GOMA / EL BORDE INFERIOR — queda NEGRO, con su mismo acabado.
+
+CRÍTICO — EL VISOR QUEDA NEGRO:
+El visor NO se toca: sigue negro ahumado, bajado, con sus reflejos.
+Si el visor cambia de color o se aclara, el resultado está mal.
+
+COBERTURA COMPLETA:
+La calota queda AZUL RACING en TODA su superficie visible, sin
+ninguna isla ni parche del gris viejo. El límite entre el azul y
+cada pieza negra es nítido y sigue el borde físico real de la pieza.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar el color del visor o aclararlo.
+- Prohibido pintar de azul las piezas funcionales oscuras o la goma
+  del borde.
+- Prohibido dejar tramos de la calota con el gris viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el encuadre, el ángulo, el fondo o el busto.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó AZUL RACING MATE completa, sin tramos grises?
+2. ¿Las piezas funcionales oscuras y la goma siguen negras?
+3. ¿El visor sigue NEGRO ahumado, igual que en la foto?
+4. ¿La forma del casco quedó idéntica, sin deformarse?
+5. ¿El encuadre, el fondo, el busto y el fragmento del borde
+   izquierdo quedaron como estaban?
+6. ¿Se agregó algo que no estaba? No debe haberse agregado nada.
+```
+
+---
+
+## Instancia 1.12 — Calota verde militar mate (visor negro)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo y el mismo encuadre, solo pintado de otro color. El
+casco original se preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta del casco modular: mismo objeto 3D, mismas
+  proporciones, mismas líneas y aristas de la calota.
+- La geometría de TODAS las piezas: ventilaciones y sus insertos,
+  tomas de aire de la mentonera, línea de separación de la mentonera,
+  contorno del visor. Ninguna cambia de forma, tamaño ni posición.
+- EL VISOR: queda NEGRO AHUMADO OSCURO, bajado, exactamente como en
+  la foto, con sus mismos reflejos. NO se aclara, NO se cambia de
+  color, NO se vuelve transparente.
+- El encuadre en primer plano, el ángulo 3/4 y el recorte.
+- El busto/maniquí sobre el que está apoyado el casco.
+- El fondo oscuro, la iluminación tenue, el brillo rojizo de abajo y
+  el fragmento de otro casco que asoma en el borde izquierdo: todo
+  queda como está.
+- El acabado MATE: la pintura nueva sigue siendo mate.
+
+EL CAMBIO DE COLOR — TRES CATEGORÍAS:
+1. LA CALOTA — toda la superficie pintada del casco, incluida la
+   mentonera y la zona del mecanismo modular. Pasa a VERDE MILITAR
+   MATE: un verde oliva apagado, sin brillo.
+2. LAS PIEZAS FUNCIONALES OSCURAS — los insertos de las
+   ventilaciones, las rejillas y las piezas plásticas oscuras:
+   QUEDAN NEGRAS / OSCURAS como están. No toman el color nuevo.
+3. LA GOMA / EL BORDE INFERIOR — queda NEGRO, con su mismo acabado.
+
+CRÍTICO — EL VISOR QUEDA NEGRO:
+El visor NO se toca: sigue negro ahumado, bajado, con sus reflejos.
+Si el visor cambia de color o se aclara, el resultado está mal.
+Ojo acá: el verde militar es un color oscuro — igual tiene que
+distinguirse claramente del negro de las piezas y del visor.
+
+COBERTURA COMPLETA:
+La calota queda VERDE MILITAR en TODA su superficie visible, sin
+ninguna isla ni parche del gris viejo. El límite entre el verde y
+cada pieza negra es nítido y sigue el borde físico real de la pieza.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar el color del visor o aclararlo.
+- Prohibido pintar de verde las piezas funcionales oscuras o la
+  goma del borde.
+- Prohibido oscurecer el verde hasta que se confunda con el negro.
+- Prohibido dejar tramos de la calota con el gris viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el encuadre, el ángulo, el fondo o el busto.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó VERDE MILITAR MATE completa, sin tramos grises,
+   y se distingue del negro de las piezas?
+2. ¿Las piezas funcionales oscuras y la goma siguen negras?
+3. ¿El visor sigue NEGRO ahumado, igual que en la foto?
+4. ¿La forma del casco quedó idéntica, sin deformarse?
+5. ¿El encuadre, el fondo, el busto y el fragmento del borde
+   izquierdo quedaron como estaban?
+6. ¿Se agregó algo que no estaba? No debe haberse agregado nada.
+```
