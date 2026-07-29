@@ -328,6 +328,21 @@ Casco abierto/jet, vista frontal, calota amarillo lima con arte grafiti tipo Bob
 
 ---
 
+## Casco integral negro mate con visor dorado levantado — foto lifestyle en una cafetería — Simulación 34
+
+Casco integral (full face) negro mate liso, vista de 3/4 delantero ligeramente desde arriba, con **visor espejado dorado/iridiscente LEVANTADO** y un **segundo visor interno solar oscuro BAJADO** — dos piezas distintas. Pedido de **foto lifestyle**: un hombre sentado fuera de una cafetería, con el casco "exactamente en la misma posición, el mismo ángulo y todo" que en la foto de producto. Tipo A con **traslado de escena**: no se transfiere ningún diseño, el objeto ya está terminado y lo único que cambia es el entorno.
+
+🟡 **Ambigüedad pendiente de confirmación del usuario:** "sentado con este casco" admite dos lecturas y se escribieron las dos. **(A) el casco apoyado sobre la mesa** queda como principal porque es la única que conserva **literalmente** el ángulo de 3/4 delantero desde arriba que el usuario pidió, y la única que deja ver el visor dorado levantado y el interior; **(B) el hombre con el casco puesto** queda como variante, donde el ángulo depende de la pose de la cabeza. **Nadie eligió todavía** — hay que preguntar antes de dar por bueno un resultado.
+
+[`simulacion-34-lifestyle-cafeteria-casco-negro.md`](simulacion-34-lifestyle-cafeteria-casco-negro.md)
+
+| Prompt / pieza | Tipo de pieza | Estado | Ubicación |
+|---|---|---|---|
+| (A) Lifestyle en cafetería — casco apoyado sobre la mesa (principal) | Tipo A (traslado de escena, geometría intacta) | 🔴 bloqueado — el texto del prompt ya está listo para correr; falta confirmar la lectura (A) vs. (B) | `simulacion-34-lifestyle-cafeteria-casco-negro.md` |
+| (B) Lifestyle en cafetería — hombre con el casco puesto (variante) | Tipo A (traslado de escena, geometría intacta) | 🔴 bloqueado — no correr por default; solo si el usuario confirma la lectura (B) | `simulacion-34-lifestyle-cafeteria-casco-negro.md` |
+
+---
+
 ## Resumen numérico
 
 | Caso | Prompts indexados | ✅ Listo | ⚠️ Con reintento | 🔴 Bloqueado |
@@ -352,7 +367,8 @@ Casco abierto/jet, vista frontal, calota amarillo lima con arte grafiti tipo Bob
 | Casco blanco glossy (goma negra) | 1 | 1 | 0 | 0 |
 | Banner "Superar tus límites" | 1 | 1 | 0 | 0 |
 | Casco jet Bob Esponja (visor transparente) | 1 | 0 | 0 | 1 |
-| **Total** | **73** | **55** | **10** | **5** |
+| Casco negro mate visor dorado (lifestyle cafetería) | 2 | 0 | 0 | 2 |
+| **Total** | **75** | **55** | **10** | **7** |
 
 ---
 
@@ -360,5 +376,5 @@ Casco abierto/jet, vista frontal, calota amarillo lima con arte grafiti tipo Bob
 
 ---
 
-**Última actualización:** 2026-07-29 · agregada la sección de la **Simulación 31** (casco jet con arte grafiti tipo Bob Esponja: edición puntual de 2 cambios — visor ahumado → transparente y quitar la guía de maquetación punteada), con su prompt marcado 🔴 bloqueado hasta confirmar con el usuario qué es "el palo"; el total pasa de 72 a 73 prompts indexados. · **Stellar (Simulación 14) actualizado tras la revisión con captura nítida**: el veredicto Tipo C pasó de 10/13 a **12 MATCH / 0 MISMATCH / 0 SIN DATO** porque la pieza auditada en la primera pasada no era la ficha vigente; se reemplazaron los Prompts A y B por sus versiones definitivas (A de reproducción fiel; B sin "doble visera", sin taches y con "Material exterior ABS alta resistencia" en la 6ª celda), se marcaron los 2 anteriores como ⛔ SUPERADOS, se cerró el pendiente de certificación (#19), se agregaron 3 pendientes nuevos (tache de arte, confirmación del ítem de reemplazo, subida de archivos) y se registró en un bloque aparte la **decisión de negocio de no comunicar "doble visera"** para que una auditoría posterior no la devuelva creyendo que es un olvido.
+**Última actualización:** 2026-07-29 · agregada la sección de la **Simulación 34** (casco integral negro mate con visor dorado levantado, foto lifestyle en una cafetería): **2 prompts** —(A) casco apoyado sobre la mesa, principal, y (B) hombre con el casco puesto, variante—, los dos marcados 🔴 bloqueados hasta que el usuario confirme cuál de las dos lecturas de "sentado con este casco" es la correcta; el total pasa de 73 a **75** prompts indexados. Es el primer caso de **traslado de escena** con superficie espejada, y deja una lección nueva para el checklist Tipo A: las superficies reflectantes de un objeto trasladado tienen que reflejar la escena nueva y no la del estudio de origen. · agregada la sección de la **Simulación 31** (casco jet con arte grafiti tipo Bob Esponja: edición puntual de 2 cambios — visor ahumado → transparente y quitar la guía de maquetación punteada), con su prompt marcado 🔴 bloqueado hasta confirmar con el usuario qué es "el palo"; el total pasa de 72 a 73 prompts indexados. · **Stellar (Simulación 14) actualizado tras la revisión con captura nítida**: el veredicto Tipo C pasó de 10/13 a **12 MATCH / 0 MISMATCH / 0 SIN DATO** porque la pieza auditada en la primera pasada no era la ficha vigente; se reemplazaron los Prompts A y B por sus versiones definitivas (A de reproducción fiel; B sin "doble visera", sin taches y con "Material exterior ABS alta resistencia" en la 6ª celda), se marcaron los 2 anteriores como ⛔ SUPERADOS, se cerró el pendiente de certificación (#19), se agregaron 3 pendientes nuevos (tache de arte, confirmación del ítem de reemplazo, subida de archivos) y se registró en un bloque aparte la **decisión de negocio de no comunicar "doble visera"** para que una auditoría posterior no la devuelva creyendo que es un olvido.
 · *(2026-07-28, registro previo)* índice maestro armado a pedido explícito del usuario para organizar todos los prompts de las Simulaciones 10-19 en un único punto de entrada, sin modificar el contenido de ninguno de los 10 archivos originales · agregadas las secciones de Simulación 27 (casco blanco glossy, goma del borde inferior a negro) y Simulación 28 (banner de marca "Diseñado para superar tus límites"). · **Hero (Simulación 12) actualizado tras correr el Prompt A**: el intento **falló solo en el LAYOUT** —lienzo estirado a 1 : 2,47 (415 x 1024 px) contra el 1 : 2 de la referencia, separadores convertidos en bandas horizontales de ancho completo, espaciado desmesurado y una estrella blanca de cuatro puntas inventada— mientras que **todo el contenido salió perfecto** (certificación corregida a "DOT & ECE 22.06" sin rastro de "FNVSS 510", los 3 ítems exactos y en orden, sin ítems inventados, paleta respetada). Se agregó la auditoría con tabla de 5 defectos y causa raíz por fila, se escribió el **Intento 2 del Prompt A** (bloques nuevos de lienzo-constante en números, geometría de los separadores, proporciones internas de los 3 bloques, ritmo vertical acotado, prohibido absoluto ampliado y verificación final de 6 chequeos), se **corrigió el Prompt B preventivamente por analogía** (bloque de lienzo que no se estira al bajar de 6 celdas a 3 + verificación final de 4 chequeos) y se registró un **pendiente nuevo**: la falta de ortografía **"HOMOLOGACÓN"** viene de la pieza original del cliente y probablemente esté replicada en las fichas de todo el catálogo.
