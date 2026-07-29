@@ -21,19 +21,25 @@ export default function HeroVidrio() {
   const [listo, setListo] = useState(false);
 
   return (
-    <section className="fondo-claro relative isolate min-h-screen overflow-hidden px-4 pb-16 pt-5 sm:px-8 sm:pt-7">
-      {/* Manchas de color muy difusas. Son `radial-gradient` sobre un div, no
-          `filter: blur`: el degradado ya nace suave, asi que la GPU lo compone
-          como una textura y moverlo no obliga a volver a rasterizar nada. */}
+    <section className="fondo-claro relative isolate flex min-h-screen items-center overflow-hidden p-3 sm:p-5 lg:p-7">
+      {/* Manchas del FONDO, detras del panel de cristal. Son `radial-gradient`
+          sobre un div y no `filter: blur`: el degradado ya nace suave, asi que
+          la GPU lo compone como una textura y moverlo no obliga a rasterizar
+          de nuevo. Son ademas lo que el panel desenfoca -- sin algo con color
+          detras, el cristal no se lee como cristal. */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="mancha-hero mancha-hero-1" />
         <div className="mancha-hero mancha-hero-2" />
         <div className="mancha-hero mancha-hero-3" />
       </div>
 
-      <div className="mx-auto w-full max-w-[1400px]">
+      {/* El panel de cristal: contiene TODA la portada, como en la referencia.
+          `overflow-hidden` para que la mancha irisada se recorte con las
+          esquinas redondeadas en vez de desbordar. */}
+      <div className="panel-hero relative mx-auto w-full max-w-[1400px] overflow-hidden rounded-[28px] px-5 py-6 sm:rounded-[36px] sm:px-8 sm:py-9 lg:px-10 lg:py-10">
+        <div aria-hidden className="iris pointer-events-none" />
         {/* Barra flotante: marca a la izquierda, accion a la derecha. */}
-        <nav className="flex items-center justify-between gap-4 rounded-full bg-white/85 px-5 py-3 shadow-[0_10px_40px_-16px_rgba(15,27,45,0.28)] ring-1 ring-white/70 backdrop-blur-md sm:px-7 sm:py-4">
+        <nav className="relative z-10 flex items-center justify-between gap-4 rounded-full bg-white/85 px-5 py-3 shadow-[0_10px_40px_-16px_rgba(15,27,45,0.28)] ring-1 ring-white/70 sm:px-7 sm:py-4">
           <span className="flex items-center gap-2.5 text-lg font-bold tracking-tight text-cf-text sm:text-xl">
             <span className="grid h-8 w-8 place-items-center rounded-full bg-gradient-to-br from-cf-accent to-cf-accent2 text-sm font-black text-white">
               C
@@ -51,7 +57,7 @@ export default function HeroVidrio() {
         {/* Dos columnas desde lg. Por debajo el objeto 3D va DESPUES del texto
             en el flujo normal: superpuesto taparia el texto, que es lo primero
             que hay que poder leer en un telefono. */}
-        <div className="mt-10 grid grid-cols-1 items-center gap-8 sm:mt-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.92fr)] lg:gap-4">
+        <div className="relative z-10 mt-9 grid grid-cols-1 items-center gap-8 sm:mt-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.92fr)] lg:gap-4">
           <motion.div
             initial={quieto ? false : { opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}

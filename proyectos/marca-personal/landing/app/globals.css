@@ -325,11 +325,12 @@ body {
    red neuronal. Es un degradado, no un canvas: el hero deja de necesitar un
    contexto WebGL solo para el fondo. */
 .fondo-claro {
-  background-color: #f7faff;
+  background-color: #dfeaff;
   background-image:
-    radial-gradient(70% 55% at 8% 0%, rgba(219, 234, 254, 0.9) 0%, transparent 60%),
-    radial-gradient(60% 50% at 95% 8%, rgba(199, 218, 252, 0.75) 0%, transparent 62%),
-    linear-gradient(180deg, #ffffff 0%, #f2f7ff 55%, #e9f0fd 100%);
+    radial-gradient(65% 50% at 5% 0%, rgba(147, 197, 253, 0.75) 0%, transparent 62%),
+    radial-gradient(55% 45% at 98% 6%, rgba(129, 165, 250, 0.6) 0%, transparent 64%),
+    radial-gradient(70% 55% at 60% 100%, rgba(191, 219, 254, 0.85) 0%, transparent 66%),
+    linear-gradient(165deg, #eef5ff 0%, #dbe8ff 48%, #cfe0fb 100%);
 }
 
 /* Manchas de color del hero. Se mueven con `transform` y su suavidad viene del
@@ -372,6 +373,70 @@ body {
 }
 @media (prefers-reduced-motion: reduce) {
   .mancha-hero {
+    animation: none;
+  }
+}
+
+/* Panel de cristal del hero: el rectangulo grande que contiene TODO el
+   contenido de la portada, sobre el degradado del fondo. Es lo que hace que
+   la pagina se lea como una pieza y no como texto suelto sobre un color.
+
+   El desenfoque va aqui y en ningun sitio mas de la portada: `backdrop-filter`
+   obliga a recalcular lo que hay detras cada vez que ese fondo cambia, asi que
+   un solo panel grande cuesta menos que varios pequenos. */
+.panel-hero {
+  background: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow:
+    0 40px 90px -50px rgba(15, 27, 45, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Mientras se desplaza, el desenfoque se apaga: es cuando menos se aprecia y
+   cuando mas cuesta, porque el fondo se mueve respecto al panel en cada
+   frame. Al parar vuelve. */
+.desplazando .panel-hero {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .panel-hero {
+    background: rgba(255, 255, 255, 0.86);
+  }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .panel-hero {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.92);
+  }
+}
+
+/* La mancha irisada de la referencia: vive DENTRO del panel, abajo a la
+   izquierda, y se recorta con sus esquinas redondeadas. */
+.iris {
+  position: absolute;
+  left: -8%;
+  bottom: -18%;
+  width: 62%;
+  height: 62%;
+  border-radius: 9999px;
+  background:
+    radial-gradient(closest-side at 35% 40%, rgba(96, 165, 250, 0.55), transparent 70%),
+    radial-gradient(closest-side at 70% 65%, rgba(37, 99, 235, 0.4), transparent 72%),
+    radial-gradient(closest-side at 55% 80%, rgba(191, 219, 254, 0.6), transparent 75%);
+  filter: blur(30px);
+  animation: aurora-3 34s ease-in-out infinite;
+}
+.desplazando .iris {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .iris {
     animation: none;
   }
 }
