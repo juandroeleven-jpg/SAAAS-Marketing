@@ -61,6 +61,17 @@ EL CASCO — SE COPIA EXACTO DE LA FOTO ADJUNTA:
   mecanismo/botón del pivote del visor, la goma negra del borde
   inferior y la correa con su detalle rojo.
 
+ESCALA REAL — ANCLA DURA:
+El casco es un objeto de tamaño real puesto sobre una cabeza real:
+- Es apenas más grande que la cabeza que lo lleva: unos pocos
+  centímetros de carcasa y acolchado alrededor del cráneo, nada más.
+- Regla de control: los HOMBROS de la mujer se ven MÁS ANCHOS que el
+  casco. Si el casco sale más ancho que los hombros, está mal.
+- La cabeza con el casco puesto mide más o menos un séptimo de la
+  altura total del cuerpo, como en cualquier foto real de una
+  persona con casco.
+- Ella podría sacarse el casco con las dos manos: ese es el tamaño.
+
 COMPOSICIÓN — PARA NO INVENTAR EL LADO OCULTO:
 La foto adjunta muestra el casco en 3/4 lateral izquierdo. Componé
 la toma de la escena de modo que se vea ESE MISMO LADO del casco
@@ -123,3 +134,91 @@ VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
 - Los caracteres japoneses son el punto más frágil: compará trazo por trazo contra la foto de producto (misma falla de tipografía que en Simulación 6d).
 - Verificar que no le haya agregado mentonera (los modelos tienden al casco integral "genérico").
 - Verificar que el arte del samurái no esté redibujado "parecido pero distinto": las viñetas del lateral son la firma del diseño.
+- **La escala del casco** — falla real del primer intento (29/07/2026): el casco salió gigante, más ancho que los hombros. Por eso el prompt tiene la sección "ESCALA REAL — ANCLA DURA".
+
+---
+
+## Instancia 4.1-fix — Corrección del primer resultado (casco gigante + caracteres corruptos)
+
+**Contexto:** el primer intento de la 4.1 generó una escena buena (mujer, moto, calle, visor transparente con rostro visible) pero con dos errores: el casco quedó a escala gigante (más ancho que los hombros) y los caracteres japoneses salieron corruptos. Este prompt corrige SOLO esos dos errores sobre la imagen ya generada.
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la escena generada con los errores, (2) la foto de producto del casco.
+
+```
+Esto es una CORRECCIÓN de DOS errores sobre una imagen ya generada,
+no una imagen nueva. Recibís DOS imágenes con roles distintos:
+
+- IMAGEN 1 — LA ESCENA GENERADA (la mujer sobre la moto con el casco
+  samurái, en la calle con el cartel "Café"): es la BASE. La escena
+  está bien y se conserva: la mujer, su rostro y su sonrisa, la
+  pose, la campera, la moto, la calle, los peatones desenfocados,
+  la luz y el encuadre quedan EXACTAMENTE como están.
+- IMAGEN 2 — LA FOTO DE PRODUCTO DEL CASCO: es la ÚNICA AUTORIDAD
+  del casco: su forma, sus gráficos y sus caracteres japoneses.
+
+HAY DOS ERRORES A CORREGIR, Y SOLAMENTE ESTOS DOS:
+
+ERROR 1 — LA ESCALA DEL CASCO:
+En la IMAGEN 1 el casco quedó GIGANTE: es más ancho que los hombros
+de la mujer y ocupa media imagen. Eso es físicamente imposible. El
+casco se REDUCE a su tamaño real:
+- Un casco real es apenas más grande que la cabeza que lo lleva:
+  unos pocos centímetros de carcasa y acolchado alrededor del
+  cráneo, nada más.
+- Regla de control: los HOMBROS de la mujer tienen que verse MÁS
+  ANCHOS que el casco. Nunca al revés.
+- La cabeza con el casco puesto mide más o menos un séptimo de la
+  altura del cuerpo, como en cualquier foto real.
+- Al reducirlo, el casco queda bien calzado sobre SU cabeza, apoyado
+  de forma natural, con el visor transparente bajado y su rostro
+  visible a través, igual que ya está.
+- El espacio que el casco gigante tapaba se completa con la escena
+  que corresponde (la calle, la moto, el fondo), coherente con lo
+  que ya se ve alrededor.
+
+ERROR 2 — LOS CARACTERES JAPONESES:
+En la IMAGEN 1 los caracteres del lateral del casco salieron
+corruptos: parecen letras occidentales inventadas. Se BORRAN y se
+RE-COPIAN EXACTOS desde la IMAGEN 2: mismos trazos, misma posición
+sobre el gráfico, mismo tamaño relativo, misma orientación. No se
+inventan caracteres, no se "corrigen", no se reemplazan por
+garabatos que parezcan japonés: se copian los de la foto de
+producto, trazo por trazo.
+Aprovechá y verificá el resto del gráfico contra la IMAGEN 2 (el
+samurái de la parte alta, las viñetas de combate, las pinceladas
+rojas): lo que no coincida con la foto de producto se corrige para
+que coincida.
+
+TODO LO DEMÁS NO SE TOCA — QUEDA COMO ESTÁ EN LA IMAGEN 1:
+- El rostro, la sonrisa y el peinado de la mujer.
+- Su pose sobre la moto y su campera.
+- La moto completa: tanque, faro, espejos, asiento.
+- La calle, las paredes de ladrillo, el cartel "Café", los peatones
+  desenfocados del fondo.
+- La luz cálida de tarde, la profundidad de campo y el encuadre.
+- El visor: sigue bajado, transparente e incoloro, con el rostro
+  visible a través.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido regenerar la escena entera o cambiar a la mujer, la
+  moto o el fondo.
+- Prohibido dejar el casco en un tamaño mayor que el ancho de los
+  hombros.
+- Prohibido dejar cualquier caracter inventado: los caracteres son
+  los de la IMAGEN 2.
+- Prohibido tintar, oscurecer o espejar el visor.
+- Prohibido agregarle mentonera al casco: es abierto tipo jet.
+- Prohibido agregar logos, textos o elementos nuevos.
+
+VERIFICACIÓN FINAL — respondé estos cinco chequeos antes de entregar:
+1. ¿El casco quedó a escala real — más angosto que los hombros,
+   proporcional a la cabeza?
+2. ¿Los caracteres japoneses son ahora EXACTAMENTE los de la foto
+   de producto, sin letras inventadas?
+3. ¿El gráfico del casco (samurái, viñetas, pinceladas rojas)
+   coincide con la foto de producto?
+4. ¿El rostro sigue visible a través del visor transparente, y la
+   mujer, la moto y el fondo quedaron intactos?
+5. ¿La zona que antes tapaba el casco gigante quedó completada con
+   escena coherente, sin manchas ni huecos?
+```
