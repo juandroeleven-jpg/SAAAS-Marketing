@@ -1063,3 +1063,136 @@ VERIFICACIÓN FINAL — respondé estos siete chequeos antes de entregar:
 7. ¿Se agregó algo que no correspondía (texto, logos, humo, otra
    persona)? No debe haberse agregado nada.
 ```
+
+---
+
+## Instancia 4.2-v2 — Hombre de smoking REHECHO (sin mecanismo inventado, visor con detalle real, un solo prompt de generación)
+
+**Contexto:** versión definitiva de la 4.2, hecha desde cero como UN SOLO prompt de generación (una sola imagen adjunta: la foto de producto del casco modular negro mate), incorporando de entrada los dos ajustes que antes se aplicaron como ediciones separadas (4.2-fix: eliminar la placa/mecanismo inventado junto al visor; 4.2-fix-b: remaches de fijación, moldura del contorno y traslúcido sutil del vidrio ahumado). Usar esta versión en vez de la 4.2 original para arrancar de cero.
+
+**Se adjunta UNA imagen:** la foto de producto del casco modular negro mate (3/4 lateral mirando a la derecha, fondo blanco de maquetación — se limpia).
+
+```
+Esto es una GENERACIÓN DE ESCENA alrededor de un CASCO REAL, no un
+diseño de casco nuevo. Recibís UNA imagen: la del casco modular negro
+mate. Esa imagen es la ÚNICA AUTORIDAD DEL CASCO: su forma, sus
+piezas y su color se copian EXACTOS. Todo lo demás de la escena se
+genera nuevo, pero el casco es EXACTAMENTE el de la imagen, sin
+ningún cambio: el casco original se preserva al 100%, nada se inventa
+ni se deforma.
+
+LA ESCENA A GENERAR:
+Fotografía fotorrealista, estilo editorial de moda, de un HOMBRE al
+AIRE LIBRE con el casco puesto:
+- Ambiente exterior elegante: una ciudad al atardecer (calle con
+  edificios, luz dorada baja) o un exterior sofisticado equivalente
+  (terraza, entrada de un hotel).
+- Va vestido de SMOKING NEGRO Y BLANCO: saco negro, camisa blanca,
+  moño negro; opcional un pañuelo blanco en el bolsillo del saco.
+  Todo impecable, elegante, con actitud de editorial de moda.
+- Lleva el casco de la imagen adjunta PUESTO, bien calzado sobre la
+  cabeza, a escala real, con el visor bajado.
+- Profundidad de campo tipo foto editorial: el hombre y el casco
+  nítidos, el fondo levemente desenfocado.
+- La foto es fotorrealista: nada de ilustración, nada de render 3D
+  evidente, nada de estética de videojuego.
+
+EL CASCO — SE COPIA EXACTO DE LA IMAGEN ADJUNTA, PIEZA POR PIEZA:
+- Casco integral MODULAR negro mate, liso, sin gráficos ni logos.
+- Sus piezas quedan idénticas y son SOLO estas: el spoiler / aleta
+  trasera de la parte alta de atrás, el extractor de ventilación
+  superior con sus insertos, las tomas de aire laterales con sus
+  ranuras, la ventilación central de la mentonera, y la goma negra
+  del borde inferior.
+- NO EXISTE ninguna placa, disco ni mecanismo con textura granulada
+  o de puntos junto al visor: esa zona de la imagen de referencia es
+  CALOTA LISA, negro mate continuo, sin ninguna pieza sobrepuesta.
+  No se inventa un mecanismo ahí ni en ningún otro lugar del casco.
+- El acabado sigue siendo NEGRO MATE: la luz de la escena lo ilumina
+  pero no lo vuelve brillante ni le cambia el color.
+
+EL VISOR — AHUMADO NEGRO OPACO, CON SU DETALLE REAL, NADA DE ROSTRO:
+- El visor va BAJADO y se ve NEGRO OPACO en general: ahumado oscuro,
+  con reflejos leves del entorno (el cielo del atardecer, las
+  luces).
+- El visor asienta directo sobre la calota, sin placas, marcos raros
+  ni herrajes inventados a su alrededor: su contorno es limpio.
+- El visor tiene el detalle real de un visor de casco: pequeños
+  puntos o tornillos de fijación discretos cerca de sus bordes y
+  esquinas (pocos, chicos, no inventados de más), y una moldura /
+  junta fina donde el visor remata contra la calota.
+- El carácter del vidrio es ahumado BRILLANTE con un traslúcido MUY
+  leve: en las zonas menos reflectantes se insinúa apenas una
+  textura interior (el acolchado del casco), sin que eso implique
+  que se vea nada del rostro. Es una insinuación sutil de material,
+  no transparencia.
+- NO se ve NADA del rostro ni de los rasgos de la persona a través
+  del visor: ni ojos, ni nariz, ni piel. Cero rostro visible.
+
+ESCALA REAL — ANCLA DURA:
+El casco es un objeto de tamaño real puesto sobre una cabeza real:
+- Es apenas más grande que la cabeza que lo lleva: unos pocos
+  centímetros de carcasa y acolchado alrededor del cráneo, nada más.
+- Regla de control: los HOMBROS del hombre se ven MÁS ANCHOS que el
+  casco. Si el casco sale más ancho que los hombros, está mal.
+- La cabeza con el casco puesto mide más o menos un séptimo de la
+  altura total del cuerpo, como en cualquier foto real de una
+  persona con casco.
+- Él podría sacarse el casco con las dos manos: ese es el tamaño.
+
+COMPOSICIÓN — PARA NO INVENTAR EL LADO OCULTO:
+La imagen adjunta muestra el casco en 3/4 lateral mirando a la
+DERECHA. Componé la toma de la escena de modo que se vea ESE MISMO
+LADO del casco, en un ángulo equivalente. No mostrar de frente
+completo ni del otro lado, porque ese lado no está en la imagen y no
+se inventa.
+
+INTEGRACIÓN DE LUZ:
+El casco se ilumina con la luz de la escena: reflejos suaves y
+coherentes del atardecer sobre la superficie mate y sobre el visor
+ahumado. Pero la luz NUNCA justifica cambiar el casco: el negro mate
+sigue siendo negro mate, y el visor sigue siendo negro opaco con su
+detalle real.
+
+LIMPIEZA:
+La imagen adjunta trae una marca de agua "豆包AI生成" abajo a la
+derecha. NO es parte del casco y NO pasa a la escena: no aparece en
+el resultado, ni entera ni en parte. Solo se toma el casco.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar el casco en nada: ni forma, ni piezas, ni color,
+  ni acabado. Es una copia exacta del de la imagen.
+- Prohibido inventar cualquier placa, disco o mecanismo con textura
+  de puntos junto al visor o en cualquier otra parte de la calota:
+  esa zona es calota lisa.
+- Prohibido mostrar el rostro, los ojos o la piel a través del
+  visor.
+- Prohibido aclarar, transparentar o espejar el visor más allá del
+  traslúcido sutil descripto: sigue siendo negro opaco en general.
+- Prohibido dejar el visor sin sus remaches/tornillos discretos y su
+  moldura de contorno: son parte del objeto real.
+- Prohibido agregar logos, textos o gráficos al casco o a la ropa.
+- Prohibido mostrar el lado del casco que no aparece en la imagen.
+- Prohibido el casco gigante: los hombros siempre más anchos que el
+  casco.
+- Prohibido trasladar la marca de agua a la escena.
+
+VERIFICACIÓN FINAL — respondé estos ocho chequeos antes de entregar:
+1. ¿El casco es EXACTAMENTE el de la imagen — modular negro mate con
+   spoiler, extractor, tomas laterales, ventilación de mentonera y
+   goma negra — sin ningún cambio?
+2. ¿La zona junto al visor quedó calota lisa, SIN ninguna placa,
+   disco o mecanismo con textura de puntos inventado?
+3. ¿El visor tiene sus remaches/tornillos discretos y su moldura de
+   contorno, iguales a los de un visor real?
+4. ¿Se insinúa sutilmente el interior en el vidrio ahumado, SIN que
+   se vea nada del rostro ni de la piel?
+5. ¿El visor se ve en general negro opaco, con el reflejo del
+   atardecer?
+6. ¿El hombre está de smoking negro y blanco, al aire libre, con luz
+   de atardecer y estética de editorial de moda?
+7. ¿La toma muestra el MISMO lado del casco que la imagen adjunta
+   (3/4 mirando a la derecha), sin inventar el lado oculto?
+8. ¿El casco quedó a escala real — más angosto que los hombros — y
+   sin marca de agua en la escena?
+```
