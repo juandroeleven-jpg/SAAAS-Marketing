@@ -1300,3 +1300,133 @@ VERIFICACIÓN FINAL — respondé estos siete chequeos antes de entregar:
 7. ¿Se muestra el mismo lado del casco que la foto, a escala
    coherente con los hombros visibles?
 ```
+
+---
+
+## Instancia 4.2-v3 — Hombre de smoking REHECHO DE CERO (visor copiado pixel a pixel de la foto real, sin lista de detalles inventados)
+
+**Contexto:** en la 4.2-v2 el casco se mantuvo 100% fiel, pero el visor del resultado seguía sin coincidir con los detalles reales de la foto de producto. Diagnóstico: el prompt anterior le decía al modelo QUÉ detalles poner en el visor (remaches, moldura, traslúcido) en vez de decirle que los copiara de la foto — y esa lista puede no coincidir exactamente con lo que la foto realmente muestra. Esta versión corrige eso: el visor se trata exactamente igual que el resto del casco, con la misma regla de "se copia, no se inventa", sin ninguna lista fija de detalles.
+
+**Se adjunta UNA imagen:** la foto de producto del casco modular negro mate.
+
+```
+Esto es una GENERACIÓN DE ESCENA alrededor de un CASCO REAL, no un
+diseño de casco nuevo. Recibís UNA imagen: la del casco modular negro
+mate. Esa imagen es la ÚNICA AUTORIDAD DEL CASCO COMPLETO, INCLUIDO
+EL VISOR: su forma, sus piezas, su color y su visor se copian
+EXACTOS. Todo lo demás de la escena se genera nuevo, pero el casco —
+entero, sin excepciones — es el de la imagen, sin ningún cambio: se
+preserva al 100%, nada se inventa ni se deforma.
+
+REGLA CENTRAL, VÁLIDA PARA TODO EL CASCO Y TAMBIÉN PARA EL VISOR:
+Tratá el casco de la imagen como un objeto físico ya fabricado que
+ahora se fotografía en una escena nueva. Esto aplica a la calota Y
+al visor por igual: NINGUNA parte del casco se "interpreta" ni se
+"generaliza" ni se rellena con detalles típicos de "un visor de
+casco". Todo lo que la imagen adjunta muestra dentro del contorno
+del casco — la calota, el visor y cada pieza — se copia mirando la
+imagen, tal cual está, con su forma exacta, sus reflejos, sus
+sombras, sus bordes y su acabado real.
+
+LA ESCENA A GENERAR:
+Fotografía fotorrealista, estilo editorial de moda, de un HOMBRE al
+AIRE LIBRE con el casco puesto:
+- Ambiente exterior elegante: una ciudad al atardecer (calle con
+  edificios, luz dorada baja) o un exterior sofisticado equivalente
+  (terraza, entrada de un hotel).
+- Va vestido de SMOKING NEGRO Y BLANCO: saco negro, camisa blanca,
+  moño negro; opcional un pañuelo blanco en el bolsillo del saco.
+  Todo impecable, elegante, con actitud de editorial de moda.
+- Lleva el casco de la imagen adjunta PUESTO, bien calzado sobre la
+  cabeza, a escala real, con el visor bajado.
+- Profundidad de campo tipo foto editorial: el hombre y el casco
+  nítidos, el fondo levemente desenfocado.
+- Fotorrealista: nada de ilustración, nada de render 3D evidente.
+
+LA CALOTA — SE COPIA EXACTA DE LA IMAGEN ADJUNTA:
+- Casco integral MODULAR negro mate, liso, sin gráficos ni logos.
+- Sus piezas son SOLO estas, copiadas de la imagen: el spoiler /
+  aleta trasera de la parte alta de atrás, el extractor de
+  ventilación superior con sus insertos, las tomas de aire laterales
+  con sus ranuras, la ventilación central de la mentonera, y la goma
+  negra del borde inferior. Ninguna pieza extra, ninguna placa,
+  disco o mecanismo que no esté en la imagen.
+- El acabado sigue siendo NEGRO MATE: la luz de la escena lo ilumina
+  pero no lo vuelve brillante ni le cambia el color.
+
+EL VISOR — SE COPIA EXACTO DE LA IMAGEN ADJUNTA, IGUAL QUE EL RESTO
+DEL CASCO:
+- Mirá el visor de la imagen adjunta con atención: su forma exacta,
+  su contorno, dónde y cómo remata contra la calota, qué tan oscuro
+  y qué tan brillante es, qué reflejos tiene, y qué detalles
+  concretos se ven en su superficie (marcas, puntos, líneas,
+  transiciones de tono) — sean cuales sean esos detalles en la
+  imagen real.
+- Reproducí ESE visor, tal cual, en la escena: mismo contorno, mismo
+  nivel de opacidad/oscuridad, mismos detalles visibles en su
+  superficie, en las mismas posiciones relativas que en la imagen.
+- El visor va BAJADO en la escena. Su tono general es oscuro/ahumado
+  como en la imagen de referencia, con reflejos del entorno (el
+  atardecer) coherentes con la luz de la escena — pero el reflejo
+  nuevo no reemplaza ni tapa los detalles reales del visor: conviven.
+- NO se ve NADA del rostro ni de los rasgos de la persona a través
+  del visor: ni ojos, ni nariz, ni piel.
+- PROHIBIDO agregar cualquier detalle al visor que no esté
+  visible en la imagen adjunta (ni remaches, ni moldura, ni ningún
+  otro elemento inventado "porque los visores suelen tenerlo").
+  PROHIBIDO también omitir o borrar algún detalle que SÍ esté
+  visible en la imagen adjunta. La regla es una sola: lo que hay en
+  la foto, va; lo que no hay, no se inventa.
+
+ESCALA REAL — ANCLA DURA:
+- El casco es apenas más grande que la cabeza que lo lleva.
+- Los HOMBROS del hombre se ven MÁS ANCHOS que el casco.
+- La cabeza con el casco puesto mide más o menos un séptimo de la
+  altura total del cuerpo.
+- Él podría sacarse el casco con las dos manos: ese es el tamaño.
+
+COMPOSICIÓN — PARA NO INVENTAR EL LADO OCULTO:
+La imagen adjunta muestra el casco en 3/4 lateral mirando a la
+DERECHA. Componé la toma de modo que se vea ESE MISMO LADO, en un
+ángulo equivalente. No mostrar de frente completo ni el otro lado.
+
+INTEGRACIÓN DE LUZ:
+El casco entero —calota y visor por igual— se ilumina con la luz de
+la escena: reflejos suaves y coherentes del atardecer. La luz nunca
+justifica cambiar ni inventar detalles: la calota sigue siendo la de
+la imagen, y el visor sigue siendo el de la imagen.
+
+LIMPIEZA:
+La imagen adjunta trae una marca de agua "豆包AI生成" abajo a la
+derecha. NO es parte del casco y NO pasa a la escena.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar el casco en nada, incluido el visor: es una
+  copia exacta del de la imagen, pieza por pieza y detalle por
+  detalle.
+- Prohibido inventar CUALQUIER elemento en el visor o en la calota
+  que no esté presente en la imagen adjunta.
+- Prohibido omitir CUALQUIER elemento del visor o la calota que sí
+  esté presente en la imagen adjunta.
+- Prohibido mostrar el rostro, los ojos o la piel a través del
+  visor.
+- Prohibido agregar logos, textos o gráficos.
+- Prohibido mostrar el lado del casco que no aparece en la imagen.
+- Prohibido el casco gigante: los hombros siempre más anchos.
+- Prohibido trasladar la marca de agua a la escena.
+
+VERIFICACIÓN FINAL — respondé estos siete chequeos antes de entregar:
+1. Poné el casco del resultado al lado de la imagen adjunta: ¿la
+   CALOTA coincide pieza por pieza (spoiler, extractor, tomas
+   laterales, ventilación de mentonera, goma)?
+2. Poné el VISOR del resultado al lado del visor de la imagen
+   adjunta: ¿coinciden su forma, su contorno, su nivel de opacidad y
+   CADA detalle visible en su superficie, sin inventos ni omisiones?
+3. ¿Se ve algo del rostro a través del visor? No debe verse nada.
+4. ¿El hombre está de smoking negro y blanco, al aire libre, con luz
+   de atardecer y estética de editorial de moda?
+5. ¿La toma muestra el MISMO lado del casco que la imagen adjunta?
+6. ¿El casco quedó a escala real — más angosto que los hombros?
+7. ¿Quedó la marca de agua o algo agregado que no correspondía? No
+   debe quedar nada.
+```
