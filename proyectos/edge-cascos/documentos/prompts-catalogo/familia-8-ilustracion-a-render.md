@@ -580,3 +580,58 @@ VERIFICACIÓN FINAL — AUDITORÍA CON ZOOM, ELEMENTO POR ELEMENTO:
 6. ¿El ángulo, el encuadre y las proporciones coinciden con la
    IMAGEN 2?
 ```
+
+---
+
+## Formato de auditoría (Agente Auditor)
+
+Plantilla fija para verificar cada resultado generado contra su checklist de "VERIFICACIÓN FINAL", elemento por elemento, ANTES de aprobar. Se completa una por cada resultado recibido — nunca se aprueba a simple vista (Lecciones 6 y 12 del diagrama del usuario).
+
+```
+AUDITORÍA — Instancia [N] — [colorway] — [vista]
+
+Insumos comparados:
+- Resultado generado: [describir o adjuntar]
+- IMAGEN 1 (ilustración, autoridad de color): [referencia]
+- IMAGEN 2 (foto real, autoridad de forma): [referencia]
+
+Checklist (uno por cada punto de VERIFICACIÓN FINAL del prompt):
+1. [pregunta 1] → ✅ CUMPLE / ❌ NO CUMPLE / ⚠️ PARCIAL — [qué se vio]
+2. [pregunta 2] → ...
+3. ...
+4. ...
+5. ...
+6. ...
+
+Defectos encontrados (si los hay):
+- [descripción concreta, con ubicación]
+
+Veredicto: APROBADO / RECHAZADO — REINTENTAR / ESCALAR A HUMANO
+
+Si RECHAZADO: ¿es defecto total (otro casco, collage, geometría
+irreconocible) o defecto parcial (un elemento puntual mal)? Un
+defecto parcial se puede corregir con un prompt de fix dirigido a
+ESE elemento, sin regenerar todo — igual que hicimos con la 4.2 y
+la 4.4 en las Familias 4.
+```
+
+### Ejemplo — Instancia 8.5, primer intento (30/07/2026)
+
+```
+AUDITORÍA — Instancia 8.5 — blanco/rojo/azul — trasera
+
+Insumos comparados:
+- Resultado generado: NO RECIBIDO. Las imágenes devueltas por la
+  herramienta fueron la IMAGEN 1 (ilustración) y la IMAGEN 2 (foto
+  real) sin cambios — no hay una foto fotorrealista nueva que
+  audite el colorway aplicado.
+
+Checklist: NO EVALUABLE — falta el insumo principal (el resultado).
+
+Veredicto: RECHAZADO POR AUSENCIA DE RESULTADO — REINTENTAR
+
+Causa probable: la herramienta de generación no procesó el prompt
+(fallo silencioso) o devolvió las imágenes de entrada sin generar.
+No es un defecto del prompt en sí — se reintenta corriendo el mismo
+prompt de nuevo antes de tocar el texto.
+```
