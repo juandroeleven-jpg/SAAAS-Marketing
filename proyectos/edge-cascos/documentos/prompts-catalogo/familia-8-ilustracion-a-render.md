@@ -16,6 +16,42 @@ Antes de generar cualquier imagen, cada elemento del dibujo se clasifica contra 
 5. **Orden de las imágenes en el prompt:** la ilustración (referencia de diseño) va primero, la foto real (autoridad de forma) va al final — es la que tiene la última palabra.
 6. **Auditoría:** verificar con zoom cada elemento contra la foto real antes de aprobar; nunca aprobar solo "a simple vista".
 
+### Corrección de criterio (30/07/2026) — el gráfico SÍ cubre el domo
+
+Las instancias 8.2–8.4 (trasera) se escribieron con una regla demasiado
+estricta: "el color nunca sale del borde físico del ala". Esa regla
+evitó el defecto real de la 8.3 (una forma libre e inventada,
+mal ubicada), pero de paso terminó prohibiendo prácticamente todo el
+gráfico de cada ilustración — el chevron que sube por el domo, las
+rayas tipo carrera, los acentos — dejando el casco casi todo negro
+liso con apenas el ala coloreada. Decisión del usuario: eso está mal,
+el objetivo es trasladar TODO el diseño de la ilustración al casco.
+
+**Regla corregida — distinción entre PIEZA FÍSICA y GRÁFICO PINTADO:**
+- Las piezas físicas reales (ala/spoiler con sus ranuras, el mecanismo
+  del pivote, etc.) mantienen su FORMA 3D exacta siempre — sobre eso
+  no hay negociación, es geometría.
+- El COLOR/GRÁFICO de la ilustración (chevrons, rayas, degradés,
+  paneles de logo, acentos) se pinta sobre la superficie real del
+  casco como un calco/librea plana — SÍ puede cubrir el domo, salirse
+  del contorno de una pieza física, ocupar zonas que en la foto real
+  son lisas. Eso no es un defecto: una pintura o un vinilo real
+  también hace exactamente eso.
+- Lo único que sigue prohibido sin excepción: que el gráfico simule
+  una pieza 3D que no existe (relieve, sombra de borde, ranura falsa),
+  que la silueta general del casco cambie, o que una pieza física
+  real (ala, rendija, grilla) cambie de forma o posición.
+- Consecuencia práctica: al traducir una ilustración, se replica el
+  gráfico COMPLETO — todas sus formas, colores y capas — ubicado en la
+  misma posición relativa que muestra el dibujo, y solo se ajusta lo
+  que la geometría real obliga a ajustar (proporciones del domo,
+  curvatura, el borde real de las piezas físicas).
+
+Esto invalida el veredicto "APROBADO" de la Instancia 8.4 tal como
+estaba escrito (aprobó contra el criterio viejo) y cambia el objetivo
+de las correcciones de la 8.3 — ver las secciones actualizadas más
+abajo.
+
 ## Casos
 
 | Instancia | Colorway | Estado |
@@ -353,6 +389,172 @@ VERIFICACIÓN FINAL — AUDITORÍA CON ZOOM, ELEMENTO POR ELEMENTO:
 5. ¿La rendija central y la grilla inferior quedaron intactas?
 6. ¿El logo/wordmark EDGE (si aplica) quedó sobre la superficie sin
    deformar nada debajo, o fue omitido si no salía legible?
+7. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+```
+
+### Auditoría con evidencia visual real — Instancia 8.2, reintento (30/07/2026)
+
+El reintento simple SÍ generó una imagen nueva esta vez (dejó de ser
+passthrough). Archivos en `resultados/`: `8.2-v2-TRIPTICO.png`,
+`8.2-v2-CROP-domo-sin-grafico.png`, `8.2-v2-amarillo-azul-RESULTADO.webp`.
+
+```
+AUDITORÍA — Instancia 8.2, reintento — amarillo/azul — trasera
+
+1. Alas: FORMA correcta, amarillas con acento azul, dentro del borde
+   físico real → ✅ CUMPLE.
+2. Calota base → bajo el criterio corregido (ver nota en
+   Metodología), el problema NO es que la calota "no siga negra" —
+   es que quedó COMPLETAMENTE sin el gráfico de la ilustración. El
+   domo entero está liso gunmetal, sin el chevron oscuro con relleno
+   amarillo ni los acentos grises diagonales que muestra la IMAGEN 1
+   (crop "domo-sin-grafico").
+3. Rendija y grilla intactas → ✅ CUMPLE.
+4. Wordmarks "EDGE"/"EDGE PRO" y escudo central → presentes y
+   legibles, pero sin el panel/fondo de color que muestra la
+   ilustración detrás del escudo.
+
+Veredicto: RECHAZADO — falta trasladar el gráfico completo del domo,
+mismo patrón que la 8.4.
+```
+
+## Instancia 8.2-fix2 — Agregar el chevron y los acentos del domo
+
+**Se adjuntan TRES imágenes, en este orden:** (1) el resultado ya generado, (2) la ilustración amarillo/azul, (3) la foto real trasera.
+
+```
+Esto es una CORRECCIÓN DIRIGIDA sobre un resultado ya bueno, no una
+imagen nueva. Recibís TRES imágenes:
+
+- IMAGEN 1 — EL RESULTADO YA GENERADO (casco amarillo/azul, trasera):
+  es la BASE. Las alas amarillas con acento azul (ya bien recortadas
+  a su borde real), los wordmarks "EDGE PRO"/"EDGE", el escudo
+  central, la rendija y la grilla están BIEN y quedan tal cual.
+- IMAGEN 2 — LA ILUSTRACIÓN (mockup vectorial amarillo/azul): de acá
+  se toma el gráfico del domo que todavía falta aplicar.
+- IMAGEN 3 — LA FOTO REAL DEL CASCO (checkpoint trasero negro mate):
+  autoridad de forma — el domo mantiene su curvatura y proporciones
+  reales.
+
+HAY UNA SOLA CORRECCIÓN — COMPLETAR EL GRÁFICO DEL DOMO:
+
+En la zona alta de la calota, entre y por encima de las dos alas, se
+pinta el gráfico que muestra la IMAGEN 2 en esa misma zona: un panel
+oscuro con forma de chevron que sube desde el centro con relleno
+amarillo, y los acentos grises diagonales que salen hacia los
+costados del domo. Se pinta como un gráfico plano sobre la
+superficie curva real del domo — NO como una pieza nueva en relieve.
+Se respeta la posición y proporción relativa que muestra la IMAGEN 2,
+ajustada a la curvatura real del domo de la IMAGEN 3. El escudo
+central "EDGE" recibe el panel de color de fondo que muestra la
+IMAGEN 2 detrás del logo, del tamaño que ahí se ve.
+
+TODO LO DEMÁS NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ EN LA
+IMAGEN 1: las alas amarillo/azul ya recortadas a su borde real, los
+wordmarks de los costados, la rendija central, la grilla inferior, el
+ángulo y el encuadre.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido que el gráfico nuevo simule una pieza física 3D que no
+  existe.
+- Prohibido que la silueta del domo, las alas, la rendija o la
+  grilla cambien de forma.
+- Prohibido tocar el amarillo/azul de las alas, los wordmarks, la
+  rendija o la grilla.
+- Prohibido cambiar el ángulo, el encuadre o la iluminación.
+
+VERIFICACIÓN FINAL:
+1. ¿Apareció el chevron con relleno amarillo en el domo, entre y por
+   encima de las alas, tal como la IMAGEN 2?
+2. ¿Aparecieron los acentos grises diagonales?
+3. ¿El escudo central tiene el panel de fondo de la IMAGEN 2?
+4. ¿El gráfico se ve pintado sobre la superficie curva real, sin
+   simular una pieza 3D nueva?
+5. ¿Las alas, los wordmarks, la rendija y la grilla siguen iguales
+   que en la IMAGEN 1?
+```
+
+## Instancia 8.2-v3 — Trasera amarillo/azul, librea completa (dome incluido)
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la ilustración trasera amarillo/azul, (2) la foto real trasera del casco.
+
+```
+Esto es una TRADUCCIÓN DE ILUSTRACIÓN A FOTO REAL, no un casco
+nuevo. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ILUSTRACIÓN (mockup vectorial amarillo/azul, vista
+  trasera): es la AUTORIDAD DE COLOR Y DISEÑO COMPLETO. TODO su
+  gráfico — las alas, el chevron oscuro del domo con relleno
+  amarillo, los acentos grises diagonales, el panel del escudo
+  central, los wordmarks — se traslada al casco real, como una
+  librea/calco pintado sobre la superficie.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (vista trasera, negro mate): es
+  la ÚNICA AUTORIDAD DE GEOMETRÍA — silueta del domo, forma y
+  posición de las alas con sus ranuras, la rendija, la grilla. Esto
+  NUNCA cambia, sin excepción.
+
+REGLA CENTRAL — PIEZA FÍSICA vs. GRÁFICO PINTADO:
+- Las alas son una PIEZA FÍSICA real: mantienen su forma, tamaño y
+  posición exactos de la IMAGEN 2, con sus ranuras y acabado
+  brillante. El amarillo con acento azul las cubre por completo, sin
+  salirse de su borde físico real.
+- El resto del gráfico de la IMAGEN 1 (chevron oscuro con relleno
+  amarillo, acentos grises diagonales, panel del escudo central) es
+  GRÁFICO PINTADO sobre el domo: SÍ puede cubrir zonas que en la
+  foto real son calota lisa, siguiendo la posición y forma que
+  muestra la ilustración, adaptado a la curvatura real del domo.
+- Único límite del gráfico pintado: nunca simula relieve o una pieza
+  3D que no existe, y nunca tapa ni deforma la rendija central ni la
+  grilla inferior.
+
+GEOMETRÍA — TODO ESTO VIENE DE LA IMAGEN 2, SIN EXCEPCIÓN:
+- La silueta trasera completa del casco: dome redondeado, mismas
+  proporciones.
+- Las DOS piezas ALA/SPOILER: misma forma, tamaño y posición, con
+  sus ranuras/aletas y acabado brillante.
+- La rendija horizontal oscura entre ambas alas, en el centro —
+  nunca tapada ni agrandada por el gráfico.
+- El borde inferior con sus nervaduras/rejillas verticales.
+
+COLOR Y DISEÑO — TRASLADO COMPLETO DE LA IMAGEN 1:
+1. LAS DOS ALAS: AMARILLAS con acento AZUL, dentro de su borde
+   físico real, acabado brillante.
+2. EL CHEVRON DEL DOMO: panel oscuro con relleno amarillo, con la
+   misma forma y posición relativa que en la IMAGEN 1, pintado sobre
+   la curvatura real del domo entre y por encima de las alas.
+3. LOS ACENTOS GRISES DIAGONALES hacia los costados del domo, según
+   el trazado de la IMAGEN 1.
+4. EL PANEL DEL ESCUDO CENTRAL "EDGE" debajo de la rendija, con su
+   color de fondo, del tamaño que muestra la IMAGEN 1.
+5. LOS WORDMARKS "EDGE PRO" y "EDGE" de cada costado, sobre la
+   superficie, sin alterar la forma debajo.
+6. El resto de la calota que la IMAGEN 1 no cubre con gráfico: negro/
+   gunmetal mate, igual que la foto real.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido que el amarillo/azul de las alas se salga de su borde
+  físico real.
+- Prohibido que cualquier gráfico simule una pieza 3D que no existe.
+- Prohibido cambiar la forma de las alas, la rendija central o la
+  grilla inferior, o taparlas con el gráfico.
+- Prohibido inventar piezas físicas que no estén en la foto real.
+- Prohibido cambiar el acabado (brillante en las alas, mate en el
+  resto).
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL:
+1. ¿Las alas quedaron amarillas con acento azul, exactamente dentro
+   de su borde físico real, con ranuras y brillo?
+2. ¿Apareció el chevron con relleno amarillo en el domo, en la misma
+   posición que la IMAGEN 1?
+3. ¿Aparecieron los acentos grises diagonales?
+4. ¿Apareció el panel del escudo central con su color de fondo, del
+   tamaño de la IMAGEN 1?
+5. ¿Los wordmarks de los costados están legibles y bien ubicados?
+6. ¿La rendija central y la grilla inferior siguen intactas, visibles
+   y sin taparse por el gráfico?
 7. ¿El ángulo, el encuadre y las proporciones coinciden con la
    IMAGEN 2?
 ```
@@ -796,6 +998,164 @@ VERIFICACIÓN FINAL:
 5. ¿El logo "EDGE" central quedó chico, directo sobre el negro, sin
    panel de fondo, del mismo tamaño que los logos de los costados?
 6. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+```
+
+### Redirección de criterio — Instancia 8.3 (30/07/2026, ver nota arriba en Metodología)
+
+El resultado real de la 8.3-v2 (alas contenidas, panel violeta con
+logo debajo de la rendija) en realidad está MÁS cerca de lo correcto
+de lo que el veredicto anterior decía: bajo el criterio corregido, un
+panel de color pintado sobre la calota (sin simular una pieza 3D) NO
+es un defecto por sí solo. El defecto real es otro: falta TODO el
+resto del gráfico de la ilustración — el chevron oscuro con borde
+rosa que sube por el domo entre las alas, y los acentos grises
+diagonales que salen hacia los costados. Se reemplazan las
+Instancias 8.3-v2-fix y 8.3-v3 de arriba por estas dos, que already
+parten del criterio corregido:
+
+## Instancia 8.3-fix2 — Agregar el chevron y los acentos que faltan del domo
+
+**Se adjuntan TRES imágenes, en este orden:** (1) el resultado 8.3-v2 ya generado, (2) la ilustración rosa/violeta (referencia del gráfico faltante), (3) la foto real trasera (autoridad de forma).
+
+```
+Esto es una CORRECCIÓN DIRIGIDA sobre un resultado ya bueno, no una
+imagen nueva. Recibís TRES imágenes:
+
+- IMAGEN 1 — EL RESULTADO YA GENERADO (casco rosa/violeta, trasera):
+  es la BASE. Las alas rosa/violeta (ya bien recortadas a su borde
+  real), los wordmarks "EDGE PRO"/"EDGE" de los costados, el panel
+  violeta con el logo "EDGE" bajo la rendija, la rendija y la grilla
+  están BIEN y quedan tal cual.
+- IMAGEN 2 — LA ILUSTRACIÓN (mockup vectorial rosa/violeta): de acá
+  se toma el gráfico que todavía falta aplicar sobre el domo.
+- IMAGEN 3 — LA FOTO REAL DEL CASCO (checkpoint trasero negro mate):
+  autoridad de forma — el domo mantiene su curvatura y proporciones
+  reales, lo único que cambia es qué gráfico lleva pintado encima.
+
+HAY UNA SOLA CORRECCIÓN — COMPLETAR EL GRÁFICO DEL DOMO:
+
+En la zona alta de la calota, entre y por encima de las dos alas, se
+pinta el gráfico que muestra la IMAGEN 2 en esa misma zona: un panel
+oscuro (negro/gris muy oscuro) con forma de chevron que sube desde
+el centro, con un borde/highlight rosa siguiendo su contorno, y los
+acentos grises diagonales que salen hacia los costados del domo. Se
+pinta como un gráfico plano sobre la superficie curva real del domo
+— NO como una pieza nueva en relieve, sin sombra de borde que
+simule un objeto 3D pegado. Se respeta la posición y proporción
+relativa que muestra la IMAGEN 2, ajustada a la curvatura real del
+domo de la IMAGEN 3.
+
+TODO LO DEMÁS NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ EN LA
+IMAGEN 1:
+- Las alas rosa/violeta, ya recortadas a su borde real.
+- El panel violeta con el logo "EDGE" bajo la rendija.
+- Los wordmarks "EDGE PRO" y "EDGE" de los costados.
+- La rendija central, la grilla inferior, el ángulo y el encuadre.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido que el gráfico nuevo simule una pieza física 3D que no
+  existe (sin relieve, sin sombra de borde tipo objeto adosado).
+- Prohibido que la silueta del domo, las alas, la rendija o la
+  grilla cambien de forma.
+- Prohibido tocar el rosa/violeta de las alas, el panel del logo
+  central, los wordmarks, la rendija o la grilla.
+- Prohibido cambiar el ángulo, el encuadre o la iluminación.
+
+VERIFICACIÓN FINAL:
+1. ¿Apareció el chevron oscuro con borde rosa en el domo, entre y
+   por encima de las alas, tal como lo muestra la IMAGEN 2?
+2. ¿Aparecieron los acentos grises diagonales hacia los costados?
+3. ¿El gráfico nuevo se ve pintado sobre la superficie curva real,
+   sin simular una pieza 3D nueva?
+4. ¿Las alas, el panel del logo central, los wordmarks, la rendija y
+   la grilla siguen iguales que en la IMAGEN 1?
+```
+
+## Instancia 8.3-v4 — Trasera rosa/violeta, librea completa (dome incluido)
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la ilustración trasera rosa/violeta, (2) la foto real trasera del casco.
+
+```
+Esto es una TRADUCCIÓN DE ILUSTRACIÓN A FOTO REAL, no un casco
+nuevo. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ILUSTRACIÓN (mockup vectorial rosa/violeta, vista
+  trasera): es la AUTORIDAD DE COLOR Y DISEÑO COMPLETO. TODO su
+  gráfico — las alas, el chevron oscuro del domo con borde rosa, los
+  acentos grises diagonales, el panel del logo central, los
+  wordmarks — se traslada al casco real, como una librea/calco
+  pintado sobre la superficie.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (vista trasera, negro mate): es
+  la ÚNICA AUTORIDAD DE GEOMETRÍA — silueta del domo, forma y
+  posición de las alas con sus ranuras, la rendija, la grilla. Esto
+  NUNCA cambia, sin excepción.
+
+REGLA CENTRAL — PIEZA FÍSICA vs. GRÁFICO PINTADO:
+- Las alas son una PIEZA FÍSICA real: mantienen su forma, tamaño y
+  posición exactos de la IMAGEN 2, con sus ranuras y su acabado
+  brillante. El rosa/violeta las cubre por completo, sin salirse de
+  su borde físico real (esto sigue siendo una pieza, no pintura
+  libre).
+- El resto del gráfico de la IMAGEN 1 (chevron oscuro con borde
+  rosa, acentos grises diagonales, panel del logo central) es
+  GRÁFICO PINTADO sobre el domo: SÍ puede cubrir zonas que en la
+  foto real son calota lisa, siguiendo la posición y forma que
+  muestra la ilustración, adaptado a la curvatura real del domo. No
+  es un defecto que el gráfico "salga" de una pieza física — el domo
+  no es una pieza que deba quedar en blanco, es superficie pintable.
+- Único límite del gráfico pintado: nunca simula relieve o una pieza
+  3D que no existe (nada de sombra de borde tipo objeto pegado), y
+  nunca tapa ni deforma la rendija central ni la grilla inferior.
+
+GEOMETRÍA — TODO ESTO VIENE DE LA IMAGEN 2, SIN EXCEPCIÓN:
+- La silueta trasera completa del casco: dome redondeado, mismas
+  proporciones.
+- Las DOS piezas ALA/SPOILER: misma forma, tamaño y posición, con
+  sus ranuras/aletas y acabado brillante.
+- La rendija horizontal oscura entre ambas alas, en el centro —
+  nunca tapada ni agrandada por el gráfico.
+- El borde inferior con sus nervaduras/rejillas verticales.
+
+COLOR Y DISEÑO — TRASLADO COMPLETO DE LA IMAGEN 1:
+1. LAS DOS ALAS: ROSA/MAGENTA con acento VIOLETA, dentro de su borde
+   físico real, acabado brillante.
+2. EL CHEVRON DEL DOMO: panel oscuro con borde/highlight rosa, con
+   la misma forma y posición relativa que en la IMAGEN 1, pintado
+   sobre la curvatura real del domo entre y por encima de las alas.
+3. LOS ACENTOS GRISES DIAGONALES hacia los costados del domo, según
+   el trazado de la IMAGEN 1.
+4. EL PANEL DEL LOGO CENTRAL (violeta, con el escudo "EDGE") debajo
+   de la rendija, del tamaño que muestra la IMAGEN 1.
+5. LOS WORDMARKS "EDGE PRO" y "EDGE" de cada costado, sobre la
+   superficie, sin alterar la forma debajo.
+6. El resto de la calota que la IMAGEN 1 no cubre con gráfico: negro/
+   gunmetal mate, igual que la foto real.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido que el rosa/violeta de las alas se salga de su borde
+  físico real.
+- Prohibido que cualquier gráfico simule una pieza 3D que no existe.
+- Prohibido cambiar la forma de las alas, la rendija central o la
+  grilla inferior, o taparlas con el gráfico.
+- Prohibido inventar piezas físicas que no estén en la foto real.
+- Prohibido cambiar el acabado (brillante en las alas, mate en el
+  resto).
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL:
+1. ¿Las alas quedaron rosa/violeta exactamente dentro de su borde
+   físico real, con ranuras y brillo?
+2. ¿Apareció el chevron oscuro con borde rosa en el domo, en la
+   misma posición que la IMAGEN 1?
+3. ¿Aparecieron los acentos grises diagonales?
+4. ¿Apareció el panel del logo central violeta bajo la rendija, del
+   tamaño de la IMAGEN 1?
+5. ¿Los wordmarks de los costados están legibles y bien ubicados?
+6. ¿La rendija central y la grilla inferior siguen intactas, visibles
+   y sin taparse por el gráfico?
+7. ¿El ángulo, el encuadre y las proporciones coinciden con la
    IMAGEN 2?
 ```
 
@@ -1419,6 +1779,169 @@ VERIFICACIÓN FINAL — AUDITORÍA CON ZOOM, ELEMENTO POR ELEMENTO:
 6. ¿La grilla inferior tiene el mismo contraste y definición que en
    la IMAGEN 2?
 7. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+```
+
+### Re-auditoría bajo el criterio corregido — Instancia 8.5 (30/07/2026)
+
+El usuario señaló que la 8.5 es "el mejor de los casos" pero pidió
+revisarla contra el nuevo criterio de librea completa. Nuevo hallazgo
+que la auditoría anterior no había marcado: el panel NEGRO de fondo
+que la ilustración pone detrás del chevron azul y alrededor de las
+rayas rojas (la forma tipo "murciélago" que cubre buena parte del
+domo) directamente NO está en el resultado — ahí quedó blanco liso,
+con el chevron y las rayas flotando sobre blanco en vez de sobre
+negro (`8.5-CROP-panel-negro-faltante.png`). Sumado a los dos
+defectos ya conocidos (texto bajo el escudo, tamaño de la rendija/
+grilla — `8.5-CROP-zona-central-texto.png`), quedan 3 defectos reales
+sobre una base que, en lo demás (alas, wordmarks, blanco de calota),
+está bien.
+
+## Instancia 8.5-fix2 — Agregar el panel negro de fondo + corregir texto y zona central
+
+**Se adjuntan DOS imágenes, en este orden:** (1) el resultado ya generado (blanco/rojo/azul), (2) la ilustración (referencia del panel negro faltante y del resto del gráfico).
+
+```
+Esto es una CORRECCIÓN DIRIGIDA sobre un resultado ya bueno, no una
+imagen nueva. Recibís DOS imágenes:
+
+- IMAGEN 1 — EL RESULTADO YA GENERADO (casco blanco/rojo/azul,
+  trasera): es la BASE. El blanco de la calota, las alas rojo/azul,
+  los wordmarks "EDGE"/"EDGE PRO" y el encuadre están BIEN y quedan
+  tal cual.
+- IMAGEN 2 — LA ILUSTRACIÓN (mockup vectorial blanco/rojo/azul): de
+  acá se toma el panel negro de fondo que falta y la referencia del
+  resto del gráfico.
+
+HAY TRES CORRECCIONES:
+
+CORRECCIÓN 1 — PANEL NEGRO DE FONDO:
+En la IMAGEN 2, el chevron azul central y las rayas rojas de los
+costados están sobre un panel NEGRO de fondo que cubre buena parte
+del domo, con contorno blanco alrededor de cada forma. En la IMAGEN 1
+ese negro no está — el chevron y las rayas quedaron flotando sobre
+blanco liso. Se agrega ese panel negro de fondo, con la misma forma y
+extensión que muestra la IMAGEN 2, pintado sobre la superficie curva
+real del domo (no como pieza en relieve). El chevron azul y las
+rayas rojas mantienen su posición y color actuales, ahora con el
+negro de fondo y el contorno blanco alrededor.
+
+CORRECCIÓN 2 — TEXTO BAJO EL ESCUDO CENTRAL:
+Si hay texto bajo el escudo "EDGE", tiene que ser perfectamente
+legible y correcto. Si no se puede reproducir así, se deja SOLO el
+escudo, sin texto.
+
+CORRECCIÓN 3 — TAMAÑO DE LA ZONA CENTRAL Y CONTRASTE DE LA GRILLA:
+La forma negra central no puede ser más grande que la rendija real
+del casco (angosta, entre las dos alas). La grilla del borde inferior
+recupera el mismo contraste y definición que tiene en la foto real
+del checkpoint (nervaduras marcadas, no plana ni plateada).
+
+TODO LO DEMÁS NO SE TOCA: el blanco de la calota, las alas rojo/azul,
+los wordmarks, el ángulo y el encuadre.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido dejar el chevron o las rayas sin el panel negro de fondo.
+- Prohibido dejar texto ilegible o corrupto bajo el escudo.
+- Prohibido agrandar la zona central negra más allá de la rendija
+  real.
+- Prohibido que la grilla pierda contraste.
+- Prohibido tocar el blanco de la calota, las alas, los wordmarks, el
+  ángulo o el encuadre.
+
+VERIFICACIÓN FINAL:
+1. ¿Apareció el panel negro de fondo detrás del chevron y las rayas,
+   con el contorno blanco, igual que en la IMAGEN 2?
+2. ¿El texto bajo el escudo es legible y correcto, o no hay texto?
+3. ¿La zona central negra es del tamaño real de la rendija?
+4. ¿La grilla inferior recuperó su contraste?
+5. ¿El resto (blanco, alas, wordmarks, encuadre) sigue igual que en
+   la IMAGEN 1?
+```
+
+## Instancia 8.5-v3 — Trasera blanco/rojo/azul, librea completa (panel negro + anclas duras)
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la ilustración trasera blanco/rojo/azul, (2) la foto real trasera del casco (checkpoint).
+
+```
+Esto es una TRADUCCIÓN DE ILUSTRACIÓN A FOTO REAL, no un casco
+nuevo. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ILUSTRACIÓN (mockup vectorial blanco/rojo/azul,
+  vista trasera): es la AUTORIDAD DE COLOR Y DISEÑO COMPLETO. TODO su
+  gráfico — el blanco de fondo, el panel NEGRO con el chevron azul y
+  contorno blanco, las rayas rojas laterales, las alas, el escudo
+  central, los wordmarks — se traslada al casco real como una librea
+  pintada sobre la superficie.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (vista trasera): es la ÚNICA
+  AUTORIDAD DE GEOMETRÍA — silueta del domo, forma y posición de las
+  alas con sus ranuras, la rendija (angosta, no un escudo grande), la
+  grilla. Esto NUNCA cambia.
+
+REGLA CENTRAL — PIEZA FÍSICA vs. GRÁFICO PINTADO:
+- Las alas son pieza física real: forma, tamaño y posición exactos
+  de la IMAGEN 2, con ranuras y acabado brillante. El rojo/azul las
+  cubre por completo sin salirse de su borde real.
+- El resto del gráfico (panel negro con chevron azul, rayas rojas,
+  contornos blancos, panel del escudo) es GRÁFICO PINTADO sobre el
+  domo: cubre la superficie real siguiendo la posición y forma de la
+  IMAGEN 1, incluido el panel negro de fondo — eso no es un defecto,
+  el domo es superficie pintable completa.
+- Único límite: el gráfico nunca simula una pieza 3D que no existe, y
+  nunca tapa ni agranda la rendija central real ni la grilla.
+
+GEOMETRÍA — TODO ESTO VIENE DE LA IMAGEN 2, SIN EXCEPCIÓN:
+- Silueta trasera completa, dome redondeado, mismas proporciones.
+- Las DOS piezas ALA/SPOILER: forma, tamaño y posición reales, con
+  ranuras y acabado brillante.
+- LA RENDIJA CENTRAL — ANCLA DURA DE TAMAÑO: franja horizontal
+  angosta entre las alas, NUNCA un escudo o rombo grande. Si el logo
+  no entra cómodo, el logo se achica — la rendija no se agranda.
+- EL BORDE INFERIOR con sus nervaduras: mismo contraste y definición
+  que la IMAGEN 2, nunca más claro ni menos definido.
+- Acabado: calota MATE, alas más BRILLANTES.
+
+COLOR Y DISEÑO — TRASLADO COMPLETO DE LA IMAGEN 1:
+1. BASE DE LA CALOTA: blanco mate, con el panel NEGRO de fondo (con
+   contorno blanco) que muestra la IMAGEN 1 en la zona alta-central,
+   pintado sobre la curvatura real del domo.
+2. SOBRE ese panel negro: el chevron AZUL central y las rayas ROJAS
+   laterales, misma forma y posición que la IMAGEN 1.
+3. LAS DOS ALAS: combinación rojo/azul según la distribución de la
+   IMAGEN 1, dentro del borde físico real, acabado brillante.
+4. EL ESCUDO CENTRAL — ANCLA DURA DE TEXTO: sobre la rendija real
+   (tamaño real, no más grande). Si hay texto debajo, tiene que ser
+   perfectamente legible y correcto; si hay la mínima duda, SOLO el
+   escudo, sin texto.
+5. LOS WORDMARKS "EDGE" (panel azul) y "EDGE PRO" (panel rojo) de la
+   parte baja, con letras reales y legibles.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido omitir el panel negro de fondo detrás del chevron y las
+  rayas.
+- Prohibido dejar texto ilegible o corrupto bajo el escudo.
+- Prohibido agrandar la rendija/zona central más allá de su tamaño
+  real, sea cual sea la excusa.
+- Prohibido que la grilla pierda contraste o definición.
+- Prohibido que el rojo/azul de las alas se salga de su borde real.
+- Prohibido que cualquier gráfico simule una pieza 3D que no existe.
+- Prohibido cambiar la forma de las alas, la rendija o la grilla.
+- Prohibido cambiar el acabado, el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL:
+1. ¿Está el panel negro de fondo con contorno blanco, igual que la
+   IMAGEN 1?
+2. ¿El chevron azul y las rayas rojas están en la posición correcta
+   sobre ese panel negro?
+3. ¿Las alas mantienen forma real, con la combinación rojo/azul
+   exacta de la IMAGEN 1?
+4. ¿La rendija central mide lo mismo que en la IMAGEN 2, sin
+   agrandarse?
+5. ¿El texto bajo el escudo es legible y correcto, o no hay texto?
+6. ¿La grilla inferior tiene el mismo contraste que la IMAGEN 2?
+7. ¿Los wordmarks están legibles y bien ubicados?
+8. ¿El ángulo, el encuadre y las proporciones coinciden con la
    IMAGEN 2?
 ```
 
