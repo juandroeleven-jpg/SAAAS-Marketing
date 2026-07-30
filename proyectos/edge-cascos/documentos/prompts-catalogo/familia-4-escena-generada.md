@@ -872,3 +872,83 @@ VERIFICACIÓN FINAL — respondé estos cinco chequeos antes de entregar:
 5. ¿Algún detalle agregado se ve como parche o dibujo encima? Debe
    verse como parte real del vidrio.
 ```
+
+---
+
+## Instancia 4.4-v2 — Camaleón neón: visor opaco total + persona de cuerpo completo
+
+**Contexto:** el resultado de la 4.4 salió espectacular (casco camaleón fiel, luces neón violeta/azul, sin humo), con dos ajustes pedidos: (1) el visor iridium deja traslucir el interior — debe quedar TOTALMENTE opaco, espejo puro; (2) la toma es un primer plano — se quiere a la persona de CUERPO COMPLETO con el casco puesto.
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la escena neón ya generada, (2) la foto de producto del casco camaleón (para mantener la fidelidad al ampliar).
+
+```
+Esto es una EDICIÓN EN DOS AJUSTES sobre una imagen ya buena, no una
+imagen nueva. Recibís DOS imágenes:
+
+- IMAGEN 1 — LA ESCENA NEÓN (el casco camaleón con las luces
+  violeta/azul sobre fondo negro): es la BASE. El casco, su pintura,
+  las luces y la estética quedan tal cual — está muy bien.
+- IMAGEN 2 — LA FOTO DE PRODUCTO del casco camaleón: es la AUTORIDAD
+  del casco para todo lo que haya que redibujar al ampliar la toma.
+
+HAY DOS AJUSTES, Y SOLO ESTOS DOS:
+
+AJUSTE 1 — EL VISOR PASA A OPACO TOTAL:
+En la IMAGEN 1 el visor iridium deja traslucir el interior (se
+intuyen piezas detrás del vidrio). Se corrige: el visor queda
+TOTALMENTE OPACO, un ESPEJO PURO iridium violeta/magenta:
+- NO se ve NADA a través: ni mecanismo, ni estructura interna, ni
+  acolchado, ni rostro. Cero transparencia.
+- Solo se ven los REFLEJOS espejados de las luces neón de la escena
+  sobre su superficie.
+- El visor conserva su forma, su posición y sus colores iridium.
+
+AJUSTE 2 — LA PERSONA DE CUERPO COMPLETO:
+La toma se AMPLÍA de primer plano a PLANO ENTERO:
+- Se ve a la PERSONA COMPLETA, de pie, de la cabeza a los pies, con
+  el casco puesto.
+- Outfit urbano oscuro premium (negro: campera o chaqueta técnica,
+  pantalón oscuro, calzado oscuro) que combine con la estética neón
+  sin robarle protagonismo al casco.
+- Postura firme y natural, tipo campaña: de pie, cuerpo levemente
+  girado, mostrando el MISMO LADO del casco que ya muestra la
+  escena.
+- ESCALA REAL: el casco es apenas más grande que la cabeza; los
+  HOMBROS de la persona se ven MÁS ANCHOS que el casco; la cabeza
+  con casco mide más o menos un séptimo de la altura del cuerpo.
+- La escena se EXTIENDE coherente alrededor del cuerpo: el fondo
+  negro profundo y las luces neón triangulares violeta/azul
+  continúan y enmarcan a la persona entera; piso oscuro con reflejos
+  suaves de las luces. SIN HUMO, igual que ahora.
+
+EL CASCO NO SE TOCA:
+La pintura camaleón violeta→azul, las piezas negras, el logo y la
+forma quedan EXACTAMENTE como en la IMAGEN 1 (y fieles a la
+IMAGEN 2). Solo cambia el visor según el Ajuste 1.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido dejar el visor con cualquier transparencia: es espejo
+  opaco total.
+- Prohibido cambiar la pintura camaleón, las piezas o el logo del
+  casco.
+- Prohibido cambiar el lado visible del casco o su fidelidad al
+  ampliar.
+- Prohibido el casco gigante: hombros más anchos que el casco.
+- Prohibido humo, niebla o bruma: solo luces.
+- Prohibido luces de colores ajenos al cromado (violeta / azul /
+  magenta).
+- Prohibido agregar texto, logos nuevos, motos u otras personas.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿El visor quedó espejo OPACO total, sin que se vea nada a través,
+   solo reflejos de las luces?
+2. ¿Se ve la persona COMPLETA, de la cabeza a los pies, con outfit
+   urbano oscuro?
+3. ¿El casco quedó idéntico — camaleón, piezas, logo, mismo lado — y
+   a escala real (hombros más anchos que el casco)?
+4. ¿El fondo negro y las luces neón violeta/azul se extienden
+   coherentes alrededor del cuerpo, sin humo?
+5. ¿La postura es natural, tipo campaña, sin tapar el casco?
+6. ¿Se agregó algo que no correspondía? No debe haberse agregado
+   nada.
+```
