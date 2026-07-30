@@ -4,10 +4,19 @@ Fecha: 2026-07-30. Molde base: EDGEPRO KRATOS (full face con spoiler), foto de p
 
 ## Lote
 
-| Variante | Vistas | Estado |
-|---|---|---|
-| 1 — Dakota Azul/Rojo/Blanco | A (3/4 delantero) · B (lateral) | A: prompt entregado · B: pendiente |
-| 2 — Dakota Gris/Negro | A (3/4 delantero) · B (lateral) | pendientes |
+| # | Variante | Vistas | Estado |
+|---|---|---|---|
+| 1 | Dakota Azul/Rojo/Blanco | A (3/4) · B (lateral) | ✅ A entregada · ✅ B entregada |
+| 2 | Dakota Gris/Negro | A · B | ⏳ en cola |
+| 3 | Dakota Rojo/Gris/Negro | A · B | ⏳ en cola |
+| 4 | Dakota Rojo/Blanco/Negro | A · B | ⏳ en cola |
+| 5 | Dakota Celeste/Magenta/Blanco | A · B | ⏳ en cola |
+
+Entrega escalonada: un prompt por mensaje, en orden de esta tabla.
+
+## ⚠️ Brecha de checkpoints reales
+
+Solo hay foto real del Kratos en UNA vista (3/4 delantero). Para la Vista B (lateral) no hay checkpoint real: los prompts de Vista B derivan la rotación del mismo objeto, declarándolo explícito y listando las piezas obligatorias que deben aparecer al girar. **Pedido al cliente: foto real del Kratos en perfil** para elevar la fidelidad de todas las Vistas B del lote.
 
 ## Comparación ilustración vs. checkpoint real (elemento por elemento)
 
