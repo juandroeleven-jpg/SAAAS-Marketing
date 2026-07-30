@@ -3081,3 +3081,344 @@ VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
 6. ¿Quedó algún elemento de maquetación o algo agregado? No debe
    quedar nada.
 ```
+
+---
+
+# Molde J — jet vintage con disco metálico y cuero cognac (colores pastel planos)
+
+**Molde de estas instancias:** casco JET / abierto estilo vintage negro mate, con un DISCO METÁLICO plateado circular (con puntos/tornillos alrededor y un símbolo negro central) sobre el lateral, CUERO/ECOCUERO COGNAC (naranja tostado) que bordea toda la abertura frontal y baja por la mentonera, visor TRANSPARENTE, un botón/remache metálico chico en la calota, y correa negra. Vista 3/4 mirando a la izquierda, fondo blanco. Regla del usuario: SOLO colores pastel PLANOS sobre la calota, sin tocar el cuero cognac, el disco metálico, el visor ni ningún tornillo/remache.
+
+**Piezas que NUNCA cambian en este molde:**
+- El CUERO COGNAC de la abertura y la mentonera: queda cognac, con su costura y textura.
+- El DISCO METÁLICO plateado con sus puntos/tornillos y el símbolo negro central: queda metálico plateado.
+- El VISOR: transparente, tal cual.
+- El botón/remache metálico chico de la calota y cualquier tornillo: quedan metálicos.
+- La correa negra.
+
+| Instancia | Calota | Cuero cognac | Disco metálico | Visor |
+|---|---|---|---|---|
+| 1.39 | Rosa pastel | Queda | Queda | Queda |
+| 1.40 | Celeste pastel | Queda | Queda | Queda |
+| 1.41 | Amarillo pastel | Queda | Queda | Queda |
+| 1.42 | Verde salvia pastel | Queda | Queda | Queda |
+
+---
+
+## Instancia 1.39 — Calota rosa pastel
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma, no se quita
+ningún tornillo ni remache.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco JET / abierto estilo vintage. Mismo
+  objeto 3D, mismas proporciones.
+- EL CUERO COGNAC (naranja tostado) que bordea toda la abertura
+  frontal y baja por la mentonera: queda EXACTAMENTE del mismo tono
+  cognac, con su misma costura visible y su misma textura de cuero.
+  NO se pinta, NO cambia de color.
+- EL DISCO METÁLICO plateado del lateral, con TODOS sus puntos y
+  tornillos alrededor y el símbolo negro del centro: queda metálico
+  plateado, exactamente igual, sin quitar ninguna pieza.
+- EL VISOR: transparente e incoloro, tal como está, con su forma y
+  su reflejo.
+- El botón/remache metálico chico de la calota: queda metálico.
+- La correa negra que asoma: queda como está.
+- El ángulo (lateral 3/4 mirando a la izquierda), el encuadre, el
+  fondo blanco, la iluminación y las sombras.
+- El acabado: la nueva pintura es mate, como el negro original.
+
+EL CAMBIO DE COLOR — SOLO LA CALOTA, COLOR PASTEL PLANO:
+LA CALOTA — únicamente la superficie lisa y pintada del cuerpo del
+casco (la parte alta, los laterales, la zona trasera), SIN tocar el
+cuero cognac ni el disco metálico — pasa a ROSA PASTEL: un rosa
+suave, claro, poco saturado, PLANO Y UNIFORME, sin degradé, sin
+brillo, sin textura ni patrón. Un solo color liso de punta a punta.
+
+COBERTURA COMPLETA Y LÍMITES NÍTIDOS:
+La calota queda ROSA PASTEL en TODA su superficie pintada, sin
+ninguna isla ni parche del negro viejo. El límite entre el rosa de
+la calota y el cuero cognac, y entre el rosa y el disco metálico, es
+nítido y sigue exactamente el borde físico real de cada pieza — sin
+que el rosa invada el cuero ni el metal, y sin que quede negro viejo
+pegado al borde de ninguno de los dos.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas, bordes, franjas),
+no aparecen: el resultado es el casco solo sobre su fondo blanco
+limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido pintar de rosa el cuero cognac: queda cognac.
+- Prohibido pintar de rosa el disco metálico o cualquiera de sus
+  tornillos/puntos: quedan plateados.
+- Prohibido tintar o cambiar el visor: transparente.
+- Prohibido pintar el botón/remache o la correa.
+- Prohibido quitar, tapar o disimular ningún tornillo, punto o
+  remache: todos quedan visibles.
+- Prohibido usar un rosa saturado, neón o con degradé: es pastel,
+  plano y uniforme.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó ROSA PASTEL, plana y uniforme, sin degradé ni
+   brillo, en toda su superficie pintada?
+2. ¿El cuero cognac de la abertura y la mentonera sigue exactamente
+   cognac, con su costura?
+3. ¿El disco metálico plateado sigue con TODOS sus tornillos/puntos
+   y su símbolo central, intacto?
+4. ¿El visor sigue transparente, y el botón/remache y la correa
+   quedaron como estaban?
+5. ¿La forma, el ángulo, el encuadre y el fondo quedaron idénticos?
+6. ¿Quedó algún tramo del negro viejo o algo agregado? No debe
+   quedar nada.
+```
+
+---
+
+## Instancia 1.40 — Calota celeste pastel
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma, no se quita
+ningún tornillo ni remache.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco JET / abierto estilo vintage. Mismo
+  objeto 3D, mismas proporciones.
+- EL CUERO COGNAC (naranja tostado) que bordea toda la abertura
+  frontal y baja por la mentonera: queda EXACTAMENTE del mismo tono
+  cognac, con su misma costura visible y su misma textura de cuero.
+  NO se pinta, NO cambia de color.
+- EL DISCO METÁLICO plateado del lateral, con TODOS sus puntos y
+  tornillos alrededor y el símbolo negro del centro: queda metálico
+  plateado, exactamente igual, sin quitar ninguna pieza.
+- EL VISOR: transparente e incoloro, tal como está, con su forma y
+  su reflejo.
+- El botón/remache metálico chico de la calota: queda metálico.
+- La correa negra que asoma: queda como está.
+- El ángulo (lateral 3/4 mirando a la izquierda), el encuadre, el
+  fondo blanco, la iluminación y las sombras.
+- El acabado: la nueva pintura es mate, como el negro original.
+
+EL CAMBIO DE COLOR — SOLO LA CALOTA, COLOR PASTEL PLANO:
+LA CALOTA — únicamente la superficie lisa y pintada del cuerpo del
+casco (la parte alta, los laterales, la zona trasera), SIN tocar el
+cuero cognac ni el disco metálico — pasa a CELESTE PASTEL: un azul
+muy claro y suave, poco saturado, PLANO Y UNIFORME, sin degradé, sin
+brillo, sin textura ni patrón. Un solo color liso de punta a punta.
+
+COBERTURA COMPLETA Y LÍMITES NÍTIDOS:
+La calota queda CELESTE PASTEL en TODA su superficie pintada, sin
+ninguna isla ni parche del negro viejo. El límite entre el celeste
+de la calota y el cuero cognac, y entre el celeste y el disco
+metálico, es nítido y sigue exactamente el borde físico real de
+cada pieza — sin que el celeste invada el cuero ni el metal, y sin
+que quede negro viejo pegado al borde de ninguno de los dos.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas, bordes, franjas),
+no aparecen: el resultado es el casco solo sobre su fondo blanco
+limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido pintar de celeste el cuero cognac: queda cognac.
+- Prohibido pintar de celeste el disco metálico o cualquiera de sus
+  tornillos/puntos: quedan plateados.
+- Prohibido tintar o cambiar el visor: transparente.
+- Prohibido pintar el botón/remache o la correa.
+- Prohibido quitar, tapar o disimular ningún tornillo, punto o
+  remache: todos quedan visibles.
+- Prohibido usar un celeste saturado, neón o con degradé: es
+  pastel, plano y uniforme.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó CELESTE PASTEL, plana y uniforme, sin degradé
+   ni brillo, en toda su superficie pintada?
+2. ¿El cuero cognac de la abertura y la mentonera sigue exactamente
+   cognac, con su costura?
+3. ¿El disco metálico plateado sigue con TODOS sus tornillos/puntos
+   y su símbolo central, intacto?
+4. ¿El visor sigue transparente, y el botón/remache y la correa
+   quedaron como estaban?
+5. ¿La forma, el ángulo, el encuadre y el fondo quedaron idénticos?
+6. ¿Quedó algún tramo del negro viejo o algo agregado? No debe
+   quedar nada.
+```
+
+---
+
+## Instancia 1.41 — Calota amarillo pastel
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma, no se quita
+ningún tornillo ni remache.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco JET / abierto estilo vintage. Mismo
+  objeto 3D, mismas proporciones.
+- EL CUERO COGNAC (naranja tostado) que bordea toda la abertura
+  frontal y baja por la mentonera: queda EXACTAMENTE del mismo tono
+  cognac, con su misma costura visible y su misma textura de cuero.
+  NO se pinta, NO cambia de color.
+- EL DISCO METÁLICO plateado del lateral, con TODOS sus puntos y
+  tornillos alrededor y el símbolo negro del centro: queda metálico
+  plateado, exactamente igual, sin quitar ninguna pieza.
+- EL VISOR: transparente e incoloro, tal como está, con su forma y
+  su reflejo.
+- El botón/remache metálico chico de la calota: queda metálico.
+- La correa negra que asoma: queda como está.
+- El ángulo (lateral 3/4 mirando a la izquierda), el encuadre, el
+  fondo blanco, la iluminación y las sombras.
+- El acabado: la nueva pintura es mate, como el negro original.
+
+EL CAMBIO DE COLOR — SOLO LA CALOTA, COLOR PASTEL PLANO:
+LA CALOTA — únicamente la superficie lisa y pintada del cuerpo del
+casco (la parte alta, los laterales, la zona trasera), SIN tocar el
+cuero cognac ni el disco metálico — pasa a AMARILLO PASTEL: un
+amarillo suave tipo manteca, claro, poco saturado, PLANO Y
+UNIFORME, sin degradé, sin brillo, sin textura ni patrón. Un solo
+color liso de punta a punta. OJO: el amarillo pastel tiene que
+distinguirse claramente del cognac del cuero — son tonos vecinos y
+no se pueden confundir.
+
+COBERTURA COMPLETA Y LÍMITES NÍTIDOS:
+La calota queda AMARILLO PASTEL en TODA su superficie pintada, sin
+ninguna isla ni parche del negro viejo. El límite entre el amarillo
+de la calota y el cuero cognac, y entre el amarillo y el disco
+metálico, es nítido y sigue exactamente el borde físico real de
+cada pieza — sin que el amarillo invada el cuero ni el metal, y sin
+que quede negro viejo pegado al borde de ninguno de los dos.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas, bordes, franjas),
+no aparecen: el resultado es el casco solo sobre su fondo blanco
+limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido pintar de amarillo el cuero cognac: queda cognac y
+  distinguible del amarillo.
+- Prohibido pintar de amarillo el disco metálico o cualquiera de
+  sus tornillos/puntos: quedan plateados.
+- Prohibido tintar o cambiar el visor: transparente.
+- Prohibido pintar el botón/remache o la correa.
+- Prohibido quitar, tapar o disimular ningún tornillo, punto o
+  remache: todos quedan visibles.
+- Prohibido usar un amarillo saturado, neón o con degradé: es
+  pastel, plano y uniforme.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó AMARILLO PASTEL, plana y uniforme, sin degradé
+   ni brillo, en toda su superficie pintada?
+2. ¿El amarillo se distingue claramente del cognac del cuero, sin
+   confundirse?
+3. ¿El disco metálico plateado sigue con TODOS sus tornillos/puntos
+   y su símbolo central, intacto?
+4. ¿El visor sigue transparente, y el botón/remache y la correa
+   quedaron como estaban?
+5. ¿La forma, el ángulo, el encuadre y el fondo quedaron idénticos?
+6. ¿Quedó algún tramo del negro viejo o algo agregado? No debe
+   quedar nada.
+```
+
+---
+
+## Instancia 1.42 — Calota verde salvia pastel
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma, no se quita
+ningún tornillo ni remache.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco JET / abierto estilo vintage. Mismo
+  objeto 3D, mismas proporciones.
+- EL CUERO COGNAC (naranja tostado) que bordea toda la abertura
+  frontal y baja por la mentonera: queda EXACTAMENTE del mismo tono
+  cognac, con su misma costura visible y su misma textura de cuero.
+  NO se pinta, NO cambia de color.
+- EL DISCO METÁLICO plateado del lateral, con TODOS sus puntos y
+  tornillos alrededor y el símbolo negro del centro: queda metálico
+  plateado, exactamente igual, sin quitar ninguna pieza.
+- EL VISOR: transparente e incoloro, tal como está, con su forma y
+  su reflejo.
+- El botón/remache metálico chico de la calota: queda metálico.
+- La correa negra que asoma: queda como está.
+- El ángulo (lateral 3/4 mirando a la izquierda), el encuadre, el
+  fondo blanco, la iluminación y las sombras.
+- El acabado: la nueva pintura es mate, como el negro original.
+
+EL CAMBIO DE COLOR — SOLO LA CALOTA, COLOR PASTEL PLANO:
+LA CALOTA — únicamente la superficie lisa y pintada del cuerpo del
+casco (la parte alta, los laterales, la zona trasera), SIN tocar el
+cuero cognac ni el disco metálico — pasa a VERDE SALVIA PASTEL: un
+verde grisáceo suave, claro, poco saturado, PLANO Y UNIFORME, sin
+degradé, sin brillo, sin textura ni patrón. Un solo color liso de
+punta a punta.
+
+COBERTURA COMPLETA Y LÍMITES NÍTIDOS:
+La calota queda VERDE SALVIA PASTEL en TODA su superficie pintada,
+sin ninguna isla ni parche del negro viejo. El límite entre el verde
+de la calota y el cuero cognac, y entre el verde y el disco
+metálico, es nítido y sigue exactamente el borde físico real de
+cada pieza — sin que el verde invada el cuero ni el metal, y sin que
+quede negro viejo pegado al borde de ninguno de los dos.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas, bordes, franjas),
+no aparecen: el resultado es el casco solo sobre su fondo blanco
+limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido pintar de verde el cuero cognac: queda cognac.
+- Prohibido pintar de verde el disco metálico o cualquiera de sus
+  tornillos/puntos: quedan plateados.
+- Prohibido tintar o cambiar el visor: transparente.
+- Prohibido pintar el botón/remache o la correa.
+- Prohibido quitar, tapar o disimular ningún tornillo, punto o
+  remache: todos quedan visibles.
+- Prohibido usar un verde saturado, neón o con degradé: es pastel,
+  plano y uniforme.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó VERDE SALVIA PASTEL, plana y uniforme, sin
+   degradé ni brillo, en toda su superficie pintada?
+2. ¿El cuero cognac de la abertura y la mentonera sigue exactamente
+   cognac, con su costura?
+3. ¿El disco metálico plateado sigue con TODOS sus tornillos/puntos
+   y su símbolo central, intacto?
+4. ¿El visor sigue transparente, y el botón/remache y la correa
+   quedaron como estaban?
+5. ¿La forma, el ángulo, el encuadre y el fondo quedaron idénticos?
+6. ¿Quedó algún tramo del negro viejo o algo agregado? No debe
+   quedar nada.
+```
