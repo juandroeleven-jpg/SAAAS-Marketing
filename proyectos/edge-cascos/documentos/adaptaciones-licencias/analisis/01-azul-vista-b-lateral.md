@@ -85,3 +85,33 @@ gráficos chicos que se pueden agregar sin tocar el resto.
 La reserva: agregar elementos gráficos nuevos es más riesgoso que
 cambiar un tono. Si la edición rompe algo, el orden correcto es correr
 primero solo el ajuste de azul y dejar las XXX para retoque manual.
+
+---
+
+## Ronda 2 (2026-07-30) — resultado de la primera edición
+
+### Se cumplió ✅
+- Azul royal recuperó saturación y luminosidad.
+- Las TRES marcas "XXX" aparecieron, en la posición y diagonal correctas.
+- La marca "X40" apareció y se lee.
+- Malla triangular, encuadres, logo "EDGE" y placa de carbono intactos.
+- Visor negro opaco.
+
+### Defectos que quedan ❌
+1. **El SPOILER quedó azul royal brillante** — en la referencia es
+   AZUL MARINO OSCURO, claramente más oscuro que la calota. Error mío:
+   el prompt de edición decía "aplicá el royal a ... el spoiler".
+2. **La PIEZA EXTRACTORA SUPERIOR** de la calota: mismo caso, va marino
+   oscuro como el spoiler.
+3. **El DEFLECTOR / RESPIRADERO FRONTAL de la mentonera salió NEGRO**
+   y va GRIS.
+4. **Reapareció la PESTAÑA NEGRA debajo del visor**, que no existe en el
+   molde real.
+5. La microtipografía salió corrupta: dice "FOR EXPLOSINE PUNNERS" en
+   vez de "FOR EXPLORING RUNNERS". Va a post-producción.
+
+### Lección
+Al escribir un ajuste de color por familia ("aplicá el royal a TODAS las
+masas azules"), hay que EXCLUIR NOMINALMENTE las piezas que llevan otro
+tono de esa misma familia. Si no, el ajuste se derrama sobre ellas. Es
+el mismo error del rojo vino, en versión azul.
