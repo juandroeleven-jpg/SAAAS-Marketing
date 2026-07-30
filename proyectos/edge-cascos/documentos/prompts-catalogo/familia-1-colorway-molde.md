@@ -3422,3 +3422,296 @@ VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
 6. ¿Quedó algún tramo del negro viejo o algo agregado? No debe
    quedar nada.
 ```
+
+---
+
+# Molde K — integral brillante con mecanismo de visor y ventilación verde lima
+
+**Molde de estas instancias:** casco INTEGRAL negro BRILLANTE (no mate), visor TRANSPARENTE levantado, con el MECANISMO CIRCULAR del pivote del visor en el lateral (disco con sus puntos/tornillos alrededor) y la VENTILACIÓN INTERIOR con malla VERDE LIMA / AMARILLO NEÓN visible a través de la abertura del visor (mentonera y zona de la mejilla). Foto sobre fondo oscuro con otro casco parcial asomando en el borde — se limpia. Vista lateral. Regla del usuario: 4 variaciones de color incluyendo blanco y gris, sin tocar el visor, el mecanismo ni la malla de ventilación verde lima ("estructura y nada").
+
+**Piezas que NUNCA cambian en este molde:**
+- El VISOR transparente, levantado, con su forma.
+- El MECANISMO CIRCULAR del pivote del visor, con todos sus puntos/tornillos: queda como está (metálico/negro).
+- La MALLA DE VENTILACIÓN interior VERDE LIMA / AMARILLO NEÓN: queda exactamente de ese color.
+- El acolchado interior que se ve por la abertura.
+
+| Instancia | Calota | Visor | Mecanismo | Malla ventilación |
+|---|---|---|---|---|
+| 1.43 | Blanco brillante | Queda | Queda | Verde lima (queda) |
+| 1.44 | Gris brillante | Queda | Queda | Verde lima (queda) |
+| 1.45 | Rojo brillante | Queda | Queda | Verde lima (queda) |
+| 1.46 | Azul brillante | Queda | Queda | Verde lima (queda) |
+
+---
+
+## Instancia 1.43 — Calota blanco brillante
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco INTEGRAL con su mentonera. Mismo
+  objeto 3D, mismas proporciones.
+- EL VISOR: transparente, LEVANTADO, exactamente como está, con su
+  forma y su posición.
+- EL MECANISMO CIRCULAR del pivote del visor en el lateral, con
+  TODOS sus puntos y tornillos alrededor: queda EXACTAMENTE igual,
+  sin quitar ninguna pieza.
+- LA MALLA DE VENTILACIÓN interior que se ve por la abertura del
+  visor (en la zona de la mejilla/mentonera): queda VERDE LIMA /
+  AMARILLO NEÓN, con su misma forma de rejilla. NO cambia de color.
+- El acolchado interior visible por la abertura.
+- El ángulo de la toma (lateral), el encuadre y la iluminación.
+- El acabado: la nueva pintura sigue siendo BRILLANTE, con reflejos,
+  como el negro original — no se vuelve mate.
+
+EL CAMBIO DE COLOR:
+LA CALOTA — toda la superficie pintada del casco (parte alta,
+laterales, zona trasera, mentonera) — pasa a BLANCO BRILLANTE:
+blanco limpio y uniforme, con acabado brillante y reflejos, igual de
+brillante que estaba el negro original.
+
+COBERTURA COMPLETA:
+La calota queda BLANCA en TODA su superficie visible, sin ninguna
+isla ni parche del negro viejo. El límite entre el blanco y el
+mecanismo del visor, y entre el blanco y la malla verde lima, es
+nítido y sigue el borde físico real de cada pieza.
+
+LIMPIEZA:
+La foto adjunta tiene un fondo oscuro con otro casco parcial
+asomando en el borde: eso NO es parte de este casco y NO aparece en
+el resultado. El resultado es este casco solo, sobre un fondo
+limpio, con su sombra o reflejo propio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido tocar el visor: transparente y levantado, tal cual.
+- Prohibido pintar el mecanismo circular del visor o sus tornillos.
+- Prohibido pintar de blanco la malla de ventilación: queda VERDE
+  LIMA.
+- Prohibido volver la pintura mate: sigue BRILLANTE.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo o el encuadre.
+- Prohibido dejar el otro casco o cualquier elemento del fondo
+  original.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó BLANCA BRILLANTE completa, sin tramos negros?
+2. ¿El visor sigue transparente y LEVANTADO, idéntico?
+3. ¿El mecanismo circular con sus tornillos sigue intacto?
+4. ¿La malla de ventilación sigue VERDE LIMA / AMARILLO NEÓN?
+5. ¿La forma, el ángulo y el encuadre quedaron idénticos, sin el
+   casco extra del fondo original?
+6. ¿Se agregó algo que no estaba? No debe haberse agregado nada.
+```
+
+---
+
+## Instancia 1.44 — Calota gris brillante
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco INTEGRAL con su mentonera. Mismo
+  objeto 3D, mismas proporciones.
+- EL VISOR: transparente, LEVANTADO, exactamente como está, con su
+  forma y su posición.
+- EL MECANISMO CIRCULAR del pivote del visor en el lateral, con
+  TODOS sus puntos y tornillos alrededor: queda EXACTAMENTE igual,
+  sin quitar ninguna pieza.
+- LA MALLA DE VENTILACIÓN interior que se ve por la abertura del
+  visor (en la zona de la mejilla/mentonera): queda VERDE LIMA /
+  AMARILLO NEÓN, con su misma forma de rejilla. NO cambia de color.
+- El acolchado interior visible por la abertura.
+- El ángulo de la toma (lateral), el encuadre y la iluminación.
+- El acabado: la nueva pintura sigue siendo BRILLANTE, con reflejos,
+  como el negro original — no se vuelve mate.
+
+EL CAMBIO DE COLOR:
+LA CALOTA — toda la superficie pintada del casco (parte alta,
+laterales, zona trasera, mentonera) — pasa a GRIS BRILLANTE: gris
+medio neutro, uniforme, con acabado brillante y reflejos, igual de
+brillante que estaba el negro original.
+
+COBERTURA COMPLETA:
+La calota queda GRIS en TODA su superficie visible, sin ninguna isla
+ni parche del negro viejo. El límite entre el gris y el mecanismo
+del visor, y entre el gris y la malla verde lima, es nítido y sigue
+el borde físico real de cada pieza.
+
+LIMPIEZA:
+La foto adjunta tiene un fondo oscuro con otro casco parcial
+asomando en el borde: eso NO es parte de este casco y NO aparece en
+el resultado. El resultado es este casco solo, sobre un fondo
+limpio, con su sombra o reflejo propio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido tocar el visor: transparente y levantado, tal cual.
+- Prohibido pintar el mecanismo circular del visor o sus tornillos.
+- Prohibido pintar de gris la malla de ventilación: queda VERDE
+  LIMA.
+- Prohibido volver la pintura mate: sigue BRILLANTE.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo o el encuadre.
+- Prohibido dejar el otro casco o cualquier elemento del fondo
+  original.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó GRIS BRILLANTE completa, sin tramos negros?
+2. ¿El visor sigue transparente y LEVANTADO, idéntico?
+3. ¿El mecanismo circular con sus tornillos sigue intacto?
+4. ¿La malla de ventilación sigue VERDE LIMA / AMARILLO NEÓN?
+5. ¿La forma, el ángulo y el encuadre quedaron idénticos, sin el
+   casco extra del fondo original?
+6. ¿Se agregó algo que no estaba? No debe haberse agregado nada.
+```
+
+---
+
+## Instancia 1.45 — Calota rojo brillante
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco INTEGRAL con su mentonera. Mismo
+  objeto 3D, mismas proporciones.
+- EL VISOR: transparente, LEVANTADO, exactamente como está, con su
+  forma y su posición.
+- EL MECANISMO CIRCULAR del pivote del visor en el lateral, con
+  TODOS sus puntos y tornillos alrededor: queda EXACTAMENTE igual,
+  sin quitar ninguna pieza.
+- LA MALLA DE VENTILACIÓN interior que se ve por la abertura del
+  visor (en la zona de la mejilla/mentonera): queda VERDE LIMA /
+  AMARILLO NEÓN, con su misma forma de rejilla. NO cambia de color.
+- El acolchado interior visible por la abertura.
+- El ángulo de la toma (lateral), el encuadre y la iluminación.
+- El acabado: la nueva pintura sigue siendo BRILLANTE, con reflejos,
+  como el negro original — no se vuelve mate.
+
+EL CAMBIO DE COLOR:
+LA CALOTA — toda la superficie pintada del casco (parte alta,
+laterales, zona trasera, mentonera) — pasa a ROJO BRILLANTE: rojo
+pleno y saturado, uniforme, con acabado brillante y reflejos, igual
+de brillante que estaba el negro original. OJO: el rojo tiene que
+distinguirse claramente del verde lima de la malla — son colores
+vecinos en intensidad y no se pueden confundir.
+
+COBERTURA COMPLETA:
+La calota queda ROJA en TODA su superficie visible, sin ninguna
+isla ni parche del negro viejo. El límite entre el rojo y el
+mecanismo del visor, y entre el rojo y la malla verde lima, es
+nítido y sigue el borde físico real de cada pieza.
+
+LIMPIEZA:
+La foto adjunta tiene un fondo oscuro con otro casco parcial
+asomando en el borde: eso NO es parte de este casco y NO aparece en
+el resultado. El resultado es este casco solo, sobre un fondo
+limpio, con su sombra o reflejo propio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido tocar el visor: transparente y levantado, tal cual.
+- Prohibido pintar el mecanismo circular del visor o sus tornillos.
+- Prohibido pintar de rojo la malla de ventilación: queda VERDE
+  LIMA, distinguible del rojo.
+- Prohibido volver la pintura mate: sigue BRILLANTE.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo o el encuadre.
+- Prohibido dejar el otro casco o cualquier elemento del fondo
+  original.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó ROJA BRILLANTE completa, sin tramos negros?
+2. ¿El visor sigue transparente y LEVANTADO, idéntico?
+3. ¿El mecanismo circular con sus tornillos sigue intacto?
+4. ¿La malla de ventilación sigue VERDE LIMA, distinguible del rojo?
+5. ¿La forma, el ángulo y el encuadre quedaron idénticos, sin el
+   casco extra del fondo original?
+6. ¿Se agregó algo que no estaba? No debe haberse agregado nada.
+```
+
+---
+
+## Instancia 1.46 — Calota azul brillante
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco INTEGRAL con su mentonera. Mismo
+  objeto 3D, mismas proporciones.
+- EL VISOR: transparente, LEVANTADO, exactamente como está, con su
+  forma y su posición.
+- EL MECANISMO CIRCULAR del pivote del visor en el lateral, con
+  TODOS sus puntos y tornillos alrededor: queda EXACTAMENTE igual,
+  sin quitar ninguna pieza.
+- LA MALLA DE VENTILACIÓN interior que se ve por la abertura del
+  visor (en la zona de la mejilla/mentonera): queda VERDE LIMA /
+  AMARILLO NEÓN, con su misma forma de rejilla. NO cambia de color.
+- El acolchado interior visible por la abertura.
+- El ángulo de la toma (lateral), el encuadre y la iluminación.
+- El acabado: la nueva pintura sigue siendo BRILLANTE, con reflejos,
+  como el negro original — no se vuelve mate.
+
+EL CAMBIO DE COLOR:
+LA CALOTA — toda la superficie pintada del casco (parte alta,
+laterales, zona trasera, mentonera) — pasa a AZUL BRILLANTE: azul
+medio saturado, tipo azul racing, uniforme, con acabado brillante y
+reflejos, igual de brillante que estaba el negro original.
+
+COBERTURA COMPLETA:
+La calota queda AZUL en TODA su superficie visible, sin ninguna
+isla ni parche del negro viejo. El límite entre el azul y el
+mecanismo del visor, y entre el azul y la malla verde lima, es
+nítido y sigue el borde físico real de cada pieza.
+
+LIMPIEZA:
+La foto adjunta tiene un fondo oscuro con otro casco parcial
+asomando en el borde: eso NO es parte de este casco y NO aparece en
+el resultado. El resultado es este casco solo, sobre un fondo
+limpio, con su sombra o reflejo propio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido tocar el visor: transparente y levantado, tal cual.
+- Prohibido pintar el mecanismo circular del visor o sus tornillos.
+- Prohibido pintar de azul la malla de ventilación: queda VERDE
+  LIMA.
+- Prohibido volver la pintura mate: sigue BRILLANTE.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo o el encuadre.
+- Prohibido dejar el otro casco o cualquier elemento del fondo
+  original.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó AZUL BRILLANTE completa, sin tramos negros?
+2. ¿El visor sigue transparente y LEVANTADO, idéntico?
+3. ¿El mecanismo circular con sus tornillos sigue intacto?
+4. ¿La malla de ventilación sigue VERDE LIMA / AMARILLO NEÓN?
+5. ¿La forma, el ángulo y el encuadre quedaron idénticos, sin el
+   casco extra del fondo original?
+6. ¿Se agregó algo que no estaba? No debe haberse agregado nada.
+```
