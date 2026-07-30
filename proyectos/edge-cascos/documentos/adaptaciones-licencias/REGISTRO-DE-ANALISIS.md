@@ -4,6 +4,13 @@ Este es el **registro único y acumulativo** de todos los análisis de resultado
 generados del proyecto de adaptaciones de licencias EDGE/EDGEPRO: auditorías,
 mediciones, casos de éxito y post-mortems de cada variante y cada vista.
 
+> **Las imágenes van EMBEBIDAS en este archivo, no solo enlazadas.**
+> Cada entrada muestra la ilustración de referencia, el resultado
+> generado, el molde real y las comparativas directamente acá, para
+> poder leer el análisis y ver la evidencia sin abrir otra pestaña.
+> Al agregar una entrada nueva, usá siempre `![nombre](ruta)` y no una
+> ruta suelta entre backticks.
+
 ## Regla de uso (no negociable)
 
 - **Cada análisis nuevo se APENDA acá abajo**, al final, como una entrada más.
@@ -41,9 +48,17 @@ mediciones, casos de éxito y post-mortems de cada variante y cada vista.
 **Estado:** ✅ aprobado · ⚠️ aprobado con reservas · ❌ rechazado
 
 **Archivos de evidencia**
-- Ilustración de referencia: `kratos-dakota/resultados/...`
-- Resultado: `kratos-dakota/resultados/...`
-- Crops / comparativas: `kratos-dakota/resultados/crops/...`
+![referencia](kratos-dakota/resultados/ARCHIVO-ILUSTRACION.webp)
+*Ilustración de referencia*
+
+![resultado](kratos-dakota/resultados/ARCHIVO-RESULTADO.webp)
+*Resultado generado*
+
+![molde real](kratos-dakota/resultados/ARCHIVO-MOLDE.png)
+*Molde real (autoridad de forma)*
+
+![comparativa](kratos-dakota/resultados/crops/ARCHIVO-CROP.png)
+*Comparativa / zoom del defecto*
 
 **Tabla de verificación**
 
@@ -76,10 +91,30 @@ Usable para ficha técnica / e-commerce. No usable para material de licencia o c
 comparada contra el arte aprobado sin regenerar.
 
 **Archivos de evidencia**
-- Ilustración: `kratos-dakota/resultados/01-azul-vista-c-ILUSTRACION.webp`
-- Resultado: `kratos-dakota/resultados/01-azul-vista-c-RESULTADO.png`
-- Checkpoint real: `kratos-dakota/resultados/00-kratos-real-trasera-CHECKPOINT.webp`
-- Crops: `kratos-dakota/resultados/crops/TRIPTICO-azul.png`,
+- Ilustración: 
+
+![01-azul-vista-c-ILUSTRACION.webp](kratos-dakota/resultados/01-azul-vista-c-ILUSTRACION.webp)
+
+*01-azul-vista-c-ILUSTRACION.webp*
+
+- Resultado: 
+
+![01-azul-vista-c-RESULTADO.png](kratos-dakota/resultados/01-azul-vista-c-RESULTADO.png)
+
+*01-azul-vista-c-RESULTADO.png*
+
+- Checkpoint real: 
+
+![00-kratos-real-trasera-CHECKPOINT.webp](kratos-dakota/resultados/00-kratos-real-trasera-CHECKPOINT.webp)
+
+*00-kratos-real-trasera-CHECKPOINT.webp*
+
+- Crops: 
+
+![TRIPTICO-azul.png](kratos-dakota/resultados/crops/TRIPTICO-azul.png)
+
+*TRIPTICO-azul.png*
+,
   `crops/AZUL-z3a-extractor-ranuras.png`, `crops/AZUL-z4-cuello-ers.png`,
   `crops/AZUL-z5-6-banda-edge-x40.png`, `crops/AZUL-z6b-dot.png`,
   `crops/AZUL-z7-spoiler-mate.png`, `crops/ZOOM-azul-x40-faltantes.png`,
@@ -137,10 +172,30 @@ aparte, con criterio de rechazo.
 **Estado:** ⚠️ aprobado con reservas — 9 cumplen · 3 parciales · 1 falla · 2 a verificar con zoom
 
 **Archivos de evidencia**
-- Ilustración: `kratos-dakota/resultados/04-rojo-blanco-vista-c-ILUSTRACION.webp`
-- Resultado: `kratos-dakota/resultados/04-rojo-blanco-vista-c-RESULTADO.webp`
-- Intento de edición: `kratos-dakota/resultados/04-rojo-blanco-vista-c-EDICION-intento1.webp`
-- Crops: `kratos-dakota/resultados/crops/TRIPTICO-rojo-blanco.png`,
+- Ilustración: 
+
+![04-rojo-blanco-vista-c-ILUSTRACION.webp](kratos-dakota/resultados/04-rojo-blanco-vista-c-ILUSTRACION.webp)
+
+*04-rojo-blanco-vista-c-ILUSTRACION.webp*
+
+- Resultado: 
+
+![04-rojo-blanco-vista-c-RESULTADO.webp](kratos-dakota/resultados/04-rojo-blanco-vista-c-RESULTADO.webp)
+
+*04-rojo-blanco-vista-c-RESULTADO.webp*
+
+- Intento de edición: 
+
+![04-rojo-blanco-vista-c-EDICION-intento1.webp](kratos-dakota/resultados/04-rojo-blanco-vista-c-EDICION-intento1.webp)
+
+*04-rojo-blanco-vista-c-EDICION-intento1.webp*
+
+- Crops: 
+
+![TRIPTICO-rojo-blanco.png](kratos-dakota/resultados/crops/TRIPTICO-rojo-blanco.png)
+
+*TRIPTICO-rojo-blanco.png*
+,
   `crops/ROJO-z3a-extractor-ranuras.png`, `crops/ROJO-z4-cuello-ers.png`,
   `crops/ROJO-z5c-banda-edge-x40.png`, `crops/ROJO-z5d-spoiler-NEGRO.png`,
   `crops/ROJO-z6b-dot-CENTIFIED.png`, `crops/ROJO-COMPARATIVA-spoiler.png`,
@@ -211,11 +266,36 @@ otro lado.
 Método: histograma de luminancia sobre ilustración vs. resultado.
 
 **Archivos de evidencia**
-- Ilustración: `kratos-dakota/resultados/02-gris-vista-b-ILUSTRACION.png`
-- Resultado: `kratos-dakota/resultados/02-gris-vista-b-RESULTADO.webp`
-- Molde real lateral: `kratos-dakota/resultados/00-kratos-real-lateral.png`,
-  `kratos-dakota/resultados/00-kratos-real-lateral-CHECKPOINT.webp`
-- Crops: `kratos-dakota/resultados/crops/GRIS-triptico.png`,
+- Ilustración: 
+
+![02-gris-vista-b-ILUSTRACION.png](kratos-dakota/resultados/02-gris-vista-b-ILUSTRACION.png)
+
+*02-gris-vista-b-ILUSTRACION.png*
+
+- Resultado: 
+
+![02-gris-vista-b-RESULTADO.webp](kratos-dakota/resultados/02-gris-vista-b-RESULTADO.webp)
+
+*02-gris-vista-b-RESULTADO.webp*
+
+- Molde real lateral: 
+
+![00-kratos-real-lateral.png](kratos-dakota/resultados/00-kratos-real-lateral.png)
+
+*00-kratos-real-lateral.png*
+,
+  
+
+![00-kratos-real-lateral-CHECKPOINT.webp](kratos-dakota/resultados/00-kratos-real-lateral-CHECKPOINT.webp)
+
+*00-kratos-real-lateral-CHECKPOINT.webp*
+
+- Crops: 
+
+![GRIS-triptico.png](kratos-dakota/resultados/crops/GRIS-triptico.png)
+
+*GRIS-triptico.png*
+,
   `crops/GRIS-z-calota.png`, `crops/GRIS-z-banda.png`, `crops/GRIS-z-zona.png`
 
 **Tabla de verificación** (recuento de píxeles por nivel de luminancia)
@@ -261,12 +341,42 @@ Geometría, piezas y gráfico correctos. **No aparece la pieza extra bajo el vis
 Método: muestreo de píxel sobre ilustración vs. resultado.
 
 **Archivos de evidencia**
-- Ilustración: `kratos-dakota/resultados/05-celeste-magenta-vista-b-ILUSTRACION.webp`,
-  `kratos-dakota/resultados/05-cel-ref-ilustracion.webp`
-- Resultado v1: `kratos-dakota/resultados/05-celeste-magenta-vista-b-RESULTADO.webp`
-- Resultado v2: `kratos-dakota/resultados/05-celeste-vista-b-RESULTADO-v2.webp`,
-  `kratos-dakota/resultados/05-cel-v2-previo.webp`
-- Zoom de la pieza superior: `kratos-dakota/resultados/05-celeste-zoom-pieza-superior.png`
+- Ilustración: 
+
+![05-celeste-magenta-vista-b-ILUSTRACION.webp](kratos-dakota/resultados/05-celeste-magenta-vista-b-ILUSTRACION.webp)
+
+*05-celeste-magenta-vista-b-ILUSTRACION.webp*
+,
+  
+
+![05-cel-ref-ilustracion.webp](kratos-dakota/resultados/05-cel-ref-ilustracion.webp)
+
+*05-cel-ref-ilustracion.webp*
+
+- Resultado v1: 
+
+![05-celeste-magenta-vista-b-RESULTADO.webp](kratos-dakota/resultados/05-celeste-magenta-vista-b-RESULTADO.webp)
+
+*05-celeste-magenta-vista-b-RESULTADO.webp*
+
+- Resultado v2: 
+
+![05-celeste-vista-b-RESULTADO-v2.webp](kratos-dakota/resultados/05-celeste-vista-b-RESULTADO-v2.webp)
+
+*05-celeste-vista-b-RESULTADO-v2.webp*
+,
+  
+
+![05-cel-v2-previo.webp](kratos-dakota/resultados/05-cel-v2-previo.webp)
+
+*05-cel-v2-previo.webp*
+
+- Zoom de la pieza superior: 
+
+![05-celeste-zoom-pieza-superior.png](kratos-dakota/resultados/05-celeste-zoom-pieza-superior.png)
+
+*05-celeste-zoom-pieza-superior.png*
+
 - Crops: `crops/CEL-v2-pieza-superior.png`, `crops/CEL-v2-ref-vs-res.png`,
   `crops/TRIPTICO-celeste-lateral.png`, `crops/CELESTE-COLORES-INVERTIDOS.png`,
   `crops/CELESTE-XXX-comparacion.png`, `crops/CELESTE-lat-z-boca-XXX.png`,
@@ -316,11 +426,36 @@ Es el mejor resultado del lote y el que **define el método a seguir**: una úni
 tonal corrigió los 5 desvíos de color de golpe, sin degradar geometría ni gráfico.
 
 **Archivos de evidencia**
-- Referencia: `kratos-dakota/resultados/05-cel-ref-ilustracion.webp`
-- Antes (v2): `kratos-dakota/resultados/05-cel-v2-previo.webp`
-- Después (v3): `kratos-dakota/resultados/05-cel-v3-EDITADO-OK.webp`
-- Molde real: `kratos-dakota/resultados/00-molde-real.webp`,
-  `kratos-dakota/resultados/00-molde-real-lateral.png`
+- Referencia: 
+
+![05-cel-ref-ilustracion.webp](kratos-dakota/resultados/05-cel-ref-ilustracion.webp)
+
+*05-cel-ref-ilustracion.webp*
+
+- Antes (v2): 
+
+![05-cel-v2-previo.webp](kratos-dakota/resultados/05-cel-v2-previo.webp)
+
+*05-cel-v2-previo.webp*
+
+- Después (v3): 
+
+![05-cel-v3-EDITADO-OK.webp](kratos-dakota/resultados/05-cel-v3-EDITADO-OK.webp)
+
+*05-cel-v3-EDITADO-OK.webp*
+
+- Molde real: 
+
+![00-molde-real.webp](kratos-dakota/resultados/00-molde-real.webp)
+
+*00-molde-real.webp*
+,
+  
+
+![00-molde-real-lateral.png](kratos-dakota/resultados/00-molde-real-lateral.png)
+
+*00-molde-real-lateral.png*
+
 - Crops: `crops/CEL-EXITO-antes-despues.png`, `crops/CEL-EXITO-visor.png`,
   `crops/CEL-EXITO-zona.png`, `crops/CELv3-lado-a-lado.png`, `crops/CELv3-frente.png`,
   `crops/CELv3-linea.png`, `crops/CELv3-pieza.png`
