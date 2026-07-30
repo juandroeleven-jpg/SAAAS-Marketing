@@ -952,3 +952,114 @@ VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
 6. ¿Se agregó algo que no correspondía? No debe haberse agregado
    nada.
 ```
+
+---
+
+## Instancia 4.4-v3 — Hero lifestyle del camaleón REHECHO (visor opaco total + persona de cuerpo completo, un solo prompt de generación)
+
+**Contexto:** versión definitiva de la 4.4, hecha desde cero como UN SOLO prompt de generación (una sola imagen adjunta: la foto de producto del casco), incorporando de entrada los dos ajustes que antes se aplicaron como edición en dos pasos sobre la 4.4 (visor opaco total, persona de cuerpo completo). Usar esta versión en vez de la 4.4 original para arrancar de cero.
+
+**Se adjunta UNA imagen:** la foto de producto del casco camaleón (integral con spoiler, pintura camaleón violeta→azul, visor iridium, piezas negras, logo "EDGE PRO" blanco, fondo claro de maquetación con líneas — se limpian).
+
+```
+Esto es una GENERACIÓN DE ESCENA DE CAMPAÑA alrededor de un CASCO
+REAL, no un diseño de casco nuevo. Recibís UNA imagen: la foto de
+producto del casco camaleón. Esa foto es la ÚNICA AUTORIDAD DEL
+CASCO: su forma, su pintura, su visor y su logo se copian EXACTOS.
+El casco se mantiene 100% IGUAL — la escena nueva es solo el entorno
+y la persona que lo lleva puesto.
+
+EL CASCO — SE COPIA EXACTO DE LA FOTO ADJUNTA:
+- Casco integral deportivo con SPOILER trasero.
+- La PINTURA CAMALEÓN CROMADA: el degradado violeta→azul brillante
+  tal como se ve en la foto, con su efecto de cambio de color según
+  la luz. No se simplifica a un color plano: es camaleón.
+- Las piezas NEGRAS: ventilaciones con sus rejillas, tomas de aire,
+  goma del borde inferior. Quedan negras.
+- El logo "EDGE PRO" blanco del lateral: queda, en su posición.
+- Mismo lado visible que la foto (lateral mirando a la derecha),
+  misma forma, mismas proporciones. Nada se inventa ni se deforma.
+
+EL VISOR — IRIDIUM OPACO TOTAL, CERO TRANSPARENCIA:
+- El visor es un ESPEJO IRIDIUM violeta/magenta PURO Y OPACO.
+- NO se ve NADA a través de él: ni el rostro de la persona, ni ojos,
+  ni piel, ni ninguna estructura interna del casco. Cero
+  transparencia, cero traslúcido.
+- Sobre esa superficie opaca solo se ven los REFLEJOS espejados del
+  entorno: las luces de neón de la escena.
+- El visor conserva su forma y su posición exactas de la foto.
+
+LA ESCENA A GENERAR — PERSONA DE CUERPO COMPLETO EN SET NEÓN:
+Fotografía de campaña / producto premium, fotorrealista:
+- Se ve a UNA PERSONA COMPLETA, de pie, de la cabeza a los pies, con
+  el casco puesto y el visor bajado.
+- Outfit urbano oscuro premium (campera o chaqueta técnica negra,
+  pantalón oscuro, calzado oscuro) que acompañe la estética neón sin
+  robarle protagonismo al casco.
+- Postura firme y natural, tipo campaña: de pie, cuerpo levemente
+  girado, mostrando el MISMO LADO del casco que muestra la foto de
+  producto.
+- FONDO NEGRO profundo, tipo estudio oscuro premium, con LUCES de
+  neón / LED en los MISMOS COLORES del cromado del casco: violeta,
+  azul y magenta, en forma de líneas, barras o halos detrás y a los
+  costados de la persona.
+- SIN HUMO: nada de niebla, bruma ni humo. Atmósfera limpia y
+  nítida — solo oscuridad y luces de color.
+- Piso oscuro con reflejo suave de la persona y las luces.
+- Estética fotorrealista de campaña; nada de ilustración ni render
+  evidente.
+
+ESCALA REAL — ANCLA DURA:
+El casco es un objeto de tamaño real puesto sobre una cabeza real:
+- Apenas más grande que la cabeza que lo lleva.
+- Regla de control: los HOMBROS de la persona se ven MÁS ANCHOS que
+  el casco. Si el casco sale más ancho que los hombros, está mal.
+- La cabeza con el casco puesto mide más o menos un séptimo de la
+  altura total del cuerpo.
+- Se lo podría sacar con las dos manos: ese es el tamaño.
+
+COMPOSICIÓN — PARA NO INVENTAR EL LADO OCULTO:
+La foto adjunta muestra el casco en 3/4 lateral mirando a la
+DERECHA. Componé la toma de modo que se vea ESE MISMO LADO. No
+mostrar de frente completo ni el otro lado, porque no está en la
+foto y no se inventa.
+
+INTEGRACIÓN DE LUZ:
+El casco se ilumina con la luz de la escena: reflejos coherentes de
+las luces neón sobre la pintura camaleón y sobre el visor. La luz
+NUNCA justifica cambiar el casco: la pintura camaleón sigue siendo
+la misma, y el visor sigue opaco total.
+
+LIMPIEZA:
+Si la imagen adjunta trae elementos de maquetación (líneas, bordes),
+no aparecen: solo se toma el casco.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar CUALQUIER cosa del casco: pintura camaleón,
+  piezas negras, logo EDGE PRO, forma, proporciones.
+- Prohibido dejar el visor con cualquier transparencia: es espejo
+  opaco total, cero rostro visible.
+- Prohibido mostrar solo el casco sin persona, o solo un primer
+  plano: se ve la persona de CUERPO COMPLETO.
+- Prohibido el casco gigante: hombros siempre más anchos que el
+  casco.
+- Prohibido humo, niebla o bruma: solo luces.
+- Prohibido luces de otros colores que no sean los del cromado
+  (violeta / azul / magenta).
+- Prohibido mostrar el lado del casco que no está en la foto.
+- Prohibido agregar logos, texto o gráficos nuevos.
+
+VERIFICACIÓN FINAL — respondé estos siete chequeos antes de entregar:
+1. ¿El casco es EXACTAMENTE el de la foto — camaleón violeta/azul,
+   piezas negras, logo EDGE PRO — sin ningún cambio?
+2. ¿El visor quedó OPACO TOTAL, sin ninguna transparencia, solo con
+   reflejos de las luces neón?
+3. ¿Se ve la persona COMPLETA, de la cabeza a los pies?
+4. ¿El casco quedó a escala real — hombros más anchos que el casco?
+5. ¿El fondo es negro profundo con luces violeta/azul/magenta, SIN
+   humo?
+6. ¿La toma muestra el mismo lado del casco que la foto de
+   producto?
+7. ¿Se agregó algo que no correspondía (texto, logos, humo, otra
+   persona)? No debe haberse agregado nada.
+```
