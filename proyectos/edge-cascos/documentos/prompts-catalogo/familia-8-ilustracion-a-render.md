@@ -635,3 +635,105 @@ Causa probable: la herramienta de generación no procesó el prompt
 No es un defecto del prompt en sí — se reintenta corriendo el mismo
 prompt de nuevo antes de tocar el texto.
 ```
+
+### Auditoría real — Instancia 8.5, segundo intento (30/07/2026)
+
+```
+AUDITORÍA — Instancia 8.5 — blanco/rojo/azul — trasera
+
+Insumos comparados:
+- Resultado generado: casco blanco/rojo/azul, vista trasera (recibido)
+- IMAGEN 2 (foto real, autoridad de forma): checkpoint trasero negro mate
+
+1. ¿Las dos alas mantienen la FORMA exacta de la IMAGEN 2, con sus
+   ranuras y su acabado brillante?
+   → ✅ CUMPLE.
+2. ¿La calota base quedó BLANCA completa, sin tramos negros?
+   → ✅ CUMPLE.
+3. ¿Las alas quedaron con la combinación rojo/azul EXACTA de la
+   distribución que muestra la IMAGEN 1?
+   → ✅ CUMPLE.
+4. ¿La rendija central y la grilla inferior quedaron intactas?
+   → ⚠️ PARCIAL. Zona central tomó forma de escudo/rombo negro con
+   el logo encima — verificar que no exceda la rendija real. Grilla
+   inferior con menos contraste/definición que en la foto real.
+5. ¿El logo/wordmark EDGE quedó sobre la superficie sin deformar
+   nada debajo?
+   → ❌ NO CUMPLE. Texto corrupto: "EDGE MELAIS" en vez del wordmark
+   real de la marca — falla de tipografía típica de IA, ya
+   documentada en el proyecto (Simulación 6d).
+6. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+   → ✅ CUMPLE.
+
+Defectos: A) texto corrupto "MELAIS" bajo el escudo central;
+B) forma central negra y grilla inferior a verificar contra la foto
+real (posible extensión/pérdida de contraste).
+
+Veredicto: APROBADO CON CORRECCIÓN MENOR — defecto parcial, se
+corrige con un prompt dirigido, sin regenerar todo el casco.
+```
+
+---
+
+## Instancia 8.5-fix — Corrección del texto y la zona central/grilla
+
+**Se adjuntan DOS imágenes, en este orden:** (1) el resultado ya generado (blanco/rojo/azul, con el defecto de texto), (2) la foto real trasera (autoridad de forma, para verificar la rendija y la grilla).
+
+```
+Esto es una CORRECCIÓN DIRIGIDA sobre un resultado ya bueno, no una
+imagen nueva. Recibís DOS imágenes:
+
+- IMAGEN 1 — EL RESULTADO YA GENERADO (casco blanco/rojo/azul,
+  trasera): es la BASE. El colorway, las alas, el blanco de la
+  calota y el encuadre están BIEN y quedan tal cual — solo se
+  corrigen dos puntos concretos.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (checkpoint trasero negro mate):
+  es la AUTORIDAD DE FORMA para verificar la rendija central y la
+  grilla inferior.
+
+HAY DOS CORRECCIONES, Y SOLO ESTAS DOS:
+
+CORRECCIÓN 1 — EL TEXTO DEL LOGO CENTRAL:
+Bajo el escudo "EDGE" del centro aparece el texto "EDGE MELAIS", que
+es incorrecto — es una corrupción de tipografía. Se corrige a un
+wordmark limpio y legible: SOLO el escudo "EDGE" con su forma
+actual, SIN ningún texto adicional debajo si no se puede reproducir
+con letras reales y correctas. Si se agrega texto, tiene que ser
+perfectamente legible letra por letra — no se aproxima ni se
+inventan letras parecidas.
+
+CORRECCIÓN 2 — LA ZONA CENTRAL Y LA GRILLA INFERIOR, VERIFICADAS
+CONTRA LA FOTO REAL:
+- La forma negra central entre las dos alas (donde va el logo) no
+  puede ser más grande que la rendija/hueco real que muestra la
+  IMAGEN 2: se ajusta su tamaño y forma para no invadir más
+  superficie de la que ocupa esa rendija en la foto real.
+- La grilla/rejilla del borde inferior recupera el mismo nivel de
+  contraste y definición de nervaduras que tiene en la IMAGEN 2 (no
+  queda plana ni des-saturada).
+
+TODO LO DEMÁS NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ EN LA
+IMAGEN 1:
+- La calota blanca, las alas rojo/azul con su distribución actual,
+  los paneles "EDGE" (azul) y "EDGE PRO" (rojo) de la parte baja,
+  el ángulo, el encuadre y la iluminación.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido dejar el texto "MELAIS" o cualquier otra palabra
+  corrupta o ilegible.
+- Prohibido agrandar la zona central negra más allá de la rendija
+  real de la IMAGEN 2.
+- Prohibido cambiar el blanco de la calota, el rojo/azul de las
+  alas, o los paneles inferiores.
+- Prohibido cambiar el ángulo, el encuadre o la iluminación.
+
+VERIFICACIÓN FINAL:
+1. ¿El texto bajo el escudo central es legible y correcto, o
+   directamente no hay texto si no se puede reproducir bien?
+2. ¿La zona central negra quedó del tamaño real de la rendija de la
+   IMAGEN 2, sin invadir de más?
+3. ¿La grilla inferior recuperó su contraste y definición real?
+4. ¿La calota blanca, las alas rojo/azul y los paneles inferiores
+   quedaron exactamente como en la IMAGEN 1?
+```
