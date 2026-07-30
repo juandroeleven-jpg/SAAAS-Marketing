@@ -1,6 +1,6 @@
-# Prompt A — Tarjeta de HOMOLOGACIÓN — EDGEPRO CARBEX (corregido 2026-07-29)
+# Prompt A — Tarjeta de HOMOLOGACIÓN — EDGEPRO CARBEX (v2 — 2026-07-30)
 
-Correcciones: banner "FNVSS 510" → "DOT & ECE 22.06" (Excel); CON PINLOCK agregado (X en Excel, faltaba). Tarjeta de 8 ítems / 7 separadores (la referencia tiene 7).
+Cambios v2 tras validar el primer resultado generado: el generador conservó "FNVSS 510" en el banner y fusionó "anti empañante + con Pinlock" en un renglón. Se refuerza el banner (verificación explícita) y se agrega la regla "un ítem por renglón". Contenido sin cambios: 8 ítems / 7 separadores, banner "DOT & ECE 22.06" (Pinlock ES X para el Carbex — va como renglón propio).
 
 ---
 
@@ -45,9 +45,12 @@ BLOQUE 2 — BANNER NEGRO (debajo del título, ancho completo del lienzo):
 - Adentro, "DOT" en letras BLANCAS enormes, bold, centrado.
 - Debajo de "DOT", en blanco, cuerpo más chico, centrado:
   "& ECE 22.06".
-- CRÍTICO: la referencia dice "FNVSS 510" debajo del DOT. Ese texto NO
-  se copia. La certificación correcta según el excel maestro es
-  "DOT & ECE 22.06". Reemplazalo.
+- MÁXIMA ATENCIÓN — ESTE ERROR YA OCURRIÓ EN UN INTENTO ANTERIOR DE
+  ESTA MISMA TARJETA: el resultado copió "FNVSS 510" de la referencia
+  debajo del DOT. ESO ES UN ERROR. "FNVSS 510" NO EXISTE en la fuente
+  de datos. La única línea secundaria válida debajo de "DOT" es
+  "& ECE 22.06". Si al terminar el banner dice "FNVSS 510" en
+  cualquier parte, el resultado está MAL y hay que rehacerlo.
 
 BLOQUE 3 — LISTA DE ÍTEMS (fondo GRIS CLARO, todo el alto restante):
 Lista de EXACTAMENTE 8 ítems, en este orden, en MAYÚSCULAS, negro,
@@ -61,13 +64,21 @@ bold, centrados horizontalmente:
 7. CUBRE BARBILLA
 8. CUBRE NARIZ
 
-CRÍTICO — CONTEO FORZADO DE ÍTEMS (hallazgo real de este catálogo: un
-generador devolvió una tarjeta con un ítem repetido de más, y en otra
-pieza filas de más con ítems duplicados — máxima atención):
+CRÍTICO — CONTEO FORZADO Y UN ÍTEM POR RENGLÓN (este error ya ocurrió
+en un intento anterior de esta misma tarjeta: el generador FUSIONÓ dos
+ítems en un solo renglón, escribiendo "PREPARADO PARA ANTI EMPAÑANTE
+CON PINLOCK" — máxima atención):
 - La lista tiene EXACTAMENTE 8 ítems. NUNCA 7, NUNCA 9.
+- Cada renglón contiene UN (1) solo ítem, con el texto EXACTO de la
+  lista. PROHIBIDO fusionar dos ítems en un renglón o agregarle
+  palabras a un ítem.
+- El ítem 2 es "PREPARADO PARA ANTI EMPAÑANTE" y el ítem 3 es
+  "CON PINLOCK": son DOS renglones DISTINTOS, cada uno con su propio
+  separador entre medio. NO se combinan en una sola frase.
 - Cada ítem aparece UNA sola vez — no repitas ninguno para rellenar.
 - Antes de entregar, contá los renglones UNO POR UNO: 8, ninguno
-  repetido, cada uno con texto distinto de los otros 7.
+  repetido, ninguno fusionado, cada uno idéntico al texto de la
+  lista.
 
 CRÍTICO — LOS SEPARADORES SON LÍNEAS FINAS, NO BANDAS (defecto real de
 este catálogo — no lo repitas). Geometría exacta:
@@ -112,13 +123,15 @@ PROHIBIDO ABSOLUTO:
 - NO usar rectángulos negros sólidos fuera del banner del Bloque 2.
 - NO poner ninguna X ni tache sobre ningún texto.
 
-VERIFICACIÓN FINAL — CHEQUEÁ ESTAS 7 COSAS:
+VERIFICACIÓN FINAL — CHEQUEÁ ESTAS 8 COSAS:
 1. ¿Alto ÷ ancho ≈ 2, igual que la referencia? Si da 2,4+, rehacela.
-2. ¿Son EXACTAMENTE 8 renglones, ninguno repetido?
-3. ¿Los separadores son guiones finos, cortos y centrados — y son
+2. ¿Son EXACTAMENTE 8 renglones, ninguno repetido NI FUSIONADO?
+3. ¿"PREPARADO PARA ANTI EMPAÑANTE" y "CON PINLOCK" son DOS renglones
+   separados, con separador entre medio?
+4. ¿Los separadores son guiones finos, cortos y centrados — y son
    exactamente 7?
-4. ¿El título dice "HOMOLOGACIÓN" completo, con la I y la tilde?
-5. ¿El banner dice "DOT" y "& ECE 22.06", sin "FNVSS 510" en ninguna
+5. ¿El título dice "HOMOLOGACIÓN" completo, con la I y la tilde?
+6. ¿El banner dice "DOT" y "& ECE 22.06", sin "FNVSS 510" en ninguna
    parte?
-6. ¿Hay algún elemento decorativo que no esté en la referencia? Sacalo.
-7. ¿Los 8 textos están completos, sin ninguno truncado?
+7. ¿Hay algún elemento decorativo que no esté en la referencia? Sacalo.
+8. ¿Los 8 textos están completos, sin ninguno truncado?

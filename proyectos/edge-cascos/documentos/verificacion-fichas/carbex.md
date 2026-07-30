@@ -15,3 +15,9 @@ Fuentes: ficha técnica del Carbex (tarjeta + grid) vs. columna "Carbex" del Exc
 - Grid (6): canal para lentes, hebilla doble D, Bluetooth, kit mecanismo visor, ABS, EPS.
 
 Prompts corregidos: `../prompts-catalogo/carbex-prompt-a-homologacion.md` y `carbex-prompt-b-grid-iconos.md`.
+
+## Validación del resultado generado (2026-07-30)
+
+- ✅ Grid B: cumplió todo — doble D con dos anillas en positivo, kit visor, ABS y EPS con íconos propios, sin micrométrica ni doble visera.
+- ❌ Tarjeta A v1: conservó "FNVSS 510" en el banner (va "DOT & ECE 22.06") y fusionó "anti empañante + con Pinlock" en un renglón (Pinlock ES X para Carbex, pero va como renglón propio: 8 renglones, no 7).
+- Mismos 2 vicios sistemáticos del generador que en Evolution 929. Prompt A v2 publicado con banner reforzado y regla "un ítem por renglón".
