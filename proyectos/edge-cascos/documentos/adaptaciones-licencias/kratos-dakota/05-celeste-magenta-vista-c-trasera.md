@@ -4,6 +4,8 @@ Molde: EDGEPRO KRATOS (full face con spoiler). Generado 2026-07-30 por el Agente
 
 Checkpoint real: SÍ (foto Kratos negro mate trasera). Conflicto de silueta declarado dentro del prompt.
 
+**v2 (2026-07-30) — tras auditoría del primer resultado (variante azul).** La silueta salió CORRECTA (el bloque de conflicto funcionó), pero aparecieron 3 desvíos: (a) el generador SIMPLIFICÓ la densidad del gráfico — malla triangular más rala, rayado fino reducido; (b) omitió las marcas pequeñas de texto de los costados; (c) devolvió acabado SATINADO/BRILLANTE en vez de MATE. También quedaron poco definidas las dos ranuras pequeñas y la pieza ranurada baja. Se agregan bloques anti-simplificación, marcas nominales y mate reforzado.
+
 Adjuntar SIEMPRE dos imágenes, en este orden: (1) la ilustración de esta variante en esta vista, (2) la foto real del Kratos negro mate en esta vista.
 
 ---
@@ -75,12 +77,33 @@ Sobre la superficie trasera se aplica el diseño de la ilustración:
 - Cortes entre colores NÍTIDOS, de borde recto y escalonado, sin
   degradados difusos.
 
+CRÍTICO — PROHIBIDO SIMPLIFICAR EL GRÁFICO (este error YA OCURRIÓ en
+un intento anterior de esta misma vista):
+- El gráfico tiene que tener la MISMA DENSIDAD DE DETALLE que la
+  ilustración: la misma cantidad de líneas en cada rayado, la misma
+  finura y extensión de la malla triangular, la misma cantidad de
+  encuadres angulares concéntricos y de galones.
+- PROHIBIDO resumir, simplificar, "limpiar" o bajar la densidad del
+  dibujo porque la superficie sea curva o porque haya mucha
+  información. Si la ilustración tiene veinte líneas en un rayado, el
+  resultado tiene veinte líneas, no seis.
+- La malla de triángulos de las zonas altas laterales tiene que verse
+  como una TRAMA COMPLETA y densa, no como unos pocos triángulos
+  sueltos.
+- Antes de entregar, compará zona por zona contra la ilustración: si
+  alguna zona quedó más vacía o más pobre que en el dibujo, está MAL.
+
 TEXTOS Y DECALS QUE VAN EN ESTA VISTA:
 - El logotipo "EDGE" en AZUL, centrado sobre la BANDA
   HORIZONTAL BAJA, tal como en la ilustración.
 - El SELLO / STICKER DE HOMOLOGACIÓN "DOT": rectángulo blanco pequeño
   con el texto "DOT", centrado en el eje, por debajo de la banda,
   sobre la zona baja trasera. Va como en la ilustración.
+- LAS DOS MARCAS PEQUEÑAS DE TEXTO de los costados, una a cada lado
+  de la banda, tal como están en la ilustración. Son OBLIGATORIAS: en
+  un intento anterior el generador las omitió. Se reproducen con su
+  mismo texto, su mismo tamaño relativo y su misma posición
+  simétrica.
 - Nada más: ningún otro texto, sponsor ni logo.
 
 BLOQUE 3 — ADAPTACIÓN DEL GRÁFICO A LA SUPERFICIE REAL
@@ -108,8 +131,15 @@ BLOQUE 4 — FOTOGRAFÍA
 - Mismo ángulo trasero, mismo encuadre y mismo tamaño de casco dentro
   del cuadro que la imagen 2.
 - Mismo fondo blanco liso de estudio, con la misma sombra suave.
-- Acabado MATE en las zonas de color, igual que el mate del casco
-  real: sin barniz brillante espejado.
+- ACABADO MATE ABSOLUTO — CRÍTICO (este error YA OCURRIÓ en un intento
+  anterior de esta misma vista, que volvió con brillo satinado):
+  la pintura es MATE, sin brillo, sin barniz, sin lustre y sin
+  reflejo especular fuerte. El color se ve ATERCIOPELADO, como el
+  negro mate del casco de la imagen 2, NO como plástico brillante ni
+  como pintura automotriz pulida. Si el spoiler o la calota reflejan
+  la luz como un espejo o tienen un "hot spot" brillante marcado, el
+  resultado está MAL. Se permite únicamente la variación suave de
+  iluminación propia de una superficie mate.
 - Nitidez y nivel de detalle de fotografía de producto.
 - Coherencia de serie con las Vistas A y B: es el mismo casco, con el
   mismo diseño, visto desde atrás.
@@ -136,14 +166,24 @@ VERIFICACIÓN FINAL — respondé estos ocho chequeos antes de entregar:
 1. ¿La SILUETA trasera es la de la foto real (ancha, con hombros
    marcados) y NO la del dibujo?
 2. ¿El resultado es una FOTOGRAFÍA de producto y no una ilustración?
-3. ¿Están el extractor superior, las dos ranuras pequeñas, el
-   tornillo central y la pieza ranurada trasera baja?
+3. ¿Está el extractor superior con su rejilla?
+3b. ¿Se distinguen CLARAMENTE las DOS RANURAS PEQUEÑAS bajo el
+   extractor y la PIEZA RANURADA TRASERA BAJA? En un intento anterior
+   quedaron absorbidas por el gráfico: tienen que leerse como piezas
+   físicas, no taparse con pintura.
+3c. ¿Está el tornillo / remache central?
 4. ¿Se ven el acolchado del cuello, las DOS lengüetas rojas del ERS y
    la correa, igual que en la foto real?
-5. ¿El gráfico petróleo / celeste / magenta / blanco cubre toda la superficie trasera,
+5. ¿La DENSIDAD del gráfico es la misma que la de la ilustración —
+   mallas triangulares completas, rayados con todas sus líneas — sin
+   ninguna zona simplificada o más vacía que en el dibujo?
+5b. ¿Están las DOS MARCAS PEQUEÑAS DE TEXTO de los costados?
+5c. ¿El gráfico petróleo / celeste / magenta / blanco cubre toda la superficie trasera,
    simétrico respecto del eje, sin parches negros?
 6. ¿El logotipo "EDGE" está completo y bien escrito sobre la banda, y
    el sello "DOT" está presente y legible?
-7. ¿El fondo, la sombra y el acabado mate son los de la foto real?
+7. ¿El acabado es MATE de verdad, aterciopelado, sin brillo ni
+   reflejo especular fuerte? Si hay lustre o brillo tipo espejo,
+   rehacelo. ¿El fondo y la sombra son los de la foto real?
 8. ¿Es coherente con las Vistas A y B — mismo casco, mismo diseño?
 ```
