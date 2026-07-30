@@ -115,3 +115,50 @@ Al escribir un ajuste de color por familia ("aplicá el royal a TODAS las
 masas azules"), hay que EXCLUIR NOMINALMENTE las piezas que llevan otro
 tono de esa misma familia. Si no, el ajuste se derrama sobre ellas. Es
 el mismo error del rojo vino, en versión azul.
+
+---
+
+## Ronda 3 (2026-07-30) — resultado de la segunda edición
+
+![referencia vs resultado v3](../kratos-dakota/resultados/crops/AZUL-v3-ref-vs-res.png)
+*Referencia vs. resultado v3*
+
+![spoiler](../kratos-dakota/resultados/crops/AZULv3-spoiler.png)
+*Spoiler y pieza superior: corregidos a azul marino*
+
+![cubrebocas](../kratos-dakota/resultados/crops/AZULv3-cubrebocas.png)
+*Cubrebocas frontal: sigue NEGRO, debía quedar GRIS*
+
+![mecanismo](../kratos-dakota/resultados/crops/AZULv3-mecanismo.png)
+*Mecanismo del visor: la pestaña sigue ahí*
+
+![zoom mecanismo](../kratos-dakota/resultados/01-azul-v3-zoom-mecanismo.png)
+*Zoom del elemento a eliminar*
+
+### Se cumplió ✅
+- **SPOILER en azul marino oscuro**, ya no royal brillante.
+- **PIEZA EXTRACTORA SUPERIOR** en el mismo marino, gemela del spoiler.
+- **DOS AZULES conviviendo**: royal vibrante en la calota, marino en
+  spoiler y pieza superior.
+- Azul royal saturado y luminoso, sin tinte violáceo.
+- Marcas "XXX" y "X40" presentes.
+- Malla triangular, encuadres, logo "EDGE", placa de carbono: intactos.
+- Visor negro opaco. Blanco y rojo sin alterar.
+- Iluminación limpia, sin ondas ni manchones. Acabado mate correcto.
+
+### Sigue pendiente ❌
+1. **La PESTAÑA NEGRA del mecanismo del visor NO se eliminó.** Sigue
+   ahí, sobre la placa de fibra de carbono. Es el defecto que el
+   usuario detectó.
+2. **El CUBREBOCAS / DEFLECTOR FRONTAL sigue NEGRO.** En la referencia
+   es GRIS. Esta corrección se pidió y no se aplicó.
+3. ⚠️ Menor: el spoiler quedó un punto más luminoso que el marino de la
+   referencia. Aceptable, no bloquea.
+4. ⚠️ La microtipografía dice "FOR EXPLOSINE PUNNERS" en vez de "FOR
+   EXPLORING RUNNERS". Va a post-producción, no se toca por prompt.
+
+### Lección
+Cuando una pasada de edición lleva varias correcciones, el generador
+puede aplicar unas e ignorar otras SIN AVISAR — y su texto de respuesta
+igual afirma que las hizo todas. **Nunca confiar en el reporte del
+generador: verificar pieza por pieza contra la referencia.**
