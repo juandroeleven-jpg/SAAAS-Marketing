@@ -2666,3 +2666,286 @@ VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
 6. ¿Quedó algún elemento de maquetación o algo agregado? No debe
    quedar nada.
 ```
+
+---
+
+# Molde I — integral doble visor (externo transparente levantado + interno azulado)
+
+**Molde de estas instancias:** casco INTEGRAL negro mate, vista lateral mirando a la derecha, fondo blanco de maquetación (líneas punteadas y franja — se limpian). DOBLE VISOR: el externo TRANSPARENTE está LEVANTADO y queda así; el interno AZULADO está bajado y queda así. El mecanismo circular NEGRO del visor, las ventilaciones y la goma del borde inferior ("la parte de abajo") quedan NEGROS en todas las variantes.
+
+| Instancia | Calota | Mecanismo/piezas | Goma | Visores |
+|---|---|---|---|---|
+| 1.33 | Blanco perla mate | Negros (quedan) | Negra | Externo transparente levantado + interno azulado (quedan) |
+| 1.34 | Rojo mate | Negros (quedan) | Negra | Quedan |
+| 1.35 | Azul racing mate | Negros (quedan) | Negra | Quedan |
+| 1.36 | Gris cemento mate | Negros (quedan) | Negra | Quedan |
+
+*Colores intercambiables: para otra variante se reemplaza solo la línea del color.*
+
+---
+
+## Instancia 1.33 — Calota blanco perla (doble visor queda)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco INTEGRAL con su mentonera. Mismo
+  objeto 3D, mismas proporciones.
+- EL DOBLE VISOR: el visor externo TRANSPARENTE queda TRANSPARENTE y
+  LEVANTADO, exactamente como en la foto; el visor interno AZULADO
+  que se ve bajado queda TAL CUAL, con su tono. Ninguno de los dos
+  cambia de color, se baja, se sube ni se quita.
+- El MECANISMO CIRCULAR NEGRO del visor en el lateral, con sus
+  piezas y tornillos: queda NEGRO, con su forma y posición.
+- Las ventilaciones y sus rejillas: quedan negras, con su forma.
+- LA PARTE DE ABAJO: la goma del borde inferior queda NEGRA, con su
+  forma y su acabado. No toma el color nuevo.
+- El acolchado interior y la correa que asoma.
+- El ángulo (lateral mirando a la derecha), el encuadre, el fondo
+  blanco, la iluminación y las sombras.
+- El acabado MATE: la pintura nueva sigue siendo mate.
+
+EL CAMBIO DE COLOR:
+LA CALOTA — toda la superficie pintada, incluida la mentonera — pasa
+a BLANCO PERLA MATE: blanco limpio, apenas cálido, sin brillo. La
+calota queda LISA, de un solo color, sin gráficos.
+
+COBERTURA COMPLETA:
+La calota queda BLANCO PERLA en TODA su superficie visible, sin
+ninguna isla ni parche del negro viejo. El límite entre el blanco y
+cada pieza negra (mecanismo, ventilaciones, goma) es nítido y sigue
+el borde físico real.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas punteadas,
+franjas, bordes), no aparecen: el resultado es el casco solo sobre
+su fondo blanco limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido tocar el doble visor: externo transparente levantado,
+  interno azulado bajado, tal cual están.
+- Prohibido pintar de blanco la goma del borde, el mecanismo del
+  visor o las ventilaciones: quedan negros.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó BLANCO PERLA MATE completa, sin tramos negros?
+2. ¿El visor externo sigue transparente y LEVANTADO, y el interno
+   sigue AZULADO bajado, idénticos?
+3. ¿La goma de abajo, el mecanismo circular y las ventilaciones
+   siguen negros?
+4. ¿La forma del casco quedó idéntica, sin deformarse?
+5. ¿El ángulo, el encuadre y el fondo quedaron iguales y limpios de
+   maquetación?
+6. ¿Se agregó algo que no estaba? No debe haberse agregado nada.
+```
+
+---
+
+## Instancia 1.34 — Calota rojo mate (doble visor queda)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco INTEGRAL con su mentonera. Mismo
+  objeto 3D, mismas proporciones.
+- EL DOBLE VISOR: el visor externo TRANSPARENTE queda TRANSPARENTE y
+  LEVANTADO, exactamente como en la foto; el visor interno AZULADO
+  que se ve bajado queda TAL CUAL, con su tono. Ninguno de los dos
+  cambia de color, se baja, se sube ni se quita.
+- El MECANISMO CIRCULAR NEGRO del visor en el lateral, con sus
+  piezas y tornillos: queda NEGRO, con su forma y posición.
+- Las ventilaciones y sus rejillas: quedan negras, con su forma.
+- LA PARTE DE ABAJO: la goma del borde inferior queda NEGRA, con su
+  forma y su acabado. No toma el color nuevo.
+- El acolchado interior y la correa que asoma.
+- El ángulo (lateral mirando a la derecha), el encuadre, el fondo
+  blanco, la iluminación y las sombras.
+- El acabado MATE: la pintura nueva sigue siendo mate.
+
+EL CAMBIO DE COLOR:
+LA CALOTA — toda la superficie pintada, incluida la mentonera — pasa
+a ROJO MATE: rojo pleno y franco, mate, ni brillante ni bordó. La
+calota queda LISA, de un solo color, sin gráficos.
+
+COBERTURA COMPLETA:
+La calota queda ROJO MATE en TODA su superficie visible, sin ninguna
+isla ni parche del negro viejo. El límite entre el rojo y cada pieza
+negra (mecanismo, ventilaciones, goma) es nítido y sigue el borde
+físico real.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas punteadas,
+franjas, bordes), no aparecen: el resultado es el casco solo sobre
+su fondo blanco limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido tocar el doble visor: externo transparente levantado,
+  interno azulado bajado, tal cual están.
+- Prohibido pintar de rojo la goma del borde, el mecanismo del visor
+  o las ventilaciones: quedan negros.
+- Prohibido usar un rojo brillante o un bordó: rojo pleno MATE.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó ROJO MATE completa, sin tramos negros?
+2. ¿El visor externo sigue transparente y LEVANTADO, y el interno
+   sigue AZULADO bajado, idénticos?
+3. ¿La goma de abajo, el mecanismo circular y las ventilaciones
+   siguen negros?
+4. ¿La forma del casco quedó idéntica, sin deformarse?
+5. ¿El ángulo, el encuadre y el fondo quedaron iguales y limpios de
+   maquetación?
+6. ¿Se agregó algo que no estaba? No debe haberse agregado nada.
+```
+
+---
+
+## Instancia 1.35 — Calota azul racing (doble visor queda)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco INTEGRAL con su mentonera. Mismo
+  objeto 3D, mismas proporciones.
+- EL DOBLE VISOR: el visor externo TRANSPARENTE queda TRANSPARENTE y
+  LEVANTADO, exactamente como en la foto; el visor interno AZULADO
+  que se ve bajado queda TAL CUAL, con su tono. Ninguno de los dos
+  cambia de color, se baja, se sube ni se quita. OJO: la calota va a
+  ser azul — el visor interno azulado NO es parte de la calota y
+  conserva SU tono translúcido propio, distinto de la pintura.
+- El MECANISMO CIRCULAR NEGRO del visor en el lateral, con sus
+  piezas y tornillos: queda NEGRO, con su forma y posición.
+- Las ventilaciones y sus rejillas: quedan negras, con su forma.
+- LA PARTE DE ABAJO: la goma del borde inferior queda NEGRA, con su
+  forma y su acabado. No toma el color nuevo.
+- El acolchado interior y la correa que asoma.
+- El ángulo (lateral mirando a la derecha), el encuadre, el fondo
+  blanco, la iluminación y las sombras.
+- El acabado MATE: la pintura nueva sigue siendo mate.
+
+EL CAMBIO DE COLOR:
+LA CALOTA — toda la superficie pintada, incluida la mentonera — pasa
+a AZUL RACING MATE: azul medio saturado, ni celeste ni azul marino
+casi negro. La calota queda LISA, de un solo color, sin gráficos.
+
+COBERTURA COMPLETA:
+La calota queda AZUL RACING en TODA su superficie visible, sin
+ninguna isla ni parche del negro viejo. El límite entre el azul y
+cada pieza negra (mecanismo, ventilaciones, goma) es nítido y sigue
+el borde físico real.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas punteadas,
+franjas, bordes), no aparecen: el resultado es el casco solo sobre
+su fondo blanco limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido tocar el doble visor: externo transparente levantado,
+  interno azulado bajado, tal cual están.
+- Prohibido pintar de azul la goma del borde, el mecanismo del visor
+  o las ventilaciones: quedan negros.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó AZUL RACING MATE completa, sin tramos negros?
+2. ¿El visor externo sigue transparente y LEVANTADO, y el interno
+   sigue con SU azulado translúcido propio, distinto de la pintura?
+3. ¿La goma de abajo, el mecanismo circular y las ventilaciones
+   siguen negros?
+4. ¿La forma del casco quedó idéntica, sin deformarse?
+5. ¿El ángulo, el encuadre y el fondo quedaron iguales y limpios de
+   maquetación?
+6. ¿Se agregó algo que no estaba? No debe haberse agregado nada.
+```
+
+---
+
+## Instancia 1.36 — Calota gris cemento (doble visor queda)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco INTEGRAL con su mentonera. Mismo
+  objeto 3D, mismas proporciones.
+- EL DOBLE VISOR: el visor externo TRANSPARENTE queda TRANSPARENTE y
+  LEVANTADO, exactamente como en la foto; el visor interno AZULADO
+  que se ve bajado queda TAL CUAL, con su tono. Ninguno de los dos
+  cambia de color, se baja, se sube ni se quita.
+- El MECANISMO CIRCULAR NEGRO del visor en el lateral, con sus
+  piezas y tornillos: queda NEGRO, con su forma y posición.
+- Las ventilaciones y sus rejillas: quedan negras, con su forma.
+- LA PARTE DE ABAJO: la goma del borde inferior queda NEGRA, con su
+  forma y su acabado. No toma el color nuevo.
+- El acolchado interior y la correa que asoma.
+- El ángulo (lateral mirando a la derecha), el encuadre, el fondo
+  blanco, la iluminación y las sombras.
+- El acabado MATE: la pintura nueva sigue siendo mate.
+
+EL CAMBIO DE COLOR:
+LA CALOTA — toda la superficie pintada, incluida la mentonera — pasa
+a GRIS CEMENTO MATE: gris medio neutro, sin tinte de color. El gris
+tiene que distinguirse claramente del NEGRO del mecanismo, las
+ventilaciones y la goma. La calota queda LISA, sin gráficos.
+
+COBERTURA COMPLETA:
+La calota queda GRIS CEMENTO en TODA su superficie visible, sin
+ninguna isla ni parche del negro viejo. El límite entre el gris y
+cada pieza negra es nítido y sigue el borde físico real.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas punteadas,
+franjas, bordes), no aparecen: el resultado es el casco solo sobre
+su fondo blanco limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido tocar el doble visor: externo transparente levantado,
+  interno azulado bajado, tal cual están.
+- Prohibido pintar de gris la goma del borde, el mecanismo del visor
+  o las ventilaciones: siguen negros y distinguibles del gris.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó GRIS CEMENTO MATE completa, y el gris se
+   distingue del negro de las piezas?
+2. ¿El visor externo sigue transparente y LEVANTADO, y el interno
+   sigue AZULADO bajado, idénticos?
+3. ¿La goma de abajo, el mecanismo circular y las ventilaciones
+   siguen negros?
+4. ¿La forma del casco quedó idéntica, sin deformarse?
+5. ¿El ángulo, el encuadre y el fondo quedaron iguales y limpios de
+   maquetación?
+6. ¿Se agregó algo que no estaba? No debe haberse agregado nada.
+```

@@ -735,3 +735,71 @@ VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
 6. ¿Quedó la marca de agua "豆包AI生成" o algún resto de ella en la
    escena? No debe quedar nada.
 ```
+
+---
+
+## Instancia 4.4 — Hero lifestyle del EDGE PRO camaleón (fondo negro + luces del color del cromado)
+
+**Casco (imagen adjunta):** integral deportivo EDGE PRO con pintura CAMALEÓN cromada (degradado violeta→azul según la luz), visor iridium violeta/magenta espejado, spoiler trasero, piezas negras (ventilaciones, tomas), logo "EDGE PRO" blanco en el lateral. Foto de producto lateral mirando a la derecha, fondo claro de maquetación (líneas — se limpian). El casco se preserva 100%, logo incluido.
+
+```
+Esto es una GENERACIÓN DE ESCENA DE PRODUCTO alrededor de un CASCO
+REAL, no un diseño de casco nuevo. Recibís UNA imagen: la foto de
+producto del casco camaleón. Esa foto es la ÚNICA AUTORIDAD DEL
+CASCO: su forma, su pintura, su visor y su logo se copian EXACTOS.
+El casco se mantiene 100% IGUAL — la escena nueva es solo el entorno.
+
+EL CASCO — SE COPIA EXACTO DE LA FOTO ADJUNTA:
+- Casco integral deportivo con SPOILER trasero.
+- La PINTURA CAMALEÓN CROMADA: el degradado violeta→azul brillante
+  tal como se ve en la foto, con su efecto de cambio de color según
+  la luz. No se simplifica a un color plano: es camaleón.
+- El VISOR IRIDIUM violeta/magenta espejado, bajado, con su forma.
+- Las piezas NEGRAS: ventilaciones con sus rejillas, tomas de aire,
+  goma del borde inferior. Quedan negras.
+- El logo "EDGE PRO" blanco del lateral: queda, en su posición.
+- Mismo lado visible que la foto (lateral mirando a la derecha),
+  misma forma, mismas proporciones. Nada se inventa ni se deforma.
+
+LA ESCENA A GENERAR — FONDO NEGRO CON LUCES DEL COLOR DEL CROMADO:
+- FONDO NEGRO profundo, tipo estudio oscuro premium.
+- LUCES de neón / LED en los MISMOS COLORES del cromado del casco:
+  violeta, azul y magenta. Pueden ser líneas o barras de luz, halos
+  o destellos de lente, ubicados detrás y a los costados del casco.
+- SIN HUMO: nada de niebla, bruma ni humo. La atmósfera es limpia y
+  nítida — solo oscuridad y luces de color.
+- Las luces se REFLEJAN sobre la pintura camaleón y el visor
+  espejado de forma coherente y realista: el cromado cobra vida con
+  esos reflejos violeta/azul, pero la pintura sigue siendo LA MISMA.
+- El casco es EL PROTAGONISTA ABSOLUTO: centrado o levemente
+  descentrado, grande en el encuadre, nítido, apoyado sobre una
+  superficie oscura con su reflejo suave (o con una sombra limpia).
+- Estética: foto de producto premium / campaña, fotorrealista. Nada
+  de ilustración ni render evidente.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar CUALQUIER cosa del casco: pintura camaleón,
+  visor iridium, piezas negras, logo EDGE PRO, forma, proporciones.
+- Prohibido humo, niebla o bruma: solo luces.
+- Prohibido luces de otros colores que no sean los del cromado
+  (violeta / azul / magenta).
+- Prohibido mostrar el lado del casco que no está en la foto, o
+  cambiar el ángulo del casco.
+- Prohibido agregar personas, motos, texto o logos nuevos.
+- Prohibido trasladar elementos de la maquetación de la foto
+  original (líneas, bordes).
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿El casco es EXACTAMENTE el de la foto — camaleón violeta/azul,
+   visor iridium, piezas negras, logo EDGE PRO — sin ningún cambio?
+2. ¿El fondo es negro profundo con luces violeta/azul/magenta, SIN
+   nada de humo?
+3. ¿Las luces se reflejan de forma realista en el cromado y el
+   visor, sin alterar la pintura?
+4. ¿El casco está protagonista, nítido, en el mismo ángulo lateral
+   de la foto?
+5. ¿La base/superficie y el reflejo del casco se ven limpios y
+   creíbles?
+6. ¿Se agregó algo que no estaba (texto, personas, humo)? No debe
+   haberse agregado nada.
+```
