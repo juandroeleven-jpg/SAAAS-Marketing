@@ -15,6 +15,7 @@
 | 5 — Limpieza de foto real de producto | Quitar logos/adhesivos, corregir iluminación a estudio y fondo blanco puro sobre fotos reales | [familia-5-limpieza-producto.md](familia-5-limpieza-producto.md) | 4 (frontal, trasera, lateral, superior del EDGE negro mate) |
 | 6 — Despersonalización a molde liso | Vaciar todos los gráficos, logos y stickers de la calota y llevarla a un color liso (negro mate), estructura 100% preservada | [familia-6-despersonalizacion.md](familia-6-despersonalizacion.md) | 10 — jet Cyril (3 vistas) · integral tigre (3 vistas) · jet SYM (4 vistas) |
 | 7 — Adaptación de licencia oficial | Aplicar un diseño con licencia oficial (personajes, tipografía de franquicia) sobre un molde EDGE real | [familia-7-adaptacion-licencia.md](familia-7-adaptacion-licencia.md) | En curso — proyecto de volumen alto, casos agregados uno por uno |
+| 8 — Ilustración → render fiel sobre molde real | Traducir una ilustración vectorial de diseño a foto fotorrealista, con la foto real como única autoridad de geometría | [familia-8-ilustracion-a-render.md](familia-8-ilustracion-a-render.md) | 1 (Dakota rojo/gris + visor iridium naranja-amarillo) |
 
 ## Anatomía común de todas las familias
 
