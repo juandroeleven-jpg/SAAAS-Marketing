@@ -737,3 +737,14 @@ VERIFICACIÓN FINAL:
 4. ¿La calota blanca, las alas rojo/azul y los paneles inferiores
    quedaron exactamente como en la IMAGEN 1?
 ```
+
+### Auditoría con evidencia visual real — Instancia 8.5 (30/07/2026)
+
+Técnica confirmada y en uso: las imágenes pegadas en el chat se extraen del transcript de sesión (`~/.claude/projects/.../[sessionId].jsonl`, bloques `type: image` en base64), se decodifican a archivos reales, y se procesan con Pillow (PIL) para armar tríptico + crops con zoom y etiquetas — igual que el método ya usado en otra sesión de este mismo proyecto.
+
+Archivos en `resultados/`:
+- `8.5-TRIPTICO.png` — checkpoint real / ilustración / resultado, lado a lado.
+- `8.5-CROP-zona-central-texto.png` — zoom del defecto de texto ("EDGE MELAIS").
+- `8.5-CROP-ala-ranuras.png` — zoom de las ranuras del ala, confirma que SÍ se preservaron bien.
+
+Esto confirma con evidencia visual (no solo descripción) el veredicto ya registrado: **APROBADO CON CORRECCIÓN MENOR**, defecto principal el texto corrupto del logo central. El prompt 8.5-fix ya documentado sigue siendo el paso correcto.
