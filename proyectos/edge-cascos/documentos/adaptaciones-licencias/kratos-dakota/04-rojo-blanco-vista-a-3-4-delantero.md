@@ -55,8 +55,9 @@ la foto real.
 BLOQUE 2 — COLOR Y GRÁFICO (autoridad = imagen 1)
 Sobre la calota se aplica el diseño de la ilustración, con esta
 paleta y esta distribución:
-- NEGRO como base dominante: parte alta de la calota, zona trasera y
-  spoiler.
+- NEGRO como base dominante de la parte alta de la calota y la zona
+  trasera.
+- ROJO INTENSO en el SPOILER completo: el alerón es rojo, no negro.
 - BLANCO en la banda del panel lateral bajo y en las masas de
   contraste del centro del lateral: el blanco tiene mucho peso en
   esta variante.

@@ -65,7 +65,8 @@ al dibujo.
 
 BLOQUE 2 — COLOR Y GRÁFICO (autoridad = imagen 1)
 Sobre la superficie trasera se aplica el diseño de la ilustración:
-- NEGRO en el panel central grande de la zona del spoiler y como base de la parte alta trasera.
+- ROJO INTENSO en el PANEL CENTRAL GRANDE DE LA ZONA DEL SPOILER: es la masa de color más grande y protagonista de toda la vista trasera. NO es negro.
+- NEGRO como base de la parte alta trasera, alrededor del spoiler rojo.
 - BLANCO en la BANDA HORIZONTAL BAJA que cruza la parte trasera y en las masas de contraste: el blanco tiene mucho peso en esta variante.
 - ROJO INTENSO de acento en filetes, galones, remates y las dos marcas pequeñas de texto a los costados.
 - GRIS CLARO en las tramas de líneas finas de la parte alta.
@@ -94,7 +95,7 @@ un intento anterior de esta misma vista):
   alguna zona quedó más vacía o más pobre que en el dibujo, está MAL.
 
 TEXTOS Y DECALS QUE VAN EN ESTA VISTA:
-- El logotipo "EDGE" en NEGRO, centrado sobre la BANDA
+- El logotipo "EDGE" en BLANCO con contorno oscuro, centrado sobre la BANDA
   HORIZONTAL BAJA, tal como en la ilustración.
 - El SELLO / STICKER DE HOMOLOGACIÓN "DOT": rectángulo blanco pequeño
   con el texto "DOT", centrado en el eje, por debajo de la banda,
@@ -166,7 +167,8 @@ VERIFICACIÓN FINAL — respondé estos ocho chequeos antes de entregar:
 1. ¿La SILUETA trasera es la de la foto real (ancha, con hombros
    marcados) y NO la del dibujo?
 2. ¿El resultado es una FOTOGRAFÍA de producto y no una ilustración?
-3. ¿Está el extractor superior con su rejilla?
+3. ¿El PANEL DEL SPOILER quedó ROJO INTENSO — no negro?
+3a. ¿Está el extractor superior con su rejilla?
 3b. ¿Se distinguen CLARAMENTE las DOS RANURAS PEQUEÑAS bajo el
    extractor y la PIEZA RANURADA TRASERA BAJA? En un intento anterior
    quedaron absorbidas por el gráfico: tienen que leerse como piezas

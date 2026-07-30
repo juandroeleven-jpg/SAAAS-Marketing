@@ -65,8 +65,9 @@ PROHIBIDO inventar tomas de aire, aletas o salientes.
 BLOQUE 3 — COLOR Y GRÁFICO (autoridad = imagen 1)
 Mismo diseño y misma paleta que la Vista A, ahora desplegado en todo
 el flanco:
-- NEGRO como base dominante: parte alta de la calota, zona trasera y
-  spoiler.
+- NEGRO como base dominante de la parte alta de la calota y la zona
+  trasera.
+- ROJO INTENSO en el SPOILER completo: el alerón es rojo, no negro.
 - BLANCO en la banda del panel lateral bajo y en las masas de
   contraste del centro del lateral: el blanco tiene mucho peso en
   esta variante.
