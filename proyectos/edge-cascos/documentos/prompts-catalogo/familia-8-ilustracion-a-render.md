@@ -748,3 +748,101 @@ Archivos en `resultados/`:
 - `8.5-CROP-ala-ranuras.png` — zoom de las ranuras del ala, confirma que SÍ se preservaron bien.
 
 Esto confirma con evidencia visual (no solo descripción) el veredicto ya registrado: **APROBADO CON CORRECCIÓN MENOR**, defecto principal el texto corrupto del logo central. El prompt 8.5-fix ya documentado sigue siendo el paso correcto.
+
+---
+
+## Instancia 8.5-v2 — Trasera blanco/rojo/azul, REHECHA DE CERO (texto e insignia central blindados)
+
+**Contexto:** el primer resultado de la 8.5 salió bien en silueta, alas y colorway, pero falló en dos puntos concretos de la zona central: el texto bajo el escudo salió corrupto ("EDGE MELAIS") y la rendija central se agrandó más de lo real, con la grilla inferior perdiendo contraste. En vez de aplicar el fix en dos pasos, esta versión reescribe el prompt de generación original incorporando esas dos lecciones desde el arranque.
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la ilustración trasera blanco/rojo/azul, (2) la foto real trasera del casco (checkpoint, autoridad de forma).
+
+```
+Esto es una TRADUCCIÓN DE ILUSTRACIÓN A FOTO REAL, no un casco
+nuevo. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ILUSTRACIÓN (mockup vectorial blanco/rojo/azul,
+  vista trasera): es la AUTORIDAD DE COLOR Y DISEÑO.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (vista trasera): es la ÚNICA
+  AUTORIDAD DE FORMA. Si algo de la IMAGEN 1 contradice la geometría
+  real, GANA LA IMAGEN 2, SIN EXCEPCIÓN — esto aplica también a la
+  zona central entre las alas, ver más abajo.
+
+GEOMETRÍA — TODO ESTO VIENE DE LA IMAGEN 2, SIN EXCEPCIÓN:
+- La silueta trasera completa del casco: dome redondeado, mismas
+  proporciones.
+- Las DOS piezas tipo ALA/SPOILER simétricas de la parte alta: misma
+  forma, mismo tamaño, misma posición, con sus ranuras/aletas finas
+  en el borde inferior externo de cada una. Piezas físicas reales —
+  no se redibujan según la ilustración.
+- LA RENDIJA CENTRAL — ANCLA DURA DE TAMAÑO: en la IMAGEN 2 es una
+  franja horizontal ANGOSTA entre las dos alas, no un escudo ni un
+  rombo grande. El área negra central del resultado tiene que medir
+  lo mismo que esa rendija real — NO se agranda para "hacerle
+  lugar" al logo. Si el logo no entra cómodo en ese espacio angosto,
+  el logo se achica; la rendija NUNCA se agranda para acomodarlo.
+- EL BORDE INFERIOR con sus nervaduras/rejillas verticales: en la
+  IMAGEN 2 es NEGRO MATE con las nervaduras bien marcadas y de alto
+  contraste. Esa definición y ese contraste se copian tal cual —
+  la grilla del resultado NO puede salir más clara, plateada ni
+  menos definida que la de la foto real.
+- El acabado: la calota base es MATE; las alas tienen un acabado más
+  BRILLANTE — esa diferencia se mantiene sea cual sea el color.
+
+COLOR Y DISEÑO — ESTO VIENE DE LA IMAGEN 1, APLICADO DENTRO DE LOS
+LÍMITES REALES:
+1. LA CALOTA BASE (fuera de las alas): pasa a BLANCO mate.
+2. LAS DOS ALAS: toman la combinación ROJO Y AZUL que muestra la
+   ilustración (ala izquierda en tema azul, ala derecha en tema
+   rojo, según la IMAGEN 1), dentro de los límites físicos reales de
+   cada ala. Mantienen su acabado brillante.
+3. EL LOGO CENTRAL — ANCLA DURA DE TEXTO: sobre la rendija real
+   (del tamaño de la IMAGEN 2, no más grande) va el escudo "EDGE".
+   Si se agrega texto o sub-marca debajo del escudo, tiene que ser
+   PERFECTAMENTE LEGIBLE, con letras reales y correctas — nunca una
+   palabra inventada o corrupta. Si existe la MÍNIMA duda de que el
+   texto pueda salir mal, se prioriza dejar SOLO el escudo "EDGE"
+   SIN ningún texto adicional debajo: un escudo limpio es preferible
+   a un escudo con texto ilegible.
+4. Los wordmarks "EDGE" (azul, panel izquierdo) y "EDGE PRO" (rojo,
+   panel derecho) de la parte baja: sobre la superficie de cada
+   panel, en la posición relativa del dibujo, con letras reales y
+   legibles, sin alterar la forma debajo.
+
+COBERTURA Y LÍMITES:
+El blanco cubre TODA la calota base sin tramos del negro viejo. El
+rojo/azul cubre TODA la superficie de cada ala según su distribución
+real en la ilustración. El límite entre la calota blanca y las alas
+rojo/azul es nítido y sigue el borde físico real de cada ala.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido agrandar la rendija/zona central más allá de su tamaño
+  real en la IMAGEN 2, sea cual sea la excusa (lugar para el logo,
+  composición, etc.).
+- Prohibido dejar cualquier texto ilegible, corrupto o inventado
+  bajo el escudo central: o el texto es perfectamente legible y
+  correcto, o no hay texto.
+- Prohibido que la grilla inferior pierda contraste o definición
+  respecto a la IMAGEN 2.
+- Prohibido cambiar la forma de las alas o sus ranuras.
+- Prohibido que el color se salga de los límites reales de cada
+  pieza.
+- Prohibido cambiar el acabado (brillante en las alas, mate en la
+  calota), el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — AUDITORÍA CON ZOOM, ELEMENTO POR ELEMENTO:
+1. ¿Las dos alas mantienen la FORMA exacta de la IMAGEN 2, con sus
+   ranuras y su acabado brillante?
+2. ¿La calota base quedó BLANCA completa, sin tramos negros?
+3. ¿Las alas quedaron con la combinación rojo/azul EXACTA de la
+   distribución que muestra la IMAGEN 1?
+4. ¿La rendija central mide LO MISMO que en la IMAGEN 2, sin
+   agrandarse para el logo?
+5. ¿El texto bajo el escudo (si existe) es perfectamente legible y
+   correcto — o directamente no hay texto?
+6. ¿La grilla inferior tiene el mismo contraste y definición que en
+   la IMAGEN 2?
+7. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+```
