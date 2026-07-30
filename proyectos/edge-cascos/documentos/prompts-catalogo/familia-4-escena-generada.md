@@ -803,3 +803,72 @@ VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
 6. ¿Se agregó algo que no estaba (texto, personas, humo)? No debe
    haberse agregado nada.
 ```
+
+---
+
+## Instancia 4.2-fix-b — Refinamiento del visor contra el detalle real (remaches, moldura, traslúcido)
+
+**Contexto:** el 4.2-fix salió espectacular, pero el visor del resultado quedó como una superficie lisa "perfecta" — y el visor real tiene detalles propios que importan: los puntos/remaches de fijación cerca de los bordes, la moldura fina del contorno y un leve traslúcido del vidrio ahumado que de cerca insinúa el interior. Este prompt refina SOLO el visor contra la referencia real.
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la escena del smoking ya corregida, (2) la foto real del casco (o el detalle en zoom del visor real).
+
+```
+Esto es un REFINAMIENTO DE UN SOLO DETALLE sobre una imagen ya
+buena, no una imagen nueva. Recibís DOS imágenes:
+
+- IMAGEN 1 — LA ESCENA (el hombre de smoking con el casco, ya
+  corregida): es la BASE y está BIEN. TODO queda exactamente igual
+  salvo el acabado del visor.
+- IMAGEN 2 — EL VISOR REAL (la foto real del casco / el detalle del
+  visor): es la ÚNICA AUTORIDAD de cómo se ve el visor de verdad.
+
+EL ÚNICO CAMBIO — EL VISOR SE AJUSTA AL REAL:
+El visor de la IMAGEN 1 quedó como una superficie lisa perfecta. El
+visor REAL tiene detalles que hay que reproducir, mirando la
+IMAGEN 2:
+a) LOS PUNTOS / REMACHES DE FIJACIÓN: el visor real tiene pequeños
+   puntos o tornillos de fijación cerca de sus bordes y esquinas.
+   Se agregan en los MISMOS lugares y tamaños que muestra la
+   referencia — chicos, discretos, reales. No se inventan más de
+   los que hay.
+b) LA MOLDURA DEL CONTORNO: el borde del visor real remata en una
+   moldura/junta fina donde asienta contra la calota. Ese remate
+   tiene que leerse igual en la escena.
+c) EL CARÁCTER DEL VIDRIO: el visor real es negro ahumado BRILLANTE
+   con un traslúcido muy leve — de cerca se insinúa apenas el
+   acolchado interior del casco, como en la referencia. En la
+   escena, ese traslúcido es sutil: se intuye textura interior en
+   las zonas menos reflectantes, SIN que se vea el rostro ni ningún
+   rasgo de la cara.
+d) EL REFLEJO DEL ATARDECER que ya tiene el visor en la escena SE
+   CONSERVA: los detalles nuevos conviven con ese reflejo, no lo
+   reemplazan.
+
+TODO LO DEMÁS NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ EN LA
+IMAGEN 1:
+- El casco entero: forma, negro mate, ventilaciones, spoiler,
+  posición, escala, ángulo.
+- El hombre, el smoking, el moño, la camisa, el pañuelo.
+- El fondo urbano al atardecer, el bokeh, la luz, el encuadre.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar cualquier cosa fuera del visor.
+- Prohibido inventar mecanismos, placas o herrajes que no estén en
+  la IMAGEN 2: solo los puntos/remaches y la moldura reales.
+- Prohibido aclarar el visor al punto de mostrar el rostro: sigue
+  oscuro; el traslúcido es apenas una insinuación de textura.
+- Prohibido borrar el reflejo del atardecer.
+- Prohibido agregar logos o texto.
+
+VERIFICACIÓN FINAL — respondé estos cinco chequeos antes de entregar:
+1. ¿El visor ahora tiene los puntos/remaches y la moldura del
+   contorno IGUALES a los de la referencia, en los mismos lugares?
+2. ¿Se insinúa sutilmente el interior en el vidrio ahumado, SIN que
+   se vea nada del rostro?
+3. ¿El reflejo del atardecer sigue ahí, integrado con los detalles
+   nuevos?
+4. ¿Todo lo demás — casco, hombre, smoking, fondo, luz, encuadre —
+   quedó idéntico a la IMAGEN 1?
+5. ¿Algún detalle agregado se ve como parche o dibujo encima? Debe
+   verse como parte real del vidrio.
+```
