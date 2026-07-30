@@ -2120,3 +2120,549 @@ VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
    estaban?
 6. ¿Se agregó algo que no estaba? No debe haberse agregado nada.
 ```
+
+---
+
+# Molde G — integral deportivo con spoiler y visor tornasolado
+
+**Molde de estas instancias:** casco INTEGRAL deportivo negro mate con SPOILER trasero grande, vista lateral 3/4 mirando a la derecha, sobre fondo blanco de página/maquetación (líneas de layout y otro casco asomando al borde — se limpian). VISOR TORNASOLADO arcoíris (verde/violeta espejado) con sus flechitas decorativas verdes: queda EXACTAMENTE igual en todas las variantes. La goma del borde inferior queda NEGRA. Las piezas funcionales oscuras (ventilaciones, insertos, spoiler si es pieza aparte) quedan negras. La correa que asoma queda como está.
+
+| Instancia | Calota | Piezas funcionales | Goma | Visor |
+|---|---|---|---|---|
+| 1.25 | Blanco perla mate | Negras (quedan) | Negra | Tornasolado (queda) |
+| 1.26 | Rojo mate | Negras (quedan) | Negra | Tornasolado (queda) |
+| 1.27 | Azul racing mate | Negras (quedan) | Negra | Tornasolado (queda) |
+| 1.28 | Gris cemento mate | Negras (quedan) | Negra | Tornasolado (queda) |
+
+*Colores intercambiables: para otra variante se reemplaza solo la línea del color.*
+
+---
+
+## Instancia 1.25 — Calota blanco perla (visor tornasolado queda)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco INTEGRAL deportivo con su SPOILER
+  trasero grande. Mismo objeto 3D, mismas proporciones.
+- La geometría de TODAS las piezas: spoiler, ventilaciones y sus
+  insertos, tomas de aire, contorno del visor, mentonera. Ninguna
+  cambia de forma, tamaño ni posición.
+- EL VISOR TORNASOLADO: queda EXACTAMENTE igual — espejado arcoíris
+  (verdes y violetas), con sus flechitas decorativas verdes y sus
+  reflejos. NO se cambia de color, NO se aclara, NO se oscurece.
+- LA PARTE DE ABAJO: la goma/moldura del borde inferior queda NEGRA,
+  con su forma y su acabado. No toma el color nuevo.
+- La correa que asoma por abajo: queda como está.
+- El ángulo (lateral 3/4 mirando a la derecha), el encuadre, el
+  fondo blanco, la iluminación y las sombras.
+- El acabado MATE: la pintura nueva sigue siendo mate.
+
+EL CAMBIO DE COLOR:
+1. LA CALOTA — toda la superficie pintada, incluida la mentonera y
+   el spoiler si comparte el color de la calota. Pasa a BLANCO PERLA
+   MATE: blanco limpio, apenas cálido, sin brillo.
+2. LAS PIEZAS FUNCIONALES OSCURAS — insertos de ventilación,
+   rejillas y piezas plásticas oscuras: QUEDAN NEGRAS como están.
+3. LA GOMA DEL BORDE INFERIOR — queda NEGRA, siempre.
+
+COBERTURA COMPLETA:
+La calota queda BLANCO PERLA en TODA su superficie visible, sin
+ninguna isla ni parche del negro viejo. El límite entre el blanco y
+cada pieza negra es nítido y sigue el borde físico real.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas, bordes de otros
+cascos, franjas), no aparecen: el resultado es el casco solo sobre
+su fondo blanco limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar el color del visor tornasolado o quitarle sus
+  flechitas: queda idéntico.
+- Prohibido pintar de blanco la goma del borde o las piezas
+  funcionales oscuras.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó BLANCO PERLA MATE completa, sin tramos negros?
+2. ¿El visor sigue TORNASOLADO idéntico, con sus flechitas verdes?
+3. ¿La goma del borde inferior sigue NEGRA en todo su recorrido?
+4. ¿Las piezas funcionales oscuras siguen negras?
+5. ¿La forma, el ángulo y el encuadre quedaron idénticos?
+6. ¿Quedó algún elemento de maquetación o algo agregado? No debe
+   quedar nada.
+```
+
+---
+
+## Instancia 1.26 — Calota rojo mate (visor tornasolado queda)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco INTEGRAL deportivo con su SPOILER
+  trasero grande. Mismo objeto 3D, mismas proporciones.
+- La geometría de TODAS las piezas: spoiler, ventilaciones y sus
+  insertos, tomas de aire, contorno del visor, mentonera. Ninguna
+  cambia de forma, tamaño ni posición.
+- EL VISOR TORNASOLADO: queda EXACTAMENTE igual — espejado arcoíris
+  (verdes y violetas), con sus flechitas decorativas verdes y sus
+  reflejos. NO se cambia de color, NO se aclara, NO se oscurece.
+- LA PARTE DE ABAJO: la goma/moldura del borde inferior queda NEGRA,
+  con su forma y su acabado. No toma el color nuevo.
+- La correa que asoma por abajo: queda como está.
+- El ángulo (lateral 3/4 mirando a la derecha), el encuadre, el
+  fondo blanco, la iluminación y las sombras.
+- El acabado MATE: la pintura nueva sigue siendo mate.
+
+EL CAMBIO DE COLOR:
+1. LA CALOTA — toda la superficie pintada, incluida la mentonera y
+   el spoiler si comparte el color de la calota. Pasa a ROJO MATE:
+   rojo pleno y franco, mate, ni brillante ni bordó.
+2. LAS PIEZAS FUNCIONALES OSCURAS — insertos de ventilación,
+   rejillas y piezas plásticas oscuras: QUEDAN NEGRAS como están.
+3. LA GOMA DEL BORDE INFERIOR — queda NEGRA, siempre.
+
+COBERTURA COMPLETA:
+La calota queda ROJO MATE en TODA su superficie visible, sin ninguna
+isla ni parche del negro viejo. El límite entre el rojo y cada pieza
+negra es nítido y sigue el borde físico real.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas, bordes de otros
+cascos, franjas), no aparecen: el resultado es el casco solo sobre
+su fondo blanco limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar el color del visor tornasolado o quitarle sus
+  flechitas: queda idéntico.
+- Prohibido pintar de rojo la goma del borde o las piezas
+  funcionales oscuras.
+- Prohibido usar un rojo brillante o un bordó: rojo pleno MATE.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó ROJO MATE completa, sin tramos negros?
+2. ¿El visor sigue TORNASOLADO idéntico, con sus flechitas verdes?
+3. ¿La goma del borde inferior sigue NEGRA en todo su recorrido?
+4. ¿Las piezas funcionales oscuras siguen negras?
+5. ¿La forma, el ángulo y el encuadre quedaron idénticos?
+6. ¿Quedó algún elemento de maquetación o algo agregado? No debe
+   quedar nada.
+```
+
+---
+
+## Instancia 1.27 — Calota azul racing (visor tornasolado queda)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco INTEGRAL deportivo con su SPOILER
+  trasero grande. Mismo objeto 3D, mismas proporciones.
+- La geometría de TODAS las piezas: spoiler, ventilaciones y sus
+  insertos, tomas de aire, contorno del visor, mentonera. Ninguna
+  cambia de forma, tamaño ni posición.
+- EL VISOR TORNASOLADO: queda EXACTAMENTE igual — espejado arcoíris
+  (verdes y violetas), con sus flechitas decorativas verdes y sus
+  reflejos. NO se cambia de color, NO se aclara, NO se oscurece.
+- LA PARTE DE ABAJO: la goma/moldura del borde inferior queda NEGRA,
+  con su forma y su acabado. No toma el color nuevo.
+- La correa que asoma por abajo: queda como está.
+- El ángulo (lateral 3/4 mirando a la derecha), el encuadre, el
+  fondo blanco, la iluminación y las sombras.
+- El acabado MATE: la pintura nueva sigue siendo mate.
+
+EL CAMBIO DE COLOR:
+1. LA CALOTA — toda la superficie pintada, incluida la mentonera y
+   el spoiler si comparte el color de la calota. Pasa a AZUL RACING
+   MATE: azul medio saturado, ni celeste ni azul marino casi negro.
+2. LAS PIEZAS FUNCIONALES OSCURAS — insertos de ventilación,
+   rejillas y piezas plásticas oscuras: QUEDAN NEGRAS como están.
+3. LA GOMA DEL BORDE INFERIOR — queda NEGRA, siempre.
+
+COBERTURA COMPLETA:
+La calota queda AZUL RACING en TODA su superficie visible, sin
+ninguna isla ni parche del negro viejo. El límite entre el azul y
+cada pieza negra es nítido y sigue el borde físico real.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas, bordes de otros
+cascos, franjas), no aparecen: el resultado es el casco solo sobre
+su fondo blanco limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar el color del visor tornasolado o quitarle sus
+  flechitas: queda idéntico.
+- Prohibido pintar de azul la goma del borde o las piezas
+  funcionales oscuras.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó AZUL RACING MATE completa, sin tramos negros?
+2. ¿El visor sigue TORNASOLADO idéntico, con sus flechitas verdes?
+3. ¿La goma del borde inferior sigue NEGRA en todo su recorrido?
+4. ¿Las piezas funcionales oscuras siguen negras?
+5. ¿La forma, el ángulo y el encuadre quedaron idénticos?
+6. ¿Quedó algún elemento de maquetación o algo agregado? No debe
+   quedar nada.
+```
+
+---
+
+## Instancia 1.28 — Calota gris cemento (visor tornasolado queda)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco INTEGRAL deportivo con su SPOILER
+  trasero grande. Mismo objeto 3D, mismas proporciones.
+- La geometría de TODAS las piezas: spoiler, ventilaciones y sus
+  insertos, tomas de aire, contorno del visor, mentonera. Ninguna
+  cambia de forma, tamaño ni posición.
+- EL VISOR TORNASOLADO: queda EXACTAMENTE igual — espejado arcoíris
+  (verdes y violetas), con sus flechitas decorativas verdes y sus
+  reflejos. NO se cambia de color, NO se aclara, NO se oscurece.
+- LA PARTE DE ABAJO: la goma/moldura del borde inferior queda NEGRA,
+  con su forma y su acabado. No toma el color nuevo.
+- La correa que asoma por abajo: queda como está.
+- El ángulo (lateral 3/4 mirando a la derecha), el encuadre, el
+  fondo blanco, la iluminación y las sombras.
+- El acabado MATE: la pintura nueva sigue siendo mate.
+
+EL CAMBIO DE COLOR:
+1. LA CALOTA — toda la superficie pintada, incluida la mentonera y
+   el spoiler si comparte el color de la calota. Pasa a GRIS CEMENTO
+   MATE: gris medio neutro, sin tinte de color. Los elementos y la
+   goma negros tienen que seguir leyéndose NEGROS, distintos del
+   gris.
+2. LAS PIEZAS FUNCIONALES OSCURAS — insertos de ventilación,
+   rejillas y piezas plásticas oscuras: QUEDAN NEGRAS como están.
+3. LA GOMA DEL BORDE INFERIOR — queda NEGRA, siempre.
+
+COBERTURA COMPLETA:
+La calota queda GRIS CEMENTO en TODA su superficie visible, sin
+ninguna isla ni parche del negro viejo. El límite entre el gris y
+cada pieza negra es nítido y sigue el borde físico real.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas, bordes de otros
+cascos, franjas), no aparecen: el resultado es el casco solo sobre
+su fondo blanco limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar el color del visor tornasolado o quitarle sus
+  flechitas: queda idéntico.
+- Prohibido pintar de gris la goma del borde o las piezas
+  funcionales oscuras: siguen negras y distinguibles del gris.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó GRIS CEMENTO MATE completa, sin tramos del negro
+   viejo, y el gris se distingue del negro de las piezas?
+2. ¿El visor sigue TORNASOLADO idéntico, con sus flechitas verdes?
+3. ¿La goma del borde inferior sigue NEGRA en todo su recorrido?
+4. ¿Las piezas funcionales oscuras siguen negras?
+5. ¿La forma, el ángulo y el encuadre quedaron idénticos?
+6. ¿Quedó algún elemento de maquetación o algo agregado? No debe
+   quedar nada.
+```
+
+---
+
+# Molde H — jet vintage negro mate con visor burbuja interno
+
+**Molde de estas instancias:** casco JET / abierto estilo vintage NEGRO MATE liso, vista lateral mirando a la derecha, sobre fondo blanco de maquetación (líneas de layout — se limpian). VISOR INTERNO tipo burbuja ahumado/azulado que asoma en la abertura: queda EXACTAMENTE igual en todas las variantes. La moldura/ribete NEGRO que rodea la abertura y el borde inferior ("la parte de abajo") queda NEGRA siempre. Los botones a presión CROMADOS y remaches quedan cromados. La correa queda como está.
+
+| Instancia | Calota | Moldura/ribete | Botones | Visor |
+|---|---|---|---|---|
+| 1.29 | Crema vintage | Negra (queda) | Cromados (quedan) | Ahumado azulado (queda) |
+| 1.30 | Bordó mate | Negra (queda) | Cromados (quedan) | Ahumado azulado (queda) |
+| 1.31 | Azul petróleo mate | Negra (queda) | Cromados (quedan) | Ahumado azulado (queda) |
+| 1.32 | Arena mate | Negra (queda) | Cromados (quedan) | Ahumado azulado (queda) |
+
+*Colores intercambiables: para otra variante se reemplaza solo la línea del color.*
+
+---
+
+## Instancia 1.29 — Calota crema vintage (visor y moldura quedan)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco JET / abierto estilo vintage, calota
+  redondeada lisa. Mismo objeto 3D, mismas proporciones.
+- EL VISOR INTERNO tipo burbuja ahumado/azulado que asoma en la
+  abertura: queda EXACTAMENTE igual — mismo tono, misma forma, misma
+  posición. NO se cambia de color, NO se aclara, NO se oscurece.
+- LA PARTE DE ABAJO: la moldura/ribete NEGRO que rodea toda la
+  abertura frontal y recorre el borde inferior queda NEGRA, con su
+  forma, su grosor y su acabado. No toma el color nuevo.
+- Los botones a presión CROMADOS y los remaches: quedan cromados,
+  en su posición.
+- La correa que asoma: queda como está.
+- El ángulo (lateral mirando a la derecha), el encuadre, el fondo
+  blanco, la iluminación y las sombras.
+
+EL CAMBIO DE COLOR:
+LA CALOTA — toda la superficie pintada del casco — pasa a CREMA
+VINTAGE: un marfil cálido, levemente amarillento, uniforme. La
+calota queda LISA, de un solo color, sin gráficos.
+
+COBERTURA COMPLETA:
+La calota queda CREMA en TODA su superficie visible, sin ninguna
+isla ni parche del negro viejo. El límite entre el crema y la
+moldura negra es nítido y sigue el borde físico real.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas, franjas, bordes
+de otras fotos), no aparecen: el resultado es el casco solo sobre su
+fondo blanco limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido pintar de crema la moldura/ribete del borde: queda
+  NEGRA.
+- Prohibido cambiar el color o el tono del visor burbuja.
+- Prohibido pintar los botones cromados o los remaches.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó CREMA VINTAGE completa, sin tramos negros?
+2. ¿La moldura/ribete del borde sigue NEGRA en todo su recorrido?
+3. ¿El visor burbuja sigue ahumado/azulado, idéntico?
+4. ¿Los botones cromados y remaches siguen cromados?
+5. ¿La forma, el ángulo y el encuadre quedaron idénticos?
+6. ¿Quedó algún elemento de maquetación o algo agregado? No debe
+   quedar nada.
+```
+
+---
+
+## Instancia 1.30 — Calota bordó mate (visor y moldura quedan)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco JET / abierto estilo vintage, calota
+  redondeada lisa. Mismo objeto 3D, mismas proporciones.
+- EL VISOR INTERNO tipo burbuja ahumado/azulado que asoma en la
+  abertura: queda EXACTAMENTE igual — mismo tono, misma forma, misma
+  posición. NO se cambia de color, NO se aclara, NO se oscurece.
+- LA PARTE DE ABAJO: la moldura/ribete NEGRO que rodea toda la
+  abertura frontal y recorre el borde inferior queda NEGRA, con su
+  forma, su grosor y su acabado. No toma el color nuevo.
+- Los botones a presión CROMADOS y los remaches: quedan cromados,
+  en su posición.
+- La correa que asoma: queda como está.
+- El ángulo (lateral mirando a la derecha), el encuadre, el fondo
+  blanco, la iluminación y las sombras.
+
+EL CAMBIO DE COLOR:
+LA CALOTA — toda la superficie pintada del casco — pasa a BORDÓ
+MATE: un rojo vino profundo, mate, uniforme. La calota queda LISA,
+de un solo color, sin gráficos. OJO: el bordó es oscuro — tiene que
+seguir leyéndose claramente como BORDÓ, distinto del negro de la
+moldura.
+
+COBERTURA COMPLETA:
+La calota queda BORDÓ en TODA su superficie visible, sin ninguna
+isla ni parche del negro viejo. El límite entre el bordó y la
+moldura negra es nítido y sigue el borde físico real.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas, franjas, bordes
+de otras fotos), no aparecen: el resultado es el casco solo sobre su
+fondo blanco limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido pintar de bordó la moldura/ribete del borde: queda
+  NEGRA y distinguible del bordó.
+- Prohibido oscurecer el bordó hasta confundirse con negro.
+- Prohibido cambiar el color o el tono del visor burbuja.
+- Prohibido pintar los botones cromados o los remaches.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó BORDÓ MATE completa, y se distingue claramente
+   del negro de la moldura?
+2. ¿La moldura/ribete del borde sigue NEGRA en todo su recorrido?
+3. ¿El visor burbuja sigue ahumado/azulado, idéntico?
+4. ¿Los botones cromados y remaches siguen cromados?
+5. ¿La forma, el ángulo y el encuadre quedaron idénticos?
+6. ¿Quedó algún elemento de maquetación o algo agregado? No debe
+   quedar nada.
+```
+
+---
+
+## Instancia 1.31 — Calota azul petróleo mate (visor y moldura quedan)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco JET / abierto estilo vintage, calota
+  redondeada lisa. Mismo objeto 3D, mismas proporciones.
+- EL VISOR INTERNO tipo burbuja ahumado/azulado que asoma en la
+  abertura: queda EXACTAMENTE igual — mismo tono, misma forma, misma
+  posición. NO se cambia de color, NO se aclara, NO se oscurece.
+- LA PARTE DE ABAJO: la moldura/ribete NEGRO que rodea toda la
+  abertura frontal y recorre el borde inferior queda NEGRA, con su
+  forma, su grosor y su acabado. No toma el color nuevo.
+- Los botones a presión CROMADOS y los remaches: quedan cromados,
+  en su posición.
+- La correa que asoma: queda como está.
+- El ángulo (lateral mirando a la derecha), el encuadre, el fondo
+  blanco, la iluminación y las sombras.
+
+EL CAMBIO DE COLOR:
+LA CALOTA — toda la superficie pintada del casco — pasa a AZUL
+PETRÓLEO MATE: un azul verdoso oscuro, mate, uniforme. La calota
+queda LISA, de un solo color, sin gráficos. OJO: es un color oscuro —
+tiene que seguir leyéndose claramente como AZUL PETRÓLEO, distinto
+del negro de la moldura.
+
+COBERTURA COMPLETA:
+La calota queda AZUL PETRÓLEO en TODA su superficie visible, sin
+ninguna isla ni parche del negro viejo. El límite entre el azul y la
+moldura negra es nítido y sigue el borde físico real.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas, franjas, bordes
+de otras fotos), no aparecen: el resultado es el casco solo sobre su
+fondo blanco limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido pintar de azul la moldura/ribete del borde: queda NEGRA
+  y distinguible del azul.
+- Prohibido oscurecer el azul hasta confundirse con negro.
+- Prohibido cambiar el color o el tono del visor burbuja.
+- Prohibido pintar los botones cromados o los remaches.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó AZUL PETRÓLEO MATE completa, y se distingue
+   claramente del negro de la moldura?
+2. ¿La moldura/ribete del borde sigue NEGRA en todo su recorrido?
+3. ¿El visor burbuja sigue ahumado/azulado, idéntico?
+4. ¿Los botones cromados y remaches siguen cromados?
+5. ¿La forma, el ángulo y el encuadre quedaron idénticos?
+6. ¿Quedó algún elemento de maquetación o algo agregado? No debe
+   quedar nada.
+```
+
+---
+
+## Instancia 1.32 — Calota arena mate (visor y moldura quedan)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco JET / abierto estilo vintage, calota
+  redondeada lisa. Mismo objeto 3D, mismas proporciones.
+- EL VISOR INTERNO tipo burbuja ahumado/azulado que asoma en la
+  abertura: queda EXACTAMENTE igual — mismo tono, misma forma, misma
+  posición. NO se cambia de color, NO se aclara, NO se oscurece.
+- LA PARTE DE ABAJO: la moldura/ribete NEGRO que rodea toda la
+  abertura frontal y recorre el borde inferior queda NEGRA, con su
+  forma, su grosor y su acabado. No toma el color nuevo.
+- Los botones a presión CROMADOS y los remaches: quedan cromados,
+  en su posición.
+- La correa que asoma: queda como está.
+- El ángulo (lateral mirando a la derecha), el encuadre, el fondo
+  blanco, la iluminación y las sombras.
+
+EL CAMBIO DE COLOR:
+LA CALOTA — toda la superficie pintada del casco — pasa a ARENA
+MATE: un beige arena desértico, claro, poco saturado, uniforme. La
+calota queda LISA, de un solo color, sin gráficos.
+
+COBERTURA COMPLETA:
+La calota queda ARENA en TODA su superficie visible, sin ninguna
+isla ni parche del negro viejo. El límite entre el arena y la
+moldura negra es nítido y sigue el borde físico real.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas, franjas, bordes
+de otras fotos), no aparecen: el resultado es el casco solo sobre su
+fondo blanco limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido pintar de arena la moldura/ribete del borde: queda
+  NEGRA.
+- Prohibido cambiar el color o el tono del visor burbuja.
+- Prohibido pintar los botones cromados o los remaches.
+- Prohibido dejar tramos de la calota con el negro viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó ARENA MATE completa, sin tramos negros?
+2. ¿La moldura/ribete del borde sigue NEGRA en todo su recorrido?
+3. ¿El visor burbuja sigue ahumado/azulado, idéntico?
+4. ¿Los botones cromados y remaches siguen cromados?
+5. ¿La forma, el ángulo y el encuadre quedaron idénticos?
+6. ¿Quedó algún elemento de maquetación o algo agregado? No debe
+   quedar nada.
+```

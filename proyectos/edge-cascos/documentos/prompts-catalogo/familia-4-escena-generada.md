@@ -543,6 +543,97 @@ VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
 
 ---
 
+## Instancia 4.2-fix — Corrección de los detalles del casco contra la foto real (quitar el mecanismo inventado)
+
+**Contexto (29/07/2026):** el resultado de la 4.2 (hombre de smoking al atardecer) salió muy bien como escena, pero el casco generado trae detalles inventados que no existen en el casco real: una placa ovalada con textura de puntos junto al visor (un "mecanismo" visible), ventilaciones extra y contornos que no coinciden. Este prompt conserva la escena exacta y corrige SOLO el casco contra la foto real de producto.
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la escena generada del hombre de smoking, (2) la foto real del casco modular negro mate (lateral, la del catálogo).
+
+```
+Esto es una CORRECCIÓN DE DETALLES sobre una imagen ya generada, no
+una imagen nueva. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ESCENA (el hombre de smoking con el casco puesto,
+  atardecer urbano): es la BASE. TODO queda exactamente igual salvo
+  los detalles del casco que se corrigen.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (foto de producto del modular
+  negro mate): es la ÚNICA AUTORIDAD DE LOS DETALLES DEL CASCO. El
+  casco de la escena tiene que quedar fiel a ESTE casco real.
+
+EL RESULTADO ES: la misma foto de la IMAGEN 1 — mismo hombre, mismo
+smoking, mismo fondo, misma luz, mismo encuadre, casco en la misma
+posición y a la misma escala — pero con el casco corregido para ser
+EXACTAMENTE el casco real de la IMAGEN 2.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ EN LA IMAGEN 1:
+- El hombre completo: postura, cuello, barba que asoma, pelo.
+- El smoking: saco negro, camisa blanca, moño negro, pañuelo blanco.
+- El fondo urbano al atardecer con sus luces desenfocadas (bokeh) y
+  el cielo dorado.
+- La iluminación general, el color grade y el encuadre.
+- Del casco: su POSICIÓN sobre la cabeza, su ESCALA, su ángulo de
+  vista y su color NEGRO MATE general.
+- El VISOR: sigue OSCURO Y OPACO, sin que se vea nada del rostro ni
+  del interior, y CONSERVA el reflejo del atardecer que ya tiene.
+
+LA CORRECCIÓN — LOS DETALLES DEL CASCO SE AJUSTAN A LA IMAGEN 2:
+Compará el casco de la escena con el casco real de la IMAGEN 2 y
+corregí cada diferencia, una por una:
+a) LA PLACA CON TEXTURA DE PUNTOS junto al visor (el "mecanismo"
+   ovalado granulado que se ve en la escena): SE ELIMINA POR
+   COMPLETO. En el casco real esa zona es CALOTA LISA, negra mate,
+   opaca, sin placa, sin textura, sin tornillos y sin ningún
+   mecanismo visible. Así tiene que quedar.
+b) Cualquier otra pieza, ventilación, ranura o saliente del casco de
+   la escena que NO exista en la IMAGEN 2: se elimina.
+c) Las piezas que SÍ existen se corrigen a la forma exacta de la
+   referencia: el extractor de ventilación superior con sus
+   insertos, el spoiler / aleta trasera, las tomas laterales y la
+   línea de la mentonera del modular, tal como se ven en la foto
+   real.
+d) El CONTORNO DEL VISOR se ajusta al de la referencia: el visor es
+   una pieza limpia y oscura que asienta directo sobre la calota,
+   sin placas, marcos raros ni herrajes inventados alrededor.
+El casco corregido sigue siendo negro mate, liso, sin gráficos ni
+logos, y se ve OPACO y limpio como el casco real.
+
+INTEGRACIÓN:
+Las correcciones se funden con la luz que ya tiene la escena: mismo
+negro mate, mismos reflejos suaves del atardecer sobre la calota y
+el visor. Nada de la corrección puede notarse como "parche": el
+casco entero se lee como un solo objeto real.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido dejar la placa de puntos o CUALQUIER mecanismo visible
+  junto al visor: esa zona queda lisa y opaca.
+- Prohibido inventar piezas nuevas que no estén en la IMAGEN 2.
+- Prohibido cambiar la posición, la escala o el ángulo del casco.
+- Prohibido aclarar el visor o mostrar el rostro: sigue oscuro y
+  opaco, con su reflejo.
+- Prohibido cambiar cualquier cosa del hombre, del smoking, del
+  fondo, de la luz o del encuadre.
+- Prohibido agregar logos, texto o gráficos.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿Desapareció por completo la placa con textura de puntos, y la
+   zona junto al visor quedó calota lisa negra mate como en la
+   IMAGEN 2?
+2. Compará pieza por pieza el casco del resultado con la IMAGEN 2:
+   ¿coinciden el extractor superior, el spoiler, las tomas laterales
+   y la línea de la mentonera, sin piezas inventadas?
+3. ¿El visor sigue oscuro y opaco, con el reflejo del atardecer, sin
+   nada del rostro visible, y con su contorno limpio?
+4. ¿El casco quedó en la misma posición, escala y ángulo que en la
+   IMAGEN 1?
+5. ¿El hombre, el smoking, el moño, el fondo y la luz quedaron
+   idénticos a la IMAGEN 1?
+6. ¿Alguna corrección se nota como parche o cambio de textura? No
+   debe notarse ninguna.
+```
+
+---
+
 ## Instancia 4.3 — Photoshoot de una chica con el casco modular (casco y chica protagonistas)
 
 **Casco (imagen adjunta):** el mismo modular negro mate de la 4.2 — 3/4 lateral mirando a la derecha, fondo blanco, visor ahumado oscuro bajado, spoiler trasero, extractor superior, tomas laterales, ventilación de mentonera, goma negra. Watermark "豆包AI生成" abajo a la derecha — se limpia. Acá el casco es el PRODUCTO: la composición tiene que mostrarlo completo y nítido, la chica lo luce.
