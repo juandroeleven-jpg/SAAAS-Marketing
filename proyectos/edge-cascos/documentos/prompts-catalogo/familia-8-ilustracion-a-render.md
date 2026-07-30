@@ -846,3 +846,36 @@ VERIFICACIÓN FINAL — AUDITORÍA CON ZOOM, ELEMENTO POR ELEMENTO:
 7. ¿El ángulo, el encuadre y las proporciones coinciden con la
    IMAGEN 2?
 ```
+
+---
+
+## Formato de entrega estándar (definido 30/07/2026)
+
+De acá en adelante, cada auditoría de resultado entrega SIEMPRE estos 4 elementos juntos:
+
+1. **Imágenes reales** — tríptico (checkpoint/ilustración/resultado) + crops de zoom de las zonas con dudas, enviados como archivos, no solo descriptos.
+2. **Tabla comparativa** — un renglón por cada ítem de la VERIFICACIÓN FINAL del prompt usado, con veredicto y evidencia:
+
+   | # | Chequeo | Cumplió | Evidencia |
+   |---|---|---|---|
+   | 1 | [pregunta del prompt] | ✅/⚠️/❌ | [qué muestra el crop/foto] |
+
+3. **Prompt de corrección dirigida** — ataca solo lo que falló, sobre el resultado ya bueno (dos imágenes: resultado + checkpoint).
+4. **Prompt de regeneración completa** — el prompt original rehecho de cero, con las lecciones del defecto ya incorporadas como reglas/anclas duras (una imagen: ilustración + checkpoint, como la generación original).
+
+Las dos opciones (3 y 4) se entregan juntas para que el usuario elija: corrección si el resultado base es bueno y el defecto es puntual; regeneración si prefiere partir de cero con el prompt ya blindado.
+
+### Ejemplo retroactivo — Instancia 8.5, con este formato
+
+| # | Chequeo | Cumplió | Evidencia |
+|---|---|---|---|
+| 1 | Alas — forma, ranuras, acabado brillante | ✅ | Crop "ala-ranuras": ranuras y acabado brillante coinciden con el checkpoint |
+| 2 | Calota base blanca completa | ✅ | Tríptico: blanco uniforme, sin tramos negros |
+| 3 | Distribución rojo/azul de las alas según ilustración | ✅ | Tríptico: ala izq. azul / ala der. roja, coincide con IMAGEN 1 |
+| 4 | Rendija central del mismo tamaño que el checkpoint | ❌ | Crop "zona-central-texto": el área negra se agrandó a forma de escudo/rombo, más ancha que la rendija real |
+| 5 | Texto del logo legible y correcto | ❌ | Crop "zona-central-texto": dice "EDGE MELAIS", texto corrupto |
+| 6 | Grilla inferior con el mismo contraste real | ⚠️ | Tríptico: se ve más clara/plateada que el negro mate marcado del checkpoint |
+| 7 | Ángulo, encuadre, proporciones | ✅ | Tríptico: coincide con la IMAGEN 2 |
+
+Prompt de corrección dirigida → **Instancia 8.5-fix** (arriba en este documento).
+Prompt de regeneración completa → **Instancia 8.5-v2** (arriba en este documento).
