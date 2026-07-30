@@ -735,6 +735,86 @@ VERIFICACIÓN FINAL:
    IMAGEN 2?
 ```
 
+### Auditoría con evidencia visual real — Instancia 8.2-v4, resultado real (30/07/2026)
+
+El usuario corrió la Instancia 8.2-v4 y mandó el resultado real. Archivos en `resultados/`: `8.2-v4-TRIPTICO.png`, `8.2-v4-CROP-ala-negra-corregida.png`, `8.2-v4-CROP-tono-amarillo-y-blancura.png`, `8.2-v4-amarillo-azul-RESULTADO.webp`.
+
+```
+AUDITORÍA — Instancia 8.2-v4 — amarillo/azul — trasera (cuarto intento)
+
+1. Ala/spoiler negra, con ranuras y acabado brillante → ✅ CUMPLE.
+   Se corrigió el error de lectura del intento anterior (crop
+   "ala-negra-corregida").
+2. Chevron con posición, forma y degradado azul → ✅ CUMPLE, el
+   degradado oscuro-a-claro del azul central ya está presente.
+3. Acentos grises diagonales, wordmarks, rendija, grilla, encuadre →
+   ✅ CUMPLEN.
+4. Tono del amarillo → ⚠️ AJUSTE MENOR. El usuario lo pide más
+   fluorescente/saturado, más parecido al amarillo vivo de la
+   IMAGEN 1 (el pedido anterior de "tono mostaza apagado" quedó un
+   poco por debajo de lo que en realidad muestra la ilustración).
+5. Iluminación general → ⚠️ AJUSTE MENOR. El acabado se ve algo
+   blanquecino/lavado, sin la profundidad del negro mate real del
+   checkpoint (crop "tono-amarillo-y-blancura", comparar el negro de
+   ambos lados).
+
+Veredicto: APROBADO CON AJUSTE MENOR DE COLOR/LUZ — no hace falta
+regenerar, alcanza con un ajuste puntual de dos parámetros (amarillo
+y luz), sin tocar geometría, posición ni el resto de los colores.
+```
+
+## Instancia 8.2-fix4 — Amarillo más saturado + corrección de iluminación blanquecina
+
+**Se adjuntan DOS imágenes, en este orden:** (1) el resultado 8.2-v4 ya generado, (2) el checkpoint (referencia del negro mate real y su profundidad).
+
+```
+Esto es un AJUSTE PUNTUAL de color y luz sobre un resultado que ya
+está prácticamente aprobado — no es una imagen nueva ni un cambio de
+diseño. Recibís DOS imágenes:
+
+- IMAGEN 1 — EL RESULTADO YA GENERADO (casco amarillo/azul, trasera):
+  es la BASE. La geometría, la posición del chevron, el azul con su
+  degradado, los acentos grises, los wordmarks, la rendija y la
+  grilla están BIEN y quedan tal cual — solo se ajustan dos cosas.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (checkpoint negro mate): referencia
+  de cómo se ve un negro mate real, profundo, sin lavado — para
+  corregir la iluminación.
+
+HAY DOS AJUSTES, Y SOLO ESTOS DOS:
+
+AJUSTE 1 — SATURACIÓN DEL AMARILLO:
+El amarillo del chevron sube de saturación/brillo — más fluorescente
+y vivo, no un mostaza apagado. El azul y el resto de los colores no
+cambian.
+
+AJUSTE 2 — ILUMINACIÓN:
+La iluminación general se ve demasiado blanquecina/lavada. Se corrige
+para que el negro mate de la calota tenga la misma profundidad y
+riqueza que muestra la IMAGEN 2 — negro real, no un gris claro por
+exceso de luz. No se cambia el ángulo de la luz ni el fondo, solo se
+recupera el contraste y la profundidad del negro.
+
+TODO LO DEMÁS NO SE TOCA: la forma y posición del chevron, el
+degradado azul, los acentos grises, los wordmarks, el ala negra, la
+rendija, la grilla, el ángulo y el encuadre.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar el diseño, la forma o la posición de cualquier
+  elemento.
+- Prohibido cambiar el color azul, los acentos grises o el ala negra.
+- Prohibido oscurecer o aclarar nada que no sea el amarillo y el
+  negro general de la calota.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL:
+1. ¿El amarillo quedó más fluorescente/saturado, parecido al de la
+   IMAGEN 1 original (la ilustración)?
+2. ¿El negro de la calota recuperó la profundidad real del negro
+   mate de la IMAGEN 2, sin verse lavado ni blanquecino?
+3. ¿Todo lo demás (chevron, azul, acentos grises, wordmarks, ala,
+   rendija, grilla, encuadre) sigue exactamente igual?
+```
+
 ---
 
 ## Instancia 8.3 — Trasera, rosa/violeta
