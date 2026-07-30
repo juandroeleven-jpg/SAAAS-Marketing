@@ -83,3 +83,31 @@ si el diseño requiere dos colores conviviendo. El generador obedece la
 instrucción literal y unifica todo. Hay que declarar explícitamente
 **cuántos** tonos de una misma familia deben coexistir y **cuáles**
 piezas llevan cada uno.
+
+---
+
+## Defecto adicional detectado (2026-07-30) — iluminación ondulante
+
+En el último resultado aparece un defecto que no es de color ni de
+dibujo: **la iluminación quedó ondulante**. Sobre la calota se ven
+franjas de brillo suaves que suben y bajan, como olas, en vez de un
+único degradado limpio de luz de estudio. Efectos asociados:
+
+- El gráfico parece levemente deformado / abombado en las zonas donde
+  pasa la onda.
+- La malla triangular se ve con manchones de brillo irregulares.
+- El acabado mate se rompe en parches y aparecen reflejos blandos que
+  no corresponden a la forma del casco.
+
+Causa probable: acumulación de pasadas de edición. Cada re-render
+reinterpreta el sombreado y va introduciendo ruido de iluminación.
+
+**No se corrige con color: se corrige pidiendo explícitamente que se
+reconstruya el modelado de luz de estudio conservando color, textura y
+tono.** Prompt de edición registrado en el hilo de trabajo.
+
+### Regla nueva para el registro
+
+Después de 3 o más ediciones encadenadas sobre la misma imagen, revisar
+SIEMPRE la iluminación, no solo el color. El daño acumulado no aparece
+en el color, aparece en el sombreado.
