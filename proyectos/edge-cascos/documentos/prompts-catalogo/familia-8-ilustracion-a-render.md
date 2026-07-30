@@ -128,3 +128,455 @@ VERIFICACIÓN FINAL — AUDITORÍA CON ZOOM, ELEMENTO POR ELEMENTO:
 6. ¿El ángulo, el encuadre y las proporciones coinciden con la
    IMAGEN 2?
 ```
+
+---
+
+## Checkpoint real trasero recibido — ya no son provisorios
+
+El usuario confirmó y mandó la foto real de la vista TRASERA: casco integral gunmetal/negro mate visto de atrás, con DOS piezas tipo ALA/SPOILER simétricas en la parte alta (acabado más BRILLANTE que el resto de la calota, con ranuras/aletas finas en el borde inferior externo de cada ala), una rendija horizontal oscura entre ambas alas en el centro, y el borde inferior con nervaduras/rejillas verticales (grilla de ventilación baja). Con este checkpoint, las instancias 8.2–8.5 dejan de ser provisorias.
+
+## Instancias — vista TRASERA
+
+| Instancia | Colorway | Alas | Base |
+|---|---|---|---|
+| 8.2 | Amarillo/azul | Amarillas con detalle azul | Negro/gunmetal |
+| 8.3 | Rosa/violeta | Rosa/magenta con detalle violeta | Negro/gunmetal |
+| 8.4 | Rojo/gris | Rojas con detalle gris | Negro/gunmetal |
+| 8.5 | Blanco/rojo/azul | Rojo y azul combinados | Calota base blanca |
+
+---
+
+## Instancia 8.2 — Trasera, amarillo/azul
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la ilustración trasera amarillo/azul, (2) la foto real trasera del casco (autoridad de forma).
+
+```
+Esto es una TRADUCCIÓN DE ILUSTRACIÓN A FOTO REAL, no un casco
+nuevo. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ILUSTRACIÓN (mockup vectorial amarillo/azul, vista
+  trasera): es la AUTORIDAD DE COLOR Y DISEÑO. De esta imagen se
+  toma QUÉ colores van y QUÉ gráfico se aplica — nunca la forma
+  exacta de nada.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (vista trasera, gunmetal/negro
+  mate): es la ÚNICA AUTORIDAD DE FORMA. Si algo de la IMAGEN 1
+  contradice la geometría real de la IMAGEN 2, GANA LA IMAGEN 2.
+
+GEOMETRÍA — TODO ESTO VIENE DE LA IMAGEN 2, SIN EXCEPCIÓN:
+- La silueta trasera completa del casco: dome redondeado, mismas
+  proporciones.
+- Las DOS piezas tipo ALA/SPOILER simétricas de la parte alta: misma
+  forma, mismo tamaño, misma posición, con sus ranuras/aletas finas
+  en el borde inferior externo de cada una. Son piezas físicas
+  reales — no se redibujan según la ilustración.
+- La rendija horizontal oscura entre ambas alas, en el centro.
+- El borde inferior con sus nervaduras/rejillas verticales.
+- El acabado: la calota base es MATE/gunmetal; las alas tienen un
+  acabado más BRILLANTE que el resto — esa diferencia de brillo se
+  mantiene aunque cambie el color.
+
+COLOR Y DISEÑO — ESTO VIENE DE LA IMAGEN 1, APLICADO DENTRO DE LOS
+LÍMITES REALES:
+1. LAS DOS ALAS: pasan a AMARILLO, con un detalle/acento AZUL según
+   el trazado de la ilustración, aplicado dentro de los límites
+   físicos reales de cada ala — no del contorno libre del dibujo.
+   Mantienen su acabado brillante.
+2. LA CALOTA BASE (fuera de las alas): sigue NEGRA/gunmetal, igual
+   que la foto real, salvo donde la ilustración marque logo o texto.
+3. El escudo/logo "EDGE" del centro y el wordmark "EDGE" de cada
+   lado, si los muestra la ilustración: se aplican sobre la
+   superficie de la calota, en la posición relativa que indica el
+   dibujo, sin alterar la forma de nada debajo.
+
+COBERTURA Y LÍMITES:
+El amarillo cubre TODA la superficie de cada ala, sin dejar tramos
+del color viejo. El límite entre el amarillo de las alas y el negro
+de la calota es nítido y sigue el borde físico real de cada ala.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido que la ilustración cambie la forma de las alas, la
+  rendija central o la grilla inferior.
+- Prohibido inventar piezas que no estén en la foto real.
+- Prohibido que el color se salga de los límites reales de cada ala.
+- Prohibido cambiar el acabado (brillante en las alas, mate en el
+  resto).
+- Prohibido cambiar el ángulo, el encuadre o el fondo respecto a la
+  foto real.
+
+VERIFICACIÓN FINAL — AUDITORÍA CON ZOOM, ELEMENTO POR ELEMENTO:
+1. ¿Las dos alas mantienen la FORMA exacta de la IMAGEN 2, con sus
+   ranuras/aletas y su acabado brillante?
+2. ¿Las alas quedaron AMARILLAS con el detalle azul, dentro de sus
+   límites reales, sin invadir la calota?
+3. ¿La calota base sigue negra/gunmetal, sin tramos del color viejo
+   donde no corresponde?
+4. ¿La rendija central y la grilla inferior quedaron intactas?
+5. ¿El logo/wordmark EDGE (si aplica) quedó sobre la superficie sin
+   deformar nada debajo?
+6. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+```
+
+---
+
+## Instancia 8.3 — Trasera, rosa/violeta
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la ilustración trasera rosa/violeta, (2) la foto real trasera del casco.
+
+```
+Esto es una TRADUCCIÓN DE ILUSTRACIÓN A FOTO REAL, no un casco
+nuevo. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ILUSTRACIÓN (mockup vectorial rosa/violeta, vista
+  trasera): es la AUTORIDAD DE COLOR Y DISEÑO.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (vista trasera): es la ÚNICA
+  AUTORIDAD DE FORMA. Si algo de la IMAGEN 1 contradice la geometría
+  real, GANA LA IMAGEN 2.
+
+GEOMETRÍA — TODO ESTO VIENE DE LA IMAGEN 2, SIN EXCEPCIÓN:
+- La silueta trasera completa del casco: dome redondeado, mismas
+  proporciones.
+- Las DOS piezas tipo ALA/SPOILER simétricas de la parte alta: misma
+  forma, mismo tamaño, misma posición, con sus ranuras/aletas finas
+  en el borde inferior externo. Piezas físicas reales, no se
+  redibujan.
+- La rendija horizontal oscura entre ambas alas, en el centro.
+- El borde inferior con sus nervaduras/rejillas verticales.
+- El acabado: calota base MATE/gunmetal; alas con acabado más
+  BRILLANTE — esa diferencia se mantiene.
+
+COLOR Y DISEÑO — ESTO VIENE DE LA IMAGEN 1, APLICADO DENTRO DE LOS
+LÍMITES REALES:
+1. LAS DOS ALAS: pasan a ROSA/MAGENTA con un detalle/acento VIOLETA
+   según el trazado de la ilustración, dentro de los límites físicos
+   reales de cada ala. Mantienen su acabado brillante.
+2. LA CALOTA BASE: sigue NEGRA/gunmetal, salvo donde vaya logo o
+   texto.
+3. El escudo/logo "EDGE" del centro y el wordmark "EDGE" de cada
+   lado: sobre la superficie de la calota, en la posición relativa
+   del dibujo, sin alterar la forma debajo.
+
+COBERTURA Y LÍMITES:
+El rosa/violeta cubre TODA la superficie de cada ala, sin tramos del
+color viejo. El límite con la calota negra es nítido y sigue el
+borde físico real.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar la forma de las alas, la rendija central o la
+  grilla inferior.
+- Prohibido inventar piezas que no estén en la foto real.
+- Prohibido que el color se salga de los límites reales de cada ala.
+- Prohibido cambiar el acabado (brillante/mate).
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — AUDITORÍA CON ZOOM, ELEMENTO POR ELEMENTO:
+1. ¿Las dos alas mantienen la FORMA exacta de la IMAGEN 2, con sus
+   ranuras y su acabado brillante?
+2. ¿Las alas quedaron ROSA/MAGENTA con el detalle violeta, dentro de
+   sus límites reales?
+3. ¿La calota base sigue negra/gunmetal donde corresponde?
+4. ¿La rendija central y la grilla inferior quedaron intactas?
+5. ¿El logo/wordmark EDGE quedó sobre la superficie sin deformar
+   nada debajo?
+6. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+```
+
+---
+
+## Instancia 8.4 — Trasera, rojo/gris
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la ilustración trasera rojo/gris, (2) la foto real trasera del casco. Compañera trasera de la Instancia 8.1 (lateral).
+
+```
+Esto es una TRADUCCIÓN DE ILUSTRACIÓN A FOTO REAL, no un casco
+nuevo. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ILUSTRACIÓN (mockup vectorial rojo/gris, vista
+  trasera): es la AUTORIDAD DE COLOR Y DISEÑO.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (vista trasera): es la ÚNICA
+  AUTORIDAD DE FORMA. Si algo de la IMAGEN 1 contradice la geometría
+  real, GANA LA IMAGEN 2.
+
+GEOMETRÍA — TODO ESTO VIENE DE LA IMAGEN 2, SIN EXCEPCIÓN:
+- La silueta trasera completa del casco: dome redondeado, mismas
+  proporciones.
+- Las DOS piezas tipo ALA/SPOILER simétricas de la parte alta: misma
+  forma, mismo tamaño, misma posición, con sus ranuras/aletas finas
+  en el borde inferior externo. Piezas físicas reales.
+- La rendija horizontal oscura entre ambas alas, en el centro.
+- El borde inferior con sus nervaduras/rejillas verticales.
+- El acabado: calota base MATE/gunmetal; alas con acabado más
+  BRILLANTE — esa diferencia se mantiene.
+
+COLOR Y DISEÑO — ESTO VIENE DE LA IMAGEN 1, APLICADO DENTRO DE LOS
+LÍMITES REALES:
+1. LAS DOS ALAS: pasan a ROJO con un detalle/acento GRIS según el
+   trazado de la ilustración, dentro de los límites físicos reales.
+   Mantienen su acabado brillante.
+2. LA CALOTA BASE: sigue NEGRA/gunmetal, salvo donde vaya logo o
+   texto.
+3. El logo "EDGE" (escudo central) + wordmark "EDGE"/"PRO" de cada
+   lado, coherente con el colorway rojo/gris ya usado en la
+   Instancia 8.1 lateral: sobre la superficie, sin alterar la forma
+   debajo.
+
+COBERTURA Y LÍMITES:
+El rojo cubre TODA la superficie de cada ala, sin tramos del color
+viejo. El límite con la calota negra es nítido y sigue el borde
+físico real.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar la forma de las alas, la rendija central o la
+  grilla inferior.
+- Prohibido inventar piezas que no estén en la foto real.
+- Prohibido que el color se salga de los límites reales de cada ala.
+- Prohibido cambiar el acabado (brillante/mate).
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — AUDITORÍA CON ZOOM, ELEMENTO POR ELEMENTO:
+1. ¿Las dos alas mantienen la FORMA exacta de la IMAGEN 2, con sus
+   ranuras y su acabado brillante?
+2. ¿Las alas quedaron ROJAS con el detalle gris, dentro de sus
+   límites reales?
+3. ¿La calota base sigue negra/gunmetal donde corresponde?
+4. ¿La rendija central y la grilla inferior quedaron intactas?
+5. ¿El logo/wordmark EDGE quedó coherente con el colorway rojo/gris
+   de la Instancia 8.1?
+6. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+```
+
+---
+
+## Instancia 8.5 — Trasera, blanco/rojo/azul
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la ilustración trasera blanco/rojo/azul, (2) la foto real trasera del casco.
+
+**Nota de confirmación pendiente:** a diferencia de las otras 3 (calota base negra), esta ilustración muestra la CALOTA BASE en blanco, no en negro — es el único colorway del lote con ese cambio adicional. El prompt lo incluye; confirmar si es correcto o si la base debía quedar negra como las demás.
+
+```
+Esto es una TRADUCCIÓN DE ILUSTRACIÓN A FOTO REAL, no un casco
+nuevo. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ILUSTRACIÓN (mockup vectorial blanco/rojo/azul,
+  vista trasera): es la AUTORIDAD DE COLOR Y DISEÑO.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (vista trasera): es la ÚNICA
+  AUTORIDAD DE FORMA. Si algo de la IMAGEN 1 contradice la geometría
+  real, GANA LA IMAGEN 2.
+
+GEOMETRÍA — TODO ESTO VIENE DE LA IMAGEN 2, SIN EXCEPCIÓN:
+- La silueta trasera completa del casco: dome redondeado, mismas
+  proporciones.
+- Las DOS piezas tipo ALA/SPOILER simétricas de la parte alta: misma
+  forma, mismo tamaño, misma posición, con sus ranuras/aletas finas
+  en el borde inferior externo. Piezas físicas reales.
+- La rendija horizontal oscura entre ambas alas, en el centro.
+- El borde inferior con sus nervaduras/rejillas verticales.
+- El acabado: la calota base mantiene su tipo de acabado MATE; las
+  alas mantienen su acabado más BRILLANTE — esa diferencia se
+  mantiene sea cual sea el color.
+
+COLOR Y DISEÑO — ESTO VIENE DE LA IMAGEN 1, APLICADO DENTRO DE LOS
+LÍMITES REALES:
+1. LA CALOTA BASE (fuera de las alas): pasa a BLANCO mate, a
+   diferencia de las otras variantes de este lote (que quedan
+   negras) — ver nota de confirmación arriba.
+2. LAS DOS ALAS: toman la combinación ROJO Y AZUL que muestra la
+   ilustración (según el trazado del dibujo: puede ser cada ala de
+   un color distinto, o cada ala dividida en rojo y azul — replicar
+   exactamente la distribución de la IMAGEN 1), dentro de los
+   límites físicos reales de cada ala. Mantienen su acabado
+   brillante.
+3. El logo "EDGE" (escudo central) y el wordmark "EDGE" de cada
+   lado: sobre la superficie de la calota, en la posición relativa
+   del dibujo, sin alterar la forma debajo.
+
+COBERTURA Y LÍMITES:
+El blanco cubre TODA la calota base sin tramos del negro viejo. El
+rojo/azul cubre TODA la superficie de cada ala según su
+distribución real en la ilustración. El límite entre la calota
+blanca y las alas rojo/azul es nítido y sigue el borde físico real
+de cada ala.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido cambiar la forma de las alas, la rendija central o la
+  grilla inferior.
+- Prohibido inventar piezas que no estén en la foto real.
+- Prohibido que el color se salga de los límites reales de cada
+  pieza.
+- Prohibido cambiar el acabado (brillante en las alas, mate en la
+  calota).
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — AUDITORÍA CON ZOOM, ELEMENTO POR ELEMENTO:
+1. ¿Las dos alas mantienen la FORMA exacta de la IMAGEN 2, con sus
+   ranuras y su acabado brillante?
+2. ¿La calota base quedó BLANCA completa, sin tramos negros?
+3. ¿Las alas quedaron con la combinación rojo/azul EXACTA de la
+   distribución que muestra la IMAGEN 1?
+4. ¿La rendija central y la grilla inferior quedaron intactas?
+5. ¿El logo/wordmark EDGE quedó sobre la superficie sin deformar
+   nada debajo?
+6. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+```
+
+---
+
+## Instancias — vista LATERAL (checkpoint: foto real lateral ya usada en 8.1)
+
+## Instancia 8.6 — Lateral, amarillo/azul (visor iridium verde-azul)
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la ilustración lateral amarillo/azul con visor degradé verde-azul, (2) la foto real lateral del casco negro mate.
+
+```
+Esto es una TRADUCCIÓN DE ILUSTRACIÓN A FOTO REAL, no un casco
+nuevo. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ILUSTRACIÓN (mockup vectorial amarillo/azul, visor
+  degradé verde-azul): es la AUTORIDAD DE COLOR Y DISEÑO.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (negro mate, lateral): es la
+  ÚNICA AUTORIDAD DE FORMA. Si algo de la IMAGEN 1 contradice la
+  geometría real, GANA LA IMAGEN 2. El dibujo NO manda sobre la
+  estructura.
+
+GEOMETRÍA — TODO ESTO VIENE DE LA IMAGEN 2, SIN EXCEPCIÓN:
+- La silueta completa del casco integral con su pico/visera
+  delantero: misma curvatura, mismas proporciones.
+- Las DOS ranuras de ventilación diagonales de la parte alta.
+- El MECANISMO CIRCULAR del pivote del visor en el lateral: misma
+  forma, mismo tamaño, misma posición. Pieza física real.
+- LA PIEZA EN FORMA DE ALA/PICO junto al pivote del visor: forma,
+  curvatura y posición de la foto real, exactas.
+- El panel de la mejilla inferior con su línea de recorte real: el
+  límite lo define la FOTO REAL, no el trazado libre del dibujo.
+- La ventilación inferior cerca de la mentonera.
+- La FORMA del visor: contorno y curvatura exactos de la foto real.
+- El acabado general MATE de la calota.
+
+COLOR Y DISEÑO — ESTO VIENE DE LA IMAGEN 1, APLICADO DENTRO DE LOS
+LÍMITES REALES:
+1. LA CALOTA BASE: negro, igual que la foto real.
+2. LA FRANJA/ACENTO AZUL de la zona superior: se pinta siguiendo el
+   trazado real de esa zona, no el trazado del dibujo.
+3. LAS FORMAS ANGULARES AMARILLAS (gráfico principal): sobre el
+   panel real de la mejilla inferior, dentro de SUS límites reales.
+4. EL LOGO "EDGE"/"PRO": ubicado sobre el panel real de la mejilla,
+   en la posición relativa del dibujo, ajustado al tamaño real del
+   panel.
+5. EL VISOR: recibe un TINTE IRIDIUM en degradé VERDE A AZUL, como
+   en la ilustración, aplicado como color/reflejo sobre la FORMA
+   real y transparente del visor de la foto.
+6. LA PIEZA DEL ALA/PICO junto al pivote: toma el color de acento
+   que muestra la ilustración para esta zona (amarillo o azul, según
+   el trazado exacto del dibujo) — confirmar si en la referencia
+   queda más cerca del amarillo o del azul; mantiene su forma real.
+7. EL MECANISMO DEL PIVOTE: queda con su color real de la foto, no
+   se pinta.
+
+COBERTURA Y LÍMITES:
+Cada color cubre TODA su zona correspondiente, sin islas del negro
+original salvo donde la calota base deba seguir siendo negra. Los
+límites siguen SIEMPRE los bordes físicos reales de cada panel.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido que la ilustración cambie la forma de CUALQUIER pieza.
+- Prohibido inventar piezas, cortes o relieves que no estén en la
+  foto real.
+- Prohibido que el gráfico se salga de los límites reales de su
+  panel.
+- Prohibido cambiar el color del mecanismo del pivote.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — AUDITORÍA CON ZOOM, ELEMENTO POR ELEMENTO:
+1. ¿La silueta, el pico, las ranuras, el mecanismo del pivote y la
+   ventilación inferior coinciden EXACTOS con la IMAGEN 2?
+2. ¿La pieza del ala/pico mantiene la FORMA de la IMAGEN 2?
+3. ¿Las formas amarillas y el logo quedaron DENTRO de los límites
+   reales del panel de la mejilla?
+4. ¿El visor tiene el degradé verde-azul iridium, con la FORMA
+   exacta del visor real?
+5. ¿El mecanismo del pivote quedó con su color real?
+6. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+```
+
+---
+
+## Instancia 8.7 — Lateral, rosa/violeta (visor degradé rosa-violeta-naranja)
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la ilustración lateral rosa/violeta con visor degradé, (2) la foto real lateral del casco negro mate.
+
+```
+Esto es una TRADUCCIÓN DE ILUSTRACIÓN A FOTO REAL, no un casco
+nuevo. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ILUSTRACIÓN (mockup vectorial rosa/violeta, visor
+  degradé rosa-violeta-naranja): es la AUTORIDAD DE COLOR Y DISEÑO.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (negro mate, lateral): es la
+  ÚNICA AUTORIDAD DE FORMA. Si algo de la IMAGEN 1 contradice la
+  geometría real, GANA LA IMAGEN 2.
+
+GEOMETRÍA — TODO ESTO VIENE DE LA IMAGEN 2, SIN EXCEPCIÓN:
+- La silueta completa del casco integral con su pico/visera
+  delantero: misma curvatura, mismas proporciones.
+- Las DOS ranuras de ventilación diagonales de la parte alta.
+- El MECANISMO CIRCULAR del pivote del visor en el lateral: pieza
+  física real, misma forma, mismo tamaño, misma posición.
+- LA PIEZA EN FORMA DE ALA/PICO junto al pivote del visor: forma,
+  curvatura y posición de la foto real, exactas.
+- El panel de la mejilla inferior con su línea de recorte real: el
+  límite lo define la FOTO REAL.
+- La ventilación inferior cerca de la mentonera.
+- La FORMA del visor: contorno y curvatura exactos de la foto real.
+- El acabado general MATE de la calota.
+
+COLOR Y DISEÑO — ESTO VIENE DE LA IMAGEN 1, APLICADO DENTRO DE LOS
+LÍMITES REALES:
+1. LA CALOTA BASE: negro, igual que la foto real.
+2. EL ACENTO BLANCO/GRIS de la zona superior: se pinta siguiendo el
+   trazado real de esa zona, no el trazado del dibujo.
+3. LAS FORMAS ANGULARES ROSA/VIOLETA (gráfico principal): sobre el
+   panel real de la mejilla inferior, dentro de SUS límites reales.
+4. EL LOGO "EDGE"/"PRO": sobre el panel real de la mejilla, en la
+   posición relativa del dibujo, ajustado al tamaño real del panel.
+5. EL VISOR: recibe un TINTE IRIDIUM en degradé ROSA-VIOLETA-
+   NARANJA, como en la ilustración, aplicado sobre la FORMA real y
+   transparente del visor de la foto.
+6. LA PIEZA DEL ALA/PICO junto al pivote: toma el mismo tono
+   rosa/violeta del acento principal; mantiene su forma real.
+7. EL MECANISMO DEL PIVOTE: queda con su color real de la foto.
+
+COBERTURA Y LÍMITES:
+Cada color cubre TODA su zona correspondiente, sin islas del negro
+original salvo donde la calota base deba seguir siendo negra. Los
+límites siguen SIEMPRE los bordes físicos reales de cada panel.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido que la ilustración cambie la forma de CUALQUIER pieza.
+- Prohibido inventar piezas, cortes o relieves que no estén en la
+  foto real.
+- Prohibido que el gráfico se salga de los límites reales de su
+  panel.
+- Prohibido cambiar el color del mecanismo del pivote.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — AUDITORÍA CON ZOOM, ELEMENTO POR ELEMENTO:
+1. ¿La silueta, el pico, las ranuras, el mecanismo del pivote y la
+   ventilación inferior coinciden EXACTOS con la IMAGEN 2?
+2. ¿La pieza del ala/pico mantiene la FORMA de la IMAGEN 2?
+3. ¿Las formas rosa/violeta y el logo quedaron DENTRO de los límites
+   reales del panel de la mejilla?
+4. ¿El visor tiene el degradé rosa-violeta-naranja, con la FORMA
+   exacta del visor real?
+5. ¿El mecanismo del pivote quedó con su color real?
+6. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+```
