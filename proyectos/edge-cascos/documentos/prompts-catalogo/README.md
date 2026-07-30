@@ -14,6 +14,7 @@
 | 4 — Escena generada alrededor de un casco real | Generación de una escena lifestyle nueva desde cero con el casco exacto de una foto de producto | [familia-4-escena-generada.md](familia-4-escena-generada.md) | 3 (mujer bajándose de la moto; hombre de smoking con visor opaco; photoshoot de chica con el modular) + 1 fix |
 | 5 — Limpieza de foto real de producto | Quitar logos/adhesivos, corregir iluminación a estudio y fondo blanco puro sobre fotos reales | [familia-5-limpieza-producto.md](familia-5-limpieza-producto.md) | 4 (frontal, trasera, lateral, superior del EDGE negro mate) |
 | 6 — Despersonalización a molde liso | Vaciar todos los gráficos, logos y stickers de la calota y llevarla a un color liso (negro mate), estructura 100% preservada | [familia-6-despersonalizacion.md](familia-6-despersonalizacion.md) | 10 — jet Cyril (3 vistas) · integral tigre (3 vistas) · jet SYM (4 vistas) |
+| 7 — Adaptación de licencia oficial | Aplicar un diseño con licencia oficial (personajes, tipografía de franquicia) sobre un molde EDGE real | [familia-7-adaptacion-licencia.md](familia-7-adaptacion-licencia.md) | En curso — proyecto de volumen alto, casos agregados uno por uno |
 
 ## Anatomía común de todas las familias
 
