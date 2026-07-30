@@ -559,6 +559,182 @@ VERIFICACIÓN FINAL:
    IMAGEN 2?
 ```
 
+### Auditoría con evidencia visual real — Instancia 8.2-v3, resultado real (30/07/2026)
+
+El usuario corrió la Instancia 8.2-v3 y mandó el resultado real. Archivos en `resultados/`: `8.2-v3-TRIPTICO.png`, `8.2-v3-CROP-ala-color-incorrecto.png`, `8.2-v3-CROP-tono-y-degradado-chevron.png`, `8.2-v3-amarillo-azul-RESULTADO.webp`.
+
+```
+AUDITORÍA — Instancia 8.2-v3 — amarillo/azul — trasera (tercer intento)
+
+1. Chevron y acentos grises presentes en el domo → ✅ CUMPLE, es un
+   salto grande respecto a los intentos anteriores: el gráfico ya
+   está trasladado, no solo el ala.
+2. ¿El ALA/SPOILER (pieza física, la que tiene las ranuras) quedó del
+   color correcto?
+   → ❌ NO CUMPLE. Error de lectura de la propia ilustración: la
+   IMAGEN 1 muestra esa pieza en NEGRO (contorno blanco fino, relleno
+   oscuro), no amarilla — el amarillo/azul de la ilustración
+   corresponde al chevron de ARRIBA del ala, no al ala misma. El
+   resultado coloreó la pieza física de amarillo con acento azul,
+   cuando tenía que quedar negra (crop "ala-color-incorrecto",
+   comparado contra la IMAGEN 1, no contra el checkpoint).
+3. ¿El tono de amarillo y el degradado del azul coinciden con la
+   IMAGEN 1?
+   → ❌ NO CUMPLE. El amarillo del resultado es más saturado/brillante
+   que el amarillo apagado de la ilustración, y al azul del centro le
+   falta el degradado (oscuro arriba, más claro abajo) que sí tiene
+   la IMAGEN 1 — quedó como un azul plano (crop
+   "tono-y-degradado-chevron").
+4. Wordmarks, rendija, grilla, encuadre → ✅ CUMPLEN, sin cambios
+   respecto a lo ya bueno.
+
+Veredicto: RECHAZADO — CORRECCIÓN DIRIGIDA (dos defectos concretos y
+localizados: recolorear el ala a negro, y ajustar tono/degradado del
+chevron; el resto — chevron en posición correcta, acentos grises,
+wordmarks, rendija, grilla — ya está bien).
+```
+
+## Instancia 8.2-fix3 — Ala a negro + ajuste de tono y degradado del chevron
+
+**Se adjuntan DOS imágenes, en este orden:** (1) el resultado 8.2-v3 ya generado, (2) la ilustración amarillo/azul (referencia de color correcto).
+
+```
+Esto es una CORRECCIÓN DIRIGIDA sobre un resultado ya bueno, no una
+imagen nueva. Recibís DOS imágenes:
+
+- IMAGEN 1 — EL RESULTADO YA GENERADO (casco amarillo/azul, trasera):
+  es la BASE. El chevron en su posición correcta, los acentos grises,
+  los wordmarks, la rendija y la grilla están BIEN y quedan tal cual
+  — se corrigen dos puntos concretos de color.
+- IMAGEN 2 — LA ILUSTRACIÓN (mockup vectorial amarillo/azul): acá se
+  ve que la pieza del ala/spoiler (con las ranuras, contorno blanco
+  fino) es NEGRA, no amarilla — el amarillo/azul es del chevron de
+  arriba, no del ala. También se toma de acá el tono correcto del
+  amarillo y el degradado del azul.
+
+HAY DOS CORRECCIONES:
+
+CORRECCIÓN 1 — COLOR DEL ALA/SPOILER:
+La pieza física del ala (la que tiene las ranuras en el borde) vuelve
+a ser NEGRA, con su acabado brillante — igual que la muestra la
+IMAGEN 2 para esa misma pieza. Se quita el amarillo/azul que tiene
+ahora.
+
+CORRECCIÓN 2 — TONO Y DEGRADADO DEL CHEVRON:
+El amarillo del chevron se ajusta al tono más apagado/mostaza que
+muestra la IMAGEN 2 (no el amarillo saturado actual). El panel azul
+del centro recupera el degradado de la IMAGEN 2: más oscuro/marino
+arriba, aclarando hacia abajo — no un azul plano.
+
+TODO LO DEMÁS NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ EN LA
+IMAGEN 1: la posición y forma del chevron, los acentos grises
+diagonales, los wordmarks, la rendija central, la grilla inferior, el
+ángulo y el encuadre.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido dejar el ala/spoiler en amarillo o azul.
+- Prohibido dejar el azul del centro como color plano sin degradado.
+- Prohibido tocar la posición del chevron, los acentos grises, los
+  wordmarks, la rendija o la grilla.
+- Prohibido cambiar el ángulo, el encuadre o la iluminación.
+
+VERIFICACIÓN FINAL:
+1. ¿El ala/spoiler quedó negra, con acabado brillante?
+2. ¿El amarillo del chevron tiene el tono apagado de la IMAGEN 2, no
+   el saturado anterior?
+3. ¿El azul del centro tiene el degradado (oscuro arriba, claro
+   abajo) de la IMAGEN 2?
+4. ¿El resto (posición del chevron, acentos grises, wordmarks,
+   rendija, grilla, encuadre) sigue igual que en la IMAGEN 1?
+```
+
+## Instancia 8.2-v4 — Trasera amarillo/azul, librea completa con ala negra y tono correcto
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la ilustración trasera amarillo/azul, (2) la foto real trasera del casco.
+
+```
+Esto es una TRADUCCIÓN DE ILUSTRACIÓN A FOTO REAL, no un casco
+nuevo. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ILUSTRACIÓN (mockup vectorial amarillo/azul, vista
+  trasera): es la AUTORIDAD DE COLOR Y DISEÑO COMPLETO, incluido el
+  tono exacto de cada color. TODO su gráfico se traslada al casco
+  real, como una librea/calco pintado sobre la superficie.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (vista trasera, negro mate): es
+  la ÚNICA AUTORIDAD DE GEOMETRÍA. Esto NUNCA cambia, sin excepción.
+
+LECTURA CORRECTA DE LA ILUSTRACIÓN — ANCLA DURA (causa del fallo
+anterior): en la IMAGEN 1, la pieza física del ala/spoiler (la que
+tiene las ranuras, marcada con un contorno blanco fino) es NEGRA. El
+amarillo con acento azul pertenece al CHEVRON de la zona alta del
+domo, arriba del ala — no al ala misma. No se asume que "lo más
+grande y colorido" de la ilustración es el ala: se identifica primero
+cuál forma corresponde exactamente a la pieza física real de la
+IMAGEN 2 (comparando posición y silueta) y se usa el color que la
+IMAGEN 1 le da a ESA forma puntual, sea cual sea.
+
+REGLA CENTRAL — PIEZA FÍSICA vs. GRÁFICO PINTADO:
+- El ala es pieza física real: forma, tamaño y posición exactos de
+  la IMAGEN 2, con ranuras y acabado brillante. Color: NEGRO (según
+  la lectura correcta de arriba).
+- El resto del gráfico (chevron amarillo/azul, acentos grises
+  diagonales, panel del escudo central) es GRÁFICO PINTADO sobre el
+  domo: cubre la superficie real siguiendo la posición y forma de la
+  IMAGEN 1.
+- Los tonos de color y los degradados se copian tal cual los muestra
+  la IMAGEN 1 — el amarillo es un tono apagado/mostaza, no saturado;
+  el azul del centro lleva degradado (oscuro arriba, más claro
+  abajo), no es un color plano.
+
+GEOMETRÍA — TODO ESTO VIENE DE LA IMAGEN 2, SIN EXCEPCIÓN:
+- Silueta trasera completa, dome redondeado, mismas proporciones.
+- Las DOS piezas ALA/SPOILER: forma, tamaño y posición reales, con
+  ranuras y acabado brillante, color NEGRO.
+- La rendija horizontal oscura entre ambas alas, en el centro —
+  nunca tapada ni agrandada por el gráfico.
+- El borde inferior con sus nervaduras/rejillas verticales.
+
+COLOR Y DISEÑO — TRASLADO COMPLETO DE LA IMAGEN 1, CON SUS TONOS
+EXACTOS:
+1. EL ALA/SPOILER: NEGRO, acabado brillante — no lleva el
+   amarillo/azul.
+2. EL CHEVRON DEL DOMO: tono amarillo mostaza (no saturado), con el
+   panel azul central en degradado oscuro-a-claro, en la misma
+   posición que la IMAGEN 1, pintado sobre la curvatura real del
+   domo por encima del ala.
+3. LOS ACENTOS GRISES DIAGONALES hacia los costados del domo, según
+   el trazado de la IMAGEN 1.
+4. EL PANEL DEL ESCUDO CENTRAL "EDGE" debajo de la rendija, con su
+   color de fondo, del tamaño que muestra la IMAGEN 1.
+5. LOS WORDMARKS "EDGE PRO" y "EDGE" de cada costado, con letras
+   reales y legibles.
+6. El resto de la calota que la IMAGEN 1 no cubre con gráfico: negro/
+   gunmetal mate, igual que la foto real.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido colorear el ala/spoiler de amarillo o azul.
+- Prohibido usar un amarillo más saturado que el de la IMAGEN 1.
+- Prohibido dejar el azul del centro sin su degradado.
+- Prohibido cambiar la forma de las alas, la rendija central o la
+  grilla inferior, o taparlas con el gráfico.
+- Prohibido inventar piezas físicas que no estén en la foto real.
+- Prohibido cambiar el acabado, el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL:
+1. ¿El ala/spoiler quedó negra, con ranuras y acabado brillante?
+2. ¿El chevron tiene el tono de amarillo mostaza correcto, sin
+   saturación excesiva?
+3. ¿El azul del centro tiene el degradado oscuro-a-claro de la
+   IMAGEN 1?
+4. ¿Aparecieron los acentos grises diagonales?
+5. ¿Apareció el panel del escudo central con su color de fondo?
+6. ¿Los wordmarks están legibles y bien ubicados?
+7. ¿La rendija central y la grilla inferior siguen intactas?
+8. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+```
+
 ---
 
 ## Instancia 8.3 — Trasera, rosa/violeta
