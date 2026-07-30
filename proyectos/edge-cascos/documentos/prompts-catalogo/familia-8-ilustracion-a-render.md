@@ -423,6 +423,189 @@ VERIFICACIÓN FINAL — AUDITORÍA CON ZOOM, ELEMENTO POR ELEMENTO:
    IMAGEN 2?
 ```
 
+### Auditoría con evidencia visual real — Instancia 8.3 (30/07/2026)
+
+Archivos en `resultados/`: `8.3-TRIPTICO.png`, `8.3-CROP-alas-extension-hacia-arriba.png`, `8.3-CROP-rendija-central.png`, `8.3-CROP-grilla-inferior-y-logos.png`, `8.3-rosa-violeta-ILUSTRACION.webp`, `8.3-rosa-violeta-RESULTADO.webp`.
+
+```
+AUDITORÍA — Instancia 8.3 — rosa/violeta — trasera
+
+1. ¿Las dos alas mantienen la FORMA exacta de la IMAGEN 2, con sus
+   ranuras y su acabado brillante?
+   → ❌ NO CUMPLE. El color rosa no se limitó a la pieza real del
+   ala: subió en dos puntas afiladas tipo "llama" hacia la parte
+   alta de la calota, una zona que en la foto real es domo liso sin
+   ninguna pieza física. Se copió el contorno libre de la
+   ILUSTRACIÓN (que ya de por sí dibuja una forma tipo murciélago
+   mucho más alta que el ala real) en vez de limitarse al borde
+   físico de la IMAGEN 2.
+2. ¿Las alas quedaron ROSA/MAGENTA con el detalle violeta, dentro de
+   sus límites reales?
+   → ⚠️ PARCIAL. El tono rosa/magenta y el acento violeta sí están
+   bien tomados de la ilustración, pero NO se respetó "dentro de sus
+   límites reales" — se salen del ala hacia arriba (ver punto 1).
+3. ¿La calota base sigue negra/gunmetal donde corresponde?
+   → ❌ NO CUMPLE en la zona superior: la calota perdió superficie
+   negra donde debería quedar lisa, invadida por las puntas rosa. Sí
+   se mantiene negra en el resto (laterales, zona baja).
+4. ¿La rendija central y la grilla inferior quedaron intactas?
+   → ✅ CUMPLE. La rendija horizontal central se conserva como
+   franja negra separando las dos alas, y la grilla/nervaduras del
+   borde inferior están intactas, igual que en la IMAGEN 2 (crop
+   "grilla-inferior-y-logos").
+5. ¿El logo/wordmark EDGE quedó sobre la superficie sin deformar
+   nada debajo?
+   → ✅ CUMPLE. "EDGE PRO", el escudo central y el wordmark "EDGE"
+   de ambos lados están legibles y bien ubicados, sin deformar la
+   calota.
+6. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+   → ✅ CUMPLE.
+
+Defecto único pero significativo: el color de las alas se extendió
+por fuera del límite físico real, tomando la forma libre y más alta
+de la ilustración en vez del borde real del ala — exactamente el
+modo de fallo que el prompt ya prohibía ("dentro de los límites
+físicos reales de cada ala") pero no logró evitar en la práctica.
+
+Veredicto: RECHAZADO — CORRECCIÓN DIRIGIDA (un solo defecto
+concreto y localizado: recortar el color al borde real del ala; el
+resto — colorway, logos, rendija, grilla, encuadre — ya está bien).
+```
+
+---
+
+## Instancia 8.3-fix — Recorte del color al borde real del ala
+
+**Se adjuntan DOS imágenes, en este orden:** (1) el resultado ya generado (rosa/violeta, con el color extendido hacia la calota), (2) la foto real trasera (autoridad de forma, para el borde exacto del ala).
+
+```
+Esto es una CORRECCIÓN DIRIGIDA sobre un resultado ya bueno, no una
+imagen nueva. Recibís DOS imágenes:
+
+- IMAGEN 1 — EL RESULTADO YA GENERADO (casco rosa/violeta, trasera):
+  es la BASE. El tono rosa/magenta, el acento violeta, los logos
+  EDGE, la rendija central y la grilla inferior están BIEN y quedan
+  tal cual — se corrige un solo punto.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (checkpoint trasero negro mate):
+  es la AUTORIDAD DE FORMA para el borde exacto de cada ala.
+
+HAY UNA SOLA CORRECCIÓN:
+
+El color rosa/violeta invade la calota por encima de cada ala,
+formando dos puntas afiladas hacia arriba que no existen como pieza
+física en la IMAGEN 2 — esa zona alta de la calota es domo liso.
+Se recorta el rosa/violeta exactamente al borde real de cada ala tal
+como lo muestra la IMAGEN 2 (la pieza física brillante, no más
+arriba). Todo lo que quede por fuera de ese borde vuelve a ser
+NEGRO/gunmetal mate, igual que el resto de la calota.
+
+TODO LO DEMÁS NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ EN LA
+IMAGEN 1:
+- El tono rosa/magenta y el acento violeta dentro del ala.
+- Los logos "EDGE PRO", el escudo central "EDGE" y el wordmark
+  "EDGE" de cada lado.
+- La rendija central, la grilla inferior, el ángulo y el encuadre.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido dejar rosa o violeta por encima del borde real del ala.
+- Prohibido cambiar el tono de rosa/violeta ya aplicado dentro del
+  ala.
+- Prohibido tocar los logos, la rendija central o la grilla
+  inferior.
+- Prohibido cambiar el ángulo, el encuadre o la iluminación.
+
+VERIFICACIÓN FINAL:
+1. ¿El rosa/violeta queda exactamente dentro del borde físico del
+   ala de la IMAGEN 2, sin puntas hacia la calota?
+2. ¿La calota por encima de cada ala volvió a quedar negra/gunmetal
+   lisa?
+3. ¿El tono rosa/violeta, los logos, la rendija y la grilla siguen
+   iguales que en la IMAGEN 1?
+```
+
+## Instancia 8.3-v2 — Trasera rosa/violeta, REHECHA DE CERO (límite del ala blindado)
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la ilustración trasera rosa/violeta, (2) la foto real trasera del casco.
+
+```
+Esto es una TRADUCCIÓN DE ILUSTRACIÓN A FOTO REAL, no un casco
+nuevo. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ILUSTRACIÓN (mockup vectorial rosa/violeta, vista
+  trasera): es la AUTORIDAD DE COLOR — de qué color son las alas y
+  qué acento llevan. La FORMA que dibuja el mockup para las alas es
+  más alta y puntiaguda que la pieza real: esa forma se IGNORA.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (vista trasera, negro mate): es
+  la ÚNICA AUTORIDAD DE FORMA, sin excepción, incluida la forma del
+  ala.
+
+REGLA DURA DEL LÍMITE DEL ALA (la causa del fallo anterior):
+La IMAGEN 1 dibuja el color de las alas como una silueta libre tipo
+"llama"/"murciélago" que sube alto hacia la parte superior de la
+calota. ESA SILUETA NO SE COPIA. El único límite válido para el
+color es el borde físico real del ala que se ve en la IMAGEN 2: la
+pieza brillante baja, con sus ranuras, que NO llega a la parte alta
+del domo. Si al mirar la IMAGEN 2 el ala termina en cierto punto,
+el color termina exactamente ahí — nunca más arriba, aunque la
+ilustración lo dibuje más arriba. Por encima de ese borde, la calota
+queda negro/gunmetal mate liso, sin ningún tramo de color.
+
+GEOMETRÍA — TODO ESTO VIENE DE LA IMAGEN 2, SIN EXCEPCIÓN:
+- La silueta trasera completa del casco: dome redondeado, mismas
+  proporciones.
+- Las DOS piezas tipo ALA/SPOILER simétricas de la parte alta: misma
+  forma, mismo tamaño, misma posición, con sus ranuras/aletas finas
+  en el borde inferior externo. Piezas físicas reales — el color
+  nunca sube por encima de su borde real (ver regla dura arriba).
+- La rendija horizontal oscura entre ambas alas, en el centro.
+- El borde inferior con sus nervaduras/rejillas verticales.
+- El acabado: calota base MATE/gunmetal; alas con acabado más
+  BRILLANTE — esa diferencia se mantiene.
+
+COLOR Y DISEÑO — ESTO VIENE DE LA IMAGEN 1, APLICADO DENTRO DE LOS
+LÍMITES REALES:
+1. LAS DOS ALAS: pasan a ROSA/MAGENTA con un detalle/acento VIOLETA
+   según el trazado de la ilustración, dentro de los límites físicos
+   reales de cada ala — nunca del contorno libre del dibujo. Mantienen
+   su acabado brillante.
+2. LA CALOTA BASE (incluida toda la zona por encima de las alas):
+   sigue NEGRA/gunmetal mate, salvo donde vaya logo o texto.
+3. El escudo/logo "EDGE" del centro y el wordmark "EDGE" de cada
+   lado: sobre la superficie de la calota, en la posición relativa
+   del dibujo, sin alterar la forma debajo.
+
+COBERTURA Y LÍMITES:
+El rosa/violeta cubre TODA la superficie de cada ala, sin tramos del
+color viejo, y NUNCA sube más arriba del borde real del ala. El
+límite con la calota negra es nítido y sigue el borde físico real,
+no el dibujo.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido que el color rosa/violeta suba por encima del borde real
+  del ala, aunque la ilustración lo dibuje más arriba.
+- Prohibido cambiar la forma de las alas, la rendija central o la
+  grilla inferior.
+- Prohibido inventar piezas que no estén en la foto real.
+- Prohibido cambiar el acabado (brillante/mate).
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL:
+1. ¿El rosa/violeta queda exactamente dentro del borde físico real
+   del ala de la IMAGEN 2, sin puntas ni extensiones hacia la
+   calota?
+2. ¿La calota por encima y alrededor de cada ala quedó negra/gunmetal
+   mate lisa, sin ningún tramo de color?
+3. ¿Las alas mantienen la FORMA exacta de la IMAGEN 2, con sus
+   ranuras y su acabado brillante?
+4. ¿La rendija central y la grilla inferior quedaron intactas?
+5. ¿El logo/wordmark EDGE quedó sobre la superficie sin deformar
+   nada debajo?
+6. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+```
+
 ---
 
 ## Instancia 8.4 — Trasera, rojo/gris
