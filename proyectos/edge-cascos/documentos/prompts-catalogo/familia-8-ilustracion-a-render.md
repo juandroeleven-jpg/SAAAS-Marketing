@@ -218,6 +218,145 @@ VERIFICACIÓN FINAL — AUDITORÍA CON ZOOM, ELEMENTO POR ELEMENTO:
    IMAGEN 2?
 ```
 
+### Auditoría con evidencia visual real — Instancia 8.2 (30/07/2026)
+
+Archivos en `resultados/`:
+- `8.2-TRIPTICO.png` — checkpoint real / ilustración / resultado, lado a lado.
+- `8.2-CROP-alas-y-rendija-central.png` — zoom de la zona de alas y rendija central.
+- `8.2-amarillo-azul-ILUSTRACION.webp`, `8.2-amarillo-azul-RESULTADO.webp`.
+
+```
+AUDITORÍA — Instancia 8.2 — amarillo/azul — trasera
+
+Insumos comparados:
+- Resultado generado: casco vista trasera (recibido)
+- IMAGEN 2 (foto real, autoridad de forma): checkpoint trasero negro
+  mate
+
+Hallazgo previo a la checklist: el archivo "resultado" es BYTE POR
+BYTE IDÉNTICO al checkpoint de entrada (mismo hash MD5:
+ca0d7960a62d8c64d80d37316af3dda5). No es una foto nueva ligeramente
+fallida — es la IMAGEN 2 devuelta sin ningún procesamiento.
+
+1. ¿Las dos alas mantienen la FORMA exacta de la IMAGEN 2, con sus
+   ranuras/aletas y su acabado brillante?
+   → ✅ CUMPLE (trivialmente: es la misma foto, no hubo generación).
+2. ¿Las alas quedaron AMARILLAS con el detalle azul, dentro de sus
+   límites reales, sin invadir la calota?
+   → ❌ NO CUMPLE. Las alas siguen negro/gunmetal — cero color
+   aplicado.
+3. ¿La calota base sigue negra/gunmetal, sin tramos del color viejo
+   donde no corresponde?
+   → ✅ CUMPLE (trivial, sin cambios) — pero irrelevante, no hubo
+   traducción de color.
+4. ¿La rendija central y la grilla inferior quedaron intactas?
+   → ✅ CUMPLE (trivial, sin cambios).
+5. ¿El logo/wordmark EDGE (si aplica) quedó sobre la superficie sin
+   deformar nada debajo?
+   → ❌ NO EVALUABLE. No se aplicó ningún gráfico de la ilustración
+   (ni escudo central rediseñado, ni wordmark lateral).
+6. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+   → ✅ CUMPLE (trivial, es la misma imagen).
+
+Veredicto: RECHAZADO POR AUSENCIA DE RESULTADO — REINTENTAR. Mismo
+patrón de fallo ya documentado en el primer intento de la Instancia
+8.5 (herramienta devuelve la imagen de entrada sin generar). No es un
+defecto de precisión del prompt — el prompt nunca llegó a aplicarse.
+Confirma lo que reportó el usuario: "no cumplió en nada excepto
+mantener el casco original", porque literalmente no hubo generación.
+```
+
+**Opción A — Reintento simple:** correr la Instancia 8.2 tal cual está arriba, sin tocar el texto. Es la causa más probable (fallo silencioso puntual de la herramienta), igual que en 8.5.
+
+**Opción B — Instancia 8.2-v2, si el reintento simple vuelve a fallar en silencio:**
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la ilustración trasera amarillo/azul, (2) la foto real trasera del casco (autoridad de forma).
+
+```
+Esto es una TRADUCCIÓN DE ILUSTRACIÓN A FOTO REAL, no un casco
+nuevo. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ILUSTRACIÓN (mockup vectorial amarillo/azul, vista
+  trasera): es la AUTORIDAD DE COLOR Y DISEÑO. De esta imagen se
+  toma QUÉ colores van y QUÉ gráfico se aplica — nunca la forma
+  exacta de nada.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (vista trasera, gunmetal/negro
+  mate): es la ÚNICA AUTORIDAD DE FORMA. Si algo de la IMAGEN 1
+  contradice la geometría real de la IMAGEN 2, GANA LA IMAGEN 2.
+
+REQUISITO NO NEGOCIABLE DE LA TAREA:
+Esta tarea EXIGE generar una imagen fotorrealista NUEVA, con la
+geometría de la IMAGEN 2 y el color/diseño de la IMAGEN 1 aplicado
+sobre esa geometría. Devolver la IMAGEN 1, la IMAGEN 2, o cualquiera
+de las dos sin modificar NO es un resultado válido — equivale a no
+completar la tarea. Si no es posible generar el cambio, no se
+devuelve ninguna imagen: se indica explícitamente que no se pudo
+generar. Nunca se entrega una imagen de entrada como si fuera el
+resultado.
+
+GEOMETRÍA — TODO ESTO VIENE DE LA IMAGEN 2, SIN EXCEPCIÓN:
+- La silueta trasera completa del casco: dome redondeado, mismas
+  proporciones.
+- Las DOS piezas tipo ALA/SPOILER simétricas de la parte alta: misma
+  forma, mismo tamaño, misma posición, con sus ranuras/aletas finas
+  en el borde inferior externo de cada una. Son piezas físicas
+  reales — no se redibujan según la ilustración.
+- La rendija horizontal oscura entre ambas alas, en el centro.
+- El borde inferior con sus nervaduras/rejillas verticales.
+- El acabado: la calota base es MATE/gunmetal; las alas tienen un
+  acabado más BRILLANTE que el resto — esa diferencia de brillo se
+  mantiene aunque cambie el color.
+
+COLOR Y DISEÑO — ESTO VIENE DE LA IMAGEN 1, APLICADO DENTRO DE LOS
+LÍMITES REALES:
+1. LAS DOS ALAS: pasan a AMARILLO, con un detalle/acento AZUL según
+   el trazado de la ilustración, aplicado dentro de los límites
+   físicos reales de cada ala — no del contorno libre del dibujo.
+   Mantienen su acabado brillante.
+2. LA CALOTA BASE (fuera de las alas): sigue NEGRA/gunmetal, igual
+   que la foto real, salvo donde la ilustración marque logo o texto.
+3. El escudo/logo "EDGE" del centro y el wordmark "EDGE" de cada
+   lado, si los muestra la ilustración: se aplican sobre la
+   superficie de la calota, en la posición relativa que indica el
+   dibujo, sin alterar la forma de nada debajo. Si el texto no puede
+   reproducirse legible letra por letra, se omite antes que dejarlo
+   corrupto.
+
+COBERTURA Y LÍMITES:
+El amarillo cubre TODA la superficie de cada ala, sin dejar tramos
+del color viejo. El límite entre el amarillo de las alas y el negro
+de la calota es nítido y sigue el borde físico real de cada ala.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido devolver la IMAGEN 1 o la IMAGEN 2 sin modificar como si
+  fuera el resultado.
+- Prohibido que la ilustración cambie la forma de las alas, la
+  rendija central o la grilla inferior.
+- Prohibido inventar piezas que no estén en la foto real.
+- Prohibido que el color se salga de los límites reales de cada ala.
+- Prohibido cambiar el acabado (brillante en las alas, mate en el
+  resto).
+- Prohibido cambiar el ángulo, el encuadre o el fondo respecto a la
+  foto real.
+
+VERIFICACIÓN FINAL — AUDITORÍA CON ZOOM, ELEMENTO POR ELEMENTO:
+1. ¿El resultado es una imagen fotorrealista NUEVA, distinta en
+   color de ambas imágenes de entrada?
+2. ¿Las dos alas mantienen la FORMA exacta de la IMAGEN 2, con sus
+   ranuras/aletas y su acabado brillante?
+3. ¿Las alas quedaron AMARILLAS con el detalle azul, dentro de sus
+   límites reales, sin invadir la calota?
+4. ¿La calota base sigue negra/gunmetal, sin tramos del color viejo
+   donde no corresponde?
+5. ¿La rendija central y la grilla inferior quedaron intactas?
+6. ¿El logo/wordmark EDGE (si aplica) quedó sobre la superficie sin
+   deformar nada debajo, o fue omitido si no salía legible?
+7. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+```
+
 ---
 
 ## Instancia 8.3 — Trasera, rosa/violeta
