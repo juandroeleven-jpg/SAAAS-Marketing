@@ -68,6 +68,18 @@ paleta y esta distribución:
 - La trama geométrica fina (líneas paralelas, mallas triangulares y
   encuadres angulares concéntricos) va sobre la parte alta y media
   del lateral, siguiendo el recorrido de la ilustración.
+- SEPARACIÓN DE TONOS — REGLA DE CONTEO: los tonos declarados arriba
+  son niveles SEPARADOS y tienen que poder CONTARSE a simple vista en
+  el resultado final. El error típico de este generador es
+  apelotonarlos todos en valores medios y devolver un casco LAVADO.
+  Si dos de los tonos declarados terminan pareciéndose entre sí, el
+  resultado está MAL. Los oscuros van OSCUROS y los claros van
+  CLAROS: no promediar.
+- La luz de estudio NO debe aplanar los tonos: aunque haya reflejo
+  especular, cada tono conserva su nivel.
+- DENSIDAD DE LÍNEAS: la cantidad de líneas finas y de trama de la
+  ilustración se RESPETA. Prohibido simplificar, reducir la cantidad
+  de líneas o dejar vacías zonas donde la ilustración tiene trama.
 - Los cortes entre colores son NÍTIDOS, de borde recto y escalonado
   (estilo racing), no degradados difusos.
 - El logotipo "EDGE" en su tipografía itálica estilizada va en el
@@ -106,6 +118,19 @@ BLOQUE 4 — FOTOGRAFÍA
 - Acabado MATE en las zonas de color, igual que el mate del casco
   real: sin barniz brillante espejado.
 - Nitidez y nivel de detalle de fotografía de producto.
+
+PROHIBIDO INVENTAR PIEZAS — ATENCIÓN MÁXIMA:
+DEBAJO DEL MECANISMO DEL VISOR NO HAY NINGUNA PIEZA NEGRA EXTRA:
+ninguna aleta, ningún saliente, ninguna tapa, ninguna ranura
+adicional. Esa zona es superficie limpia de la calota. Si aparece
+algo ahí, el resultado está MAL y hay que rehacerlo.
+
+EL SELLO DOT NO SE DIBUJA:
+No incluir calcomanías de homologación, sellos normativos ni texto
+legal de certificación. Este generador siempre los escribe mal. Se
+componen después en post-producción con el PNG oficial.
+Lo mismo vale para la MICROTIPOGRAFÍA fina: se dibuja como textura,
+sin pretender que sea legible.
 
 PROHIBIDO ABSOLUTO:
 - Prohibido devolver una ilustración, un vector o un render plano: el

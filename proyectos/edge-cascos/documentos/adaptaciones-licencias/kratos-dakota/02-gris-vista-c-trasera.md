@@ -145,6 +145,32 @@ BLOQUE 4 — FOTOGRAFÍA
 - Coherencia de serie con las Vistas A y B: es el mismo casco, con el
   mismo diseño, visto desde atrás.
 
+PROHIBIDO INVENTAR PIEZAS — ATENCIÓN MÁXIMA:
+DEBAJO DEL MECANISMO DEL VISOR NO HAY NINGUNA PIEZA NEGRA EXTRA:
+ninguna aleta, ningún saliente, ninguna tapa, ninguna ranura
+adicional. Esa zona es superficie limpia de la calota. Si aparece
+algo ahí, el resultado está MAL y hay que rehacerlo.
+
+- SEPARACIÓN DE TONOS — REGLA DE CONTEO: los tonos declarados arriba
+  son niveles SEPARADOS y tienen que poder CONTARSE a simple vista en
+  el resultado final. El error típico de este generador es
+  apelotonarlos todos en valores medios y devolver un casco LAVADO.
+  Si dos de los tonos declarados terminan pareciéndose entre sí, el
+  resultado está MAL. Los oscuros van OSCUROS y los claros van
+  CLAROS: no promediar.
+- La luz de estudio NO debe aplanar los tonos: aunque haya reflejo
+  especular, cada tono conserva su nivel.
+- DENSIDAD DE LÍNEAS: la cantidad de líneas finas y de trama de la
+  ilustración se RESPETA. Prohibido simplificar, reducir la cantidad
+  de líneas o dejar vacías zonas donde la ilustración tiene trama.
+
+EL SELLO DOT NO SE DIBUJA:
+No incluir calcomanías de homologación, sellos normativos ni texto
+legal de certificación. Este generador siempre los escribe mal. Se
+componen después en post-producción con el PNG oficial.
+Lo mismo vale para la MICROTIPOGRAFÍA fina: se dibuja como textura,
+sin pretender que sea legible.
+
 PROHIBIDO ABSOLUTO:
 - Prohibido copiar la silueta de la ilustración: la forma es la de la
   imagen 2.
