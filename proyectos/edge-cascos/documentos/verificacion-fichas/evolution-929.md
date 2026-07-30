@@ -22,3 +22,9 @@ Prompts: `../prompts-catalogo/evolution-929-prompt-a-homologacion.md` y `evoluti
 ## Nota adicional — Boston resuelto
 
 La sección EDGE del Excel contiene la columna Boston: la ficha recibida antes como "Boston" verifica bien (Flip Up, LED X, doble visera X, micrométrica X, ABS/EPS X, canal lentes N/A, Pinlock N/A, quick visor N/A) y su certificación es "DOT & ECE". Se actualizó el prompt A del Boston reemplazando el marcador [CERTIFICACIÓN].
+
+## Validación del resultado generado (2026-07-30)
+
+- ✅ Grid B: cumplió todo (LED eliminado, micrométrica en positivo, ABS agregado).
+- ❌ Tarjeta A v1: conservó "FNVSS 510" en el banner y fusionó "anti empañante + con Pinlock" en un renglón.
+- Excel actualizado: CON PINLOCK pasó a N/A en toda la línea EDGE → Pinlock se elimina de la tarjeta (7 ítems). Prompt A v2 publicado con banner "solo DOT" reforzado.

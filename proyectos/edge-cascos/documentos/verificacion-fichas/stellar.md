@@ -24,3 +24,10 @@ Fuentes: ficha técnica del Stellar (tarjeta homologación + grid de íconos) vs
 
 1. Corregir en el Excel: DOBLE VISERA Stellar X → N/A (según decisión del usuario).
 2. Corregir la ficha original: quitar el tache de la hebilla micrométrica y agregar ABS/EPS.
+
+## Validación del resultado generado (2026-07-30)
+
+- ✅ Grid B: cumplió todo — sin doble visera (decisión del usuario), micrométrica en positivo, Pinlock/kit visor/EPS con íconos nuevos, 6 celdas correctas.
+- ✅ Tarjeta A: banner "DOT & ECE 22.06" correcto, 7 renglones exactos con ABS, separadores finos.
+- ⚠️ Defecto cosmético en la tarjeta: mini-destello decorativo junto a "CUBRE NARIZ" (artefacto recurrente del generador, prohibido en el prompt). Borrar en edición o regenerar.
+- 🔴 Sigue pendiente: corregir en el Excel DOBLE VISERA Stellar X → N/A.
