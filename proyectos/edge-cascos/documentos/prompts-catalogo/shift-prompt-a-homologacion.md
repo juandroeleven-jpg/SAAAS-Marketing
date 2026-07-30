@@ -1,9 +1,10 @@
-# Prompt A — Tarjeta de HOMOLOGACIÓN — EDGEPRO SHIFT (corregido 2026-07-29)
+# Prompt A — Tarjeta de HOMOLOGACIÓN — EDGEPRO SHIFT (v2 — 2026-07-30)
 
-Correcciones aplicadas sobre la versión original:
-1. Se agregó "INTERIOR EPS DE ALTA RESISTENCIA" (confirmado X en el Excel para Shift, faltaba en ambas piezas). La tarjeta pasa de 7 a 8 ítems y de 6 a 7 separadores.
-2. Se ajustó el bloque de lienzo constante: la tarjeta tiene 8 ítems aunque la referencia tenga 7 — el lienzo NO cambia, se compacta el reparto interno.
-3. Nota histórica del conteo reescrita en genérico para no anclar números de otra tarjeta.
+Cambios v2 tras validar el primer resultado generado (falló en 3: banner "FNVSS 510", ítem corrupto "PREPARADO PARA PINLOCK", y omitió "CUBRE NARIZ"):
+1. Banner reforzado con verificación explícita.
+2. Regla "un ítem por renglón" con texto exacto; prohibida la palabra PINLOCK en toda la tarjeta (va solo en el grid).
+3. Chequeo nominal de los 8 ítems, en particular CUBRE NARIZ.
+Contenido sin cambios vs v1: 8 ítems (incluye EPS) / 7 separadores.
 
 ---
 
@@ -57,10 +58,12 @@ BLOQUE 2 — BANNER NEGRO (debajo del título, ancho completo del lienzo):
   ocupando la mayor parte del banner (como una insignia/logo).
 - Debajo de "DOT", dentro del mismo banner negro, en blanco, en cuerpo
   bastante más chico y centrado: "& ECE 22.06".
-- CRÍTICO: la imagen de referencia dice "FNVSS 510" debajo del DOT. Ese
-  texto NO se copia. La certificación correcta de este casco, según el
-  excel maestro, es "DOT & ECE 22.06". El número "FNVSS 510" no existe
-  en la fuente de datos. Reemplazalo.
+- MÁXIMA ATENCIÓN — ESTE ERROR YA OCURRIÓ EN UN INTENTO ANTERIOR DE
+  ESTA MISMA TARJETA: el resultado copió "FNVSS 510" de la referencia
+  debajo del DOT. ESO ES UN ERROR. "FNVSS 510" NO EXISTE en la fuente
+  de datos. La única línea secundaria válida debajo de "DOT" es
+  "& ECE 22.06". Si al terminar el banner dice "FNVSS 510" en
+  cualquier parte, el resultado está MAL y hay que rehacerlo.
 
 BLOQUE 3 — LISTA DE ÍTEMS (fondo GRIS CLARO, todo el alto restante):
 Lista de EXACTAMENTE 8 ítems, en este orden, en MAYÚSCULAS, negro,
@@ -74,16 +77,25 @@ bold, centrados horizontalmente:
 7. CUBRE BARBILLA
 8. CUBRE NARIZ
 
-CRÍTICO — CONTEO FORZADO DE ÍTEMS (hallazgo real de este catálogo: un
-generador devolvió una tarjeta con un ítem repetido de más, y en otra
-pieza devolvió filas de más con ítems duplicados y arte distinto en
-cada repetición — prestar máxima atención acá):
+CRÍTICO — CONTEO FORZADO, UN ÍTEM POR RENGLÓN Y TEXTO EXACTO (estos
+errores ya ocurrieron en un intento anterior de ESTA MISMA tarjeta: el
+resultado escribió "PREPARADO PARA PINLOCK" — un texto que no existe,
+mezcla de dos conceptos — y OMITIÓ el renglón "CUBRE NARIZ" — máxima
+atención):
 - La lista tiene EXACTAMENTE 8 ítems. NUNCA 7, NUNCA 9.
-- Cada uno de los 8 ítems aparece UNA sola vez — no repitas ninguno
-  para rellenar espacio vertical, ni aunque sobre o falte lugar.
-- Antes de entregar, contá los renglones de la lista UNO POR UNO:
-  tienen que ser 8, ni uno más ni uno menos, ninguno repetido, y cada
-  uno con un texto distinto de los otros 7.
+- Cada renglón contiene UN (1) solo ítem, con el texto EXACTO de la
+  lista, sin palabras agregadas, quitadas ni mezcladas.
+- El ítem 2 dice "PREPARADO PARA ANTI EMPAÑANTE" — NO "preparado para
+  Pinlock" ni ninguna otra variante. La palabra "PINLOCK" NO aparece
+  en NINGUNA parte de esta tarjeta (ese ítem va en el grid de íconos,
+  no acá).
+- El ítem 8, "CUBRE NARIZ", es OBLIGATORIO: en un intento anterior se
+  omitió. La lista termina en "CUBRE NARIZ", después de
+  "CUBRE BARBILLA".
+- Cada ítem aparece UNA sola vez — no repitas ninguno para rellenar.
+- Antes de entregar, contá los renglones UNO POR UNO y compará cada
+  texto contra la lista: 8 renglones, ninguno repetido, ninguno
+  fusionado, ninguno omitido.
 
 CRÍTICO — LOS SEPARADORES SON LÍNEAS FINAS, NO BANDAS (defecto real de
 este catálogo: descritos solo como "línea horizontal fina gris",
