@@ -1196,3 +1196,107 @@ VERIFICACIÓN FINAL — respondé estos ocho chequeos antes de entregar:
 8. ¿El casco quedó a escala real — más angosto que los hombros — y
    sin marca de agua en la escena?
 ```
+
+---
+
+## Instancia 4.4-v4 — Camaleón neón, encuadre cerrado (casco de cerca + persona hasta la cintura)
+
+**Contexto:** el intento de plano entero (4.4-v3) sacrificó fidelidad al alejar la cámara: el casco perdió el spoiler trasero, la calota se volvió menos angulosa y el logo "EDGE PRO" se redujo a puntos ilegibles en vez del gráfico real. Diagnóstico: cuanto más chico ocupa el casco en el cuadro, peor copia sus detalles. Esta versión cierra el encuadre — el casco se ve DE CERCA como protagonista absoluto, y la persona se ve solo hasta la CINTURA, no de cuerpo entero. Mismo prompt de un solo paso (una imagen adjunta).
+
+**Se adjunta UNA imagen:** la foto de producto del casco camaleón.
+
+```
+Esto es una GENERACIÓN DE ESCENA DE CAMPAÑA alrededor de un CASCO
+REAL, no un diseño de casco nuevo. Recibís UNA imagen: la foto de
+producto del casco camaleón. Esa foto es la ÚNICA AUTORIDAD DEL
+CASCO: su forma, su pintura, su visor y su logo se copian EXACTOS,
+pieza por pieza. El casco se mantiene 100% IGUAL.
+
+ENCUADRE — PLANO CERRADO, EL CASCO DE CERCA:
+Esto es lo más importante de este prompt: la cámara está CERCA. El
+encuadre es un PLANO MEDIO CORTO: se ve a la persona desde la
+CINTURA hacia arriba, NO de cuerpo entero. El casco ocupa una parte
+grande y protagonista del cuadro, con detalle nítido y grande —
+como una foto de campaña de producto, no una foto lejana de cuerpo
+completo. Cuanto más grande y cerca se vea el casco, mejor se
+respeta cada detalle real.
+
+EL CASCO — SE COPIA EXACTO DE LA FOTO, PIEZA POR PIEZA:
+- Casco integral deportivo. Es OBLIGATORIO que se vea el SPOILER
+  trasero prominente y anguloso de la parte alta de atrás, tal como
+  lo muestra la foto — no se lo suaviza, no desaparece, no se
+  redondea la calota.
+- La PINTURA CAMALEÓN CROMADA: el degradado violeta→azul brillante,
+  con su efecto de cambio de color según la luz.
+- Las piezas negras: ventilaciones con sus rejillas, tomas de aire,
+  goma del borde inferior.
+- El LOGO "EDGE PRO" del lateral: se reproduce como TEXTO LEGIBLE,
+  con esas letras exactas en blanco, en su posición y tamaño reales.
+  PROHIBIDO reemplazarlo por puntos, manchas o un garabato que
+  parezca logo: es el texto "EDGE PRO" tal cual.
+- Mismo lado visible que la foto (lateral mirando a la derecha),
+  misma silueta angulosa, mismas proporciones exactas.
+
+EL VISOR — IRIDIUM OPACO TOTAL, CERO TRANSPARENCIA:
+- Espejo iridium violeta/magenta PURO Y OPACO.
+- NO se ve NADA a través: ni rostro, ni ojos, ni estructura interna.
+- Solo reflejos espejados de las luces neón de la escena.
+
+LA ESCENA — PERSONA HASTA LA CINTURA EN SET NEÓN:
+- Encuadre desde la cintura hacia arriba: se ve el torso, los
+  hombros y la cabeza con el casco puesto. NO se ve de cuerpo
+  entero ni de cuerpo lejano.
+- Outfit urbano oscuro premium (campera o chaqueta técnica negra)
+  visible en el torso.
+- Postura firme, cuerpo levemente girado, mostrando el MISMO LADO
+  del casco que muestra la foto de producto.
+- FONDO NEGRO profundo con LUCES de neón / LED en los MISMOS
+  COLORES del cromado: violeta, azul y magenta, en líneas, barras o
+  halos geométricos detrás y a los costados.
+- SIN HUMO: nada de niebla ni bruma. Atmósfera limpia y nítida.
+- Fotorrealista, estética de campaña premium.
+
+ESCALA REAL DENTRO DEL PLANO CERRADO:
+Aunque el encuadre esté cerca, el casco sigue siendo un objeto de
+tamaño real sobre una cabeza real: apenas más grande que la cabeza,
+proporcional a los hombros que se ven en el plano — nunca más ancho
+que los hombros.
+
+COMPOSICIÓN — PARA NO INVENTAR EL LADO OCULTO:
+La foto adjunta muestra el casco en 3/4 lateral mirando a la
+DERECHA. Mostrá ESE MISMO LADO. No inventar el otro lado ni el
+frente completo.
+
+INTEGRACIÓN DE LUZ:
+Reflejos coherentes de las luces neón sobre la pintura camaleón y el
+visor. La luz nunca cambia el casco: mismo cromado, mismo visor
+opaco, mismo spoiler, mismo logo legible.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido el plano de cuerpo entero o de cuerpo lejano: es plano
+  cerrado, cintura hacia arriba.
+- Prohibido perder o suavizar el spoiler trasero: tiene que verse
+  angular y prominente.
+- Prohibido reemplazar el logo "EDGE PRO" por puntos, manchas o
+  garabatos: es el texto legible real.
+- Prohibido cambiar la pintura camaleón, las piezas negras o la
+  forma del casco.
+- Prohibido dejar el visor con cualquier transparencia.
+- Prohibido humo, niebla o luces de colores ajenos al cromado.
+- Prohibido mostrar el lado del casco que no está en la foto.
+
+VERIFICACIÓN FINAL — respondé estos siete chequeos antes de entregar:
+1. ¿El encuadre es cerrado — la persona se ve de la CINTURA hacia
+   arriba, NO de cuerpo entero — y el casco se ve grande y de cerca?
+2. ¿El SPOILER trasero está presente, angular y prominente, sin
+   suavizarse ni desaparecer?
+3. ¿El logo "EDGE PRO" es TEXTO LEGIBLE en blanco, no puntos ni
+   manchas?
+4. ¿La pintura camaleón, las piezas negras y la silueta angulosa
+   coinciden exactamente con la foto de producto?
+5. ¿El visor quedó opaco total, sin transparencia, solo con
+   reflejos neón?
+6. ¿El fondo es negro con luces violeta/azul/magenta, sin humo?
+7. ¿Se muestra el mismo lado del casco que la foto, a escala
+   coherente con los hombros visibles?
+```
