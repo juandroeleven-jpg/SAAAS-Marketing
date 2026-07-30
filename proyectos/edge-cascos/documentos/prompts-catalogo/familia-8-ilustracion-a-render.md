@@ -865,6 +865,66 @@ VERIFICACIÓN FINAL — AUDITORÍA CON ZOOM, ELEMENTO POR ELEMENTO:
    IMAGEN 2?
 ```
 
+### Auditoría con evidencia visual real — Instancia 8.4 (30/07/2026)
+
+Archivos en `resultados/`: `8.4-TRIPTICO.png`, `8.4-CROP-alas-y-rendija-central.png`, `8.4-CROP-borde-superior-ala-izquierda.png`, `8.4-CROP-aletas-ala-derecha.png`, `8.4-CROP-rendija-central-zoom2.png`, `8.4-CROP-grilla-inferior-y-logos.png`, `8.4-rojo-gris-ILUSTRACION.png`, `8.4-rojo-gris-RESULTADO.webp`.
+
+```
+AUDITORÍA — Instancia 8.4 — rojo/gris — trasera
+
+1. ¿Las dos alas mantienen la FORMA exacta de la IMAGEN 2, con sus
+   ranuras y su acabado brillante?
+   → ✅ CUMPLE. En los dos bordes superiores (crops
+   "borde-superior-ala-izquierda" y "aletas-ala-derecha") el corte
+   entre ala y calota sigue exactamente el contorno real, sin la
+   fuga tipo "llama" hacia el domo que tuvo la Instancia 8.3. Las
+   aletas/ranuras finas del borde inferior externo de cada ala están
+   presentes en ambos lados, en la misma posición que en el
+   checkpoint, y el acabado brillante (reflejos definidos) contrasta
+   con el mate de la calota igual que en la foto real.
+2. ¿Las alas quedaron ROJAS con el detalle gris, dentro de sus
+   límites reales?
+   → ✅ CUMPLE. El rojo cubre toda la superficie de cada ala sin
+   fugarse hacia la calota, y aparece un acento gris horizontal que
+   replica fielmente la franja gris que bordea el "swoosh" central
+   de la IMAGEN 1 (ver zoom de la ilustración) — no es una invención,
+   es lectura correcta del trazado de color de la ilustración.
+3. ¿La calota base sigue negra/gunmetal donde corresponde?
+   → ✅ CUMPLE. El domo y los laterales de la calota se mantienen
+   negros en el tríptico y en los crops de borde de ala, sin ningún
+   tramo rojo o gris fuera de las alas.
+4. ¿La rendija central y la grilla inferior quedaron intactas?
+   → ✅ CUMPLE. El tab/botón rectangular negro del centro (bajo la
+   rendija) sigue presente sin cambios (crop "rendija-central-zoom2"),
+   y el punto de encuentro de las dos alas se conserva. La franja
+   gris que cruza esa zona es más ancha que el sutil brillo de la
+   foto real, pero corresponde al acento gris que la propia
+   ilustración dibuja ahí (línea gris bordeando el swoosh negro
+   central) — no es una pieza inventada ni una deformación de la
+   rendija. La grilla/nervaduras del borde inferior están intactas
+   (crop "grilla-inferior-y-logos").
+5. ¿El logo/wordmark EDGE quedó coherente con el colorway rojo/gris
+   de la Instancia 8.1?
+   → ✅ CUMPLE. El escudo central pasó a rojo/gris (borde rojo,
+   texto "EDGE" en gris/plata sobre fondo oscuro) en vez del
+   negro/blanco de la foto original, y los wordmarks "EDGE"/"PRO" de
+   ambos costados se mantienen legibles y bien ubicados, sin
+   deformar la calota debajo.
+6. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+   → ✅ CUMPLE.
+
+Sin defectos localizados: los 6 ítems del checklist cumplen. A
+diferencia de la Instancia 8.3, acá no hubo fuga de color hacia el
+domo ni piezas inventadas — el límite del ala se respetó de punta a
+punta en ambos lados, y el único elemento que podría llamar la
+atención (la franja gris ancha sobre la rendija) es una lectura
+fiel del acento gris que la ilustración ya especifica ahí, no un
+error de generación.
+
+Veredicto: APROBADO. No se requieren -fix ni -v2.
+```
+
 ---
 
 ## Instancia 8.5 — Trasera, blanco/rojo/azul
