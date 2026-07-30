@@ -327,3 +327,87 @@ VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
 - **El visor tornasolado:** con el cambio de luz puede salir plateado o de un solo color. Debe conservar el efecto multicolor.
 - **La sombra:** sin el soporte, el casco necesita una sombra de contacto creíble — si queda "flotando" sin sombra, parece recorte.
 - Las 4 vistas son del mismo casco: comparalas entre sí al final — misma tonalidad de negro, misma luz, mismo blanco de fondo, para que el set sea consistente en el catálogo.
+
+---
+
+## Instancia 5.5 — EDGE modular negro brillante, vista trasera/inferior (quitar palo del soporte + logos + entorno web)
+
+**Foto fuente:** captura de página web con el casco EDGE modular negro brillante visto desde atrás/abajo, atravesado por el palo de un soporte de exhibición, con logos y etiquetas pegados, rodeado de otros cascos y elementos de la página (íconos rojos, textos "DOBLE VISERA", etc.).
+
+```
+Esto es una LIMPIEZA DE FOTO DE PRODUCTO sobre una fotografía REAL
+de un casco físico, no una imagen nueva ni un rediseño. La foto
+adjunta es la ÚNICA AUTORIDAD DE FORMA: el casco que devuelvas es
+exactamente el mismo objeto, en el mismo ángulo. Hay TRES cambios
+permitidos, y SOLO estos tres:
+
+CAMBIO 1 — QUITAR EL PALO DEL SOPORTE:
+Por el interior del casco pasa el PALO / la varilla metálica de un
+soporte de exhibición. Se ELIMINA por completo. El espacio que
+ocupaba se completa con lo que corresponde: el interior del casco
+(acolchados, fondo del casco) continuo y coherente con lo que ya se
+ve alrededor del palo. No queda ni el palo, ni su sombra, ni ningún
+hueco raro donde estaba.
+
+CAMBIO 2 — QUITAR TODOS LOS LOGOS, STICKERS Y ETIQUETAS:
+Se eliminan TODOS, uno por uno, sin dejar sombra fantasma, parche ni
+marca de pegamento:
+a) el logo escudo "EDGE HELMETS" de la parte alta;
+b) la etiqueta blanca de certificación "EDGE / DOT / FMVSS /
+   R22-06 / ECE EUROPE";
+c) el sticker redondo holográfico/plateado;
+d) la etiqueta gris de talle "XL / 61-62cm";
+e) los textos de marca de las almohadillas interiores rojas: las
+   almohadillas QUEDAN rojas, con su forma, pero sin ningún texto;
+f) cualquier otro logo, texto o sticker visible sobre el casco.
+La superficie donde estaba cada uno queda como el resto de esa zona:
+negro brillante continuo en la calota, rojo liso en las almohadillas.
+
+CAMBIO 3 — QUITAR EL ENTORNO DE LA PÁGINA WEB:
+La imagen es una captura de una página web de catálogo. Todo lo que
+NO es este casco desaparece:
+- los otros cascos que asoman por los bordes (arriba, abajo, a los
+  costados, el del visor tornasolado incluido);
+- los íconos rojos y los textos de la página ("DOBLE VISERA", "PARA
+  ...", etc.);
+- cualquier franja, línea o elemento gráfico del layout.
+El resultado es ESTE casco solo, sobre un fondo blanco limpio y
+uniforme de estudio, con una sombra suave y natural debajo.
+
+TODO LO DEMÁS NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta del casco: modular visto desde atrás/abajo,
+  con su spoiler y sus ventilaciones traseras. Mismo objeto 3D,
+  mismas proporciones.
+- El acabado NEGRO BRILLANTE de la calota, con sus reflejos.
+- La goma del borde inferior con su textura.
+- El interior completo: los acolchados rojos y negros, su forma y
+  sus costuras (solo pierden los textos de marca).
+- El ángulo de la toma, el encuadre y la escala del casco.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido dejar el palo del soporte, su sombra o un hueco donde
+  estaba.
+- Prohibido dejar cualquier logo, sticker, etiqueta o texto de la
+  lista (a-f), o su rastro.
+- Prohibido dejar cualquier elemento de la página web: otros cascos,
+  íconos, textos.
+- Prohibido cambiar la forma, el tamaño o la posición de cualquier
+  pieza del casco, o inventar piezas nuevas.
+- Prohibido cambiar el color del casco (negro brillante) o del
+  interior (rojo y negro).
+- Prohibido cambiar el ángulo o el encuadre.
+- Prohibido agregar nada que no estuviera.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿Desapareció el palo del soporte por completo, y el interior
+   quedó continuo y natural donde estaba?
+2. ¿Desaparecieron TODOS los logos, stickers y etiquetas (a-f), sin
+   dejar marca? Recorrelos uno por uno.
+3. ¿Las almohadillas rojas quedaron rojas y con su forma, pero sin
+   textos?
+4. ¿El fondo quedó blanco limpio, sin otros cascos, íconos ni textos
+   de la página web, con sombra suave bajo el casco?
+5. ¿La forma, el negro brillante, la goma y el ángulo del casco
+   quedaron idénticos?
+6. ¿Se agregó algo que no estaba? No debe haberse agregado nada.
+```
