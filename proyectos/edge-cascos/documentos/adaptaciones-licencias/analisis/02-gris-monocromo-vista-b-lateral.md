@@ -53,3 +53,43 @@ específicamente para la mitad baja, que es donde más se desvía.
 Los objetivos cualitativos de tono ("poco", "escaso", "sutil") no
 alcanzan. Hay que dar **porcentajes de reparto de superficie** y pedirle
 al generador que los verifique antes de entregar.
+
+---
+
+## Hallazgo adicional — INVERSIÓN DE TONOS en la franja central
+
+![franja central](../kratos-dakota/resultados/crops/GRIS-franja-central.png)
+*La banda de la microtipografía y su fondo están dados vuelta*
+
+En la REFERENCIA la banda angular central que lleva la microtipografía
+es GRIS CLARA, y la superficie que la rodea por arriba y por abajo es
+NEGRO PROFUNDO: una figura clara sobre fondo negro.
+
+En el RESULTADO está invertido: la banda quedó oscura y el fondo se
+levantó a gris oscuro. Ese fondo levantado se lee como "una franja gris
+inventada" que en el diseño original no existe.
+
+### Por qué los porcentajes no lo detectaron
+
+El reparto global de tonos daba aproximadamente correcto **porque una
+zona subió y la otra bajó, compensándose en el promedio**. La inversión
+es un defecto LOCAL de relación figura-fondo, invisible en un
+histograma.
+
+### Corrección aplicada al prompt
+
+Bloque "REGLA ANTI-INVERSIÓN" con:
+- La descripción de cómo es en la referencia (figura clara / fondo negro).
+- La descripción de qué pasó (invertido).
+- Instrucción zona por zona: banda a gris claro, superficie de arriba y
+  de abajo a negro profundo.
+- Regla general: **los fondos del flanco son NEGROS; los grises son las
+  FIGURAS que se apoyan encima. Nunca al revés.**
+- Test binario de verificación: ¿la banda es más clara que su entorno?
+
+## Lección
+
+Un promedio global de tonos puede dar correcto y aun así haber una
+inversión local. Hay que mirar **figura contra fondo**, no solo el
+reparto total. Y declarar RELACIONES ("esta banda es más clara que lo
+que la rodea") funciona mejor que declarar valores absolutos.
