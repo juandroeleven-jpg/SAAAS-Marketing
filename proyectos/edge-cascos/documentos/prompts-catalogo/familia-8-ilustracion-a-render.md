@@ -606,6 +606,199 @@ VERIFICACIÓN FINAL:
    IMAGEN 2?
 ```
 
+### Auditoría con evidencia visual real — Instancia 8.3-v2, resultado real (30/07/2026)
+
+El usuario corrió la Instancia 8.3-v2 y mandó el resultado real. Archivos en `resultados/`: `8.3-v2-TRIPTICO.png`, `8.3-v2-CROP-borde-alas.png`, `8.3-v2-CROP-rendija-hexagono-central.png`, `8.3-v2-CROP-grilla-inferior-y-wordmarks.png`, `8.3-v2-rosa-violeta-RESULTADO.webp`.
+
+```
+AUDITORÍA — Instancia 8.3-v2 — rosa/violeta — trasera (segundo intento)
+
+1. ¿El rosa/violeta queda exactamente dentro del borde físico real
+   del ala, sin puntas hacia la calota?
+   → ✅ CUMPLE. La regla dura del límite del ala funcionó: el rosa
+   corta justo en el borde real del ala, sin la extensión tipo
+   "llama" del intento anterior (crop "borde-alas").
+2. ¿La calota por encima y alrededor de cada ala quedó negra/gunmetal
+   mate lisa, sin ningún tramo de color?
+   → ❌ NO CUMPLE. Apareció un panel violeta con forma de escudo/
+   hexágono, con el logo "EDGE", pegado debajo de la rendija — en la
+   IMAGEN 2 esa zona es calota lisa negra, sin ninguna pieza ni
+   hueco para un panel de ese tamaño. Es el mismo modo de fallo que
+   ya se corrigió en las alas (copiar el contorno libre de la
+   ilustración) pero esta vez aplicado al emblema central en vez de
+   a las alas.
+3. ¿Las alas mantienen la FORMA exacta, con ranuras y acabado
+   brillante?
+   → ✅ CUMPLE (crop "borde-alas" y "grilla-inferior-y-wordmarks").
+4. ¿La rendija central y la grilla inferior quedaron intactas?
+   → ⚠️ PARCIAL. La rendija en sí (la franja negra horizontal) SÍ
+   coincide con la IMAGEN 2. La grilla inferior también está
+   intacta. El problema es lo que se agregó JUSTO DEBAJO de la
+   rendija (el panel violeta, ver punto 2).
+5. ¿El logo/wordmark EDGE quedó sobre la superficie sin deformar
+   nada debajo?
+   → ✅ CUMPLE en cuanto a legibilidad: "EDGE PRO" y "EDGE" de cada
+   lado están correctos. El logo central es legible, pero está
+   montado sobre el panel inventado del punto 2.
+6. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+   → ✅ CUMPLE.
+
+Balance: la corrección del límite del ala funcionó perfecto. Quedó
+un solo defecto nuevo, acotado: el panel/escudo violeta central es
+más grande que cualquier superficie real disponible ahí y no debería
+existir como forma propia — el logo va directo sobre la calota
+negra, sin panel de color detrás.
+
+Veredicto: RECHAZADO — CORRECCIÓN DIRIGIDA (un solo defecto
+localizado, el resto ya quedó bien).
+```
+
+## Instancia 8.3-v2-fix — Quitar el panel violeta inventado del centro
+
+**Se adjuntan DOS imágenes, en este orden:** (1) el resultado ya generado (rosa/violeta, con el panel violeta debajo de la rendija), (2) la foto real trasera (autoridad de forma).
+
+```
+Esto es una CORRECCIÓN DIRIGIDA sobre un resultado ya bueno, no una
+imagen nueva. Recibís DOS imágenes:
+
+- IMAGEN 1 — EL RESULTADO YA GENERADO (casco rosa/violeta, trasera):
+  es la BASE. El rosa/violeta de las alas (ya bien recortado a su
+  borde real), los wordmarks "EDGE PRO"/"EDGE" de los costados, la
+  rendija central y la grilla inferior están BIEN y quedan tal cual.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (checkpoint trasero negro mate):
+  es la AUTORIDAD DE FORMA. Debajo de la rendija central, la IMAGEN 2
+  muestra calota lisa negra, sin ninguna pieza ni panel.
+
+HAY UNA SOLA CORRECCIÓN:
+
+Se elimina el panel violeta con forma de escudo/hexágono que aparece
+debajo de la rendija central. Esa zona vuelve a ser calota negra/
+gunmetal mate lisa, igual que en la IMAGEN 2 — sin ningún panel de
+color de fondo. El escudo/logo "EDGE" se conserva, pero se aplica
+directo sobre la superficie negra de la calota, en tamaño pequeño
+(comparable al tamaño de los otros logos "EDGE" de los costados),
+sin ningún panel violeta ni forma geométrica de fondo detrás.
+
+TODO LO DEMÁS NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ EN LA
+IMAGEN 1:
+- El rosa/violeta de las alas, ya recortado a su borde real.
+- Los wordmarks "EDGE PRO" y "EDGE" de los costados.
+- La rendija central, la grilla inferior, el ángulo y el encuadre.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido dejar cualquier panel, escudo o forma de color de fondo
+  detrás del logo central.
+- Prohibido agrandar el logo central más allá del tamaño de los
+  logos "EDGE" de los costados.
+- Prohibido tocar el rosa/violeta de las alas, los wordmarks
+  laterales, la rendija o la grilla.
+- Prohibido cambiar el ángulo, el encuadre o la iluminación.
+
+VERIFICACIÓN FINAL:
+1. ¿Desapareció por completo el panel violeta de debajo de la
+   rendija?
+2. ¿Esa zona volvió a ser calota negra/gunmetal mate lisa?
+3. ¿El logo "EDGE" central quedó chico, directo sobre el negro, sin
+   panel de fondo?
+4. ¿Las alas, los wordmarks laterales, la rendija y la grilla siguen
+   iguales que en la IMAGEN 1?
+```
+
+## Instancia 8.3-v3 — Trasera rosa/violeta, REHECHA DE CERO (límite del ala Y tamaño del emblema central blindados)
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la ilustración trasera rosa/violeta, (2) la foto real trasera del casco.
+
+```
+Esto es una TRADUCCIÓN DE ILUSTRACIÓN A FOTO REAL, no un casco
+nuevo. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ILUSTRACIÓN (mockup vectorial rosa/violeta, vista
+  trasera): es la AUTORIDAD DE COLOR — de qué color son las alas y
+  el emblema central, y qué acento llevan. Las FORMAS que dibuja el
+  mockup (tanto la silueta alta de las alas como el panel/escudo
+  grande del emblema central) son más grandes que las piezas y
+  superficies reales: esas formas libres se IGNORAN.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (vista trasera, negro mate): es
+  la ÚNICA AUTORIDAD DE FORMA, sin excepción — incluida la forma del
+  ala y el hecho de que debajo de la rendija hay calota lisa, sin
+  ningún panel ni hueco para un escudo.
+
+REGLA DURA 1 — LÍMITE DEL ALA:
+El único límite válido para el rosa/violeta de las alas es el borde
+físico real del ala que se ve en la IMAGEN 2 (la pieza brillante con
+ranuras). El color nunca sube por encima de ese borde, aunque la
+ilustración lo dibuje más arriba. Por encima de ese borde, la calota
+queda negro/gunmetal mate liso.
+
+REGLA DURA 2 — TAMAÑO DEL EMBLEMA CENTRAL:
+La ilustración dibuja, debajo de la franja central, un panel violeta
+grande con forma de escudo/hexágono y el logo "EDGE" encima. ESE
+PANEL NO SE COPIA — en la IMAGEN 2 esa zona es calota lisa negra sin
+ninguna pieza física que lo sostenga. Se aplica SOLO el logo/escudo
+"EDGE", chico (mismo tamaño que los logos "EDGE" de los costados),
+directo sobre la superficie negra de la calota, sin ningún panel de
+color de fondo, sin agrandar ni la rendija ni el área de alrededor.
+
+GEOMETRÍA — TODO ESTO VIENE DE LA IMAGEN 2, SIN EXCEPCIÓN:
+- La silueta trasera completa del casco: dome redondeado, mismas
+  proporciones.
+- Las DOS piezas tipo ALA/SPOILER simétricas de la parte alta: misma
+  forma, mismo tamaño, misma posición, con sus ranuras/aletas finas
+  en el borde inferior externo. El color nunca sube por encima de su
+  borde real (regla dura 1).
+- La rendija horizontal oscura entre ambas alas, en el centro.
+- El borde inferior con sus nervaduras/rejillas verticales.
+- El acabado: calota base MATE/gunmetal; alas con acabado más
+  BRILLANTE — esa diferencia se mantiene.
+
+COLOR Y DISEÑO — ESTO VIENE DE LA IMAGEN 1, APLICADO DENTRO DE LOS
+LÍMITES REALES:
+1. LAS DOS ALAS: pasan a ROSA/MAGENTA con un detalle/acento VIOLETA
+   según el trazado de la ilustración, dentro de los límites físicos
+   reales de cada ala (regla dura 1). Mantienen su acabado brillante.
+2. LA CALOTA BASE (incluida toda la zona por encima, alrededor y
+   debajo de las alas, y debajo de la rendija): sigue NEGRA/gunmetal
+   mate lisa, salvo el logo chico permitido por la regla dura 2.
+3. El escudo/logo "EDGE" del centro (chico, sin panel de fondo — ver
+   regla dura 2) y el wordmark "EDGE" de cada lado: sobre la
+   superficie de la calota, sin alterar la forma debajo.
+
+COBERTURA Y LÍMITES:
+El rosa/violeta cubre TODA la superficie de cada ala, sin tramos del
+color viejo, y NUNCA sube más arriba del borde real del ala. El
+emblema central nunca lleva panel de fondo. El límite con la calota
+negra es nítido y sigue el borde físico real, no el dibujo.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido que el color rosa/violeta suba por encima del borde real
+  del ala, aunque la ilustración lo dibuje más arriba.
+- Prohibido cualquier panel, escudo o forma de color de fondo detrás
+  del logo central — el logo va directo sobre el negro.
+- Prohibido agrandar el logo central más allá del tamaño de los
+  logos "EDGE" de los costados.
+- Prohibido cambiar la forma de las alas, la rendija central o la
+  grilla inferior.
+- Prohibido inventar piezas que no estén en la foto real.
+- Prohibido cambiar el acabado (brillante/mate).
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL:
+1. ¿El rosa/violeta queda exactamente dentro del borde físico real
+   del ala, sin puntas ni extensiones hacia la calota?
+2. ¿La calota alrededor de las alas Y debajo de la rendija quedó
+   negra/gunmetal mate lisa, sin ningún panel de color?
+3. ¿Las alas mantienen la FORMA exacta, con ranuras y acabado
+   brillante?
+4. ¿La rendija central y la grilla inferior quedaron intactas, sin
+   ningún panel agregado debajo?
+5. ¿El logo "EDGE" central quedó chico, directo sobre el negro, sin
+   panel de fondo, del mismo tamaño que los logos de los costados?
+6. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+```
+
 ---
 
 ## Instancia 8.4 — Trasera, rojo/gris
