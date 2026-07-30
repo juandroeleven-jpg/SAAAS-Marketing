@@ -2949,3 +2949,135 @@ VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
    maquetación?
 6. ¿Se agregó algo que no estaba? No debe haberse agregado nada.
 ```
+
+---
+
+## Instancia 1.37 — Calota rojo mate (Molde H, visor y moldura quedan)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco JET / abierto estilo vintage, calota
+  redondeada lisa. Mismo objeto 3D, mismas proporciones.
+- EL VISOR INTERNO tipo burbuja ahumado/azulado que asoma en la
+  abertura: queda EXACTAMENTE igual — mismo tono, misma forma, misma
+  posición. NO se cambia de color, NO se aclara, NO se oscurece.
+- LA PARTE DE ABAJO: la moldura/ribete NEGRO que rodea toda la
+  abertura frontal y recorre el borde inferior queda NEGRA, con su
+  forma, su grosor y su acabado. No toma el color nuevo.
+- Los botones a presión CROMADOS y los remaches: quedan cromados,
+  en su posición.
+- La correa que asoma: queda como está.
+- El ángulo (lateral mirando a la derecha), el encuadre, el fondo
+  blanco, la iluminación y las sombras.
+
+EL CAMBIO DE COLOR:
+LA CALOTA — toda la superficie pintada del casco — pasa a ROJO MATE:
+un rojo pleno y franco, mate, ni brillante ni bordó ni rojo oscuro
+apagado. La calota queda LISA, de un solo color, sin gráficos.
+
+COBERTURA COMPLETA:
+La calota queda ROJO MATE en TODA su superficie visible, sin ninguna
+isla ni parche del color viejo. El límite entre el rojo y la moldura
+negra es nítido y sigue el borde físico real.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas, franjas, bordes
+de otras fotos), no aparecen: el resultado es el casco solo sobre su
+fondo blanco limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido pintar de rojo la moldura/ribete del borde: queda NEGRA.
+- Prohibido usar un rojo brillante, un bordó o un rojo apagado: es
+  rojo pleno MATE.
+- Prohibido cambiar el color o el tono del visor burbuja.
+- Prohibido pintar los botones cromados o los remaches.
+- Prohibido dejar tramos de la calota con el color viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó ROJO MATE completa — rojo pleno, ni brillante ni
+   bordó — sin tramos del color viejo?
+2. ¿La moldura/ribete del borde sigue NEGRA en todo su recorrido?
+3. ¿El visor burbuja sigue ahumado/azulado, idéntico?
+4. ¿Los botones cromados y remaches siguen cromados?
+5. ¿La forma, el ángulo y el encuadre quedaron idénticos?
+6. ¿Quedó algún elemento de maquetación o algo agregado? No debe
+   quedar nada.
+```
+
+---
+
+## Instancia 1.38 — Calota azul oscuro / marino mate (Molde H, visor y moldura quedan)
+
+```
+Esto es un CAMBIO DE COLOR sobre la foto de un casco REAL, no un
+rediseño ni un casco nuevo. La foto adjunta es la ÚNICA AUTORIDAD DE
+FORMA: el casco que devuelvas es exactamente el mismo objeto, en el
+mismo ángulo, solo pintado de otro color. El casco original se
+preserva al 100%: nada se inventa, nada se deforma.
+
+TODO ESTO NO SE TOCA — QUEDA EXACTAMENTE COMO ESTÁ:
+- La forma y la silueta: casco JET / abierto estilo vintage, calota
+  redondeada lisa. Mismo objeto 3D, mismas proporciones.
+- EL VISOR INTERNO tipo burbuja ahumado/azulado que asoma en la
+  abertura: queda EXACTAMENTE igual — mismo tono, misma forma, misma
+  posición. NO se cambia de color, NO se aclara, NO se oscurece. El
+  visor NO es parte de la calota: conserva SU tono translúcido
+  propio, distinto de la pintura azul.
+- LA PARTE DE ABAJO: la moldura/ribete NEGRO que rodea toda la
+  abertura frontal y recorre el borde inferior queda NEGRA, con su
+  forma, su grosor y su acabado. No toma el color nuevo.
+- Los botones a presión CROMADOS y los remaches: quedan cromados,
+  en su posición.
+- La correa que asoma: queda como está.
+- El ángulo (lateral mirando a la derecha), el encuadre, el fondo
+  blanco, la iluminación y las sombras.
+
+EL CAMBIO DE COLOR:
+LA CALOTA — toda la superficie pintada del casco — pasa a AZUL
+OSCURO / AZUL MARINO MATE: un azul marino profundo, mate, uniforme.
+La calota queda LISA, de un solo color, sin gráficos. OJO: es un
+color muy oscuro — tiene que seguir leyéndose claramente como AZUL,
+distinguible del NEGRO de la moldura del borde. Si el azul se
+confunde con el negro, está mal.
+
+COBERTURA COMPLETA:
+La calota queda AZUL MARINO en TODA su superficie visible, sin
+ninguna isla ni parche del color viejo. El límite entre el azul y la
+moldura negra es nítido y sigue el borde físico real.
+
+LIMPIEZA:
+Si la imagen trae elementos de maquetación (líneas, franjas, bordes
+de otras fotos), no aparecen: el resultado es el casco solo sobre su
+fondo blanco limpio.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido pintar de azul la moldura/ribete del borde: queda NEGRA
+  y distinguible del azul.
+- Prohibido oscurecer el azul hasta que se confunda con el negro.
+- Prohibido cambiar el color o el tono del visor burbuja.
+- Prohibido pintar los botones cromados o los remaches.
+- Prohibido dejar tramos de la calota con el color viejo.
+- Prohibido cambiar forma, tamaño o posición de cualquier pieza.
+- Prohibido agregar gráficos, logos, texto o adornos.
+- Prohibido cambiar el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL — respondé estos seis chequeos antes de entregar:
+1. ¿La calota quedó AZUL MARINO MATE completa, y el azul se
+   distingue claramente del negro de la moldura?
+2. ¿La moldura/ribete del borde sigue NEGRA en todo su recorrido?
+3. ¿El visor burbuja sigue ahumado/azulado translúcido, idéntico y
+   distinto de la pintura?
+4. ¿Los botones cromados y remaches siguen cromados?
+5. ¿La forma, el ángulo y el encuadre quedaron idénticos?
+6. ¿Quedó algún elemento de maquetación o algo agregado? No debe
+   quedar nada.
+```
