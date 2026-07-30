@@ -142,6 +142,17 @@ componen después en post-producción con el PNG oficial.
 Lo mismo vale para la MICROTIPOGRAFÍA fina: se dibuja como textura,
 sin pretender que sea legible.
 
+LA PESTAÑA NEGRA DEBAJO DEL VISOR NO EXISTE — ATENCIÓN MÁXIMA:
+En la ILUSTRACIÓN aparece una pequeña PIEZA/PESTAÑA NEGRA RECTANGULAR
+colgando por debajo del borde del visor, en la zona del mecanismo.
+ESA PIEZA NO EXISTE EN EL CASCO REAL. Es un artefacto del dibujo, NO
+una indicación de diseño. Mirá la foto real: ahí no hay nada colgando.
+NO LA DIBUJES. Esa zona es superficie limpia de la calota, con la
+placa de fibra de carbono y su dial, y nada más.
+Si en el resultado aparece cualquier pieza, pestaña, lengüeta, aleta o
+tapa colgando debajo del visor, el resultado está MAL y hay que
+rehacerlo.
+
 PROHIBIDO ABSOLUTO:
 - Prohibido devolver una ilustración, un vector o un render plano: el
   resultado es una FOTOGRAFÍA.
