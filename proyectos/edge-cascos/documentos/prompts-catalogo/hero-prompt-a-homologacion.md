@@ -1,4 +1,6 @@
-# Prompt A — Tarjeta de HOMOLOGACIÓN — EDGEPRO HERO (2026-07-29)
+# Prompt A — Tarjeta de HOMOLOGACIÓN — EDGEPRO HERO (v2 — 2026-07-30)
+
+Cambio v2 tras validar el primer resultado: los 2 ítems salieron perfectos, pero el banner conservó "FNVSS 510" — se refuerza con verificación explícita.
 
 Fuente: SOLO la columna Hero del Excel maestro (la ficha recibida antes como "Hero" quedó descartada: era de otro casco modular). Campos confirmados con X: kit mecanismo visor, doble D, Bluetooth, liner, canal para lentes. Reparto: tarjeta = 2 ítems; grid = 4 celdas. Los campos en blanco del Excel NO se publican (regla Etapa 0). Certificación: DOT & ECE 22.06 (fila unificada EDGEPRO).
 
@@ -38,9 +40,12 @@ BLOQUE 2 — BANNER NEGRO (ancho completo del lienzo):
 - Adentro, "DOT" en letras BLANCAS enormes, bold, centrado.
 - Debajo de "DOT", en blanco, cuerpo más chico, centrado:
   "& ECE 22.06".
-- CRÍTICO: si la referencia dice "FNVSS 510", ese texto NO se copia.
-  La certificación correcta según el excel maestro es
-  "DOT & ECE 22.06".
+- MÁXIMA ATENCIÓN — ESTE ERROR YA OCURRIÓ EN UN INTENTO ANTERIOR DE
+  ESTA MISMA TARJETA: el resultado copió "FNVSS 510" de la referencia
+  debajo del DOT. ESO ES UN ERROR. "FNVSS 510" NO EXISTE en la fuente
+  de datos. La única línea secundaria válida debajo de "DOT" es
+  "& ECE 22.06". Si al terminar el banner dice "FNVSS 510" en
+  cualquier parte, el resultado está MAL y hay que rehacerlo.
 
 BLOQUE 3 — LISTA DE ÍTEMS (fondo GRIS CLARO, todo el alto restante):
 Lista de EXACTAMENTE 2 ítems, en este orden, MAYÚSCULAS, negro, bold,

@@ -1,4 +1,6 @@
-# Prompt B — Grid de íconos 2x2 — EDGEPRO HERO (2026-07-29)
+# Prompt B — Grid de íconos 2x2 — EDGEPRO HERO (v2 — 2026-07-30)
+
+Cambios v2 tras validar el primer resultado, que falló en 3: hizo 2x3 (6 celdas) en vez de 2x2 (4), duplicó "HEBILLA DOBLE D" en dos celdas con arte distinto, e INVENTÓ un ítem inexistente ("MANTAS DE JJUONTES"). Se martilla el 2x2 y se prohíbe explícitamente inventar ítems.
 
 Fuente: SOLO la columna Hero del Excel maestro. Grid reducido a 2x2 (4 celdas) porque el Hero tiene pocos campos confirmados. Incluye "DISEÑO OPEN FACE" como celda de tipo (análoga a "DISEÑO MODULAR" en los modulares).
 
@@ -22,14 +24,22 @@ CRÍTICO — GEOMETRÍA DEL LIENZO:
   en otra pieza de este catálogo el lienzo salió estirado a 1 : 2,47
   en vez de 1 : 2 por no declarar esto. NO LO REPITAS.
 
-CRÍTICO — CONTEO FORZADO DE CELDAS (hallazgo real: un generador
-devolvió una fila de más con ítems duplicados y arte distinto en cada
-repetición — máxima atención):
+CRÍTICO — CONTEO FORZADO DE CELDAS (ESTOS ERRORES YA OCURRIERON EN UN
+INTENTO ANTERIOR DE ESTE MISMO GRID: el resultado salió 2x3 con 6
+celdas, "HEBILLA DOBLE D" apareció DOS veces con un dibujo distinto en
+cada celda, y una celda traía un ítem INVENTADO con texto sin sentido,
+"MANTAS DE JJUONTES" — máxima atención):
 - EXACTAMENTE 2 columnas x 2 filas = 4 celdas. NUNCA 2x3, NUNCA 6,
-  NUNCA una fila de más, NUNCA una celda vacía ni de relleno.
-- Cada ítem en UNA sola celda, UNA sola vez. Ningún pictograma
-  repetido.
-- Antes de entregar, contá las celdas UNA POR UNA: deben ser 4.
+  NUNCA una fila de más, NUNCA una celda vacía ni de relleno. Este
+  casco tiene MENOS features que los otros del catálogo: su grid es
+  MÁS CHICO y así debe quedar.
+- SOLO existen los 4 ítems de la lista de abajo. PROHIBIDO inventar un
+  quinto o sexto ítem, un texto nuevo, una etiqueta sin sentido o un
+  ícono de relleno. Todo texto que no esté en la lista es un ERROR.
+- Cada ítem en UNA sola celda, UNA sola vez. "HEBILLA DOBLE D" aparece
+  UNA (1) sola vez. Ningún pictograma repetido.
+- Antes de entregar, contá las celdas UNA POR UNA: deben ser 4, y cada
+  etiqueta debe coincidir LETRA POR LETRA con la lista.
 
 LISTA DE ÍTEMS (exactamente 4, en este orden, uno por celda, de
 izquierda a derecha y de arriba a abajo):
@@ -78,13 +88,15 @@ PROHIBIDO ABSOLUTO:
 - NO usar rectángulos negros sólidos como placeholder.
 - NO estirar el lienzo ni inflar celdas, íconos o texto.
 
-VERIFICACIÓN FINAL — CHEQUEÁ ESTAS 6 COSAS:
-1. ¿Son EXACTAMENTE 4 celdas, en 2 columnas x 2 filas, ninguna
+VERIFICACIÓN FINAL — CHEQUEÁ ESTAS 7 COSAS:
+1. ¿Son EXACTAMENTE 4 celdas, en 2 columnas x 2 filas — no 6 — ninguna
    repetida y ninguna vacía?
-2. ¿El tamaño de celda/octágono/texto es igual al de la referencia,
+2. ¿Cada una de las 4 etiquetas coincide LETRA POR LETRA con la lista,
+   sin ningún ítem inventado ni texto sin sentido?
+3. ¿El tamaño de celda/octágono/texto es igual al de la referencia,
    sin inflar nada?
-3. ¿Hay alguna X o tache sobre algún ícono? Sacala.
-4. ¿El ícono de DISEÑO OPEN FACE muestra un casco ABIERTO sin
-   mentonera, y la hebilla muestra DOS ANILLAS EN "D"?
-5. ¿Los 4 pictogramas son distintos y ninguno es de un ítem ajeno?
-6. ¿Las 4 etiquetas están completas, sin truncar?
+4. ¿Hay alguna X o tache sobre algún ícono? Sacala.
+5. ¿El ícono de DISEÑO OPEN FACE muestra un casco ABIERTO sin
+   mentonera, y la hebilla muestra DOS ANILLAS EN "D" — una sola vez?
+6. ¿Los 4 pictogramas son distintos y ninguno es de un ítem ajeno?
+7. ¿Las 4 etiquetas están completas, sin truncar?
