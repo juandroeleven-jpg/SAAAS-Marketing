@@ -6,17 +6,33 @@ Fecha: 2026-07-30. Molde base: EDGEPRO KRATOS (full face con spoiler), foto de p
 
 | # | Variante | Vistas | Estado |
 |---|---|---|---|
-| 1 | Dakota Azul/Rojo/Blanco | A (3/4) · B (lateral) | ✅ A entregada · ✅ B entregada |
-| 2 | Dakota Gris/Negro | A · B | ⏳ en cola |
-| 3 | Dakota Rojo/Gris/Negro | A · B | ⏳ en cola |
-| 4 | Dakota Rojo/Blanco/Negro | A · B | ⏳ en cola |
-| 5 | Dakota Celeste/Magenta/Blanco | A · B | ⏳ en cola |
+| 1 | Dakota Azul/Rojo/Blanco | A (3/4) · B (lateral) · C (trasera) | ✅ A · ✅ B · ✅ C |
+| 2 | Dakota Gris/Negro | A · B · C | ⏳ en cola |
+| 3 | Dakota Rojo/Gris/Negro | A · B · C | ⏳ en cola |
+| 4 | Dakota Rojo/Blanco/Negro | A · B · C | ⏳ en cola |
+| 5 | Dakota Celeste/Magenta/Blanco | A · B · C | ⏳ en cola |
 
 Entrega escalonada: un prompt por mensaje, en orden de esta tabla.
 
-## ⚠️ Brecha de checkpoints reales
+## Checkpoints reales disponibles
 
-Solo hay foto real del Kratos en UNA vista (3/4 delantero). Para la Vista B (lateral) no hay checkpoint real: los prompts de Vista B derivan la rotación del mismo objeto, declarándolo explícito y listando las piezas obligatorias que deben aparecer al girar. **Pedido al cliente: foto real del Kratos en perfil** para elevar la fidelidad de todas las Vistas B del lote.
+- ✅ Vista A (3/4 delantero): foto real del Kratos negro mate.
+- ❌ Vista B (lateral): SIN checkpoint real. Los prompts de Vista B derivan la rotación del mismo objeto, declarándolo explícito y listando las piezas obligatorias al girar. **Pedido al cliente: foto real del Kratos en perfil.**
+- ✅ Vista C (trasera): foto real del Kratos negro mate (recibida 2026-07-30).
+
+## Delta de la Vista C (trasera) — conflicto de silueta
+
+| Elemento | Ilustración | Foto real (autoridad) | Resolución |
+|---|---|---|---|
+| Silueta trasera | Más angosta, hombros poco marcados | Más ancha y redondeada, hombros marcados | **Conflicto de forma → manda el real.** Declarado explícito en el prompt: el gráfico se redistribuye a la superficie ancha, el casco NO se angosta |
+| Extractor superior central | Simplificado | Rejilla real con listones | Manda el real |
+| Dos ranuras pequeñas bajo el extractor | Ausentes | Presentes | Se conservan del real |
+| Tornillo central | Ausente | Presente | Se conserva del real |
+| Pieza ranurada trasera baja | Sugerida | Real completa | Manda el real |
+| Cuello: acolchado, malla, lengüetas rojas ERS, correa | Ausentes (dibujo recortado) | Presentes | Se conservan del real |
+| Sticker "DOT" | Presente, centrado abajo | No visible en la foto | Decal real de producto → se incluye según ilustración |
+| Logo "EDGE" azul sobre banda blanca | Presente | — | Se aplica |
+| Simetría | Simétrico respecto del eje | — | Se exige simetría en el prompt |
 
 ## Comparación ilustración vs. checkpoint real (elemento por elemento)
 
