@@ -39,3 +39,10 @@ Certificación en la ficha: "DOT — FNVSS 510".
 - Agregar la columna Boston al Excel maestro (o indicar su nombre real en la matriz) y re-verificar.
 - Confirmar certificación del Boston.
 - Revisar la asignación de la ficha "Hero".
+
+## Re-verificación con la columna Boston completa (2026-07-30)
+
+- ❌ Certificación: la ficha dice "DOT — FNVSS 510"; el Excel dice DOT & ECE → banner "DOT & ECE 22.06".
+- ❌ Falta "Sistema de liberación rápida del visor": Quick Visor Release = X para Boston en el Excel, ausente en la ficha. Agregado a la tarjeta (pasa a 8 ítems).
+- ✅ Todo lo demás coincide: modular/Flip Up, LED, doble visera, micrométrica (positivo), ABS, EPS, anti scratch, anti empañante, ERS, liner, barbilla, nariz, Bluetooth; y ausencias correctas (canal lentes, Pinlock, doble D = N/A).
+- Prompt A v2 publicado (8 ítems, banner reforzado). Prompt B sin cambios (el grid de la ficha está correcto).

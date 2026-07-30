@@ -1,16 +1,18 @@
-# Prompt A — Tarjeta de HOMOLOGACIÓN — EDGEPRO BOSTON (2026-07-29)
+# Prompt A — Tarjeta de HOMOLOGACIÓN — EDGE BOSTON (v2 — 2026-07-30)
 
-ACTUALIZACIÓN 2026-07-29: se encontró la columna Boston en la sección
-EDGE del Excel (hoja FICHAS). Certificación confirmada: "DOT & ECE"
-(se usa "& ECE 22.06"; confirmar si la versión es otra). El marcador
-[CERTIFICACIÓN] fue reemplazado. La ficha del Boston verifica bien
-contra su columna — ver verificacion-fichas/boston.md y
-evolution-929.md.
+Cambios v2 tras re-verificar contra la columna Boston completa del
+Excel: (1) se agregó "SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR" (Quick
+Visor Release = X para Boston, faltaba en la ficha) — la tarjeta pasa
+de 7 a 8 ítems / 7 separadores; (2) banner "DOT & ECE 22.06"
+reforzado con verificación explícita (el generador viene copiando
+"FNVSS 510" de las referencias); (3) regla "un ítem por renglón, texto
+exacto".
 
 ---
 
 ```
-Diseñá la tarjeta de HOMOLOGACIÓN del casco EDGEPRO BOSTON (MODULAR),
+Diseñá la tarjeta de HOMOLOGACIÓN del casco EDGE BOSTON (MODULAR /
+FLIP UP),
 reproduciendo el layout de la imagen de referencia adjunta. Es una
 reproducción de un layout fijo: lo ÚNICO que cambia respecto de la
 referencia es QUÉ DICE la lista y qué dice el banner de certificación.
@@ -23,9 +25,9 @@ CRÍTICO — EL LIENZO ES UNA CONSTANTE, NO SE ESTIRA:
   vertical angosto con una relación de aspecto de aproximadamente
   1 : 2 — el alto es aproximadamente el DOBLE del ancho. El resultado
   tiene que dar esa misma relación: alto ÷ ancho ≈ 2.
-- ESTA TARJETA TIENE 7 ÍTEMS Y LA REFERENCIA TAMBIÉN TIENE 7. La
-  cantidad de ítems NO CAMBIA, así que el lienzo tampoco cambia:
-  mismo ancho, mismo alto, mismo reparto interno que la referencia.
+- ESTA TARJETA TIENE 8 ÍTEMS Y LA REFERENCIA TIENE 7. Aunque haya un
+  ítem más, el lienzo NO CAMBIA: mismo ancho, mismo alto. Lo que se
+  ajusta es el reparto interno: renglones apenas más compactos.
 - La cantidad de ítems NUNCA modifica las dimensiones del lienzo. El
   lienzo es una CONSTANTE, el reparto interno es la VARIABLE. Aunque
   un texto sea más largo o más corto que el de la referencia, el
@@ -57,31 +59,43 @@ BLOQUE 2 — BANNER NEGRO (debajo del título, ancho completo del lienzo):
   ocupando la mayor parte del banner (como una insignia/logo).
 - Debajo de "DOT", dentro del mismo banner negro, en blanco, en cuerpo
   bastante más chico y centrado: "& ECE 22.06".
-- CRÍTICO: la referencia dice "FNVSS 510" debajo del DOT. Ese texto NO
-  se copia: la certificación correcta según el excel maestro es
-  "DOT & ECE 22.06". Reemplazalo.
+- MÁXIMA ATENCIÓN — ESTE ERROR VIENE OCURRIENDO EN OTRAS TARJETAS DE
+  ESTE MISMO CATÁLOGO: el resultado copia "FNVSS 510" de la
+  referencia debajo del DOT. ESO ES UN ERROR. "FNVSS 510" NO EXISTE en
+  la fuente de datos. La única línea secundaria válida debajo de "DOT"
+  es "& ECE 22.06". Si al terminar el banner dice "FNVSS 510" en
+  cualquier parte, el resultado está MAL y hay que rehacerlo.
 
 BLOQUE 3 — LISTA DE ÍTEMS (fondo GRIS CLARO, todo el alto restante):
-Lista de EXACTAMENTE 7 ítems, en este orden, en MAYÚSCULAS, negro,
+Lista de EXACTAMENTE 8 ítems, en este orden, en MAYÚSCULAS, negro,
 bold, centrados horizontalmente:
 1. VISERA ANTI SCRATCH
 2. PREPARADO PARA ANTI EMPAÑANTE
 3. SISTEMA DE EMERGENCIA DE LIBERACIÓN RÁPIDA
 4. LINER DESMONTABLE Y LAVABLE
-5. INTERIOR EPS DE ALTA RESISTENCIA
-6. CUBRE BARBILLA
-7. CUBRE NARIZ
+5. SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR
+6. INTERIOR EPS DE ALTA RESISTENCIA
+7. CUBRE BARBILLA
+8. CUBRE NARIZ
 
 CRÍTICO — CONTEO FORZADO DE ÍTEMS (hallazgo real de este catálogo: un
 generador devolvió una tarjeta con un ítem repetido de más, y en otra
 pieza devolvió filas de más con ítems duplicados y arte distinto en
 cada repetición — prestar máxima atención acá):
-- La lista tiene EXACTAMENTE 7 ítems. NUNCA 6, NUNCA 8.
-- Cada uno de los 7 ítems aparece UNA sola vez — no repitas ninguno
-  para rellenar espacio vertical, ni aunque sobre o falte lugar.
-- Antes de entregar, contá los renglones de la lista UNO POR UNO:
-  tienen que ser 7, ni uno más ni uno menos, ninguno repetido, y cada
-  uno con un texto distinto de los otros 6.
+- La lista tiene EXACTAMENTE 8 ítems. NUNCA 7, NUNCA 9.
+- Cada renglón contiene UN (1) solo ítem, con el texto EXACTO de la
+  lista, sin palabras agregadas, quitadas ni mezcladas. PROHIBIDO
+  fusionar dos ítems en un renglón (en otras tarjetas de este catálogo
+  el generador fusionó dos conceptos en una sola frase — no lo
+  repitas).
+- OJO: "SISTEMA DE EMERGENCIA DE LIBERACIÓN RÁPIDA" (ítem 3) y
+  "SISTEMA DE LIBERACIÓN RÁPIDA DEL VISOR" (ítem 5) son DOS ítems
+  DISTINTOS del excel: uno es del casco (ERS) y el otro del visor. Van
+  los dos, en renglones separados, sin fusionarlos.
+- Cada ítem aparece UNA sola vez — no repitas ninguno para rellenar.
+- Antes de entregar, contá los renglones UNO POR UNO y compará cada
+  texto contra la lista: 8 renglones, ninguno repetido, ninguno
+  fusionado, ninguno omitido.
 
 CRÍTICO — LOS SEPARADORES SON LÍNEAS FINAS, NO BANDAS (defecto real de
 este catálogo: descritos solo como "línea horizontal fina gris",
@@ -96,8 +110,8 @@ bloques macizos — no lo repitas). Geometría exacta del separador:
   espacio gris vacío a su izquierda y a su derecha.
 - Va CENTRADO horizontalmente, en el eje vertical de la tarjeta,
   alineado con el centrado del texto.
-- Son EXACTAMENTE 6 separadores: uno entre cada par de ítems
-  consecutivos. No va separador arriba del ítem 1 ni debajo del ítem 7.
+- Son EXACTAMENTE 7 separadores: uno entre cada par de ítems
+  consecutivos. No va separador arriba del ítem 1 ni debajo del ítem 8.
 - PROHIBIDO convertirlos en bandas o franjas horizontales de ancho
   completo, en barras gruesas, en divisores de sección, o en bloques de
   fondo de un tono de gris distinto al del resto de la zona gris.
@@ -106,15 +120,15 @@ bloques macizos — no lo repitas). Geometría exacta del separador:
   distinto tono.
 
 CRÍTICO — RITMO VERTICAL: AIRE PAREJO PERO ACOTADO:
-- El espacio vertical entre los 7 ítems tiene que ser EXACTAMENTE IGUAL
+- El espacio vertical entre los 8 ítems tiene que ser EXACTAMENTE IGUAL
   entre todos los pares consecutivos, y los márgenes superior e
   inferior de la lista también parejos entre sí.
-- Los 7 ítems forman un GRUPO compacto que ocupa casi toda la zona
+- Los 8 ítems forman un GRUPO compacto que ocupa casi toda la zona
   gris, igual que en la referencia. Es una LISTA y se tiene que leer
   como una lista: renglones cercanos entre sí separados por su guion
   fino, no secciones independientes con huecos vacíos.
 
-CRÍTICO — TEXTO COMPLETO: los 7 ítems deben tener su texto visible,
+CRÍTICO — TEXTO COMPLETO: los 8 ítems deben tener su texto visible,
 completo y legible, tal cual está escrito en la lista — ninguno puede
 quedar en blanco, cortado, acortado ni con solo la línea separadora sin
 texto arriba (ej. "INTERIOR EPS DE ALTA RESISTENCIA" completo, no
@@ -143,26 +157,28 @@ PROHIBIDO ABSOLUTO:
   decorativas, degradés, sombras, texturas, marcos, íconos, logos ni
   NINGÚN elemento gráfico que no esté en la imagen de referencia. Esta
   tarjeta es SOLO texto sobre bloques de color plano.
-- NO agregar un 8° ítem ni omitir ninguno de los 7.
+- NO agregar un 9° ítem ni omitir ninguno de los 8.
 - NO usar rectángulos negros sólidos como placeholder en ningún lugar
   fuera del banner de certificación del Bloque 2.
 - NO poner ninguna X, tache, cruz ni marca de negación sobre ningún
-  texto: los 7 ítems son características que el casco SÍ tiene.
+  texto: los 8 ítems son características que el casco SÍ tiene.
 - NO cambiar la paleta (negro / gris claro / blanco).
 
 VERIFICACIÓN FINAL — ANTES DE ENTREGAR, CHEQUEÁ ESTAS 7 COSAS:
 1. ¿El ALTO dividido el ANCHO del lienzo da aproximadamente 2, igual
    que la referencia? Si da 2,4 o más, la tarjeta está ESTIRADA:
    rehacela con el alto correcto.
-2. ¿Contaste los renglones uno por uno y son EXACTAMENTE 7, ninguno
-   repetido?
+2. ¿Contaste los renglones uno por uno y son EXACTAMENTE 8, ninguno
+   repetido, ninguno fusionado?
 3. ¿Los separadores son GUIONES FINOS, CORTOS Y CENTRADOS, que no
    llegan a los bordes — y no bandas horizontales de ancho completo?
-   ¿Son exactamente 6?
+   ¿Son exactamente 7?
 4. ¿El título dice "HOMOLOGACIÓN" completo, con la I y con la tilde?
-5. ¿El banner negro dice "DOT" y la certificación confirmada, y en
-   ninguna parte aparece "FNVSS 510"?
+5. ¿El banner negro dice "DOT" y "& ECE 22.06", y en ninguna parte
+   aparece "FNVSS 510"?
 6. ¿Hay algún elemento decorativo que NO esté en la imagen de
    referencia? Si lo hay, sacalo.
-7. ¿Los 7 textos están completos, sin ninguno truncado?
+7. ¿Los 8 textos están completos, incluidos los DOS sistemas de
+   liberación rápida (el del casco y el del visor), sin ninguno
+   truncado?
 ```
