@@ -1,0 +1,176 @@
+{
+  "lote": 1,
+  "fecha_recoleccion": "2026-07-30",
+  "empresas_procesadas": ["A1 Generadora Gatún", "A2 Bi Bank Panamá", "A3 Punto Pago Panamá"],
+  "prospectos": [
+    {
+      "bloque": "A-motor2",
+      "empresa_hub": "Generadora Gatún",
+      "persona": "Ernesto Oquendo",
+      "url": "https://www.linkedin.com/in/ernesto-oquendo-3ab98497",
+      "cargo": "Finanzas & Evaluación de Proyectos / Tesorería Corporativa",
+      "empresa": "Generadora Gatún",
+      "pais": "Panamá",
+      "busqueda_origen": "pestaña Personas — facet Qué hacen = Finanzas (facetCurrentFunction=10)",
+      "posts_propios_60_dias": 1,
+      "motor_recomendado": "1",
+      "senal_de_compra": "",
+      "ya_comentado": 0,
+      "ya_conectado": false,
+      "publicaciones": [
+        {
+          "url_post": "https://www.linkedin.com/posts/ernesto-oquendo-3ab98497_generadoragataeqn-energaedafirme-gasnatural-activity-7460112832752205824-cZzj",
+          "fecha": "2 meses",
+          "autor_real": "Ernesto Oquendo — texto propio añadido sobre una publicación compartida de la página Generadora Gatún",
+          "texto_literal": "Muy agradecido de haber podido contribuir, como parte del equipo, en este importante proceso de emisión de bonos para Generadora Gatún.\n\nParticipar en una transacción de esta magnitud representa una experiencia profesional muy valiosa, no solo por su relevancia para el sector energético y el mercado de capitales en la región, sino también por el nivel de coordinación, disciplina financiera y ejecución que exige un proceso de este tipo.\n\nSin duda, ha sido una gran oportunidad de aprendizaje y crecimiento, compartiendo con colegas, asesores y equipos de alto nivel.\n\nFelicitaciones a todos los involucrados por este importante hito para Generadora Gatún y para Panamá.",
+          "detalle_comentable": "\"el nivel de coordinación, disciplina financiera y ejecución que exige un proceso de este tipo\" — habla en primera persona de haber estado dentro del proceso de emisión de bonos (US$1.050M, 144A/Reg S, 18.4 años, 6.874%, demanda >US$4.600M, Baa3/BBB, 670 MW — cifras del post citado de la empresa)",
+          "comentable": true
+        }
+      ],
+      "capturas": ["/tmp/claude-chrome-screenshots-nfOd7i/screenshot-1785449632490-0.jpg"],
+      "alerta_honestidad": "El único post propio está fechado '2 meses' — justo en el borde de la ventana de 60 días. Puede haber quedado fuera."
+    },
+    {
+      "bloque": "A-motor2",
+      "empresa_hub": "Generadora Gatún",
+      "persona": "Dallys Valdes",
+      "url": "https://www.linkedin.com/in/dallys-valdes-1229198a",
+      "cargo": "Treasurer",
+      "empresa": "Generadora Gatún",
+      "pais": "Panamá",
+      "busqueda_origen": "pestaña Personas — facet Qué hacen = Finanzas (facetCurrentFunction=10)",
+      "posts_propios_60_dias": 0,
+      "motor_recomendado": "2",
+      "senal_de_compra": "",
+      "ya_comentado": 0,
+      "ya_conectado": false,
+      "publicaciones": [],
+      "capturas": [],
+      "alerta_honestidad": "20 publicaciones en su actividad, todas reposts sin texto añadido. El único post con texto propio es de hace 1 año, fuera de ventana."
+    },
+    {
+      "bloque": "A-motor2",
+      "empresa_hub": "Generadora Gatún",
+      "persona": "Esteban Barrientos M",
+      "url": "",
+      "cargo": "Chief Executive Officer (CEO) / Gerente General",
+      "empresa": "Generadora Gatún",
+      "pais": "Panamá",
+      "busqueda_origen": "tracker previo (prospectos-linkedin-tracker.md)",
+      "posts_propios_60_dias": null,
+      "motor_recomendado": "1",
+      "senal_de_compra": "",
+      "ya_comentado": 2,
+      "ya_conectado": false,
+      "publicaciones": [],
+      "capturas": [],
+      "alerta_honestidad": "Contacto ya trabajado. NO volver a comentar sin revisar el tracker: ya lleva 2 comentarios. Siguiente paso lógico es la invitación de conexión, no un tercer comentario."
+    },
+    {
+      "bloque": "A-motor2",
+      "empresa_hub": "Bi Bank Panamá",
+      "persona": "sin cargo objetivo",
+      "url": "",
+      "cargo": "sin cargo objetivo",
+      "empresa": "Bi Bank Panamá",
+      "pais": "Panamá",
+      "busqueda_origen": "pestaña Personas con ?keywords=contralor (0 resultados), ?keywords=financiero (14), ?keywords=gerente (39), facet Finanzas (61/61)",
+      "posts_propios_60_dias": null,
+      "motor_recomendado": "",
+      "senal_de_compra": "",
+      "ya_comentado": 0,
+      "ya_conectado": false,
+      "publicaciones": [],
+      "capturas": [],
+      "alerta_honestidad": "No aparece CFO, Contralor, Gerente Financiero, Gerente de Operaciones ni Gerente de Administración con nombre visible. Lo más cercano es un perfil anonimizado ('Sub gerente de Administración en Bi Bank Panamá'). Todos los cargos visibles son de banca comercial / revenue (Banca Privada, Banca Regional, Banca Digital, Tesorería de producto, Auditoría, Riesgo). Caveat estructural: en un banco el facet 'Finanzas' clasifica al 100% de la plantilla, así que no aísla al departamento financiero interno. Victor Viggiano (Presidente Ejecutivo) figura en el tracker pero NO es cargo objetivo según la regla del encargo (51-200 empleados, no aplica la excepción de dueño 2-10), y no se sustituye con rol arbitrario."
+    },
+    {
+      "bloque": "A-motor2",
+      "empresa_hub": "Punto Pago Panamá",
+      "persona": "Julian Naranjo",
+      "url": "https://www.linkedin.com/in/juliannaranjo",
+      "cargo": "CFO | FP&A | M&A | Strategy | IRO | Capital Raising | Financing | DCM & ECM | Banking | Energy & Gas | Real Estate",
+      "empresa": "Punto Pago",
+      "pais": "Panamá",
+      "busqueda_origen": "pestaña Personas — ?keywords=financiero",
+      "posts_propios_60_dias": 3,
+      "motor_recomendado": "1",
+      "senal_de_compra": "",
+      "ya_comentado": 0,
+      "ya_conectado": false,
+      "publicaciones": [
+        {
+          "url_post": "https://www.linkedin.com/feed/update/urn:li:activity:7480957034037719040/",
+          "fecha": "3 semanas",
+          "autor_real": "Julian Naranjo — texto propio; cita/comparte el post de Jesus Armando Zumeta Bruzzo sobre historial crediticio",
+          "texto_literal": "Financial inclusion is much more than access to banking services—it is a pathway to opportunity, resilience, and economic growth.\n\nWhen individuals can access credit and digital payment solutions, they are better equipped to invest in education, grow businesses, manage unexpected events.\n\nTechnology is accelerating this transformation, but true inclusion requires collaboration among financial institutions, policymakers, investors, and innovators to ensure that financial services are accessible, affordable, and designed around people's needs.\n\nA more inclusive financial system is not only a social imperative—it is an economic one. When more people can participate in the financial system, everyone benefits.\n\nKudos to Punto Pago Panama, Andrey Gorsky, Jesus Armando Zumeta Bruzzo and all the team for making this a reality.\n\n#FinancialInclusion #EconomicDevelopment #FinancialServices #Fintech #EconomicGrowth #FinancialLiteracy #InclusiveGrowth",
+          "detalle_comentable": "\"true inclusion requires collaboration among financial institutions, policymakers, investors, and innovators\" — y el dato del post citado: 44% de los clientes de crédito de Punto Pago no tenían acceso previo al sistema financiero; +200K préstamos en H1 2026 (10x interanual), cartera 4x, 1.1M clientes.",
+          "comentable": true
+        },
+        {
+          "url_post": "https://www.linkedin.com/feed/update/urn:li:activity:7477853924855640065/",
+          "fecha": "4 semanas",
+          "autor_real": "Julian Naranjo — texto propio breve sobre el post de bienvenida de la página Punto Pago Panama",
+          "texto_literal": "Happy and honored to be part of this amazing team!",
+          "detalle_comentable": "Post de bienvenida: Punto Pago lo incorpora como 'Capital Raising and IR Officer'. Texto propio de una sola línea — poco material para un comentario genuino; el detalle comentable real está en el post citado de la empresa, no en el suyo.",
+          "comentable": false
+        },
+        {
+          "url_post": "https://www.linkedin.com/feed/update/urn:li:activity:7476351713713684481/",
+          "fecha": "1 mes",
+          "autor_real": "Julian Naranjo — texto propio sobre el post de la página Punto Pago Panama acerca de la visita a NUAM en Bogotá",
+          "texto_literal": "Important meetings happened this week to engage with relevant stakeholders of LATAM markets and present one of the must compelling stories of the region!",
+          "detalle_comentable": "La visita a NUAM (holding que integra las Bolsas de Santiago, Lima y Colombia) y el planteo de la empresa sobre 'gobernanza corporativa ágil, altos estándares de cumplimiento y una propuesta de valor clara' — ángulo directo hacia procesos financieros y reporting.",
+          "comentable": true
+        }
+      ],
+      "capturas": [],
+      "alerta_honestidad": "Verificado en su perfil que la empresa actual es Punto Pago (no es un falso positivo tipo Miro Falic). Los 3 posts son shares con texto propio añadido — cuentan según la regla, pero dos de ellos son de una sola línea."
+    },
+    {
+      "bloque": "A-motor2",
+      "empresa_hub": "Punto Pago Panamá",
+      "persona": "Jesus Armando Zumeta Bruzzo",
+      "url": "https://www.linkedin.com/in/jesus-zumeta-finance-director-analysis-strategy-compliance-risk-investors-digital-bi-tax-pl-planning/",
+      "cargo": "Finance Director | Financial Planning & Analysis (FP&A) | Team Leader | Change management | Strategy | P&G Alumni | Unilever Alumni | Capital Raise | Project Finance | Investor Relations | M&A | Project and systems",
+      "empresa": "Punto Pago",
+      "pais": "Panamá",
+      "busqueda_origen": "detectado como coautor/mencionado en la actividad de Julian Naranjo (Punto Pago)",
+      "posts_propios_60_dias": 1,
+      "motor_recomendado": "1",
+      "senal_de_compra": "",
+      "ya_comentado": 0,
+      "ya_conectado": false,
+      "publicaciones": [
+        {
+          "url_post": "https://www.linkedin.com/feed/update/urn:li:activity:7480740444386148352/",
+          "fecha": "3 semanas",
+          "autor_real": "Jesus Armando Zumeta Bruzzo — texto propio, bilingüe",
+          "texto_literal": "Credit history isn't a fact about a person.\nIt's a fact about whether they ever had access to the financial system before.\n44% of Punto Pago's credit clients had no such access before us.\nWe decided that a lack of history isn't a reason for rejection - it's a signal to build a different kind of assessment model.\nResults for H1 2026:\n1. 200K+ loans issued (10x growth year over year),\n2. portfolio grew 4x,\n3. 1.1M customers gained access to products that were previously out of reach for them.\nWe measure growth in numbers. But it always starts with one person finally being told \"yes\" by Punto Pago\n\n#PuntoPago #Fintech #Panama\n__\n\nEl historial crediticio no es un dato sobre la persona.\nEs un dato sobre si alguna vez tuvo acceso al sistema financiero.\nEl 44% de los clientes de crédito de Punto Pago no tenían ese acceso antes de nosotros.\nDecidimos que la falta de historial no es motivo de rechazo, mas bien es una señal para construir un modelo de evaluación distinto.\nResultados del primer semestre 2026:\n1. +200K préstamos otorgados (10x interanual)\n2. la cartera creció 4x\n3. 1.1M de clientes accedieron a algún producto que antes estaban fuera de su alcance\nMedimos el crecimiento en números. Pero siempre empieza con una persona a la que Punto Pago le dice que \"sí\".\n\n#PuntoPago #Fintech #Panama",
+          "detalle_comentable": "\"la falta de historial no es motivo de rechazo, mas bien es una señal para construir un modelo de evaluación distinto\" + el crecimiento 10x en préstamos y 4x en cartera en un semestre. Ángulo natural: cómo sostuvieron el cierre contable y el control financiero con la cartera creciendo 4x — que es exactamente el cuello de botella de Codeflow.",
+          "comentable": true
+        }
+      ],
+      "capturas": [],
+      "alerta_honestidad": "El resto de su actividad (5 posts visibles) son reposts sin texto propio añadido: oferta de empleo Collections & Recovery Manager (1 semana), post de Jose Luis Lopez Urdaneta (3 semanas), NUAM (1 mes), Punto Pago origen (1 mes). No cuentan."
+    },
+    {
+      "bloque": "A-motor2",
+      "empresa_hub": "Punto Pago Panamá",
+      "persona": "Andrey Gorsky",
+      "url": "https://www.linkedin.com/in/andrey-gorsky-0b420053/",
+      "cargo": "CEO / Founder - Punto Pago SA | Venture Partner – FinSight Ventures",
+      "empresa": "Punto Pago",
+      "pais": "Panamá",
+      "busqueda_origen": "tracker previo + pestaña Personas ?keywords=financiero",
+      "posts_propios_60_dias": null,
+      "motor_recomendado": "1",
+      "senal_de_compra": "",
+      "ya_comentado": 2,
+      "ya_conectado": false,
+      "publicaciones": [],
+      "capturas": [],
+      "alerta_honestidad": "ya_comentado=2 viene del tracker y NO fue reverificado en esta sesión. Confirmar antes de comentarle de nuevo. Publicador muy activo según el tracker."
+    }
+  ]
+}
