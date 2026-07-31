@@ -56,6 +56,7 @@ delta del molde+licencia. Ver [`fichas/README.md`](fichas/README.md).
 | 08 | 2026-07-31 | Kratos Dakota 05 CELESTE/MAGENTA — Vista C (trasera) tras edición v4 | ❌ rechazado (colores del spoiler invertidos) | Regenerar con prompt v5 |
 | 09 | 2026-07-31 | Kratos Dakota 03 ROJO/GRIS/NEGRO — Vista C (trasera), primer intento | ❌ rechazado (contradicción de prompt, sello DOT) | Regenerar con prompt v3 (ya corregido en el repo) |
 | 10 | 2026-07-31 | Kratos Dakota 03 ROJO/GRIS/NEGRO — Vista C (trasera) tras prompt v3 | ❌ rechazado (confusión de identificación del spoiler) | Regenerar con prompt v4 |
+| 11 | 2026-07-31 | Kratos Dakota 05 CELESTE/MAGENTA — Vista C (trasera) tras prompt v5 | ⚠️ aprobado con reservas (spoiler a verificar) | Verificar con zoom antes de decidir editar/aceptar |
 
 ---
 
@@ -865,6 +866,50 @@ a las demás variantes del mismo molde** — cada archivo de prompt es un docume
 independiente y hay que aplicarle la misma corrección a mano. Antes de dar por
 cerrado un hallazgo de este tipo, conviene barrer los archivos hermanos (mismo molde,
 misma vista, distinta variante) para ver si comparten el mismo texto ambiguo.
+
+---
+
+## Entrada 11 — Kratos Dakota 05 CELESTE/MAGENTA · Vista C (trasera) · tras prompt v5
+
+**Fecha:** 2026-07-31
+**Variante y vista:** EDGEPRO Kratos · Dakota 05 Celeste/Magenta/Blanco · Vista C
+(trasera), resultado tras aplicar el prompt v5 (Entrada 08 — desambiguación EL ALA /
+EL FONDO).
+**Estado:** ⚠️ aprobado con reservas — mejora clara respecto de los intentos
+anteriores; queda un punto a verificar antes de decidir.
+
+**Archivos de evidencia**
+
+Ilustración de referencia y checkpoint real: los mismos de las Entradas 06-08. El
+resultado de este intento **no está subido al repo**, solo se vio en el hilo de
+trabajo, esta vez en buena resolución (imagen suelta, sin recorte de interfaz).
+
+**Tabla de verificación**
+
+| # | Ítem verificado | Veredicto | Nota |
+|---|---|---|---|
+| — | Separación EL ALA / EL FONDO | ✅ a simple vista | El ala (con sus dos rejillas laterales) se ve en un azul petróleo claramente más oscuro y apagado que el celeste brillante de la calota — la inversión de la Entrada 08 no se repitió |
+| — | Logo EDGE, sello DOT, marcas X40 | ✅ | Consistentes con las correcciones de las Entradas 06-08 |
+| — | Densidad del gráfico, simetría | ✅ a simple vista | Comparable a la ilustración |
+| — | Color exacto del spoiler (EL ALA) | ⚠️ sin cerrar | El usuario reporta que "el spoiler no quedó bien" tras comparar directamente; esta pasada no encontró, a simple vista, el defecto que motiva esa observación — pendiente de precisar con un crop/zoom sobre la pieza (Lección 12) antes de decidir editar |
+
+**Defectos encontrados**
+
+Ninguno confirmado con certeza en esta pasada. Hay un desacuerdo entre la lectura a
+simple vista (que ve la separación de tonos resuelta) y la observación directa del
+usuario sobre el spoiler — se registra como abierto, no se fuerza un veredicto sin
+evidencia de zoom, siguiendo la Lección 10 ("medir, no mirar").
+
+**Decisión:** pendiente — pedir un crop/zoom específico sobre EL ALA antes de decidir
+entre aceptar, editar o regenerar.
+
+**Prompt usado:** prompt v5, ver la sección "v5" de
+[`kratos-dakota/05-celeste-magenta-vista-c-trasera.md`](kratos-dakota/05-celeste-magenta-vista-c-trasera.md).
+
+**Lección nueva:** ninguna — refuerza la Lección 10 (medir, no mirar): cuando el
+auditor y quien mira el resultado en el momento no coinciden en el veredicto sobre una
+pieza puntual, no se resuelve a ojo desde una imagen general — se pide el crop de esa
+pieza específica antes de decidir.
 
 ---
 
