@@ -25,20 +25,22 @@ export type Nodo = {
 // Mismas etiquetas y disposicion que la version en pantalla: lo unico que se
 // va es el monitor.
 //
-// Colores: TODOS dentro de la familia azul, en vez de los colores de marca de
-// cada herramienta. Con el amarillo de Drive y el morado de Canva sobre el
-// panel blanco y azul, eran los dos unicos elementos que rompian la paleta.
-// La distincion entre agentes viene de la LUMINOSIDAD, no del tono: ChatGPT
-// (el nodo central) es el mas claro y saturado porque es el foco; el resto
-// se ordena de mas oscuro (entradas) a intermedio (salidas).
+// Colores: paleta curada de tonos joya, todos con saturacion y luminosidad
+// parecidas (no los colores de marca crudos de cada herramienta). El azul
+// monocromo anterior resolvia el choque con el amarillo de Drive y el morado
+// de Canva, pero se paso de plano -- sin variedad de tono la pagina se leia
+// sin vida. Aqui hay variedad de HUE pero todos en el mismo registro (600 de
+// Tailwind, mas o menos), asi que conviven sin que ninguno grite por encima
+// de los demas. ChatGPT es la excepcion: se queda en el azul de marca porque
+// pasa a ser el orbe de cristal central, no una insignia mas.
 export const NODOS: Nodo[] = [
-  { id: "webhook", label: "Webhook", sub: "Disparador", x: 390, y: 300, color: "#1E3A8A", z: -0.12 },
-  { id: "discord", label: "Discord", sub: "Mensajes", x: 390, y: 730, color: "#312E81", z: -0.12 },
+  { id: "webhook", label: "Webhook", sub: "Disparador", x: 390, y: 300, color: "#E11D48", z: -0.12 },
+  { id: "discord", label: "Discord", sub: "Mensajes", x: 390, y: 730, color: "#7C3AED", z: -0.12 },
   { id: "gpt", label: "ChatGPT", sub: "Agente", x: 800, y: 515, color: "#0EA5E9", z: 0.24 },
-  { id: "slack", label: "Slack", sub: "Notifica", x: 1210, y: 250, color: "#38BDF8", z: -0.02 },
-  { id: "drive", label: "Drive", sub: "Archiva", x: 1210, y: 430, color: "#2563EB", z: -0.02 },
-  { id: "notion", label: "Notion", sub: "Registra", x: 1210, y: 610, color: "#64748B", z: -0.02 },
-  { id: "canva", label: "Canva", sub: "Publica", x: 1210, y: 790, color: "#1D4ED8", z: -0.02 },
+  { id: "slack", label: "Slack", sub: "Notifica", x: 1210, y: 250, color: "#0891B2", z: -0.02 },
+  { id: "drive", label: "Drive", sub: "Archiva", x: 1210, y: 430, color: "#D97706", z: -0.02 },
+  { id: "notion", label: "Notion", sub: "Registra", x: 1210, y: 610, color: "#475569", z: -0.02 },
+  { id: "canva", label: "Canva", sub: "Publica", x: 1210, y: 790, color: "#DB2777", z: -0.02 },
 ];
 
 export const CONEXIONES: [string, string][] = [
@@ -106,8 +108,18 @@ const CENTRO = { x: 800, y: 549 };
 // 0.26 + 0.15 + 0.02 = 0.43, que entra en 0.468. Con un radio mayor las
 // etiquetas se montarian sobre la esfera de abajo.
 export const RADIO = 0.13;
-/** Bloque de texto bajo la esfera. */
+// El orbe central es un objeto distinto, no una insignia mas grande: mide
+// mas del doble para que se lea como el nucleo del sistema. El hueco que
+// deja libre (0.559 en horizontal entre su centro y el de una entrada, 0.86
+// en vertical) sobra de sobra frente a RADIO_ORBE + RADIO.
+export const RADIO_ORBE = 0.3;
+/** Bloque de texto bajo la esfera o insignia. */
 export const ETIQUETA = { w: 0.7, h: 0.15 };
+
+/** Radio real de cada nodo: el orbe central es distinto del resto. */
+export function radioDe(n: Nodo): number {
+  return n.id === "gpt" ? RADIO_ORBE : RADIO;
+}
 
 /**
  * Disposicion vertical, para un hueco en retrato (el que ocupa el movil en la
@@ -134,11 +146,13 @@ export function posicion(n: Nodo, vertical = false): [number, number, number] {
  */
 export function salida(n: Nodo, vertical = false): [number, number, number] {
   const p = posicion(n, vertical);
-  return vertical ? [p[0], p[1] - RADIO, p[2]] : [p[0] + RADIO, p[1], p[2]];
+  const r = radioDe(n);
+  return vertical ? [p[0], p[1] - r, p[2]] : [p[0] + r, p[1], p[2]];
 }
 export function entrada(n: Nodo, vertical = false): [number, number, number] {
   const p = posicion(n, vertical);
-  return vertical ? [p[0], p[1] + RADIO, p[2]] : [p[0] - RADIO, p[1], p[2]];
+  const r = radioDe(n);
+  return vertical ? [p[0], p[1] + r, p[2]] : [p[0] - r, p[1], p[2]];
 }
 
 export function buscar(id: string): Nodo {
@@ -149,6 +163,59 @@ export function buscar(id: string): Nodo {
 
 export const TEX_ETIQUETA = { w: 512, h: 110 };
 export const TEX_ONDA = { w: 512, h: 128 };
+export const TEX_INSIGNIA = { w: 256, h: 256 };
+
+function rectRedondeado(
+  ctx: CanvasRenderingContext2D,
+  x: number,
+  y: number,
+  w: number,
+  h: number,
+  r: number
+) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
+
+/**
+ * Insignia plana de una herramienta: un cuadrado redondeado de color solido
+ * con su inicial, sobre canvas transparente.
+ *
+ * Reemplaza a la esfera con onda interior para las seis herramientas: son
+ * iconos, no agentes pensando, asi que se leen mejor como un objeto plano y
+ * simple que como otra bola de energia compitiendo con el orbe central.
+ * Se dibuja UNA vez, igual que la etiqueta: no cambia nunca.
+ */
+export function dibujarInsignia(ctx: CanvasRenderingContext2D, n: Nodo) {
+  const { w, h } = TEX_INSIGNIA;
+  const m = 14;
+  ctx.clearRect(0, 0, w, h);
+
+  rectRedondeado(ctx, m, m, w - m * 2, h - m * 2, 46);
+  ctx.fillStyle = n.color;
+  ctx.fill();
+
+  // Un brillo diagonal muy tenue, para que se lea como superficie y no como
+  // un cuadrado de color plano pegado en el aire.
+  const brillo = ctx.createLinearGradient(m, m, w - m, h - m);
+  brillo.addColorStop(0, "rgba(255,255,255,0.32)");
+  brillo.addColorStop(0.5, "rgba(255,255,255,0.04)");
+  brillo.addColorStop(1, "rgba(255,255,255,0)");
+  rectRedondeado(ctx, m, m, w - m * 2, h - m * 2, 46);
+  ctx.fillStyle = brillo;
+  ctx.fill();
+
+  ctx.fillStyle = "#FFFFFF";
+  ctx.font = "700 128px system-ui, sans-serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText(n.label[0], w / 2, h / 2 + 6);
+}
 
 /**
  * Nombre y funcion del agente, centrados, sobre canvas transparente.

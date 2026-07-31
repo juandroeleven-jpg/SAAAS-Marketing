@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Preload } from "@react-three/drei";
+import { MeshTransmissionMaterial, Preload } from "@react-three/drei";
 import * as THREE from "three";
 import {
   CICLO,
@@ -13,10 +13,13 @@ import {
   PROGRAMA_NODO,
   ETIQUETA,
   RADIO,
+  RADIO_ORBE,
   TEX_ETIQUETA,
+  TEX_INSIGNIA,
   TEX_ONDA,
   buscar,
   dibujarEtiqueta,
+  dibujarInsignia,
   dibujarOnda,
   entrada,
   posicion,
@@ -67,6 +70,30 @@ function usarTexturasEtiqueta(claro: boolean) {
   }, [claro]);
 }
 
+// Las insignias de las seis herramientas (todo salvo el orbe central). Cada
+// una es distinta (color propio, inicial propia) asi que no se comparten
+// como la onda, pero se dibujan UNA vez igual que las etiquetas.
+function usarTexturasInsignia() {
+  return useMemo(() => {
+    const mapa = new Map<string, THREE.CanvasTexture>();
+    NODOS.forEach((n) => {
+      if (n.id === "gpt") return;
+      const c = document.createElement("canvas");
+      c.width = TEX_INSIGNIA.w;
+      c.height = TEX_INSIGNIA.h;
+      const ctx = c.getContext("2d");
+      if (ctx) dibujarInsignia(ctx, n);
+      const t = new THREE.CanvasTexture(c);
+      t.colorSpace = THREE.SRGBColorSpace;
+      t.generateMipmaps = false;
+      t.minFilter = THREE.LinearFilter;
+      t.magFilter = THREE.LinearFilter;
+      mapa.set(n.id, t);
+    });
+    return mapa;
+  }, []);
+}
+
 // La onda de voz, UNA sola textura para los siete agentes. Se repite en
 // horizontal para poder desplazarla sin costura.
 function usarTexturaOnda() {
@@ -108,22 +135,13 @@ function usarTexturaHalo() {
   }, []);
 }
 
-// Mezcla el color del agente hacia el azul oscuro del fondo, para el nucleo
-// de la esfera. Un nucleo del color puro sale pastel; oscurecido, el borde
-// encendido tiene contra que destacar.
-function oscuro(hex: string): string {
-  const n = parseInt(hex.slice(1), 16);
-  const m = (c: number, f: number) => Math.round(c * f);
-  return `rgb(${m((n >> 16) & 255, 0.5)}, ${m((n >> 8) & 255, 0.5)}, ${m(n & 255, 0.62)})`;
-}
-
-// --- Un agente -----------------------------------------------------------
+// --- El orbe central (ChatGPT) --------------------------------------------
 
 // Cuanto se desplaza la onda dentro de la esfera, en anchos de textura por
 // segundo. Lento: es un agente pensando, no un ecualizador de musica.
 const VELOCIDAD_ONDA = 0.075;
 
-function Agente({
+function OrbeCentral({
   nodo,
   etiqueta,
   onda,
@@ -198,58 +216,58 @@ function Agente({
 
   return (
     <group ref={grupo}>
-      {/* Resplandor exterior. Aditivo y sin escritura de profundidad para que
-          se funda con el fondo en vez de recortarse contra el. */}
-      <mesh ref={luz} position={[0, 0, -0.05]}>
-        <planeGeometry args={[RADIO * 5.2, RADIO * 5.2]} />
+      {/* Resplandor exterior, mas grande que el de una insignia: es el nucleo
+          del sistema y tiene que leerse como tal incluso fuera de foco. */}
+      <mesh ref={luz} position={[0, 0, -0.1]}>
+        <planeGeometry args={[RADIO_ORBE * 4.4, RADIO_ORBE * 4.4]} />
         <meshBasicMaterial
           map={halo}
           color={nodo.color}
           transparent
-          opacity={0.38}
+          opacity={0.4}
           depthWrite={false}
           blending={claro ? THREE.NormalBlending : THREE.AdditiveBlending}
         />
       </mesh>
 
-      {/* La esfera, en dos capas.
-          El nucleo va OSCURO a proposito: un orbe de energia se lee por
-          contraste contra su propio borde. Pintado del color entero salia
-          pastel y chato.
-          El borde es la misma esfera dibujada por dentro (BackSide) y en
-          aditivo: de frente apenas se acumula una capa y en la silueta se
-          acumulan muchas, asi que el brillo cae solo en el canto. Es el
-          efecto Fresnel sin escribir un shader. */}
+      {/* La esfera de cristal real: MeshTransmissionMaterial refracta lo que
+          hay detras (el resto del grafo, el halo) en vez de simularlo con dos
+          capas de Fresnel falso. Solo se paga este costo UNA vez, aqui: para
+          las seis insignias seria demasiado caro (cada instancia renderiza la
+          escena a una textura por frame). */}
       <mesh ref={esfera}>
-        <sphereGeometry args={[RADIO * 0.965, 24, 18]} />
-        <meshBasicMaterial
-          color={claro ? nodo.color : oscuro(nodo.color)}
-          transparent
-          opacity={claro ? 0.95 : 0.88}
+        <sphereGeometry args={[RADIO_ORBE * 0.965, 48, 32]} />
+        <MeshTransmissionMaterial
+          color={nodo.color}
+          thickness={0.4}
+          roughness={0.06}
+          transmission={1}
+          ior={1.3}
+          chromaticAberration={0.04}
+          anisotropy={0.1}
+          distortion={0.15}
+          distortionScale={0.2}
+          temporalDistortion={0.1}
+          backside
         />
       </mesh>
-      {/* El borde encendido. En oscuro es aditivo (brillo que se suma al
-          fondo). En claro el aditivo sobre blanco satura y desaparece, y
-          ademas un agente casi blanco como Notion se volvia invisible: ahi el
-          borde pasa a mezcla normal y a un tono oscurecido, que actua como
-          aro de contorno y devuelve la silueta. */}
+      {/* Un aro fino que marca el borde: sin el, el cristal se funde
+          demasiado con el fondo y pierde silueta. */}
       <mesh ref={borde}>
-        <sphereGeometry args={[RADIO * 1.16, 32, 24]} />
+        <sphereGeometry args={[RADIO_ORBE * 1.02, 32, 24]} />
         <meshBasicMaterial
-          color={claro ? oscuro(nodo.color) : nodo.color}
+          color={nodo.color}
           transparent
-          opacity={0.5}
+          opacity={0.35}
           side={THREE.BackSide}
           depthWrite={false}
-          depthTest={false}
           blending={claro ? THREE.NormalBlending : THREE.AdditiveBlending}
         />
       </mesh>
 
-      {/* La onda de voz, por delante del centro de la esfera. Aditiva: es
-          luz atravesando el volumen. */}
-      <mesh ref={voz} position={[0, 0, RADIO * 1.05]} renderOrder={3}>
-        <planeGeometry args={[RADIO * 2.25, RADIO * 1.7]} />
+      {/* La onda de voz, dentro del cristal: se ve atravesando el volumen. */}
+      <mesh ref={voz} position={[0, 0, RADIO_ORBE * 1.02]} renderOrder={3}>
+        <planeGeometry args={[RADIO_ORBE * 2.1, RADIO_ORBE * 1.55]} />
         <meshBasicMaterial
           map={mapaPropio}
           color={claro ? "#12325C" : "#FFFFFF"}
@@ -263,8 +281,88 @@ function Agente({
       </mesh>
 
       {/* Nombre y funcion, debajo. */}
-      {/* 0.8 y no 0.62: al reducir el tamano de los agentes el hueco entre la
-          esfera y el nombre quedaba visualmente pegado, sobre todo en Canva. */}
+      <mesh position={[0, -RADIO_ORBE - ETIQUETA.h * 0.8, 0]}>
+        <planeGeometry args={[ETIQUETA.w, ETIQUETA.h]} />
+        <meshBasicMaterial map={etiqueta} transparent toneMapped={false} depthWrite={false} />
+      </mesh>
+    </group>
+  );
+}
+
+// --- Una insignia (las seis herramientas) ---------------------------------
+
+function Insignia({
+  nodo,
+  etiqueta,
+  insignia,
+  halo,
+  quieto,
+  indice,
+  vertical,
+  claro,
+}: {
+  nodo: Nodo;
+  etiqueta: THREE.Texture;
+  insignia: THREE.Texture;
+  halo: THREE.Texture;
+  quieto: boolean;
+  indice: number;
+  vertical: boolean;
+  claro: boolean;
+}) {
+  const grupo = useRef<THREE.Group>(null);
+  const luz = useRef<THREE.Mesh>(null);
+  const placa = useRef<THREE.Mesh>(null);
+  const base = useMemo(() => posicion(nodo, vertical), [nodo, vertical]);
+
+  useFrame(() => {
+    if (!grupo.current || !luz.current || !placa.current) return;
+    const t = quieto ? 0 : ahora();
+    const enc = pulso(t % CICLO, PROGRAMA_NODO[nodo.id]);
+    const desfase = indice * 1.37;
+
+    const flot = quieto ? 0 : Math.sin(t * 0.6 + desfase) * 0.022;
+    grupo.current.position.set(base[0], base[1] + flot, base[2] + enc * 0.09);
+
+    const ml = luz.current.material as THREE.MeshBasicMaterial;
+    ml.opacity = 0.35 + enc * 0.55;
+    const sl = 1 + enc * 0.3;
+    luz.current.scale.set(sl, sl, 1);
+
+    const resp = quieto ? 1 : 1 + Math.sin(t * 1.1 + desfase) * 0.018;
+    const sp = resp + enc * 0.08;
+    placa.current.scale.setScalar(sp);
+    placa.current.rotation.z = quieto ? 0 : Math.sin(t * 0.4 + desfase) * 0.03;
+  });
+
+  return (
+    <group ref={grupo}>
+      {/* Resplandor detras de la insignia, igual de barato que en el orbe. */}
+      <mesh ref={luz} position={[0, 0, -0.03]}>
+        <planeGeometry args={[RADIO * 3.6, RADIO * 3.6]} />
+        <meshBasicMaterial
+          map={halo}
+          color={nodo.color}
+          transparent
+          opacity={0.35}
+          depthWrite={false}
+          blending={claro ? THREE.NormalBlending : THREE.AdditiveBlending}
+        />
+      </mesh>
+
+      {/* La insignia: un plano plano con la textura ya pintada, nada de
+          esferas ni ondas -- es un icono, no otro agente pensando. */}
+      <mesh ref={placa}>
+        <planeGeometry args={[RADIO * 2, RADIO * 2]} />
+        <meshBasicMaterial
+          map={insignia}
+          transparent
+          toneMapped={false}
+          depthWrite={false}
+        />
+      </mesh>
+
+      {/* Nombre y funcion, debajo. */}
       <mesh position={[0, -RADIO - ETIQUETA.h * 0.8, 0]}>
         <planeGeometry args={[ETIQUETA.w, ETIQUETA.h]} />
         <meshBasicMaterial map={etiqueta} transparent toneMapped={false} depthWrite={false} />
@@ -537,33 +635,49 @@ function Contenido({
   claro: boolean;
 }) {
   const etiquetas = usarTexturasEtiqueta(claro);
+  const insignias = usarTexturasInsignia();
   const onda = usarTexturaOnda();
   const halo = usarTexturaHalo();
 
   useEffect(() => {
     return () => {
       etiquetas.forEach((t) => t.dispose());
+      insignias.forEach((t) => t.dispose());
       onda.dispose();
       halo.dispose();
     };
-  }, [etiquetas, onda, halo]);
+  }, [etiquetas, insignias, onda, halo]);
 
   return (
     <Conjunto quieto={quieto}>
       <Conexiones halo={halo} quieto={quieto} vertical={vertical} claro={claro} />
-      {NODOS.map((n, i) => (
-        <Agente
-          key={n.id}
-          nodo={n}
-          indice={i}
-          etiqueta={etiquetas.get(n.id)!}
-          onda={onda}
-          halo={halo}
-          quieto={quieto}
-          vertical={vertical}
-          claro={claro}
-        />
-      ))}
+      {NODOS.map((n, i) =>
+        n.id === "gpt" ? (
+          <OrbeCentral
+            key={n.id}
+            nodo={n}
+            indice={i}
+            etiqueta={etiquetas.get(n.id)!}
+            onda={onda}
+            halo={halo}
+            quieto={quieto}
+            vertical={vertical}
+            claro={claro}
+          />
+        ) : (
+          <Insignia
+            key={n.id}
+            nodo={n}
+            indice={i}
+            etiqueta={etiquetas.get(n.id)!}
+            insignia={insignias.get(n.id)!}
+            halo={halo}
+            quieto={quieto}
+            vertical={vertical}
+            claro={claro}
+          />
+        )
+      )}
     </Conjunto>
   );
 }
