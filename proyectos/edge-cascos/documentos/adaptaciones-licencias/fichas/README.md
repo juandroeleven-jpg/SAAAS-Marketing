@@ -97,7 +97,8 @@ Nodos → dónde se escriben:
 | Ficha | Variante | Estado |
 |---|---|---|
 | [`05-celeste-magenta.md`](05-celeste-magenta.md) | Dakota 05 Celeste/Magenta/Blanco | 🟡 B aprobada (reserva menor) · C rechazada |
-| — | 01, 02, 03, 04 pendientes de crear | — |
+| [`03-rojo-gris.md`](03-rojo-gris.md) | Dakota 03 Rojo/Gris/Negro | 🔴 C rechazada dos veces (confusión del spoiler) |
+| — | 01, 02, 04 pendientes de crear | — |
 
 ## Plantillas
 

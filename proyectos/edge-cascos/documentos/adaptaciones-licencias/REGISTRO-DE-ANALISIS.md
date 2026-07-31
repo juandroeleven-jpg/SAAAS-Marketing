@@ -54,6 +54,8 @@ delta del molde+licencia. Ver [`fichas/README.md`](fichas/README.md).
 | 06 | 2026-07-31 | Kratos Dakota 05 CELESTE/MAGENTA — Vista C (trasera) | ❌ rechazado (estilo + contradicción de prompt) | Regenerar con prompt v3 |
 | 07 | 2026-07-31 | Kratos Dakota 05 CELESTE/MAGENTA — Vista C (trasera) v3 | ⚠️ aprobado con reservas (1 pieza) | Editar (spoiler: celeste → petróleo oscuro) |
 | 08 | 2026-07-31 | Kratos Dakota 05 CELESTE/MAGENTA — Vista C (trasera) tras edición v4 | ❌ rechazado (colores del spoiler invertidos) | Regenerar con prompt v5 |
+| 09 | 2026-07-31 | Kratos Dakota 03 ROJO/GRIS/NEGRO — Vista C (trasera), primer intento | ❌ rechazado (contradicción de prompt, sello DOT) | Regenerar con prompt v3 (ya corregido en el repo) |
+| 10 | 2026-07-31 | Kratos Dakota 03 ROJO/GRIS/NEGRO — Vista C (trasera) tras prompt v3 | ❌ rechazado (confusión de identificación del spoiler) | Regenerar con prompt v4 |
 
 ---
 
@@ -778,6 +780,94 @@ ajuste de color, hay que resolver primero la ambigüedad de nombres en el prompt
 
 ---
 
+## Entrada 09 — Kratos Dakota 03 ROJO/GRIS/NEGRO · Vista C (trasera) · primer intento
+
+**Fecha:** 2026-07-31
+**Variante y vista:** EDGEPRO Kratos · Dakota 03 Rojo/Gris/Negro · Vista C (trasera),
+primer resultado, generado con una versión del prompt SIN las correcciones que ya
+tenían las otras 4 variantes.
+**Estado:** ❌ rechazado — no por el resultado en sí, sino porque se usó un prompt
+desactualizado.
+
+**Archivos de evidencia**
+
+Checkpoint real: [`00-kratos-real-trasera-CHECKPOINT.webp`](kratos-dakota/resultados/00-kratos-real-trasera-CHECKPOINT.webp).
+La ilustración y el resultado de este intento **no están subidos al repo**, solo se
+vieron en el hilo de chat.
+
+**Defectos encontrados**
+
+1. **El prompt usado no era el que está guardado en el repo.** Le faltaban los
+   bloques anti-simplificación, separación de tonos, pestaña del visor y el bloque
+   "EL SELLO DOT NO SE DIBUJA" — los mismos que ya habían corregido estos defectos en
+   las variantes 01, 02, 04 y 05.
+2. **El archivo del repo, aunque más completo, tenía la MISMA contradicción interna
+   que la variante 05 (Entrada 06):** una sección pedía dibujar el sello DOT con su
+   texto, y el bloque "EL SELLO DOT NO SE DIBUJA" decía lo contrario. Confirmado con
+   un barrido sobre los 15 archivos: la contradicción estaba en los 5 archivos de
+   vista C trasera (01, 02, 03, 04, 05), no solo en uno.
+
+**Decisión:** regenerar con el prompt v3 ya corregido (sello DOT sin contradicción),
+guardado en [`kratos-dakota/03-rojo-gris-vista-c-trasera.md`](kratos-dakota/03-rojo-gris-vista-c-trasera.md).
+Se corrigió la misma contradicción en los otros 4 archivos de vista C en la misma
+pasada.
+
+**Lección nueva:** cuando alguien pega un prompt para pedir un análisis, hay que
+cotejarlo contra lo que efectivamente está guardado en el repo antes de auditar el
+resultado — si son distintos, el problema puede ser simplemente que se usó una
+versión vieja, y auditar el resultado sin notarlo hace perder tiempo diagnosticando
+defectos que ya estaban resueltos.
+
+---
+
+## Entrada 10 — Kratos Dakota 03 ROJO/GRIS/NEGRO · Vista C (trasera) · tras prompt v3
+
+**Fecha:** 2026-07-31
+**Variante y vista:** EDGEPRO Kratos · Dakota 03 Rojo/Gris/Negro · Vista C (trasera),
+resultado tras aplicar el prompt v3 (Entrada 09).
+**Estado:** ❌ rechazado — geometría conservada, pero confusión de identificación del
+spoiler.
+
+**Archivos de evidencia**
+
+Checkpoint real: el mismo de la Entrada 09. Ilustración y resultado de este intento:
+no están subidos al repo, solo se vieron en el hilo de chat.
+
+**Tabla de verificación**
+
+| # | Ítem verificado | Veredicto | Nota |
+|---|---|---|---|
+| — | Geometría / piezas conservadas | ✅ | El usuario confirma que los elementos se mantuvieron |
+| — | Color de EL ALA protuberante (el spoiler real) | ❌ | No quedó en rojo intenso como se pedía |
+| — | Identificación de la pieza | ❌ | El generador volvió a confundir cuál forma física es "el spoiler", igual que en la variante 05 (Entrada 08) |
+
+**Defectos encontrados**
+
+1. **Confusión de identificación del spoiler, no un desvío de tono.** El mismo
+   mecanismo de la Entrada 08 (variante 05): el prompt v3 todavía usaba la palabra
+   "spoiler" tanto para la pieza puntual protuberante como, implícitamente, para la
+   zona que la rodea ("panel central grande de la zona del spoiler"), y el generador
+   asignó el rojo a la zona equivocada. Este archivo NO había recibido todavía la
+   corrección "EL ALA / EL FONDO" que sí se aplicó al de la variante 05.
+
+**Decisión:** regenerar con prompt v4, que aplica al Bloque 1 y Bloque 2 la misma
+técnica de desambiguación que resolvió el caso de la 05: renombrar la pieza
+protuberante como "EL ALA" (ancla física: debajo del extractor superior, arriba de la
+banda horizontal) y la zona de fondo como "EL FONDO", con criterio de rechazo
+explícito si el rojo termina en la zona equivocada.
+
+**Prompt usado:** ver la sección "v4" al final de
+[`kratos-dakota/03-rojo-gris-vista-c-trasera.md`](kratos-dakota/03-rojo-gris-vista-c-trasera.md).
+
+**Lección nueva:** la corrección "nombres exclusivos + ancla física + criterio de
+rechazo" que resolvió la confusión del spoiler en una variante **no se propaga sola
+a las demás variantes del mismo molde** — cada archivo de prompt es un documento
+independiente y hay que aplicarle la misma corrección a mano. Antes de dar por
+cerrado un hallazgo de este tipo, conviene barrer los archivos hermanos (mismo molde,
+misma vista, distinta variante) para ver si comparten el mismo texto ambiguo.
+
+---
+
 # LECCIONES ACUMULADAS
 
 Consolidado de todo lo aprendido en el proyecto. Se ordena por tema, no por
@@ -889,6 +979,17 @@ cronología. **Antes de escribir un prompt nuevo, leer esta sección entera.**
 27. **Restricción de IP:** solo se adapta material con licencia ya autorizada por EDGE
     para ese proyecto, y cada variante se verifica contra los términos de la licencia
     antes de producción.
+28. **Una corrección encontrada en una variante no se propaga sola a las variantes
+    hermanas** (mismo molde, misma vista, distinto colorway). Cada archivo de prompt
+    es un documento independiente. Cuando se encuentra un bug de redacción (una
+    contradicción interna, un nombre ambiguo como "spoiler" para dos cosas distintas),
+    hay que barrer TODOS los archivos hermanos para ver si comparten el mismo texto,
+    no dar por cerrado el hallazgo con un solo archivo corregido.
+29. **Cotejar el prompt pegado contra el que está guardado en el repo antes de auditar
+    un resultado.** Si alguien pide ayuda pegando un prompt que no coincide con la
+    versión del repo, puede que el "defecto" del resultado ya esté resuelto en el
+    archivo actual — el problema fue usar una versión vieja, no un fallo nuevo del
+    generador.
 
 
 ---

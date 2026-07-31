@@ -8,6 +8,8 @@ Checkpoint real: SÍ (foto Kratos negro mate trasera). Conflicto de silueta decl
 
 **v3 (2026-07-31) — corrige contradicción interna sobre el sello DOT (Entrada 09 del REGISTRO).** El archivo pedía en dos lugares distintos cosas opuestas: "TEXTOS Y DECALS" decía dibujar el sello DOT con su texto, y el bloque "EL SELLO DOT NO SE DIBUJA" decía lo contrario. Mismo bug encontrado y corregido en la variante 05 (Entrada 06). Se elimina la instrucción de dibujarlo con texto; la única instrucción válida es la del bloque "EL SELLO DOT NO SE DIBUJA".
 
+**v4 (2026-07-31) — corrige confusión de identificación del spoiler (Entrada 10 del REGISTRO).** El resultado del prompt v3 mantuvo la geometría pero confundió cuál pieza física es "el spoiler" y pintó de rojo la zona equivocada — el mismo bug que ya había aparecido en la variante 05 (Entrada 08), causado por usar la palabra "spoiler" tanto para la pieza puntual como para la zona que la rodea. Se renombra la pieza protuberante como "EL ALA" y la zona de fondo como "EL FONDO", con la misma técnica que resolvió el caso de la 05: nombres exclusivos, ancla física a la foto real, y criterio de rechazo explícito.
+
 Adjuntar SIEMPRE dos imágenes, en este orden: (1) la ilustración de esta variante en esta vista, (2) la foto real del Kratos negro mate en esta vista.
 
 ---
@@ -49,8 +51,9 @@ reales:
 - Las DOS RANURAS PEQUEÑAS que están justo debajo del extractor, una
   a cada lado del eje central.
 - El TORNILLO / REMACHE CENTRAL visible en la zona alta trasera.
-- El SPOILER visto desde atrás, con sus dos alas laterales y su
-  perfil real.
+- EL ALA PROTUBERANTE (ver definición exacta en el BLOQUE 2 — es la
+  ÚNICA pieza que sobresale físicamente del contorno de la calota),
+  vista desde atrás, con su perfil real.
 - La PIEZA RANURADA TRASERA BAJA (los listones horizontales de la
   parte baja de la calota).
 - El BORDE INFERIOR DE GOMA perimetral.
@@ -66,12 +69,42 @@ PROHIBIDO estrechar, angostar o redibujar la silueta para parecerse
 al dibujo.
 
 BLOQUE 2 — COLOR Y GRÁFICO (autoridad = imagen 1)
-Sobre la superficie trasera se aplica el diseño de la ilustración:
-- ROJO INTENSO en el panel central grande de la zona del spoiler.
-- NEGRO como base dominante de la parte alta trasera.
-- GRIS GRAFITO en los paneles de fondo de los encuadres geométricos.
+ATENCIÓN MÁXIMA — DOS ZONAS DISTINTAS, CON NOMBRES QUE NO SE
+COMPARTEN (este error YA OCURRIÓ en un intento anterior de esta misma
+vista: el generador confundió cuál pieza física es "el spoiler" y
+pintó de rojo la zona equivocada. Identificá primero CUÁL ES CUÁL
+antes de asignar ningún color):
+
+1. "EL ALA" — EL ALA PROTUBERANTE: es la ÚNICA pieza que sobresale
+   físicamente del contorno de la calota, ubicada inmediatamente
+   DEBAJO DEL EXTRACTOR DE VENTILACIÓN SUPERIOR y ARRIBA DE LA BANDA
+   HORIZONTAL. Es LA MISMA FORMA que tiene la foto real (imagen 2) en
+   esa posición exacta — compará directamente contra la imagen 2 para
+   confirmar cuál pieza es, NUNCA contra la ilustración (la ilustración
+   es esquemática y puede sugerir una forma distinta a la real). NO es
+   la zona de fondo que la rodea.
+2. "EL FONDO" — EL FONDO DE LA CALOTA QUE RODEA A EL ALA: es la
+   superficie plana y ancha de la parte alta trasera, con la malla
+   geométrica triangular y los encuadres angulares concéntricos. Es
+   TODO lo que está alrededor de EL ALA, pero NUNCA la pieza
+   protuberante en sí.
+
+Colores, usando exclusivamente estos dos nombres — "EL ALA" y "EL
+FONDO" — para que no haya ninguna ambigüedad sobre cuál pieza lleva
+cuál color:
+- EL ALA va en ROJO INTENSO. Es la ÚNICA pieza roja grande de la
+  composición — el color protagonista va sobre la pieza que
+  sobresale, nunca sobre el fondo que la rodea.
+- EL FONDO va en NEGRO como base dominante, con GRIS GRAFITO en los
+  paneles de fondo de los encuadres geométricos.
 - GRIS CLARO en la BANDA HORIZONTAL BAJA que cruza la parte trasera y en las tramas de líneas finas.
 - ROJO de acento en filetes, remates y las dos marcas pequeñas de texto a los costados.
+
+CRITERIO DE RECHAZO EXPLÍCITO: si EL ALA PROTUBERANTE salió en negro
+o gris y el rojo terminó sobre EL FONDO o sobre cualquier otra zona,
+es AL REVÉS de lo pedido y el resultado está MAL — verificalo
+comparando directamente contra la foto real del checkpoint (imagen
+2), pieza por pieza, antes de entregar.
 - La trama geométrica fina (líneas paralelas, mallas triangulares y
   encuadres angulares concéntricos) va en la zona alta trasera,
   simétrica respecto del eje central.
@@ -201,8 +234,10 @@ PROHIBIDO ABSOLUTO:
 - Prohibido agregar texto, logos, sponsors o adornos que no estén en
   la ilustración.
 - Prohibido dejar zonas pintables con el negro original.
+- Prohibido pintar EL FONDO de rojo o dejar EL ALA en negro/gris: el
+  rojo va exclusivamente sobre EL ALA protuberante.
 
-VERIFICACIÓN FINAL — respondé estos ocho chequeos antes de entregar:
+VERIFICACIÓN FINAL — respondé estos NUEVE chequeos antes de entregar:
 1. ¿La SILUETA trasera es la de la foto real (ancha, con hombros
    marcados) y NO la del dibujo?
 2. ¿El resultado es una FOTOGRAFÍA de producto y no una ilustración?
@@ -227,4 +262,8 @@ VERIFICACIÓN FINAL — respondé estos ocho chequeos antes de entregar:
    reflejo especular fuerte? Si hay lustre o brillo tipo espejo,
    rehacelo. ¿El fondo y la sombra son los de la foto real?
 8. ¿Es coherente con las Vistas A y B — mismo casco, mismo diseño?
+9. ¿EL ALA PROTUBERANTE quedó en ROJO INTENSO (NO negro ni gris) y
+   EL FONDO que la rodea quedó en negro/gris (NO rojo) — confirmado
+   comparando PIEZA POR PIEZA contra la foto real del checkpoint
+   (imagen 2), no solo mirando que "aparece rojo en algún lado"?
 ```

@@ -7,7 +7,7 @@ Kratos. Es el nodo `CMP → RULES → CLASS` del pipeline del Agente 0.
 del colorway. Verificado: los bloques de conflicto de los 15 prompts
 (`../kratos-dakota/*.md`) son idénticos palabra por palabra en las 5 variantes.
 
-**Estado:** delta cerrado · 2 acciones pendientes (ver § Acciones pendientes)
+**Estado:** delta cerrado · 5 acciones pendientes (ver § Acciones pendientes)
 **Última actualización:** 2026-07-31
 
 ---
@@ -208,6 +208,21 @@ ilustración pieza por pieza, nunca infiriendo del nombre de la variante.
 
 9 de 15 combinaciones variante×vista no tienen ilustración en `resultados/`.
 Sin ellas el delta no se puede reverificar ni auditar.
+
+### P5 — Desambiguar "spoiler" en las vistas C de 01, 02 y 04
+
+Las vistas C trasera de la **05** (Entrada 08) y la **03** (Entrada 10) mostraron el
+mismo defecto: el generador confunde cuál pieza física es "el spoiler" porque el
+prompt usa esa palabra tanto para la pieza puntual protuberante como para la zona que
+la rodea, y pinta el color equivocado en la pieza equivocada. Se corrigió en esos dos
+archivos renombrando la pieza protuberante como **"EL ALA"** y la zona de fondo como
+**"EL FONDO"**, con ancla física a la foto real y criterio de rechazo explícito
+(Lección 28: una corrección así no se propaga sola a las variantes hermanas).
+
+**Pendiente:** los archivos `01-azul-vista-c-trasera.md`, `02-gris-vista-c-trasera.md`
+y `04-rojo-blanco-vista-c-trasera.md` todavía dicen *"El SPOILER visto desde atrás..."*
+sin desambiguar. Aplicarles la misma corrección **antes** de generar o regenerar esas
+vistas, no después de que falle.
 
 ---
 
