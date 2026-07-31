@@ -30,7 +30,7 @@ defecto a corregir después.
 
 | # | Variante | Página de estado | A (3/4) | B (lateral) | C (trasera) | Licencia |
 |---|---|---|---|---|---|---|
-| 01 | Azul / Rojo / Blanco | ✅ [`variantes/01-azul-rojo-blanco/ESTADO.md`](variantes/01-azul-rojo-blanco/ESTADO.md) | ❓ | ⚠️ v? — 3 correcciones | 🟡 mismo bug del sello DOT que la 04 — 2 prompts listos, sin ejecutar | ⬜ |
+| 01 | Azul / Rojo / Blanco | ✅ [`variantes/01-azul-rojo-blanco/ESTADO.md`](variantes/01-azul-rojo-blanco/ESTADO.md) | ❓ | ⚠️ v? — 3 correcciones | 🟡 v3 ejecutada — mejoró mucho (mate, spoiler, sello OK); queda el extractor superior sin pintar, prompt v4 con fix listo, sin ejecutar | ⬜ |
 | 02 | Gris / Negro monocromo | ⬜ sin migrar | ❓ | ⚠️ v2b — "mejoró pero sigue lavado" | ❓ | ⬜ |
 | 03 | Rojo / Gris (spoiler vino) | ⬜ sin migrar | ❓ | ✅ v3 FINAL — falta 1 edición | ❓ | ⬜ |
 | 04 | Rojo / Blanco / Negro | ✅ [`variantes/04-rojo-blanco-negro/ESTADO.md`](variantes/04-rojo-blanco-negro/ESTADO.md) | ❓ | ⚠️ v3 — color desviado + pieza inventada | 🔴 intento 1 con 4 regresiones — prompt 3 listo, sin ejecutar | ⬜ |
