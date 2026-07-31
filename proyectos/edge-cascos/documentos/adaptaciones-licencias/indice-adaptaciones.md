@@ -1,14 +1,32 @@
-# ÍNDICE DE ADAPTACIONES — EDGEPRO Kratos · Dakota temporada 2026
+# ÍNDICE DE ADAPTACIONES — EDGE
 
-**Punto de entrada único del lote.** Una fila por variante, una columna por vista.
-El detalle de cada casco vive en su propia página de estado; acá solo se ve el
-tablero y lo que falta.
+**Punto de entrada único.** Una fila por variante, una columna por vista. El detalle
+de cada casco vive en su propia página de estado; acá solo se ve el tablero y lo que
+falta.
 
-**Última actualización:** 2026-07-30 · **Molde base:** EDGEPRO Kratos (full face con spoiler)
+**Última actualización:** 2026-07-31
 
 ---
 
-## Tablero
+## LOTE 2 — Molde abatible con spoiler LED · casos temáticos
+
+| # | Caso | Página de estado | Vista con material | Estado |
+|---|---|---|---|---|
+| 01 | **NYC Graffiti** | ✅ [`variantes/caso-01-nyc-graffiti/ESTADO.md`](variantes/caso-01-nyc-graffiti/ESTADO.md) | B (lateral izq.) | 🔴 **bloqueado en `CMP`** — dos colorways sin autoridad definida |
+| 02 | Street Fighter Magenta / Púrpura | ⬜ sin intake | A (frontal) | ⏳ pendiente de intake |
+
+**Lecciones nuevas que aportó el Lote 2** (ver § 10 del caso 01): el delta se hace
+**por molde y no se hereda** · existe una tercera categoría además de pieza y pintura,
+la **luz emitida** (LED) · la **densidad de texto es un criterio de admisión**, no un
+defecto a corregir después.
+
+---
+
+## LOTE 1 — EDGEPRO Kratos · Dakota temporada 2026
+
+**Molde base:** EDGEPRO Kratos (full face con spoiler)
+
+### Tablero
 
 | # | Variante | Página de estado | A (3/4) | B (lateral) | C (trasera) | Licencia |
 |---|---|---|---|---|---|---|
@@ -24,7 +42,7 @@ tablero y lo que falta.
 
 ---
 
-## Recuento
+### Recuento
 
 | Métrica | Valor |
 |---|---|
@@ -42,7 +60,7 @@ tablero y lo que falta.
 
 ---
 
-## Huecos detectados
+### Huecos detectados
 
 Esto es lo que el tablero deja ver y que hasta ahora no se veía desde ningún archivo:
 
