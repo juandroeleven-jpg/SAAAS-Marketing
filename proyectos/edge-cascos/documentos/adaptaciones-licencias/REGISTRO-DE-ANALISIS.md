@@ -53,6 +53,7 @@ delta del molde+licencia. Ver [`fichas/README.md`](fichas/README.md).
 | 05 | 2026-07-30 | Kratos Dakota 05 CELESTE/MAGENTA — Vista B (lateral) v3 EDITADO | ✅ aprobado (reserva menor: visor) | Aceptar + retoque del visor |
 | 06 | 2026-07-31 | Kratos Dakota 05 CELESTE/MAGENTA — Vista C (trasera) | ❌ rechazado (estilo + contradicción de prompt) | Regenerar con prompt v3 |
 | 07 | 2026-07-31 | Kratos Dakota 05 CELESTE/MAGENTA — Vista C (trasera) v3 | ⚠️ aprobado con reservas (1 pieza) | Editar (spoiler: celeste → petróleo oscuro) |
+| 08 | 2026-07-31 | Kratos Dakota 05 CELESTE/MAGENTA — Vista C (trasera) tras edición v4 | ❌ rechazado (colores del spoiler invertidos) | Regenerar con prompt v5 |
 
 ---
 
@@ -683,6 +684,100 @@ la relación inversa a la regla de gemelos de color de la Entrada 05.
 
 ---
 
+## Entrada 08 — Kratos Dakota 05 CELESTE/MAGENTA · Vista C (trasera) · resultado tras aplicar la edición v4
+
+**Fecha:** 2026-07-31
+**Variante y vista:** EDGEPRO Kratos · Dakota 05 Celeste/Magenta/Blanco · Vista C (trasera),
+resultado tras aplicar el prompt de EDICIÓN del spoiler de la Entrada 07 (lógica del
+bloque "v4" del archivo de prompt).
+**Estado:** ❌ rechazado — el defecto no es el desvío tonal que se creía en la Entrada
+07: es una **confusión de identificación de pieza**. El generador invirtió cuál forma
+física es "el spoiler".
+
+**Archivos de evidencia**
+
+Ilustración de referencia y checkpoint real: los mismos de las Entradas 06 y 07 —
+[`05-celeste-magenta-vista-c-ILUSTRACION.webp`](kratos-dakota/resultados/05-celeste-magenta-vista-c-ILUSTRACION.webp)
+y
+[`00-kratos-real-trasera-CHECKPOINT.webp`](kratos-dakota/resultados/00-kratos-real-trasera-CHECKPOINT.webp).
+
+Resultado de este intento: **no está subido al repo.** Se vio directamente en el hilo
+de chat, no existe todavía como archivo en `kratos-dakota/resultados/`. Falta
+guardarlo ahí (sugerido: `05-celeste-magenta-vista-c-RESULTADO-v4-edicion.webp`) para
+que esta entrada quede completamente auditable sin depender del hilo de chat.
+
+**Tabla de verificación**
+
+| # | Ítem verificado | Veredicto | Nota |
+|---|---|---|---|
+| 1-7 | Todo lo demás (silueta, fotografía, mate, logo EDGE, sello DOT, densidad, X40) | ✅ | Sin cambios respecto de la Entrada 07: la edición no derramó sobre el resto de la imagen |
+| — | **Color del ala protuberante con las dos rejillas laterales (el spoiler real)** | ❌ | Salió en CELESTE BRILLANTE. Debía quedar en azul petróleo oscuro |
+| — | **Color de la zona plana de fondo que rodea al spoiler (malla geométrica triangular, parte alta de la calota)** | ❌ | Salió en AZUL PETRÓLEO OSCURO. Debía quedar en celeste |
+
+**Defectos encontrados**
+
+1. **Los colores del spoiler y del fondo que lo rodea están EXACTAMENTE INVERTIDOS
+   respecto de lo declarado.** La pieza que sobresale de verdad —el ala con sus dos
+   rejillas de ventilación laterales, ubicada inmediatamente debajo del extractor
+   superior y arriba de la banda blanca, la misma forma que se ve protuberante en la
+   foto del checkpoint real— salió en celeste brillante. La zona plana de fondo que la
+   rodea —la superficie con la malla geométrica triangular— salió en azul petróleo
+   oscuro. Es lo opuesto exacto de lo que piden el prompt v3 y el prompt de edición v4:
+   "AZUL CYAN MEDIO... en el panel central grande de la zona del spoiler" / "El SPOILER
+   va en AZUL PETRÓLEO OSCURO".
+
+   **Esto NO es el mismo defecto que la Entrada 07.** En la Entrada 07 el spoiler y la
+   calota habían COLAPSADO al mismo tono (los dos celeste) — un problema de separación
+   de tonos (Lección 7), resoluble con una edición tonal. Acá los dos tonos SÍ están
+   separados y presentes en la imagen, pero cada uno quedó sobre la pieza física
+   equivocada. El generador no fusionó los colores: **no identifica correctamente cuál
+   forma física es "el spoiler"**. Confunde el ala protuberante real (la pieza con las
+   rejillas, físicamente saliente, clara y verificable en la foto del checkpoint) con la
+   zona plana de fondo que la rodea.
+
+2. **Causa raíz probable, localizada en el propio texto del prompt v3/v4.** El Bloque
+   2 de color usa la palabra "spoiler" en dos frases consecutivas para referirse a dos
+   cosas distintas:
+   - *"AZUL CYAN MEDIO... en el panel central grande de la ZONA DEL SPOILER"* — acá
+     "zona del spoiler" suena a una región amplia de la superficie.
+   - *"El SPOILER va en AZUL PETRÓLEO OSCURO"*, el renglón siguiente — acá "el
+     spoiler" se refiere a la pieza puntual en sí.
+
+   Un lector humano distingue las dos por contexto; el generador de imágenes no tiene
+   ese contexto y termina asignando los dos colores a la forma equivocada, o
+   intercambiados, exactamente como pasó acá. El prompt de edición v4 (dirigido "solo
+   al spoiler") heredó la misma ambigüedad de nombre y no la corrigió — probablemente
+   por eso el intercambio de colores no se resolvió, sino que se invirtió del todo.
+
+**Decisión:** **regenerar** con un prompt v5, no editar de nuevo. Una edición no
+alcanza cuando la causa es que el modelo no ubica bien cuál pieza es cuál: declarar
+únicamente "cambiá el color de esta zona" no arregla una confusión de identificación
+de forma, porque el problema no es el tono sino el mapeo tono→pieza. Antes de intentar
+otra edición hace falta reescribir el Bloque 2 dándole al spoiler un nombre exclusivo,
+no compartido con la zona que lo rodea, y anclado a un detalle físico verificable de la
+foto real. Se ofrece igualmente, como vía más barata a probar primero, un prompt de
+edición v2 que declara el intercambio de los dos colores ya presentes (no requiere
+sintetizar textura nueva, a diferencia del defecto de "se ve como render" de la Entrada
+06, que sí necesitó regenerar).
+
+**Prompt usado:** prompt de edición del spoiler de la Entrada 07 (bloque "v4" de
+[`kratos-dakota/05-celeste-magenta-vista-c-trasera.md`](kratos-dakota/05-celeste-magenta-vista-c-trasera.md)).
+Prompt de regeneración v5 y prompt de edición v2 alternativo, ambos apendados al mismo
+archivo el 2026-07-31.
+
+**Lección nueva:** cuando dos frases consecutivas de un mismo prompt usan la misma
+palabra ("spoiler") para referirse a una ZONA AMPLIA y a una PIEZA PUNTUAL distinta
+dentro de esa zona, el generador puede confundir cuál es cuál — y no como una fusión
+de tonos (eso ya lo cubre la Lección 7), sino como una inversión completa de qué pieza
+lleva qué color. Hay que darle a la pieza puntual un nombre EXCLUSIVO, que no comparta
+palabra con el nombre de la zona que la rodea, y anclar su identificación a un detalle
+físico verificable de la foto real (acá: las dos rejillas laterales, y su posición
+exacta respecto de otras piezas — debajo del extractor, arriba de la banda blanca). Un
+desvío de tono se edita; una confusión de qué pieza es cuál no se arregla con un
+ajuste de color, hay que resolver primero la ambigüedad de nombres en el prompt.
+
+---
+
 # LECCIONES ACUMULADAS
 
 Consolidado de todo lo aprendido en el proyecto. Se ordena por tema, no por
@@ -722,6 +817,16 @@ cronología. **Antes de escribir un prompt nuevo, leer esta sección entera.**
    pero se arregla en otro lado.
 10. **Medir, no mirar.** Histograma de luminancia y muestreo de píxel sobre ilustración
     vs. resultado detectan desvíos que el ojo aprueba.
+10b. **Una palabra compartida entre una zona amplia y una pieza puntual que está adentro
+    de esa zona puede hacer que el generador invierta cuál pieza lleva qué color** (caso
+    Dakota 05 vista C: "la zona del spoiler" y "el spoiler" en dos frases consecutivas,
+    referidas a cosas distintas). Esto no es un colapso de tonos (Lección 7): los dos
+    tonos quedan presentes y separados, pero cada uno cae sobre la forma equivocada. Se
+    blinda dándole a la pieza puntual un nombre EXCLUSIVO, que no comparta palabra con
+    el nombre de la zona que la rodea, y anclando su identificación a un detalle físico
+    verificable de la foto real (una rejilla, una posición relativa a otra pieza). Un
+    desvío de tono se edita; una confusión de qué pieza es cuál necesita primero
+    resolver la ambigüedad de nombres en el prompt, no un ajuste de color.
 
 ## Sobre texto, sellos y detalle fino
 
