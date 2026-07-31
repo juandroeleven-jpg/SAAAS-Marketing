@@ -815,6 +815,105 @@ VERIFICACIÓN FINAL:
    rendija, grilla, encuadre) sigue exactamente igual?
 ```
 
+## Instancia 8.2-v5 — Trasera amarillo/azul, DEFINITIVA (ala negra + tono fluorescente + iluminación real)
+
+**Contexto:** versión final que incorpora las cuatro lecciones de los intentos 8.2 a 8.2-v4: el ala/spoiler es negra (no amarilla — error de lectura del intento 3), el chevron lleva degradado real en el azul, el amarillo tiene que ser fluorescente/vivo (no mostaza apagado, ajuste del intento 4), y la iluminación tiene que mostrar el negro mate profundo real, sin verse blanquecina/lavada.
+
+**Se adjuntan DOS imágenes, en este orden:** (1) la ilustración trasera amarillo/azul, (2) la foto real trasera del casco.
+
+```
+Esto es una TRADUCCIÓN DE ILUSTRACIÓN A FOTO REAL, no un casco
+nuevo. Recibís DOS imágenes con roles distintos y NO
+intercambiables:
+
+- IMAGEN 1 — LA ILUSTRACIÓN (mockup vectorial amarillo/azul, vista
+  trasera): es la AUTORIDAD DE COLOR Y DISEÑO COMPLETO, incluido el
+  tono exacto de cada color. TODO su gráfico se traslada al casco
+  real, como una librea/calco pintado sobre la superficie.
+- IMAGEN 2 — LA FOTO REAL DEL CASCO (vista trasera, negro mate): es
+  la ÚNICA AUTORIDAD DE GEOMETRÍA y de cómo se ve un negro mate real
+  bajo estudio (profundo, sin lavado). Esto NUNCA cambia, sin
+  excepción.
+
+LECTURA CORRECTA DE LA ILUSTRACIÓN — ANCLA DURA 1: en la IMAGEN 1, la
+pieza física del ala/spoiler (la que tiene las ranuras, contorno
+blanco fino) es NEGRA. El amarillo con acento azul pertenece al
+CHEVRON de la zona alta del domo, arriba del ala — no al ala misma.
+Se identifica primero cuál forma corresponde exactamente a la pieza
+física real de la IMAGEN 2 y se usa el color que la IMAGEN 1 le da a
+ESA forma puntual, sea cual sea — no se asume que "lo más grande y
+colorido" es el ala.
+
+TONO DE COLOR — ANCLA DURA 2: el amarillo del chevron es
+FLUORESCENTE/VIVO, saturado, igual de vibrante que en la IMAGEN 1 —
+nunca un mostaza apagado ni desaturado. El panel azul del centro
+lleva degradado real: más oscuro/marino arriba, aclarando hacia
+abajo — nunca un azul plano de un solo tono.
+
+ILUMINACIÓN — ANCLA DURA 3: el negro mate de la calota (fuera del
+gráfico) tiene la misma profundidad y riqueza que muestra la IMAGEN 2
+— un negro real, con contraste, no un gris claro ni un negro lavado
+por exceso de luz blanca. La foto de estudio replica el tipo de luz
+de la IMAGEN 2, no una iluminación plana que blanquea la superficie.
+
+REGLA CENTRAL — PIEZA FÍSICA vs. GRÁFICO PINTADO:
+- El ala es pieza física real: forma, tamaño y posición exactos de
+  la IMAGEN 2, con ranuras y acabado brillante. Color: NEGRO.
+- El resto del gráfico (chevron amarillo/azul, acentos grises
+  diagonales, panel del escudo central) es GRÁFICO PINTADO sobre el
+  domo: cubre la superficie real siguiendo la posición y forma de la
+  IMAGEN 1.
+
+GEOMETRÍA — TODO ESTO VIENE DE LA IMAGEN 2, SIN EXCEPCIÓN:
+- Silueta trasera completa, dome redondeado, mismas proporciones.
+- Las DOS piezas ALA/SPOILER: forma, tamaño y posición reales, con
+  ranuras y acabado brillante, color NEGRO.
+- La rendija horizontal oscura entre ambas alas, en el centro —
+  nunca tapada ni agrandada por el gráfico.
+- El borde inferior con sus nervaduras/rejillas verticales.
+
+COLOR Y DISEÑO — TRASLADO COMPLETO DE LA IMAGEN 1, CON SUS TONOS
+EXACTOS Y LA ILUMINACIÓN CORRECTA:
+1. EL ALA/SPOILER: NEGRO, acabado brillante — no lleva el
+   amarillo/azul.
+2. EL CHEVRON DEL DOMO: amarillo fluorescente/vivo (ancla dura 2), con
+   el panel azul central en degradado oscuro-a-claro, en la misma
+   posición que la IMAGEN 1, pintado sobre la curvatura real del domo
+   por encima del ala.
+3. LOS ACENTOS GRISES DIAGONALES hacia los costados del domo, según
+   el trazado de la IMAGEN 1.
+4. EL PANEL DEL ESCUDO CENTRAL "EDGE" debajo de la rendija, con su
+   color de fondo, del tamaño que muestra la IMAGEN 1.
+5. LOS WORDMARKS "EDGE PRO" y "EDGE" de cada costado, con letras
+   reales y legibles.
+6. El resto de la calota que la IMAGEN 1 no cubre con gráfico: negro/
+   gunmetal mate PROFUNDO (ancla dura 3), igual que la foto real.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido colorear el ala/spoiler de amarillo o azul.
+- Prohibido usar un amarillo apagado o desaturado — tiene que ser
+  fluorescente/vivo.
+- Prohibido dejar el azul del centro sin su degradado.
+- Prohibido dejar la iluminación blanquecina o el negro lavado.
+- Prohibido cambiar la forma de las alas, la rendija central o la
+  grilla inferior, o taparlas con el gráfico.
+- Prohibido inventar piezas físicas que no estén en la foto real.
+- Prohibido cambiar el acabado, el ángulo, el encuadre o el fondo.
+
+VERIFICACIÓN FINAL:
+1. ¿El ala/spoiler quedó negra, con ranuras y acabado brillante?
+2. ¿El amarillo del chevron es fluorescente/vivo, no apagado?
+3. ¿El azul del centro tiene el degradado oscuro-a-claro?
+4. ¿El negro de la calota tiene la profundidad real de la IMAGEN 2,
+   sin verse blanquecino?
+5. ¿Aparecieron los acentos grises diagonales?
+6. ¿Apareció el panel del escudo central con su color de fondo?
+7. ¿Los wordmarks están legibles y bien ubicados?
+8. ¿La rendija central y la grilla inferior siguen intactas?
+9. ¿El ángulo, el encuadre y las proporciones coinciden con la
+   IMAGEN 2?
+```
+
 ---
 
 ## Instancia 8.3 — Trasera, rosa/violeta
