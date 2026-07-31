@@ -7,7 +7,7 @@
 >
 > Índice: [`../../indice-adaptaciones.md`](../../indice-adaptaciones.md)
 
-**Fecha de este cierre:** 2026-07-31 · **Estado:** 🟡 pasada 3 ejecutada, corrección v4 lista, sin ejecutar
+**Fecha de este cierre:** 2026-07-31 · **Estado:** 🟡 pasada 3 ejecutada, 2 defectos encontrados, corrección v5 lista, sin ejecutar
 
 ---
 
@@ -142,6 +142,7 @@ más del texto:
 | P2 | Confirmar con zoom dedicado si las marcas "X40" del resultado v1 son legibles o corruptas |
 | P3 | Revisar el mismo bloque contradictorio del sello DOT en los 13 prompts restantes del lote (P4 de la variante 04, todavía abierto) |
 | P4 | Revisar si el mismo tipo de ambigüedad de "carcasa vs. interior" existe en otros bloques "ZONAS QUE QUEDAN NEGRAS" del lote (extractores, rejillas, ranuras de otras variantes) |
+| P5 | Ejecutar el prompt v5 ([`prompts/04-regeneracion-completa-v5.md`](prompts/04-regeneracion-completa-v5.md)) — corrige extractor + silueta del spoiler |
 
 ---
 
@@ -154,3 +155,68 @@ externo de su hueco/interior, el generador puede leerlo como "toda la pieza qued
 sin pintar" y dejarla completa en el color del molde real, en vez de solo el hueco.
 Hay que **declarar explícitamente si la CARCASA de una pieza de ventilación recibe
 el gráfico o no** — no alcanza con decir "el interior no se pinta".
+
+---
+
+## 10. Segundo hallazgo de la pasada v3 — el spoiler tomó la silueta de la ilustración en vez de la del molde real
+
+Además del extractor (§ 5-7), la misma pasada v3 tiene un segundo defecto, esta vez
+de **geometría** y no de color: el **PANEL DEL SPOILER** (la pieza grande de la parte
+alta trasera, con el tornillo/remache en el medio) salió con la silueta equivocada.
+
+- **Molde real** (`kratos-dakota/resultados/00-kratos-real-trasera-CHECKPOINT.webp`):
+  el panel tiene **bordes angulares / chaflanados** en sus dos costados — silueta de
+  escudo, con un corte recto en diagonal bajando hacia cada hombro, y el extractor de
+  ventilación encastrado en su borde superior.
+- **Ilustración** (`kratos-dakota/resultados/01-azul-vista-c-ILUSTRACION.webp`): dibuja
+  ese mismo panel como un **domo liso y redondeado**, sin esos cortes angulares — una
+  simplificación del dibujo, del mismo tipo que ya se documentó para el carbono de la
+  placa del visor y para las ranuras traseras.
+- **Resultados v1 y v3**: el panel salió con la silueta **redondeada de la
+  ilustración**, no con los cortes angulares del molde real.
+
+Es un defecto de geometría, no de color: el bloque de color del spoiler (§ 5, ítem 4)
+ya está confirmado correcto por medición de píxeles, pero la FORMA del panel se tomó
+de la fuente equivocada. Por regla del marco metodológico
+([`../../00-anatomia-adaptacion.md`](../../00-anatomia-adaptacion.md)), la silueta
+tiene que salir siempre del molde real (autoridad de forma), nunca de la ilustración
+— igual que ya se declaró para la silueta general del casco (v3, bloque
+"CONFLICTO DECLARADO DE SILUETA"), pero acá aplicado a una pieza puntual en vez de a
+la silueta general.
+
+### Corrección — bloque nuevo para BLOQUE 1 (geometría)
+
+Se agrega, dentro de "BLOQUE 1 — GEOMETRÍA: NO SE TOCA NADA", inmediatamente después
+del ítem del spoiler, el siguiente bloque adicional:
+
+```
+El PANEL DEL SPOILER, visto desde atrás, TIENE BORDES ANGULARES /
+CHAFLANADOS en sus dos costados — silueta de escudo, con un corte recto
+en diagonal bajando hacia cada hombro — NO es un domo liso y redondeado.
+ATENCIÓN: la ilustración lo dibuja como un bulto suave y redondeado, sin
+esos cortes angulares. Eso es una SIMPLIFICACIÓN DEL DIBUJO, no una
+indicación de diseño — el mismo tipo de conflicto que ya existe con el
+carbono de la placa del visor y las ranuras traseras. La FORMA exacta del
+panel, con sus dos cortes chaflanados hacia los hombros y el extractor
+encastrado en su borde superior, es la de la imagen 2. El COLOR y el
+gráfico se toman de la imagen 1; la SILUETA del panel, nunca. Si el panel
+del spoiler sale como un domo redondeado sin esos dos cortes angulares, el
+resultado está MAL.
+```
+
+Y un chequeo nuevo en "VERIFICACIÓN FINAL":
+
+```
+10. ¿El panel del spoiler tiene sus dos bordes angulares/chaflanados hacia
+   los hombros, como en el molde real — y NO salió como un domo redondeado
+   copiando la silueta de la ilustración?
+```
+
+Ambos cambios, junto con la corrección del extractor (§ 7), quedan en el prompt v5:
+[`prompts/04-regeneracion-completa-v5.md`](prompts/04-regeneracion-completa-v5.md).
+
+### Lección nueva
+
+**El molde es autoridad de forma también para la silueta EXACTA de piezas
+compuestas (chaflanes, cortes angulares), no solo para su existencia** — declarar la
+forma con la MISMA atención que se le da al color, con un chequeo dedicado.
