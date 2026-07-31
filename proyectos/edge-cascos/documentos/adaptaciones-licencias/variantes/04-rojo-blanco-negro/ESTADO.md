@@ -134,13 +134,22 @@ Lo que se agrega respecto de tu versión:
   borde físico del panel — se nombra explícitamente el fallo del intento 1 como
   criterio de rechazo, no solo como regla general.
 
-### PROMPT 2 — Parche al prompt de generación (corrige la causa raíz, § 4)
+### PROMPT 2 — Regeneración completa desde cero, corregida
 
-No es para correr ahora: es la corrección que hay que aplicar al archivo
-`kratos-dakota/04-rojo-blanco-vista-c-trasera.md` **antes de la próxima vez** que se
-regenere esta vista o cualquier otra del lote con el mismo bloque duplicado.
+**Convención del proyecto: todo caso se entrega con dos prompts** — uno de edición
+(arriba) y uno de **regeneración completa desde cero**, nunca un parche o diff al
+archivo fuente. El segundo prompt es standalone: reescribe la vista entera
+incorporando las lecciones encontradas, listo para correr solo, sin depender del
+archivo anterior. Ver la convención fijada en
+[`../../00-anatomia-adaptacion.md`](../../00-anatomia-adaptacion.md) § Convención de entrega.
 
-→ Archivo completo: [`prompts/02-parche-generacion-sello-dot.md`](prompts/02-parche-generacion-sello-dot.md)
+Reescribe `04-rojo-blanco-vista-c-trasera.md` completo, con las tres correcciones
+de la § 4 aplicadas en los tres lugares donde el prompt original se contradecía
+(el bloque de texto y decals, el bloque final "el sello no se dibuja" y el
+chequeo 6 de la verificación), más un bloque nuevo sobre el límite exacto del
+panel rojo (para blindar contra el derrame visto en el intento 1).
+
+→ Archivo completo: [`prompts/02-regeneracion-completa-corregida.md`](prompts/02-regeneracion-completa-corregida.md)
 
 ---
 
@@ -150,7 +159,7 @@ regenere esta vista o cualquier otra del lote con el mismo bloque duplicado.
 |---|---|
 | P1 | Ejecutar el Prompt 1 sobre el `RESULTADO` original (no sobre el intento 1) |
 | P2 | Confirmar el código de modelo real contra la ilustración en alta resolución antes de aplicar el CAMBIO 3 |
-| P3 | Aplicar el Prompt 2 (parche) al archivo de generación antes de cualquier regeneración futura de esta vista |
+| P3 | Decidir cuál de los dos prompts correr: el 1 (edición, más rápido, parte de un resultado ya bueno salvo 2 defectos) o el 2 (regeneración completa, sin heredar nada, recomendado si se sospechan más desvíos sin auditar) |
 | P4 | Revisar si el mismo bloque duplicado del sello DOT está en los otros 14 prompts del lote (5 variantes × 3 vistas) — es probable que sea sistémico, no de esta vista sola |
 | P5 | Actualizar la Entrada 02 del `REGISTRO-DE-ANALISIS.md` marcando el pendiente de Lección 12 como **cerrado**, con puntero a esta página |
 

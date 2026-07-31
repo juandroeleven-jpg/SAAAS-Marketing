@@ -18,6 +18,26 @@ Extraída del caso real "Tortugas Ninja" (2026-07-30) + hallazgos previos de las
 - **"Logo malo"** (caso Top Gun, Sim. 6c): logo mal reproducido/inventado. Regla: el logotipo se reproduce fiel al arte de referencia adjunto, nunca se redibuja de memoria.
 - **Dos intentos casi idénticos sin marcar cuál es final** (los 3 casos): nombrar los archivos FINAL / DESCARTAR al generarlos.
 
+## Convención de entrega — siempre dos prompts
+
+Cada auditoría que encuentra defectos se cierra con **dos prompts, nunca uno solo**:
+
+1. **PROMPT DE EDICIÓN** — corrige puntualmente los defectos encontrados sobre la
+   imagen ya generada. Sigue el patrón del Caso de Éxito 01 (declarar que no es
+   regeneración, un cambio por bloque numerado, nombre físico de la pieza, criterio
+   de rechazo, bloque propio para cada cosa que no se toca).
+2. **PROMPT DE REGENERACIÓN COMPLETA DESDE CERO** — reescribe la vista entera desde
+   el principio, incorporando las lecciones y correcciones encontradas.
+   **Es standalone: nunca un parche o diff sobre el archivo de generación
+   anterior.** Se puede copiar y correr solo, sin tener que aplicar nada sobre
+   otro archivo primero.
+
+Se entregan los dos siempre, aunque se recomiende usar uno. La edición es más
+rápida cuando el resultado ya es bueno salvo por 1-2 defectos puntuales; la
+regeneración es la opción segura cuando se sospechan más desvíos sin auditar, o
+cuando una edición previa ya dejó regresiones (ver el caso de la variante 04,
+vista C: la edición arregló 2 defectos y metió 4 nuevos).
+
 ## Restricción de IP
 
 Solo se adapta material con licencia YA autorizada por EDGE para ese proyecto. Cada variante se verifica contra los términos de la licencia antes de producción (regla ya fijada en Simulación 9).
