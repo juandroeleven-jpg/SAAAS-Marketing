@@ -173,3 +173,91 @@ producto, a reproducir" y otro bloque, más abajo, lo prohíbe como "texto que e
 generador siempre arruina", el resultado hereda lo peor de los dos: un elemento
 completo, detallado, y mal escrito. **Antes de cada generación conviene un chequeo
 de consistencia interna del prompt**, no solo del prompt contra la ilustración.
+
+---
+
+## 9. Vista B (lateral) — auditoría de la pasada más reciente
+
+Esta sección es de la **otra vista** de la misma variante (lateral, no trasera).
+Ya tenía un análisis propio en
+[`../../analisis/04-rojo-blanco-negro-vista-b-lateral.md`](../../analisis/04-rojo-blanco-negro-vista-b-lateral.md)
+sobre el defecto de la pestaña inventada bajo el mecanismo del visor (ya corregido
+con el bloque de conflicto declarado, ver el prompt de regeneración de vista B
+entregado en el chat). Esta pasada más nueva ya no muestra esa pestaña — corregida.
+
+### Defecto nuevo encontrado — pieza superior sin su color correcto
+
+**Molde/ilustración:** medí la ilustración
+(`kratos-dakota/resultados/04-rojo-blanco-vista-b-ILUSTRACION.png`) en dos puntos:
+
+| Zona | RGB medido | Lectura |
+|---|---|---|
+| Punta del spoiler/alerón | (109, 40, 35) | rojo vino oscuro, mate — la referencia |
+| Pieza pequeña arriba, junto a la toma de aire trasera | ≈ (176, 125, 122)* | misma familia de rojo vino — más clara por el brillo de la ilustración en ese punto, pero NO es negra ni gris |
+
+*(muestra chica, afectada por antialiasing del dibujo; confirmado visualmente contra
+crop en alta resolución — es la misma familia de color que el spoiler, no otra.)*
+
+**Resultado auditado:** la pieza pequeña de arriba (junto a la toma de aire trasera)
+salió en negro/gráfico en vez de en el rojo vino que le corresponde — el mismo
+patrón "gemelos de color" ya documentado en la variante 05 (la pieza superior debe
+llevar EXACTAMENTE el mismo tono que el spoiler).
+
+**Segunda pieza mencionada ("la de abajo, debería quedar gris"): NO CONFIRMADA.**
+No encontré en la ilustración ninguna pieza sólida gris distinguible cerca de la
+mentonera, la correa o el mecanismo — el gris en esta variante aparece solo como
+trama de líneas finas (Lección de "reparto de color", § anterior de esta página),
+no como una pieza física. Antes de escribir un bloque para esta segunda pieza,
+falta identificar exactamente cuál es — queda como pendiente (ver § 10, P6).
+
+### Prompt de edición — solo el defecto confirmado
+
+```
+Esto es una EDICIÓN sobre una fotografía de producto ya terminada, no una
+regeneración. La imagen adjunta es el resultado final y correcto salvo por
+UNA cosa puntual.
+
+CAMBIO 1 — LA PIEZA PEQUEÑA JUNTO A LA TOMA DE AIRE TRASERA PASA A ROJO VINO:
+Hay una pieza pequeña, justo al lado de la toma de aire de la parte trasera
+alta del casco, que hoy está en negro (se confunde con el gráfico de fondo) y
+debe llevar EXACTAMENTE EL MISMO ROJO VINO OSCURO que la punta del spoiler /
+alerón trasero — son GEMELOS de color, el mismo tono exacto.
+- No es el rojo brillante del resto del gráfico (chevrones, filetes): es el
+  rojo vino oscuro y mate del spoiler, más apagado y oscuro.
+- Cubrí toda la pieza con ese tono, respetando su forma y su borde real —
+  sin desbordar sobre el gráfico negro que la rodea.
+- Conservá el mismo sombreado y modelado de luz que tiene hoy esa zona: solo
+  cambia el matiz, no la iluminación ni la forma.
+- El acabado sigue siendo MATE, igual que el spoiler.
+
+TODO LO DEMÁS QUEDA EXACTAMENTE IGUAL — NO SE TOCA NADA:
+- El spoiler/alerón, ya en su rojo vino correcto — no se retoca.
+- El resto del gráfico negro/blanco/rojo/gris, el logotipo "EDGE", las
+  marcas "X40".
+- La placa de fibra de carbono con su dial, las ranuras traseras bajas, la
+  correa.
+- El visor, negro opaco.
+- La silueta, el ángulo, el encuadre, el fondo blanco y la sombra.
+
+PROHIBIDO ABSOLUTO:
+- Prohibido regenerar la imagen: todo lo que no sea esa pieza puntual debe
+  quedar equivalente píxel a píxel.
+- Prohibido que el rojo vino se derrame fuera de esa pieza.
+- Prohibido usar el rojo brillante del resto del gráfico en vez del rojo
+  vino oscuro del spoiler.
+- Prohibido tocar el spoiler, que ya está bien.
+- Prohibido cambiar cualquier otro color, la silueta, el fondo o la luz.
+
+VERIFICACIÓN FINAL:
+1. ¿La pieza junto a la toma de aire trasera quedó en el MISMO rojo vino
+   oscuro que la punta del spoiler — no negra, no roja brillante?
+2. ¿El spoiler, que ya estaba bien, quedó intacto?
+3. ¿No hay derrame del rojo vino sobre el gráfico negro vecino?
+4. ¿Todo lo demás —gráfico, EDGE, X40, cuello, fondo— quedó idéntico?
+```
+
+### Pendiente
+
+| # | Pendiente |
+|---|---|
+| P6 | Identificar con precisión cuál es "la pieza de abajo" que debería quedar gris — no se pudo confirmar contra la ilustración. Falta una referencia más precisa (zona respecto de un punto fijo: visor, correa, mentonera) para no repetir un diagnóstico equivocado |
