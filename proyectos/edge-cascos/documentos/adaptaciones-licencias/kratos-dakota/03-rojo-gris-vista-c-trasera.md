@@ -6,6 +6,8 @@ Checkpoint real: SÍ (foto Kratos negro mate trasera). Conflicto de silueta decl
 
 **v2 (2026-07-30) — tras auditoría del primer resultado (variante azul).** La silueta salió CORRECTA (el bloque de conflicto funcionó), pero aparecieron 3 desvíos: (a) el generador SIMPLIFICÓ la densidad del gráfico — malla triangular más rala, rayado fino reducido; (b) omitió las marcas pequeñas de texto de los costados; (c) devolvió acabado SATINADO/BRILLANTE en vez de MATE. También quedaron poco definidas las dos ranuras pequeñas y la pieza ranurada baja. Se agregan bloques anti-simplificación, marcas nominales y mate reforzado.
 
+**v3 (2026-07-31) — corrige contradicción interna sobre el sello DOT (Entrada 09 del REGISTRO).** El archivo pedía en dos lugares distintos cosas opuestas: "TEXTOS Y DECALS" decía dibujar el sello DOT con su texto, y el bloque "EL SELLO DOT NO SE DIBUJA" decía lo contrario. Mismo bug encontrado y corregido en la variante 05 (Entrada 06). Se elimina la instrucción de dibujarlo con texto; la única instrucción válida es la del bloque "EL SELLO DOT NO SE DIBUJA".
+
 Adjuntar SIEMPRE dos imágenes, en este orden: (1) la ilustración de esta variante en esta vista, (2) la foto real del Kratos negro mate en esta vista.
 
 ---
@@ -97,9 +99,9 @@ un intento anterior de esta misma vista):
 TEXTOS Y DECALS QUE VAN EN ESTA VISTA:
 - El logotipo "EDGE" en GRIS OSCURO, centrado sobre la BANDA
   HORIZONTAL BAJA, tal como en la ilustración.
-- El SELLO / STICKER DE HOMOLOGACIÓN "DOT": rectángulo blanco pequeño
-  con el texto "DOT", centrado en el eje, por debajo de la banda,
-  sobre la zona baja trasera. Va como en la ilustración.
+- El sello DOT NO se dibuja acá: ver el bloque "EL SELLO DOT NO SE
+  DIBUJA" más abajo, que es la única instrucción válida sobre ese
+  punto.
 - LAS DOS MARCAS PEQUEÑAS DE TEXTO de los costados, una a cada lado
   de la banda, tal como están en la ilustración. Son OBLIGATORIAS: en
   un intento anterior el generador las omitió. Se reproducen con su
@@ -219,7 +221,8 @@ VERIFICACIÓN FINAL — respondé estos ocho chequeos antes de entregar:
 5c. ¿El gráfico negro / rojo / grises cubre toda la superficie trasera,
    simétrico respecto del eje, sin parches negros?
 6. ¿El logotipo "EDGE" está completo y bien escrito sobre la banda, y
-   el sello "DOT" está presente y legible?
+   el sello "DOT" quedó SIN texto legible de certificación, como una
+   placa lisa (se compone en post-producción)?
 7. ¿El acabado es MATE de verdad, aterciopelado, sin brillo ni
    reflejo especular fuerte? Si hay lustre o brillo tipo espejo,
    rehacelo. ¿El fondo y la sombra son los de la foto real?
