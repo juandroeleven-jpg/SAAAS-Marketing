@@ -1,7 +1,8 @@
 # FICHA — EDGEPRO Kratos · Dakota · Variante 05 CELESTE/MAGENTA/BLANCO
 
 **Delta aplicable:** [`DELTA-kratos-dakota.md`](DELTA-kratos-dakota.md)
-**Estado global:** 🟡 en proceso — B aprobada con reserva menor, C aprobada con reservas (1 pieza)
+**Estado global:** 🟡 en proceso — B aprobada con reserva menor, C rechazada (confusión de
+identificación del spoiler, no un desvío de tono; pendiente regenerar con prompt v5)
 **Última actualización:** 2026-07-31
 
 ## 1. Mapa de color por pieza
@@ -24,7 +25,7 @@
 |---|---|---|---|---|
 | A — 3/4 delantero | [`05-celeste-magenta-vista-a-3-4-delantero.md`](../kratos-dakota/05-celeste-magenta-vista-a-3-4-delantero.md) | v1 | — | ilustración → foto real |
 | B — lateral | [`05-celeste-magenta-vista-b-lateral.md`](../kratos-dakota/05-celeste-magenta-vista-b-lateral.md) | v3 editado | 5 cambios tonales | ilustración → foto real |
-| C — trasera | [`05-celeste-magenta-vista-c-trasera.md`](../kratos-dakota/05-celeste-magenta-vista-c-trasera.md) | v4 (edición del spoiler, pendiente de correr) | 1 cambio tonal puntual | ilustración → foto real |
+| C — trasera | [`05-celeste-magenta-vista-c-trasera.md`](../kratos-dakota/05-celeste-magenta-vista-c-trasera.md) | v5 (regeneración, corrige confusión de identificación del spoiler) | geometría / color+gráfico (nombres exclusivos ala vs. fondo) / adaptación / fotografía | ilustración → foto real |
 
 ## 3. Estado por vista
 
@@ -32,7 +33,7 @@
 |---|---|---|---|---|
 | A | ⚪ sin analizar | 0 | — | — |
 | B | 🟢 aprobada (reserva menor) | 3 (v1 → v2 → v3 editado) | visor transparente en vez de negro opaco | Entradas 04 y 05 |
-| C | 🟡 aprobada con reservas | 2 (v2 → v3) | spoiler celeste en vez de azul petróleo oscuro (colapsó con el tono de la calota) | Entradas 06 y 07 |
+| C | 🔴 rechazada | 3 (v2 → v3 → edición sobre v3, lógica "v4") | **confusión de qué pieza física es el spoiler, no un desvío de tono**: el ala protuberante con las dos rejillas laterales salió celeste y el fondo que la rodea salió petróleo — colores exactamente invertidos respecto de lo declarado | Entradas 06, 07 y 08 |
 
 **Qué autoriza cada estado:**
 
@@ -45,11 +46,16 @@
 ## 4. Archivo final
 
 **Vista B:** `resultados/05-cel-v3-EDITADO-OK.webp` — aprobado, pendiente retoque del visor.
-**Vista C:** el resultado del prompt v3 corrigió 6 de 7 ítems (Entrada 07); pendiente
-subir al repo como `resultados/05-celeste-magenta-vista-c-RESULTADO-v3.webp` y aplicar
-la edición del spoiler antes de aprobar sin reservas. El archivo
-`resultados/05-celeste-magenta-vista-c-RESULTADO.webp` corresponde al intento anterior
-con prompt v2, rechazado en la Entrada 06.
+**Vista C:** el resultado del prompt v3 corrigió 6 de 7 ítems (Entrada 07), pero el
+intento de edición del spoiler sobre ese resultado (lógica "v4") invirtió los colores
+en vez de corregirlos: el ala protuberante quedó celeste y el fondo quedó petróleo
+(Entrada 08). Ninguno de los dos resultados (v3, ni la edición sobre v3) está subido al
+repo — ambos se vieron en el hilo de trabajo. Pendiente: regenerar con el prompt v5 de
+[`05-celeste-magenta-vista-c-trasera.md`](../kratos-dakota/05-celeste-magenta-vista-c-trasera.md)
+(o intentar primero el prompt de edición v2 de intercambio de colores del mismo
+archivo) y recién ahí subir el resultado final al repo. El archivo
+`resultados/05-celeste-magenta-vista-c-RESULTADO.webp` corresponde al intento más
+antiguo con prompt v2, rechazado en la Entrada 06.
 
 ## 5. Licencia
 
