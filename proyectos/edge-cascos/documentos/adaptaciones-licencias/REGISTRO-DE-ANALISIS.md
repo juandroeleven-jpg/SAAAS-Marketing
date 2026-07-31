@@ -52,6 +52,7 @@ delta del molde+licencia. Ver [`fichas/README.md`](fichas/README.md).
 | 04 | 2026-07-30 | Kratos Dakota 05 CELESTE/MAGENTA — Vista B (lateral) v2 | ⚠️ aprobado con reservas | Editar (5 correcciones tonales) |
 | 05 | 2026-07-30 | Kratos Dakota 05 CELESTE/MAGENTA — Vista B (lateral) v3 EDITADO | ✅ aprobado (reserva menor: visor) | Aceptar + retoque del visor |
 | 06 | 2026-07-31 | Kratos Dakota 05 CELESTE/MAGENTA — Vista C (trasera) | ❌ rechazado (estilo + contradicción de prompt) | Regenerar con prompt v3 |
+| 07 | 2026-07-31 | Kratos Dakota 05 CELESTE/MAGENTA — Vista C (trasera) v3 | ⚠️ aprobado con reservas (1 pieza) | Editar (spoiler: celeste → petróleo oscuro) |
 
 ---
 
@@ -613,6 +614,72 @@ y esa contradicción se ve idéntica a un fallo del generador — el sello sale 
 igual — pero se arregla en otro lado. Antes de dar un prompt por bueno hay que leerlo
 completo de punta a punta buscando instrucciones que se pisen entre sí, no alcanza con
 revisar cada bloque de forma aislada.
+
+---
+
+## Entrada 07 — Kratos Dakota 05 CELESTE/MAGENTA · Vista C (trasera) · resultado con prompt v3
+
+**Fecha:** 2026-07-31
+**Variante y vista:** EDGEPRO Kratos · Dakota 05 Celeste/Magenta/Blanco · Vista C (trasera),
+resultado tras aplicar el prompt v3 (corrección de las 2 contradicciones de origen +
+refuerzo anti-render de la Entrada 06).
+**Estado:** ⚠️ aprobado con reservas — 6 de 7 ítems corregidos correctamente. Queda 1
+defecto, acotado a una sola pieza.
+
+**Archivos de evidencia**
+
+Ilustración de referencia y checkpoint real: los mismos de la Entrada 06 —
+[`05-celeste-magenta-vista-c-ILUSTRACION.webp`](kratos-dakota/resultados/05-celeste-magenta-vista-c-ILUSTRACION.webp)
+y
+[`00-kratos-real-trasera-CHECKPOINT.webp`](kratos-dakota/resultados/00-kratos-real-trasera-CHECKPOINT.webp).
+
+Resultado nuevo (v3): **pendiente de subir al repo.** El archivo fue compartido
+directamente en el hilo de trabajo; no existe todavía como archivo en
+`kratos-dakota/resultados/`. Falta guardarlo ahí como
+`05-celeste-magenta-vista-c-RESULTADO-v3.webp` para que esta entrada quede
+completamente auditable sin depender del hilo de chat.
+
+**Tabla de verificación** — contra los 9 chequeos del prompt v3
+
+| # | Ítem verificado | Veredicto | Nota |
+|---|---|---|---|
+| 1 | Silueta trasera (ancha, hombros marcados) | ✅ | Sin desvío visible |
+| 2 | Resultado es FOTOGRAFÍA, no render/ilustración | ✅ | Corregido respecto de la Entrada 06 — el bloque anti-render funcionó |
+| 3 / 3c | Extractor superior y tornillo central | ✅ | Ambos visibles |
+| 3b | Dos ranuras pequeñas y pieza ranurada baja | ⚠️ | No se puede confirmar sin crop con zoom — a verificar (Lección 12) |
+| 4 | Cuello, ERS, correa | ✅ provisorio | Consistente con el checkpoint en lo que el encuadre permite ver |
+| 5 / 5b | Densidad del gráfico y marcas "X40" | ✅ | Ambos presentes, comparable a la ilustración |
+| 5c | Cobertura y simetría del gráfico | ✅ | Simétrico, sin parches negros |
+| 6 | Logo EDGE (color) y sello DOT (sin texto de certificación) | ✅ | **Las dos correcciones de origen de la Entrada 06 funcionaron**: logo negro, sello DOT como placa lisa sin texto corrupto |
+| 7 | Acabado MATE | ✅ | Corregido — sin brillo tipo espejo |
+| — | **Color del SPOILER** | ❌ | **Único defecto.** Sale en el mismo celeste brillante que la calota; el prompt pide azul petróleo oscuro, un tono claramente más oscuro y distinto |
+
+**Defectos encontrados**
+
+1. **El spoiler (la pieza que sobresale, con sus dos rejillas laterales) sale en
+   celeste brillante, igual que el panel de la calota.** El prompt v3 declara dos
+   tonos distintos para zonas vecinas — celeste en la calota, azul petróleo oscuro en
+   el spoiler — y el generador los colapsó en uno solo. Es el mismo mecanismo de la
+   Lección 7 (separación de tonos), pero acotado a una sola pieza en vez de a todo el
+   casco: la regla de conteo funcionó para el resto de la superficie y falló acá.
+
+**Decisión:** **editar**, no regenerar. Six de siete ítems están resueltos; el único
+defecto es un ajuste tonal de una pieza puntual, exactamente el tipo de corrección que
+el generador SÍ ejecuta bien (Lección 6). Se ofrece un prompt de edición dirigido solo
+al spoiler, con la relación "no-gemelos" declarada explícitamente (el spoiler NO
+comparte tono con la calota), y un prompt de regeneración v4 como respaldo por si la
+edición revierte alguna otra pieza (Lección 3).
+
+**Prompt usado:** prompt v3, ver la sección "v3" al final de
+[`kratos-dakota/05-celeste-magenta-vista-c-trasera.md`](kratos-dakota/05-celeste-magenta-vista-c-trasera.md).
+Prompt de edición del spoiler y prompt v4 de respaldo, apendados al mismo archivo el
+2026-07-31.
+
+**Lección nueva:** la separación de tonos (Lección 7) puede fallar en una sola pieza
+aunque el resto de la superficie la respete. No alcanza con declarar la escala general
+de tonos: cuando dos zonas VECINAS llevan colores parecidos pero distintos (celeste
+calota / petróleo spoiler), conviene declarar explícitamente que **no son gemelos** —
+la relación inversa a la regla de gemelos de color de la Entrada 05.
 
 ---
 

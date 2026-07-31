@@ -337,3 +337,74 @@ Checklist final:
 3. ¿El sello DOT quedó sin texto legible de certificación?
 4. ¿Todo lo demás quedó exactamente igual que antes de la edición?
 ```
+
+---
+
+## v4 — tras el resultado del prompt v3 (Entrada 07 del REGISTRO)
+
+El prompt v3 funcionó: silueta, fotografía, mate, logo EDGE, sello DOT, densidad y
+marcas "X40" salieron bien. **Queda un solo defecto:** el SPOILER (la pieza que
+sobresale, con sus dos rejillas laterales) salió en el mismo celeste brillante que
+la calota, en vez de azul petróleo oscuro. Es un ajuste tonal de una sola pieza —
+se resuelve editando, no regenerando.
+
+### Prompt de EDICIÓN — spoiler únicamente (recomendado, probar primero)
+
+```
+Esta es una EDICIÓN puntual sobre una foto ya generada, NO una
+regeneración: la silueta, la fotografía, el acabado mate, el logo
+EDGE, el sello DOT, la densidad del gráfico y las marcas "X40" YA
+ESTÁN BIEN. No los toques. Se pide UN solo cambio:
+
+CAMBIO ÚNICO — Color del SPOILER: de celeste a azul petróleo oscuro.
+El SPOILER (la pieza que sobresale en la parte baja de la calota
+trasera, con sus dos rejillas de ventilación laterales) está pintado
+en el mismo CELESTE BRILLANTE que el panel de la calota que tiene
+arriba. Va en AZUL PETRÓLEO OSCURO (teal profundo, apagado): un tono
+claramente MÁS OSCURO y MÁS APAGADO que el celeste de la calota, no
+una variación del mismo celeste.
+
+RELACIÓN ENTRE PIEZAS — el spoiler y la calota NO SON GEMELOS DE
+COLOR: tienen que poder distinguirse a simple vista como dos tonos
+distintos, uno claro y brillante (calota) y uno oscuro y apagado
+(spoiler). Si después de la edición siguen pareciendo el mismo color,
+o si el spoiler quedó como una versión apenas más oscura del mismo
+celeste en vez de un petróleo claramente distinto, el resultado está
+MAL y hay que repetir la edición con más contraste entre los dos
+tonos.
+
+LO QUE NO SE TOCA: absolutamente todo lo demás — silueta, encuadre,
+fondo, sombra, acabado mate del resto de piezas, densidad del
+gráfico, posición de cualquier pieza, marcas "X40", logo EDGE, sello
+DOT, simetría del diseño. Ninguna otra pieza cambia de color ni de
+forma.
+
+Checklist final:
+1. ¿El spoiler quedó en azul petróleo oscuro, claramente MÁS OSCURO
+   y MÁS APAGADO que el celeste de la calota?
+2. ¿Se distinguen a simple vista dos tonos separados (calota celeste
+   / spoiler petróleo), y no una sola masa de color?
+3. ¿Todo lo demás —silueta, mate, logo, sello DOT, densidad, X40—
+   quedó exactamente igual que antes de la edición?
+```
+
+### Prompt de REGENERACIÓN v4 — de respaldo, solo si la edición revierte otra pieza
+
+Por si la edición del spoiler termina afectando alguna otra pieza (Lección 3: el
+modelo puede revertir piezas al editar). Es el prompt v3 completo, con el bloque de
+color del spoiler reforzado con la misma relación "no-gemelos":
+
+```
+[Usar el prompt v3 completo de más arriba, con este agregado en el
+BLOQUE 2 — COLOR Y GRÁFICO, a continuación de la línea sobre el
+spoiler:]
+
+- El SPOILER va en AZUL PETRÓLEO OSCURO (teal profundo apagado), no
+  en celeste brillante. EL SPOILER Y LA CALOTA NO SON GEMELOS DE
+  COLOR: tienen que leerse como DOS TONOS CLARAMENTE DISTINTOS, uno
+  claro y brillante (calota) y uno oscuro y apagado (spoiler). Este
+  error YA OCURRIÓ en un intento anterior de esta misma vista, donde
+  el spoiler salió con el mismo celeste de la calota en vez de un
+  tono propio: si eso vuelve a pasar, el resultado está MAL.
+```
+
