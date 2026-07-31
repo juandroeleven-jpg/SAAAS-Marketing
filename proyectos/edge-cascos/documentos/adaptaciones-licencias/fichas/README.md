@@ -96,7 +96,8 @@ Nodos → dónde se escriben:
 
 | Ficha | Variante | Estado |
 |---|---|---|
-| — | pendientes de crear con el material que mande el cliente | — |
+| [`05-celeste-magenta.md`](05-celeste-magenta.md) | Dakota 05 Celeste/Magenta/Blanco | 🟡 B aprobada (reserva menor) · C rechazada |
+| — | 01, 02, 03, 04 pendientes de crear | — |
 
 ## Plantillas
 

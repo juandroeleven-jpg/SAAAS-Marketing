@@ -51,6 +51,7 @@ delta del molde+licencia. Ver [`fichas/README.md`](fichas/README.md).
 | 03 | 2026-07-30 | Kratos Dakota 02 GRIS/NEGRO — Vista B (lateral) | ❌ rechazado (tonos) | Editar (ajuste tonal global) antes de regenerar |
 | 04 | 2026-07-30 | Kratos Dakota 05 CELESTE/MAGENTA — Vista B (lateral) v2 | ⚠️ aprobado con reservas | Editar (5 correcciones tonales) |
 | 05 | 2026-07-30 | Kratos Dakota 05 CELESTE/MAGENTA — Vista B (lateral) v3 EDITADO | ✅ aprobado (reserva menor: visor) | Aceptar + retoque del visor |
+| 06 | 2026-07-31 | Kratos Dakota 05 CELESTE/MAGENTA — Vista C (trasera) | ❌ rechazado (estilo + contradicción de prompt) | Regenerar con prompt v3 |
 
 ---
 
@@ -527,6 +528,94 @@ la lista de exclusiones.
 
 ---
 
+## Entrada 06 — Kratos Dakota 05 CELESTE/MAGENTA · Vista C (trasera)
+
+**Fecha:** 2026-07-31
+**Variante y vista:** EDGEPRO Kratos · Dakota 05 Celeste/Magenta/Blanco · Vista C (trasera)
+**Estado:** ❌ rechazado — el defecto principal es de ESTILO (render/ilustración en vez de
+fotografía), no un desvío tonal. No usable para ficha técnica ni para material de
+licencia en su estado actual.
+
+**Archivos de evidencia**
+
+![05-celeste-magenta-vista-c-ILUSTRACION.webp](kratos-dakota/resultados/05-celeste-magenta-vista-c-ILUSTRACION.webp)
+
+*Ilustración de referencia (autoridad de gráfico)*
+
+![00-kratos-real-trasera-CHECKPOINT.webp](kratos-dakota/resultados/00-kratos-real-trasera-CHECKPOINT.webp)
+
+*Checkpoint real — Kratos negro mate, trasera (autoridad de forma)*
+
+![05-celeste-magenta-vista-c-RESULTADO.webp](kratos-dakota/resultados/05-celeste-magenta-vista-c-RESULTADO.webp)
+
+*Resultado generado (prompt v2)*
+
+**Tabla de verificación**
+
+| # | Ítem verificado | Veredicto | Nota |
+|---|---|---|---|
+| 1 | Silueta trasera (ancha, hombros marcados, no la del dibujo) | ✅ | Sin desvío visible contra el checkpoint real en este encuadre frontal |
+| 2 | Resultado es FOTOGRAFÍA, no ilustración/render | ❌ | **Defecto principal.** El acabado, los cortes de color y los reflejos se leen como render/ilustración plana, no como fotografía de producto — exactamente lo que el propio prompt prohíbe en dos lugares distintos |
+| 3 | Acabado MATE absoluto | ❌ | Brillo/satinado marcado en el panel celeste del spoiler y en la calota alta — el mismo defecto que el changelog v2 del propio prompt dice haber corregido |
+| 4 | Extractor superior, dos ranuras, tornillo central, pieza ranurada baja | ⚠️ | No se puede confirmar sin crop con zoom — patrón dominante del proyecto es que el gráfico las absorbe (Lección 12/13) |
+| 5 | Cuello, lengüetas ERS, correa | ✅ provisorio | Se ve consistente con el checkpoint real en lo que el encuadre permite verificar |
+| 6 | Densidad del gráfico vs. ilustración | ⚠️ | A ojo, comparable; no se verificó zona por zona con crop |
+| 7 | Marcas "X40" de los costados | ✅ | Presentes en el resultado |
+| 8 | Logotipo EDGE completo y legible | ⚠️ | Presente y legible, pero de color oscuro/negro — **el prompt pide "en AZUL"; la ilustración (autoridad de gráfico) lo muestra negro.** Contradicción de origen, no defecto del generador — ver Defecto 3 |
+| 9 | Sello DOT presente y coherente | ⚠️ | Presente, con texto de certificación de aspecto corrupto — esperable (Lección 11), pero agravado por una contradicción del propio prompt — ver Defecto 4 |
+
+**Defectos encontrados**
+
+1. **El resultado se lee como render/ilustración, no como fotografía de producto.**
+   Es el defecto de mayor peso: ambas versiones del prompt (v1 y v2) incluyen la
+   prohibición explícita *"Prohibido devolver una ilustración, un vector o un render
+   plano: el resultado es una FOTOGRAFÍA"*, y el resultado la incumple. A diferencia de
+   un desvío de color, esto no se arregla con un ajuste tonal global: la textura y el
+   comportamiento de la luz fotográfica no se sintetizan editando tonos.
+2. **Acabado satinado/brillante en el panel celeste del spoiler y en la calota alta**,
+   en vez de mate absoluto. El propio prompt v2 documenta en su changelog que este
+   defecto ya había ocurrido en un intento anterior de esta misma vista y agrega un
+   bloque de refuerzo — este resultado sugiere que el refuerzo no alcanzó, o que
+   corresponde a la generación anterior al bloque.
+3. **Contradicción de origen sobre el color del logo EDGE.** El bloque "TEXTOS Y
+   DECALS" del prompt pide el logotipo *"en AZUL"*; la ilustración —declarada autoridad
+   de gráfico— lo muestra negro/oscuro. Es el mismo patrón que el spoiler negro de la
+   variante 04 (Entrada 02): un error de transcripción del Agente 0, no del generador.
+   No se corrige en el generador: se corrige en la fuente.
+4. **Contradicción interna en el propio archivo de prompt sobre el sello DOT.** La
+   sección "TEXTOS Y DECALS" (línea 104) pide dibujar *"el SELLO / STICKER DE
+   HOMOLOGACIÓN 'DOT'... con el texto 'DOT'"*, y 67 líneas más abajo el bloque "EL
+   SELLO DOT NO SE DIBUJA" (línea 171) dice lo opuesto: *"no incluir calcomanías de
+   homologación... se componen después en post-producción"*. El generador no puede
+   cumplir las dos. El sello con texto de certificación de aspecto corrupto en el
+   resultado es la consecuencia directa y esperable de esa contradicción, no un fallo
+   aislado del generador.
+5. **Piezas chicas sin verificar con zoom**: extractor, dos ranuras y pieza ranurada
+   baja. Se marcan a verificar en vez de aprobarse a ojo, siguiendo la Lección 12.
+
+**Decisión:** **regenerar**, no editar. El defecto principal (estilo/fotografía) no es
+un desvío tonal — es un problema de tipo de imagen completo, que un ajuste tonal global
+no resuelve. Se corrigen primero las dos contradicciones de origen (Defectos 3 y 4),
+que son gratis de arreglar y estaban generando ruido en cada intento. Se ofrece además
+un prompt de edición liviana como alternativa más barata, para el caso de que se
+prefiera intentar arreglar acabado + logo sobre el mismo archivo antes de gastar una
+regeneración completa — aclarando que no es el método recomendado para el defecto
+principal.
+
+**Prompt usado:** prompt v2 de Vista C variante 05, ver
+[`kratos-dakota/05-celeste-magenta-vista-c-trasera.md`](kratos-dakota/05-celeste-magenta-vista-c-trasera.md).
+Prompt v3 corregido y prompt de edición alternativo, ambos apendados al final de ese
+mismo archivo el 2026-07-31.
+
+**Lección nueva:** un prompt puede contradecirse a sí mismo entre dos secciones
+distintas (acá: "dibujá el sello DOT con su texto" vs. "el sello DOT no se dibuja"),
+y esa contradicción se ve idéntica a un fallo del generador — el sello sale mal
+igual — pero se arregla en otro lado. Antes de dar un prompt por bueno hay que leerlo
+completo de punta a punta buscando instrucciones que se pisen entre sí, no alcanza con
+revisar cada bloque de forma aislada.
+
+---
+
 # LECCIONES ACUMULADAS
 
 Consolidado de todo lo aprendido en el proyecto. Se ordena por tema, no por
@@ -572,6 +661,12 @@ cronología. **Antes de escribir un prompt nuevo, leer esta sección entera.**
 11. **El sello DOT y la microtipografía siempre salen corruptos** ("CENTIFIED",
     "FMVES", "FOR EXPLORING RUNNERS" ilegible). **No se dibujan: se componen en
     post-producción.**
+11b. **Un prompt puede contradecirse a sí mismo entre dos secciones distintas**
+    (caso Dakota 05 vista C: una sección pide dibujar el sello DOT con su texto, otra
+    dice "el sello DOT no se dibuja"). Esa contradicción se ve idéntica a un fallo del
+    generador, pero se arregla releyendo el prompt entero de punta a punta, no
+    regenerando. Antes de dar un prompt por bueno, no alcanza con revisar cada bloque
+    aislado.
 12. **El generador "resume" cuando la superficie tiene mucha información**: baja la
     densidad gráfica, se come piezas chicas y omite textos pequeños. Se blinda con un
     bloque **PROHIBIDO SIMPLIFICAR EL GRÁFICO** y comparación zona por zona.

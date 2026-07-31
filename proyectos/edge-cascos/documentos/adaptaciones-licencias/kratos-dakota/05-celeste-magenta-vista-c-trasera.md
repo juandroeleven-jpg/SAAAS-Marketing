@@ -229,3 +229,111 @@ VERIFICACIÓN FINAL — respondé estos ocho chequeos antes de entregar:
    rehacelo. ¿El fondo y la sombra son los de la foto real?
 8. ¿Es coherente con las Vistas A y B — mismo casco, mismo diseño?
 ```
+
+---
+
+## v3 (2026-07-31) — tras análisis del resultado del prompt v2 (Entrada 06 del REGISTRO)
+
+El resultado de v2 falló por su ESTILO (se leyó como render/ilustración, no como
+fotografía) y por DOS CONTRADICCIONES DE ORIGEN dentro del propio archivo:
+
+1. La sección "TEXTOS Y DECALS" (línea 102) pedía el logotipo EDGE **"en AZUL"**,
+   pero la ilustración —autoridad de gráfico— lo muestra **negro/oscuro**. Error
+   de transcripción, mismo patrón que el spoiler negro de la variante 04.
+2. La misma sección (línea 104) pedía dibujar el sello DOT con su texto, y 67
+   líneas más abajo el bloque "EL SELLO DOT NO SE DIBUJA" pedía lo contrario. El
+   generador no puede cumplir las dos: el sello con certificación de aspecto
+   corrupto en el resultado es consecuencia directa de esto.
+
+v3 corrige ambas y refuerza el bloque de fotografía-no-render. **Todo lo demás
+(geometría, mate, densidad, marcas X40, pestaña del visor) se mantiene igual que
+v2** — no se reescribe lo que ya funcionaba.
+
+```
+[Usar el prompt v2 completo de más arriba, con estos DOS CAMBIOS PUNTUALES:]
+
+CAMBIO 1 — reemplazar en BLOQUE "TEXTOS Y DECALS QUE VAN EN ESTA VISTA":
+
+  ANTES:
+  - El logotipo "EDGE" en AZUL, centrado sobre la BANDA
+    HORIZONTAL BAJA, tal como en la ilustración.
+  - El SELLO / STICKER DE HOMOLOGACIÓN "DOT": rectángulo blanco pequeño
+    con el texto "DOT", centrado en el eje, por debajo de la banda,
+    sobre la zona baja trasera. Va como en la ilustración.
+
+  DESPUÉS:
+  - El logotipo "EDGE" en el MISMO COLOR que tiene en la ilustración
+    (NEGRO / muy oscuro — no azul; esto corrige un error de
+    transcripción del prompt anterior), centrado sobre la BANDA
+    HORIZONTAL BAJA.
+  - El sello DOT NO se dibuja acá: ver el bloque "EL SELLO DOT NO SE
+    DIBUJA" más abajo, que es la única instrucción válida sobre ese
+    punto. (Se elimina la instrucción contradictoria que pedía
+    dibujarlo con texto.)
+
+CAMBIO 2 — agregar como bloque nuevo, inmediatamente después de "QUÉ ES
+ESTA TAREA":
+
+  CRÍTICO — ESTO ES UNA FOTOGRAFÍA, NO UN RENDER NI UNA ILUSTRACIÓN
+  (este error YA OCURRIÓ en el intento anterior de esta misma vista):
+  El resultado tiene que verse como una FOTO DE ESTUDIO real de un
+  objeto físico: grano fotográfico sutil, reflejos especulares que
+  responden a una fuente de luz real y variable (no un degradado
+  uniforme de render), transiciones de color con el micro-ruido de una
+  superficie pintada real, no bordes vectoriales perfectos.
+  Criterio de rechazo: si el casco se ve como un dibujo vectorial, un
+  render 3D limpio o una ilustración plana —bordes demasiado nítidos,
+  luz pareja, plástico "de catálogo digital"— el resultado está MAL y
+  hay que rehacerlo. Comparar contra la textura fotográfica real de la
+  imagen 2: esa es la vara, no la ilustración.
+```
+
+## Prompt de EDICIÓN alternativo (2026-07-31) — más barato, no resuelve el defecto principal
+
+Solo para el caso de que se prefiera intentar arreglar el resultado ya generado
+antes de gastar una regeneración completa. Sigue el patrón que funcionó en el
+caso de éxito de la Vista B (Entrada 05 del REGISTRO): declarar que la forma ya
+está bien, cambios numerados por pieza, criterio de rechazo por cambio.
+
+**Aviso:** esta vía probablemente NO resuelve el Defecto 1 (se lee como
+render/ilustración) — los ajustes tonales no sintetizan grano ni comportamiento
+de luz fotográfica. Se ofrece igual porque los otros 3 defectos sí son ediciones
+tonales legítimas, y puede valer la pena intentarlo antes de regenerar.
+
+```
+Esta es una EDICIÓN puntual sobre una foto ya generada, NO una
+regeneración: la geometría, el encuadre, la silueta y la composición
+del gráfico YA ESTÁN BIEN. No los toques. Se piden 3 cambios
+puntuales, cada uno independiente:
+
+CAMBIO 1 — Acabado: de brillante a mate.
+El panel celeste del spoiler y la calota alta tienen un brillo /
+lustre satinado marcado. Bajale la especularidad hasta que se vea
+ATERCIOPELADO y MATE, sin "hot spots" brillantes, igual que el negro
+mate de un casco de referencia real. Criterio de rechazo: si todavía
+se ve un reflejo tipo espejo o un brillo de plástico pulido en
+cualquier zona de color, está MAL.
+
+CAMBIO 2 — Color del logotipo EDGE: de azul a negro/oscuro.
+El logotipo "EDGE" sobre la banda blanca está en un tono azulado.
+Cambialo a NEGRO (o al gris muy oscuro casi negro que usa el resto del
+gráfico de esa zona). Nada más de esa pieza cambia: mismo tamaño,
+misma posición, mismo trazo.
+
+CAMBIO 3 — Sello DOT: sacar el texto de certificación.
+El sello DOT tiene texto de homologación con aspecto de estar mal
+escrito. Dejá el rectángulo del sello como una placa lisa, sin texto
+legible de certificación (textura, no tipografía legible) — el texto
+real se compone aparte en post-producción.
+
+LO QUE NO SE TOCA: la silueta, el encuadre, el fondo, la sombra, la
+densidad del gráfico, la posición de cualquier pieza, las marcas
+"X40", la simetría del diseño y todo lo demás que no esté en los 3
+cambios de arriba.
+
+Checklist final:
+1. ¿El acabado se ve mate y aterciopelado, sin brillo tipo espejo?
+2. ¿El logotipo EDGE es negro/oscuro, no azul?
+3. ¿El sello DOT quedó sin texto legible de certificación?
+4. ¿Todo lo demás quedó exactamente igual que antes de la edición?
+```
