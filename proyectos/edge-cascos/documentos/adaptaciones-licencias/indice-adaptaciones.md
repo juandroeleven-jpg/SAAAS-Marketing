@@ -33,7 +33,7 @@ defecto a corregir después.
 | 01 | Azul / Rojo / Blanco | ⬜ sin migrar | ❓ | ⚠️ v? — 3 correcciones | ⚠️ regenerar con prompt v2 | ⬜ |
 | 02 | Gris / Negro monocromo | ⬜ sin migrar | ❓ | ⚠️ v2b — "mejoró pero sigue lavado" | ❓ | ⬜ |
 | 03 | Rojo / Gris (spoiler vino) | ⬜ sin migrar | ❓ | ✅ v3 FINAL — falta 1 edición | ❓ | ⬜ |
-| 04 | Rojo / Blanco / Negro | ⬜ sin migrar | ❓ | ⚠️ v3 — color desviado + pieza inventada | ⚠️ editar spoiler a rojo | ⬜ |
+| 04 | Rojo / Blanco / Negro | ✅ [`variantes/04-rojo-blanco-negro/ESTADO.md`](variantes/04-rojo-blanco-negro/ESTADO.md) | ❓ | ⚠️ v3 — color desviado + pieza inventada | 🔴 intento 1 con 4 regresiones — prompt 3 listo, sin ejecutar | ⬜ |
 | 05 | Celeste / Magenta / Blanco | ✅ [`variantes/05-celeste-magenta/ESTADO.md`](variantes/05-celeste-magenta/ESTADO.md) | ⏳ sin ejecutar | ✅ **v3 aprobado** (reserva: visor) | ❓ resultado sin auditar | ⬜ |
 
 **Leyenda:** ✅ aprobado · ⚠️ aprobado con reservas o rechazado con decisión tomada ·

@@ -240,7 +240,12 @@ Corrección de raíz: los 3 prompts de la variante 04 ahora declaran spoiler ROJ
 EDGE BLANCO con contorno oscuro.
 
 Pendiente de verificación con zoom (Lección 12):
-1. Texto exacto del sello DOT ("CERTIFIED" vs. "CENTIFIED").
+1. ✅ **CERRADO 2026-07-31** — Texto exacto del sello DOT: confirmado "CENTIFIED"
+   en la pasada 1. Un intento de edición lo corrigió a "CERTIFIED" pero introdujo
+   DOS typos nuevos ("MOD." → "MOO.", "FMVSS" → "FMVES") y derramó el rojo del
+   spoiler sobre el gráfico vecino. Causa raíz encontrada: el prompt de
+   generación se contradice a sí mismo sobre si el sello lleva texto o no. Ver
+   [`variantes/04-rojo-blanco-negro/ESTADO.md`](variantes/04-rojo-blanco-negro/ESTADO.md).
 2. Color real del logo EDGE en la ilustración.
 3. Revisar el color del spoiler declarado en las variantes 02, 03 y 05 contra sus
    ilustraciones, por el mismo tipo de error.
