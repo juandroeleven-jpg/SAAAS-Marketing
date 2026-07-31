@@ -24,6 +24,22 @@ mediciones, casos de éxito y post-mortems de cada variante y cada vista.
 - Marco metodológico de referencia: [`00-anatomia-adaptacion.md`](00-anatomia-adaptacion.md)
   (las 6 capas de toda adaptación, fallos conocidos a blindar, restricción de IP).
 
+### Qué NO es un análisis (y por eso vive en otro lado)
+
+La regla de arriba prohíbe crear archivos sueltos **para un análisis**. No
+prohíbe registrar el **estado actual** de una variante, que es otra cosa:
+
+| | Este REGISTRO | Fichas en [`fichas/`](fichas/) |
+|---|---|---|
+| Qué contiene | qué **pasó** el día X | qué es **cierto hoy** |
+| Orden | cronológico | por objeto (molde / variante) |
+| Se escribe | se apenda, nunca se edita hacia atrás | se sobrescribe |
+
+Un análisis nuevo sigue viniendo acá, siempre. La ficha correspondiente se
+actualiza y **linkea** a la entrada, sin copiar el contenido. Los conflictos
+ilustración-vs-molde no se repiten en cada variante: viven una sola vez en el
+delta del molde+licencia. Ver [`fichas/README.md`](fichas/README.md).
+
 ---
 
 ## Índice
