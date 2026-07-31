@@ -22,16 +22,23 @@ export type Nodo = {
   z: number;
 };
 
-// Mismas etiquetas, colores y disposicion que la version en pantalla: lo
-// unico que se va es el monitor.
+// Mismas etiquetas y disposicion que la version en pantalla: lo unico que se
+// va es el monitor.
+//
+// Colores: TODOS dentro de la familia azul, en vez de los colores de marca de
+// cada herramienta. Con el amarillo de Drive y el morado de Canva sobre el
+// panel blanco y azul, eran los dos unicos elementos que rompian la paleta.
+// La distincion entre agentes viene de la LUMINOSIDAD, no del tono: ChatGPT
+// (el nodo central) es el mas claro y saturado porque es el foco; el resto
+// se ordena de mas oscuro (entradas) a intermedio (salidas).
 export const NODOS: Nodo[] = [
-  { id: "webhook", label: "Webhook", sub: "Disparador", x: 390, y: 300, color: "#F43F5E", z: -0.12 },
-  { id: "discord", label: "Discord", sub: "Mensajes", x: 390, y: 730, color: "#5865F2", z: -0.12 },
-  { id: "gpt", label: "ChatGPT", sub: "Agente", x: 800, y: 515, color: "#10B981", z: 0.24 },
-  { id: "slack", label: "Slack", sub: "Notifica", x: 1210, y: 250, color: "#36C5F0", z: -0.02 },
-  { id: "drive", label: "Drive", sub: "Archiva", x: 1210, y: 430, color: "#FBBC04", z: -0.02 },
-  { id: "notion", label: "Notion", sub: "Registra", x: 1210, y: 610, color: "#E5E7EB", z: -0.02 },
-  { id: "canva", label: "Canva", sub: "Publica", x: 1210, y: 790, color: "#8B5CF6", z: -0.02 },
+  { id: "webhook", label: "Webhook", sub: "Disparador", x: 390, y: 300, color: "#1E3A8A", z: -0.12 },
+  { id: "discord", label: "Discord", sub: "Mensajes", x: 390, y: 730, color: "#312E81", z: -0.12 },
+  { id: "gpt", label: "ChatGPT", sub: "Agente", x: 800, y: 515, color: "#0EA5E9", z: 0.24 },
+  { id: "slack", label: "Slack", sub: "Notifica", x: 1210, y: 250, color: "#38BDF8", z: -0.02 },
+  { id: "drive", label: "Drive", sub: "Archiva", x: 1210, y: 430, color: "#2563EB", z: -0.02 },
+  { id: "notion", label: "Notion", sub: "Registra", x: 1210, y: 610, color: "#64748B", z: -0.02 },
+  { id: "canva", label: "Canva", sub: "Publica", x: 1210, y: 790, color: "#1D4ED8", z: -0.02 },
 ];
 
 export const CONEXIONES: [string, string][] = [

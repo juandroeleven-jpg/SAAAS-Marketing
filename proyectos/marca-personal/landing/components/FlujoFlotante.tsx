@@ -263,7 +263,9 @@ function Agente({
       </mesh>
 
       {/* Nombre y funcion, debajo. */}
-      <mesh position={[0, -RADIO - ETIQUETA.h * 0.62, 0]}>
+      {/* 0.8 y no 0.62: al reducir el tamano de los agentes el hueco entre la
+          esfera y el nombre quedaba visualmente pegado, sobre todo en Canva. */}
+      <mesh position={[0, -RADIO - ETIQUETA.h * 0.8, 0]}>
         <planeGeometry args={[ETIQUETA.w, ETIQUETA.h]} />
         <meshBasicMaterial map={etiqueta} transparent toneMapped={false} depthWrite={false} />
       </mesh>
