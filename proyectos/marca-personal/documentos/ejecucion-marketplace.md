@@ -26,6 +26,25 @@ Esta subsección se usará para resolver la parte de **Fundamentals of Product D
 
 </details>
 
+### Primera pantalla revisada
+
+![Fundamentals of Product Design — primera pantalla](capturas/fundamentals-product-design-primer-pantalla.png)
+
+Al pulsar **Play**, la plataforma abrió una pantalla de lectura introductoria. Lo primero que hay que revisar es el objetivo de la microsimulación y sus instrucciones antes de contestar o avanzar. En esta pantalla todavía no aparece una pregunta interactiva; por eso no se debe inventar una respuesta ni confirmar una decisión.
+
+**Resultado de la revisión inicial:**
+
+- La microsimulación quedó abierta desde el botón **Play**.
+- La actividad pasó de estar disponible a aparecer como iniciada; el contador visible cambió de 8 a 7 microsimulaciones.
+- La siguiente acción es avanzar con el botón **next** y capturar la primera pregunta o ejercicio interactivo.
+
+### Tarea pendiente de Fundamentals of Product Design
+
+- [x] Abrir la microsimulación desde **Play**.
+- [x] Capturar la primera pantalla de lectura.
+- [ ] Avanzar hasta la primera pregunta interactiva.
+- [ ] Registrar la respuesta elegida y justificarla.
+
 </details>
 
 ## Primera tarea a realizar: Enter the Market
@@ -50,4 +69,3 @@ La tarea **Enter the Market** corresponde a la entrada de la marca al mercado du
 ### Nota de control
 
 No se debe presionar **Submit** ni confirmar decisiones irreversibles hasta revisar la evidencia y validar la justificación.
-
