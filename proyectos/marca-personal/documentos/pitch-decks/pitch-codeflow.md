@@ -1,297 +1,195 @@
-# Codeflow — Pitch de cifras y evidencia
+# Codeflow — Pitch revisado
 
 <details open>
-<summary><strong>00 · Cómo leer este pitch</strong></summary>
+<summary><strong>01 · La cifra de apertura — adopción no es impacto</strong></summary>
 
-Todo el contenido está organizado en secciones desplegables para que la página sea limpia y navegable. La narrativa sigue una estructura de pitch tipo Silicon Valley:
-
-**cifra de contexto → brecha → evidencia propia → solución → modelo → oportunidad → CTA**.
-
-Cada sección contiene texto para presentar, justificación, fuente, captura/referencia visual y prompt cuando corresponde.
-</details>
-
-<details open>
-<summary><strong>01 · La cifra que abre el pitch — adopción no es valor</strong></summary>
-
-### Texto visible
-
-> **80%** de las empresas usa herramientas de IA.
+> **80%** usa herramientas de IA.
 >
 > Solo **23%** reporta réditos económicos.
 >
-> Apenas **6%** percibe un impacto significativo.
+> Apenas **6%** percibe impacto significativo.
 
-### Idea que debe decirse
-
-La IA ya está siendo utilizada. El problema no es convencer a las empresas de probarla; es ayudarlas a convertir ese uso en resultados integrados, medibles y sostenibles.
-
-### Fuente
-
-- [`investigacion-codeflow-datos.md`](../investigacion-codeflow-datos.md)
-- [`evidencia-estudios-oficiales-codeflow.md`](../evidencia-estudios-oficiales-codeflow.md)
-- [BID — Inteligencia artificial: ¿motor de productividad o de desigualdad?](https://www.iadb.org/es/blog/analisis-economico/inteligencia-artificial-motor-de-productividad-o-de-desigualdad)
-
-### Captura
+**Fuente:** [`investigacion-codeflow-datos.md`](../investigacion-codeflow-datos.md), [`evidencia-estudios-oficiales-codeflow.md`](../evidencia-estudios-oficiales-codeflow.md), [BID](https://www.iadb.org/es/blog/analisis-economico/inteligencia-artificial-motor-de-productividad-o-de-desigualdad).
 
 ![BID — 80%, 23% y 6%](../codeflow-evidencia/bid-80-23-6.png)
 
-### Justificación
-
-Esta es la apertura correcta porque establece una brecha de mercado: **uso alto, valor económico bajo**. Codeflow entra exactamente en esa brecha.
-
-### Control de precisión
-
-La fuente habla de uso de herramientas, réditos económicos e impacto percibido. No debe decirse que el 80% tiene un sistema integrado de IA. En los documentos revisados figura **23%**, no 26%.
+**Tesis:** el mercado no necesita otra herramienta aislada; necesita convertir uso de IA en valor operativo. En los documentos fuente aparece 23%, no 26%.
 </details>
 
 <details>
-<summary><strong>02 · La brecha — por qué se pierde el valor</strong></summary>
+<summary><strong>02 · Latinoamérica ya está dentro de la conversación</strong></summary>
 
-### Texto visible
+**Texto:** Latinoamérica ya muestra interés por la IA. El reto es transformar ese interés en capacidades, gobierno e integración empresarial.
 
-> La mayoría prueba herramientas. Pocas empresas las convierten en una operación conectada.
+**Dato visual:** 14% de visitas globales a soluciones de IA frente a 11% de usuarios globales de Internet en ALC.
 
-### Guion
+**Fuente/captura:** [`evidencia-estudios-oficiales-codeflow.md`](../evidencia-estudios-oficiales-codeflow.md), [`codeflow-evidencia/cepal-14-11.png`](../codeflow-evidencia/cepal-14-11.png), [CEPAL](https://www.cepal.org/es/comunicados/america-latina-caribe-acelera-la-adopcion-la-inteligencia-artificial-aunque-desafios).
 
-Entre una herramienta y un resultado empresarial existen datos, procesos, permisos, adopción, supervisión y mantenimiento. Cuando esas capas no existen, la empresa vuelve a copiar información, reconstruir contexto y tomar decisiones tarde.
+![CEPAL — 14% de visitas y 11% de usuarios](../codeflow-evidencia/cepal-14-11.png)
 
-### Fuente
+**Límite:** es un proxy de interés, no 14% de empresas implementando IA.
 
-- [`analisis-critico-codeflow-marca-personal.md`](../analisis-critico-codeflow-marca-personal.md)
+**Prompt:** `Pitch deck B2B 16:9, zoom desde Panamá hacia Latinoamérica, mapa oscuro, 14% visitas y 11% usuarios como cifras editoriales, nota proxy de interés, sin logos ni texto inventado.`
+</details>
+
+<details>
+<summary><strong>03 · El mundo experimenta; el valor exige operación</strong></summary>
+
+**Texto:** El mundo ya experimenta con IA. La ventaja está en convertirla en una operación que funcione.
+
+**Visual:** cascada 80% usa → 23% obtiene réditos → 6% percibe impacto, terminando en “operación integrada”.
+
+**Fuente:** [`analisis-critico-codeflow-marca-personal.md`](../analisis-critico-codeflow-marca-personal.md), [`evidencia-estudios-oficiales-codeflow.md`](../evidencia-estudios-oficiales-codeflow.md), [BID](https://www.iadb.org/es/blog/analisis-economico/inteligencia-artificial-motor-de-productividad-o-de-desigualdad).
+
+![BID — 80%, 23% y 6%](../codeflow-evidencia/bid-80-23-6.png)
+
+**Prompt:** `Globo terráqueo oscuro, cascada tipográfica 80% usa, 23% obtiene réditos, 6% percibe impacto significativo, zona final operación integrada, estilo venture deck, sin cifras adicionales.`
+</details>
+
+<details>
+<summary><strong>04 · La brecha — de probar a integrar y mantener</strong></summary>
+
+**Texto:** La brecha no está entre sin IA y con IA. Está entre probar una herramienta y operar un sistema.
+
+**Etapas:** conocer → experimentar → implementar → integrar → medir, gobernar y mantener.
+
+**Fuente:** [`analisis-critico-codeflow-marca-personal.md`](../analisis-critico-codeflow-marca-personal.md), [`comparacion-pitch-codeflow.md`](../comparacion-pitch-codeflow.md), [`pitch-flow-ecosistema-ia.md`](../pitch-flow-ecosistema-ia.md).
+
+**Límite:** las etapas son modelo narrativo; no asignar porcentajes sin fuente específica.
+</details>
+
+<details>
+<summary><strong>05 · Las comunidades venden progreso, no solo contenido</strong></summary>
+
+**Texto:** Contenido atrae. Acompañamiento retiene.
+
+**Evidencia externa:** Angelica Automates, Learn.Community y Justin Welsh muestran modelos de contenido, acceso, eventos, pares, admisión y soporte.
+
+![Angelica Automates — captura de referencia](../investigacion-externa-codeflow/capturas/angelica-ai-membership.png)
+
+![Learn.Community — captura de referencia](../investigacion-externa-codeflow/capturas/learn-community.png)
+
+![Justin Welsh — captura de referencia](../investigacion-externa-codeflow/capturas/justin-welsh.png)
+
+**Fuentes:** [`investigacion-externa-codeflow/investigacion-modelo-comunidad-y-referentes.md`](../investigacion-externa-codeflow/investigacion-modelo-comunidad-y-referentes.md), [Circle — Angelica Automates](https://circle.so/blog/angelica-automates-membership), [Learn.Community](https://circle.so/customer-stories/learn-community), [Justin Welsh](https://www.outseta.com/customers/building-audience-income-with-justin-welsh).
+
+**Capturas:** usar las imágenes existentes en `investigacion-externa-codeflow/capturas/` y etiquetarlas como señales externas, no como validación de Codeflow.
+
+**Prompt:** `Pitch deck Silicon Valley, fondo claro, tres capturas auténticas alineadas a la derecha, frase Contenido atrae. Acompañamiento retiene. a la izquierda, sin métricas inventadas.`
+</details>
+
+<details>
+<summary><strong>06 · Codeflow convierte la comunidad en una capa operativa</strong></summary>
+
+**Texto:** Codeflow no añade otro grupo: conecta el ciclo completo de adopción.
+
+**Ruta:** diagnosticar → implementar → capacitar → usar → medir → mejorar.
+
+**Producto:** comunidad para aprendizaje y soporte; aplicación para revisión y office hours; operación para monitoreo, mantenimiento y mejoras.
+
+![AI Automation Society — captura de referencia](../investigacion-externa-codeflow/capturas-profundizacion/ai-automation-society.png)
+
+![Circle — customer community](../investigacion-externa-codeflow/capturas-profundizacion/circle-customer-community.png)
+
+**Fuentes:** [`investigacion-externa-codeflow/investigacion-modelo-comunidad-y-referentes.md`](../investigacion-externa-codeflow/investigacion-modelo-comunidad-y-referentes.md), [`investigacion-profunda-modelo-codeflow.md`](../investigacion-externa-codeflow/investigacion-profunda-modelo-codeflow.md), [AI Automation Society](https://aiautomationsociety.ai/).
+
+**Prompt:** `Fondo oscuro, ruta luminosa de seis verbos, una captura real de comunidad a la derecha, estilo SaaS B2B premium, sin dashboards genéricos.`
+</details>
+
+<details>
+<summary><strong>07 · La hipótesis se valida con un piloto</strong></summary>
+
+**Texto:** El siguiente paso no es construir más contenido: es probar recurrencia.
+
+**Experimento:** 3–5 empresas → 1 proceso prioritario → línea base → piloto pagado → renovación o churn.
+
+**Métricas:** activación, uso, horas ahorradas, errores evitados, retención a 30/90 días y expansión.
+
+**Límite:** los rangos de precio y retención son hipótesis, no tracción validada.
+
+![Skool — precios de referencia](../investigacion-externa-codeflow/capturas/skool-pricing.png)
+
+![Circle — precios de membresía](../investigacion-externa-codeflow/capturas-profundizacion/circle-membership-pricing.png)
+
+**Fuente:** [`investigacion-externa-codeflow/investigacion-modelo-comunidad-y-referentes.md`](../investigacion-externa-codeflow/investigacion-modelo-comunidad-y-referentes.md), [`borrador-modelo-comercial.md`](./borrador-modelo-comercial.md), [Skool pricing](https://www.skool.com/pricing).
+</details>
+
+<details>
+<summary><strong>08 · La diferencia ocurre después del piloto</strong></summary>
+
+**Texto:** Una automatización resuelve un paso. Codeflow sostiene el sistema.
+
+**Contraste:** aislado: prompt → tarea. Codeflow: datos → reglas → revisión → resultado → aprendizaje.
+
+**Fuente:** [`evidencia-estudios-oficiales-codeflow.md`](../evidencia-estudios-oficiales-codeflow.md), [`comparacion-pitch-codeflow.md`](../comparacion-pitch-codeflow.md).
+
+**Visual:** nodo aislado frente a trayectoria conectada con revisión humana y resultado medible. Usar únicamente capturas existentes del repositorio como textura de interfaz, no como prueba de arquitectura.
+</details>
+
+<details>
+<summary><strong>09 · El cliente entra por un proceso que ya siente</strong></summary>
+
+**Texto:** Empieza con un proceso crítico; escala cuando la evidencia lo justifica.
+
+**A:** diagnóstico — mapa, riesgos y línea base.
+
+**B:** sprint conectado — un flujo implementado y medido.
+
+**C:** operación continua — monitoreo, gobierno y mejora.
+
+**Fuente:** [`investigacion-profunda-modelo-codeflow.md`](../investigacion-externa-codeflow/investigacion-profunda-modelo-codeflow.md), [`caso-estudio-anonimizado.md`](../caso-estudio-anonimizado.md).
+
+**Límite:** no presentar precios como hechos hasta probar disposición a pagar.
+</details>
+
+<details>
+<summary><strong>10 · Cierre — la oferta se valida en un flujo</strong></summary>
+
+**Texto:** El siguiente paso es encontrar dónde se pierden horas, contexto o control.
+
+**Preguntas:** ¿Qué flujo cruza áreas? ¿Dónde se copia o espera? ¿Qué métrica demostraría mejora?
+
+**CTA:** **Agendar diagnóstico de un proceso prioritario.**
+
+**Fuente:** [`caso-estudio-anonimizado.md`](../caso-estudio-anonimizado.md), [`pitch-flow-ecosistema-ia.md`](../pitch-flow-ecosistema-ia.md).
+
+**Prompt:** `Diapositiva final B2B 16:9, fondo azul marino, línea cian atravesando tres puntos de control, captura real de interfaz a la derecha, CTA único Agendar diagnóstico, sin datos inventados.`
+</details>
+
+<details>
+<summary><strong>Anexo visual — capturas originales usadas como evidencia</strong></summary>
+
+### BID y CEPAL
+
+![BID — adopción, réditos e impacto](../codeflow-evidencia/bid-80-23-6.png)
+
+![CEPAL — visitas y usuarios de Internet](../codeflow-evidencia/cepal-14-11.png)
+
+### Referentes de comunidad
+
+![Angelica Automates](../investigacion-externa-codeflow/capturas/angelica-ai-membership.png)
+
+![Learn.Community](../investigacion-externa-codeflow/capturas/learn-community.png)
+
+![Justin Welsh](../investigacion-externa-codeflow/capturas/justin-welsh.png)
+
+![Skool pricing](../investigacion-externa-codeflow/capturas/skool-pricing.png)
+
+![Pat Flynn](../investigacion-externa-codeflow/capturas/spi-pat-flynn.png)
+
+### Comunidades y plataformas
+
+![AI Automation Society](../investigacion-externa-codeflow/capturas-profundizacion/ai-automation-society.png)
+
+![Circle customer community](../investigacion-externa-codeflow/capturas-profundizacion/circle-customer-community.png)
+
+![Circle membership pricing](../investigacion-externa-codeflow/capturas-profundizacion/circle-membership-pricing.png)
+
+### Fuentes de investigación completas
+
+- [`investigacion-modelo-comunidad-y-referentes.md`](../investigacion-externa-codeflow/investigacion-modelo-comunidad-y-referentes.md)
+- [`investigacion-profunda-modelo-codeflow.md`](../investigacion-externa-codeflow/investigacion-profunda-modelo-codeflow.md)
 - [`evidencia-estudios-oficiales-codeflow.md`](../evidencia-estudios-oficiales-codeflow.md)
 
-### Visual
-
-Tres niveles: `probar → implementar → integrar y mantener`. Solo el último nivel se ilumina.
-
-### Prompt
-
-`Pitch deck B2B de Silicon Valley, 16:9, tres niveles probar implementar integrar y mantener, los dos primeros en gris y el último en cian, fondo azul marino, diseño editorial premium, sin logos, sin texto ilegible.`
-</details>
-
-<details>
-<summary><strong>03 · La evidencia propia — resultados antes que conceptos</strong></summary>
-
-### Texto visible
-
-> **97% menos tiempo** en nómina multi-país.
->
-> **3 horas → 10 minutos**.
->
-> **20% de cartera optimizada**.
->
-> **15 sistemas** de IA y automatización.
->
-> **95–98% de precisión** en EDGE.
-
-### Fuentes
-
-- [`relanzamiento-perfil-linkedin.md`](../relanzamiento-perfil-linkedin.md)
-- [`metodo-networking.md`](../metodo-networking.md)
-- [`caso-estudio-anonimizado.md`](../caso-estudio-anonimizado.md)
-- [`indice-simulaciones.md`](../indice-simulaciones.md)
-- [`investigacion-mercado-leads-panama.md`](../investigacion-mercado-leads-panama.md)
-
-### Justificación
-
-Estas cifras aterrizan la brecha del BID en experiencia propia: Codeflow no empieza con una promesa abstracta, sino con resultados de tiempo, escala, precisión y operación.
-
-### Regla
-
-Cada cifra debe conservar contexto, unidad, periodo y alcance. Si no existe autorización para publicar el caso, usar “caso anonimizado” o “resultado documentado internamente”.
-</details>
-
-<details>
-<summary><strong>04 · El problema del cliente</strong></summary>
-
-### Texto visible
-
-> El problema no es tener muchas herramientas. Es pagar por ellas y seguir operando a mano.
-
-### Guion
-
-ERP, CRM, correo, hojas de cálculo, dashboards, APIs y agentes pueden existir al mismo tiempo sin compartir contexto. El resultado es duplicación de datos, aprobaciones lentas, errores y reportes que llegan tarde.
-
-### Fuente y captura
-
-- [`caso-estudio-anonimizado.md`](../caso-estudio-anonimizado.md)
-- Referencia visual: `referencias-pinterest-codeflow/ecosistema-ia.png`
-- Redibujar sin logos de terceros y marcar cualquier mockup como conceptual.
-
-### Prompt
-
-`Infografía B2B 16:9 con ERP CRM email spreadsheet datos y agentes como nodos aislados, conexiones cortadas, contexto perdido y aprobaciones manuales, fondo oscuro, acentos ámbar y cian, sin logos ni texto inventado.`
-</details>
-
-<details>
-<summary><strong>05 · La solución Codeflow</strong></summary>
-
-### Texto visible
-
-> Codeflow transforma IA dispersa en operaciones conectadas.
-
-### Qué hace
-
-Integra herramientas existentes, datos, automatizaciones y agentes alrededor de un proceso empresarial. Después mide, documenta, supervisa y mejora ese sistema.
-
-### Cinco capas
-
-`diagnóstico → diseño → implementación → operación → aprendizaje`
-
-### Fuente
-
-- [`pitch-flow-ecosistema-ia.md`](../pitch-flow-ecosistema-ia.md)
-- [`comparacion-pitch-codeflow.md`](../comparacion-pitch-codeflow.md)
-
-### Visual y prompt
-
-Codeflow al centro conectando `sistemas existentes`, `datos/contexto`, `agentes/automatizaciones` y `personas/controles`.
-
-`Diagrama empresarial 16:9, Codeflow como capa central de integración, sistemas existentes abajo, datos y contexto, agentes y automatizaciones, personas y controles, fondo azul marino, cian para flujos, violeta para inteligencia, sin logos ni texto ilegible.`
-</details>
-
-<details>
-<summary><strong>06 · Casos — antes, sistema, después</strong></summary>
-
-### Caso NóminaPro
-
-`3 horas → 10 minutos · 97% menos tiempo de procesamiento`.
-
-### Caso cuentas por cobrar
-
-`20% de cartera optimizada en el periodo documentado`.
-
-### Caso Copper/1HVAC
-
-`15 sistemas interconectados para operación multi-país`.
-
-### Caso EDGE
-
-`95–98% de precisión · 5–10 minutos por pieza`.
-
-### Capturas
-
-- `landing/components/CVSection.tsx`
-- `landing/components/Logros.tsx`
-- `caso-estudio-anonimizado.md`
-- Evidencia visual autorizada de `codeflow-evidencia/`.
-
-![BID — adopción e impacto](../codeflow-evidencia/bid-80-23-6.png)
-
-### Regla visual
-
-Cada caso debe mostrar `antes → intervención → después → método de medición`. No presentar un dashboard conceptual como producción.
-</details>
-
-<details>
-<summary><strong>07 · La diferenciación</strong></summary>
-
-### Texto visible
-
-> Una automatización resuelve un paso. Codeflow construye una base que puede crecer.
-
-### Comparación
-
-- Automatización aislada: entrega puntual y mantenimiento incierto.
-- Codeflow: integración, gobierno, supervisión humana, métricas, documentación y evolución.
-
-### Fuente
-
-[`comparacion-pitch-codeflow.md`](../comparacion-pitch-codeflow.md)
-
-### Límite
-
-No afirmar superioridad absoluta ni una plataforma propia completamente validada. La categoría defendible hoy es **integrador y servicio gestionado de sistemas de IA**.
-</details>
-
-<details>
-<summary><strong>08 · El modelo de negocio</strong></summary>
-
-| Nivel | Oferta | Resultado |
-|---|---|---|
-| **A** | Diagnóstico y priorización | saber qué proceso atacar primero |
-| **B** | Sprint de implementación | un flujo funcionando y medido |
-| **C** | Operación continua | monitoreo, gobierno y expansión |
-
-### Fuentes
-
-- [`borrador-modelo-comercial.md`](./borrador-modelo-comercial.md)
-- [`pitch-flow-ecosistema-ia.md`](../pitch-flow-ecosistema-ia.md)
-
-### Comunidad
-
-La comunidad sirve para educación, adopción, soporte y adquisición. No sustituye el resultado empresarial del diagnóstico, sprint o retainer.
-</details>
-
-<details>
-<summary><strong>09 · La oportunidad y el cliente inicial</strong></summary>
-
-### Cliente
-
-CFO, COO, dueño o responsable de operaciones de una empresa latinoamericana multi-sucursal o multi-país.
-
-### Dolor
-
-Horas manuales, errores, cierre lento, cartera atrasada, inventario sin visibilidad o datos desconectados.
-
-### Fuente
-
-[`investigacion-mercado-leads-panama.md`](../investigacion-mercado-leads-panama.md)
-
-### Justificación
-
-No vender “IA para todos”. Empezar por empresas donde el dolor ya tiene costo visible y existe un responsable capaz de aprobar un piloto.
-</details>
-
-<details>
-<summary><strong>10 · Cierre y CTA</strong></summary>
-
-### Texto visible
-
-> Empieza con un proceso crítico. Construye el sistema. Evoluciona con evidencia.
-
-### CTA único
-
-`Agendar diagnóstico de un proceso prioritario.`
-
-### Guion
-
-“Identificamos dónde se están perdiendo horas, contexto o control. Después definimos si conviene una automatización puntual, un sprint conectado o una operación continua.”
-</details>
-
-<details>
-<summary><strong>11 · Borrador visual completo</strong></summary>
-
-| Slide | Contenido | Visual |
-|---|---|---|
-| 1 | 80% / 23% / 6% | cifras BID grandes |
-| 2 | La brecha | probar vs integrar |
-| 3 | Tus resultados | 97%, 3→10, 20%, 15 |
-| 4 | El problema | ecosistema fragmentado |
-| 5 | Codeflow | capa central |
-| 6 | Método | cinco capas |
-| 7 | Casos | antes → sistema → después |
-| 8 | Diferenciación | aislado vs evolutivo |
-| 9 | Modelo A/B/C | escalera comercial |
-| 10 | CTA | diagnóstico → sprint → operación |
-
-### Prompt visual base
-
-`Pitch deck B2B de Silicon Valley, 16:9, una idea dominante por diapositiva, tipografía sans editorial, cifras con unidad y fuente, azul marino, cian y violeta, diagramas limpios, sin logos de terceros, sin texto inventado, sin dashboards genéricos.`
-
-### Referencia detallada
-
-[`borrador-direccion-visual.md`](./borrador-direccion-visual.md)
-</details>
-
-<details>
-<summary><strong>12 · Fuentes maestras</strong></summary>
-
-- [`evidencia-estudios-oficiales-codeflow.md`](../evidencia-estudios-oficiales-codeflow.md)
-- [`investigacion-codeflow-datos.md`](../investigacion-codeflow-datos.md)
-- [`analisis-critico-codeflow-marca-personal.md`](../analisis-critico-codeflow-marca-personal.md)
-- [`comparacion-pitch-codeflow.md`](../comparacion-pitch-codeflow.md)
-- [`caso-estudio-anonimizado.md`](../caso-estudio-anonimizado.md)
-- [`relanzamiento-perfil-linkedin.md`](../relanzamiento-perfil-linkedin.md)
-- [`metodo-networking.md`](../metodo-networking.md)
+Estas capturas son referencias de las fuentes investigadas. Las cifras de terceros deben conservar su atribución; no son tracción propia de Codeflow.
 </details>
