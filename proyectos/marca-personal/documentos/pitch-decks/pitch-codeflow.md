@@ -1,5 +1,40 @@
 # Codeflow — Pitch revisado
 
+<details>
+<summary><strong>Datos que faltan para validar Codeflow</strong></summary>
+
+| Hipótesis | Qué medir | Evidencia aceptable | Umbral inicial |
+|---|---|---|---|
+| Demanda B2B real | 20–30 entrevistas con compradores | problema, urgencia y presupuesto registrados | 10 problemas recurrentes; 6 urgentes |
+| Diagnóstico pagado | propuestas, pagos e informes entregados | cotización aceptada y pago recibido | 3 pagados; 2 avanzan |
+| Flujo resoluble | pilotos con línea base | demo, logs y aceptación del usuario | 3 pilotos; 2 cumplen el resultado |
+| Valor medible | horas, errores, tiempo o costo antes/después | datos del sistema y validación del cliente | ≥20% de mejora sin perder calidad |
+| Entrega con margen | horas, excepciones y costos variables | time tracking, runbook y facturas | ≥70% repetible; margen bruto ≥50% |
+| Recurrencia | uso, soporte y renovación | contrato, factura, actividad y backlog | 2 de 3 pilotos renuevan |
+| Comunidad útil | onboarding, uso y casos resueltos | cohortes, asistencia y referidos | 70% onboarding; 60% uso mensual |
+| Seguridad | secretos, accesos y aprobación humana | rotación, matriz de acceso y logs | cero secretos expuestos |
+| Economía | CAC, costos, margen y churn | facturas, horas y cohortes | LTV/CAC ≥3; payback ≤6 meses |
+
+**Orden:** seguridad → entrevistas → diagnósticos → 3–5 pilotos pagados → medición antes/después → continuidad → renovación a 30/90 días.
+
+**Estado:** las fuentes externas validan la brecha entre uso de IA e impacto y muestran modelos de comunidad; todavía no prueban demanda, precio, retención ni capacidad operativa de Codeflow.
+</details>
+
+<details>
+<summary><strong>Pitch completo</strong></summary>
+
+1. **Contexto:** cerca del 80% usa herramientas de IA; 23% afirma obtener réditos económicos; 6% percibe impacto significativo.
+2. **Interés regional:** 14% de visitas globales a soluciones de IA frente a 11% de usuarios globales de Internet; proxy, no adopción empresarial.
+3. **Problema:** herramientas y procesos fragmentados pierden contexto, tiempo y control.
+4. **Insight:** usar IA no es operar con IA; el valor aparece al integrar, medir, gobernar y mantener.
+5. **Solución:** Codeflow ayuda a empresas latinoamericanas a pasar de herramientas aisladas a procesos conectados, medibles y mantenibles.
+6. **Evidencia:** 3 horas → 10 minutos, 97% menos tiempo, 20% de cartera optimizada, 15 sistemas y 95–98% de precisión; publicar solo con contexto y autorización.
+7. **Cliente:** empresas medianas de Panamá con procesos financieros, operativos o comerciales repetitivos; compradores en dirección, finanzas, operaciones o tecnología.
+8. **Oferta:** diagnóstico → sprint conectado → operación continua; la comunidad acompaña la adopción.
+9. **Validación:** 3–5 empresas, un proceso por empresa, línea base, piloto pagado, métrica primaria y decisión de renovación.
+10. **Cierre:** **Empieza con un proceso crítico. Construye el sistema. Evoluciona con evidencia.** CTA: **Agendar diagnóstico.**
+</details>
+
 <details open>
 <summary><strong>01 · La cifra de apertura — adopción no es impacto</strong></summary>
 
