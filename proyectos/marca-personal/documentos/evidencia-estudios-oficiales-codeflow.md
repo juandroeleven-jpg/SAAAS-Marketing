@@ -16,6 +16,152 @@ El fragmento indica que cerca del **80%** de las empresas de América Latina y e
 **Cuidado:** debemos conservar la definición y metodología exactas del BID. No decir que 80% de todas las empresas “tiene un sistema de IA integrado”. El dato habla de uso de herramientas.
 
 </details>
+<details>
+<summary><strong>BID adopción — 10 capturas</strong></summary>
+
+### Captura BID adopción 1
+
+![BID adopción — captura 1](codeflow-evidencia/bid-adopcion/captura-01.png)
+
+### Captura BID adopción 2
+
+![BID adopción — captura 2](codeflow-evidencia/bid-adopcion/captura-02.png)
+
+### Captura BID adopción 3
+
+![BID adopción — captura 3](codeflow-evidencia/bid-adopcion/captura-03.png)
+
+### Captura BID adopción 4
+
+![BID adopción — captura 4](codeflow-evidencia/bid-adopcion/captura-04.png)
+
+### Captura BID adopción 5
+
+![BID adopción — captura 5](codeflow-evidencia/bid-adopcion/captura-05.png)
+
+### Captura BID adopción 6
+
+![BID adopción — captura 6](codeflow-evidencia/bid-adopcion/captura-06.png)
+
+### Captura BID adopción 7
+
+![BID adopción — captura 7](codeflow-evidencia/bid-adopcion/captura-07.png)
+
+### Captura BID adopción 8
+
+![BID adopción — captura 8](codeflow-evidencia/bid-adopcion/captura-08.png)
+
+### Captura BID adopción 9
+
+![BID adopción — captura 9](codeflow-evidencia/bid-adopcion/captura-09.png)
+
+### Captura BID adopción 10
+
+![BID adopción — captura 10](codeflow-evidencia/bid-adopcion/captura-10.png)
+
+**Análisis relacionado:** estas diez capturas deben leerse como un mismo argumento: el interés por la IA ya existe, pero el valor depende de capacidades, integración, gobernanza y rediseño operativo. Para CodeFlow, esto respalda acompañar a la empresa más allá del piloto.
+
+</details>
++<details>
+<summary><strong>CEPAL adopción — 10 capturas</strong></summary>
+
+### Captura CEPAL adopción 1
+
+![CEPAL adopción — captura 1](codeflow-evidencia/cepal-adopcion/captura-01.png)
+
+### Captura CEPAL adopción 2
+
+![CEPAL adopción — captura 2](codeflow-evidencia/cepal-adopcion/captura-02.png)
+
+### Captura CEPAL adopción 3
+
+![CEPAL adopción — captura 3](codeflow-evidencia/cepal-adopcion/captura-03.png)
+
+### Captura CEPAL adopción 4
+
+![CEPAL adopción — captura 4](codeflow-evidencia/cepal-adopcion/captura-04.png)
+
+### Captura CEPAL adopción 5
+
+![CEPAL adopción — captura 5](codeflow-evidencia/cepal-adopcion/captura-05.png)
+
+### Captura CEPAL adopción 6
+
+![CEPAL adopción — captura 6](codeflow-evidencia/cepal-adopcion/captura-06.png)
+
+### Captura CEPAL adopción 7
+
+![CEPAL adopción — captura 7](codeflow-evidencia/cepal-adopcion/captura-07.png)
+
+### Captura CEPAL adopción 8
+
+![CEPAL adopción — captura 8](codeflow-evidencia/cepal-adopcion/captura-08.png)
+
+### Captura CEPAL adopción 9
+
+![CEPAL adopción — captura 9](codeflow-evidencia/cepal-adopcion/captura-09.png)
+
+### Captura CEPAL adopción 10
+
+![CEPAL adopción — captura 10](codeflow-evidencia/cepal-adopcion/captura-10.png)
+
+**Análisis relacionado:** estas diez capturas deben leerse como un mismo argumento: el interés por la IA ya existe, pero el valor depende de capacidades, integración, gobernanza y rediseño operativo. Para CodeFlow, esto respalda acompañar a la empresa más allá del piloto.
+
+</details>
++<details>
+<summary><strong>BID Startups x AI — 10 capturas</strong></summary>
+
+### Captura BID Startups x AI 1
+
+![BID Startups x AI — captura 1](codeflow-evidencia/bid-startups/captura-01.png)
+
+### Captura BID Startups x AI 2
+
+![BID Startups x AI — captura 2](codeflow-evidencia/bid-startups/captura-02.png)
+
+### Captura BID Startups x AI 3
+
+![BID Startups x AI — captura 3](codeflow-evidencia/bid-startups/captura-03.png)
+
+### Captura BID Startups x AI 4
+
+![BID Startups x AI — captura 4](codeflow-evidencia/bid-startups/captura-04.png)
+
+### Captura BID Startups x AI 5
+
+![BID Startups x AI — captura 5](codeflow-evidencia/bid-startups/captura-05.png)
+
+### Captura BID Startups x AI 6
+
+![BID Startups x AI — captura 6](codeflow-evidencia/bid-startups/captura-06.png)
+
+### Captura BID Startups x AI 7
+
+![BID Startups x AI — captura 7](codeflow-evidencia/bid-startups/captura-07.png)
+
+### Captura BID Startups x AI 8
+
+![BID Startups x AI — captura 8](codeflow-evidencia/bid-startups/captura-08.png)
+
+### Captura BID Startups x AI 9
+
+![BID Startups x AI — captura 9](codeflow-evidencia/bid-startups/captura-09.png)
+
+### Captura BID Startups x AI 10
+
+![BID Startups x AI — captura 10](codeflow-evidencia/bid-startups/captura-10.png)
+
+**Análisis relacionado:** estas diez capturas deben leerse como un mismo argumento: el interés por la IA ya existe, pero el valor depende de capacidades, integración, gobernanza y rediseño operativo. Para CodeFlow, esto respalda acompañar a la empresa más allá del piloto.
+
+</details>
++<details>
+<summary><strong>Relación entre los 30 fragmentos</strong></summary>
+
+Los 30 fragmentos forman una cadena: la IA ya se usa y explora, pero el uso no garantiza impacto; el impacto depende de capacidades, integración, talento, gobernanza y reorganización del trabajo.
+
+> CodeFlow no vende simplemente acceso a IA. Ayuda a convertir adopción dispersa en una capacidad operativa integrada y medible.
+
+</details>
 
 <details>
 <summary><strong>2. CEPAL — el interés regional supera el peso digital</strong></summary>
@@ -63,4 +209,3 @@ Los tres estudios permiten construir una secuencia sólida:
 > Las empresas ya están probando IA. CodeFlow existe para convertir esas pruebas y herramientas aisladas en un sistema operativo conectado que genere resultados y pueda crecer con el negocio.
 
 </details>
-
