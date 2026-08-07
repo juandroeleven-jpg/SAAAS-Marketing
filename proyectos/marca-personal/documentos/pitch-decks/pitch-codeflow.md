@@ -25,6 +25,8 @@
 
 **Fuente/captura:** [`evidencia-estudios-oficiales-codeflow.md`](../evidencia-estudios-oficiales-codeflow.md), [`codeflow-evidencia/cepal-14-11.png`](../codeflow-evidencia/cepal-14-11.png), [CEPAL](https://www.cepal.org/es/comunicados/america-latina-caribe-acelera-la-adopcion-la-inteligencia-artificial-aunque-desafios).
 
+![CEPAL — 14% de visitas y 11% de usuarios](../codeflow-evidencia/cepal-14-11.png)
+
 **Límite:** es un proxy de interés, no 14% de empresas implementando IA.
 
 **Prompt:** `Pitch deck B2B 16:9, zoom desde Panamá hacia Latinoamérica, mapa oscuro, 14% visitas y 11% usuarios como cifras editoriales, nota proxy de interés, sin logos ni texto inventado.`
@@ -38,6 +40,8 @@
 **Visual:** cascada 80% usa → 23% obtiene réditos → 6% percibe impacto, terminando en “operación integrada”.
 
 **Fuente:** [`analisis-critico-codeflow-marca-personal.md`](../analisis-critico-codeflow-marca-personal.md), [`evidencia-estudios-oficiales-codeflow.md`](../evidencia-estudios-oficiales-codeflow.md), [BID](https://www.iadb.org/es/blog/analisis-economico/inteligencia-artificial-motor-de-productividad-o-de-desigualdad).
+
+![BID — 80%, 23% y 6%](../codeflow-evidencia/bid-80-23-6.png)
 
 **Prompt:** `Globo terráqueo oscuro, cascada tipográfica 80% usa, 23% obtiene réditos, 6% percibe impacto significativo, zona final operación integrada, estilo venture deck, sin cifras adicionales.`
 </details>
@@ -61,6 +65,12 @@
 
 **Evidencia externa:** Angelica Automates, Learn.Community y Justin Welsh muestran modelos de contenido, acceso, eventos, pares, admisión y soporte.
 
+![Angelica Automates — captura de referencia](../investigacion-externa-codeflow/capturas/angelica-ai-membership.png)
+
+![Learn.Community — captura de referencia](../investigacion-externa-codeflow/capturas/learn-community.png)
+
+![Justin Welsh — captura de referencia](../investigacion-externa-codeflow/capturas/justin-welsh.png)
+
 **Fuentes:** [`investigacion-externa-codeflow/investigacion-modelo-comunidad-y-referentes.md`](../investigacion-externa-codeflow/investigacion-modelo-comunidad-y-referentes.md), [Circle — Angelica Automates](https://circle.so/blog/angelica-automates-membership), [Learn.Community](https://circle.so/customer-stories/learn-community), [Justin Welsh](https://www.outseta.com/customers/building-audience-income-with-justin-welsh).
 
 **Capturas:** usar las imágenes existentes en `investigacion-externa-codeflow/capturas/` y etiquetarlas como señales externas, no como validación de Codeflow.
@@ -77,7 +87,11 @@
 
 **Producto:** comunidad para aprendizaje y soporte; aplicación para revisión y office hours; operación para monitoreo, mantenimiento y mejoras.
 
-**Fuentes:** [`investigacion-externa-codeflow/investigacion-modelo-comunidad-y-referentes.md`](../investigacion-externa-codeflow/investigacion-modelo-comunidad-y-referentes.md), [`borrador-modelo-comercial.md`](./borrador-modelo-comercial.md), [AI Automation Society](https://aiautomationsociety.ai/).
+![AI Automation Society — captura de referencia](../investigacion-externa-codeflow/capturas-profundizacion/ai-automation-society.png)
+
+![Circle — customer community](../investigacion-externa-codeflow/capturas-profundizacion/circle-customer-community.png)
+
+**Fuentes:** [`investigacion-externa-codeflow/investigacion-modelo-comunidad-y-referentes.md`](../investigacion-externa-codeflow/investigacion-modelo-comunidad-y-referentes.md), [`investigacion-profunda-modelo-codeflow.md`](../investigacion-externa-codeflow/investigacion-profunda-modelo-codeflow.md), [AI Automation Society](https://aiautomationsociety.ai/).
 
 **Prompt:** `Fondo oscuro, ruta luminosa de seis verbos, una captura real de comunidad a la derecha, estilo SaaS B2B premium, sin dashboards genéricos.`
 </details>
@@ -92,6 +106,10 @@
 **Métricas:** activación, uso, horas ahorradas, errores evitados, retención a 30/90 días y expansión.
 
 **Límite:** los rangos de precio y retención son hipótesis, no tracción validada.
+
+![Skool — precios de referencia](../investigacion-externa-codeflow/capturas/skool-pricing.png)
+
+![Circle — precios de membresía](../investigacion-externa-codeflow/capturas-profundizacion/circle-membership-pricing.png)
 
 **Fuente:** [`investigacion-externa-codeflow/investigacion-modelo-comunidad-y-referentes.md`](../investigacion-externa-codeflow/investigacion-modelo-comunidad-y-referentes.md), [`borrador-modelo-comercial.md`](./borrador-modelo-comercial.md), [Skool pricing](https://www.skool.com/pricing).
 </details>
@@ -119,7 +137,7 @@
 
 **C:** operación continua — monitoreo, gobierno y mejora.
 
-**Fuente:** [`borrador-modelo-comercial.md`](./borrador-modelo-comercial.md), [`caso-estudio-anonimizado.md`](../caso-estudio-anonimizado.md).
+**Fuente:** [`investigacion-profunda-modelo-codeflow.md`](../investigacion-externa-codeflow/investigacion-profunda-modelo-codeflow.md), [`caso-estudio-anonimizado.md`](../caso-estudio-anonimizado.md).
 
 **Límite:** no presentar precios como hechos hasta probar disposición a pagar.
 </details>
@@ -136,14 +154,6 @@
 **Fuente:** [`caso-estudio-anonimizado.md`](../caso-estudio-anonimizado.md), [`pitch-flow-ecosistema-ia.md`](../pitch-flow-ecosistema-ia.md).
 
 **Prompt:** `Diapositiva final B2B 16:9, fondo azul marino, línea cian atravesando tres puntos de control, captura real de interfaz a la derecha, CTA único Agendar diagnóstico, sin datos inventados.`
-</details>
-
-<details>
-<summary><strong>Documentos completos de investigación de las diapositivas 2–10</strong></summary>
-
-- [`nuevo-slides-2-4.md`](./nuevo-slides-2-4.md)
-- [`nuevo-slides-5-7.md`](./nuevo-slides-5-7.md)
-- [`nuevo-slides-8-10.md`](./nuevo-slides-8-10.md)
 </details>
 
 <details>
