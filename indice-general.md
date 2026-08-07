@@ -10,15 +10,15 @@
 
 Pipeline de 8 etapas (Intake → Ilustración → Turntable → Catálogo → Feedback → Marca → Infraestructura → Sistema operativo), rumbo al sistema de $5,000/mes.
 
-- [Índice del proyecto EDGE](proyectos/edge-cascos/indice-proyecto-edge.md) — timeline y estado por etapa
-- [Pipeline completo — 8 etapas, 40 hallazgos](proyectos/edge-cascos/documentos/pipeline-edge-6-meses.md)
-- [Simulaciones de ejecución (original)](proyectos/edge-cascos/documentos/simulaciones-ejecucion.md) — Simulaciones 1-3
-- [Mis pruebas — Claude Code](proyectos/edge-cascos/documentos/mis-pruebas-claude-code.md) — Simulación 4 (Meshy 3D) y 5 (cotizador, campos ficticios)
+- [Índice del proyecto EDGE](proyectos/edge-cascos/indice-edge.md) — mapa de carpetas (código/investigación/evidencia) + timeline hecho/en curso/sigue + estado por etapa
+- [Pipeline completo — 8 etapas, 40 hallazgos](proyectos/edge-cascos/investigacion/pipeline-edge-6-meses.md)
+- [Simulaciones de ejecución (original)](proyectos/edge-cascos/investigacion/simulaciones-ejecucion.md) — Simulaciones 1-3
+- [Mis pruebas — Claude Code](proyectos/edge-cascos/investigacion/mis-pruebas-claude-code.md) — Simulación 4 (Meshy 3D) y 5 (cotizador, campos ficticios)
 
 **Sub-frentes activos dentro de EDGE:**
 - **Cotizador/carrito** — decisión tomada: ruta low-cost con Meshy AI (GLB) + Three.js, evaluado contra Zakeke/Threekit. Ver Simulación 5.
 - **Meshy 3D** — prompt con 4 vistas listo, generación real pendiente de tu ejecución (suscripción Pro).
-- **Adaptación 2D con Nano Banana** — 4 casos auditados con archivos reales (Bob Esponja, The Godfather/Padrino, Top Gun: Maverick, Stellar). Geometría validada en los 4; fidelidad de diseño contra el arte original pendiente en todos por falta de herramienta para renderizar PDF en este entorno. Ver [Simulación 6](proyectos/edge-cascos/documentos/simulaciones-cc/simulacion-6-NANO%20BANANA.md).
+- **Adaptación 2D con Nano Banana** — 4 casos auditados con archivos reales (Bob Esponja, The Godfather/Padrino, Top Gun: Maverick, Stellar). Geometría validada en los 4; fidelidad de diseño contra el arte original pendiente en todos por falta de herramienta para renderizar PDF en este entorno. Ver [Simulación 6](proyectos/edge-cascos/investigacion/simulaciones/simulacion-6-NANO%20BANANA.md).
 
 ## 2. Marca personal
 

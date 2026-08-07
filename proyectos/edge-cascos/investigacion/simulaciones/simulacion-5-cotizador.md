@@ -21,7 +21,7 @@ flowchart LR
     F1 --> F2
 ```
 
-**Fase 1 — Cotizador 2D (arranca ya, no depende de nada externo):** ✅ construido y publicado en GitHub (`proyectos/edge-cascos/cotizador/`).
+**Fase 1 — Cotizador 2D (arranca ya, no depende de nada externo):** ✅ construido y publicado en GitHub (`proyectos/edge-cascos/codigo/cotizador/`).
 1. Lógica de campos y fórmula de precio — ya resuelta más abajo (Pasos 1-3), no requiere cambios.
 2. Galería de imagen estática por colorway — **reemplazada por el sistema de capas de Fase 1.5** antes de completarse (ver abajo), no se llegó a usar fotos reales.
 3. Publicar el cotizador funcionando de punta a punta con precios ficticios — ✅ hecho, con build verificado.

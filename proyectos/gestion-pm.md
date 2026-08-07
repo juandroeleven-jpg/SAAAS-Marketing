@@ -62,25 +62,25 @@ gantt
 | # | Pendiente | Fuente |
 |---|---|---|
 | 1 | Rotar el token de Notion expuesto (urgente) | seguridad |
-| 2 | Cancelar suscripción Meshy Pro antes del próximo cobro ($20.80) o decidir seguir | [Simulación 4](edge-cascos/documentos/simulaciones-cc/simulacion-4-meshy-3d.md) |
-| 3 | Decidir si vale la pena recortar la base/soporte del modelo 3D | [Simulación 4](edge-cascos/documentos/simulaciones-cc/simulacion-4-meshy-3d.md) |
-| 4 | Pasar precio_base_modelo real por cada modelo EDGE | [Simulación 5](edge-cascos/documentos/simulaciones-cc/simulacion-5-cotizador.md) |
-| 5 | Confirmar qué colorways son premium/edición limitada (recargo) | [Simulación 5](edge-cascos/documentos/simulaciones-cc/simulacion-5-cotizador.md) |
-| 6 | Definir umbrales reales de descuento por cantidad mayorista | [Simulación 5](edge-cascos/documentos/simulaciones-cc/simulacion-5-cotizador.md) |
-| 7 | Pasar tabla real de talles disponibles por modelo | [Simulación 5](edge-cascos/documentos/simulaciones-cc/simulacion-5-cotizador.md) |
-| 8 | Definir si el envío se cotiza en el mismo flujo o después | [Simulación 5](edge-cascos/documentos/simulaciones-cc/simulacion-5-cotizador.md) |
-| 9 | Confirmar cuál trasera de Bob Esponja es la buena | [Simulación 6a](edge-cascos/documentos/simulaciones-cc/simulacion-6a-bob-esponja.md) |
-| 10 | Confirmar cuál intento 3/4 de Padrino es el definitivo | [Simulación 6b](edge-cascos/documentos/simulaciones-cc/simulacion-6b-padrino.md) |
-| 11 | Confirmar qué está mal en el logo de Top Gun | [Simulación 6c](edge-cascos/documentos/simulaciones-cc/simulacion-6c-top-gun.md) |
-| 12 | Confirmar si las fotos negra/azul de Top Gun son molde real de EDGE o referencia de proveedor | [Simulación 6c](edge-cascos/documentos/simulaciones-cc/simulacion-6c-top-gun.md) |
-| 13 | Resolver si "Stellar" y "Boston" son el mismo molde o dos distintos | [Simulación 6d](edge-cascos/documentos/simulaciones-cc/simulacion-6d-stellar.md) |
-| 14 | Confirmar si `download.jpg` es el intento vigente o hay que regenerar | [Simulación 6d](edge-cascos/documentos/simulaciones-cc/simulacion-6d-stellar.md) |
-| 15 | Contar un caso real donde Canva o full-IA fallaron/tardaron de más | [Simulación 7](edge-cascos/documentos/simulaciones-cc/simulacion-7-catalogo.md) |
-| 16 | Elegir 1 modelo EDGE para generar la primera ficha real | [Simulación 7](edge-cascos/documentos/simulaciones-cc/simulacion-7-catalogo.md) |
-| 17 | Conectar tu cuenta Claude Code Pro ($100/mes) al repositorio | [Simulación 8](edge-cascos/documentos/simulaciones-cc/simulacion-8-meshy-blender.md) |
-| 18 | Confirmar si Blender está instalado en la máquina que usará esa cuenta | [Simulación 8](edge-cascos/documentos/simulaciones-cc/simulacion-8-meshy-blender.md) |
-| 19 | Decidir entre Substance 3D Painter/RizomUV o solo Blender nativo | [Simulación 8](edge-cascos/documentos/simulaciones-cc/simulacion-8-meshy-blender.md) |
-| 20 | Aprobar la corrección de la cita Belanche/Ibáñez-Sánchez (Etapa 2, Hallazgo 4) | [pipeline-edge-6-meses.md](edge-cascos/documentos/pipeline-edge-6-meses.md), ya investigado, solo falta tu "sí" |
+| 2 | Cancelar suscripción Meshy Pro antes del próximo cobro ($20.80) o decidir seguir | [Simulación 4](edge-cascos/investigacion/simulaciones/simulacion-4-meshy-3d.md) |
+| 3 | Decidir si vale la pena recortar la base/soporte del modelo 3D | [Simulación 4](edge-cascos/investigacion/simulaciones/simulacion-4-meshy-3d.md) |
+| 4 | Pasar precio_base_modelo real por cada modelo EDGE | [Simulación 5](edge-cascos/investigacion/simulaciones/simulacion-5-cotizador.md) |
+| 5 | Confirmar qué colorways son premium/edición limitada (recargo) | [Simulación 5](edge-cascos/investigacion/simulaciones/simulacion-5-cotizador.md) |
+| 6 | Definir umbrales reales de descuento por cantidad mayorista | [Simulación 5](edge-cascos/investigacion/simulaciones/simulacion-5-cotizador.md) |
+| 7 | Pasar tabla real de talles disponibles por modelo | [Simulación 5](edge-cascos/investigacion/simulaciones/simulacion-5-cotizador.md) |
+| 8 | Definir si el envío se cotiza en el mismo flujo o después | [Simulación 5](edge-cascos/investigacion/simulaciones/simulacion-5-cotizador.md) |
+| 9 | Confirmar cuál trasera de Bob Esponja es la buena | [Simulación 6a](edge-cascos/investigacion/simulaciones/simulacion-6a-bob-esponja.md) |
+| 10 | Confirmar cuál intento 3/4 de Padrino es el definitivo | [Simulación 6b](edge-cascos/investigacion/simulaciones/simulacion-6b-padrino.md) |
+| 11 | Confirmar qué está mal en el logo de Top Gun | [Simulación 6c](edge-cascos/investigacion/simulaciones/simulacion-6c-top-gun.md) |
+| 12 | Confirmar si las fotos negra/azul de Top Gun son molde real de EDGE o referencia de proveedor | [Simulación 6c](edge-cascos/investigacion/simulaciones/simulacion-6c-top-gun.md) |
+| 13 | Resolver si "Stellar" y "Boston" son el mismo molde o dos distintos | [Simulación 6d](edge-cascos/investigacion/simulaciones/simulacion-6d-stellar.md) |
+| 14 | Confirmar si `download.jpg` es el intento vigente o hay que regenerar | [Simulación 6d](edge-cascos/investigacion/simulaciones/simulacion-6d-stellar.md) |
+| 15 | Contar un caso real donde Canva o full-IA fallaron/tardaron de más | [Simulación 7](edge-cascos/investigacion/simulaciones/simulacion-7-catalogo.md) |
+| 16 | Elegir 1 modelo EDGE para generar la primera ficha real | [Simulación 7](edge-cascos/investigacion/simulaciones/simulacion-7-catalogo.md) |
+| 17 | Conectar tu cuenta Claude Code Pro ($100/mes) al repositorio | [Simulación 8](edge-cascos/investigacion/simulaciones/simulacion-8-meshy-blender.md) |
+| 18 | Confirmar si Blender está instalado en la máquina que usará esa cuenta | [Simulación 8](edge-cascos/investigacion/simulaciones/simulacion-8-meshy-blender.md) |
+| 19 | Decidir entre Substance 3D Painter/RizomUV o solo Blender nativo | [Simulación 8](edge-cascos/investigacion/simulaciones/simulacion-8-meshy-blender.md) |
+| 20 | Aprobar la corrección de la cita Belanche/Ibáñez-Sánchez (Etapa 2, Hallazgo 4) | [pipeline-edge-6-meses.md](edge-cascos/investigacion/pipeline-edge-6-meses.md), ya investigado, solo falta tu "sí" |
 | 21 | Primer día real de envíos LinkedIn (Motor 1 y 2) | [linkedin-networking.md](marca-personal/documentos/linkedin-networking.md) |
 | 22 | Publicar la landing una vez integradas las secciones CV/Logros | [pagina-web-progreso.md](marca-personal/documentos/pagina-web-progreso.md) |
 
@@ -128,7 +128,7 @@ Puedo correr esta investigación yo mismo ahora mismo si me das el "ok" — no d
 <summary><strong>Ítems 9-11 — Simulaciones 6a/6b/6c: auditoría contra el PDF original</strong></summary>
 
 ```
-Retomá simulacion-6a-bob-esponja.md, simulacion-6b-padrino.md y simulacion-6c-top-gun.md (proyectos/edge-cascos/documentos/simulaciones-cc/). En los 3 quedó el mismo bloqueo: el PDF de referencia no se pudo renderizar por falta de pdftoppm/poppler-utils en el entorno remoto. Vos sí tenés acceso a los archivos físicos.
+Retomá simulacion-6a-bob-esponja.md, simulacion-6b-padrino.md y simulacion-6c-top-gun.md (proyectos/edge-cascos/investigacion/simulaciones/). En los 3 quedó el mismo bloqueo: el PDF de referencia no se pudo renderizar por falta de pdftoppm/poppler-utils en el entorno remoto. Vos sí tenés acceso a los archivos físicos.
 
 Instalá poppler-utils si falta, renderizá los 3 PDF (BOB ESPONJA - HERO.pdf, GODFATHER - HERO.ai.pdf, TOP GUN - EVOLUTION.pdf) y cerrá los 3 puntos abiertos: cuál trasera de Bob Esponja es la buena, cuál intento 3/4 de Padrino es el definitivo, y qué está mal exactamente en maver-mal-logo.jpg. Agregá la respuesta en cada archivo (sección "## Auditoría contra PDF original") y cerrá esos checkboxes.
 ```
