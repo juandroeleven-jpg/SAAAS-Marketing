@@ -145,3 +145,41 @@
 - [`nuevo-slides-5-7.md`](./nuevo-slides-5-7.md)
 - [`nuevo-slides-8-10.md`](./nuevo-slides-8-10.md)
 </details>
+
+<details>
+<summary><strong>Anexo visual — capturas originales usadas como evidencia</strong></summary>
+
+### BID y CEPAL
+
+![BID — adopción, réditos e impacto](../codeflow-evidencia/bid-80-23-6.png)
+
+![CEPAL — visitas y usuarios de Internet](../codeflow-evidencia/cepal-14-11.png)
+
+### Referentes de comunidad
+
+![Angelica Automates](../investigacion-externa-codeflow/capturas/angelica-ai-membership.png)
+
+![Learn.Community](../investigacion-externa-codeflow/capturas/learn-community.png)
+
+![Justin Welsh](../investigacion-externa-codeflow/capturas/justin-welsh.png)
+
+![Skool pricing](../investigacion-externa-codeflow/capturas/skool-pricing.png)
+
+![Pat Flynn](../investigacion-externa-codeflow/capturas/spi-pat-flynn.png)
+
+### Comunidades y plataformas
+
+![AI Automation Society](../investigacion-externa-codeflow/capturas-profundizacion/ai-automation-society.png)
+
+![Circle customer community](../investigacion-externa-codeflow/capturas-profundizacion/circle-customer-community.png)
+
+![Circle membership pricing](../investigacion-externa-codeflow/capturas-profundizacion/circle-membership-pricing.png)
+
+### Fuentes de investigación completas
+
+- [`investigacion-modelo-comunidad-y-referentes.md`](../investigacion-externa-codeflow/investigacion-modelo-comunidad-y-referentes.md)
+- [`investigacion-profunda-modelo-codeflow.md`](../investigacion-externa-codeflow/investigacion-profunda-modelo-codeflow.md)
+- [`evidencia-estudios-oficiales-codeflow.md`](../evidencia-estudios-oficiales-codeflow.md)
+
+Estas capturas son referencias de las fuentes investigadas. Las cifras de terceros deben conservar su atribución; no son tracción propia de Codeflow.
+</details>
