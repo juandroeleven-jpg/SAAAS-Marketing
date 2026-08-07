@@ -1,4 +1,4 @@
-# Flow — planificación del pitch y del modelo de negocio
+# CodeFlow — planificación del pitch y del modelo de negocio
 
 **Estado:** etapa 1 — ordenar la idea antes de investigar cifras o construir la presentación final.
 
@@ -7,13 +7,13 @@
 <details>
 <summary><strong>1. Idea central del negocio</strong></summary>
 
-Flow sería una agencia y sistema operativo de inteligencia artificial para empresas.
+CodeFlow sería una agencia y sistema operativo de inteligencia artificial para empresas.
 
 La empresa no vendería una IA nueva ni un modelo propio. Su función sería diagnosticar las necesidades de una empresa, seleccionar y conectar las herramientas que ya existen —suscripciones, APIs, aplicaciones online o infraestructura local— y convertirlas en un ecosistema de trabajo integrado.
 
 La promesa preliminar es:
 
-> Flow convierte herramientas y automatizaciones aisladas en un sistema operativo de IA conectado, mantenible y ampliable para la empresa.
+> CodeFlow convierte herramientas y automatizaciones aisladas en un sistema operativo de IA conectado, mantenible y ampliable para la empresa.
 
 </details>
 
@@ -69,15 +69,15 @@ Los porcentajes son únicamente hipótesis visuales hasta encontrar fuentes sól
 
 ### Slide 5 — El costo de las soluciones aisladas
 
-Mostrar muchas herramientas separadas y luego cómo Flow las conecta en un único sistema operativo empresarial.
+Mostrar muchas herramientas separadas y luego cómo CodeFlow las conecta en un único sistema operativo empresarial.
 
-### Slide 6 — La solución Flow
+### Slide 6 — La solución CodeFlow
 
 Presentar el proceso: diagnóstico → priorización → implementación → integración → monitoreo → evolución.
 
 ### Slide 7 — Relación de largo plazo
 
-Explicar que Flow no termina en una implementación puntual. El cliente puede seguir recibiendo nuevas automatizaciones, soporte, educación, conexión entre equipos y evolución del sistema.
+Explicar que CodeFlow no termina en una implementación puntual. El cliente puede seguir recibiendo nuevas automatizaciones, soporte, educación, conexión entre equipos y evolución del sistema.
 
 </details>
 
@@ -96,7 +96,7 @@ Se define qué soluciones deben implementarse primero, cómo se conectarán, qu�
 
 ### Capa 3 — Implementación
 
-Flow monta automatizaciones, agentes, integraciones y sistemas de trabajo usando herramientas existentes, APIs, servicios online o infraestructura local cuando sea necesario.
+CodeFlow monta automatizaciones, agentes, integraciones y sistemas de trabajo usando herramientas existentes, APIs, servicios online o infraestructura local cuando sea necesario.
 
 ### Capa 4 — Plataforma y operación recurrente
 
@@ -104,7 +104,7 @@ El cliente paga una cuota recurrente por mantener el sistema, recibir nuevas imp
 
 ### Capa 5 — Educación y comunidad
 
-La comunidad —por ejemplo, en Skool y Slack— puede incluir formación, plantillas, agentes, skills, eventos, comunicación con el equipo de Flow y conexión con otras empresas.
+La comunidad —por ejemplo, en Skool y Slack— puede incluir formación, plantillas, agentes, skills, eventos, comunicación con el equipo de CodeFlow y conexión con otras empresas.
 
 **Hipótesis de monetización:** el mayor valor no está únicamente en construir una automatización inicial, sino en mantener una relación de largo plazo mientras el sistema empresarial sigue creciendo.
 
@@ -127,9 +127,9 @@ El diferenciador que aparece en la idea es:
 
 Una formulación preliminar sería:
 
-> Flow no entrega automatizaciones aisladas; diseña y opera un ecosistema conectado de IA que la empresa puede ampliar con el tiempo.
+> CodeFlow no entrega automatizaciones aisladas; diseña y opera un ecosistema conectado de IA que la empresa puede ampliar con el tiempo.
 
-**Duda pendiente:** debemos decidir si Flow se presenta principalmente como agencia, plataforma, sistema operativo empresarial, servicio gestionado o combinación de estas categorías.
+**Duda pendiente:** debemos decidir si CodeFlow se presenta principalmente como agencia, plataforma, sistema operativo empresarial, servicio gestionado o combinación de estas categorías.
 
 </details>
 
@@ -163,12 +163,12 @@ No debemos presentar cifras concretas hasta comprobarlas y documentar su origen.
 - ¿La cuota mensual incluye software de terceros o se factura por separado?
 - ¿Qué parte del servicio es estándar y qué parte es personalizada?
 - ¿Qué significa exactamente “interfaz única” en la primera versión?
-- ¿Flow tendrá una plataforma propia o integrará herramientas existentes?
+- ¿CodeFlow tendrá una plataforma propia o integrará herramientas existentes?
 - ¿Cómo se mide el valor: ahorro de horas, reducción de costos, ingresos, velocidad o control?
 - ¿Qué nivel de soporte recibe el cliente cada mes?
 - ¿Qué incluye la comunidad y qué no incluye?
 - ¿Qué hace que un cliente permanezca después de la primera implementación?
-- ¿Qué procesos no debería automatizar Flow?
+- ¿Qué procesos no debería automatizar CodeFlow?
 - ¿Cómo se protege la información empresarial y quién administra los accesos?
 
 </details>
@@ -208,9 +208,9 @@ Buscar:
 - crecimiento de servicios gestionados;
 - precios de consultoría, implementación y soporte recurrente.
 
-### Bloque D — Validación del modelo Flow
+### Bloque D — Validación del modelo CodeFlow
 
-Comparar Flow con:
+Comparar CodeFlow con:
 
 - consultoras tradicionales;
 - integradores tecnológicos;
@@ -250,7 +250,7 @@ Así evitamos mezclar adopción, experimentación, implementación y madurez com
 <details>
 <summary><strong>10. Próximo paso recomendado</strong></summary>
 
-1. Confirmar la frase central de Flow.
+1. Confirmar la frase central de CodeFlow.
 2. Elegir el primer tipo de cliente.
 3. Separar claramente consultoría, implementación, plataforma y comunidad.
 4. Inventariar los casos propios que pueden convertirse en evidencia.
@@ -261,4 +261,3 @@ Así evitamos mezclar adopción, experimentación, implementación y madurez com
 **Estado actual:** idea organizada; investigación y diseño visual pendientes.
 
 </details>
-
