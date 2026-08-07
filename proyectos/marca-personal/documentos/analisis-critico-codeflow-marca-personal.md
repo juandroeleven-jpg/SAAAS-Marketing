@@ -22,6 +22,234 @@ Esta parte tiene sentido conceptualmente y es una buena base para el pitch. Sin 
 
 </details>
 <details>
+<summary><strong>Evidencia específica para 1. Herramientas aisladas no equivalen a sistemas</strong></summary>
+
+**BID — paráfrasis:** El BID diferencia entre utilizar herramientas de IA y conseguir beneficios económicos; eso respalda que tener muchos chats no equivale a tener un sistema.
+
+![BID — evidencia](codeflow-evidencia/bid-80-23-6.png)
+
+**CEPAL — paráfrasis:** CEPAL mide interés regional mediante visitas a soluciones de IA, pero advierte que esa métrica no demuestra integración empresarial.
+
+![CEPAL — evidencia](codeflow-evidencia/cepal-14-11.png)
+
+**BID Startups x AI — paráfrasis:** El BID clasifica startups integradoras como un perfil distinto de las que desarrollan modelos o apenas exploran; eso respalda la categoría de CodeFlow.
+
+![BID Startups x AI — evidencia](codeflow-evidencia/bid-startups-85-75.png)
+
+**Lectura crítica:** las tres fuentes apoyan la dirección general del supuesto, pero no prueban automáticamente que CodeFlow sea la solución ni que el cliente pagará una suscripción. Para eso hacen falta casos propios, entrevistas, precios y métricas de retención.
+
+</details>
+
+<details>
+<summary><strong>Evidencia específica para 2. Pasar del piloto a la operación</strong></summary>
+
+**BID — paráfrasis:** El BID señala que muchas empresas siguen en pruebas iniciales y necesitan capacidades para integrar IA en el núcleo operativo.
+
+![BID — evidencia](codeflow-evidencia/bid-adopcion/captura-05.png)
+
+**CEPAL — paráfrasis:** CEPAL relaciona la adopción con preparación, adopción y gobernanza, no solo con interés tecnológico.
+
+![CEPAL — evidencia](codeflow-evidencia/cepal-adopcion/captura-05.png)
+
+**BID Startups x AI — paráfrasis:** El BID identifica brechas que dificultan escalar soluciones regionales.
+
+![BID Startups x AI — evidencia](codeflow-evidencia/bid-startups/captura-07.png)
+
+**Lectura crítica:** las tres fuentes apoyan la dirección general del supuesto, pero no prueban automáticamente que CodeFlow sea la solución ni que el cliente pagará una suscripción. Para eso hacen falta casos propios, entrevistas, precios y métricas de retención.
+
+</details>
+
+<details>
+<summary><strong>Evidencia específica para 3. Agente como coordinador de tareas y contexto</strong></summary>
+
+**BID — paráfrasis:** El BID muestra que la IA puede incorporarse a productos, procesos y modelos de negocio, no solo a chats individuales.
+
+![BID — evidencia](codeflow-evidencia/bid-adopcion/captura-06.png)
+
+**CEPAL — paráfrasis:** CEPAL destaca la necesidad de capacidades para pasar de uso superficial a adopción productiva.
+
+![CEPAL — evidencia](codeflow-evidencia/cepal-adopcion/captura-06.png)
+
+**BID Startups x AI — paráfrasis:** El BID distingue integradoras de desarrolladoras y exploradoras, lo que respalda construir agentes sobre herramientas existentes.
+
+![BID Startups x AI — evidencia](codeflow-evidencia/bid-startups/captura-03.png)
+
+**Lectura crítica:** las tres fuentes apoyan la dirección general del supuesto, pero no prueban automáticamente que CodeFlow sea la solución ni que el cliente pagará una suscripción. Para eso hacen falta casos propios, entrevistas, precios y métricas de retención.
+
+</details>
+
+<details>
+<summary><strong>Evidencia específica para 4. Sistema que conecta varias áreas</strong></summary>
+
+**BID — paráfrasis:** El BID relaciona impacto con transformar la forma de trabajar e integrar IA en operaciones.
+
+![BID — evidencia](codeflow-evidencia/bid-adopcion/captura-09.png)
+
+**CEPAL — paráfrasis:** CEPAL incluye infraestructura y gobernanza como condiciones habilitantes.
+
+![CEPAL — evidencia](codeflow-evidencia/cepal-adopcion/captura-07.png)
+
+**BID Startups x AI — paráfrasis:** El estudio de startups muestra que la IA se aplica en marketing, producto y toma de decisiones, áreas que pueden conectarse.
+
+![BID Startups x AI — evidencia](codeflow-evidencia/bid-startups/captura-04.png)
+
+**Lectura crítica:** las tres fuentes apoyan la dirección general del supuesto, pero no prueban automáticamente que CodeFlow sea la solución ni que el cliente pagará una suscripción. Para eso hacen falta casos propios, entrevistas, precios y métricas de retención.
+
+</details>
+
+<details>
+<summary><strong>Evidencia específica para 5. Interoperabilidad como diferenciador</strong></summary>
+
+**BID — paráfrasis:** El BID advierte que probar herramientas no garantiza resultados económicos.
+
+![BID — evidencia](codeflow-evidencia/bid-80-23-6.png)
+
+**CEPAL — paráfrasis:** CEPAL muestra una adopción heterogénea, por lo que las soluciones deben adaptarse al nivel de cada país y empresa.
+
+![CEPAL — evidencia](codeflow-evidencia/cepal-adopcion/captura-06.png)
+
+**BID Startups x AI — paráfrasis:** El BID identifica baja adecuación de soluciones globales al contexto local, lo que apoya integrar y adaptar.
+
+![BID Startups x AI — evidencia](codeflow-evidencia/bid-startups/captura-08.png)
+
+**Lectura crítica:** las tres fuentes apoyan la dirección general del supuesto, pero no prueban automáticamente que CodeFlow sea la solución ni que el cliente pagará una suscripción. Para eso hacen falta casos propios, entrevistas, precios y métricas de retención.
+
+</details>
+
+<details>
+<summary><strong>Evidencia específica para 6. Mejora continua controlada</strong></summary>
+
+**BID — paráfrasis:** El BID vincula adopción efectiva con capacidades, infraestructura y reglas claras.
+
+![BID — evidencia](codeflow-evidencia/bid-adopcion/captura-07.png)
+
+**CEPAL — paráfrasis:** CEPAL incluye gobernanza como una dimensión central de madurez de IA.
+
+![CEPAL — evidencia](codeflow-evidencia/cepal-adopcion/captura-08.png)
+
+**BID Startups x AI — paráfrasis:** El BID señala prácticas incipientes de gobernanza en startups, por lo que CodeFlow debe incluir evaluación y control.
+
+![BID Startups x AI — evidencia](codeflow-evidencia/bid-startups/captura-09.png)
+
+**Lectura crítica:** las tres fuentes apoyan la dirección general del supuesto, pero no prueban automáticamente que CodeFlow sea la solución ni que el cliente pagará una suscripción. Para eso hacen falta casos propios, entrevistas, precios y métricas de retención.
+
+</details>
+
+<details>
+<summary><strong>Evidencia específica para 7. Oportunidad regional</strong></summary>
+
+**BID — paráfrasis:** El BID muestra que el uso de herramientas ya es relevante en ALC.
+
+![BID — evidencia](codeflow-evidencia/bid-adopcion/captura-03.png)
+
+**CEPAL — paráfrasis:** CEPAL reporta 14% de visitas globales a soluciones de IA frente a 11% de usuarios de Internet.
+
+![CEPAL — evidencia](codeflow-evidencia/cepal-14-11.png)
+
+**BID Startups x AI — paráfrasis:** El BID observa una adopción fuerte de IA generativa y predictiva en startups analizadas.
+
+![BID Startups x AI — evidencia](codeflow-evidencia/bid-startups-85-75.png)
+
+**Lectura crítica:** las tres fuentes apoyan la dirección general del supuesto, pero no prueban automáticamente que CodeFlow sea la solución ni que el cliente pagará una suscripción. Para eso hacen falta casos propios, entrevistas, precios y métricas de retención.
+
+</details>
+
+<details>
+<summary><strong>Evidencia específica para 8. Uso no garantiza impacto</strong></summary>
+
+**BID — paráfrasis:** El BID presenta el contraste 80% de uso, 23% de réditos y 6% de impacto significativo.
+
+![BID — evidencia](codeflow-evidencia/bid-80-23-6.png)
+
+**CEPAL — paráfrasis:** CEPAL advierte que el proxy de tráfico no equivale a implementación empresarial.
+
+![CEPAL — evidencia](codeflow-evidencia/cepal-adopcion/captura-04.png)
+
+**BID Startups x AI — paráfrasis:** El BID muestra adopción alta en startups, pero también brechas de escalamiento.
+
+![BID Startups x AI — evidencia](codeflow-evidencia/bid-startups/captura-08.png)
+
+**Lectura crítica:** las tres fuentes apoyan la dirección general del supuesto, pero no prueban automáticamente que CodeFlow sea la solución ni que el cliente pagará una suscripción. Para eso hacen falta casos propios, entrevistas, precios y métricas de retención.
+
+</details>
+
+<details>
+<summary><strong>Evidencia específica para 9. Educación como parte del producto</strong></summary>
+
+**BID — paráfrasis:** El BID identifica formación y capacidades como condiciones para productividad.
+
+![BID — evidencia](codeflow-evidencia/bid-adopcion/captura-08.png)
+
+**CEPAL — paráfrasis:** CEPAL señala brechas de talento y capacidades avanzadas.
+
+![CEPAL — evidencia](codeflow-evidencia/cepal-adopcion/captura-07.png)
+
+**BID Startups x AI — paráfrasis:** El BID identifica falta de talento como obstáculo para escalar la IA en startups.
+
+![BID Startups x AI — evidencia](codeflow-evidencia/bid-startups/captura-07.png)
+
+**Lectura crítica:** las tres fuentes apoyan la dirección general del supuesto, pero no prueban automáticamente que CodeFlow sea la solución ni que el cliente pagará una suscripción. Para eso hacen falta casos propios, entrevistas, precios y métricas de retención.
+
+</details>
+
+<details>
+<summary><strong>Evidencia específica para 10. Suscripción con valor continuo</strong></summary>
+
+**BID — paráfrasis:** El BID explica que la productividad exige reorganizar procesos, no solo usar una herramienta una vez.
+
+![BID — evidencia](codeflow-evidencia/bid-adopcion/captura-10.png)
+
+**CEPAL — paráfrasis:** CEPAL presenta la adopción como un proceso de madurez y evolución.
+
+![CEPAL — evidencia](codeflow-evidencia/cepal-adopcion/captura-10.png)
+
+**BID Startups x AI — paráfrasis:** El BID habla de obstáculos para escalar, lo que apoya soporte e integración continua, pero no valida por sí solo un precio mensual.
+
+![BID Startups x AI — evidencia](codeflow-evidencia/bid-startups/captura-10.png)
+
+**Lectura crítica:** las tres fuentes apoyan la dirección general del supuesto, pero no prueban automáticamente que CodeFlow sea la solución ni que el cliente pagará una suscripción. Para eso hacen falta casos propios, entrevistas, precios y métricas de retención.
+
+</details>
+
+<details>
+<summary><strong>Evidencia específica para 11. Marca personal como canal</strong></summary>
+
+**BID — paráfrasis:** El BID muestra una brecha entre uso e impacto que requiere capacidades especializadas.
+
+![BID — evidencia](codeflow-evidencia/bid-adopcion/captura-02.png)
+
+**CEPAL — paráfrasis:** CEPAL plantea que la región necesita formación, infraestructura y gobernanza.
+
+![CEPAL — evidencia](codeflow-evidencia/cepal-adopcion/captura-08.png)
+
+**BID Startups x AI — paráfrasis:** El BID muestra que las startups adoptan IA en funciones estratégicas, creando demanda de conocimiento aplicado.
+
+![BID Startups x AI — evidencia](codeflow-evidencia/bid-startups/captura-05.png)
+
+**Lectura crítica:** las tres fuentes apoyan la dirección general del supuesto, pero no prueban automáticamente que CodeFlow sea la solución ni que el cliente pagará una suscripción. Para eso hacen falta casos propios, entrevistas, precios y métricas de retención.
+
+</details>
+
+<details>
+<summary><strong>Evidencia específica para 12. Separar servicios, comunidad y plataforma</strong></summary>
+
+**BID — paráfrasis:** El BID muestra que la adopción debe traducirse en productividad y cambio operativo.
+
+![BID — evidencia](codeflow-evidencia/bid-adopcion/captura-09.png)
+
+**CEPAL — paráfrasis:** CEPAL clasifica países por niveles de madurez, lo que favorece una oferta escalonada.
+
+![CEPAL — evidencia](codeflow-evidencia/cepal-adopcion/captura-05.png)
+
+**BID Startups x AI — paráfrasis:** El BID separa desarrolladoras, integradoras y exploradoras, dando una base para diferenciar productos y clientes.
+
+![BID Startups x AI — evidencia](codeflow-evidencia/bid-startups/captura-03.png)
+
+**Lectura crítica:** las tres fuentes apoyan la dirección general del supuesto, pero no prueban automáticamente que CodeFlow sea la solución ni que el cliente pagará una suscripción. Para eso hacen falta casos propios, entrevistas, precios y métricas de retención.
+
+</details>
+
+<details>
 <summary><strong>1. Herramientas aisladas no equivalen a sistemas</strong></summary>
 
 La evidencia del BID distingue entre usar herramientas y obtener resultados. Esto respalda tu idea de que muchos chats o automatizaciones puntuales no constituyen un sistema integrado.
