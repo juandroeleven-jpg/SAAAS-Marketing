@@ -21,6 +21,198 @@ Tu tesis es que una empresa necesita pasar de **resolver situaciones** a **dise�
 Esta parte tiene sentido conceptualmente y es una buena base para el pitch. Sin embargo, todavía no demuestra que todas las empresas tengan ese problema ni que estén dispuestas a pagar por resolverlo. Por ahora es una hipótesis basada en experiencia.
 
 </details>
+<details>
+<summary><strong>1. Herramientas aisladas no equivalen a sistemas</strong></summary>
+
+La evidencia del BID distingue entre usar herramientas y obtener resultados. Esto respalda tu idea de que muchos chats o automatizaciones puntuales no constituyen un sistema integrado.
+
+<details>
+<summary><strong>Validación cruzada: ¿confirma o niega nuestro supuesto?</strong></summary>
+
+**Qué confirma o matiza:** Los datos confirman la brecha entre adopción e impacto, pero no prueban que todas las empresas tengan 40 agentes aislados. Tu experiencia formula la hipótesis; el estudio la vuelve plausible, no universal.
+
+**Fuente:** [Estudio utilizado](https://www.iadb.org/es/blog/analisis-economico/inteligencia-artificial-motor-de-productividad-o-de-desigualdad)
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>2. La empresa necesita pasar del piloto a la operación</strong></summary>
+
+El BID señala que muchas organizaciones siguen en pruebas iniciales y necesitan capacidades, infraestructura y reglas para integrar IA en el núcleo operativo.
+
+<details>
+<summary><strong>Validación cruzada: ¿confirma o niega nuestro supuesto?</strong></summary>
+
+**Qué confirma o matiza:** Esto apoya directamente el servicio de CodeFlow: diagnóstico, arquitectura, implementación, capacitación y mantenimiento. La evidencia no demuestra aún que CodeFlow sea la solución elegida; demuestra que el problema existe.
+
+**Fuente:** [Estudio utilizado](https://www.iadb.org/es/blog/analisis-economico/inteligencia-artificial-motor-de-productividad-o-de-desigualdad)
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>3. Un agente debe coordinar tareas y contexto</strong></summary>
+
+El estudio regional del BID identifica startups desarrolladoras, integradoras y exploradoras. Esa clasificación respalda separar el modelo base de la integración aplicada.
+
+<details>
+<summary><strong>Validación cruzada: ¿confirma o niega nuestro supuesto?</strong></summary>
+
+**Qué confirma o matiza:** Confirma que existe un espacio para integradores, pero no prueba que un agente tenga aprendizaje autónomo. CodeFlow debe hablar de reglas, herramientas, evaluación y supervisión, no prometer aprendizaje automático sin evidencia.
+
+**Fuente:** [Estudio utilizado](https://publications.iadb.org/es/startups-x-ai-un-panorama-de-la-adopcion-en-america-latina-y-el-caribe)
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>4. Un sistema conecta varias áreas</strong></summary>
+
+El BID describe la necesidad de integrar IA en modelos de negocio y operaciones. CEPAL también relaciona adopción con capacidades, infraestructura y gobernanza.
+
+<details>
+<summary><strong>Validación cruzada: ¿confirma o niega nuestro supuesto?</strong></summary>
+
+**Qué confirma o matiza:** Esto respalda tu concepto de conectar finanzas, operaciones, marketing y datos. Lo que falta demostrar es qué arquitectura concreta reduce costos o produce mejores resultados.
+
+**Fuente:** [Estudio utilizado](https://www.iadb.org/es/blog/analisis-economico/inteligencia-artificial-motor-de-productividad-o-de-desigualdad)
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>5. La interoperabilidad puede ser un diferenciador</strong></summary>
+
+El estudio de startups reporta baja adecuación de soluciones globales al contexto local y obstáculos para escalar.
+
+<details>
+<summary><strong>Validación cruzada: ¿confirma o niega nuestro supuesto?</strong></summary>
+
+**Qué confirma o matiza:** Esto favorece una propuesta que adapte herramientas y modelos a cada empresa. No demuestra que una interfaz única sea siempre mejor; algunos clientes pueden preferir herramientas separadas por seguridad o especialización.
+
+**Fuente:** [Estudio utilizado](https://publications.iadb.org/es/startups-x-ai-un-panorama-de-la-adopcion-en-america-latina-y-el-caribe)
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>6. La mejora continua debe ser controlada</strong></summary>
+
+BID y CEPAL destacan gobernanza, reglas, talento y capacidades como condiciones de adopción efectiva.
+
+<details>
+<summary><strong>Validación cruzada: ¿confirma o niega nuestro supuesto?</strong></summary>
+
+**Qué confirma o matiza:** Esto respalda ciclos de evaluación, monitoreo y mejora. Matiza tu idea de agentes que se mejoran solos: la mejora debe tener métricas, responsables, aprobaciones y trazabilidad.
+
+**Fuente:** [Estudio utilizado](https://www.cepal.org/es/comunicados/america-latina-caribe-acelera-la-adopcion-la-inteligencia-artificial-aunque-desafios)
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>7. La adopción regional sí parece una oportunidad</strong></summary>
+
+CEPAL reporta que ALC concentra 14% de las visitas globales a soluciones de IA frente a 11% de usuarios globales de Internet.
+
+<details>
+<summary><strong>Validación cruzada: ¿confirma o niega nuestro supuesto?</strong></summary>
+
+**Qué confirma o matiza:** Esto respalda comenzar la narrativa desde Panamá y Latinoamérica. No equivale a 14% de empresas implementando IA, porque la métrica usa tráfico web como proxy.
+
+**Fuente:** [Estudio utilizado](https://www.cepal.org/es/comunicados/america-latina-caribe-acelera-la-adopcion-la-inteligencia-artificial-aunque-desafios)
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>8. El impacto económico no está garantizado</strong></summary>
+
+El BID reporta cerca de 80% de uso de herramientas, 23% con réditos económicos y 6% con impacto significativo.
+
+<details>
+<summary><strong>Validación cruzada: ¿confirma o niega nuestro supuesto?</strong></summary>
+
+**Qué confirma o matiza:** Esto respalda fuertemente la tesis de que usar IA no basta. También obliga a CodeFlow a prometer resultados medibles, no solo integración técnica.
+
+**Fuente:** [Estudio utilizado](https://www.iadb.org/es/blog/analisis-economico/inteligencia-artificial-motor-de-productividad-o-de-desigualdad)
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>9. La educación debe ser parte del producto</strong></summary>
+
+CEPAL y BID identifican brechas de talento y capacidades. La adopción depende de que las personas y empresas puedan reorganizar su trabajo.
+
+<details>
+<summary><strong>Validación cruzada: ¿confirma o niega nuestro supuesto?</strong></summary>
+
+**Qué confirma o matiza:** Esto apoya la comunidad, las capacitaciones y los materiales específicos. La comunidad solo será defendible como suscripción si demuestra adopción, soporte y resultados, no solo publicación de contenido.
+
+**Fuente:** [Estudio utilizado](https://www.cepal.org/es/comunicados/america-latina-caribe-acelera-la-adopcion-la-inteligencia-artificial-aunque-desafios)
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>10. La suscripción necesita valor continuo</strong></summary>
+
+Los estudios hablan de integración, escalamiento, gobernanza y capacidades sostenidas; no presentan una validación directa del precio mensual de CodeFlow.
+
+<details>
+<summary><strong>Validación cruzada: ¿confirma o niega nuestro supuesto?</strong></summary>
+
+**Qué confirma o matiza:** La evidencia respalda la necesidad de acompañamiento continuo, pero no valida todavía el modelo de precio. Debemos probar qué servicios se usan cada mes y qué resultado retiene al cliente.
+
+**Fuente:** [Estudio utilizado](https://publications.iadb.org/es/startups-x-ai-un-panorama-de-la-adopcion-en-america-latina-y-el-caribe)
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>11. La marca personal puede ser el canal inicial</strong></summary>
+
+Los estudios muestran brechas de talento, adaptación local y capacidades. Eso crea un espacio para autoridad, educación y asesoría especializada.
+
+<details>
+<summary><strong>Validación cruzada: ¿confirma o niega nuestro supuesto?</strong></summary>
+
+**Qué confirma o matiza:** La evidencia apoya la necesidad del conocimiento, pero no prueba que LinkedIn, Skool o el networking conviertan por sí solos. El embudo debe medirse desde contenido hasta conversación, clase, diagnóstico y suscripción.
+
+**Fuente:** [Estudio utilizado](https://publications.iadb.org/es/startups-x-ai-un-panorama-de-la-adopcion-en-america-latina-y-el-caribe)
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>12. CodeFlow debe separar servicios, comunidad y plataforma</strong></summary>
+
+Los estudios distinguen niveles de madurez y perfiles de adopción, lo que favorece una oferta escalonada en vez de un paquete único para todos.
+
+<details>
+<summary><strong>Validación cruzada: ¿confirma o niega nuestro supuesto?</strong></summary>
+
+**Qué confirma o matiza:** La evidencia respalda segmentar la oferta, pero no decide si CodeFlow debe ser agencia, plataforma, integrador o alianza. Esa decisión requiere casos propios, entrevistas, precios y pruebas de retención.
+
+**Fuente:** [Estudio utilizado](https://www.cepal.org/es/comunicados/america-latina-caribe-acelera-la-adopcion-la-inteligencia-artificial)
+
+</details>
+
+</details>
+
 
 <details>
 <summary><strong>2. Definiciones críticas: herramienta, prompt, automatización, agente y sistema</strong></summary>
@@ -290,4 +482,3 @@ La siguiente investigación sí debe buscar estadísticas y casos sobre adopció
 - ¿Qué modelos de comisión son comunes en alianzas tecnológicas?
 
 </details>
-
