@@ -1,6 +1,52 @@
 # Codeflow — Pitch revisado
 
 <details>
+<summary><strong>Cómo funcionan los datos y el problema que Codeflow resuelve</strong></summary>
+
+### Contexto
+
+El BID reporta cerca del 80% de uso de herramientas de IA, pero solo 23% afirma obtener réditos económicos y 6% percibe impacto significativo. Esto mide uso e impacto reportado; no significa que el 80% tenga un sistema integrado.
+
+**Fuente:** [BID — Inteligencia artificial: ¿motor de productividad o de desigualdad?](https://www.iadb.org/es/blog/analisis-economico/inteligencia-artificial-motor-de-productividad-o-de-desigualdad).
+
+### Interés regional
+
+ALC concentra 14% de las visitas globales a soluciones de IA frente a 11% de los usuarios globales de Internet. Es un proxy de interés, no una cifra de empresas implementando IA.
+
+**Fuente:** [CEPAL/ILIA](https://www.cepal.org/es/comunicados/america-latina-caribe-acelera-la-adopcion-la-inteligencia-artificial-aunque-desafios).
+
+### Problema 1 — herramientas individuales, no sistemas operativos
+
+Los trabajadores construyen soluciones para su propia tarea: chats, hojas, agentes o workflows. Pueden resolver un paso, pero no conectar datos, permisos, decisiones y responsabilidades entre departamentos. Con el tiempo aparecen islas de automatización, duplicación de contexto y dependencia de personas.
+
+**Fuente:** [`analisis-critico-codeflow-marca-personal.md`](../analisis-critico-codeflow-marca-personal.md), [`comparacion-pitch-codeflow.md`](../comparacion-pitch-codeflow.md).
+
+### Problema 2 — consumo, tokens y presupuesto sin gobierno
+
+Cada flujo puede consumir tokens, APIs, suscripciones, contexto y reintentos. Sin medición por workflow y departamento, la empresa no sabe qué automatización produce valor ni cuál agota el presupuesto.
+
+**Referencia:** la [OCDE](https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/06/governing-with-artificial-intelligence_398fa287/795de142-en.pdf) publica costos por millón de tokens y muestra que varían por modelo, entrada y salida.
+
+**Dato propio que falta:** costo mensual por workflow, tokens por ejecución, reintentos, APIs, suscripciones y costo por resultado.
+
+### Problema 3 — obsolescencia rápida
+
+La empresa puede aplicar conocimiento actual, pero sin actualización constante de modelos, APIs, seguridad y prácticas se queda atrás. La solución necesita evaluación, documentación y mejora continua.
+
+**Fuente:** [McKinsey — The State of AI 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai), sobre pasar de pilotos a impacto escalado mediante procesos, infraestructura, talento y KPIs.
+
+### El puente hacia Codeflow
+
+Codeflow no inventa otra herramienta: monta un sistema de trabajo conectado usando APIs, suscripciones y herramientas existentes, coordinadas como un equipo. Integra agentes, automatizaciones, datos, reglas, personas y aprobaciones.
+
+La lógica es tipo LEGO: cada bloque resuelve una función, pero puede conectarse con el siguiente. Una empresa puede empezar con una automatización y, en lugar de acumular cuatro soluciones aisladas, integrarlas dentro de una arquitectura que después escale a otros departamentos.
+
+**Diferenciación:** reutilizar arquitectura, datos, permisos, métricas y patrones para ampliar el sistema sin reconstruir silos.
+
+**Validación pendiente:** demostrar que integrar un segundo proceso requiere menos tiempo, costo y retrabajo que construirlo desde cero.
+</details>
+
+<details>
 <summary><strong>Datos que faltan para validar Codeflow</strong></summary>
 
 | Hipótesis | Qué medir | Evidencia aceptable | Umbral inicial |
