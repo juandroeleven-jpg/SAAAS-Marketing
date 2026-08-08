@@ -15,23 +15,17 @@ La pregunta importante no es si las empresas están probando IA. Es por qué tan
 
 Esto ocurre por tres brechas operativas:
 
-1. **Fragmentación.** Cada departamento adquiere su herramienta o agente por separado. Incluso cuando una empresa compra buenas soluciones, muchas veces quedan desconectadas del resto de sus sistemas. El resultado es más contexto perdido, más coordinación manual y un flujo de trabajo difícil de gobernar.
+1. **Fragmentación.** Cada departamento adquiere su herramienta o agente por separado.
 
-2. **Costos y contexto.** Las empresas se preparan para usar IA, pero no siempre para controlar el costo de APIs, tokens, suscripciones, reintentos y mantenimiento. Sin una visión por proceso o por persona, el presupuesto puede crecer sin que exista una atribución clara del gasto ni del resultado.
+2. **Costos y contexto.** Las empresas deben controlar el costo de APIs, tokens, suscripciones, reintentos y mantenimiento.
 
-3. **Obsolescencia.** El equipo puede aprender una herramienta valiosa hoy, pero los modelos, APIs y prácticas cambian rápidamente. Sin actualización continua, lo que funcionaba hace dos meses puede dejar de ser competitivo o sostenible.
+3. **Obsolescencia.** El equipo necesita formación y actualización continua.
 
 ### Lo que somos
 
 **No vendemos piezas sueltas.**
 
-Somos **Codeflow AI**, una agencia de inteligencia artificial que convierte las herramientas existentes de una empresa en un sistema de trabajo conectado.
-
-No inventamos una nueva rueda ni obligamos a la empresa a reemplazar todo lo que ya utiliza. Integramos agentes, automatizaciones, APIs, herramientas y bases de datos para que puedan compartir contexto, cruzar información y producir decisiones útiles.
-
-La diferencia está en la conexión. Una empresa puede tener un sistema de cuentas por cobrar, otro de ventas y otro de operaciones. Por separado, cada uno muestra solo una parte de la realidad. Con Codeflow, agentes conectados a esas fuentes pueden identificar relaciones, detectar excepciones, preparar análisis y asistir a las personas responsables.
-
-La empresa no recibe tres soluciones aisladas. Recibe una capa de trabajo que permite que sus sistemas funcionen juntos.
+Somos **Codeflow AI**, una agencia de inteligencia artificial que integra agentes, automatizaciones, APIs, herramientas y bases de datos.
 
 ### Cómo funciona Codeflow
 
@@ -39,17 +33,15 @@ La empresa no recibe tres soluciones aisladas. Recibe una capa de trabajo que pe
 
 2. **Implementación.** Desarrollamos los agentes y automatizaciones necesarios, habilitamos APIs y herramientas, conectamos las bases de datos y capacitamos al equipo para utilizar las soluciones en su trabajo diario.
 
-3. **Comunidad Skool.** La empresa obtiene acceso continuo a recursos, herramientas, agentes y formación práctica. Cada mes puede incorporar nuevas capacidades a su operación. Cuando necesita una automatización específica, un módulo adicional o una integración más avanzada, Codeflow puede desarrollarla y escalarla como servicio.
+3. **Comunidad Skool.** La empresa obtiene acceso continuo a recursos, herramientas, agentes y formación práctica. Cada mes puede incorporar nuevas capacidades a su operación.
 
 ### La diferencia frente a una agencia tradicional
 
-Una agencia tradicional puede entregar una automatización puntual. Codeflow busca que esa automatización forme parte de un sistema que pueda conectarse con otros procesos, conservar contexto, medirse y mantenerse actualizado.
-
-La agencia construye la solución inicial. La comunidad mantiene el aprendizaje y la expansión. La operación conectada une ambas cosas.
+La agencia implementa la solución. La comunidad mantiene el aprendizaje y la expansión.
 
 ### Cierre
 
-Codeflow no es una colección de herramientas de IA. Es la forma de conectar lo que la empresa ya tiene, agregar los agentes que necesita y mantener esa operación evolucionando con el tiempo.
+Codeflow integra la operación de la empresa y la mantiene evolucionando con el tiempo.
 
 **Empieza con un proceso crítico. Conecta el sistema. Evoluciona con evidencia.**
 </details>
