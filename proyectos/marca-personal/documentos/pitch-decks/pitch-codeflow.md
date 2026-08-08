@@ -3,7 +3,7 @@
 <details>
 <summary><strong>Diapositiva — oportunidad operativa / modelo de negocio</strong></summary>
 
-![Oportunidad operativa de Codeflow](./variantes-modelo-negocio-codeflow-referencia-exacta.png)
+![Oportunidad operativa de Codeflow](./variantes-modelo-negocio-codeflow-referencia-exacta-corregida.png)
 
 ### Qué comunica
 
