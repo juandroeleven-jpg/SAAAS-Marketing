@@ -1,6 +1,28 @@
 # Codeflow — Pitch revisado
 
 <details>
+<summary><strong>Diapositiva — oportunidad operativa / modelo de negocio</strong></summary>
+
+![Oportunidad operativa de Codeflow](./variantes-modelo-negocio-codeflow.png)
+
+### Qué comunica
+
+La oportunidad no se presenta como un mercado abstracto, sino como tres problemas operativos que Codeflow puede convertir en un sistema conectado:
+
+- **Fragmentación:** herramientas, agentes y automatizaciones aisladas.
+- **Costos y contexto:** tokens, APIs, suscripciones y pérdida de información sin control común.
+- **Obsolescencia:** procesos que quedan atrás cuando cambian los modelos y las herramientas.
+
+La esfera central representa Codeflow como la capa que integra herramientas, agentes, APIs, automatizaciones y departamentos. El fondo blanco, azul y verde claro cambia el tono de “problema” a “oportunidad de construir una operación escalable”.
+
+### Prompt de diseño
+
+```text
+Premium 16:9 B2B pitch deck slide for Codeflow, clean white background with pale blue and light green gradients, three glowing planet-like spheres labeled Fragmentación, Costos y contexto, and Obsolescencia, connected by thin orbital lines to a larger central sphere labeled Codeflow, strategic Silicon Valley technology aesthetic, spacious and analytical, no SAM/SOM/TAM, no dollar amounts, no logos, no extra text.
+```
+</details>
+
+<details>
 <summary><strong>Cómo funcionan los datos y el problema que Codeflow resuelve</strong></summary>
 
 ### Contexto
