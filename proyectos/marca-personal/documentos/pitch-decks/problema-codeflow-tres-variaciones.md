@@ -22,6 +22,14 @@ Esta variante combina la circunferencia planetaria del estilo 1, el tratamiento 
 </details>
 
 <details>
+<summary><strong>Variante zoom satelital — Panamá como punto de entrada</strong></summary>
+
+![Zoom satelital con Panamá resaltado](./variantes-problema/slide-problema-zoom-satelital-panama.png)
+
+Acercamiento inspirado en mapas satelitales: conserva la curvatura del planeta y la estela azul espacial, elimina la interfaz de mapas, y deja únicamente Panamá como foco visual. No incluye texto ni etiquetas para que el mensaje se coloque aparte en el pitch.
+</details>
+
+<details>
 <summary><strong>Capturas web incorporadas — propuesta C</strong></summary>
 
 ![McKinsey — The cost of intelligence](./referencias-problema/mckinsey-cost-intelligence.png)
