@@ -1,6 +1,14 @@
 # Codeflow — Pitch revisado
 
 <details>
+<summary><strong>Diapositiva — tu sistema de IA en 3 pasos</strong></summary>
+
+![Tu sistema de IA en 3 pasos](./variante-sistema-ia-3-pasos.png)
+
+La propuesta organiza la oferta en tres fases: consultoría y capacitación, implementación y Comunidad Skool. La paleta reemplaza los tonos cálidos de la referencia por azul y turquesa Codeflow.
+</details>
+
+<details>
 <summary><strong>Dashboard — Codeflow App</strong></summary>
 
 ![Dashboard de Codeflow App](./variante-dashboard-codeflow-app-gris-blanco.png)
