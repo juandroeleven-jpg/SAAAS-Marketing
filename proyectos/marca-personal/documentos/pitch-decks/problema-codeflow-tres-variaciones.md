@@ -1,6 +1,19 @@
 # Codeflow — tres propuestas para la sección “El problema”
 
 <details>
+<summary><strong>Referencias visuales recibidas y clasificación</strong></summary>
+
+| Captura | Clasificación | Rasgos que se conservan |
+|---|---|---|
+| ![Referencia estilo 1](./referencias-estilo/referencia-estilo-1.png) | Estilo 1 | Globo 3D, rutas, escala regional y movimiento. |
+| ![Referencia estilo 2A](./referencias-estilo/referencia-estilo-2a.png) | Estilo 2 | Mapa editorial vertical, territorio destacado y cifra dominante. |
+| ![Referencia estilo 2B](./referencias-estilo/referencia-estilo-2b.png) | Estilo 2 | Mapa + textura/íconos + proporción visual. |
+| ![Referencia estilo 3](./referencias-estilo/referencia-estilo-3.png) | Estilo 3 | Territorio resaltado, nodos/plataformas y conexión visual. |
+
+Las capturas son referencias de lenguaje visual. No se copian sus marcas, textos ni datos; se adaptan a la narrativa y evidencia de Codeflow.
+</details>
+
+<details>
 <summary><strong>Capturas web incorporadas — propuesta C</strong></summary>
 
 ![McKinsey — The cost of intelligence](./referencias-problema/mckinsey-cost-intelligence.png)
@@ -42,6 +55,8 @@ El 80% mide uso de herramientas; el 23% mide réditos económicos reportados; el
 ![BID — 80%, 23% y 6%](../codeflow-evidencia/bid-80-23-6.png)
 
 ## Diseño
+
+![Variante visual estilo 1](./variantes-problema/slide-problema-estilo-1-globo.png)
 
 Gráfico editorial de tres cifras en cascada. Fondo claro, tipografía negra, un color de acento ámbar para la brecha y cian para la oportunidad. Mucho espacio vacío. No usar dashboard ni tarjetas repetidas.
 
@@ -89,6 +104,8 @@ Esta versión trata el problema como arquitectura: cada trabajador o departament
 - [`caso-estudio-anonimizado.md`](../caso-estudio-anonimizado.md)
 
 ## Diseño
+
+![Variante visual estilo 2](./variantes-problema/slide-problema-estilo-2-mapa-datos.png)
 
 Composición de torres/silos: CRM, ERP, hojas de cálculo, correo, agentes y reporting. Cada torre contiene una parte del proceso. Entre ellas hay puentes rotos. En el centro aparece una línea de trabajo cortada: `dato → decisión → acción`.
 
@@ -140,6 +157,8 @@ Esta versión presenta el problema como una consecuencia financiera y de gobiern
 El costo depende del número de tokens de entrada y salida, del modelo, del tamaño del contexto, de la frecuencia de ejecución, de los reintentos y de la ruta de herramientas. Por eso no basta con saber el precio de una suscripción: hay que medir costo por workflow y costo por resultado.
 
 ## Diseño
+
+![Variante visual estilo 3](./variantes-problema/slide-problema-estilo-3-mapa-ecosistema.png)
 
 Un iceberg o una barra apilada:
 
