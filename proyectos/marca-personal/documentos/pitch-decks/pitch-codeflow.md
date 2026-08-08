@@ -1,6 +1,14 @@
 # Codeflow — Pitch revisado
 
 <details>
+<summary><strong>Diapositiva — pieza central / sistema Codeflow</strong></summary>
+
+![Pieza de rompecabezas en contenedor central](./variante-rompecabezas-contenedor-azul.png)
+
+Composición minimalista: una pieza única turquesa dentro de un contenedor blanco 3D sobre fondo azul. La pieza representa un componente operativo listo para integrarse en un sistema mayor.
+</details>
+
+<details>
 <summary><strong>Diapositiva — de herramientas aisladas a sistemas conectados</strong></summary>
 
 ![Fragmentación hacia Codeflow](./variantes-modelo-negocio-codeflow-bloques-flecha-texto.png)
