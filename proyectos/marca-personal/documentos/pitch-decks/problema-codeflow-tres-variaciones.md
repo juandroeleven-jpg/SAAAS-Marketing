@@ -1,5 +1,17 @@
 # Codeflow — tres propuestas para la sección “El problema”
 
+<details>
+<summary><strong>Capturas web incorporadas — propuesta C</strong></summary>
+
+![McKinsey — The cost of intelligence](./referencias-problema/mckinsey-cost-intelligence.png)
+
+![Google Cloud — State of AI infrastructure](./referencias-problema/google-cloud-ai-infrastructure.png)
+
+![Gartner — AI debt](./referencias-problema/gartner-ai-debt.png)
+
+> Capturas tomadas directamente de las páginas citadas. Se usan como referencias visuales y de argumento, no como activos comerciales de Codeflow.
+</details>
+
 > Alcance: solo la sección inicial del pitch. Las tres propuestas parten del problema validado en el repositorio, pero cambian la tesis visual, el criterio narrativo y la forma de presentar los datos.
 
 <details>
