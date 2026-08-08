@@ -1,6 +1,24 @@
 # Codeflow — Pitch revisado
 
 <details>
+<summary><strong>Diapositiva — de herramientas aisladas a sistemas conectados</strong></summary>
+
+![Fragmentación hacia Codeflow](./variantes-modelo-negocio-codeflow-bloques-flecha-texto.png)
+
+La composición muestra la transición operativa: **Fragmentación → Codeflow**.
+</details>
+
+<details>
+<summary><strong>Diapositiva — solo el 6% percibe impacto significativo</strong></summary>
+
+![Donut 6% impacto significativo](./variante-impacto-6-por-ciento-donut.png)
+
+Esta visualización sustituye las barras por un donut: el segmento azul representa el **6% que percibe impacto significativo** y el segmento azul pálido muestra el complemento visual del **94% restante**. La cifra se presenta como distribución complementaria del dato, no como una categoría independiente inventada.
+
+**Fuente:** [BID — Inteligencia artificial: ¿motor de productividad o de desigualdad?](https://www.iadb.org/es/blog/analisis-economico/inteligencia-artificial-motor-de-productividad-o-de-desigualdad).
+</details>
+
+<details>
 <summary><strong>Diapositiva — oportunidad operativa / modelo de negocio</strong></summary>
 
 ![Oportunidad operativa de Codeflow](./variantes-modelo-negocio-codeflow-referencia-exacta-corregida.png)
