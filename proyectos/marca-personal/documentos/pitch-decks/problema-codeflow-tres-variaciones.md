@@ -14,6 +14,14 @@ Las capturas son referencias de lenguaje visual. No se copian sus marcas, textos
 </details>
 
 <details>
+<summary><strong>Variante combinada solicitada — planeta + Panamá</strong></summary>
+
+![Variante combinada: planeta con Panamá resaltado](./variantes-problema/slide-problema-combinado-globo-panama.png)
+
+Esta variante combina la circunferencia planetaria del estilo 1, el tratamiento cromático del estilo 2B y el resaltado territorial del estilo 2A. No contiene texto, cifras, rutas, iconos ni logotipos; queda preparada para que el mensaje se agregue en la composición del pitch.
+</details>
+
+<details>
 <summary><strong>Capturas web incorporadas — propuesta C</strong></summary>
 
 ![McKinsey — The cost of intelligence](./referencias-problema/mckinsey-cost-intelligence.png)
