@@ -593,3 +593,4 @@ Estudiante de IngenierÃ­a Civil Industrial en la Universidad de Oâ€™Higgi
 
 Las conexiones y comentarios quedan preparados para revisiÃ³n; no se ejecutÃ³ ninguna acciÃ³n en LinkedIn.
 
+
