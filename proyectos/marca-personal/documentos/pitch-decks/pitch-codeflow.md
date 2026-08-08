@@ -3,7 +3,7 @@
 <details>
 <summary><strong>Diapositiva — oportunidad operativa / modelo de negocio</strong></summary>
 
-![Oportunidad operativa de Codeflow](./variantes-modelo-negocio-codeflow.png)
+![Oportunidad operativa de Codeflow](./variantes-modelo-negocio-codeflow-referencia-exacta.png)
 
 ### Qué comunica
 
@@ -13,7 +13,7 @@ La oportunidad no se presenta como un mercado abstracto, sino como tres problema
 - **Costos y contexto:** tokens, APIs, suscripciones y pérdida de información sin control común.
 - **Obsolescencia:** procesos que quedan atrás cuando cambian los modelos y las herramientas.
 
-La esfera central representa Codeflow como la capa que integra herramientas, agentes, APIs, automatizaciones y departamentos. El fondo blanco, azul y verde claro cambia el tono de “problema” a “oportunidad de construir una operación escalable”.
+La composición replica la estructura de la referencia: tres círculos horizontales con tamaños relativos, halos y lectura de izquierda a derecha. El fondo blanco, azul y verde claro cambia el tono de “problema” a “oportunidad de construir una operación escalable”, sin convertirla en un gráfico financiero.
 
 ### Prompt de diseño
 
