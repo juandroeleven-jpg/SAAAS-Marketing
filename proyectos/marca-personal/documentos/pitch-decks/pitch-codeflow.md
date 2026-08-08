@@ -3,7 +3,7 @@
 <details>
 <summary><strong>Dashboard — Codeflow App</strong></summary>
 
-![Dashboard de Codeflow App](./variante-dashboard-codeflow-app.png)
+![Dashboard de Codeflow App](./variante-dashboard-codeflow-app-gris-blanco.png)
 
 Recreación de la arquitectura visual del dashboard de referencia: agentes de hoy, calendario de actividad, metas de análisis financiero y creación de contenido, avance de proyectos y métricas operativas. La paleta reemplaza los acentos coral/amarillo por turquesa y azul Codeflow.
 </details>
