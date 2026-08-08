@@ -38,6 +38,16 @@ Esta versión conserva la esfera y la atmósfera azul, pero acerca la superficie
 </details>
 
 <details>
+<summary><strong>Variante zoom regional — estética satelital y esfera completa</strong></summary>
+
+![Globo con zoom regional inspirado en mapa satelital](./variantes-problema/slide-problema-globo-google-zoom-regional.png)
+
+Esta variante replica el encuadre regional de la referencia —Estados Unidos, México, Centroamérica, Caribe y Sudamérica— junto con su paleta de océano profundo, relieve y límites finos. La diferencia es que todo está proyectado sobre una esfera visible, sin interfaz, etiquetas ni controles; Panamá queda como único punto resaltado.
+
+**Referencia visual guardada:** [captura de mapa satelital](./referencias-estilo/referencia-google-maps-zoom-regional.png).
+</details>
+
+<details>
 <summary><strong>Capturas web incorporadas — propuesta C</strong></summary>
 
 ![McKinsey — The cost of intelligence](./referencias-problema/mckinsey-cost-intelligence.png)
