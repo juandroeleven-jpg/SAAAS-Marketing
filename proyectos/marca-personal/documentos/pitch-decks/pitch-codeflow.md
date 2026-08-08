@@ -25,7 +25,11 @@ Esto ocurre por tres brechas operativas:
 
 **No vendemos piezas sueltas.**
 
-Somos **Codeflow AI**, una agencia de inteligencia artificial que integra agentes, automatizaciones, APIs, herramientas y bases de datos.
+Somos **Codeflow AI**, una agencia de inteligencia artificial que monta sistemas operativos completos para empresas.
+
+Diseñamos y conectamos los agentes, automatizaciones, APIs, herramientas y bases de datos que cada operación necesita para funcionar como un solo sistema.
+
+Esa es nuestra diferencia: no entregamos una automatización aislada y terminamos el proyecto. Construimos la arquitectura, conectamos sus componentes y ayudamos a que el sistema siga creciendo con la empresa.
 
 ### Cómo funciona Codeflow
 
