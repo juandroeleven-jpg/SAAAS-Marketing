@@ -21,25 +21,37 @@ Esto ocurre por tres brechas operativas:
 
 3. **Obsolescencia.** El equipo puede aprender una herramienta valiosa hoy, pero los modelos, APIs y prácticas cambian rápidamente. Sin actualización continua, lo que funcionaba hace dos meses puede dejar de ser competitivo o sostenible.
 
-### La propuesta
+### Lo que somos
 
-**No vendemos piezas sueltas ni sistemas desconectados.**
+**No vendemos piezas sueltas.**
 
-Somos **Codeflow AI**, una agencia de inteligencia artificial que integra automatizaciones, agentes, herramientas, APIs y bases de datos dentro de un sistema de trabajo conectado. No inventamos una rueda nueva: conectamos lo que la empresa ya utiliza para que los datos puedan cruzarse y los agentes puedan analizar el contexto completo.
+Somos **Codeflow AI**, una agencia de inteligencia artificial que convierte las herramientas existentes de una empresa en un sistema de trabajo conectado.
 
-Por ejemplo, un agente puede conectarse con las bases de datos de cuentas por cobrar, ventas y operaciones para detectar relaciones, producir conclusiones y asistir a las personas responsables. La diferencia no está en tener tres herramientas aisladas, sino en permitir que trabajen juntas.
+No inventamos una nueva rueda ni obligamos a la empresa a reemplazar todo lo que ya utiliza. Integramos agentes, automatizaciones, APIs, herramientas y bases de datos para que puedan compartir contexto, cruzar información y producir decisiones útiles.
 
-### Cómo funciona
+La diferencia está en la conexión. Una empresa puede tener un sistema de cuentas por cobrar, otro de ventas y otro de operaciones. Por separado, cada uno muestra solo una parte de la realidad. Con Codeflow, agentes conectados a esas fuentes pueden identificar relaciones, detectar excepciones, preparar análisis y asistir a las personas responsables.
 
-1. **Consultoría y capacitación.** Entendemos las necesidades de la empresa y de sus profesionales, detectamos deficiencias en el uso actual de IA y diseñamos una solución viable para el presupuesto disponible.
+La empresa no recibe tres soluciones aisladas. Recibe una capa de trabajo que permite que sus sistemas funcionen juntos.
 
-2. **Implementación.** Desarrollamos las automatizaciones y agentes necesarios, habilitamos APIs y herramientas, conectamos las bases de datos y capacitamos al equipo para utilizar el sistema.
+### Cómo funciona Codeflow
 
-3. **Comunidad Skool.** El equipo accede continuamente a recursos, herramientas, agentes y formación práctica. Cada mes puede incorporar nuevos módulos y capacidades a su operación. Cuando necesita una automatización específica o una ampliación más avanzada, Codeflow puede implementarla y escalarla como servicio.
+1. **Consultoría y capacitación.** Detectamos las deficiencias del uso actual de IA, conversamos con los profesionales que utilizarán el sistema y planificamos una solución viable, adaptada a las necesidades y al presupuesto de la empresa.
+
+2. **Implementación.** Desarrollamos los agentes y automatizaciones necesarios, habilitamos APIs y herramientas, conectamos las bases de datos y capacitamos al equipo para utilizar las soluciones en su trabajo diario.
+
+3. **Comunidad Skool.** La empresa obtiene acceso continuo a recursos, herramientas, agentes y formación práctica. Cada mes puede incorporar nuevas capacidades a su operación. Cuando necesita una automatización específica, un módulo adicional o una integración más avanzada, Codeflow puede desarrollarla y escalarla como servicio.
+
+### La diferencia frente a una agencia tradicional
+
+Una agencia tradicional puede entregar una automatización puntual. Codeflow busca que esa automatización forme parte de un sistema que pueda conectarse con otros procesos, conservar contexto, medirse y mantenerse actualizado.
+
+La agencia construye la solución inicial. La comunidad mantiene el aprendizaje y la expansión. La operación conectada une ambas cosas.
 
 ### Cierre
 
-Codeflow combina el servicio personalizado de una agencia con la continuidad de una comunidad. La empresa no recibe una colección de herramientas: obtiene una operación conectada que puede aprender, crecer y evolucionar con el tiempo.
+Codeflow no es una colección de herramientas de IA. Es la forma de conectar lo que la empresa ya tiene, agregar los agentes que necesita y mantener esa operación evolucionando con el tiempo.
+
+**Empieza con un proceso crítico. Conecta el sistema. Evoluciona con evidencia.**
 </details>
 
 <details>
