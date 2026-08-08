@@ -30,6 +30,14 @@ Acercamiento inspirado en mapas satelitales: conserva la curvatura del planeta y
 </details>
 
 <details>
+<summary><strong>Variante globo satelital — estructura tipo Google Maps</strong></summary>
+
+![Globo satelital con estética cartográfica](./variantes-problema/slide-problema-globo-satelital-google-style.png)
+
+Esta versión conserva la esfera y la atmósfera azul, pero acerca la superficie a una lectura de mapa satelital: relieve, océano, costas y límites geográficos discretos. Se eliminan interfaz, etiquetas y controles; Panamá permanece como único foco rojo.
+</details>
+
+<details>
 <summary><strong>Capturas web incorporadas — propuesta C</strong></summary>
 
 ![McKinsey — The cost of intelligence](./referencias-problema/mckinsey-cost-intelligence.png)
