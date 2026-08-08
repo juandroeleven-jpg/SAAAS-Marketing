@@ -1,6 +1,48 @@
 # Codeflow — Pitch revisado
 
 <details>
+<summary><strong>Guion narrado revisado — propuesta de valor de Codeflow</strong></summary>
+
+### Apertura
+
+¿Cuántas empresas en Panamá —o en Latinoamérica— están usando inteligencia artificial y realmente convirtiéndola en resultados?
+
+Según el dato del BID citado en este pitch, cerca del **80%** de las empresas de la región ya utiliza herramientas de IA. Sin embargo, solo el **23%** reporta retornos económicos y apenas el **6%** percibe un impacto significativo.
+
+La pregunta importante no es si las empresas están probando IA. Es por qué tanta adopción todavía produce tan poco impacto sostenible.
+
+### El problema
+
+Esto ocurre por tres brechas operativas:
+
+1. **Fragmentación.** Cada departamento adquiere su herramienta o agente por separado. Incluso cuando una empresa compra buenas soluciones, muchas veces quedan desconectadas del resto de sus sistemas. El resultado es más contexto perdido, más coordinación manual y un flujo de trabajo difícil de gobernar.
+
+2. **Costos y contexto.** Las empresas se preparan para usar IA, pero no siempre para controlar el costo de APIs, tokens, suscripciones, reintentos y mantenimiento. Sin una visión por proceso o por persona, el presupuesto puede crecer sin que exista una atribución clara del gasto ni del resultado.
+
+3. **Obsolescencia.** El equipo puede aprender una herramienta valiosa hoy, pero los modelos, APIs y prácticas cambian rápidamente. Sin actualización continua, lo que funcionaba hace dos meses puede dejar de ser competitivo o sostenible.
+
+### La propuesta
+
+**No vendemos piezas sueltas ni sistemas desconectados.**
+
+Somos **Codeflow AI**, una agencia de inteligencia artificial que integra automatizaciones, agentes, herramientas, APIs y bases de datos dentro de un sistema de trabajo conectado. No inventamos una rueda nueva: conectamos lo que la empresa ya utiliza para que los datos puedan cruzarse y los agentes puedan analizar el contexto completo.
+
+Por ejemplo, un agente puede conectarse con las bases de datos de cuentas por cobrar, ventas y operaciones para detectar relaciones, producir conclusiones y asistir a las personas responsables. La diferencia no está en tener tres herramientas aisladas, sino en permitir que trabajen juntas.
+
+### Cómo funciona
+
+1. **Consultoría y capacitación.** Entendemos las necesidades de la empresa y de sus profesionales, detectamos deficiencias en el uso actual de IA y diseñamos una solución viable para el presupuesto disponible.
+
+2. **Implementación.** Desarrollamos las automatizaciones y agentes necesarios, habilitamos APIs y herramientas, conectamos las bases de datos y capacitamos al equipo para utilizar el sistema.
+
+3. **Comunidad Skool.** El equipo accede continuamente a recursos, herramientas, agentes y formación práctica. Cada mes puede incorporar nuevos módulos y capacidades a su operación. Cuando necesita una automatización específica o una ampliación más avanzada, Codeflow puede implementarla y escalarla como servicio.
+
+### Cierre
+
+Codeflow combina el servicio personalizado de una agencia con la continuidad de una comunidad. La empresa no recibe una colección de herramientas: obtiene una operación conectada que puede aprender, crecer y evolucionar con el tiempo.
+</details>
+
+<details>
 <summary><strong>Diapositiva — tu sistema de IA en 3 pasos</strong></summary>
 
 ![Tu sistema de IA en 3 pasos](./variante-sistema-ia-3-pasos-gradiente-azul-cian.png)
