@@ -48,6 +48,14 @@ Esta variante replica el encuadre regional de la referencia —Estados Unidos, M
 </details>
 
 <details>
+<summary><strong>Variante zoom cercano — América ocupa el encuadre</strong></summary>
+
+![Globo con zoom cercano sobre las Américas](./variantes-problema/slide-problema-globo-zoom-cercano-americas.png)
+
+Esta es la corrección solicitada: el nivel de zoom se acerca al de la referencia satelital, haciendo que las Américas ocupen casi todo el cuadro, pero conserva el arco de la circunferencia, la curvatura esférica, los colores de tierra y océano, el relieve submarino y los límites finos. Panamá sigue siendo el único territorio resaltado.
+</details>
+
+<details>
 <summary><strong>Capturas web incorporadas — propuesta C</strong></summary>
 
 ![McKinsey — The cost of intelligence](./referencias-problema/mckinsey-cost-intelligence.png)
