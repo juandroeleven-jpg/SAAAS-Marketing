@@ -33,6 +33,26 @@ Wagamama no entraría en un mercado sin competencia. Entraría frente a operador
 - [Oh-Toro — menú publicado](https://enam-cdn.carta.menu/storage/media/companies_menu_pdf/88840832/oh-toro-ramen-and-sushi-ciudad-de-panama-carta.pdf)
 - [Hikaru — ficha pública con ramen y delivery](https://www.tripadvisor.com/Restaurant_Review-g294480-d11826563-Reviews-Restaurante_Hikaru-Panama_City_Panama_Province.html)
 </details>
+
+<details>
+<summary><strong>Slide 1.1 — Evidencia de competidores directos</strong></summary>
+
+![Evidencia del mercado panameño](./etapa-2-referencia-panama-food-service.png)
+
+**Fuentes:** [Ajisen Ramen Panamá](https://ajisenramenpanama.com/nosotros/), [Oh-Toro — menú publicado](https://enam-cdn.carta.menu/storage/media/companies_menu_pdf/88840832/oh-toro-ramen-and-sushi-ciudad-de-panama-carta.pdf) y [Hikaru](https://www.tripadvisor.com/Restaurant_Review-g294480-d11826563-Reviews-Restaurante_Hikaru-Panama_City_Panama_Province.html).
+
+Estas fuentes respaldan que existen operadores de ramen y cocina japonesa en Panamá. La comparación competitiva debe confirmarse con capturas individuales de menús, precios y ubicaciones durante el trabajo de campo.
+</details>
+</details>
+
+<details>
+<summary><strong>Slide 2.1 — Evidencia de competidores indirectos</strong></summary>
+
+![Evidencia del sector gastronómico panameño](./etapa-2-referencia-panama-food-service.png)
+
+**Fuentes:** [EATHH](https://www.eathh.com/en), [Makoto — menú de almuerzo](https://makotopanama.com/wp-content/uploads/2024/04/lunch.pdf) y [U.S. Department of Commerce — Panama Food Service Sector](https://www.trade.gov/market-intelligence/panama-food-service-sector).
+
+La evidencia muestra que el consumidor también puede elegir sushi, fusión, food halls, delivery y otras comidas internacionales. Esto justifica analizar la competencia por ocasión de consumo y presupuesto, no solo por producto.
 </details>
 
 <details>
@@ -63,6 +83,26 @@ Hamburguesas, bowls, cafeterías y otras cadenas fast-casual compiten por almuer
 - [EATHH — food hall virtual y delivery](https://www.eathh.com/en)
 - [U.S. Department of Commerce — Panama Food Service Sector](https://www.trade.gov/market-intelligence/panama-food-service-sector)
 </details>
+
+<details>
+<summary><strong>Slide 3.1 — Evidencia para la comparación competitiva</strong></summary>
+
+![Evidencia de la franquicia internacional](./etapa-2-referencias-wagamama-franchise.png)
+
+**Fuente:** [Wagamama — Franchise](https://www.wagamama.com/franchise).
+
+La fuente respalda las variables de escala, modelo de franquicia, capacitación y desarrollo de largo plazo. Para completar la comparación local faltan capturas de precios, ubicaciones, delivery y redes sociales de cada competidor.
+</details>
+</details>
+
+<details>
+<summary><strong>Slide 4.1 — Evidencia de la brecha de mercado</strong></summary>
+
+![Evidencia del mercado de restaurantes](./etapa-2-referencia-panama-food-service.png)
+
+**Fuente:** [U.S. Department of Commerce — Panama Food Service Sector](https://www.trade.gov/market-intelligence/panama-food-service-sector).
+
+El documento señala crecimiento del delivery, turismo, urbanización y demanda por cocinas internacionales. Esto respalda la hipótesis de una oportunidad para una propuesta asiática rápida y experiencial, pero no demuestra por sí solo que exista una brecha desatendida.
 </details>
 
 <details>
@@ -81,6 +121,16 @@ Hamburguesas, bowls, cafeterías y otras cadenas fast-casual compiten por almuer
 ### Interpretación
 
 La comparación evita afirmar que Wagamama es superior en todo. Su posible diferencia está en combinar amplitud de menú, experiencia de marca, operación fast-casual y expansión internacional; esa combinación debe probarse localmente.
+</details>
+
+<details>
+<summary><strong>Slide 5.1 — Evidencia de la propuesta de valor local</strong></summary>
+
+![Evidencia de la propuesta oficial de Wagamama](./etapa-2-referencias-wagamama-about-us.png)
+
+**Fuente:** [Wagamama — About us](https://www.wagamama.com/about-us).
+
+La propuesta de valor local toma atributos que la propia marca comunica: comida fresca, preparación al momento, cocina abierta y experiencia compartida. La adaptación a Panamá —precio, menú, ubicación y delivery— todavía debe probarse localmente.
 </details>
 
 <details>
@@ -106,6 +156,16 @@ Wagamama podría ocupar el espacio de **comida asiática internacional, fresca, 
 ### Qué puede invalidarla
 
 Precio demasiado alto, baja frecuencia de consumo, poca familiaridad con noodles o curries, competencia mejor ubicada y costos de operación que impidan un ticket medio.
+</details>
+
+<details>
+<summary><strong>Slide 6.1 — Evidencia de la conclusión estratégica</strong></summary>
+
+![Evidencia de posición internacional](./etapa-2-referencia-informe-anual-wagamama-2024.png)
+
+**Fuente:** [Wagamama Annual Report 2024](https://www.datocms-assets.com/99160/1748342887-wagamama-annual-report-fy-2024-1-1mb.pdf).
+
+El informe reporta 55 locales franquiciados internacionales al cierre de 2024 y nuevas aperturas. Esto respalda que Wagamama tiene experiencia de expansión, pero no elimina los riesgos locales de precio, competencia, ubicación y operación.
 </details>
 
 <details>
