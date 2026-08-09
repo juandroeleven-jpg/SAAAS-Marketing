@@ -79,6 +79,53 @@ La página oficial señala que Wagamama trabaja con franquicias internacionales 
 itsu funciona como referencia comparable de comida asiática rápida y saludable. Su página de franquicias destaca sistemas operativos construidos durante más de dos décadas, operaciones simples y la búsqueda de socios para nuevos territorios. No demuestra demanda en Panamá, pero ayuda a contrastar qué elementos de operación, ubicación y socio local habría que investigar.
 </details>
 
+<details>
+<summary><strong>Slide 3 — Evidencia de validación inicial</strong></summary>
+
+![Evidencia de validación inicial](./etapa-2-slide-3-validacion-inicial.png)
+
+### Cómo se mejoró
+
+La evidencia se organiza en tres niveles para no confundir la propuesta de la marca con la demanda panameña:
+
+1. **Evidencia de la marca:** Wagamama comunica una experiencia de comida asiática fresca, preparada al momento y con una operación internacional de franquicias.
+2. **Evidencia comparable:** itsu documenta sistemas operativos, franquicias y expansión hacia nuevos territorios en una categoría similar.
+3. **Validación local pendiente:** todavía hay que medir en Panamá frecuencia de consumo, precio aceptable, interés por ramen y preferencia entre restaurante, delivery y centros comerciales.
+
+### Qué debe comprobar el equipo
+
+- Encuestar consumidores de 22 a 50 años en zonas urbanas y comerciales.
+- Entrevistar a personas que consuman comida asiática o utilicen delivery.
+- Observar horarios, tráfico y oferta de restaurantes comparables.
+- Comparar precios, tiempos de servicio y formatos de menú.
+
+### Interpretación correcta
+
+Las fuentes oficiales validan que el concepto existe y puede operar internacionalmente. No prueban por sí solas que Panamá tenga demanda suficiente. Por eso la diapositiva presenta una **señal de oportunidad**, no una conclusión definitiva.
+</details>
+
+<details>
+<summary><strong>Slide 4 — Insight del consumidor</strong></summary>
+
+![Insight del consumidor](./etapa-2-slide-4-insight-consumidor.png)
+
+### Insight de trabajo
+
+> “Quiero probar una experiencia asiática diferente y fresca, pero debe ser suficientemente rápida, clara y conveniente para integrarse a mi rutina.”
+
+### Cómo se mejoró
+
+El insight conecta tres elementos de la investigación:
+
+- **Experiencia:** Wagamama nace de la inspiración de los bares de ramen de Tokio y construye una experiencia informal y compartida.
+- **Producto:** la marca comunica ingredientes frescos y preparación al momento.
+- **Operación:** la expansión mediante franquicia exige adaptar ubicación, precio, menú y ejecución al mercado local.
+
+### Cómo se valida
+
+El equipo debe preguntar qué pesa más en la decisión: sabor, frescura, rapidez, precio, ambiente, delivery o novedad. Si las respuestas confirman esa combinación, el insight puede convertirse en criterio para elegir ubicación, menú y comunicación de la franquicia en Panamá.
+</details>
+
 ## Frase obligatoria de cierre de la etapa
 
 > Nuestro consumidor meta en Panamá es un público urbano de 22 a 50 años que busca una experiencia asiática fresca, internacional y conveniente. La oportunidad existe porque Wagamama combina una propuesta diferenciada con un modelo de expansión internacional ya probado. La evidencia inicial que encontramos fue la historia oficial de la marca, su propuesta de producto, su experiencia de franquicia y la referencia comparable de itsu. Por eso, la franquicia debe enfocarse en validar ubicación, precio, frecuencia de consumo y aceptación del menú antes de confirmar la entrada al mercado.
