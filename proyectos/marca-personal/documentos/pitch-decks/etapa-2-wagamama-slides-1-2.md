@@ -127,6 +127,22 @@ El equipo debe preguntar qué pesa más en la decisión: sabor, frescura, rapide
 </details>
 
 <details>
+<summary><strong>Slide 5 — Implicación para la franquicia</strong></summary>
+
+![Implicación para la franquicia](./etapa-2-slide-5-implicacion-franquicia.png)
+
+### Cómo cumple los criterios
+
+- Traduce el insight del consumidor en decisiones concretas para la franquicia.
+- Define tres prioridades iniciales: validar ubicación y precio, probar un menú reducido y conectar restaurante con delivery.
+- Responde a la frase obligatoria de cierre porque convierte el consumidor, la oportunidad y la evidencia en un enfoque de entrada.
+
+### Justificación
+
+La slide evita concluir que la franquicia debe abrir inmediatamente. Propone una primera prueba comercial basada en la evidencia disponible: experiencia internacional de la marca, condiciones del mercado panameño y necesidad de validar precio, ubicación y repetición.
+</details>
+
+<details>
 <summary><strong>Investigación adicional 1 — posición internacional actual</strong></summary>
 
 ![Captura del informe anual 2024](./etapa-2-referencia-informe-anual-wagamama-2024.png)

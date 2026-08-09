@@ -102,6 +102,24 @@ Debe confirmarse con respuestas reales de consumidores panameños para que pase 
 </details>
 
 <details>
+<summary><strong>Slide 5 — Implicación para la franquicia</strong></summary>
+
+![Slide 5](./etapa-2-slide-5-implicacion-franquicia.png)
+
+### Criterio relacionado
+
+La consigna sugiere una quinta slide de implicación para la franquicia y exige cerrar explicando en qué debe enfocarse la marca.
+
+### Análisis de cumplimiento
+
+**Cumple.** La slide convierte el insight en tres decisiones verificables: validar ubicación y precio, probar un menú reducido y conectar restaurante con delivery.
+
+### Justificación del cambio
+
+Esta slide faltaba en la entrega anterior. Ahora completa el recorrido lógico: consumidor → necesidad → evidencia → insight → decisión para la franquicia. También evita presentar la entrada a Panamá como una decisión tomada antes de probar el mercado.
+</details>
+
+<details>
 <summary><strong>Evaluación general frente a los 15 puntos</strong></summary>
 
 | Criterio | Estado actual | Lectura |
