@@ -242,5 +242,19 @@ La investigación permite decir **?ohay una hipótesis razonable de encaje, pero
 
 ## Frase obligatoria de cierre de la etapa
 
+<details>
+<summary><strong>Slide 6 — Frase obligatoria de cierre</strong></summary>
+
+![Frase obligatoria de cierre](./etapa-2-slide-6-cierre.png)
+
+### Texto completado
+
+> Nuestro consumidor meta en Panamá es un público urbano de 22 a 50 años, interesado en experiencias asiáticas frescas, internacionales y convenientes. La oportunidad existe porque Panamá combina turismo, delivery y demanda por cocinas internacionales. La evidencia inicial que encontramos fue la trayectoria internacional de Wagamama, sus 55 locales franquiciados internacionales al cierre de 2024 y las señales del mercado gastronómico panameño. Por eso, la franquicia debe enfocarse en validar ubicación, precio, menú y delivery antes de confirmar la entrada.
+
+### Justificación
+
+Esta diapositiva responde directamente a la frase obligatoria de la universidad y resume consumidor, oportunidad, evidencia y enfoque recomendado.
+</details>
+
 > Nuestro consumidor meta en Panamá es un público urbano de 22 a 50 años que busca una experiencia asiática fresca, internacional y conveniente. La oportunidad existe porque Wagamama combina una propuesta diferenciada con un modelo de expansión internacional ya probado. La evidencia inicial que encontramos fue la historia oficial de la marca, su propuesta de producto, su experiencia de franquicia y la referencia comparable de itsu. Por eso, la franquicia debe enfocarse en validar ubicación, precio, frecuencia de consumo y aceptación del menú antes de confirmar la entrada al mercado.
 
