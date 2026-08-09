@@ -126,6 +126,54 @@ El insight conecta tres elementos de la investigación:
 El equipo debe preguntar qué pesa más en la decisión: sabor, frescura, rapidez, precio, ambiente, delivery o novedad. Si las respuestas confirman esa combinación, el insight puede convertirse en criterio para elegir ubicación, menú y comunicación de la franquicia en Panamá.
 </details>
 
+<details>
+<summary><strong>Investigación adicional 1 — posición internacional actual</strong></summary>
+
+![Captura del informe anual 2024](./etapa-2-referencia-informe-anual-wagamama-2024.png)
+
+**Fuente:** [Wagamama Annual Report 2024](https://www.datocms-assets.com/99160/1748342887-wagamama-annual-report-fy-2024-1-1mb.pdf)
+
+El informe reporta **55 locales franquiciados internacionales al cierre de 2024**, cinco aperturas internacionales durante ese año y planes de expansión hacia India mediante aeropuertos. La lectura estratégica es que Wagamama no está probando por primera vez la franquicia internacional: ya tiene un sistema de expansión y continúa buscando nuevos territorios.
+
+**Implicación para Panamá:** la oportunidad debe analizarse como una entrada de marca internacional con exigencias de operador, ubicación, capital y consistencia de ejecución. No basta con demostrar que existe interés por la comida asiática.
+</details>
+
+<details>
+<summary><strong>Investigación adicional 2 — condiciones del mercado de restaurantes en Panamá</strong></summary>
+
+![Captura del sector food service de Panamá](./etapa-2-referencia-panama-food-service.png)
+
+**Fuente:** [U.S. Department of Commerce — Panama Food Service Sector](https://www.trade.gov/market-intelligence/panama-food-service-sector)
+
+La fuente identifica crecimiento del sector impulsado por urbanización, clase media y turismo; también señala crecimiento del delivery, apetito por cocinas internacionales y espacio para opciones de precio medio con calidad. El mismo documento advierte que los márgenes del sector suelen ser estrechos, por lo que la propuesta debe validarse con precios, rotación y costos reales.
+
+**Implicación para Panamá:** Wagamama podría encajar por su formato fast-casual, delivery y cocina internacional, pero la hipótesis depende de elegir una ubicación con tráfico y de alcanzar un precio accesible sin destruir el margen.
+</details>
+
+<details>
+<summary><strong>Investigación adicional 3 — demanda turística que puede apoyar la entrada</strong></summary>
+
+![Captura de estadísticas de turismo de Panamá](./etapa-2-referencia-atp-panama.png)
+
+**Fuente:** [Autoridad de Turismo de Panamá — Estadísticas e información del mercado](https://www.atp.gob.pa/estadisticas-e-informacion-del-mercado-2/)
+
+La Autoridad de Turismo concentra estadísticas oficiales de desempeño turístico y permite comprobar la evolución de llegadas, mercados emisores y comportamiento del visitante. Esta fuente debe usarse para seleccionar zonas y temporadas, no para asumir automáticamente que todo turista será cliente.
+
+**Implicación para Panamá:** la primera ubicación debería contrastar tráfico residente y turístico. Las zonas con hoteles, centros comerciales, oficinas y conectividad pueden ofrecer una combinación más sólida que depender únicamente de turistas.
+</details>
+
+<details>
+<summary><strong>Conclusión provisional: ¿podría funcionar Wagamama en Panamá?</strong></summary>
+
+La investigación permite decir **“hay una hipótesis razonable de encaje, pero todavía no una validación definitiva”**.
+
+**A favor:** marca con trayectoria desde 1992, propuesta diferenciada, experiencia de franquicia internacional, crecimiento en nuevos territorios, turismo y demanda local por comida internacional y delivery.
+
+**Riesgos:** precio, competencia asiática existente, disponibilidad de ingredientes, costos operativos, tamaño real del segmento y necesidad de adaptar menú y comunicación.
+
+**Siguiente prueba recomendada:** comparar tres ubicaciones en Ciudad de Panamá, entrevistar consumidores, medir precio aceptable y probar un menú reducido mediante pop-up o evento de degustación. La decisión debe basarse en frecuencia de compra, ticket promedio, margen y repetición, no solo en interés declarado.
+</details>
+
 ## Frase obligatoria de cierre de la etapa
 
 > Nuestro consumidor meta en Panamá es un público urbano de 22 a 50 años que busca una experiencia asiática fresca, internacional y conveniente. La oportunidad existe porque Wagamama combina una propuesta diferenciada con un modelo de expansión internacional ya probado. La evidencia inicial que encontramos fue la historia oficial de la marca, su propuesta de producto, su experiencia de franquicia y la referencia comparable de itsu. Por eso, la franquicia debe enfocarse en validar ubicación, precio, frecuencia de consumo y aceptación del menú antes de confirmar la entrada al mercado.
