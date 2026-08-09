@@ -26,6 +26,16 @@ La edad, las zonas prioritarias y la disposición a pagar son hipótesis de trab
 </details>
 
 <details>
+<summary><strong>Slide 1.1 — Evidencia del consumidor meta</strong></summary>
+
+![Evidencia de la propuesta de Wagamama](./etapa-2-referencias-wagamama-about-us.png)
+
+**Fuente:** [Wagamama — About us](https://www.wagamama.com/about-us)
+
+La fuente describe el origen en los bares de ramen de Tokio, la comida fresca preparada al momento, las cocinas abiertas y las mesas compartidas. Esto respalda los atributos de experiencia internacional, frescura y contexto urbano usados para construir el segmento. No demuestra todavía que el segmento panameño tenga intención de compra; por eso la slide 1 lo presenta como hipótesis.
+</details>
+
+<details>
 <summary><strong>Slide 2 — Necesidad o deseo identificado</strong></summary>
 
 ![Necesidad o deseo identificado](./etapa-2-slide-2-necesidad-deseo-v2.png)
@@ -47,6 +57,16 @@ La slide deja de presentar ?osaludable y diferente? como una afirmación genéri
 - ¿Con qué frecuencia compra comida asiática o usa delivery?
 - ¿Cuánto pagaría por una comida fresca de preparación rápida?
 - ¿Qué platos reconoce y estaría dispuesto a probar?
+</details>
+
+<details>
+<summary><strong>Slide 2.1 — Evidencia de la necesidad identificada</strong></summary>
+
+![Evidencia de la franquicia y propuesta](./etapa-2-referencias-wagamama-franchise.png)
+
+**Fuente:** [Wagamama — Franchise](https://www.wagamama.com/franchise)
+
+La página de franquicias muestra que la marca opera internacionalmente con un sistema de desarrollo, capacitación y expansión de largo plazo. Junto con la propuesta oficial de alimentos frescos, esto respalda que la necesidad se está formulando alrededor de una experiencia completa, no únicamente alrededor de vender un bowl de ramen. La preferencia del consumidor panameño aún debe comprobarse.
 </details>
 
 <details>
@@ -105,6 +125,16 @@ Las fuentes oficiales validan que el concepto existe y puede operar internaciona
 </details>
 
 <details>
+<summary><strong>Slide 3.1 — Evidencia de validación</strong></summary>
+
+![Informe internacional de Wagamama](./etapa-2-referencia-informe-anual-wagamama-2024.png)
+
+**Fuente:** [Wagamama Annual Report 2024](https://www.datocms-assets.com/99160/1748342887-wagamama-annual-report-fy-2024-1-1mb.pdf)
+
+El informe reporta 55 locales franquiciados internacionales al cierre de 2024 y cinco aperturas internacionales durante ese año. Esta evidencia valida la trayectoria internacional del modelo, pero no reemplaza una encuesta panameña. Por eso la validación se divide entre evidencia de marca, señales de mercado y evidencia primaria pendiente.
+</details>
+
+<details>
 <summary><strong>Slide 4 — Insight del consumidor</strong></summary>
 
 ![Insight del consumidor](./etapa-2-slide-4-insight-consumidor-v2.png)
@@ -127,6 +157,16 @@ El equipo debe preguntar qué pesa más en la decisión: sabor, frescura, rapide
 </details>
 
 <details>
+<summary><strong>Slide 4.1 — Evidencia que conduce al insight</strong></summary>
+
+![Condiciones del mercado gastronómico panameño](./etapa-2-referencia-panama-food-service.png)
+
+**Fuente:** [U.S. Department of Commerce — Panama Food Service Sector](https://www.trade.gov/market-intelligence/panama-food-service-sector)
+
+La fuente señala urbanización, turismo, delivery y apetito por cocinas internacionales. Esas señales ayudan a formular el insight: puede existir interés por una experiencia diferente, pero debe combinarse con conveniencia y precio. La frase sigue siendo un insight de trabajo hasta obtener entrevistas o encuestas.
+</details>
+
+<details>
 <summary><strong>Slide 5 — Implicación para la franquicia</strong></summary>
 
 ![Implicación para la franquicia](./etapa-2-slide-5-implicacion-franquicia.png)
@@ -140,6 +180,16 @@ El equipo debe preguntar qué pesa más en la decisión: sabor, frescura, rapide
 ### Justificación
 
 La slide evita concluir que la franquicia debe abrir inmediatamente. Propone una primera prueba comercial basada en la evidencia disponible: experiencia internacional de la marca, condiciones del mercado panameño y necesidad de validar precio, ubicación y repetición.
+</details>
+
+<details>
+<summary><strong>Slide 5.1 — Evidencia para la implicación de la franquicia</strong></summary>
+
+![Estadísticas de turismo de Panamá](./etapa-2-referencia-atp-panama.png)
+
+**Fuente:** [Autoridad de Turismo de Panamá — Estadísticas e información del mercado](https://www.atp.gob.pa/estadisticas-e-informacion-del-mercado-2/)
+
+La existencia de estadísticas oficiales de turismo permite justificar que la primera prueba debe estudiar ubicaciones y temporadas, no solo el menú. Al combinar turismo, oficinas, residentes y delivery, las decisiones de ubicación y precio pueden validarse antes de una apertura completa.
 </details>
 
 <details>
