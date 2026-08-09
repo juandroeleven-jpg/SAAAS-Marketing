@@ -23,6 +23,34 @@ La diapositiva presenta una hipótesis de consumidor meta. El rango de edad, las
 </details>
 
 <details>
+<summary><strong>Slide 3 — Evidencia de validación inicial</strong></summary>
+
+![Evidencia de validación inicial](./etapa-2-slide-3-validacion-inicial.png)
+
+### Cómo cumple los criterios
+
+- Incluye evidencia inicial en tres niveles: observación del mercado, tendencias visibles de consumo y comparación con la oferta existente.
+- No presenta esas señales como resultados definitivos ni inventa porcentajes.
+- Define los siguientes métodos de validación: encuesta corta, entrevistas y observación en zonas de alto tráfico.
+
+### Nota metodológica
+
+Esta diapositiva distingue entre una señal inicial y una validación confirmada. Para afirmar que existe demanda, todavía deben recopilarse respuestas directas de consumidores panameños.
+</details>
+
+<details>
+<summary><strong>Slide 4 — Insight del consumidor</strong></summary>
+
+![Insight del consumidor](./etapa-2-slide-4-insight-consumidor.png)
+
+### Cómo cumple los criterios
+
+- Resume el descubrimiento en una sola frase clara.
+- Conecta la necesidad funcional —rapidez y conveniencia— con la motivación emocional —una experiencia internacional, saludable y diferente—.
+- Indica que se trata de un insight inicial pendiente de validación directa.
+</details>
+
+<details>
 <summary><strong>Slide 2 — Necesidad o deseo identificado</strong></summary>
 
 ![Necesidad o deseo identificado](./etapa-2-slide-2-necesidad-deseo.png)
