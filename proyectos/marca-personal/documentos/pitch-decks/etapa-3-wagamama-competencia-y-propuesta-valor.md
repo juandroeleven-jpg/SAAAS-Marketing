@@ -7,6 +7,8 @@
 <details>
 <summary><strong>Slide 1 — Competidores directos</strong></summary>
 
+![Competidores directos](./etapa-3-slide-1-competidores-directos.png)
+
 ### Ajisen Ramen
 
 Es el competidor directo más evidente: ofrece ramen, cocina japonesa y una experiencia de restaurante especializada. Su sitio oficial indica que inició operaciones en Panamá en 2019, cuenta con seis sucursales y pertenece a una marca con más de 800 restaurantes a nivel mundial.
@@ -36,6 +38,8 @@ Wagamama no entraría en un mercado sin competencia. Entraría frente a operador
 <details>
 <summary><strong>Slide 2 — Competidores indirectos</strong></summary>
 
+![Competidores indirectos](./etapa-3-slide-2-competidores-indirectos.png)
+
 ### Sushi y cocina japonesa
 
 Makoto y otras marcas de sushi compiten por el mismo consumidor urbano que busca una experiencia asiática, una comida social y un ticket medio o alto.
@@ -64,6 +68,8 @@ Hamburguesas, bowls, cafeterías y otras cadenas fast-casual compiten por almuer
 <details>
 <summary><strong>Slide 3 — Comparación competitiva</strong></summary>
 
+![Comparación competitiva](./etapa-3-slide-3-comparacion.png)
+
 | Variable | Ajisen | Oh-Toro / Hikaru | Sushi y fusión | Wagamama potencial |
 |---|---|---|---|---|
 | Producto | Ramen especializado | Ramen y comida japonesa | Sushi y platos asiáticos | Menú panasiático con ramen, noodles, curries y bowls |
@@ -79,6 +85,8 @@ La comparación evita afirmar que Wagamama es superior en todo. Su posible difer
 
 <details>
 <summary><strong>Slide 4 — Brecha u oportunidad en Panamá</strong></summary>
+
+![Brecha u oportunidad](./etapa-3-slide-4-brecha.png)
 
 ### Brecha propuesta
 
@@ -103,6 +111,8 @@ Precio demasiado alto, baja frecuencia de consumo, poca familiaridad con noodles
 <details>
 <summary><strong>Slide 5 — Propuesta de valor local</strong></summary>
 
+![Propuesta de valor local](./etapa-3-slide-5-propuesta-valor.png)
+
 > **Para profesionales, residentes extranjeros, estudiantes y turistas urbanos en Panamá que buscan una comida asiática diferente sin perder rapidez ni conveniencia, Wagamama ofrecería bowls, noodles, ramen y curries frescos preparados al momento, dentro de una experiencia internacional, informal y accesible.**
 
 ### Elementos que deben adaptarse
@@ -116,6 +126,8 @@ Precio demasiado alto, baja frecuencia de consumo, poca familiaridad con noodles
 
 <details>
 <summary><strong>Slide 6 — Conclusión estratégica</strong></summary>
+
+![Conclusión estratégica](./etapa-3-slide-6-conclusion.png)
 
 Wagamama no debería competir contra Ajisen intentando ser “otro restaurante de ramen”. Su oportunidad sería entrar como una experiencia fast-casual panasiática: más amplia que un especialista de ramen, más estructurada que un restaurante independiente y más experiencial que una marca puramente de delivery.
 
