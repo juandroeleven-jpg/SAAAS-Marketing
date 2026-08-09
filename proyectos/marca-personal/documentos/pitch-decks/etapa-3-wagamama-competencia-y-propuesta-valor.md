@@ -25,6 +25,13 @@ Compite por consumidores que buscan ramen y cocina japonesa de mayor especializa
 
 Wagamama no entraría en un mercado sin competencia. Entraría frente a operadores que ya educaron al consumidor sobre ramen y comida japonesa. La ventaja no puede ser simplemente “tener ramen”.
 
+### Por qué son competidores directos
+
+- **Ajisen Ramen:** ofrece ramen como producto central, tiene presencia física en Panamá y compite por el consumidor que busca una comida japonesa especializada.
+- **Oh-Toro Ramen & Sushi:** combina ramen y sushi en una ocasión de consumo muy cercana a la de Wagamama: comida asiática casual para comer en el restaurante o pedir.
+- **Hikaru:** compite por consumidores que buscan ramen y cocina japonesa en zonas urbanas de Panamá, especialmente por una experiencia de restaurante especializada.
+- **Criterio común:** las tres opciones ofrecen productos japoneses o ramen y satisfacen una necesidad similar; por eso compiten directamente por atención, visita y presupuesto.
+
 <details>
 <summary>Evidencia y fuentes</summary>
 
@@ -75,6 +82,13 @@ EATHH compite por conveniencia: reúne 12 marcas en un solo pedido. No ofrece ex
 ### Comida casual internacional
 
 Hamburguesas, bowls, cafeterías y otras cadenas fast-casual compiten por almuerzos, cenas rápidas y reuniones informales.
+
+### Por qué son competidores indirectos
+
+- **Sushi y fusión:** no ofrecen exactamente el menú de Wagamama, pero compiten por el mismo deseo de probar comida asiática y por una salida social.
+- **Food halls y delivery:** compiten por conveniencia, tiempo de entrega y presupuesto, aunque no reproduzcan la experiencia de restaurante.
+- **Comida casual internacional:** compite por la misma decisión de almuerzo o cena rápida y por el dinero disponible del consumidor.
+- **Criterio común:** la competencia indirecta se define por consumidor, ocasión y presupuesto, no por vender el mismo plato.
 
 <details>
 <summary>Evidencia y fuentes</summary>
