@@ -1,132 +1,147 @@
-# CxC: Power BI vs Vercel
+# CxC: por qué elegir una aplicación web en Vercel
 
-Fecha de investigación: 2026-08-10. Esta comparación contrasta las mejores implementaciones razonables de Power BI y de un dashboard web programado y desplegado en Vercel para Cuentas por Cobrar (CxC). No presenta resultados financieros reales, KPIs validados ni estimaciones de negocio: las láminas son de desarrollo y usan datos ficticios o anonimizados.
+Fecha: 2026-08-10. Presentación estratégica para proponer un sistema de Cuentas por Cobrar (CxC) programado y desplegado en Vercel. La comparación posiciona a Vercel como la alternativa recomendada para el producto objetivo; no declara KPIs financieros, costos, rendimiento o controles ya validados. Todo piloto debe usar datos ficticios o anonimizados y validarse con Finanzas, TI y Seguridad.
 
-## Metodología
+## Tesis
 
-Se comparan capacidades documentadas oficialmente y decisiones de arquitectura, no productos “por defecto” ni una prueba de rendimiento ya ejecutada. El escenario Power BI considera un modelo semántico bien diseñado, medidas DAX, seguridad por filas (RLS), actualización configurada y publicación gobernada. El escenario Vercel considera una aplicación web programada, API o capa de datos protegida, autorización implementada por la aplicación, variables de entorno y despliegues Preview/Production. La elección final debe apoyarse en un piloto con datos permitidos, pruebas de roles, carga, UX, trazabilidad y validación formal de Finanzas.
+Power BI es una plataforma sólida de analítica y reportes. La propuesta Vercel se recomienda cuando CxC debe evolucionar de dashboard a sistema operativo: una experiencia personalizada que integra datos, usuarios, automatizaciones, IA, tareas y herramientas externas.
 
-## Límites y supuestos comunes
+<details><summary>01 · Sistema de CxC</summary>
 
-- Los ejemplos de saldo, vencido, DSO, prioridad y aging son marcadores de diseño; no contienen ni declaran KPIs validados.
-- La fuente de verdad, las reglas de negocio, la política de cobranza, el calendario y los permisos se acordarán con Finanzas antes de producción.
-- En Power BI, RLS filtra filas; no sustituye una estrategia de seguridad de objetos, roles de espacio de trabajo ni la revisión del modelo.
-- En Vercel, la plataforma no reemplaza autenticación, autorización, controles de la base de datos, auditoría ni el diseño seguro de la API; esas responsabilidades deben implementarse y probarse.
-- Costos, licencias, límites de capacidad, latencia y requisitos regulatorios no se califican aquí: deben verificarse para el tenant, plan, región y fuentes concretas.
+![Sistema de CxC](comparacion-powerbi-vercel/01.png)
 
-<details>
-<summary>01 · Portada y marco de decisión</summary>
+**Objetivo:** abrir con la tesis: Vercel conecta datos, IA, usuarios, herramientas y acciones en un sistema único.
 
-![Portada CxC: Power BI vs Vercel](comparacion-powerbi-vercel/01.png)
+**Lectura Power BI:** reportes y análisis administrados.
 
-**Descripción.** Apertura de la comparación con dos rutas de implementación y un dashboard CxC conceptual.
+**Lectura Vercel:** producto CxC a medida; ganador estratégico por integración y operación.
 
-**Objetivo.** Establecer que la decisión sigue a pruebas y a la validación con Finanzas, no a números ilustrativos.
-
-**Lectura Power BI.** Ruta de BI administrado: modelo semántico, analítica autoservicio y gobierno del reporte.
-
-**Lectura Vercel.** Ruta de producto web: interfaz y flujo de CxC programados, desplegados continuamente.
-
-**Supuestos.** La organización puede habilitar un piloto sin datos reales; ninguna ruta está seleccionada todavía.
-
-**Fuentes.** [Documentación oficial de Power BI](https://learn.microsoft.com/power-bi/); [visión general oficial de despliegues de Vercel](https://vercel.com/docs/deployments/overview).
+**Supuestos:** integraciones y permisos se implementarán y aprobarán antes de producción.
 </details>
 
-<details>
-<summary>02 · Arquitectura y fuentes</summary>
+<details><summary>02 · IA que analiza y actúa</summary>
 
-![Arquitectura y fuentes CxC](comparacion-powerbi-vercel/02.png)
+![IA que analiza y actúa](comparacion-powerbi-vercel/02.png)
 
-**Descripción.** Fuentes CxC conceptuales —ERP, facturas, clientes, pagos y notas— conectadas a cada ruta y a consumidores internos.
+**Objetivo:** visualizar un agente que analiza datos, genera un resumen y lo distribuye.
 
-**Objetivo.** Hacer visible que la consistencia de la fuente de verdad y de las reglas precede a la visualización.
+**Lectura Power BI:** IA y automatización dentro de flujos administrados, según capacidades habilitadas.
 
-**Lectura Power BI.** Power Query, modelo semántico, DAX y reporte concentran modelado y consumo analítico. La actualización incremental se configura con parámetros y se aplica en el servicio al publicar y actualizar el modelo.
+**Lectura Vercel:** máxima libertad para conectar APIs, agentes, horarios y destinatarios; ganador para el flujo de trabajo a medida.
 
-**Lectura Vercel.** La aplicación necesita una capa de datos o API segura separada de la UI; Vercel Functions ejecuta código del lado del servidor y puede conectarse a APIs y bases de datos sin administrar servidores.
-
-**Supuestos.** Extractos anonimizados o simulados; mapeo de campos, calidad y propietario de cada fuente por validar.
-
-**Fuentes.** [Actualización incremental de modelos semánticos en Power BI](https://learn.microsoft.com/power-bi/connect-data/incremental-refresh-configure); [Vercel Functions](https://vercel.com/docs/functions).
+**Supuestos:** ejemplo ilustrativo; no hay agente ni envío automático operando aún.
 </details>
 
-<details>
-<summary>03 · KPIs y filtros</summary>
+<details><summary>03 · De reporte a sistema operativo</summary>
 
-![KPIs y filtros CxC](comparacion-powerbi-vercel/03.png)
+![De reporte a sistema operativo](comparacion-powerbi-vercel/03.png)
 
-**Descripción.** Maqueta de saldo pendiente, vencido, DSO/recaudación y filtros por cliente, región, vendedor y corte.
+**Objetivo:** diferenciar visualización analítica de experiencia operativa.
 
-**Objetivo.** Separar el diseño de la experiencia de las definiciones contables y operativas que aún deben validarse.
+**Lectura Power BI:** reportes, tablas, filtros y exploración.
 
-**Lectura Power BI.** Segmentadores y medidas en un modelo semántico facilitan explorar definiciones con analistas, sujeto al diseño del modelo y al control de acceso.
+**Lectura Vercel:** combina análisis, comentario, asignación, alerta y acción; ganador por personalización.
 
-**Lectura Vercel.** Los filtros, drill-down y la interacción pueden diseñarse a medida; las reglas y cálculos deben centralizarse, controlarse por versión y probarse.
-
-**Supuestos.** Todos los campos mostrados son ejemplos; DSO, período de corte, crédito, notas y moneda requieren definición de Finanzas.
-
-**Fuentes.** [Guía oficial de RLS en Power BI Desktop](https://learn.microsoft.com/power-bi/guidance/rls-guidance); [Vercel Functions](https://vercel.com/docs/functions).
+**Supuestos:** funciones operativas sujetas a diseño y pruebas.
 </details>
 
-<details>
-<summary>04 · Aging, prioridad y seguimiento</summary>
+<details><summary>04 · Facilidad de uso</summary>
 
-![Aging, prioridad y seguimiento CxC](comparacion-powerbi-vercel/04.png)
+![Facilidad de uso](comparacion-powerbi-vercel/04.png)
 
-**Descripción.** Bandas de aging y acciones de cobranza representadas como diseño de flujo, no como política aprobada.
+**Objetivo:** priorizar una vista por rol y tarea.
 
-**Objetivo.** Mostrar que los rangos, escalamiento, responsables y bitácora deben ser reglas explícitas y auditables.
+**Lectura Power BI:** navegación basada en la estructura del reporte.
 
-**Lectura Power BI.** Es apropiado para explorar distribución, cohortes y excepciones sobre un modelo gobernado.
+**Lectura Vercel:** interfaz, lenguaje y flujo hechos para cobranza; ganador para la experiencia final de usuario.
 
-**Lectura Vercel.** Permite convertir la prioridad en una interfaz operativa específica: bitácora, próxima acción, responsable e integraciones, si se implementan los controles correspondientes.
-
-**Supuestos.** Las bandas 0–30, 31–60, 61–90 y 91+ son una convención visual de prueba; no definen política de cobranza.
-
-**Fuentes.** [Guía de RLS de Power BI](https://learn.microsoft.com/power-bi/guidance/rls-guidance); [Vercel Functions](https://vercel.com/docs/functions).
+**Supuestos:** se realizará prueba UX con usuarios reales antes de concluir.
 </details>
 
-<details>
-<summary>05 · Interacción, rendimiento, permisos y despliegue</summary>
+<details><summary>05 · Multidispositivo</summary>
 
-![Interacción, rendimiento, permisos y despliegue](comparacion-powerbi-vercel/05.png)
+![Multidispositivo](comparacion-powerbi-vercel/05.png)
 
-**Descripción.** Ejes de evaluación para una prueba, sin puntajes ni mediciones reales.
+**Objetivo:** mostrar la experiencia coherente en laptop, tablet y móvil.
 
-**Objetivo.** Definir qué debe probarse: interacción, carga, roles, autorización, publicación y experiencia de usuario.
+**Lectura Power BI:** aplicaciones y autenticación del ecosistema Microsoft.
 
-**Lectura Power BI.** RLS restringe filas y se valida por rol; la guía oficial indica que Admin, Member y Contributor del espacio de trabajo tienen permiso de edición y no reciben RLS, por lo que la asignación de roles importa. La actualización incremental puede reducir trabajo de refresco después de la carga inicial según configuración.
+**Lectura Vercel:** experiencia web adaptable, diseño móvil específico y acceso personalizable; ganador por control de producto.
 
-**Lectura Vercel.** Los despliegues generan URL únicas para previsualizar cambios y separan entornos Local, Preview y Production. Las variables de entorno se configuran fuera del código y aplican a despliegues nuevos; la aplicación sigue siendo responsable de la autorización y de no exponer secretos al cliente.
-
-**Supuestos.** Se ejecutarán pruebas de roles, carga y UX con escenarios de prueba; no se afirma desempeño, seguridad ni cumplimiento validados.
-
-**Fuentes.** [RLS en el servicio Power BI](https://learn.microsoft.com/fabric/security/service-admin-row-level-security); [actualización incremental de Power BI](https://learn.microsoft.com/power-bi/connect-data/incremental-refresh-configure); [despliegues de Vercel](https://vercel.com/docs/deployments/overview); [variables de entorno de Vercel](https://vercel.com/docs/environment-variables).
+**Supuestos:** autenticación y autorización deben validarse con TI.
 </details>
 
-<details>
-<summary>06 · Recomendación y próximos pasos</summary>
+<details><summary>06 · De explorar a actuar</summary>
 
-![Recomendación y próximos pasos CxC](comparacion-powerbi-vercel/06.png)
+![Explorar y actuar](comparacion-powerbi-vercel/06.png)
 
-**Descripción.** Recomendación condicional y secuencia de piloto para llegar a una decisión informada.
+**Objetivo:** llevar de resumen a cliente, factura, contacto y próxima acción sin salir del sistema.
 
-**Objetivo.** Convertir la comparación en un plan seguro: definiciones, datos de prueba, validación de Finanzas y despliegue.
+**Lectura Power BI:** drill-down y exploración analítica.
 
-**Lectura Power BI.** Es la opción a priorizar si el objetivo principal es acelerar análisis, modelo compartido, autoservicio y gobierno de reportes en el ecosistema Microsoft.
+**Lectura Vercel:** flujo operativo con asignación, comentarios y cierre; ganador por ejecución.
 
-**Lectura Vercel.** Es la opción a priorizar si el objetivo principal es un producto CxC con interacción y flujo operativo muy específicos, integraciones web y ciclos Preview/Production.
-
-**Supuestos.** La recomendación es condicional; el piloto debe confirmar requisitos, operación, licenciamiento, seguridad y adopción antes de producción.
-
-**Fuentes.** [Documentación oficial de Power BI](https://learn.microsoft.com/power-bi/); [despliegues de Vercel](https://vercel.com/docs/deployments/overview).
+**Supuestos:** las acciones y estados aún son conceptos de producto.
 </details>
 
-## Fuentes oficiales consultadas
+<details><summary>07 · Escalabilidad modular</summary>
 
-- Microsoft Learn, [Row-level security (RLS) guidance in Power BI Desktop](https://learn.microsoft.com/power-bi/guidance/rls-guidance), consultada el 2026-08-10.
-- Microsoft Learn, [Row-level security (RLS) with Power BI](https://learn.microsoft.com/fabric/security/service-admin-row-level-security), consultada el 2026-08-10.
-- Microsoft Learn, [Configure incremental refresh for Power BI semantic models](https://learn.microsoft.com/power-bi/connect-data/incremental-refresh-configure), consultada el 2026-08-10.
-- Vercel, [Deploying to Vercel](https://vercel.com/docs/deployments/overview), consultada el 2026-08-10.
-- Vercel, [Vercel Functions](https://vercel.com/docs/functions), consultada el 2026-08-10.
-- Vercel, [Environment Variables](https://vercel.com/docs/environment-variables), consultada el 2026-08-10.
+![Escalabilidad modular](comparacion-powerbi-vercel/07.png)
+
+**Objetivo:** representar CxC como parte de una plataforma conectada.
+
+**Lectura Power BI:** expansión mediante modelos, reportes y gobierno analítico.
+
+**Lectura Vercel:** módulos independientes conectados en una plataforma de producto; ganador para la evolución funcional.
+
+**Supuestos:** arquitectura, datos y capacidad se evaluarán en un piloto.
+</details>
+
+<details><summary>08 · Costo y reutilización</summary>
+
+![Costo y reutilización](comparacion-powerbi-vercel/08.png)
+
+**Objetivo:** contrastar licenciamiento con una inversión de producto reutilizable.
+
+**Lectura Power BI:** costos ligados a licencias, capacidades y configuración aplicable.
+
+**Lectura Vercel:** mayor control para diseñar una plataforma reutilizable; ganador potencial de largo plazo, sujeto a estimación real.
+
+**Supuestos:** no se presentan precios, ahorros ni costos validados.
+</details>
+
+<details><summary>09 · Tiempo y evolución</summary>
+
+![Tiempo y evolución](comparacion-powerbi-vercel/09.png)
+
+**Objetivo:** mostrar por qué el tiempo relevante es el de construir y evolucionar el producto completo.
+
+**Lectura Power BI:** optimiza la creación de reportes dentro de su patrón analítico.
+
+**Lectura Vercel:** gana en el tiempo total de producto al evolucionar con IA, integraciones y experiencia propia.
+
+**Supuestos:** los tiempos se estimarán después de definir alcance y equipo.
+</details>
+
+<details><summary>10 · Veredicto</summary>
+
+![Veredicto Vercel](comparacion-powerbi-vercel/10.png)
+
+**Objetivo:** cerrar con la recomendación de Vercel como base del sistema CxC.
+
+**Lectura Power BI:** potencia analítica reconocida.
+
+**Lectura Vercel:** recomendación por IA, automatización, personalización, integraciones y escala de producto.
+
+**Supuestos:** veredicto estratégico basado en experiencia de producto; requiere aprobación de las áreas responsables.
+</details>
+
+## Método, límites y fuentes oficiales
+
+La presentación compara una implementación madura de Power BI con una aplicación web programada y desplegada en Vercel. No afirma que Vercel sustituya controles de identidad, autorización, seguridad de API, protección de datos o monitoreo: estos deben diseñarse explícitamente. Los enlaces siguientes se usarán como base técnica para el piloto:
+
+- [Power BI: guía de seguridad por filas](https://learn.microsoft.com/power-bi/guidance/rls-guidance)
+- [Power BI: actualización incremental](https://learn.microsoft.com/power-bi/connect-data/incremental-refresh-configure)
+- [Vercel Functions](https://vercel.com/docs/functions)
+- [Vercel: despliegues](https://vercel.com/docs/deployments/overview)
+- [Vercel: variables de entorno](https://vercel.com/docs/environment-variables)
