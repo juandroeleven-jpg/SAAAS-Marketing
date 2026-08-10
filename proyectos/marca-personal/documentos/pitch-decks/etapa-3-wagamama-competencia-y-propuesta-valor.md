@@ -1,4 +1,4 @@
-# Etapa 3 — Competencia, diferenciación y propuesta de valor local
+﻿# Etapa 3 — Competencia, diferenciación y propuesta de valor local
 
 ## Proyecto final: entrada de Wagamama a Panamá
 
@@ -7,7 +7,7 @@
 <details>
 <summary><strong>Slide 1 — Competidores directos</strong></summary>
 
-![Competidores directos](./etapa-3-slide-1-competidores-directos.png)
+![Competidores directos](./etapa-3-slide-1-competidores-directos-v2.png)
 
 ### Ajisen Ramen
 
@@ -65,7 +65,7 @@ La evidencia muestra que el consumidor también puede elegir sushi, fusión, foo
 <details>
 <summary><strong>Slide 2 — Competidores indirectos</strong></summary>
 
-![Competidores indirectos](./etapa-3-slide-2-competidores-indirectos.png)
+![Competidores indirectos](./etapa-3-slide-2-competidores-indirectos-v2.png)
 
 ### Sushi y cocina japonesa
 
@@ -211,3 +211,4 @@ La recomendación es **avanzar a una validación comercial**, no confirmar todav
 
 > Frente a la competencia local, nuestra franquicia se diferenciaría por combinar una experiencia panasiática internacional, un menú amplio y fresco y una operación fast-casual consistente. La oportunidad que vemos en Panamá es ocupar el espacio entre el ramen especializado y el delivery sin experiencia de marca, y nuestra propuesta de valor sería ofrecer comida asiática preparada al momento, rápida y conveniente para consumidores urbanos, residentes extranjeros y turistas.
 </details>
+
