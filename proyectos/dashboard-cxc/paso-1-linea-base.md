@@ -20,8 +20,12 @@
 ## 2. Capturas
 
 Ya existían en el repo (`proyectos/dashboard-cxc/`), tomadas antes de este paso:
-- `referencia-ar-cockpit-github.png`
-- `referencia-shadcn-admin-github.png`
+
+**AR Cockpit**
+![Captura del repositorio AR Cockpit](./referencia-ar-cockpit-github.png)
+
+**shadcn-admin**
+![Captura del repositorio shadcn-admin](./referencia-shadcn-admin-github.png)
 
 Las revisé y confirman lo documentado abajo (nombre del repo, stars, licencia, último commit visibles en la captura). No tomé capturas nuevas — reutilicé las existentes porque ya cumplen el propósito del Paso 1.
 
