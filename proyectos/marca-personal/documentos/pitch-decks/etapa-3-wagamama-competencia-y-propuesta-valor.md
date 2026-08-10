@@ -201,7 +201,7 @@ El informe reporta 55 locales franquiciados internacionales al cierre de 2024 y 
 <details>
 <summary><strong>Slide 6 — Conclusión estratégica</strong></summary>
 
-![Conclusión estratégica](./etapa-3-slide-6-conclusion.png)
+![Conclusión estratégica](./etapa-3-slide-6-conclusion-v2.png)
 
 Wagamama no debería competir contra Ajisen intentando ser “otro restaurante de ramen”. Su oportunidad sería entrar como una experiencia fast-casual panasiática: más amplia que un especialista de ramen, más estructurada que un restaurante independiente y más experiencial que una marca puramente de delivery.
 
@@ -211,4 +211,5 @@ La recomendación es **avanzar a una validación comercial**, no confirmar todav
 
 > Frente a la competencia local, nuestra franquicia se diferenciaría por combinar una experiencia panasiática internacional, un menú amplio y fresco y una operación fast-casual consistente. La oportunidad que vemos en Panamá es ocupar el espacio entre el ramen especializado y el delivery sin experiencia de marca, y nuestra propuesta de valor sería ofrecer comida asiática preparada al momento, rápida y conveniente para consumidores urbanos, residentes extranjeros y turistas.
 </details>
+
 
