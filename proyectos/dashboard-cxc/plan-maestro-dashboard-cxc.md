@@ -35,6 +35,28 @@ La automatización debe partir de una referencia funcional o de mercado, adaptar
 </details>
 
 <details>
+<summary><strong>Verificación del trabajo reportado por Claude — 2026-08-10</strong></summary>
+
+**Archivos revisados:** `mapa-componentes-visuales.md`, `mapa-modulos-funcionales.md`, `formulas-y-supuestos-cxc.md`, `borrador-modelo-datos.md` y `revision-paso-2.md`.
+
+**Resultados por archivo:**
+
+- `mapa-componentes-visuales.md`: consistente con el alcance visual; describe patrones con palabras propias, identifica placeholders genéricos y mantiene pendientes de adaptación.
+- `mapa-modulos-funcionales.md`: cubre los seis módulos; distingue la demo sintética de las reglas reales y marca para reconstrucción los umbrales, scoring, forecast y datos faltantes.
+- `formulas-y-supuestos-cxc.md`: Aging, DSO, CEI, cartera vencida, scoring y forecast están etiquetados como propuestas pendientes de validación por Finanzas; no se presenta una fórmula cerrada de scoring o forecast como aprobada.
+- `borrador-modelo-datos.md`: está identificado como material preparatorio/adelantado del Paso 4 y deja decisiones de modelo pendientes; no se presenta como definición final.
+- `revision-paso-2.md`: sus conclusiones coinciden con la evidencia revisada; no se detectan contradicciones materiales.
+
+**Controles ejecutados:** búsqueda de marcadores de pendiente/supuesto; búsqueda de credenciales, secretos, tokens y claves; búsqueda de bloques o indicadores de código fuente; inspección de referencias a datos reales; comparación hash del plan maestro contra `HEAD` antes de esta anotación. No se encontraron datos reales ni credenciales, y no se encontraron fragmentos de código literal copiado.
+
+**Diferencias/observaciones:** el modelo de datos es un adelanto fuera del entregable formal del Paso 2, pero lo declara expresamente. La validación financiera de fórmulas sigue pendiente; la evidencia disponible demuestra etiquetado y cautelas, no aprobación de negocio.
+
+**Evidencia:** capturas nuevas en `proyectos/dashboard-cxc/evidencias-verificacion/` (nombres indicados en la entrega de esta verificación). No se sobrescribieron archivos existentes.
+
+**Veredicto:** **listo para revisión humana**. Este veredicto no constituye aprobación definitiva ni sustituye la validación de Finanzas.
+</details>
+
+<details>
 <summary><strong>2. Referencia funcional: AR Cockpit</strong></summary>
 
 ![Captura del repositorio AR Cockpit](./referencia-ar-cockpit-github.png)
