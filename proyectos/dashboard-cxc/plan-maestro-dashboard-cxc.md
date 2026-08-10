@@ -240,3 +240,254 @@ El prototipo puede avanzar a piloto solo cuando:
 ## Veredicto inicial
 
 El proyecto es viable como prototipo y puede convertirse en una herramienta empresarial, pero solo después de reconstruir y validar la lógica financiera con datos anonimizados. AR Cockpit aporta la referencia funcional; shadcn-admin aporta la referencia visual; ChatGPT organiza la planificación; Claude ejecuta las tareas operativas; GitHub conserva la memoria y las decisiones del sistema.
+
+## Primeros 10 pasos de adaptación
+
+> Estos pasos describen qué se adaptaría, por qué se haría y qué material se necesita. No significan que el código de los repositorios deba copiarse directamente ni que ya se hayan conectado datos reales.
+
+<details>
+<summary><strong>Paso 1 — Congelar las referencias y crear una línea base</strong></summary>
+
+### Acción
+
+- Revisar la estructura visual de [shadcn-admin](https://github.com/satnaing/shadcn-admin).
+- Revisar los módulos funcionales de [AR Cockpit](https://github.com/Sebastianvalenza/ar-cockpit).
+- Guardar commit, URL y captura de cada referencia.
+
+### Por qué
+
+Evita que el equipo cambie de referencia a mitad del proyecto y permite comparar qué se tomó de cada repositorio.
+
+### Materiales
+
+- Captura de AR Cockpit: `referencia-ar-cockpit-github.png`.
+- Captura de shadcn-admin: `referencia-shadcn-admin-github.png`.
+- Tabla de decisiones en este documento.
+</details>
+
+<details>
+<summary><strong>Paso 2 — Separar la capa visual de la lógica de CxC</strong></summary>
+
+### Acción
+
+- Usar shadcn-admin como referencia de navegación, tarjetas, tablas y filtros.
+- Usar AR Cockpit como referencia de módulos de cartera.
+- Crear una capa propia para cálculos financieros.
+
+### Por qué
+
+La interfaz puede reutilizar patrones visuales, pero los KPIs no deben heredarse sin comprobar sus fórmulas.
+
+### Materiales
+
+- Mapa de componentes visuales.
+- Mapa de módulos funcionales.
+- Documento de fórmulas aprobadas.
+</details>
+
+<details>
+<summary><strong>Paso 3 — Convertir la pantalla de AR Cockpit en módulos propios</strong></summary>
+
+### Acción
+
+Separar en módulos independientes:
+
+- Resumen de cartera.
+- Aging.
+- Clientes prioritarios.
+- Forecast.
+- Seguimiento de cobros.
+- Carga y calidad de datos.
+
+### Por qué
+
+Permite sustituir una parte simulada sin tener que reconstruir todo el dashboard.
+
+### Materiales
+
+- Inventario de pantallas.
+- Lista de componentes.
+- Diagrama de navegación.
+</details>
+
+<details>
+<summary><strong>Paso 4 — Diseñar el modelo de datos compatible</strong></summary>
+
+### Acción
+
+Crear tablas separadas para:
+
+- clientes;
+- facturas;
+- pagos;
+- notas de crédito;
+- disputas;
+- condiciones de pago;
+- monedas y tipos de cambio.
+
+### Por qué
+
+Una hoja plana puede ocultar pagos parciales, duplicados y relaciones entre facturas y pagos.
+
+### Materiales
+
+- Diccionario de datos.
+- Diagrama entidad-relación.
+- Plantilla CSV ficticia.
+- Reglas de identificación única.
+</details>
+
+<details>
+<summary><strong>Paso 5 — Reemplazar los datos demo por datos ficticios controlados</strong></summary>
+
+### Acción
+
+Crear casos de prueba para:
+
+- factura vigente;
+- factura vencida;
+- pago parcial;
+- factura pagada;
+- nota de crédito;
+- factura disputada;
+- cliente con varias facturas;
+- cliente con historial de atraso.
+
+### Por qué
+
+Los datos sintéticos deben probar comportamientos concretos, no solo llenar tarjetas visuales.
+
+### Materiales
+
+- CSV de prueba.
+- Casos esperados.
+- Totales de control calculados manualmente.
+</details>
+
+<details>
+<summary><strong>Paso 6 — Reconstruir el aging</strong></summary>
+
+### Acción
+
+Aplicar una fecha de corte definida y calcular:
+
+`Días de atraso = Fecha de corte − Fecha de vencimiento`
+
+Clasificar en actual, 1–30, 31–60, 61–90 y 90+.
+
+### Por qué
+
+El aging es una de las funciones principales de AR Cockpit, pero solo es confiable si existen fecha de vencimiento, saldo pendiente y fecha de corte.
+
+### Materiales
+
+- Fórmula documentada.
+- Casos manuales.
+- Tabla de resultados esperados.
+- Captura del módulo de aging de la referencia funcional.
+</details>
+
+<details>
+<summary><strong>Paso 7 — Reconstruir los KPIs y el forecast</strong></summary>
+
+### Acción
+
+- Definir DSO y CEI con Finanzas.
+- Calcular cartera vencida sobre saldo pendiente.
+- Crear forecast base, optimista y pesimista solo con supuestos visibles.
+- Marcar claramente los valores simulados.
+
+### Por qué
+
+El dashboard de referencia demuestra cómo presentar los KPIs, pero no garantiza que sus valores demo sean adecuados para la empresa.
+
+### Materiales
+
+- Hoja de cálculo de validación.
+- Definiciones aprobadas.
+- Supuestos de forecast.
+- Pruebas unitarias.
+</details>
+
+<details>
+<summary><strong>Paso 8 — Aplicar el sistema visual de shadcn-admin</strong></summary>
+
+### Acción
+
+- Adaptar navegación lateral.
+- Crear tarjetas KPI.
+- Construir tablas con filtros.
+- Añadir estados de carga, error y datos vacíos.
+- Mantener consistencia de colores, tipografía y espaciado.
+
+### Por qué
+
+La referencia visual ayuda a que el sistema sea usable, pero no debe ocultar advertencias de calidad ni datos faltantes.
+
+### Materiales
+
+- Captura del repositorio visual.
+- Inventario de componentes.
+- Guía de tokens visuales.
+- Prototipo de cada pantalla.
+</details>
+
+<details>
+<summary><strong>Paso 9 — Probar compatibilidad con datos anonimizados</strong></summary>
+
+### Acción
+
+- Recibir una muestra de 3 a 12 meses.
+- Anonimizar clientes y facturas.
+- Mapear columnas al diccionario.
+- Detectar campos faltantes y duplicados.
+- Comparar los totales con Excel o ERP.
+
+### Por qué
+
+Este paso revela si el dashboard puede adaptarse realmente a la empresa sin tocar todavía la operación productiva.
+
+### Materiales
+
+- Archivo anonimizados.
+- Mapa de transformación.
+- Reporte de errores.
+- Tabla de conciliación.
+</details>
+
+<details>
+<summary><strong>Paso 10 — Ejecutar piloto y decidir si pasa a producción</strong></summary>
+
+### Acción
+
+- Usar el dashboard durante 30 días en un entorno controlado.
+- Compararlo contra el proceso actual.
+- Medir tiempo, recuperación, precisión y diferencias.
+- Registrar comentarios del equipo.
+- Aprobar, corregir o detener el avance.
+
+### Por qué
+
+La calidad visual no demuestra viabilidad empresarial. La decisión debe basarse en coincidencia de saldos, fórmulas aprobadas y utilidad para el equipo.
+
+### Materiales
+
+- Checklist de aceptación.
+- Registro de incidencias.
+- Métricas antes y después.
+- Acta de aprobación de Finanzas.
+</details>
+
+<details>
+<summary><strong>Mapa de fuentes de cada adaptación</strong></summary>
+
+| Adaptación | Referencia principal | Qué se toma | Qué se debe reconstruir |
+|---|---|---|---|
+| Navegación y componentes | shadcn-admin | Patrón visual y estructura de interfaz | Textos, estados y componentes del proyecto |
+| Aging | AR Cockpit + Oracle | Organización por antigüedad | Fórmula y fecha de corte |
+| DSO | AR Cockpit + SAP | Presentación del KPI | Cálculo aprobado por Finanzas |
+| CEI | AR Cockpit + política interna | Indicador de eficiencia | Variables y definición empresarial |
+| Riesgo | AR Cockpit + IFRS 9 | Forma de priorizar | Datos reales y matriz de provisiones |
+| Forecast | AR Cockpit | Escenarios visuales | Supuestos y comportamiento histórico |
+| Modelo de datos | Microsoft star schema | Separación de hechos y dimensiones | Tablas y relaciones de la empresa |
+</details>
