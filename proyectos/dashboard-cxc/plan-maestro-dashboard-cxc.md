@@ -37,6 +37,8 @@ La automatización debe partir de una referencia funcional o de mercado, adaptar
 <details>
 <summary><strong>2. Referencia funcional: AR Cockpit</strong></summary>
 
+![Captura del repositorio AR Cockpit](./referencia-ar-cockpit-github.png)
+
 **Repositorio:** [AR Cockpit](https://github.com/Sebastianvalenza/ar-cockpit)
 
 ### Qué queremos estudiar
@@ -65,6 +67,8 @@ AR Cockpit sirve como referencia de experiencia y estructura de CxC, pero la ló
 
 <details>
 <summary><strong>3. Referencia visual: shadcn-admin</strong></summary>
+
+![Captura del repositorio shadcn-admin](./referencia-shadcn-admin-github.png)
 
 **Repositorio:** [shadcn-admin](https://github.com/satnaing/shadcn-admin)
 
