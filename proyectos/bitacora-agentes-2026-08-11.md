@@ -360,3 +360,45 @@ Riesgos:
 
 Proximo paso:
 - Convertir esta narrativa en un guion final de 5-7 minutos y una lista de decisiones para la reunion, una vez confirmados los KPI visibles y el flujo exacto de la demo.
+
+## Cierres y avances desplegables
+
+<details>
+<summary>2026-08-11 — Tesla / Mencius — FlowForge Visual (terminado)</summary>
+
+**Estado:** Terminado — primera versión funcional local.
+
+**Qué construyó:**
+
+- Un tablero original de proyecto “Mobile Design” con columnas Backlog, New e In Progress.
+- Una navegación funcional hacia **Design Project**.
+- Un lienzo de edición blanco con puntos negros tenues y nodos conectados: Assets, Story, Prompts, Image/Video Gen y Review.
+- Edición directa de Story y Prompts, además de movimiento mediante arrastrar y soltar de nodos y tarjetas.
+- Placeholders originales para resultados experimentales; no usa API ni conexión real a ChatGPT.
+- Documentación de prompt y bitácora específica del proyecto en Markdown.
+
+**Archivos entregados:**
+
+- `proyectos/flowforge-visual/app/index.html`
+- `proyectos/flowforge-visual/app/design-project.html`
+- `proyectos/flowforge-visual/app/styles.css`
+- `proyectos/flowforge-visual/app/shared.js`
+- `proyectos/flowforge-visual/app/flow.js`
+- `proyectos/flowforge-visual/README.md`
+- `proyectos/flowforge-visual/prompts/2026-08-11-prompt-implementacion.md`
+- `proyectos/flowforge-visual/bitacora/2026-08-11-avance-tesla.md`
+
+**Validación realizada:** sintaxis de JavaScript comprobada con `node --check`; sin referencias a APIs ni servicios externos.
+
+**Siguiente paso:** revisión visual local y, si se aprueba, integrar el proyecto en el repositorio remoto y preparar su despliegue.
+
+</details>
+
+<details>
+<summary>Plantilla obligatoria — Agente de login (pendiente de asignar)</summary>
+
+**Estado:** No hay un agente de login identificado como activo en esta bitácora todavía.
+
+Cuando se asigne, deberá cerrar su tarea aquí indicando: qué pantalla creó, flujo de acceso, archivos tocados, cómo se probó, límites de seguridad y el siguiente paso. No debe declarar un login real, autenticación ni almacenamiento de contraseñas sin autorización e implementación específica.
+
+</details>
