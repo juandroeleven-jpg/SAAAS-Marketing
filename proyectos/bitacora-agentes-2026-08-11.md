@@ -219,6 +219,101 @@ Proximo paso:
 ## Nueva linea SAAAS Marketing - Interfaz de automatizacion visual
 
 <details>
+<summary>Proceso de verificacion de funcionalidad — automatizacion de creacion de cascos</summary>
+
+**Estado:** Pendiente de definicion y validacion. Esta es una especificacion de trabajo para ChatGPT como agente dentro de la herramienta; no supone una API de agente ni autoriza cambios funcionales todavia.
+
+### Objetivo
+
+Validar y construir por etapas la funcionalidad principal de automatizacion para crear cascos. El primer flujo inicia con un documento que contiene las vistas del casco y termina preparando informacion visual y estructurada para los siguientes procesos de diseno.
+
+### Flujo propuesto (primera iteracion)
+
+1. El usuario carga un PDF con las vistas del casco.
+2. La herramienta abre el PDF con el mecanismo que resulte mas eficiente y apropiado para el contexto (navegador/Playwright o procesamiento en codigo), sin fijar aun una implementacion.
+3. Se generan dos tipos de capturas de paginas:
+   - **Guiadas:** el usuario especifica el elemento o zona que se debe extraer, por ejemplo: “tomar este elemento como fondo del casco”.
+   - **No guiadas:** el agente identifica y captura vistas o elementos relevantes sin una seleccion manual previa.
+4. Antes de generar arte, existe un proceso previo de analisis de las vistas: identificar el fondo del casco y distinguir los elementos indispensables por vista, como spoiler, visor/elemento frontal, colores, piezas y otros rasgos estructurales.
+5. Las imagenes y resultados deben mostrarse visualmente dentro de la interfaz. Cuando se habilite la integracion, se guardaran y renderizaran desde Supabase; se busca conservar la mayor calidad practica, sin prometer aun parametros de calidad, almacenamiento o transformacion.
+
+### Modelo visual corregido
+
+El mapa de procesos, sus limites y el historial Markdown no deben vivir en lienzos separados. Deben coexistir en **un unico lienzo grande** con agrupaciones navegables: al seleccionar una agrupacion, la interfaz hace enfoque/zoom hacia esa zona sin perder el contexto global. El flujo debe poder representarse visualmente con drag-and-drop y nodos conectados.
+
+### Evidencia visual actual
+
+Se capturo la version actual de Vercel en el proyecto **Validar alcance sin API**, incluyendo la tarjeta **Mapa de limites** y el canvas visible al momento de la revision.
+
+![Captura de Validar alcance sin API — Mapa de limites](flowforge-visual/evidencia/2026-08-11-validar-alcance-mapa-limites.png)
+
+Observacion de prueba: al seleccionar **Mapa de limites**, la tarjeta queda activa visualmente, pero el encabezado y el canvas permanecen en **Historial Markdown**. Esto queda registrado como pendiente de validar/corregir en la siguiente ronda; no se altero la aplicacion durante esta toma.
+
+### Kanban interno de pendientes
+
+```mermaid
+kanban
+  Pendiente
+    [Definir contrato de carga de PDF y limites de tamano/formato]
+    [Definir criterios para capturas guiadas y no guiadas]
+    [Definir taxonomia de elementos del casco por vista]
+    [Definir modelo de almacenamiento y renderizado en Supabase]
+    [Disenar agrupaciones y zoom dentro de un lienzo unico]
+  Validar
+    [Corregir sincronizacion entre Mapa de limites y canvas visible]
+    [Probar navegacion por enfoque sin perder contexto global]
+    [Validar calidad y trazabilidad de imagenes renderizadas]
+  Bloqueado
+    [No implementar llamadas a API o servicios externos sin autorizacion]
+  Hecho
+    [Captura de referencia de Validar alcance sin API guardada]
+    [Especificacion inicial registrada en la bitacora de agentes]
+```
+
+### Limites vigentes
+
+- ChatGPT resuelve estas instrucciones como agente dentro del flujo, no mediante una API de agente ya existente.
+- No se implementa en esta etapa carga real de PDF, procesamiento, Supabase ni automatizacion externa.
+- No se modifican otras lineas de trabajo, incluido Dashboard CxC, sin una indicacion explicita.
+
+### Primera funcion prioritaria — Mapa de vistas
+
+**Cambio de nombre:** la primera tarea antes llamada **Mapa de limites** pasa a llamarse **Mapa de vistas**. Su objetivo es entender y preservar los componentes originales de un casco a partir de sus vistas de referencia; no es aun un flujo de generacion lifestyle, 3D ni fotorrealista.
+
+**Entrada inicial:** una imagen PNG que contiene las cuatro vistas del casco. El flujo debe mostrar la imagen original grande y, como subproceso visible, recortarla en cuatro vistas separadas. El recorte y sus resultados deben ser visibles en vivo dentro del lienzo y quedar trazables. Para esta tarea simple se evaluara un modelo de vision de bajo costo y un prompt corto; la eleccion concreta de modelo queda pendiente de validar por costo, calidad y disponibilidad.
+
+**Analisis por vista:** el modelo de vision debe describir la imagen y construir nodos conectados a cada vista. Como minimo:
+
+- **Elementos clave:** piezas y rasgos identificables de la vista.
+- **Elementos que no pueden variar:** estructura, proporciones, silueta, textura y propiedades fisicas que deben conservarse.
+- **Elementos que si pueden variar:** atributos autorizables, como color, iluminacion o elementos de diseno, con sus restricciones.
+
+Ejemplos de restricciones: el visor puede cambiar de color si se autoriza, pero no puede verse mas ancho o corto ni perder las propiedades visuales que definen su densidad; la iluminacion puede cambiar, pero no la textura, geometria ni componentes estructurales del casco. Para esta fase basada en material de Illustrator, las salidas deben mantener el estilo vectorial original y no reinterpretarlo como una imagen lifestyle, 3D o realista.
+
+**Prompt visible y desplegable:** dentro del canvas, cada vista debe incluir un desplegable que revele la instruccion enviada al modelo de vision. El prompt debe pedir una descripcion factual de la vista, identificar componentes y separar de forma explicita lo que puede variar de lo que no puede variar. El usuario debe poder inspeccionar ese prompt sin salir del lienzo.
+
+**Segundo proceso de referencias:** una vez obtenidas las cuatro vistas, se carga un PDF y se extraen capturas de alta calidad de las paginas o elementos de referencia que se indiquen. Para cada vista se crean decisiones visuales separadas y visibles:
+
+1. Una decision dirigida por el usuario: por ejemplo, elemento “boe esponja”, textura o fondo y la ubicacion exacta dentro de la vista.
+2. Una decision aleatoria, limitada por instrucciones y por las restricciones de la vista.
+
+Cada decision se representa con una copia anotada de la misma vista: una para marcar con flecha la ubicacion del elemento y otra para señalar el fondo. Estas copias no sustituyen la vista original; sirven como referencias de composicion y deben repetirse para cada vista y elemento necesario.
+
+**Arquitectura de lienzo:** Mapa de vistas, recortes, prompts desplegables, limites, historial Markdown y decisiones de referencia permanecen en un unico lienzo navegable. Cada grupo se enfoca mediante zoom al hacer clic, conservando el mapa global.
+
+### Coordinacion prevista, sin agentes iniciados
+
+No se lanzan agentes con esta entrada. Cuando se autorice la implementacion, el trabajo se separara sin copiar/pegar funcionalidades ni mezclar responsabilidades:
+
+- **Rama principal:** integra la estructura del proyecto y las interfaces ya aprobadas; conserva el contrato comun, datos de prueba y el lienzo unico.
+- **Rama de funcionalidad A:** trabaja de forma aislada en carga PNG, recorte visible en cuatro vistas, nodos de analisis y prompt desplegable.
+- **Rama de funcionalidad B:** trabaja de forma aislada en carga PDF, capturas de referencia, decisiones dirigidas/aleatorias y anotaciones por vista.
+
+Cada rama debe poder probarse localmente antes de proponer una integracion hacia la rama principal. La integracion se hara por cambios revisables y no mediante copias manuales. Cualquier modificacion de VS/Vercel, Supabase o servicios externos debe ser controlada, documentada y autorizada antes de aplicarse.
+
+</details>
+
+<details>
 <summary>2026-08-11 - Nueva tarea: interfaz tipo tablero para procesos de imagen</summary>
 
 Objetivo: crear una app/interfaz en Vercel para organizar procesos de generacion y edicion de imagenes, sin depender de API propia al inicio. ChatGPT se conectaria de forma operativa mediante tareas/agentes y prompts, no mediante integracion API.
