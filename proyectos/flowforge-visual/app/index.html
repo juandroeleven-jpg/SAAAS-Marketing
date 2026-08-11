@@ -28,13 +28,13 @@
           </p>
         </div>
         <div class="hero-metrics" aria-label="Resumen del portafolio">
-          <span><strong>4</strong> proyectos</span>
-          <span><strong>0</strong> APIs activas</span>
-          <span><strong>100%</strong> mock/local</span>
+          <span><strong id="project-metric">4</strong> proyectos</span>
+          <span><strong id="api-metric">1</strong> API activa</span>
+          <span><strong>DB</strong> vivo</span>
         </div>
       </section>
 
-      <section class="project-grid" aria-label="Portafolio de proyectos FlowForge">
+      <section class="project-grid" id="project-grid" aria-label="Portafolio de proyectos FlowForge">
         <a class="project-card project-blue" href="./design-project.html?project=mobile-design">
           <span class="status-pill active">In Progress</span>
           <h2>Mobile Design</h2>
@@ -91,6 +91,8 @@
       </aside>
     </main>
 
+    <script src="./supabase.js"></script>
     <script src="./shared.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

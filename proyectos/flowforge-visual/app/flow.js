@@ -209,6 +209,8 @@ const zoomInButton = document.querySelector("#zoom-in");
 const zoomOutButton = document.querySelector("#zoom-out");
 const zoomResetButton = document.querySelector("#zoom-reset");
 const zoomLabel = document.querySelector("#zoom-label");
+const supabase = window.FlowForgeSupabase;
+let saveTimer = null;
 
 const params = new URLSearchParams(window.location.search);
 const projectKey = projects[params.get("project")] ? params.get("project") : "mobile-design";
@@ -319,12 +321,79 @@ function renderCanvas() {
   updateConnectors();
 }
 
+function scheduleCanvasSave() {
+  if (!supabase?.enabled || !activeTask) return;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveActiveCanvas, 550);
+}
+
+async function saveActiveCanvas() {
+  if (!supabase?.enabled || !activeTask) return;
+
+  try {
+    await supabase.upsert(
+      "flowforge_canvases",
+      {
+        task_id: activeTask.id,
+        nodes: activeTask.nodes,
+        links: activeTask.links,
+        zoom
+      },
+      "task_id"
+    );
+    projectPill.textContent = `${project.pill} · Supabase guardado`;
+  } catch (error) {
+    projectPill.textContent = `${project.pill} · guardado local`;
+  }
+}
+
+async function loadRemoteProject() {
+  if (!supabase?.enabled) return;
+
+  const [remoteProjects, remoteTasks, remoteCanvases] = await Promise.all([
+    supabase.read("flowforge_projects?select=*&order=sort_order.asc"),
+    supabase.read(`flowforge_tasks?project_id=eq.${projectKey}&select=*&order=sort_order.asc`),
+    supabase.read("flowforge_canvases?select=*")
+  ]);
+
+  remoteProjects.forEach((remoteProject) => {
+    const localProject = projects[remoteProject.id];
+    if (!localProject) return;
+    localProject.title = remoteProject.title;
+    localProject.pill = remoteProject.pill;
+    localProject.summary = remoteProject.summary;
+    localProject.accent = remoteProject.accent;
+  });
+
+  const canvasesByTask = new Map(remoteCanvases.map((canvas) => [canvas.task_id, canvas]));
+  const localTasksById = new Map(project.tasks.map((task) => [task.id, task]));
+
+  project.tasks = remoteTasks.map((remoteTask) => {
+    const localTask = localTasksById.get(remoteTask.id);
+    const remoteCanvas = canvasesByTask.get(remoteTask.id);
+    return {
+      id: remoteTask.id,
+      title: remoteTask.title,
+      status: remoteTask.status,
+      summary: remoteTask.summary,
+      nodes: remoteCanvas?.nodes || localTask?.nodes || [],
+      links: remoteCanvas?.links || localTask?.links || []
+    };
+  });
+
+  if (project.tasks.length > 0) {
+    activeTask = project.tasks[0];
+    projectPill.textContent = `${project.pill} · Supabase conectado`;
+  }
+}
+
 function attachEditableSync(element, taskNode) {
   const editable = element.querySelector("[contenteditable]");
   if (!editable) return;
 
   editable.addEventListener("input", () => {
     taskNode.body = editable.textContent.trim();
+    scheduleCanvasSave();
   });
 }
 
@@ -361,6 +430,7 @@ function attachNodeDrag(element, taskNode) {
   element.addEventListener("pointerup", () => {
     element.classList.remove("dragging");
     activeNode = null;
+    scheduleCanvasSave();
   });
 }
 
@@ -394,6 +464,7 @@ function applyZoom(nextZoom) {
   plane.style.height = "720px";
   zoomLabel.textContent = `${Math.round(zoom * 100)}%`;
   updateConnectors();
+  scheduleCanvasSave();
 }
 
 zoomInButton.addEventListener("click", () => applyZoom(zoom + 0.1));
@@ -401,7 +472,20 @@ zoomOutButton.addEventListener("click", () => applyZoom(zoom - 0.1));
 zoomResetButton.addEventListener("click", () => applyZoom(1));
 window.addEventListener("resize", updateConnectors);
 
-setProjectChrome();
-renderTasks();
-renderCanvas();
-applyZoom(1);
+async function boot() {
+  let connectionLabel = `${project.pill} · Supabase conectado`;
+
+  try {
+    await loadRemoteProject();
+  } catch (error) {
+    connectionLabel = `${project.pill} · modo local`;
+  }
+
+  setProjectChrome();
+  projectPill.textContent = connectionLabel;
+  renderTasks();
+  renderCanvas();
+  applyZoom(1);
+}
+
+boot();
