@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FlowForge Visual — Visual Flow</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="project-shell">
+      <header class="topbar">
+        <div class="brand-mark">F</div>
+        <nav class="topnav" aria-label="Navegación principal">
+          <a href="./index.html">Portafolio</a>
+          <a href="./design-project.html?project=mobile-design" aria-current="page">Visual Flow</a>
+          <button class="ghost-button" type="button" data-command="snapshot-flow">Snapshot Flow</button>
+        </nav>
+        <div class="operator-pill" id="project-pill">Proyecto · Editable</div>
+      </header>
+
+      <section class="canvas-layout">
+        <aside class="side-panel">
+          <p class="eyebrow">Proyecto activo</p>
+          <h1 id="project-title">Visual Flow</h1>
+          <p id="project-summary">
+            Selecciona una tarea para cargar su canvas. Cada tarea contiene subtareas como nodos internos.
+          </p>
+
+          <div class="command-card">
+            <h2>Mock Commands</h2>
+            <button type="button" data-command="compose-story-agent">Componer prompt Story</button>
+            <button type="button" data-command="compose-image-agent">Componer prompt Image/Video</button>
+            <button type="button" data-command="mark-review-ready">Marcar listo para review</button>
+            <output id="command-log">Sin comandos ejecutados.</output>
+          </div>
+
+          <div class="task-panel" aria-label="Microtablero de tareas del proyecto">
+            <div class="task-panel-header">
+              <h2>Tareas del proyecto</h2>
+              <span id="task-count">0</span>
+            </div>
+            <div id="task-list" class="task-list"></div>
+          </div>
+        </aside>
+
+        <section class="workbench">
+          <div class="canvas-toolbar">
+            <div>
+              <p class="eyebrow">Canvas de tarea</p>
+              <h2 id="canvas-title">Selecciona una tarea</h2>
+              <p id="canvas-description">Las subtareas aparecerán como nodos dentro del lienzo.</p>
+            </div>
+            <div class="zoom-controls" aria-label="Controles de zoom">
+              <button type="button" id="zoom-out">Zoom -</button>
+              <button type="button" id="zoom-reset">Reset</button>
+              <button type="button" id="zoom-in">Zoom +</button>
+              <span id="zoom-label">100%</span>
+            </div>
+          </div>
+
+          <section class="flow-stage" aria-label="Lienzo de subtareas conectadas">
+            <div class="canvas-plane" id="canvas-plane">
+              <svg class="connectors" viewBox="0 0 1200 720" aria-hidden="true"></svg>
+              <div id="node-layer"></div>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <script src="./shared.js"></script>
+    <script src="./flow.js"></script>
+  </body>
+</html>
