@@ -29,20 +29,45 @@ kanban
 
 ## Lineas de trabajo
 
-| Linea | Objetivo | Estado | Documento esperado |
-|---|---|---:|---|
-| Dashboard CxC | Prototipo financiero de cuentas por cobrar, auditoria visual y narrativa ejecutiva | En progreso | Auditoria visual, guion ejecutivo, bitacora de decisiones |
-| FlowForge Visual | Interfaz para procesos de imagen/video con agentes, prompts y tableros | En progreso | Brief UX, prompt implementador Vercel, bitacora propia |
-| Coordinacion de agentes | Evitar que los agentes se pisen y guardar prompts/avances | En progreso | Bitacora diaria y documentos por proyecto |
+```mermaid
+flowchart TD
+    B["Bitacora de agentes<br/>11 de agosto"]
+
+    B --> CXC["Dashboard CxC<br/>Estado: En progreso"]
+    B --> FF["FlowForge Visual<br/>Estado: En progreso"]
+    B --> COORD["Coordinacion de agentes<br/>Estado: En progreso"]
+
+    CXC --> CXC_OBJ["Objetivo:<br/>Prototipo financiero de cuentas por cobrar,<br/>auditoria visual y narrativa ejecutiva"]
+    CXC --> CXC_DOC["Documento esperado:<br/>Auditoria visual, guion ejecutivo,<br/>bitacora de decisiones"]
+
+    FF --> FF_OBJ["Objetivo:<br/>Interfaz para procesos de imagen/video<br/>con agentes, prompts y tableros"]
+    FF --> FF_DOC["Documento esperado:<br/>Brief UX, prompt implementador Vercel,<br/>bitacora propia"]
+
+    COORD --> COORD_OBJ["Objetivo:<br/>Evitar que los agentes se pisen<br/>y guardar prompts/avances"]
+    COORD --> COORD_DOC["Documento esperado:<br/>Bitacora diaria y documentos por proyecto"]
+```
 
 ## Agentes
 
-| Agente | Rol | Estado | Entregable esperado | No debe tocar |
-|---|---|---:|---|---|
-| Dalton / Boyle | Auditor visual del Dashboard CxC | En progreso | Hallazgos visuales, screenshots, comparacion con Worklio, mejoras de UI | Logica, datos, formulas |
-| Cicero / Carson | Presentacion ejecutiva | En progreso | Historia para jefes, guion demo, KPI, beneficios, limites y decisiones | Codigo de la app |
-| Ampere / Dirac | Agenda personal y proyecto SAAAS Marketing | En progreso | Prioridades, calendario, backlog, seguimiento de repo | Servicios externos sin permiso |
-| Tesla / Mencius | Interfaz de automatizacion visual SAAAS Marketing | En progreso | Brief UX, arquitectura de procesos, prompt maestro y plan para app en Vercel | Dashboard CxC, GitHub sin permiso, APIs externas |
+```mermaid
+kanban
+  En_progreso
+    [Dalton / Boyle - Auditor visual CxC]
+    [Cicero / Carson - Presentacion ejecutiva]
+    [Tesla / Mencius - FlowForge Visual]
+  Bloqueado
+    [Ampere / Dirac - Agenda y proyecto, bloqueado por capacidad]
+  Entregables
+    [Dalton: hallazgos visuales, screenshots, mejoras UI]
+    [Cicero: historia para jefes, guion demo, KPI y decisiones]
+    [Ampere: prioridades, calendario, backlog, seguimiento de repo]
+    [Tesla: brief UX, arquitectura, prompt Vercel]
+  Limites
+    [Dalton no toca logica, datos ni formulas]
+    [Cicero no toca codigo de la app]
+    [Ampere no toca servicios externos sin permiso]
+    [Tesla no toca Dashboard CxC ni APIs externas]
+```
 
 ## Registro historico
 
