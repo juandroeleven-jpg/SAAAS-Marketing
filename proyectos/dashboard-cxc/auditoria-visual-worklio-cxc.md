@@ -21,6 +21,14 @@ La evidencia actual corresponde a escritorio. No hay evidencia móvil en este lo
 
 ![Resumen actual](./evidencias-auditoria-visual-worklio/resumen-cartera-actual.png)
 
+#### Referencia visual para esta pantalla
+
+![Worklio — tarjetas KPI y gradientes](./evidencias-auditoria-visual-worklio/worklio-kpis-gradientes.jpg)
+
+- **Capa de referencia que se usa:** el grupo de tarjetas con radios amplios, aire interior, contraste entre dato principal y texto secundario, y gradientes suaves reservados a dos tarjetas de énfasis.
+- **No se usa:** perfil, foto, porcentajes, iconos, textos ni estructura de gestión de tareas de Worklio.
+- **Indicación para Claude:** conservar las cuatro KPI, sus valores y sus textos; reorganizarlas como un conjunto de tarjetas con 16 px de radio, 20–24 px internos y sombra sutil. Aplicar como máximo un gradiente muy tenue a una KPI de atención, sin reducir el contraste ni cambiar su significado. Convertir la distribución Aging en un panel con jerarquía visual, conservando buckets e importes exactos.
+
 - La jerarquía funcional es clara: aviso de datos ficticios, cuatro KPI y distribución de Aging.
 - La superficie es muy plana: demasiado espacio vacío inferior, tarjetas con poco contraste jerárquico y barras con escasa diferenciación semántica.
 - Mantener los importes, la nota de conciliación y los avisos; solo mejorar composición, profundidad, espaciado y legibilidad del gráfico.
@@ -28,6 +36,14 @@ La evidencia actual corresponde a escritorio. No hay evidencia móvil en este lo
 ### Aging
 
 ![Aging actual](./evidencias-auditoria-visual-worklio/aging-cartera-actual.png)
+
+#### Referencia visual para esta pantalla
+
+![Worklio — gráfico y aire de panel](./evidencias-auditoria-visual-worklio/worklio-grafico-focusing.jpg)
+
+- **Capa de referencia que se usa:** el panel de análisis con área de respiración, líneas/grillas de bajo contraste, leyenda compacta y lectura principal claramente destacada.
+- **No se usa:** las series, meses, métricas de productividad ni el gráfico de Worklio como modelo de datos.
+- **Indicación para Claude:** mantener fecha de corte, cinco buckets, búsqueda, tabla, paginación y exclusiones exactamente como están. Aplicar el sistema de paneles al conjunto de buckets y a la tabla: encabezado más distinguible, cifras a la derecha, filas con hover sutil y badges de alto contraste. El bloque “Excluidas del aging” debe seguir separado y visible; no convertirlo en tooltip, modal ni contenido colapsado.
 
 - Fecha de corte, buckets, búsqueda, tabla, filtros implícitos, paginación y exclusiones están visibles y deben preservarse.
 - La tabla necesita una jerarquía más clara entre encabezados, cifras y badges; los cinco totales pueden convertirse visualmente en un conjunto más escaneable sin cambiar sus valores.
@@ -37,6 +53,14 @@ La evidencia actual corresponde a escritorio. No hay evidencia móvil en este lo
 
 ![Clientes prioritarios actuales](./evidencias-auditoria-visual-worklio/clientes-prioritarios-actual.png)
 
+#### Referencia visual para esta pantalla
+
+![Worklio — lista de actividad y jerarquía](./evidencias-auditoria-visual-worklio/worklio-lista-actividad.jpg)
+
+- **Capa de referencia que se usa:** ritmo vertical de una lista, separadores ligeros, prioridad visual entre título, metadato y acción, y acciones discretas alineadas al extremo.
+- **No se usa:** reuniones, nombres, horas, plataformas, iconos ni acciones de Worklio.
+- **Indicación para Claude:** conservar score, cliente, saldo abierto, días de atraso y acción sugerida; no modificar orden ni la regla de disputa. Refinar filas y badges para que cada acción se escanee como una lista operativa: score y acción con énfasis controlado, separadores suaves y el aviso “SIMULACIÓN” siempre antes de la tabla, íntegro y legible.
+
 - El aviso de simulación es explícito y correcto; no se puede ocultar, suavizar ni relegar a tooltip.
 - La tabla permite leer score, saldo, atraso y acción. Falta contraste estructural entre prioridades, acciones y el aviso informativo.
 - Los badges pueden ganar semántica cromática moderada, siempre con texto y contraste suficientes.
@@ -45,6 +69,14 @@ La evidencia actual corresponde a escritorio. No hay evidencia móvil en este lo
 
 ![Forecast actual](./evidencias-auditoria-visual-worklio/forecast-simulado-actual.png)
 
+#### Referencia visual para esta pantalla
+
+![Worklio — composición de gráfico](./evidencias-auditoria-visual-worklio/worklio-grafico-focusing.jpg)
+
+- **Capa de referencia que se usa:** composición abierta del área de gráfica, líneas limpias, grilla tenue, leyenda simple y un dato focal sin ruido visual.
+- **No se usa:** curvas, escalas, etiquetas, colores exactos ni analítica de productividad de Worklio.
+- **Indicación para Claude:** preservar por completo horizonte, importes, curvas y los tres escenarios. Mejorar únicamente contenedor, tipografía de las tarjetas, contraste de series, leyenda y grilla. Cada serie debe seguir identificable por texto además de color; el aviso de simulación permanece visible encima de los KPI.
+
 - Los tres escenarios y el aviso de simulación están correctamente expuestos y se deben conservar sin reinterpretar la proyección.
 - Las tarjetas y el gráfico requieren una composición más editorial: mejor separación de niveles, leyenda consistente y líneas distinguibles sin depender solo del color.
 - No cambiar curvas, importes, horizonte, supuestos ni etiqueta de simulación.
@@ -52,6 +84,14 @@ La evidencia actual corresponde a escritorio. No hay evidencia móvil en este lo
 ### Carga y calidad de datos
 
 ![Carga y calidad actual](./evidencias-auditoria-visual-worklio/carga-calidad-datos-actual.png)
+
+#### Referencia visual para esta pantalla
+
+![Worklio — tarjeta de conexiones](./evidencias-auditoria-visual-worklio/worklio-tarjeta-conexiones.jpg)
+
+- **Capa de referencia que se usa:** tarjeta horizontal compacta, agrupación de acciones relacionadas y separación entre acción principal, metadato y acción secundaria.
+- **No se usa:** logos de integraciones, menú de Worklio, ni la noción de conectar herramientas externas.
+- **Indicación para Claude:** conservar botón CSV/TSV, botón de demo, texto de dataset y la regla de privacidad. Transformar solo la presentación en un panel de importación con jerarquía: acción primaria clara, acción secundaria separada y estado del dataset legible. No añadir integraciones, carga remota, credenciales ni nuevos controles funcionales.
 
 - El control de carga, el botón de demo y la advertencia de datos ficticios son visibles.
 - El área de trabajo queda visualmente subutilizada; puede organizarse como una zona de importación con ayuda contextual y estado de archivo, sin alterar el flujo ni la privacidad declarada.
@@ -63,6 +103,8 @@ La evidencia actual corresponde a escritorio. No hay evidencia móvil en este lo
 <summary><strong>3. Referencia Worklio: principios visuales observables</strong></summary>
 
 ![Referencia Worklio aportada](./evidencias-auditoria-visual-worklio/referencia-worklio-dribbble.jpg)
+
+![Worklio — layout, aire y navegación](./evidencias-auditoria-visual-worklio/worklio-espaciado-navegacion.jpg)
 
 - **Layout:** composición por zonas, con panel principal amplio y columna secundaria de información; bloques claramente agrupados.
 - **Jerarquía:** saludo/título, KPI de alto contraste y actividad secundaria con pesos tipográficos diferenciados.
