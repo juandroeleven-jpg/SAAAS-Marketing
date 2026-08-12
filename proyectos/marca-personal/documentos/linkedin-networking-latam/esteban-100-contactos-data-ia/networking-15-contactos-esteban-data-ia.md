@@ -1,4 +1,4 @@
-﻿# Networking para Esteban - primeros 50 contactos de datos, BI, automatizacion e IA
+﻿# Networking para Esteban - primeros 100 contactos de datos e IA
 
 Documento inicial para construir una lista de 100 contactos utiles para Esteban. Esta version ya reune los primeros 50 contactos y prioriza estudiantes y profesionales jovenes relacionados con analisis de datos, Business Intelligence, SQL, Python, Power BI, automatizacion e inteligencia artificial.
 
@@ -38,7 +38,7 @@ Documento inicial para construir una lista de 100 contactos utiles para Esteban.
 
 </details>
 
-## Primeros 50 contactos seleccionados
+## Primeros 100 contactos seleccionados
 
 <details>
 <summary><strong>1. Diego Rosas</strong> ? Analista de datos en formacion; Big Data, SQL, Power BI, Power Platform, Azure y ML basico.</summary>
@@ -960,7 +960,1017 @@ Documento inicial para construir una lista de 100 contactos utiles para Esteban.
 
 </details>
 
+
+## Contactos 51-100 agregados
+
+
+<details>
+<summary><strong>51. Cristian Lavia</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/cristianlavia)
+
+![Perfil de Cristian Lavia](capturas/perfiles/51-cristian-lavia.png)
+
+**Senal visible:** Cristian Lavia • 2º BI & Data Analyst • Management & Technology Lecturer • Impulsando decisiones basadas en datos 🧑🏻‍💻 Resistencia, Chaco, Argentina Actual: Academic Coordinator & Data Analytics Tutor en Unicorn Academy Ariel Edgardo Levy, Alejandro N. H...
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Cristian, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>52. Ariel Edgardo Levy</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/arieledgardo)
+
+![Perfil de Ariel Edgardo Levy](capturas/perfiles/52-ariel-edgardo-levy.png)
+
+**Senal visible:** Cristian Lavia • 2º BI & Data Analyst • Management & Technology Lecturer • Impulsando decisiones basadas en datos 🧑🏻‍💻 Resistencia, Chaco, Argentina Actual: Academic Coordinator & Data Analytics Tutor en Unicorn Academy Ariel Edgardo Levy, Alejandro N. H...
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Ariel, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>53. Enrique Goff</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/enrique-goff-282154194)
+
+![Perfil de Enrique Goff](capturas/perfiles/53-enrique-goff.png)
+
+**Senal visible:** Enrique Goff • 2º Data Scientist | Business Intelligence | Quant Trader Panamá, Panamá Actual: Oficial de Información en RICARDO PEREZ S.A. Daniel Wen Lay es contacto en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Enrique, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>54. Adolfo Huanacuni Apaza</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/adolfo-huanacuni-apaza)
+
+![Perfil de Adolfo Huanacuni Apaza](capturas/perfiles/54-adolfo-huanacuni-apaza.png)
+
+**Senal visible:** Adolfo Huanacuni Apaza • 2º Ing. Sist. CIP |Dev-Mid JS| Java | Python | SQL | Data Analytics | PowerBI Perú Seguir Anterior: Analista BI en PM COSMO S.A.C - …clientes. Tech Stack: Power BI, Excel, Sql Server, Looker Studio, python. Miguel Jonathan Mogrovejo...
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Adolfo, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>55. Miguel Jonathan Mogrovejo Cardenas</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/mjmc4498)
+
+![Perfil de Miguel Jonathan Mogrovejo Cardenas](capturas/perfiles/55-miguel-jonathan-mogrovejo-cardenas.png)
+
+**Senal visible:** Adolfo Huanacuni Apaza • 2º Ing. Sist. CIP |Dev-Mid JS| Java | Python | SQL | Data Analytics | PowerBI Perú Seguir Anterior: Analista BI en PM COSMO S.A.C - …clientes. Tech Stack: Power BI, Excel, Sql Server, Looker Studio, python. Miguel Jonathan Mogrovejo...
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Miguel, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>56. Rómulo Salvador</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/romulo-salvador)
+
+![Perfil de Rómulo Salvador](capturas/perfiles/56-romulo-salvador.png)
+
+**Senal visible:** Adolfo Huanacuni Apaza • 2º Ing. Sist. CIP |Dev-Mid JS| Java | Python | SQL | Data Analytics | PowerBI Perú Seguir Anterior: Analista BI en PM COSMO S.A.C - …clientes. Tech Stack: Power BI, Excel, Sql Server, Looker Studio, python. Miguel Jonathan Mogrovejo...
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Rmulo, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>57. Manuel Mauricio Serna • 2º</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/manuel-mauricio-serna-aba408157)
+
+![Perfil de Manuel Mauricio Serna • 2º](capturas/perfiles/57-manuel-mauricio-serna-2.png)
+
+**Senal visible:** Manuel Mauricio Serna • 2º Data analytics | Power Bi Developer Panamá, Panamá Actual: Data analytics | Power Bi Developer en Ben Betesh RICARDO ALFREDO HUAMAN SUAREZ, Antonio Sánchez De Boeck y 3 contactos más en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Manuel, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>58. RICARDO ALFREDO HUAMAN SUAREZ</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/ricardo-alfredo-huaman-suarez-65319483)
+
+![Perfil de RICARDO ALFREDO HUAMAN SUAREZ](capturas/perfiles/58-ricardo-alfredo-huaman-suarez.png)
+
+**Senal visible:** Manuel Mauricio Serna • 2º Data analytics | Power Bi Developer Panamá, Panamá Actual: Data analytics | Power Bi Developer en Ben Betesh RICARDO ALFREDO HUAMAN SUAREZ, Antonio Sánchez De Boeck y 3 contactos más en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola RICARDO, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>59. Antonio Sánchez De Boeck</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/sanchezdeboeck)
+
+![Perfil de Antonio Sánchez De Boeck](capturas/perfiles/59-antonio-sanchez-de-boeck.png)
+
+**Senal visible:** Manuel Mauricio Serna • 2º Data analytics | Power Bi Developer Panamá, Panamá Actual: Data analytics | Power Bi Developer en Ben Betesh RICARDO ALFREDO HUAMAN SUAREZ, Antonio Sánchez De Boeck y 3 contactos más en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Antonio, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>60. Rodrigo Yángüez</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/rodrigoiyg)
+
+![Perfil de Rodrigo Yángüez](capturas/perfiles/60-rodrigo-yanguez.png)
+
+**Senal visible:** Abelardo Cárcamo • 2º Cybersecurity Student | IT Support | Blue Team | Windows Server | Linux | Active Directory | Wazuh | Splunk Panamá, Panamá, Panamá Seguir Resumen: Cybersecurity student at Universidad Tecnológica de Panamá with a strong foundation in B...
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Rodrigo, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>61. Santiago Lopez</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/santiago-lopez-software-engineer)
+
+![Perfil de Santiago Lopez](capturas/perfiles/61-santiago-lopez.png)
+
+**Senal visible:** Abelardo Cárcamo • 2º Cybersecurity Student | IT Support | Blue Team | Windows Server | Linux | Active Directory | Wazuh | Splunk Panamá, Panamá, Panamá Seguir Resumen: Cybersecurity student at Universidad Tecnológica de Panamá with a strong foundation in B...
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Santiago, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>62. Javier Sanchez Galan</strong> - IA y machine learning</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/javier-sanchez-galan-19303220)
+
+![Perfil de Javier Sanchez Galan](capturas/perfiles/62-javier-sanchez-galan.png)
+
+**Senal visible:** Javier Sanchez Galan • 2º Artificial Intelligence and Bioinformatic Data Analysis (AI-Bio) Panamá, Panamá, Panamá Actual: Research Coordinator en Universidad Tecnológica de Panamá Karin Sempf, César González Camargo y 5 contactos más en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Javier, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>63. Aurio De la Cruz</strong> - IA y machine learning</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/aurio-de-la-cruz-05299b49)
+
+![Perfil de Aurio De la Cruz](capturas/perfiles/63-aurio-de-la-cruz.png)
+
+**Senal visible:** Aurio De la Cruz • 2º MBA | Gerencia de Proyectos | Supply Chain | Tecnología | Planeamiento Estratégico | Responsabilidad Social | Consultoría y Docencia | Conferencista Internacional | PMI Latinoamérica Perú Anterior: Jefe de Proyectos Estratégicos en Pan...
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Aurio, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>64. ANAIS CASTILLO QUIROZ</strong> - IA y machine learning</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/anais-c-76824217a)
+
+![Perfil de ANAIS CASTILLO QUIROZ](capturas/perfiles/64-anais-castillo-quiroz.png)
+
+**Senal visible:** Aurio De la Cruz • 2º MBA | Gerencia de Proyectos | Supply Chain | Tecnología | Planeamiento Estratégico | Responsabilidad Social | Consultoría y Docencia | Conferencista Internacional | PMI Latinoamérica Perú Anterior: Jefe de Proyectos Estratégicos en Pan...
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola ANAIS, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>65. Jonatan Arauz</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/jonatan-arauz-0b671b22a)
+
+![Perfil de Jonatan Arauz](capturas/perfiles/65-jonatan-arauz.png)
+
+**Senal visible:** Jonatan Arauz • 2º Ingeniero de datos Panamá, Panamá, Panamá Actual: Oficial de Ingeniería y Arquitectura de datos en Caja de Ahorros Daniel Wen Lay y Rodrigo Yángüez son contactos en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Jonatan, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>66. Malony Jaramillo</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/malonyjaramillo)
+
+![Perfil de Malony Jaramillo](capturas/perfiles/66-malony-jaramillo.png)
+
+**Senal visible:** Malony Jaramillo • 2º Ingeniero en software, Analista de Bi Financiero, Consultor de proyectos de TI Panamá, Panamá, Panamá Seguir Actual: Analista BI financiero SWB en Copa Airlines Daniel Wen Lay, Fernando Cutire y 2 contactos más en común · 447 seguidores
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Malony, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>67. Georgett Vásquez •</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/georgett-v%C3%A1squez-26a017385)
+
+![Perfil de Georgett Vásquez •](capturas/perfiles/67-georgett-vasquez.png)
+
+**Senal visible:** Georgett Vásquez • 3er+ Estudiante en Universidad Tecnológica de Panamá Panamá, Panamá, Panamá Enviar mensaje Anterior: Analista de datos en Universidad Interamericana de Panamá
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Georgett, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>68. Alberto Saenz</strong> - Automatizacion y procesos</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/alberto-saenz/es)
+
+![Perfil de Alberto Saenz](capturas/perfiles/68-alberto-saenz.png)
+
+**Senal visible:** Alberto Saenz • 2º Industrial Engineer and Operations Analyst | University of Arkansas Alumnus Panamá, Panamá, Panamá Actual: Product Owner & Business Analyst en RICARDO PEREZ S.A. Karin Sempf es contacto en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Alberto, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>69. Karin Sempf</strong> - Automatizacion y procesos</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/karinsempf)
+
+![Perfil de Karin Sempf](capturas/perfiles/69-karin-sempf.png)
+
+**Senal visible:** Alberto Saenz • 2º Industrial Engineer and Operations Analyst | University of Arkansas Alumnus Panamá, Panamá, Panamá Actual: Product Owner & Business Analyst en RICARDO PEREZ S.A. Karin Sempf es contacto en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Karin, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>70. Rodrigo Díaz</strong> - Automatizacion y procesos</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/rodrodiaz)
+
+![Perfil de Rodrigo Díaz](capturas/perfiles/70-rodrigo-diaz.png)
+
+**Senal visible:** Rodrigo Díaz • 2º Leader | Innovator | Expert in Financial Modeling & Strategic Planning | Driving Data-Backed Business Decisions Panamá, Panamá, Panamá Certificaciones: The Transformative Impact of AI: Co-Intelligence: Living and Working with AI Jose Lizal...
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Rodrigo, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>71. Jose Lizallo</strong> - Automatizacion y procesos</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/joselizallo)
+
+![Perfil de Jose Lizallo](capturas/perfiles/71-jose-lizallo.png)
+
+**Senal visible:** Rodrigo Díaz • 2º Leader | Innovator | Expert in Financial Modeling & Strategic Planning | Driving Data-Backed Business Decisions Panamá, Panamá, Panamá Certificaciones: The Transformative Impact of AI: Co-Intelligence: Living and Working with AI Jose Lizal...
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Jose, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>72. Natasha Guanti • 2º</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/natasha-guanti-583b8a148)
+
+![Perfil de Natasha Guanti • 2º](capturas/perfiles/72-natasha-guanti-2.png)
+
+**Senal visible:** Natasha Guanti • 2º Especialista BI Panamá, Panamá, Panamá Actual: Especialista BI en TVN Media Daniel Wen Lay y Gabriel Caballero son contactos en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Natasha, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>73. Roderik Acevedo • 2º</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/roderik-acevedo)
+
+![Perfil de Roderik Acevedo • 2º](capturas/perfiles/73-roderik-acevedo-2.png)
+
+**Senal visible:** Roderik Acevedo • 2º Senior Data Engineer @ Yappy - Software Engineer Panamá, Panamá Anterior: Business Intelligence Consultant en H&CO, LLP Daniel Wen Lay, Fernando Cutire y 1 contacto más en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Roderik, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>74. Nathalie Cedeño</strong> - IA y machine learning</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/cedenonathalie)
+
+![Perfil actualizado](capturas/perfiles/74-nathalie-cedeno.png)
+
+**Senal visible:** Nathalie Cedeño • 2º MSc in Biomedical Engineering | Medical Science Liaison in Hematology | Medical Affairs | Medical Devices | University of Arkansas Alumni | UPM Madrid Alumni Panamá, Panamá, Panamá Actual: Medical Science Liaison en Johnson & Johnson Ka...
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Nathalie, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>75. Karolayn M. • 2º Senior Data Engineer at P&G Panamá, Panamá</strong> - Datos, analitica y tecnologia</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/kmoralescastillo)
+
+![Perfil de Karolayn M. • 2º Senior Data Engineer at P&G Panamá, Panamá](capturas/perfiles/75-karolayn-m-2-senior-data-engineer-at-p-g-panama-panama.png)
+
+**Senal visible:** Karolayn M. • 2º Senior Data Engineer at P&G Panamá, Panamá Anterior: Analista de Analytics - Equipo de innovación en Accenture Fernando Cutire es contacto en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Karolayn, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>76. Gabriel Gomez • 2º BI Data Analyst Consultant Panamá</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/gabriel-gomez-547182b7)
+
+![Perfil de Gabriel Gomez • 2º BI Data Analyst Consultant Panamá](capturas/perfiles/76-gabriel-gomez-2-bi-data-analyst-consultant-panama.png)
+
+**Senal visible:** Gabriel Gomez • 2º BI Data Analyst Consultant Panamá Actual: Co-Lead Comunidad Power BI Panamá en Comunidad Power BI Panamá Antonio Sánchez De Boeck, Daniel Wen Lay y 3 contactos más en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Gabriel, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>77. Alejandro Polo •</strong> - Automatizacion y procesos</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/alejandro-polo-44636b2b4)
+
+![Perfil de Alejandro Polo •](capturas/perfiles/77-alejandro-polo.png)
+
+**Senal visible:** Alejandro Polo • 3er+ Aspiring AI & Biotechnologist Research Lead · Junior AI Engineer · Claude Certified Architect · Building LLM agents and automation workflows for real-world impact in LATAM La Chorrera, Panamá Oeste, Panamá Actual: Student en ITSE Panama
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Alejandro, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>78. Valerie Martínez Pulido •</strong> - Estudiante / analitica de datos</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/valeriemtz)
+
+![Perfil de Valerie Martínez Pulido •](capturas/perfiles/78-valerie-martinez-pulido.png)
+
+**Senal visible:** Valerie Martínez Pulido • 3er+ Data Science student at Universidad del Norte Barranquilla, Atlántico, Colombia Actual: Communications Team Member en Bourbaki - …Mathematics Student Group. Contributed to content strategy…
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Valerie, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>79. Félix Antonio Lámbiz Núñez</strong> - Automatizacion y procesos</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/felixlambiz)
+
+![Perfil de Félix Antonio Lámbiz Núñez](capturas/perfiles/79-felix-antonio-lambiz-nunez.png)
+
+**Senal visible:** Félix Antonio Lámbiz Núñez • 2º Digital & eBusiness Manager Nutrition & Health Zone Americas at Nestlé Panamá, Panamá, Panamá Anterior: Sales and Marketing Manager en Gogetit - Bienes raices Panama Jesus Maradiaga es contacto en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Flix, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>80. Jesus Maradiaga</strong> - Automatizacion y procesos</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/jesusmaradiaga/es)
+
+![Perfil de Jesus Maradiaga](capturas/perfiles/80-jesus-maradiaga.png)
+
+**Senal visible:** Félix Antonio Lámbiz Núñez • 2º Digital & eBusiness Manager Nutrition & Health Zone Americas at Nestlé Panamá, Panamá, Panamá Anterior: Sales and Marketing Manager en Gogetit - Bienes raices Panama Jesus Maradiaga es contacto en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Jesus, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>81. Ricardo Díaz Peñaloza</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/ricardodiazp)
+
+![Perfil de Ricardo Díaz Peñaloza](capturas/perfiles/81-ricardo-diaz-penaloza.png)
+
+**Senal visible:** Ricardo Díaz Peñaloza • 2º Data & Business Intelligence Strategist | Loyalty & Customer Analytics | Turning Data into Revenue | GCP • Azure • Power BI • Databricks | Agile Execution Leader Panamá Actual: Chief Business Intelligence en Organización Terpel S....
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Ricardo, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>82. Celso Araúz Batista</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/celso-ara%C3%BAz-batista-5148ab225)
+
+![Perfil de Celso Araúz Batista](capturas/perfiles/82-celso-arauz-batista.png)
+
+**Senal visible:** Celso Araúz Batista • 2º
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Celso, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>83. Alvaro Zarak Tovar •</strong> - Estudiante / analitica de datos</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/alvarozaraktovar/es)
+
+![Perfil de Alvaro Zarak Tovar •](capturas/perfiles/83-alvaro-zarak-tovar.png)
+
+**Senal visible:** Alvaro Zarak Tovar • 3er+ Estudiante en la Academia Intermericana de Panamá Panamá, Panamá, Panamá Enviar mensaje Resumen: …in Business Analytics, Finance, and entrepreneurship…
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Alvaro, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>84. Haneff Botello Franco •</strong> - Estudiante / analitica de datos</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/nessinhbf)
+
+![Perfil de Haneff Botello Franco •](capturas/perfiles/84-haneff-botello-franco.png)
+
+**Senal visible:** Haneff Botello Franco • 3er+ Data Analysis Intern at The Estée Lauder Companies Inc. Panamá, Panamá, Panamá Enviar mensaje Actual: Data Science Intern en The Estée Lauder Companies Inc.
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Haneff, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>85. Angel L. Pinzon</strong> - Automatizacion y procesos</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/angel-pinzon-6715852a0/es)
+
+![Perfil de Angel L. Pinzon](capturas/perfiles/85-angel-l-pinzon.png)
+
+**Senal visible:** Angel L. Pinzon • 2º Systems Engineer @ Wallner Expac Inc. | Computer Engineer | UARK Alumnus Panamá, Panamá, Panamá Actual: Solutions Engineer en Grainger - Member of Grainger’s Supply Chain Automation team… César González Camargo, Fernando Cutire y 2 cont...
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Angel, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>86. César González Camargo</strong> - Automatizacion y procesos</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/cg-0430-pa)
+
+![Perfil de César González Camargo](capturas/perfiles/86-cesar-gonzalez-camargo.png)
+
+**Senal visible:** Angel L. Pinzon • 2º Systems Engineer @ Wallner Expac Inc. | Computer Engineer | UARK Alumnus Panamá, Panamá, Panamá Actual: Solutions Engineer en Grainger - Member of Grainger’s Supply Chain Automation team… César González Camargo, Fernando Cutire y 2 cont...
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Csar, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>87. Michael Lopez</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/michael-lopez-b049a12a8)
+
+![Perfil de Michael Lopez](capturas/perfiles/87-michael-lopez.png)
+
+**Senal visible:** Michael Lopez • 2º Business Intelligence | Power BI | Excel Avanzado | VBA Dev | Agile Mode Panamá, Panamá, Panamá Actual: Business Intelligence en Grupo Raphael Daniel Wen Lay es contacto en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Michael, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>88. Martha Alejandra Tarantino</strong> - IA y machine learning</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/martha-alejandra-tarantino/es)
+
+![Perfil de Martha Alejandra Tarantino](capturas/perfiles/88-martha-alejandra-tarantino.png)
+
+**Senal visible:** Martha Alejandra Tarantino • 2º Data Engineer | Azure | SQL | Python España Actual: Lead Data Engineer en zenital Juan Gabriel Gomila Salas, Bruno De Cruz y 2 contactos más en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Martha, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>89. Juan Gabriel Gomila Salas</strong> - IA y machine learning</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/juan-gabriel-gomila-salas)
+
+![Perfil de Juan Gabriel Gomila Salas](capturas/perfiles/89-juan-gabriel-gomila-salas.png)
+
+**Senal visible:** Martha Alejandra Tarantino • 2º Data Engineer | Azure | SQL | Python España Actual: Lead Data Engineer en zenital Juan Gabriel Gomila Salas, Bruno De Cruz y 2 contactos más en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Juan, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>90. Bruno De Cruz</strong> - IA y machine learning</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/bruno-de-cruz/es)
+
+![Perfil de Bruno De Cruz](capturas/perfiles/90-bruno-de-cruz.png)
+
+**Senal visible:** Martha Alejandra Tarantino • 2º Data Engineer | Azure | SQL | Python España Actual: Lead Data Engineer en zenital Juan Gabriel Gomila Salas, Bruno De Cruz y 2 contactos más en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Bruno, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>91. Sheyla Díaz • 2º Data Discovery Lead @ Data Strategy Perú</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/sdiazmuguruza)
+
+![Perfil de Sheyla Díaz • 2º Data Discovery Lead @ Data Strategy Perú](capturas/perfiles/91-sheyla-diaz-2-data-discovery-lead-data-strategy-peru.png)
+
+**Senal visible:** Sheyla Díaz • 2º Data Discovery Lead @ Data Strategy Perú Anterior: Business Intelligence Intern en Belcorp Reiver Lopez, Valeria Alzamora Caipane y 2 contactos más en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Sheyla, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>92. Dayana Juárez • 2º Analista de Cumplimiento Panamá, Panamá, Panamá</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/dayana-ju%C3%A1rez-66007a186)
+
+![Perfil de Dayana Juárez • 2º Analista de Cumplimiento Panamá, Panamá, Panamá](capturas/perfiles/92-dayana-juarez-2-analista-de-cumplimiento-panama-panama-panam.png)
+
+**Senal visible:** Dayana Juárez • 2º Analista de Cumplimiento Panamá, Panamá, Panamá Actual: Analista de Cumplimiento en Bolsa Latinoamericana de Valores ANAIS CASTILLO QUIROZ es contacto en común
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Dayana, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>93. Mario Bustillo</strong> - Automatizacion y procesos</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/mario-bustillo)
+
+![Perfil de Mario Bustillo](capturas/perfiles/93-mario-bustillo.png)
+
+**Senal visible:** Mario Bustillo • 2º AI Engineer || Data Content Developer || Data Analyst || AR Creator Argentina Seguir Actual: AI Engineer & Data Analyst en fitz Samuel Santa es contacto en común · 2 mil seguidores
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Mario, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>94. Samuel Santa</strong> - Automatizacion y procesos</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/devsanta)
+
+![Perfil de Samuel Santa](capturas/perfiles/94-samuel-santa.png)
+
+**Senal visible:** Mario Bustillo • 2º AI Engineer || Data Content Developer || Data Analyst || AR Creator Argentina Seguir Actual: AI Engineer & Data Analyst en fitz Samuel Santa es contacto en común · 2 mil seguidores
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Samuel, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>95. Manuel Caro</strong> - Datos, analitica y tecnologia</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/caromanuel)
+
+![Perfil de Manuel Caro](capturas/perfiles/95-manuel-caro.png)
+
+**Senal visible:** Manuel Caro • 2º Experto en Marketing Digital, Inteligencia Artificial y Transformación Digital de Negocios. 30 años liderando 650+ proyectos en 17 países. Conferencista internacional, profesor, mentor y empresario. Bogotá, Distrito Capital, Colombia Seguir...
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Manuel, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>96. Natalia Ortiz</strong> - Datos, analitica y tecnologia</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/nataliaortizmarketing)
+
+![Perfil de Natalia Ortiz](capturas/perfiles/96-natalia-ortiz.png)
+
+**Senal visible:** Manuel Caro • 2º Experto en Marketing Digital, Inteligencia Artificial y Transformación Digital de Negocios. 30 años liderando 650+ proyectos en 17 países. Conferencista internacional, profesor, mentor y empresario. Bogotá, Distrito Capital, Colombia Seguir...
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Natalia, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>97. Francisco Bertel Romero •</strong> - IA y machine learning</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/fbertelr)
+
+![Perfil de Francisco Bertel Romero •](capturas/perfiles/97-francisco-bertel-romero.png)
+
+**Senal visible:** Francisco Bertel Romero • 3er+ Senior Data Scientist specialized in Energy & Utilities | Smart Grid | AMI Analytics | Machine Learning & Forecasting Colombia Enviar mensaje Actual: Senior Data Scientist - Project Engineer en Choice Technologies Holding Sàrl
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Francisco, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>98. Juan Pablo Real Tsimogianis</strong> - Estudiante / analitica de datos</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/juan-pablo-real-tsimogianis-a76984250)
+
+![Perfil de Juan Pablo Real Tsimogianis](capturas/perfiles/98-juan-pablo-real-tsimogianis.png)
+
+**Senal visible:** Juan Pablo Real Tsimogianis • 2º
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Juan, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>99. Gustavo Alberto Diaz</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/gustavo-alberto-diaz-46087b70)
+
+![Perfil de Gustavo Alberto Diaz](capturas/perfiles/99-gustavo-alberto-diaz.png)
+
+**Senal visible:** Gustavo Alberto Diaz • 2º
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Gustavo, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
+<details>
+<summary><strong>100. Paul William Tucker Alpírez</strong> - Business intelligence / Power BI</summary>
+
+**Link de perfil:** [Abrir perfil de LinkedIn](https://www.linkedin.com/in/paultucker2001)
+
+![Perfil de Paul William Tucker Alpírez](capturas/perfiles/100-paul-william-tucker-alpirez.png)
+
+**Senal visible:** Paul William Tucker Alpírez • 2º
+
+**Por que encaja con Esteban:** perfil conectado con busquedas de datos, BI, automatizacion, IA o etapa junior/estudiantil. Es el tipo de contacto que puede generar conversaciones naturales sobre aprendizaje, proyectos, herramientas y oportunidades en analitica.
+
+**Valor potencial para conseguir clientes B2B:** aunque no todos son decisores, pueden abrir puertas a equipos, profesores, comunidades, startups o empresas donde se usan datos y automatizacion. Para Esteban sirve como red puente: aprender, comentar, colaborar y detectar oportunidades tempranas.
+
+**Mensaje sugerido para enviar manualmente:**
+
+> Hola Paul, vi tu perfil y me llamo la atencion tu enfoque en datos/tecnologia. Estoy conectando con personas de LATAM que tambien esten creciendo en analitica, automatizacion e IA. Me gustaria conectar y seguir aprendiendo de lo que compartes.
+
+</details>
+
+
 ## Siguiente paso recomendado
 
-Con estos 50 perfiles ya existe una base amplia para Esteban. La siguiente etapa seria seleccionar 50 adicionales, pero separandolos por categoria: estudiantes, analistas junior, BI/Power BI, automatizacion/Power Platform, IA aplicada, data science y perfiles con potencial B2B.
+La base ya queda en 100 perfiles documentados. El siguiente paso no es enviar invitaciones masivas: conviene priorizar 15-20 perfiles con mejor encaje, revisar su actividad reciente y enviar invitaciones manuales con contexto real.
 
+**Orden sugerido:**
+
+1. Priorizar perfiles con Panama, LATAM, Power BI, SQL, Python, automatizacion o IA aplicada.
+2. Revisar si publican contenido o si tienen actividad reciente.
+3. Mandar invitacion manual y breve, sin automatizar spam.
+4. Registrar quien acepta y que tipo de conversacion abre.
