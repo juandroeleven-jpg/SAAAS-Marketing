@@ -50,7 +50,7 @@ Igual que en los casos anteriores, no se pudo abrir el PDF de referencia por fal
 
 | Foto real (molde negro) | Foto adaptada (resultado) | Ilustración del PDF |
 |---|---|---|
-| ![Molde negro](imagenes-top-gun/molde-lateral-negro.png) | ![Resultado A](imagenes-top-gun/resultado-a.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
+| ![Molde negro](evidencia/imagenes-top-gun/molde-lateral-negro.png) | ![Resultado A](evidencia/imagenes-top-gun/resultado-a.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
 
 **Aciertos:**
 - Silueta general (pico frontal, spoiler trasero, mentonera) y ranuras de ventilación consistentes entre molde y resultado
@@ -66,7 +66,7 @@ Igual que en los casos anteriores, no se pudo abrir el PDF de referencia por fal
 
 | Foto real (molde azul) | Foto adaptada — "logo malo" | Ilustración del PDF |
 |---|---|---|
-| ![Molde azul](imagenes-top-gun/molde-lateral-azul.jpg) | ![Resultado B - logo malo](imagenes-top-gun/resultado-b-logo-malo.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
+| ![Molde azul](evidencia/imagenes-top-gun/molde-lateral-azul.jpg) | ![Resultado B - logo malo](evidencia/imagenes-top-gun/resultado-b-logo-malo.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
 
 **Aciertos:**
 - Misma geometría que el molde negro — confirma que negro y azul son el mismo casco, solo cambia el color base

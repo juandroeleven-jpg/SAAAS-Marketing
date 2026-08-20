@@ -52,7 +52,7 @@ No se pudo abrir el PDF de referencia (`BOB ESPONJA - HERO.pdf`) por falta de he
 
 | Foto real (molde) | Foto adaptada (resultado) | Ilustración del PDF |
 |---|---|---|
-| ![Molde lateral](imagenes-bob-esponja/molde-lateral.jpg) | ![Resultado lateral](imagenes-bob-esponja/resultado-lateral.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
+| ![Molde lateral](evidencia/imagenes-bob-esponja/molde-lateral.jpg) | ![Resultado lateral](evidencia/imagenes-bob-esponja/resultado-lateral.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
 
 **Aciertos:**
 - Visor, mecanismo de pivote y correa con hebilla roja idénticos entre molde y resultado
@@ -67,7 +67,7 @@ No se pudo abrir el PDF de referencia (`BOB ESPONJA - HERO.pdf`) por falta de he
 
 | Foto real (molde) | Foto adaptada (resultado) | Ilustración del PDF |
 |---|---|---|
-| ![Molde frontal](imagenes-bob-esponja/molde-frontal.jpg) | ![Resultado frontal](imagenes-bob-esponja/resultado-frontal.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
+| ![Molde frontal](evidencia/imagenes-bob-esponja/molde-frontal.jpg) | ![Resultado frontal](evidencia/imagenes-bob-esponja/resultado-frontal.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
 
 **Aciertos:**
 - La cara de Bob Esponja queda centrada y simétrica sobre la frente del casco, bien encuadrada entre las dos ventilaciones superiores
@@ -82,7 +82,7 @@ No se pudo abrir el PDF de referencia (`BOB ESPONJA - HERO.pdf`) por falta de he
 
 | Foto real (molde) | Resultado — "intento perfecto" | Resultado — "fallida" |
 |---|---|---|
-| ![Molde trasera](imagenes-bob-esponja/molde-trasera.jpg) | ![Resultado trasera — intento perfecto](imagenes-bob-esponja/resultado-trasera-intento-perfecto.jpg) | ![Resultado trasera — fallida](imagenes-bob-esponja/resultado-trasera-fallida.jpg) |
+| ![Molde trasera](evidencia/imagenes-bob-esponja/molde-trasera.jpg) | ![Resultado trasera — intento perfecto](evidencia/imagenes-bob-esponja/resultado-trasera-intento-perfecto.jpg) | ![Resultado trasera — fallida](evidencia/imagenes-bob-esponja/resultado-trasera-fallida.jpg) |
 
 **Aciertos (ambas versiones):**
 - Logo "SB", logo EDGE y etiquetas DOT/ECE en la misma posición que se espera en una ficha real de certificación

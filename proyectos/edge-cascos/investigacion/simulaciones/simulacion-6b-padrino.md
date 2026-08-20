@@ -55,7 +55,7 @@ Igual que en Bob Esponja, no se pudo abrir el PDF de referencia por falta de her
 
 | Foto real (molde) | Foto adaptada (resultado) | Ilustración del PDF |
 |---|---|---|
-| ![Molde lateral](imagenes-god-father/molde-lateral.jpg) | ![Resultado lateral](imagenes-god-father/resultado-lateral.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
+| ![Molde lateral](evidencia/imagenes-god-father/molde-lateral.jpg) | ![Resultado lateral](evidencia/imagenes-god-father/resultado-lateral.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
 
 **Aciertos:**
 - Geometría (visor, ventilación, remache, correa) idéntica entre molde y resultado
@@ -71,7 +71,7 @@ Igual que en Bob Esponja, no se pudo abrir el PDF de referencia por falta de her
 
 | Foto adaptada — intento A | Foto adaptada — intento B | Ilustración del PDF |
 |---|---|---|
-| ![Resultado 3/4 A](imagenes-god-father/resultado-3-4-a.jpg) | ![Resultado 3/4 B](imagenes-god-father/resultado-3-4-b.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
+| ![Resultado 3/4 A](evidencia/imagenes-god-father/resultado-3-4-a.jpg) | ![Resultado 3/4 B](evidencia/imagenes-god-father/resultado-3-4-b.jpg) | ⏳ Pendiente — PDF no legible en este entorno |
 
 **Aciertos (ambos intentos):**
 - Logo "The Godfather" en tipografía dorada, legible y bien ubicado sobre la mentonera

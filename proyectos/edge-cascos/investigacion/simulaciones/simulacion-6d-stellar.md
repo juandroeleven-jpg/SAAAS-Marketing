@@ -56,7 +56,7 @@ No se pudo determinar si `download.jpg` es el intento final/vigente o un intento
 
 | Foto real (molde) | Foto adaptada (resultado IA) | Ilustración del PDF |
 |---|---|---|
-| ![Molde Stellar](imagenes-stellar/molde-stellar.png) | ![Resultado IA Stellar](imagenes-stellar/resultado-ia-stellar.jpg) | ⏳ Pendiente — PDF no legible en este entorno, pero SÍ se pudo leer su texto/specs (ver Paso 1: "EDGE - BOSTON / GODFATHER / BLACK", Pantone 7562C/871C/877C/426C) |
+| ![Molde Stellar](evidencia/imagenes-stellar/molde-stellar.png) | ![Resultado IA Stellar](evidencia/imagenes-stellar/resultado-ia-stellar.jpg) | ⏳ Pendiente — PDF no legible en este entorno, pero SÍ se pudo leer su texto/specs (ver Paso 1: "EDGE - BOSTON / GODFATHER / BLACK", Pantone 7562C/871C/877C/426C) |
 
 **Aciertos:**
 - Silueta general, ventilación superior, mecanismo de pivote de visera y rejillas de mentonera idénticos entre molde y resultado — geometría sin deformar
@@ -77,7 +77,7 @@ Estas 2 imágenes muestran el diseño Godfather ya bien aplicado en un producto 
 
 | Referencia 1 | Referencia 2 |
 |---|---|
-| ![Referencia Godfather 1](imagenes-stellar/referencia-godfather-1.jpg) | ![Referencia Godfather 2](imagenes-stellar/referencia-godfather-2.jpg) |
+| ![Referencia Godfather 1](evidencia/imagenes-stellar/referencia-godfather-1.jpg) | ![Referencia Godfather 2](evidencia/imagenes-stellar/referencia-godfather-2.jpg) |
 
 **Lo que confirma esta referencia:** el texto se lee completo y correcto, la visera es transparente, y el logo EDGE aparece una sola vez — es la vara contra la que se midieron las fallas del resultado IA de arriba.
 
